@@ -1,7 +1,9 @@
 package com.pabcubcru.infobooks.controllers;
 
 import java.security.Principal;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import com.pabcubcru.infobooks.models.Authorities;
 import com.pabcubcru.infobooks.models.User;
@@ -16,18 +18,24 @@ import org.springframework.web.servlet.ModelAndView;
 @RestController
 public class MainController {
 
-	/*@Autowired
+	@Autowired
 	private UserService userService;
 
 	@Autowired
-	private AuthoritiesService authoritiesService;*/
+	private AuthoritiesService authoritiesService;
 	
 	@GetMapping(value = {"/", "/register", "login", "/login-error", "/logged"})
 	public ModelAndView main(Principal principal) {
 		ModelAndView model = new ModelAndView();
 		model.setViewName("Main");
-		/*if(principal != null) {
-			model.addObject("isLogged", true);
+		return model;
+	}
+
+	@GetMapping("/principal")
+	public Map<String, Object> getPrincipal(Principal principal){
+		Map<String, Object> res = new HashMap<>();
+		if(principal != null) {
+			res.put("isLogged", true);
 			User user = this.userService.findByUsername(principal.getName());
 			List<Authorities> authorities = authoritiesService.findByUserId(user.getId());
 			Boolean isAdmin = false;
@@ -37,11 +45,12 @@ public class MainController {
 					break;
 				}
 			}
-			model.addObject("isAdmin", isAdmin);
+			res.put("isAdmin", isAdmin);
 		} else {
-			model.addObject("isLogged", false);
-		}*/
-		return model;
+			res.put("isLogged", false);
+			res.put("isAdmin", false);
+		}
+		return res;
 	}
 
 }

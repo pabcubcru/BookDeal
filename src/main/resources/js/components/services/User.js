@@ -21,4 +21,13 @@ user.create = async(state) => {
     return res;
 }
 
+user.getPrincipal = async() => {
+    const urlGetPrincipal = baseUrl+"/principal"
+    const res = await axios.get(urlGetPrincipal)
+    .then(response => {return response.data})
+    .catch(error => {return error})
+
+    return res;
+}
+
 export default user

@@ -17,7 +17,7 @@ export default class Main extends Component{
         return(
             <Router>
                 <main>
-                    <Nav />
+                    <Nav/>
                     <Switch>
                         <Route path="/register" exact component={Register}/>
                         <Route path="/login" exact component={Login}/>

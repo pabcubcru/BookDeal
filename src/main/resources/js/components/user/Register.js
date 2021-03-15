@@ -93,7 +93,7 @@ export default class Form extends Component {
           <label for="firstName" class="col-sm-2 col-form-label"/>
           <div class="col-sm-10">
           <input value={this.state.fieldCheckbok} 
-          onChange={(event)=>this.setState({fieldCheckbok: this.state.fieldCheckbok==true ? false : true})} 
+          onChange={(event)=>this.setState({fieldCheckbok: !this.state.fieldCheckbok})} 
           class="form-check-input" type="checkbox"/> Acepto los términos y condiciones
           </div>
         </div>
