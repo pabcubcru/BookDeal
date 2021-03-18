@@ -36008,12 +36008,12 @@ var Nav = /*#__PURE__*/function (_Component) {
           to: "/register"
         }, "Registrarme");
       } else {
-        button1 = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("right", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
+        button1 = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
           "class": "nav-link ml-auto",
           href: "/profile"
-        }, "Mi perfil"));
+        }, "Mi perfil");
         button2 = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
-          "class": "nav-link",
+          "class": "nav-link ",
           href: "/logout"
         }, "Cerrar sesi\xF3n");
       }
@@ -36051,7 +36051,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_2__);
 
 
-var baseUrl = "http://localhost:8080/user";
+var baseUrl = "http://localhost:8080";
 
 var user = {};
 
@@ -36110,7 +36110,7 @@ user.edit = /*#__PURE__*/function () {
               username: state.fieldUsername,
               password: state.fieldPassword
             };
-            urlPost = baseUrl + "/" + state.id + "/edit";
+            urlPost = baseUrl + "/user/" + state.id + "/edit";
             _context2.next = 4;
             return axios__WEBPACK_IMPORTED_MODULE_2___default.a.put(urlPost, datapost).then(function (response) {
               return response.data;
@@ -36141,7 +36141,7 @@ user.getUsername = /*#__PURE__*/_babel_runtime_helpers_asyncToGenerator__WEBPACK
     while (1) {
       switch (_context3.prev = _context3.next) {
         case 0:
-          urlUsername = baseUrl + "/get-username";
+          urlUsername = baseUrl + "/user/get-username";
           _context3.next = 3;
           return axios__WEBPACK_IMPORTED_MODULE_2___default.a.get(urlUsername).then(function (response) {
             return response.data;
@@ -36166,7 +36166,7 @@ user.getPrincipal = /*#__PURE__*/_babel_runtime_helpers_asyncToGenerator__WEBPAC
     while (1) {
       switch (_context4.prev = _context4.next) {
         case 0:
-          urlGetPrincipal = baseUrl + "/principal";
+          urlGetPrincipal = baseUrl + "/user/principal";
           _context4.next = 3;
           return axios__WEBPACK_IMPORTED_MODULE_2___default.a.get(urlGetPrincipal).then(function (response) {
             return response.data;
@@ -36193,7 +36193,7 @@ user.getUser = /*#__PURE__*/function () {
       while (1) {
         switch (_context5.prev = _context5.next) {
           case 0:
-            urlGet = baseUrl + "/" + username;
+            urlGet = baseUrl + "/user/" + username;
             _context5.next = 3;
             return axios__WEBPACK_IMPORTED_MODULE_2___default.a.get(urlGet).then(function (response) {
               return response.data;
@@ -36249,7 +36249,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_7__);
 /* harmony import */ var _services_User__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../services/User */ "./src/main/resources/js/components/services/User.js");
-/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
 
 
 
@@ -36261,7 +36260,6 @@ __webpack_require__.r(__webpack_exports__);
 function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_5___default()(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_5___default()(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_4___default()(this, result); }; }
 
 function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
-
 
 
 
@@ -36284,7 +36282,12 @@ var Form = /*#__PURE__*/function (_Component) {
       fieldPhone: "",
       fieldBirthDate: "",
       fieldUsername: "",
-      errorField: []
+      fieldPassword: "",
+      fieldConfirmPassword: "",
+      errorFieldUser: [],
+      errorFieldPassword: [],
+      messageCorrectUser: "",
+      messageCorrectPassword: ""
     };
     return _this;
   }
@@ -36453,11 +36456,15 @@ var Form = /*#__PURE__*/function (_Component) {
             fieldPhone: event.target.value
           });
         }
-      }))), this.state.errorField.map(function (itemerror) {
+      }))), this.state.errorFieldUser.map(function (itemerror) {
         return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
           "class": "text-danger"
         }, "*", itemerror);
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
+        style: {
+          color: "#099C01"
+        }
+      }, this.state.messageCorrectUser), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         "class": "form-group row"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         "class": "col-sm-6"
@@ -36467,13 +36474,67 @@ var Form = /*#__PURE__*/function (_Component) {
         },
         "class": "btn btn-primary",
         type: "submit"
-      }, "Actualizar"))));
+      }, "Actualizar"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("hr", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("h1", {
+        style: {
+          color: "#007bff"
+        }
+      }, "Cambiar contrase\xF1a"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+        "class": "form-group row"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("label", {
+        "for": "firstName",
+        "class": "col-sm-2 col-form-label"
+      }, "Contrase\xF1a"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+        "class": "col-sm-10"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("input", {
+        type: "password",
+        "class": "form-control",
+        value: this.state.fieldPassword,
+        onChange: function onChange(event) {
+          return _this2.setState({
+            fieldPassword: event.target.value
+          });
+        }
+      }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+        "class": "form-group row"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("label", {
+        "for": "firstName",
+        "class": "col-sm-2 col-form-label"
+      }, "Confirma contrase\xF1a"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+        "class": "col-sm-10"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("input", {
+        type: "password",
+        "class": "form-control",
+        value: this.state.fieldConfirmPassword,
+        onChange: function onChange(event) {
+          return _this2.setState({
+            fieldConfirmPassword: event.target.value
+          });
+        }
+      }))), this.state.errorFieldPassword.map(function (itemerror) {
+        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
+          "class": "text-danger"
+        }, "*", itemerror);
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
+        style: {
+          color: "#099C01"
+        }
+      }, this.state.messageCorrectPassword), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+        "class": "form-group row"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+        "class": "col-sm-6"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("button", {
+        onClick: function onClick() {
+          return _this2.onClickSave();
+        },
+        "class": "btn btn-primary",
+        type: "submit"
+      }, "Cambiar"))));
     }
   }, {
     key: "onClickSave",
     value: function () {
       var _onClickSave = _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_6___default.a.mark(function _callee2() {
-        var res, dataError, error, _dataError;
+        var res, dataError, _dataError, _dataError2, error, _dataError3;
 
         return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_6___default.a.wrap(function _callee2$(_context2) {
           while (1) {
@@ -36485,24 +36546,54 @@ var Form = /*#__PURE__*/function (_Component) {
               case 2:
                 res = _context2.sent;
 
-                if (res.success) {
-                  window.location.replace("/");
+                if (this.state.fieldPassword != "" || this.state.fieldConfirmPassword != "") {
+                  if (this.state.fieldPassword.length < 8 || this.state.fieldPassword.length > 20) {
+                    dataError = [];
+                    dataError.push("La contraseña debe contener entre 8 y 20 carácteres.");
+                    this.setState({
+                      errorFieldPassword: dataError
+                    });
+                  } else if (this.state.fieldPassword != this.state.fieldConfirmPassword) {
+                    _dataError = [];
+
+                    _dataError.push("Las contraseñas no coinciden.");
+
+                    this.setState({
+                      errorFieldPassword: _dataError
+                    });
+                  } else if (res.success) {
+                    this.setState({
+                      messageCorrectPassword: "La contraseña se ha cambiado con éxito.",
+                      errorFieldPassword: [],
+                      messageCorrectUser: "",
+                      fieldPassword: "",
+                      fieldConfirmPassword: ""
+                    }); //window.location.replace("/profile")
+                  }
+                } else if (res.success) {
+                  this.setState({
+                    messageCorrectUser: "Los datos se han actualizado con éxito.",
+                    messageCorrectPassword: "",
+                    errorFieldUser: []
+                  }); //window.location.replace("/profile")
                 } else if (res.status == 400) {
-                  dataError = [];
+                  _dataError2 = [];
                   error = res.data.errors;
                   error.map(function (itemerror) {
-                    dataError.push(itemerror.defaultMessage);
+                    _dataError2.push(itemerror.defaultMessage);
                   });
                   this.setState({
-                    errorField: dataError
+                    errorFieldUser: _dataError2,
+                    messageCorrectUser: ""
                   });
                 } else {
-                  _dataError = [];
+                  _dataError3 = [];
 
-                  _dataError.push(res.message);
+                  _dataError3.push(res.message);
 
                   this.setState({
-                    errorField: _dataError
+                    errorFieldUser: _dataError3,
+                    messageCorrectUser: ""
                   });
                 }
 
@@ -36775,7 +36866,7 @@ var Form = /*#__PURE__*/function (_Component) {
     _this.state = {
       fieldName: "",
       fieldEmail: "",
-      fieldPhone: "",
+      fieldPhone: "+34",
       fieldBirthDate: "",
       fieldUsername: "",
       fieldPassword: "",

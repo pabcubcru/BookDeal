@@ -33,8 +33,10 @@ public class UserService {
     }
 
     @Transactional
-    public void save(User user) {
-        user.setPassword(new BCryptPasswordEncoder().encode(user.getPassword()));
+    public void save(User user, Boolean isNewPassword) {
+        if(isNewPassword){
+            user.setPassword(new BCryptPasswordEncoder().encode(user.getPassword()));
+        }
         user.setEnabled(true);
         this.userRepository.save(user);
         Authorities authorities = new Authorities();

@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import userService from "../services/User"
-import { Link } from "react-router-dom";
 
 export default class Form extends Component {
 
@@ -13,7 +12,12 @@ export default class Form extends Component {
         fieldPhone:"",
         fieldBirthDate:"",
         fieldUsername: "",
-        errorField:[]
+        fieldPassword: "",
+        fieldConfirmPassword: "",
+        errorFieldUser:[],
+        errorFieldPassword:[],
+        messageCorrectUser:"",
+        messageCorrectPassword:""
     }
   }
 
@@ -88,17 +92,57 @@ export default class Form extends Component {
         </div>
 
         {
-        this.state.errorField.map((itemerror) => {
+        this.state.errorFieldUser.map((itemerror) => {
             return(
               <p class='text-danger'>*{itemerror}</p>)
             })
         }
+
+        {<p style={{color: "#099C01"}}>{this.state.messageCorrectUser}</p>}
 
         <div class="form-group row">
             <div class="col-sm-6" >
         <button onClick={()=>this.onClickSave()} class="btn btn-primary" type="submit">Actualizar</button>
             </div>
         </div>
+
+        <hr/>
+        <h1 style={{color: "#007bff"}}>Cambiar contraseña</h1>
+        <br></br>
+        <div class="form-group row">
+            <label for="firstName" class="col-sm-2 col-form-label">Contraseña</label>
+          <div class="col-sm-10">
+            <input type="password" class="form-control"  
+              value={this.state.fieldPassword} 
+              onChange={(event)=>this.setState({fieldPassword:event.target.value})}/>
+          </div>
+        </div>
+
+        <div class="form-group row">
+            <label for="firstName" class="col-sm-2 col-form-label">Confirma contraseña</label>
+          <div class="col-sm-10">
+            <input type="password" class="form-control"
+              value={this.state.fieldConfirmPassword} 
+              onChange={(event)=>this.setState({fieldConfirmPassword:event.target.value})}/>
+          </div>
+        </div>
+
+        {
+        this.state.errorFieldPassword.map((itemerror) => {
+            return(
+              <p class='text-danger'>*{itemerror}</p>)
+            })
+        }
+
+        {<p style={{color: "#099C01"}}>{this.state.messageCorrectPassword}</p>}
+
+
+        <div class="form-group row">
+            <div class="col-sm-6" >
+        <button onClick={()=>this.onClickSave()} class="btn btn-primary" type="submit">Cambiar</button>
+            </div>
+        </div>
+
       </div>
       
     )
@@ -106,18 +150,34 @@ export default class Form extends Component {
 
     async onClickSave() {
         const res = await userService.edit(this.state)
-        if (res.success) {
-            window.location.replace("/")
+        if(this.state.fieldPassword != "" || this.state.fieldConfirmPassword != ""){
+          if(this.state.fieldPassword.length < 8 || this.state.fieldPassword.length > 20) {
+            const dataError = []
+			      dataError.push("La contraseña debe contener entre 8 y 20 carácteres.");
+			      this.setState({errorFieldPassword:dataError});
+          } else if(this.state.fieldPassword != this.state.fieldConfirmPassword) {
+            const dataError = []
+            dataError.push("Las contraseñas no coinciden.");
+            this.setState({errorFieldPassword:dataError});
+          } else if(res.success) {
+            this.setState({messageCorrectPassword: "La contraseña se ha cambiado con éxito.", 
+            errorFieldPassword:[], messageCorrectUser:"", fieldPassword:"", fieldConfirmPassword:""})
+            //window.location.replace("/profile")
+          }
+        } else if (res.success) {
+            this.setState({messageCorrectUser: "Los datos se han actualizado con éxito.", 
+            messageCorrectPassword:"", errorFieldUser:[]})
+            //window.location.replace("/profile")
         } else if (res.status==400) {
             const dataError = []
             const error = res.data.errors
             error.map((itemerror)=>{
             dataError.push(itemerror.defaultMessage)})
-            this.setState({errorField:dataError})
+            this.setState({errorFieldUser:dataError, messageCorrectUser:""})
         } else {
             const dataError = []
             dataError.push(res.message);
-            this.setState({errorField:dataError});
+            this.setState({errorFieldUser:dataError, messageCorrectUser:""});
         }
 	}
 }

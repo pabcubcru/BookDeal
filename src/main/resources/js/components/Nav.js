@@ -29,8 +29,8 @@ export default class Nav extends Component {
       button1 = <Link class="nav-link ml-auto" to="/login">Iniciar sesión</Link>;
       button2 = <Link class="nav-link" to="/register">Registrarme</Link>;
     } else {
-      button1 = <right><a class="nav-link ml-auto" href="/profile">Mi perfil</a></right>;
-      button2 = <a class="nav-link" href="/logout">Cerrar sesión</a>;
+      button1 = <a class="nav-link ml-auto" href="/profile">Mi perfil</a>;
+      button2 = <a class="nav-link " href="/logout">Cerrar sesión</a>;
     }
     return (
       <nav class="navbar navbar-expand-sm navbar-dark bg-dark rounded w-100">
