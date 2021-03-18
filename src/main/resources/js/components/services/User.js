@@ -1,4 +1,4 @@
-const baseUrl = "http://localhost:8080/user"
+const baseUrl = "http://localhost:8080"
 import axios from "axios";
 const user = {}
 
@@ -32,7 +32,7 @@ user.edit = async(state) => {
         password: state.fieldPassword,
     }
 
-    const urlPost = baseUrl+"/"+state.id+"/edit"
+    const urlPost = baseUrl+"/user/"+state.id+"/edit"
     const res = await axios.put(urlPost, datapost)
     .then(response => {return response.data;})
     .catch(error => {return error.response;})
@@ -41,7 +41,7 @@ user.edit = async(state) => {
 }
 
 user.getUsername = async() => {
-    const urlUsername = baseUrl+"/get-username"
+    const urlUsername = baseUrl+"/user/get-username"
     const res = await axios.get(urlUsername)
     .then(response => {return response.data})
     .catch(error => {return error})
@@ -50,7 +50,7 @@ user.getUsername = async() => {
 }
 
 user.getPrincipal = async() => {
-    const urlGetPrincipal = baseUrl+"/principal"
+    const urlGetPrincipal = baseUrl+"/user/principal"
     const res = await axios.get(urlGetPrincipal)
     .then(response => {return response.data})
     .catch(error => {return error})
@@ -59,7 +59,7 @@ user.getPrincipal = async() => {
 }
 
 user.getUser = async(username) => {
-    const urlGet = baseUrl+"/"+username
+    const urlGet = baseUrl+"/user/"+username
     const res = await axios.get(urlGet)
     .then(response => {return response.data})
     .catch(error => {return error})

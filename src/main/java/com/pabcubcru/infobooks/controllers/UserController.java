@@ -17,11 +17,9 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/user")
 public class UserController {
 
 	@Autowired
@@ -30,7 +28,7 @@ public class UserController {
 	@Autowired
 	private AuthoritiesService authoritiesService;
 
-	@GetMapping("/principal")
+	@GetMapping("/user/principal")
 	public Map<String, Object> getPrincipal(Principal principal){
 		Map<String, Object> res = new HashMap<>();
 		if(principal != null) {
@@ -69,14 +67,14 @@ public class UserController {
 				res.put("message", "La contraseña debe contener entre 8 y 20 carácteres.");
 				res.put("success", false);
 			} else {
-				this.userService.save(user);
+				this.userService.save(user, true);
 				res.put("success", true);
 			}
 		}
 		return res;
 	}
 
-	@GetMapping("/get-username")
+	@GetMapping("/user/get-username")
 	public Map<String, Object> getIdPrincipal(Principal principal) {
 		Map<String, Object> res = new HashMap<>();
 		
@@ -85,7 +83,7 @@ public class UserController {
 		return res;
 	}
 
-	@GetMapping("/{username}")
+	@GetMapping("/user/{username}")
 	public Map<String, Object> get(@PathVariable("username") String username) {
 		Map<String, Object> res = new HashMap<>();
 		if(username != null) {
@@ -99,7 +97,7 @@ public class UserController {
 		return res;
 	}
 
-	@PutMapping("/{id}/edit")
+	@PutMapping("/user/{id}/edit")
 	public Map<String, Object> edit(@RequestBody @Valid User user, @PathVariable("id") int idUser) {
 		Map<String, Object> res = new HashMap<>();
 
@@ -111,8 +109,12 @@ public class UserController {
 				res.put("success", false);
 			} else {
 				user.setId(idUser);
-				user.setPassword(userOld.getPassword());
-				this.userService.save(user);
+				Boolean newPassword = true;
+				if (user.getPassword().isEmpty()) {
+					user.setPassword(userOld.getPassword());
+					newPassword = false;
+				}
+				this.userService.save(user, newPassword);
 				res.put("success", true);
 			}
 		}

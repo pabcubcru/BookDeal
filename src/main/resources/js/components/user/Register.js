@@ -9,7 +9,7 @@ export default class Form extends Component {
     this.state = {
       fieldName:"",
       fieldEmail:"",
-      fieldPhone:"",
+      fieldPhone:"+34",
       fieldBirthDate:"",
       fieldUsername: "",
       fieldPassword: "",
