@@ -165,18 +165,19 @@ export default class Form extends Component {
             //window.location.replace("/profile")
           }
         } else if (res.success) {
-            this.setState({messageCorrectUser: "Los datos se han modificado con éxito.", messageCorrectPassword:""})
+            this.setState({messageCorrectUser: "Los datos se han actualizado con éxito.", 
+            messageCorrectPassword:"", errorFieldUser:[]})
             //window.location.replace("/profile")
         } else if (res.status==400) {
             const dataError = []
             const error = res.data.errors
             error.map((itemerror)=>{
             dataError.push(itemerror.defaultMessage)})
-            this.setState({errorFieldUser:dataError})
+            this.setState({errorFieldUser:dataError, messageCorrectUser:""})
         } else {
             const dataError = []
             dataError.push(res.message);
-            this.setState({errorFieldUser:dataError});
+            this.setState({errorFieldUser:dataError, messageCorrectUser:""});
         }
 	}
 }

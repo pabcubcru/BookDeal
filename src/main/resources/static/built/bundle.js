@@ -36572,8 +36572,9 @@ var Form = /*#__PURE__*/function (_Component) {
                   }
                 } else if (res.success) {
                   this.setState({
-                    messageCorrectUser: "Los datos se han modificado con éxito.",
-                    messageCorrectPassword: ""
+                    messageCorrectUser: "Los datos se han actualizado con éxito.",
+                    messageCorrectPassword: "",
+                    errorFieldUser: []
                   }); //window.location.replace("/profile")
                 } else if (res.status == 400) {
                   _dataError2 = [];
@@ -36582,7 +36583,8 @@ var Form = /*#__PURE__*/function (_Component) {
                     _dataError2.push(itemerror.defaultMessage);
                   });
                   this.setState({
-                    errorFieldUser: _dataError2
+                    errorFieldUser: _dataError2,
+                    messageCorrectUser: ""
                   });
                 } else {
                   _dataError3 = [];
@@ -36590,7 +36592,8 @@ var Form = /*#__PURE__*/function (_Component) {
                   _dataError3.push(res.message);
 
                   this.setState({
-                    errorFieldUser: _dataError3
+                    errorFieldUser: _dataError3,
+                    messageCorrectUser: ""
                   });
                 }
 
