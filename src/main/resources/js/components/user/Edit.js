@@ -15,7 +15,9 @@ export default class Form extends Component {
         fieldPassword: "",
         fieldConfirmPassword: "",
         errorFieldUser:[],
-        errorFieldPassword:[]
+        errorFieldPassword:[],
+        messageCorrectUser:"",
+        messageCorrectPassword:""
     }
   }
 
@@ -96,6 +98,8 @@ export default class Form extends Component {
             })
         }
 
+        {<p style={{color: "#099C01"}}>{this.state.messageCorrectUser}</p>}
+
         <div class="form-group row">
             <div class="col-sm-6" >
         <button onClick={()=>this.onClickSave()} class="btn btn-primary" type="submit">Actualizar</button>
@@ -130,6 +134,8 @@ export default class Form extends Component {
             })
         }
 
+        {<p style={{color: "#099C01"}}>{this.state.messageCorrectPassword}</p>}
+
 
         <div class="form-group row">
             <div class="col-sm-6" >
@@ -144,19 +150,23 @@ export default class Form extends Component {
 
     async onClickSave() {
         const res = await userService.edit(this.state)
-        if(this.state.fieldPassword != "" && this.state.fieldConfirmPassword != ""){
-          if(this.state.fieldPassword != this.state.fieldConfirmPassword) {
-          const dataError = []
-			    dataError.push("Las contraseñas no coinciden.");
-			    this.setState({errorFieldPassword:dataError});
-          } else if(this.state.fieldPassword.length < 8 || this.state.fieldPassword.length > 20) {
-            alert(this.state.fieldPassword.length)
+        if(this.state.fieldPassword != "" || this.state.fieldConfirmPassword != ""){
+          if(this.state.fieldPassword.length < 8 || this.state.fieldPassword.length > 20) {
             const dataError = []
 			      dataError.push("La contraseña debe contener entre 8 y 20 carácteres.");
 			      this.setState({errorFieldPassword:dataError});
+          } else if(this.state.fieldPassword != this.state.fieldConfirmPassword) {
+            const dataError = []
+            dataError.push("Las contraseñas no coinciden.");
+            this.setState({errorFieldPassword:dataError});
+          } else if(res.success) {
+            this.setState({messageCorrectPassword: "La contraseña se ha cambiado con éxito.", 
+            errorFieldPassword:[], messageCorrectUser:"", fieldPassword:"", fieldConfirmPassword:""})
+            //window.location.replace("/profile")
           }
         } else if (res.success) {
-            window.location.replace("/")
+            this.setState({messageCorrectUser: "Los datos se han modificado con éxito.", messageCorrectPassword:""})
+            //window.location.replace("/profile")
         } else if (res.status==400) {
             const dataError = []
             const error = res.data.errors

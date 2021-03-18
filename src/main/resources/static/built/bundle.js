@@ -36008,12 +36008,12 @@ var Nav = /*#__PURE__*/function (_Component) {
           to: "/register"
         }, "Registrarme");
       } else {
-        button1 = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("right", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
-          "class": "nav-link",
-          href: "/profile"
-        }, "Mi perfil"));
-        button2 = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
+        button1 = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
           "class": "nav-link ml-auto",
+          href: "/profile"
+        }, "Mi perfil");
+        button2 = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
+          "class": "nav-link ",
           href: "/logout"
         }, "Cerrar sesi\xF3n");
       }
@@ -36285,7 +36285,9 @@ var Form = /*#__PURE__*/function (_Component) {
       fieldPassword: "",
       fieldConfirmPassword: "",
       errorFieldUser: [],
-      errorFieldPassword: []
+      errorFieldPassword: [],
+      messageCorrectUser: "",
+      messageCorrectPassword: ""
     };
     return _this;
   }
@@ -36458,7 +36460,11 @@ var Form = /*#__PURE__*/function (_Component) {
         return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
           "class": "text-danger"
         }, "*", itemerror);
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
+        style: {
+          color: "#099C01"
+        }
+      }, this.state.messageCorrectUser), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         "class": "form-group row"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         "class": "col-sm-6"
@@ -36508,7 +36514,11 @@ var Form = /*#__PURE__*/function (_Component) {
         return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
           "class": "text-danger"
         }, "*", itemerror);
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
+        style: {
+          color: "#099C01"
+        }
+      }, this.state.messageCorrectPassword), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         "class": "form-group row"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         "class": "col-sm-6"
@@ -36536,25 +36546,35 @@ var Form = /*#__PURE__*/function (_Component) {
               case 2:
                 res = _context2.sent;
 
-                if (this.state.fieldPassword != "" && this.state.fieldConfirmPassword != "") {
-                  if (this.state.fieldPassword != this.state.fieldConfirmPassword) {
+                if (this.state.fieldPassword != "" || this.state.fieldConfirmPassword != "") {
+                  if (this.state.fieldPassword.length < 8 || this.state.fieldPassword.length > 20) {
                     dataError = [];
-                    dataError.push("Las contraseñas no coinciden.");
+                    dataError.push("La contraseña debe contener entre 8 y 20 carácteres.");
                     this.setState({
                       errorFieldPassword: dataError
                     });
-                  } else if (this.state.fieldPassword.length < 8 || this.state.fieldPassword.length > 20) {
-                    alert(this.state.fieldPassword.length);
+                  } else if (this.state.fieldPassword != this.state.fieldConfirmPassword) {
                     _dataError = [];
 
-                    _dataError.push("La contraseña debe contener entre 8 y 20 carácteres.");
+                    _dataError.push("Las contraseñas no coinciden.");
 
                     this.setState({
                       errorFieldPassword: _dataError
                     });
+                  } else if (res.success) {
+                    this.setState({
+                      messageCorrectPassword: "La contraseña se ha cambiado con éxito.",
+                      errorFieldPassword: [],
+                      messageCorrectUser: "",
+                      fieldPassword: "",
+                      fieldConfirmPassword: ""
+                    }); //window.location.replace("/profile")
                   }
                 } else if (res.success) {
-                  window.location.replace("/");
+                  this.setState({
+                    messageCorrectUser: "Los datos se han modificado con éxito.",
+                    messageCorrectPassword: ""
+                  }); //window.location.replace("/profile")
                 } else if (res.status == 400) {
                   _dataError2 = [];
                   error = res.data.errors;
