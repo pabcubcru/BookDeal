@@ -1,16 +1,15 @@
 package com.pabcubcru.infobooks.models;
 
 import java.time.LocalDate;
-import java.util.Set;
 
-import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Past;
+import javax.validation.constraints.Pattern;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -18,7 +17,7 @@ import lombok.Setter;
 @Entity
 @Table(name="users")
 @Getter @Setter
-public class User extends BaseEntity{
+public class User extends BaseEntity {
 
 	@NotBlank(message = "El nombre es un campo requerido.")
 	@Column(name = "name")
@@ -29,24 +28,25 @@ public class User extends BaseEntity{
 	@Email(message = "Debe ser un email válido.")
 	private String email;
 	
-	@NotBlank(message = "El teléfono es un campo requerido.")
 	@Column(name = "phone")
+	@Pattern(regexp = "^(\\+34|0034|34)?[6789]\\d{8}$", message = "El número de teléfono no es válido.")
 	private String phone;
 
 	@NotNull(message = "La fecha de nacimiento es un campo requerido.")
 	@Column(name = "birthdate")
+	@Past(message = "La fecha de nacimiento debe ser anterior a la fecha actual.")
 	private LocalDate birthDate;
 
 	@Column(name = "username", unique = true)
 	@NotBlank(message = "El nombre de usuario es un campo requerido.")
     private String username;
 
-    @NotBlank(message = "La contraseña es un campo requerido.")
+    //@NotBlank(message = "La contraseña es un campo requerido.")
     private String password;
 
     boolean enabled; 
 
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "user")
-	private Set<Authorities> authorities;
+    /*@OneToMany(cascade = CascadeType.ALL, mappedBy = "user", fetch = FetchType.EAGER)
+	private Set<Authorities> authorities;*/
 
 }

@@ -12,19 +12,19 @@ export default class Login extends Component {
           <br></br>
           <form method="post" actiom="/login">
             <div class="form-group row">
-              <label for="username" class="col-sm-2 col-form-label">Nombre de usuario</label>
-              <div class="col-sm-10">
+              <label for="username" class="col-sm-3 col-form-label">Nombre de usuario</label>
+              <div class="col-sm-9">
                 <input type="text" class="form-control" id= "username" name="username"/>
               </div>
             </div>
     
             <div class="form-group row">
-              <label for="password" class="col-sm-2 col-form-label">Contraseña</label>
-              <div class="col-sm-10">
+              <label for="password" class="col-sm-3 col-form-label">Contraseña</label>
+              <div class="col-sm-9">
                 <input type="password" class="form-control" id= "password" name="password"/>
               </div>
             </div>
-    
+            <br></br>
             <div class="form-group row">
               <div class="col-sm-6">
                 <button class="btn btn-primary" type="submit">Acceder</button>

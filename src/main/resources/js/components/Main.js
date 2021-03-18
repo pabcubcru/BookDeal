@@ -2,9 +2,11 @@ import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 
 import Nav from "./Nav"
-import Register from "./user/Register";
-import Login from "./user/Login";
-import Loginerror from "./user/Login-error";
+import RegisterUser from "./user/Register";
+import LoginUser from "./user/Login";
+import LoginerrorUser from "./user/Login-error";
+import EditUser from "./user/Edit";
+import Home from "./Home";
 
 import {
     BrowserRouter as Router,
@@ -19,9 +21,11 @@ export default class Main extends Component{
                 <main>
                     <Nav/>
                     <Switch>
-                        <Route path="/register" exact component={Register}/>
-                        <Route path="/login" exact component={Login}/>
-                        <Route path="/login-error" exact component={Loginerror}/>
+                        <Route path="/register" exact component={RegisterUser}/>
+                        <Route path="/login" exact component={LoginUser}/>
+                        <Route path="/login-error" exact component={LoginerrorUser}/>
+                        <Route path="/profile" exact component={EditUser}/>
+                        <Route path="/" exact component={Home}/>
                     </Switch>
                 </main>
             </Router>
