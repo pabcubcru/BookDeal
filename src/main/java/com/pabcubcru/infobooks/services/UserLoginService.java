@@ -45,9 +45,8 @@ public class UserLoginService implements UserDetailsService {
         }
 		if(isAdmin){
 			grantedAuthorities.add(new SimpleGrantedAuthority("admin"));
-		} else {
-		    grantedAuthorities.add(new SimpleGrantedAuthority("user"));
-        }
+		}
+		grantedAuthorities.add(new SimpleGrantedAuthority("user"));
 		return grantedAuthorities;
 	}
     

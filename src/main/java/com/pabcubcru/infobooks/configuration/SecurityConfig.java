@@ -26,10 +26,11 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 	
 	public void configure(HttpSecurity http) throws Exception {
 		http.authorizeRequests()
-		.antMatchers("/").hasAnyAuthority("user, admin")
-		.antMatchers("/register").anonymous()
-		.antMatchers("/login").anonymous()
-		.antMatchers("/login-error").anonymous()
+		.antMatchers("/", "/resources/**").permitAll()
+		.antMatchers("/user/**").hasAnyAuthority("user")
+		.antMatchers("/register", "/login", "/login-error").anonymous()
+		//.antMatchers("/login").anonymous()
+		//.antMatchers("/login-error").anonymous()
 		.and().csrf().disable()
 		.formLogin().loginPage("/login")
 		.failureUrl("/login-error")

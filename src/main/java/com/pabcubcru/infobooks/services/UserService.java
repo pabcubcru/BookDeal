@@ -45,7 +45,7 @@ public class UserService {
 
     @Transactional
     public User findUserById(int id){
-        return this.userRepository.findById(id).orElse(null);
+        return this.userRepository.findUserById(id);
     }
 
     @Transactional
