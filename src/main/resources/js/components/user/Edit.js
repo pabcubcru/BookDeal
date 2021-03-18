@@ -38,6 +38,8 @@ export default class Form extends Component {
             fieldPhone: res.user.phone,
             fieldBirthDate: res.user.birthDate,
             fieldUsername: res.user.username,
+            fieldProvince: res.user.province,
+            fieldCity: res.user.city,
             provinces:prov
         })
     } /*else {
@@ -100,10 +102,10 @@ export default class Form extends Component {
         <div class="form-group row">
             <label for="firstName" class="col-sm-3 col-form-label">Provincia<sup class='text-danger'>*</sup></label>
           <div class="col-sm-9">
-            <select id="selectProvince" onChange={(event) => this.setState({fieldProvince:event.target.value})}>
+            <select value={this.state.fieldProvince} id="selectProvince" onChange={(event) => this.setState({fieldProvince:event.target.value})}>
             {this.state.provinces.map((province) => {
               return (
-                <option value={this.state.fieldProvince} class="form-control" value={province} >{province}</option>
+                <option  class="form-control" value={province} >{province}</option>
               )
             })}
             </select>
