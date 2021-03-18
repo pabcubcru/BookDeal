@@ -12,11 +12,20 @@ export default class Form extends Component {
       fieldPhone:"+34",
       fieldBirthDate:"",
       fieldUsername: "",
+      fieldCity:"",
+      fieldProvince:null,
       fieldPassword: "",
       fieldConfirmPassword:"",
       fieldCheckbok: false,
-      errorField:[]
+      errorField:[],
+      provinces:[]
     }
+  }
+
+  async componentDidMount() {
+    const p = await userService.getProvinces()
+    const res = p.provinces
+    this.setState({provinces:res})
   }
 
   render() {
@@ -68,6 +77,28 @@ export default class Form extends Component {
             <input type="text" class="form-control" placeholder="+34 123456789"  
               value={this.state.fieldPhone} 
               onChange={(event)=>this.setState({fieldPhone:event.target.value})}/>
+          </div>
+        </div>
+
+        <div class="form-group row">
+            <label for="firstName" class="col-sm-3 col-form-label">Provincia<sup class='text-danger'>*</sup></label>
+          <div class="col-sm-9">
+            <select id="selectProvince" onChange={(event) => this.setState({fieldProvince:event.target.value})}>
+            {this.state.provinces.map((province) => {
+              return (
+                <option class="form-control" value={province} >{province}</option>
+              )
+            })}
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group row">
+            <label for="firstName" class="col-sm-3 col-form-label">Ciudad<sup class='text-danger'>*</sup></label>
+          <div class="col-sm-9">
+            <input type="text" class="form-control" placeholder="Sevilla"  
+              value={this.state.fieldCity} 
+              onChange={(event)=>this.setState({fieldCity:event.target.value})}/>
           </div>
         </div>
 

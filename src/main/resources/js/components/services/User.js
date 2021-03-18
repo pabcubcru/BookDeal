@@ -11,6 +11,8 @@ user.create = async(state) => {
         birthDate: state.fieldBirthDate,
         username: state.fieldUsername,
         password: state.fieldPassword,
+        province: state.fieldProvince,
+        city: state.fieldCity
     }
 
     const urlPost = baseUrl+"/register"
@@ -30,6 +32,8 @@ user.edit = async(state) => {
         birthDate: state.fieldBirthDate,
         username: state.fieldUsername,
         password: state.fieldPassword,
+        province: state.fieldProvince,
+        city: state.fieldCity
     }
 
     const urlPost = baseUrl+"/user/"+state.id+"/edit"
@@ -60,6 +64,15 @@ user.getPrincipal = async() => {
 
 user.getUser = async(username) => {
     const urlGet = baseUrl+"/user/"+username
+    const res = await axios.get(urlGet)
+    .then(response => {return response.data})
+    .catch(error => {return error})
+
+    return res;
+}
+
+user.getProvinces = async() => {
+    const urlGet = baseUrl+"/user/provinces"
     const res = await axios.get(urlGet)
     .then(response => {return response.data})
     .catch(error => {return error})

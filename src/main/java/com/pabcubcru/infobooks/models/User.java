@@ -37,11 +37,18 @@ public class User extends BaseEntity {
 	@Past(message = "La fecha de nacimiento debe ser anterior a la fecha actual.")
 	private LocalDate birthDate;
 
+	@NotNull(message = "La provincia es un campo requerido.")
+	@Column(name = "province")
+	private ProvinceEnum province;
+
+	@NotBlank(message = "La ciudad es un campo requerido.")
+	@Column(name = "city")
+	private String city;
+
 	@Column(name = "username", unique = true)
 	@NotBlank(message = "El nombre de usuario es un campo requerido.")
     private String username;
 
-    //@NotBlank(message = "La contraseña es un campo requerido.")
     private String password;
 
     boolean enabled; 

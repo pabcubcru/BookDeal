@@ -12,12 +12,15 @@ export default class Form extends Component {
         fieldPhone:"",
         fieldBirthDate:"",
         fieldUsername: "",
+        fieldCity:"",
+        fieldProvince:null,
         fieldPassword: "",
         fieldConfirmPassword: "",
         errorFieldUser:[],
         errorFieldPassword:[],
         messageCorrectUser:"",
-        messageCorrectPassword:""
+        messageCorrectPassword:"",
+        provinces:[]
     }
   }
 
@@ -25,6 +28,8 @@ export default class Form extends Component {
     const usern = await userService.getUsername()
     const username = usern.username
     const res = await userService.getUser(username)
+    const p = await userService.getProvinces()
+    const prov = p.provinces
     if(res.success){
         this.setState({
             id: res.user.id,
@@ -33,6 +38,7 @@ export default class Form extends Component {
             fieldPhone: res.user.phone,
             fieldBirthDate: res.user.birthDate,
             fieldUsername: res.user.username,
+            provinces:prov
         })
     } /*else {
         window.location.replace("/error")
@@ -47,8 +53,8 @@ export default class Form extends Component {
         <h1 style={{color: "#007bff"}}>Mi perfil</h1>
         <p class='text-danger'>*Obligatorio</p>
         <div class="form-group row">
-          <label for="firstName" class="col-sm-2 col-form-label">Nombre y apellidos<sup class='text-danger'>*</sup></label>
-          <div class="col-sm-10">
+          <label for="firstName" class="col-sm-3 col-form-label">Nombre y apellidos<sup class='text-danger'>*</sup></label>
+          <div class="col-sm-9">
             <input type="text" class="form-control"
               value={this.state.fieldName} 
               onChange={(event)=>this.setState({fieldName:event.target.value})} required/>
@@ -56,8 +62,8 @@ export default class Form extends Component {
         </div>
 
         <div class="form-group row">
-          <label for="firstName" class="col-sm-2 col-form-label">Nombre de usuario<sup class='text-danger'>*</sup></label>
-          <div class="col-sm-10">
+          <label for="firstName" class="col-sm-3 col-form-label">Nombre de usuario<sup class='text-danger'>*</sup></label>
+          <div class="col-sm-9">
             <input type="text" class="form-control" 
               value={this.state.fieldUsername} 
               onChange={(event)=>this.setState({fieldUsername:event.target.value})} readOnly/>
@@ -65,8 +71,8 @@ export default class Form extends Component {
         </div>
 
 				<div class="form-group row">
-            <label for="firstName" class="col-sm-2 col-form-label">Email<sup class='text-danger'>*</sup></label>
-          <div class="col-sm-10">
+            <label for="firstName" class="col-sm-3 col-form-label">Email<sup class='text-danger'>*</sup></label>
+          <div class="col-sm-9">
             <input type="email" class="form-control" placeholder="email@email.com"  
               value={this.state.fieldEmail} 
               onChange={(event)=>this.setState({fieldEmail:event.target.value})}/>
@@ -74,8 +80,8 @@ export default class Form extends Component {
         </div>
 
 				<div class="form-group row">
-            <label for="firstName" class="col-sm-2 col-form-label">Fecha de nacimiento<sup class='text-danger'>*</sup></label>
-          <div class="col-sm-10">
+            <label for="firstName" class="col-sm-3 col-form-label">Fecha de nacimiento<sup class='text-danger'>*</sup></label>
+          <div class="col-sm-9">
             <input type="date" class="form-control" placeholder="dd/MM/yyyy"  
               value={this.state.fieldBirthDate} 
               onChange={(event)=>this.setState({fieldBirthDate:event.target.value})}/>
@@ -83,11 +89,33 @@ export default class Form extends Component {
         </div>
 
 				<div class="form-group row">
-            <label for="firstName" class="col-sm-2 col-form-label">Teléfono<sup class='text-danger'>*</sup></label>
-          <div class="col-sm-10">
+            <label for="firstName" class="col-sm-3 col-form-label">Teléfono<sup class='text-danger'>*</sup></label>
+          <div class="col-sm-9">
             <input type="text" class="form-control" placeholder="+34 123456789"  
               value={this.state.fieldPhone} 
               onChange={(event)=>this.setState({fieldPhone:event.target.value})}/>
+          </div>
+        </div>
+
+        <div class="form-group row">
+            <label for="firstName" class="col-sm-3 col-form-label">Provincia<sup class='text-danger'>*</sup></label>
+          <div class="col-sm-9">
+            <select id="selectProvince" onChange={(event) => this.setState({fieldProvince:event.target.value})}>
+            {this.state.provinces.map((province) => {
+              return (
+                <option value={this.state.fieldProvince} class="form-control" value={province} >{province}</option>
+              )
+            })}
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group row">
+            <label for="firstName" class="col-sm-3 col-form-label">Ciudad<sup class='text-danger'>*</sup></label>
+          <div class="col-sm-9">
+            <input type="text" class="form-control" placeholder="Sevilla"  
+              value={this.state.fieldCity} 
+              onChange={(event)=>this.setState({fieldCity:event.target.value})}/>
           </div>
         </div>
 
@@ -110,8 +138,8 @@ export default class Form extends Component {
         <h1 style={{color: "#007bff"}}>Cambiar contraseña</h1>
         <br></br>
         <div class="form-group row">
-            <label for="firstName" class="col-sm-2 col-form-label">Contraseña</label>
-          <div class="col-sm-10">
+            <label for="firstName" class="col-sm-3 col-form-label">Contraseña</label>
+          <div class="col-sm-9">
             <input type="password" class="form-control"  
               value={this.state.fieldPassword} 
               onChange={(event)=>this.setState({fieldPassword:event.target.value})}/>
@@ -119,8 +147,8 @@ export default class Form extends Component {
         </div>
 
         <div class="form-group row">
-            <label for="firstName" class="col-sm-2 col-form-label">Confirma contraseña</label>
-          <div class="col-sm-10">
+            <label for="firstName" class="col-sm-3 col-form-label">Confirma contraseña</label>
+          <div class="col-sm-9">
             <input type="password" class="form-control"
               value={this.state.fieldConfirmPassword} 
               onChange={(event)=>this.setState({fieldConfirmPassword:event.target.value})}/>
