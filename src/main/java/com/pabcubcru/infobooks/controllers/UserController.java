@@ -7,6 +7,7 @@ import java.util.Map;
 import javax.validation.Valid;
 
 import com.pabcubcru.infobooks.models.Authorities;
+import com.pabcubcru.infobooks.models.ProvinceEnum;
 import com.pabcubcru.infobooks.models.User;
 import com.pabcubcru.infobooks.services.AuthoritiesService;
 import com.pabcubcru.infobooks.services.UserService;
@@ -47,6 +48,15 @@ public class UserController {
 			res.put("isLogged", false);
 			res.put("isAdmin", false);
 		}
+		return res;
+	}
+
+	@GetMapping(value = "/user/provinces")
+	public Map<String, Object> getProvinces() {
+		Map<String, Object> res = new HashMap<>();
+
+		res.put("provinces", List.of(ProvinceEnum.values()));
+
 		return res;
 	}
 
