@@ -36070,7 +36070,8 @@ user.create = /*#__PURE__*/function () {
               username: state.fieldUsername,
               password: state.fieldPassword,
               province: state.fieldProvince,
-              city: state.fieldCity
+              city: state.fieldCity,
+              postCode: state.fieldPostCode
             };
             urlPost = baseUrl + "/register";
             _context.next = 4;
@@ -36112,7 +36113,8 @@ user.edit = /*#__PURE__*/function () {
               username: state.fieldUsername,
               password: state.fieldPassword,
               province: state.fieldProvince,
-              city: state.fieldCity
+              city: state.fieldCity,
+              postCode: state.fieldPostCode
             };
             urlPost = baseUrl + "/user/" + state.id + "/edit";
             _context2.next = 4;
@@ -36313,6 +36315,7 @@ var Form = /*#__PURE__*/function (_Component) {
       fieldUsername: "",
       fieldCity: "",
       fieldProvince: null,
+      fieldPostCode: "",
       fieldPassword: "",
       fieldConfirmPassword: "",
       errorFieldUser: [],
@@ -36361,6 +36364,7 @@ var Form = /*#__PURE__*/function (_Component) {
                     fieldUsername: res.user.username,
                     fieldProvince: res.user.province,
                     fieldCity: res.user.city,
+                    fieldPostCode: res.user.postCode,
                     provinces: prov
                   });
                 }
@@ -36507,6 +36511,7 @@ var Form = /*#__PURE__*/function (_Component) {
       }, "*")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         "class": "col-sm-9"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("select", {
+        "class": "form-control",
         value: this.state.fieldProvince,
         id: "selectProvince",
         onChange: function onChange(event) {
@@ -36516,7 +36521,7 @@ var Form = /*#__PURE__*/function (_Component) {
         }
       }, this.state.provinces.map(function (province) {
         return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("option", {
-          "class": "form-control",
+          "class": "colored",
           value: province
         }, province);
       })))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
@@ -36536,6 +36541,25 @@ var Form = /*#__PURE__*/function (_Component) {
         onChange: function onChange(event) {
           return _this2.setState({
             fieldCity: event.target.value
+          });
+        }
+      }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+        "class": "form-group row"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("label", {
+        "for": "firstName",
+        "class": "col-sm-3 col-form-label"
+      }, "C\xF3digo postal", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("sup", {
+        "class": "text-danger"
+      }, "*")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+        "class": "col-sm-9"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("input", {
+        type: "text",
+        "class": "form-control",
+        placeholder: "41012",
+        value: this.state.fieldPostCode,
+        onChange: function onChange(event) {
+          return _this2.setState({
+            fieldPostCode: event.target.value
           });
         }
       }))), this.state.errorFieldUser.map(function (itemerror) {
@@ -36953,6 +36977,7 @@ var Form = /*#__PURE__*/function (_Component) {
       fieldUsername: "",
       fieldCity: "",
       fieldProvince: null,
+      fieldPostCode: "",
       fieldPassword: "",
       fieldConfirmPassword: "",
       fieldCheckbok: false,
@@ -37117,6 +37142,7 @@ var Form = /*#__PURE__*/function (_Component) {
       }, "*")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         "class": "col-sm-9"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("select", {
+        "class": "form-control",
         id: "selectProvince",
         onChange: function onChange(event) {
           return _this2.setState({
@@ -37125,7 +37151,6 @@ var Form = /*#__PURE__*/function (_Component) {
         }
       }, this.state.provinces.map(function (province) {
         return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("option", {
-          "class": "form-control",
           value: province
         }, province);
       })))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
@@ -37145,6 +37170,25 @@ var Form = /*#__PURE__*/function (_Component) {
         onChange: function onChange(event) {
           return _this2.setState({
             fieldCity: event.target.value
+          });
+        }
+      }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+        "class": "form-group row"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("label", {
+        "for": "firstName",
+        "class": "col-sm-3 col-form-label"
+      }, "C\xF3digo postal", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("sup", {
+        "class": "text-danger"
+      }, "*")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+        "class": "col-sm-9"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("input", {
+        type: "text",
+        "class": "form-control",
+        placeholder: "41012",
+        value: this.state.fieldPostCode,
+        onChange: function onChange(event) {
+          return _this2.setState({
+            fieldPostCode: event.target.value
           });
         }
       }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {

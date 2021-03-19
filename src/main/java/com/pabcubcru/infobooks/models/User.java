@@ -45,6 +45,10 @@ public class User extends BaseEntity {
 	@Column(name = "city")
 	private String city;
 
+	@Column(name = "postcode")
+	@Pattern(regexp = "0[1-9][0-9]{3}|[1-4][0-9]{4}|5[0-2][0-9]{3}", message = "El código postal no es válido.")
+	private String postCode;
+
 	@Column(name = "username", unique = true)
 	@NotBlank(message = "El nombre de usuario es un campo requerido.")
     private String username;

@@ -14,6 +14,7 @@ export default class Form extends Component {
         fieldUsername: "",
         fieldCity:"",
         fieldProvince:null,
+        fieldPostCode:"",
         fieldPassword: "",
         fieldConfirmPassword: "",
         errorFieldUser:[],
@@ -40,6 +41,7 @@ export default class Form extends Component {
             fieldUsername: res.user.username,
             fieldProvince: res.user.province,
             fieldCity: res.user.city,
+            fieldPostCode: res.user.postCode,
             provinces:prov
         })
     } /*else {
@@ -102,10 +104,10 @@ export default class Form extends Component {
         <div class="form-group row">
             <label for="firstName" class="col-sm-3 col-form-label">Provincia<sup class='text-danger'>*</sup></label>
           <div class="col-sm-9">
-            <select value={this.state.fieldProvince} id="selectProvince" onChange={(event) => this.setState({fieldProvince:event.target.value})}>
+            <select class="form-control" value={this.state.fieldProvince} id="selectProvince" onChange={(event) => this.setState({fieldProvince:event.target.value})}>
             {this.state.provinces.map((province) => {
               return (
-                <option  class="form-control" value={province} >{province}</option>
+                <option class="colored" value={province} >{province}</option>
               )
             })}
             </select>
@@ -118,6 +120,15 @@ export default class Form extends Component {
             <input type="text" class="form-control" placeholder="Sevilla"  
               value={this.state.fieldCity} 
               onChange={(event)=>this.setState({fieldCity:event.target.value})}/>
+          </div>
+        </div>
+
+        <div class="form-group row">
+            <label for="firstName" class="col-sm-3 col-form-label">Código postal<sup class='text-danger'>*</sup></label>
+          <div class="col-sm-9">
+            <input type="text" class="form-control" placeholder="41012"  
+              value={this.state.fieldPostCode} 
+              onChange={(event)=>this.setState({fieldPostCode:event.target.value})}/>
           </div>
         </div>
 
