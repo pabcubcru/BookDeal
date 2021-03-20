@@ -82,19 +82,6 @@ export default class Form extends Component {
         </div>
 
         <div class="form-group row">
-            <label for="firstName" class="col-sm-3 col-form-label">Provincia<sup class='text-danger'>*</sup></label>
-          <div class="col-sm-9">
-            <select class="form-control" id="selectProvince" onChange={(event) => this.setState({fieldProvince:event.target.value})}>
-            {this.state.provinces.map((province) => {
-              return (
-                <option value={province} >{province}</option>
-              )
-            })}
-            </select>
-          </div>
-        </div>
-
-        <div class="form-group row">
             <label for="firstName" class="col-sm-3 col-form-label">Ciudad<sup class='text-danger'>*</sup></label>
           <div class="col-sm-9">
             <input type="text" class="form-control" placeholder="Sevilla"  
@@ -194,4 +181,17 @@ export default class Form extends Component {
     }
 	}
 }
+
+/*<div class="form-group row">
+            <label for="firstName" class="col-sm-3 col-form-label">Provincia<sup class='text-danger'>*</sup></label>
+          <div class="col-sm-9">
+            <select class="form-control" id="selectProvince" onChange={(event) => this.setState({fieldProvince:event.target.value})}>
+            {this.state.provinces.map((province) => {
+              return (
+                <option value={province} >{province}</option>
+              )
+            })}
+            </select>
+          </div>
+        </div> */
 

@@ -47,7 +47,7 @@ public class UserService {
 
     @Transactional
     public User findUserById(int id){
-        return this.userRepository.findUserById(id);
+        return this.userRepository.findById(id);
     }
 
     @Transactional
@@ -57,12 +57,12 @@ public class UserService {
 
     @Transactional
     public Boolean existUserWithSameEmail(String email) {
-        return this.userRepository.existUserWithSameEmail(email);
+        return this.userRepository.findByEmail(email) != null;
     }
 
     @Transactional
     public Boolean existUserWithSameUsername(String username) {
-        return this.userRepository.existUserWithSameUsername(username);
+        return this.userRepository.findByUsername(username) != null;
     }
 
     @Transactional

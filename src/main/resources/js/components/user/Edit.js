@@ -6,7 +6,7 @@ export default class Form extends Component {
   constructor(){
     super();
     this.state = {
-        id:0,
+        id:"",
         fieldName:"",
         fieldEmail:"",
         fieldPhone:"",

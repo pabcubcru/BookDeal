@@ -1,23 +1,22 @@
 package com.pabcubcru.infobooks.models;
 
-import javax.persistence.Entity;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
-import javax.persistence.Table;
 import javax.validation.constraints.Size;
+
+import org.springframework.data.elasticsearch.annotations.Document;
+import org.springframework.data.elasticsearch.annotations.Field;
+import org.springframework.data.elasticsearch.annotations.FieldType;
 
 import lombok.Getter;
 import lombok.Setter;
 
-@Entity
-@Table(name = "authorities")
+@Document(indexName = "authorities")
 @Getter @Setter
-public class Authorities extends BaseEntity{
+public class Authorities extends BaseEntity {
 
-    @ManyToOne
-	@JoinColumn(name = "username")
+	@Field(type = FieldType.Object, name = "user")
 	User user;
 	
 	@Size(min = 3, max = 50)
+	@Field(type = FieldType.Text, name = "authority")
 	String authority;
 }

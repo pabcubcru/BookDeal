@@ -36106,6 +36106,7 @@ user.edit = /*#__PURE__*/function () {
         switch (_context2.prev = _context2.next) {
           case 0:
             datapost = {
+              id: state.id,
               name: state.fieldName,
               email: state.fieldEmail,
               phone: state.fieldPhone,
@@ -36116,7 +36117,7 @@ user.edit = /*#__PURE__*/function () {
               city: state.fieldCity,
               postCode: state.fieldPostCode
             };
-            urlPost = baseUrl + "/user/" + state.id + "/edit";
+            urlPost = baseUrl + "/user/" + state.fieldUsername + "/edit";
             _context2.next = 4;
             return axios__WEBPACK_IMPORTED_MODULE_2___default.a.put(urlPost, datapost).then(function (response) {
               return response.data;
@@ -36307,7 +36308,7 @@ var Form = /*#__PURE__*/function (_Component) {
 
     _this = _super.call(this);
     _this.state = {
-      id: 0,
+      id: "",
       fieldName: "",
       fieldEmail: "",
       fieldPhone: "",
@@ -37137,27 +37138,6 @@ var Form = /*#__PURE__*/function (_Component) {
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("label", {
         "for": "firstName",
         "class": "col-sm-3 col-form-label"
-      }, "Provincia", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("sup", {
-        "class": "text-danger"
-      }, "*")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
-        "class": "col-sm-9"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("select", {
-        "class": "form-control",
-        id: "selectProvince",
-        onChange: function onChange(event) {
-          return _this2.setState({
-            fieldProvince: event.target.value
-          });
-        }
-      }, this.state.provinces.map(function (province) {
-        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("option", {
-          value: province
-        }, province);
-      })))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
-        "class": "form-group row"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("label", {
-        "for": "firstName",
-        "class": "col-sm-3 col-form-label"
       }, "Ciudad", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("sup", {
         "class": "text-danger"
       }, "*")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
@@ -37342,6 +37322,19 @@ var Form = /*#__PURE__*/function (_Component) {
 
   return Form;
 }(react__WEBPACK_IMPORTED_MODULE_7__["Component"]);
+/*<div class="form-group row">
+            <label for="firstName" class="col-sm-3 col-form-label">Provincia<sup class='text-danger'>*</sup></label>
+          <div class="col-sm-9">
+            <select class="form-control" id="selectProvince" onChange={(event) => this.setState({fieldProvince:event.target.value})}>
+            {this.state.provinces.map((province) => {
+              return (
+                <option value={province} >{province}</option>
+              )
+            })}
+            </select>
+          </div>
+        </div> */
+
 
 
 

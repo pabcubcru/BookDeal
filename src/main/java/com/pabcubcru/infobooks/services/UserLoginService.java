@@ -36,7 +36,7 @@ public class UserLoginService implements UserDetailsService {
     private Collection<GrantedAuthority> getGrantedAuthorities(User user) {
 		Collection<GrantedAuthority> grantedAuthorities = new ArrayList<>();
         Boolean isAdmin = false;
-        List<Authorities> authorities = this.authoritiesService.findByUserId(user.getId());
+        List<Authorities> authorities = this.authoritiesService.findByUser(user);
         for(Authorities a : authorities){
             if(a.getAuthority().equals("admin")){
                 isAdmin = true;

@@ -20,9 +20,6 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
 	@Autowired
 	private UserLoginService userLoginService;
-
-	@Autowired
-	DataSource dataSource;
 	
 	public void configure(HttpSecurity http) throws Exception {
 		http.authorizeRequests()
