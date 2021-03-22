@@ -34,8 +34,7 @@ public class UserController {
 		Map<String, Object> res = new HashMap<>();
 		if(principal != null) {
 			res.put("isLogged", true);
-			User user = this.userService.findByUsername(principal.getName());
-			List<Authorities> authorities = this.authoritiesService.findByUser(user);
+			List<Authorities> authorities = this.authoritiesService.findByUsername(principal.getName());
 			Boolean isAdmin = false;
 			for(Authorities a : authorities) {
 				if(a.getAuthority().equals("admin")){
@@ -51,7 +50,7 @@ public class UserController {
 		return res;
 	}
 
-	@GetMapping(value = "/user/provinces")
+	@GetMapping(value = "/provinces")
 	public Map<String, Object> getProvinces() {
 		Map<String, Object> res = new HashMap<>();
 
@@ -96,7 +95,7 @@ public class UserController {
 	@GetMapping("/user/{username}")
 	public Map<String, Object> get(@PathVariable("username") String username) {
 		Map<String, Object> res = new HashMap<>();
-		if(username != null) {
+		if(!username.isEmpty()) {
 			User user = this.userService.findByUsername(username);
 			res.put("user", user);
 			res.put("success", true);
@@ -124,7 +123,6 @@ public class UserController {
 					user.setPassword(userOld.getPassword());
 					newPassword = false;
 				}
-				user.setProvince("Sevilla");
 				this.userService.save(user, newPassword);
 				res.put("success", true);
 			}

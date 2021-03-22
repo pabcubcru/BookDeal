@@ -1,7 +1,5 @@
 package com.pabcubcru.infobooks.configuration;
 
-import javax.sql.DataSource;
-
 import com.pabcubcru.infobooks.services.UserLoginService;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,7 +22,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 	public void configure(HttpSecurity http) throws Exception {
 		http.authorizeRequests()
 		.antMatchers("/", "/resources/**").permitAll()
-		.antMatchers("/user/**").permitAll()
+		.antMatchers("/user/**").hasAnyAuthority("user")
 		.antMatchers("/register", "/login", "/login-error").anonymous()
 		//.antMatchers("/login").anonymous()
 		//.antMatchers("/login-error").anonymous()

@@ -75,7 +75,7 @@ user.getUser = async(username) => {
 }
 
 user.getProvinces = async() => {
-    const urlGet = baseUrl+"/user/provinces"
+    const urlGet = baseUrl+"/provinces"
     const res = await axios.get(urlGet)
     .then(response => {return response.data})
     .catch(error => {return error})

@@ -8,8 +8,9 @@ import lombok.Getter;
 import lombok.Setter;
 
 @Getter @Setter
-public class BaseEntity {
+public abstract class BaseEntity {
     
     @Id
+    @Field(type = FieldType.Text, name = "id")
 	private String id;
 }

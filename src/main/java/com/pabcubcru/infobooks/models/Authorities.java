@@ -13,10 +13,10 @@ import lombok.Setter;
 @Getter @Setter
 public class Authorities extends BaseEntity {
 
-	@Field(type = FieldType.Object, name = "user")
-	User user;
+	@Field(type = FieldType.Text, name = "username")
+	private String username;
 	
 	@Size(min = 3, max = 50)
 	@Field(type = FieldType.Text, name = "authority")
-	String authority;
+	private String authority;
 }

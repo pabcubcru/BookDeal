@@ -3,7 +3,6 @@ package com.pabcubcru.infobooks.services;
 import java.util.List;
 
 import com.pabcubcru.infobooks.models.Authorities;
-import com.pabcubcru.infobooks.models.User;
 import com.pabcubcru.infobooks.repository.AuthoritiesRepository;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,7 +25,12 @@ public class AuthoritiesService {
     }
 
     @Transactional
-    public List<Authorities> findByUser(User user){
-        return this.authoritiesRepository.findByUser(user);
+    public List<Authorities> findByUsername(String username){
+        return this.authoritiesRepository.findByUsername(username);
+    }
+
+    @Transactional
+    public void saveAll(List<Authorities> authorities) {
+        this.authoritiesRepository.saveAll(authorities);
     }
 }

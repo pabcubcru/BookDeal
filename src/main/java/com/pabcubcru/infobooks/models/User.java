@@ -16,7 +16,7 @@ import org.springframework.data.elasticsearch.annotations.FieldType;
 import lombok.Getter;
 import lombok.Setter;
 
-@Document(indexName = "user")
+@Document(indexName = "users")
 @Getter @Setter
 public class User extends BaseEntity {
 
@@ -38,7 +38,7 @@ public class User extends BaseEntity {
 	@Past(message = "La fecha de nacimiento debe ser anterior a la fecha actual.")
 	private LocalDate birthDate;
 
-	//@NotNull(message = "La provincia es un campo requerido.")
+	@NotNull(message = "La provincia es un campo requerido.")
 	@Field(type = FieldType.Text, name = "province")
 	private String province;
 
