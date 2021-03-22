@@ -38,16 +38,18 @@ public class UserService {
             user.setPassword(new BCryptPasswordEncoder().encode(user.getPassword()));
         }
         user.setEnabled(true);
+        if(user.getId() == null){
+            Authorities authority = new Authorities();
+            authority.setUsername(user.getUsername());
+            authority.setAuthority("user");
+            this.authoritiesService.save(authority);
+        }
         this.userRepository.save(user);
-        Authorities authorities = new Authorities();
-        authorities.setUser(user);
-        authorities.setAuthority("user");
-        this.authoritiesService.save(authorities);
     }
 
     @Transactional
-    public User findUserById(int id){
-        return this.userRepository.findUserById(id);
+    public User findUserById(String id){
+        return this.userRepository.findById(id).orElse(null);
     }
 
     @Transactional
@@ -57,12 +59,12 @@ public class UserService {
 
     @Transactional
     public Boolean existUserWithSameEmail(String email) {
-        return this.userRepository.existUserWithSameEmail(email);
+        return this.userRepository.findByEmail(email) != null;
     }
 
     @Transactional
     public Boolean existUserWithSameUsername(String username) {
-        return this.userRepository.existUserWithSameUsername(username);
+        return this.userRepository.findByUsername(username) != null;
     }
 
     @Transactional

@@ -30,13 +30,13 @@ public class UserLoginService implements UserDetailsService {
         if (user == null) {
             throw new UsernameNotFoundException("Username "+ username + " not found");
         }
-        return new org.springframework.security.core.userdetails.User(user.getUsername(), user.getPassword(), getGrantedAuthorities(user));
+        return new org.springframework.security.core.userdetails.User(user.getUsername(), user.getPassword(), getGrantedAuthorities(user.getUsername()));
     }
 
-    private Collection<GrantedAuthority> getGrantedAuthorities(User user) {
+    private Collection<GrantedAuthority> getGrantedAuthorities(String username) {
 		Collection<GrantedAuthority> grantedAuthorities = new ArrayList<>();
         Boolean isAdmin = false;
-        List<Authorities> authorities = this.authoritiesService.findByUserId(user.getId());
+        List<Authorities> authorities = this.authoritiesService.findByUsername(username);
         for(Authorities a : authorities){
             if(a.getAuthority().equals("admin")){
                 isAdmin = true;

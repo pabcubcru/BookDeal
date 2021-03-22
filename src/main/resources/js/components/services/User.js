@@ -27,6 +27,7 @@ user.create = async(state) => {
 user.edit = async(state) => {
 
     const datapost = {
+        id:state.id,
         name: state.fieldName,
         email: state.fieldEmail,
         phone: state.fieldPhone,
@@ -38,7 +39,7 @@ user.edit = async(state) => {
         postCode: state.fieldPostCode
     }
 
-    const urlPost = baseUrl+"/user/"+state.id+"/edit"
+    const urlPost = baseUrl+"/user/"+state.fieldUsername+"/edit"
     const res = await axios.put(urlPost, datapost)
     .then(response => {return response.data;})
     .catch(error => {return error.response;})
@@ -74,7 +75,7 @@ user.getUser = async(username) => {
 }
 
 user.getProvinces = async() => {
-    const urlGet = baseUrl+"/user/provinces"
+    const urlGet = baseUrl+"/provinces"
     const res = await axios.get(urlGet)
     .then(response => {return response.data})
     .catch(error => {return error})

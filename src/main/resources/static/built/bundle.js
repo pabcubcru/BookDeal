@@ -36106,6 +36106,7 @@ user.edit = /*#__PURE__*/function () {
         switch (_context2.prev = _context2.next) {
           case 0:
             datapost = {
+              id: state.id,
               name: state.fieldName,
               email: state.fieldEmail,
               phone: state.fieldPhone,
@@ -36116,7 +36117,7 @@ user.edit = /*#__PURE__*/function () {
               city: state.fieldCity,
               postCode: state.fieldPostCode
             };
-            urlPost = baseUrl + "/user/" + state.id + "/edit";
+            urlPost = baseUrl + "/user/" + state.fieldUsername + "/edit";
             _context2.next = 4;
             return axios__WEBPACK_IMPORTED_MODULE_2___default.a.put(urlPost, datapost).then(function (response) {
               return response.data;
@@ -36230,7 +36231,7 @@ user.getProvinces = /*#__PURE__*/_babel_runtime_helpers_asyncToGenerator__WEBPAC
     while (1) {
       switch (_context6.prev = _context6.next) {
         case 0:
-          urlGet = baseUrl + "/user/provinces";
+          urlGet = baseUrl + "/provinces";
           _context6.next = 3;
           return axios__WEBPACK_IMPORTED_MODULE_2___default.a.get(urlGet).then(function (response) {
             return response.data;
@@ -36307,14 +36308,14 @@ var Form = /*#__PURE__*/function (_Component) {
 
     _this = _super.call(this);
     _this.state = {
-      id: 0,
+      id: "",
       fieldName: "",
       fieldEmail: "",
       fieldPhone: "",
       fieldBirthDate: "",
       fieldUsername: "",
       fieldCity: "",
-      fieldProvince: null,
+      fieldProvince: "",
       fieldPostCode: "",
       fieldPassword: "",
       fieldConfirmPassword: "",
@@ -36521,7 +36522,6 @@ var Form = /*#__PURE__*/function (_Component) {
         }
       }, this.state.provinces.map(function (province) {
         return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("option", {
-          "class": "colored",
           value: province
         }, province);
       })))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
@@ -36976,7 +36976,7 @@ var Form = /*#__PURE__*/function (_Component) {
       fieldBirthDate: "",
       fieldUsername: "",
       fieldCity: "",
-      fieldProvince: null,
+      fieldProvince: "Álava",
       fieldPostCode: "",
       fieldPassword: "",
       fieldConfirmPassword: "",

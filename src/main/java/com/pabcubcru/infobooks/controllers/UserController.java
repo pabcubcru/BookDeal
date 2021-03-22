@@ -34,8 +34,7 @@ public class UserController {
 		Map<String, Object> res = new HashMap<>();
 		if(principal != null) {
 			res.put("isLogged", true);
-			User user = this.userService.findByUsername(principal.getName());
-			List<Authorities> authorities = this.authoritiesService.findByUserId(user.getId());
+			List<Authorities> authorities = this.authoritiesService.findByUsername(principal.getName());
 			Boolean isAdmin = false;
 			for(Authorities a : authorities) {
 				if(a.getAuthority().equals("admin")){
@@ -51,7 +50,7 @@ public class UserController {
 		return res;
 	}
 
-	@GetMapping(value = "/user/provinces")
+	@GetMapping(value = "/provinces")
 	public Map<String, Object> getProvinces() {
 		Map<String, Object> res = new HashMap<>();
 
@@ -96,7 +95,7 @@ public class UserController {
 	@GetMapping("/user/{username}")
 	public Map<String, Object> get(@PathVariable("username") String username) {
 		Map<String, Object> res = new HashMap<>();
-		if(username != null) {
+		if(!username.isEmpty()) {
 			User user = this.userService.findByUsername(username);
 			res.put("user", user);
 			res.put("success", true);
@@ -107,18 +106,18 @@ public class UserController {
 		return res;
 	}
 
-	@PutMapping("/user/{id}/edit")
-	public Map<String, Object> edit(@RequestBody @Valid User user, @PathVariable("id") int idUser) {
+	@PutMapping("/user/{username}/edit")
+	public Map<String, Object> edit(@RequestBody @Valid User user, @PathVariable("username") String username) {
 		Map<String, Object> res = new HashMap<>();
 
 		if(!user.getEmail().isEmpty()){
 			Boolean existEmail = this.userService.existUserWithSameEmail(user.getEmail());
-			User userOld = this.userService.findUserById(idUser);
+			User userOld = this.userService.findByUsername(username);
 			if(existEmail && !userOld.getEmail().equals(user.getEmail())) {
 				res.put("message", "Este correo electrónico ya está registrado.");
 				res.put("success", false);
 			} else {
-				user.setId(idUser);
+				user.setId(userOld.getId());
 				Boolean newPassword = true;
 				if (user.getPassword().isEmpty()) {
 					user.setPassword(userOld.getPassword());

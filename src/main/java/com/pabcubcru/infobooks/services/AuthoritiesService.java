@@ -2,13 +2,12 @@ package com.pabcubcru.infobooks.services;
 
 import java.util.List;
 
-import javax.transaction.Transactional;
-
 import com.pabcubcru.infobooks.models.Authorities;
 import com.pabcubcru.infobooks.repository.AuthoritiesRepository;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 @Service
 public class AuthoritiesService {
@@ -26,7 +25,12 @@ public class AuthoritiesService {
     }
 
     @Transactional
-    public List<Authorities> findByUserId(int userId){
-        return this.authoritiesRepository.findByUserId(userId);
+    public List<Authorities> findByUsername(String username){
+        return this.authoritiesRepository.findByUsername(username);
+    }
+
+    @Transactional
+    public void saveAll(List<Authorities> authorities) {
+        this.authoritiesRepository.saveAll(authorities);
     }
 }

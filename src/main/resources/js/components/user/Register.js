@@ -13,7 +13,7 @@ export default class Form extends Component {
       fieldBirthDate:"",
       fieldUsername: "",
       fieldCity:"",
-      fieldProvince:null,
+      fieldProvince:"Álava",
       fieldPostCode:"",
       fieldPassword: "",
       fieldConfirmPassword:"",
@@ -87,7 +87,7 @@ export default class Form extends Component {
             <select class="form-control" id="selectProvince" onChange={(event) => this.setState({fieldProvince:event.target.value})}>
             {this.state.provinces.map((province) => {
               return (
-                <option value={province} >{province}</option>
+                <option value={province}>{province}</option>
               )
             })}
             </select>
