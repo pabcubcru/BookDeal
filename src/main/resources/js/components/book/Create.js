@@ -128,7 +128,6 @@ export default class Form extends Component {
           </div>
         </div>
 
-
         {
           this.state.errorField.map((itemerror) => {
             return(
@@ -149,11 +148,10 @@ export default class Form extends Component {
 
   async onClickSave() {
 		const res = await bookService.create(this.state)
-    alert(res.status)
+
     if (res.success) {
       window.location.replace("/")
-    } else if (res.status==405) {
-      alert(res.data.errors)
+    } else {
       const dataError = []
       const error = res.data.errors
       error.map((itemerror)=>{

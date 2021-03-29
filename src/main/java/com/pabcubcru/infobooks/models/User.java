@@ -58,6 +58,6 @@ public class User extends BaseEntity {
     private String password;
 
 	@Field(type = FieldType.Boolean, name = "enabled")
-    boolean enabled;
+    private boolean enabled;
 
 }

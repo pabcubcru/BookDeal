@@ -36362,12 +36362,10 @@ var Form = /*#__PURE__*/function (_Component) {
 
               case 2:
                 res = _context.sent;
-                alert(res.status);
 
                 if (res.success) {
                   window.location.replace("/");
-                } else if (res.status == 405) {
-                  alert(res.data.errors);
+                } else {
                   dataError = [];
                   error = res.data.errors;
                   error.map(function (itemerror) {
@@ -36378,7 +36376,7 @@ var Form = /*#__PURE__*/function (_Component) {
                   });
                 }
 
-              case 5:
+              case 4:
               case "end":
                 return _context.stop();
             }

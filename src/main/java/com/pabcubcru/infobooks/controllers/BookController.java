@@ -37,7 +37,7 @@ public class BookController {
 	}
 
     @PostMapping(value = "/new")
-    public Map<String, Object> saveBook(@RequestBody @Valid Book book, Principal principal) {
+    public Map<String, Object> saveBook(@Valid @RequestBody Book book, Principal principal) {
         Map<String, Object> res = new HashMap<>();
 
         User user = this.userService.findByUsername(principal.getName());

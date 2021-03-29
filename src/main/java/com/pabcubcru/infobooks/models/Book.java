@@ -31,7 +31,7 @@ public class Book extends BaseEntity {
     private String isbn;
 
     @NotNull(message = "El año de publicación es un campo requerido.")
-    @Max(value = 2021L, message = "El año de publicación debe ser anterior o igual al presente año")
+    @Max(value = 2021L, message = "El año de publicación debe ser anterior o igual al presente año.")
     @Field(type = FieldType.Integer, name = "publicationYear")
     private Integer publicationYear;
     
