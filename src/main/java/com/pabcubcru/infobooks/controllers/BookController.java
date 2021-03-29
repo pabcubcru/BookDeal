@@ -12,11 +12,13 @@ import com.pabcubcru.infobooks.services.BookService;
 import com.pabcubcru.infobooks.services.UserService;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.servlet.ModelAndView;
 
-@RestController("/books")
+@RestController
 public class BookController {
 
     @Autowired
@@ -25,7 +27,14 @@ public class BookController {
     @Autowired
     private UserService userService;
 
-    @PostMapping("/new")
+    @GetMapping(value = "/books/new")
+	public ModelAndView main() {
+		ModelAndView model = new ModelAndView();
+		model.setViewName("Main");
+		return model;
+	}
+
+    @PostMapping("/books/new")
     public Map<String, Object> saveBook(@RequestBody @Valid Book book, Principal principal) {
         Map<String, Object> res = new HashMap<>();
 
