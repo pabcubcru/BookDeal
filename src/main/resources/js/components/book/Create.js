@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import bookService from "../services/Book";
-import { Link } from "react-router-dom";
 
 export default class Form extends Component {
 
@@ -16,7 +15,7 @@ export default class Form extends Component {
       fieldAuthor:"",
       fieldDescription:"",
       fieldImage: "",
-      fieldAction:"",
+      fieldAction:"VENDER",
       fieldPrice: "",
       errorField:[]
     }
@@ -59,7 +58,7 @@ export default class Form extends Component {
 				<div class="form-group row">
             <label for="firstName" class="col-sm-3 col-form-label">Año de publicación<sup class='text-danger'>*</sup></label>
           <div class="col-sm-9">
-            <input type="number" class="form-control" placeholder="yyyy"  
+            <input type="number" class="form-control" max="2021"
               value={this.state.fieldPublicationYear} 
               onChange={(event)=>this.setState({fieldPublicationYear:event.target.value})}/>
           </div>
@@ -123,7 +122,7 @@ export default class Form extends Component {
         <div class="form-group row">
             <label for="firstName" class="col-sm-3 col-form-label">Precio</label>
           <div class="col-sm-9">
-            <input type="text" class="form-control"
+            <input type="number" class="form-control"
               value={this.state.fieldPrice} 
               onChange={(event)=>this.setState({fieldPrice:event.target.value})}/>
           </div>
@@ -150,10 +149,18 @@ export default class Form extends Component {
 
   async onClickSave() {
 		const res = await bookService.create(this.state)
-
-      if (res.success) {
-        window.location.replace("/")
-      }
+    alert(res.status)
+    if (res.success) {
+      window.location.replace("/")
+    } else if (res.status==405) {
+      alert(res.data.errors)
+      const dataError = []
+      const error = res.data.errors
+      error.map((itemerror)=>{
+      dataError.push(itemerror.defaultMessage)
+      })
+      this.setState({errorField:dataError}) 
     }
+  }
 }
 

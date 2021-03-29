@@ -22,10 +22,9 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 	public void configure(HttpSecurity http) throws Exception {
 		http.authorizeRequests()
 		.antMatchers("/", "/resources/**").permitAll()
-		.antMatchers("/user/**", "/books/**").hasAnyAuthority("user")
+		.antMatchers("/user/**").hasAnyAuthority("user")
+		.antMatchers("/books/**").authenticated()
 		.antMatchers("/register", "/login", "/login-error").anonymous()
-		//.antMatchers("/login").anonymous()
-		//.antMatchers("/login-error").anonymous()
 		.and().csrf().disable()
 		.formLogin().loginPage("/login")
 		.failureUrl("/login-error")

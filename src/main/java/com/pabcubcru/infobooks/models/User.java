@@ -60,7 +60,4 @@ public class User extends BaseEntity {
 	@Field(type = FieldType.Boolean, name = "enabled")
     boolean enabled;
 
-    /*@OneToMany(cascade = CascadeType.ALL, mappedBy = "user", fetch = FetchType.EAGER)
-	private Set<Authorities> authorities;*/
-
 }

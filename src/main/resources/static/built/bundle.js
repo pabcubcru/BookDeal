@@ -36072,7 +36072,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_7__);
 /* harmony import */ var _services_Book__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../services/Book */ "./src/main/resources/js/components/services/Book.js");
-/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
 
 
 
@@ -36084,7 +36083,6 @@ __webpack_require__.r(__webpack_exports__);
 function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_5___default()(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_5___default()(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_4___default()(this, result); }; }
 
 function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
-
 
 
 
@@ -36110,7 +36108,7 @@ var Form = /*#__PURE__*/function (_Component) {
       fieldAuthor: "",
       fieldDescription: "",
       fieldImage: "",
-      fieldAction: "",
+      fieldAction: "VENDER",
       fieldPrice: "",
       errorField: []
     };
@@ -36200,7 +36198,7 @@ var Form = /*#__PURE__*/function (_Component) {
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("input", {
         type: "number",
         "class": "form-control",
-        placeholder: "yyyy",
+        max: "2021",
         value: this.state.fieldPublicationYear,
         onChange: function onChange(event) {
           return _this2.setState({
@@ -36326,7 +36324,7 @@ var Form = /*#__PURE__*/function (_Component) {
       }, "Precio"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         "class": "col-sm-9"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("input", {
-        type: "text",
+        type: "number",
         "class": "form-control",
         value: this.state.fieldPrice,
         onChange: function onChange(event) {
@@ -36354,7 +36352,7 @@ var Form = /*#__PURE__*/function (_Component) {
     key: "onClickSave",
     value: function () {
       var _onClickSave = _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_6___default.a.mark(function _callee() {
-        var res;
+        var res, dataError, error;
         return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_6___default.a.wrap(function _callee$(_context) {
           while (1) {
             switch (_context.prev = _context.next) {
@@ -36364,12 +36362,23 @@ var Form = /*#__PURE__*/function (_Component) {
 
               case 2:
                 res = _context.sent;
+                alert(res.status);
 
                 if (res.success) {
                   window.location.replace("/");
+                } else if (res.status == 405) {
+                  alert(res.data.errors);
+                  dataError = [];
+                  error = res.data.errors;
+                  error.map(function (itemerror) {
+                    dataError.push(itemerror.defaultMessage);
+                  });
+                  this.setState({
+                    errorField: dataError
+                  });
                 }
 
-              case 4:
+              case 5:
               case "end":
                 return _context.stop();
             }

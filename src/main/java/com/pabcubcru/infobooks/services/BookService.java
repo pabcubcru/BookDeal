@@ -25,6 +25,7 @@ public class BookService {
         this.bookRepository.save(book);
     }
 
+    @Transactional(readOnly = true)
     public List<Book> findAll() {
         List<Book> res = new ArrayList<Book>();
         this.bookRepository.findAll().iterator().forEachRemaining(res::add);

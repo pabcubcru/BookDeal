@@ -7,10 +7,11 @@ import javax.servlet.http.HttpServletRequest;
 import org.springframework.boot.web.servlet.error.ErrorController;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.stereotype.Controller;
+
 import org.springframework.web.servlet.ModelAndView;
 
-@RestController
+@Controller
 public class CustomErrorController implements ErrorController {
 
     @Override
@@ -19,7 +20,7 @@ public class CustomErrorController implements ErrorController {
         return "/error";
     }
 
-    @GetMapping("/error")
+    @GetMapping(value = "/error")
     public ModelAndView customError(HttpServletRequest request) {
         Object status = request.getAttribute(RequestDispatcher.ERROR_STATUS_CODE);
         ModelAndView model = new ModelAndView();
