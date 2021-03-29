@@ -7,9 +7,7 @@ import java.util.Map;
 import javax.validation.Valid;
 
 import com.pabcubcru.infobooks.models.Book;
-import com.pabcubcru.infobooks.models.User;
 import com.pabcubcru.infobooks.services.BookService;
-import com.pabcubcru.infobooks.services.UserService;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -26,10 +24,7 @@ public class BookController {
     @Autowired
     private BookService bookService;
 
-    @Autowired
-    private UserService userService;
-
-    @GetMapping(value = {"/new"})
+    @GetMapping(value = "/new")
 	public ModelAndView main() {
 		ModelAndView model = new ModelAndView();
 		model.setViewName("Main");
@@ -37,14 +32,22 @@ public class BookController {
 	}
 
     @PostMapping(value = "/new")
-    public Map<String, Object> saveBook(@Valid @RequestBody Book book, Principal principal) {
+    public Map<String, Object> saveBook(@RequestBody @Valid Book book, Principal principal) {
         Map<String, Object> res = new HashMap<>();
 
-        User user = this.userService.findByUsername(principal.getName());
-        book.setUser(user);
+        book.setUsername(principal.getName());
 
         this.bookService.save(book);
         res.put("success", true);
+
+        return res;
+    }
+
+    @GetMapping(value="/all")
+    public Map<String, Object> findAll() {
+        Map<String, Object> res = new HashMap<>();
+
+        res.put("books", this.bookService.findAll());
 
         return res;
     }

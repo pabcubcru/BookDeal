@@ -62,8 +62,8 @@ public class Book extends BaseEntity {
     @Field(type = FieldType.Double, name = "price")
     private Double price;
 
-    @Field(type = FieldType.Object, name = "user")
-    private User user;
+    @Field(type = FieldType.Keyword, name = "username")
+    private String username;
 
     
     
