@@ -55,6 +55,10 @@ public class Book extends BaseEntity {
     @Field(type = FieldType.Text, name = "image")
     private String image;
 
+    @NotBlank(message = "El estado es un campo requerido.")
+    @Field(type = FieldType.Keyword, name = "status")
+    private String status;
+
     @NotBlank(message = "La acción es un campo requerido.")
     @Field(type = FieldType.Keyword, name = "action")
     private String action;

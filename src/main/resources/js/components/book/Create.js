@@ -15,7 +15,8 @@ export default class Form extends Component {
       fieldAuthor:"",
       fieldDescription:"",
       fieldImage: "",
-      fieldAction:"INTERCAMBIAR",
+      fieldStatus: "NUEVO",
+      fieldAction:"INTERCAMBIO",
       fieldPrice: "",
       errorField:[],
       genres:[],
@@ -122,11 +123,25 @@ export default class Form extends Component {
         </div>
 
         <div class="form-group row">
+            <label for="firstName" class="col-sm-3 col-form-label">Estado<sup class='text-danger'>*</sup></label>
+          <div class="col-sm-9">
+          <select class="form-control" id="selectStatus" onChange={(event) => this.setState({fieldStatus:event.target.value})}>
+            <option value="NUEVO">NUEVO</option>
+            <option value="POCO USADO">POCO USADO</option>
+            <option value="NORMAL">NORMAL</option>
+            <option value="MUY USADO">MUY USADO</option>
+            <option value="DAÑADO">DAÑADO</option>
+            <option value="MUY DAÑADO">MUY DAÑADO</option>
+          </select>
+          </div>
+        </div>
+
+        <div class="form-group row">
             <label for="firstName" class="col-sm-3 col-form-label">¿Qué quiere hacer?<sup class='text-danger'>*</sup></label>
           <div class="col-sm-9">
           <select class="form-control" id="selectAction" onChange={(event) => this.setState({fieldAction:event.target.value})}>
-            <option value="INTERCAMBIAR">INTERCAMBIAR</option>
-            <option value="VENDER">VENDER</option>
+            <option value="INTERCAMBIO">INTERCAMBIO</option>
+            <option value="VENTA">VENTA</option>
           </select>
           </div>
         </div>
