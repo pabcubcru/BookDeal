@@ -117,7 +117,7 @@ export default class Form extends Component {
           <div >
             <input type="file"
               value={this.state.fieldImage} 
-              onChange={(event)=>this.setState({fieldImage: event.target.value})}/>
+              onChange={(event)=>this.setState({fieldImage: event.target.value})} multiple/>
           </div>
         </div>
 

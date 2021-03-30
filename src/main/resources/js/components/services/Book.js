@@ -51,11 +51,20 @@ book.edit = async(state) => {
     return res;
 }
 
-book.findAll = async() => {
-    const urlGet = baseUrl+"/all"
+book.listAll = async() => {
+    const urlGet = baseUrl+"/list/all"
     const res = await axios.get(urlGet)
-    .then(response => {return response.data})
-    .catch(error => {return error})
+    .then(response => {return response.data;})
+    .catch(error => {return error.response;})
+
+    return res;
+}
+
+book.listMyBooks = async() => {
+    const urlGet = baseUrl+"/list/me"
+    const res = await axios.get(urlGet)
+    .then(response => {return response.data;})
+    .catch(error => {return error.response;})
 
     return res;
 }
