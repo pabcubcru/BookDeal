@@ -26,7 +26,7 @@ public class BookController {
     @Autowired
     private BookService bookService;
 
-    @GetMapping(value = "/new")
+    @GetMapping(value = {"/**"})
 	public ModelAndView main() {
 		ModelAndView model = new ModelAndView();
 		model.setViewName("Main");
@@ -48,11 +48,20 @@ public class BookController {
         return res;
     }
 
-    @GetMapping(value="/all")
+    @GetMapping(value="/list/all")
     public Map<String, Object> findAll() {
         Map<String, Object> res = new HashMap<>();
 
         res.put("books", this.bookService.findAll());
+
+        return res;
+    }
+
+    @GetMapping(value="/list/me")
+    public Map<String, Object> findMyBooks(Principal principal){
+        Map<String, Object> res = new HashMap<>();
+
+        res.put("books", this.bookService.findMyBooks(principal.getName()));
 
         return res;
     }

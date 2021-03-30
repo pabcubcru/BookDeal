@@ -31,5 +31,12 @@ public class BookService {
         this.bookRepository.findAll().iterator().forEachRemaining(res::add);
         return res;
     }
+
+    @Transactional(readOnly = true)
+    public List<Book> findMyBooks(String username) {
+        List<Book> res = new ArrayList<>();
+        this.bookRepository.findByUsername(username).iterator().forEachRemaining(res::add);
+        return res;
+    }
     
 }
