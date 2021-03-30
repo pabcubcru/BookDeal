@@ -42,7 +42,8 @@ user.edit = async(state) => {
     const urlPost = baseUrl+"/user/"+state.fieldUsername+"/edit"
     const res = await axios.put(urlPost, datapost)
     .then(response => {return response.data;})
-    .catch(error => {return error.response;})
+    .catch(error => {return error;})
+    
 
     return res;
 }

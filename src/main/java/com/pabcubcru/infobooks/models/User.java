@@ -13,10 +13,12 @@ import org.springframework.data.elasticsearch.annotations.Document;
 import org.springframework.data.elasticsearch.annotations.Field;
 import org.springframework.data.elasticsearch.annotations.FieldType;
 
+import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
 
 @Document(indexName = "users")
+@Data
 @Getter @Setter
 public class User extends BaseEntity {
 
@@ -58,9 +60,6 @@ public class User extends BaseEntity {
     private String password;
 
 	@Field(type = FieldType.Boolean, name = "enabled")
-    boolean enabled;
-
-    /*@OneToMany(cascade = CascadeType.ALL, mappedBy = "user", fetch = FetchType.EAGER)
-	private Set<Authorities> authorities;*/
+    private boolean enabled;
 
 }

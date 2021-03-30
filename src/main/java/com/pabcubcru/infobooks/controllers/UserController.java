@@ -19,6 +19,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.servlet.ModelAndView;
 
 @RestController
 public class UserController {
@@ -29,7 +30,14 @@ public class UserController {
 	@Autowired
 	private AuthoritiesService authoritiesService;
 
-	@GetMapping("/user/principal")
+	@GetMapping(value = {"/", "/profile", "/register", "/login", "/login-error"})
+	public ModelAndView main() {
+		ModelAndView model = new ModelAndView();
+		model.setViewName("Main");
+		return model;
+	}
+
+	@GetMapping(value = "/user/principal")
 	public Map<String, Object> getPrincipal(Principal principal){
 		Map<String, Object> res = new HashMap<>();
 		if(principal != null) {
@@ -83,7 +91,7 @@ public class UserController {
 		return res;
 	}
 
-	@GetMapping("/user/get-username")
+	@GetMapping(value = "/user/get-username")
 	public Map<String, Object> getIdPrincipal(Principal principal) {
 		Map<String, Object> res = new HashMap<>();
 		
@@ -92,7 +100,7 @@ public class UserController {
 		return res;
 	}
 
-	@GetMapping("/user/{username}")
+	@GetMapping(value = "/user/{username}")
 	public Map<String, Object> get(@PathVariable("username") String username) {
 		Map<String, Object> res = new HashMap<>();
 		if(!username.isEmpty()) {
@@ -106,7 +114,7 @@ public class UserController {
 		return res;
 	}
 
-	@PutMapping("/user/{username}/edit")
+	@PutMapping(value = "/user/{username}/edit")
 	public Map<String, Object> edit(@RequestBody @Valid User user, @PathVariable("username") String username) {
 		Map<String, Object> res = new HashMap<>();
 
