@@ -15,10 +15,18 @@ export default class Form extends Component {
       fieldAuthor:"",
       fieldDescription:"",
       fieldImage: "",
-      fieldAction:"VENDER",
+      fieldAction:"INTERCAMBIAR",
       fieldPrice: "",
-      errorField:[]
+      errorField:[],
+      genres:[],
+      fieldGen:[]
     }
+  }
+
+  async componentDidMount() {
+    const genres = await bookService.getGenres()
+    const res = genres.genres
+    this.setState({genres:res})
   }
 
   render() {
@@ -76,9 +84,13 @@ export default class Form extends Component {
         <div class="form-group row">
             <label for="firstName" class="col-sm-3 col-form-label">Generos<sup class='text-danger'>*</sup></label>
           <div class="col-sm-9">
-          <input type="text" class="form-control"  
-              value={this.state.fieldGenres} 
-              onChange={(event)=>this.setState({fieldGenres:event.target.value})}/>
+          <select class="form-control" id="selectGenres" onClick={(event) => this.addGenre(event.target.value)} multiple>
+            {this.state.genres.map((genre) => {
+              return (
+                <option value={genre}>{genre}</option>
+              )
+            })}
+            </select>
           </div>
         </div>
 
@@ -102,8 +114,8 @@ export default class Form extends Component {
 
         <div class="form-group row">
             <label for="firstName" class="col-sm-3 col-form-label">Imagen<sup class='text-danger'>*</sup></label>
-          <div class="col-sm-9">
-            <input type="file" class="form-control"
+          <div >
+            <input type="file"
               value={this.state.fieldImage} 
               onChange={(event)=>this.setState({fieldImage: event.target.value})}/>
           </div>
@@ -113,20 +125,22 @@ export default class Form extends Component {
             <label for="firstName" class="col-sm-3 col-form-label">¿Qué quiere hacer?<sup class='text-danger'>*</sup></label>
           <div class="col-sm-9">
           <select class="form-control" id="selectAction" onChange={(event) => this.setState({fieldAction:event.target.value})}>
-            <option value="VENDER">VENDER</option>
             <option value="INTERCAMBIAR">INTERCAMBIAR</option>
-            </select>
+            <option value="VENDER">VENDER</option>
+          </select>
           </div>
         </div>
 
-        <div class="form-group row">
-            <label for="firstName" class="col-sm-3 col-form-label">Precio</label>
+        <div class="form-group row" >
+          <label for="firstName" class="col-sm-3 col-form-label">Precio</label> 
           <div class="col-sm-9">
-            <input type="number" class="form-control"
+            <input id="price" type="number" class="form-control"
               value={this.state.fieldPrice} 
-              onChange={(event)=>this.setState({fieldPrice:event.target.value})}/>
+              onChange={(event)=> this.setState({fieldPrice:event.target.value})} />
           </div>
         </div>
+                                   
+                    
 
         {
           this.state.errorField.map((itemerror) => {
@@ -149,16 +163,29 @@ export default class Form extends Component {
   async onClickSave() {
 		const res = await bookService.create(this.state)
 
-    if (res.success) {
-      window.location.replace("/")
-    } else {
+    if (this.state.fieldAction == "VENDER" && this.state.fieldPrice == "") {
       const dataError = []
-      const error = res.data.errors
-      error.map((itemerror)=>{
-      dataError.push(itemerror.defaultMessage)
-      })
-      this.setState({errorField:dataError}) 
+      dataError.push("El precio es un campo requerido.");
+      this.setState({errorField:dataError});
+    } else {
+      if (res.success) {
+        window.location.replace("/")
+      } else if(res.status == 400) {
+        const dataError = []
+        const error = res.data.errors
+        error.map((itemerror)=>{
+        dataError.push(itemerror.defaultMessage)
+        })
+        this.setState({errorField:dataError}) 
+      }
     }
+  }
+
+  async addGenre(element) {
+    const gen = this.state.fieldGen
+    gen.push(element)
+    this.setState({fieldGen:gen})
+    this.setState({fieldGenres:gen.join(", ")})
   }
 }
 

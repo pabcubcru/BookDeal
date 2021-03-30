@@ -2,11 +2,13 @@ package com.pabcubcru.infobooks.controllers;
 
 import java.security.Principal;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import javax.validation.Valid;
 
 import com.pabcubcru.infobooks.models.Book;
+import com.pabcubcru.infobooks.models.GenreEnum;
 import com.pabcubcru.infobooks.services.BookService;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -32,13 +34,16 @@ public class BookController {
 	}
 
     @PostMapping(value = "/new")
-    public Map<String, Object> saveBook(@RequestBody @Valid Book book, Principal principal) {
+    public Map<String, Object> create(@RequestBody @Valid Book book, Principal principal) {
         Map<String, Object> res = new HashMap<>();
 
-        book.setUsername(principal.getName());
-
-        this.bookService.save(book);
-        res.put("success", true);
+        try{
+            book.setUsername(principal.getName());
+            this.bookService.save(book);
+            res.put("success", true);
+        } catch(Exception e) {
+            res.put("success", false);
+        }
 
         return res;
     }
@@ -48,6 +53,15 @@ public class BookController {
         Map<String, Object> res = new HashMap<>();
 
         res.put("books", this.bookService.findAll());
+
+        return res;
+    }
+
+    @GetMapping(value="/genres")
+    public Map<String, Object> getGenres() {
+        Map<String, Object> res = new HashMap<>();
+
+        res.put("genres", List.of(GenreEnum.values()));
 
         return res;
     }

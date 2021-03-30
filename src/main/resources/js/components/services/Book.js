@@ -54,10 +54,19 @@ book.edit = async(state) => {
 book.findAll = async() => {
     const urlGet = baseUrl+"/all"
     const res = await axios.get(urlGet)
-    .then(response => {return response.data;})
-    .catch(error => {return error;})
+    .then(response => {return response.data})
+    .catch(error => {return error})
 
     return res;
 }
+
+book.getGenres = async() => {
+    const urlGet = baseUrl+"/genres"
+    const res = await axios.get(urlGet)
+    .then(response => {return response.data})
+    .catch(error => {return error})
+    return res;
+}
+   
 
 export default book

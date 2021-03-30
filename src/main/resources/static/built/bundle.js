@@ -35828,9 +35828,20 @@ var Home = /*#__PURE__*/function (_Component) {
   }, {
     key: "render",
     value: function render() {
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", null, this.state.books.map(function (book) {
-        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null, book.title);
-      }));
+      return (
+        /*#__PURE__*/
+
+        /*<div>
+           {
+            this.state.books.map((book) => {
+              return(
+                <p>{book.title}</p>
+              )
+            })
+          }
+        </div>*/
+        react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null, "Hola")
+      );
     }
   }]);
 
@@ -36149,14 +36160,49 @@ var Form = /*#__PURE__*/function (_Component) {
       fieldAuthor: "",
       fieldDescription: "",
       fieldImage: "",
-      fieldAction: "VENDER",
+      fieldAction: "INTERCAMBIAR",
       fieldPrice: "",
-      errorField: []
+      errorField: [],
+      genres: [],
+      fieldGen: []
     };
     return _this;
   }
 
   _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_2___default()(Form, [{
+    key: "componentDidMount",
+    value: function () {
+      var _componentDidMount = _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_6___default.a.mark(function _callee() {
+        var genres, res;
+        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_6___default.a.wrap(function _callee$(_context) {
+          while (1) {
+            switch (_context.prev = _context.next) {
+              case 0:
+                _context.next = 2;
+                return _services_Book__WEBPACK_IMPORTED_MODULE_8__["default"].getGenres();
+
+              case 2:
+                genres = _context.sent;
+                res = genres.genres;
+                this.setState({
+                  genres: res
+                });
+
+              case 5:
+              case "end":
+                return _context.stop();
+            }
+          }
+        }, _callee, this);
+      }));
+
+      function componentDidMount() {
+        return _componentDidMount.apply(this, arguments);
+      }
+
+      return componentDidMount;
+    }()
+  }, {
     key: "render",
     value: function render() {
       var _this2 = this;
@@ -36273,16 +36319,18 @@ var Form = /*#__PURE__*/function (_Component) {
         "class": "text-danger"
       }, "*")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         "class": "col-sm-9"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("input", {
-        type: "text",
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("select", {
         "class": "form-control",
-        value: this.state.fieldGenres,
-        onChange: function onChange(event) {
-          return _this2.setState({
-            fieldGenres: event.target.value
-          });
-        }
-      }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+        id: "selectGenres",
+        onClick: function onClick(event) {
+          return _this2.addGenre(event.target.value);
+        },
+        multiple: true
+      }, this.state.genres.map(function (genre) {
+        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("option", {
+          value: genre
+        }, genre);
+      })))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         "class": "form-group row"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("label", {
         "for": "firstName",
@@ -36325,11 +36373,8 @@ var Form = /*#__PURE__*/function (_Component) {
         "class": "col-sm-3 col-form-label"
       }, "Imagen", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("sup", {
         "class": "text-danger"
-      }, "*")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
-        "class": "col-sm-9"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("input", {
+      }, "*")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("input", {
         type: "file",
-        "class": "form-control",
         value: this.state.fieldImage,
         onChange: function onChange(event) {
           return _this2.setState({
@@ -36354,10 +36399,10 @@ var Form = /*#__PURE__*/function (_Component) {
           });
         }
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("option", {
-        value: "VENDER"
-      }, "VENDER"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("option", {
         value: "INTERCAMBIAR"
-      }, "INTERCAMBIAR")))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+      }, "INTERCAMBIAR"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("option", {
+        value: "VENDER"
+      }, "VENDER")))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         "class": "form-group row"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("label", {
         "for": "firstName",
@@ -36365,6 +36410,7 @@ var Form = /*#__PURE__*/function (_Component) {
       }, "Precio"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         "class": "col-sm-9"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("input", {
+        id: "price",
         type: "number",
         "class": "form-control",
         value: this.state.fieldPrice,
@@ -36392,37 +36438,46 @@ var Form = /*#__PURE__*/function (_Component) {
   }, {
     key: "onClickSave",
     value: function () {
-      var _onClickSave = _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_6___default.a.mark(function _callee() {
-        var res, dataError, error;
-        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_6___default.a.wrap(function _callee$(_context) {
+      var _onClickSave = _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_6___default.a.mark(function _callee2() {
+        var res, dataError, _dataError, error;
+
+        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_6___default.a.wrap(function _callee2$(_context2) {
           while (1) {
-            switch (_context.prev = _context.next) {
+            switch (_context2.prev = _context2.next) {
               case 0:
-                _context.next = 2;
+                _context2.next = 2;
                 return _services_Book__WEBPACK_IMPORTED_MODULE_8__["default"].create(this.state);
 
               case 2:
-                res = _context.sent;
+                res = _context2.sent;
 
-                if (res.success) {
-                  window.location.replace("/");
-                } else {
+                if (this.state.fieldAction == "VENDER" && this.state.fieldPrice == "") {
                   dataError = [];
-                  error = res.data.errors;
-                  error.map(function (itemerror) {
-                    dataError.push(itemerror.defaultMessage);
-                  });
+                  dataError.push("El precio es un campo requerido.");
                   this.setState({
                     errorField: dataError
                   });
+                } else {
+                  if (res.success) {
+                    window.location.replace("/");
+                  } else if (res.status == 400) {
+                    _dataError = [];
+                    error = res.data.errors;
+                    error.map(function (itemerror) {
+                      _dataError.push(itemerror.defaultMessage);
+                    });
+                    this.setState({
+                      errorField: _dataError
+                    });
+                  }
                 }
 
               case 4:
               case "end":
-                return _context.stop();
+                return _context2.stop();
             }
           }
-        }, _callee, this);
+        }, _callee2, this);
       }));
 
       function onClickSave() {
@@ -36430,6 +36485,38 @@ var Form = /*#__PURE__*/function (_Component) {
       }
 
       return onClickSave;
+    }()
+  }, {
+    key: "addGenre",
+    value: function () {
+      var _addGenre = _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_6___default.a.mark(function _callee3(element) {
+        var gen;
+        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_6___default.a.wrap(function _callee3$(_context3) {
+          while (1) {
+            switch (_context3.prev = _context3.next) {
+              case 0:
+                gen = this.state.fieldGen;
+                gen.push(element);
+                this.setState({
+                  fieldGen: gen
+                });
+                this.setState({
+                  fieldGenres: gen.join(", ")
+                });
+
+              case 4:
+              case "end":
+                return _context3.stop();
+            }
+          }
+        }, _callee3, this);
+      }));
+
+      function addGenre(_x) {
+        return _addGenre.apply(this, arguments);
+      }
+
+      return addGenre;
     }()
   }]);
 
@@ -36577,6 +36664,31 @@ book.findAll = /*#__PURE__*/_babel_runtime_helpers_asyncToGenerator__WEBPACK_IMP
     }
   }, _callee3);
 }));
+book.getGenres = /*#__PURE__*/_babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.mark(function _callee4() {
+  var urlGet, res;
+  return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.wrap(function _callee4$(_context4) {
+    while (1) {
+      switch (_context4.prev = _context4.next) {
+        case 0:
+          urlGet = baseUrl + "/genres";
+          _context4.next = 3;
+          return axios__WEBPACK_IMPORTED_MODULE_2___default.a.get(urlGet).then(function (response) {
+            return response.data;
+          })["catch"](function (error) {
+            return error;
+          });
+
+        case 3:
+          res = _context4.sent;
+          return _context4.abrupt("return", res);
+
+        case 5:
+        case "end":
+          return _context4.stop();
+      }
+    }
+  }, _callee4);
+}));
 /* harmony default export */ __webpack_exports__["default"] = (book);
 
 /***/ }),
@@ -36669,7 +36781,7 @@ user.edit = /*#__PURE__*/function () {
             return axios__WEBPACK_IMPORTED_MODULE_2___default.a.put(urlPost, datapost).then(function (response) {
               return response.data;
             })["catch"](function (error) {
-              return error.response;
+              return error;
             });
 
           case 4:

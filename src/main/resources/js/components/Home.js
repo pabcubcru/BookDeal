@@ -17,7 +17,7 @@ export default class Home extends Component {
 
   render() {
     return (
-      <div>
+      /*<div>
          {
           this.state.books.map((book) => {
             return(
@@ -25,8 +25,8 @@ export default class Home extends Component {
             )
           })
         }
-      </div>
-      
+      </div>*/
+      <p>Hola</p>
       
     )
   }
