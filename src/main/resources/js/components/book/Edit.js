@@ -6,6 +6,7 @@ export default class Form extends Component {
   constructor(){
     super();
     this.state = {
+      id:0,
       fieldTitle:"",
       fieldOriginalTitle:"",
       fieldIsbn:"",
@@ -15,8 +16,8 @@ export default class Form extends Component {
       fieldAuthor:"",
       fieldDescription:"",
       fieldImage: "",
-      fieldStatus: "NUEVO",
-      fieldAction:"INTERCAMBIO",
+      fieldStatus: "",
+      fieldAction:"",
       fieldPrice: "",
       errorField:[],
       genres:[],
@@ -27,7 +28,36 @@ export default class Form extends Component {
   async componentDidMount() {
     const genres = await bookService.getGenres()
     const res = genres.genres
-    this.setState({genres:res})
+
+    const id = this.props.match.params.id;
+    const b = await bookService.getBook(id)
+    const array = b.book.genres.split(",")
+    const genr = []
+
+    array.map((g) => {
+      genr.push(g)
+    })
+
+    if(b.success) {
+      this.setState({
+        genres: res,
+        id: b.book.id,
+        fieldTitle: b.book.title,
+        fieldOriginalTitle: b.book.originalTitle,
+        fieldIsbn: b.book.isbn,
+        fieldPublicationYear: b.book.publicationYear,
+        fieldPublisher: b.book.publisher,
+        fieldGenres: b.book.genres,
+        fieldAuthor: b.book.author,
+        fieldDescription: b.book.description,
+        fieldImage: b.book.image,
+        fieldStatus: b.book.status,
+        fieldAction: b.book.action,
+        fieldPrice: b.book.price,
+        fieldGen: genr,
+        correctBook:""
+      })
+    }
   }
 
   render() {
@@ -35,7 +65,7 @@ export default class Form extends Component {
       
       <div style={{backgroundImage: "url(https://i.pinimg.com/originals/8d/23/06/8d2306b98839234e49ce96a8b76e20ae.jpg)", 
       backgroundSize: "cover" , padding: "50px", fontWeight: "bold", marginLeft: "-100"}}>
-        <h1 style={{color: "#007bff"}}>Añadir libro</h1>
+        <h1 style={{color: "#007bff"}}>Editar {this.state.fieldTitle}</h1>
         <p class='text-danger'>*Obligatorio</p>
         <div class="form-group row">
           <label for="firstName" class="col-sm-3 col-form-label">Título<sup class='text-danger'>*</sup></label>
@@ -165,9 +195,11 @@ export default class Form extends Component {
           })
         }
 
+        {<p style={{color: "#099C01"}}>{this.state.correctBook}</p>}
+
 				<div class="form-group row">
 					<div class="col-sm-6" >
-		      	<button onClick={()=>this.onClickSave()} class="btn btn-primary" type="submit">Crear</button>
+		      	<button onClick={()=>this.onClickSave()} class="btn btn-primary" type="submit">Actualizar</button>
 					</div>
 				</div>
       </div>
@@ -176,16 +208,19 @@ export default class Form extends Component {
   }
 
   async onClickSave() {
-		const res = await bookService.create(this.state)
+		const res = await bookService.edit(this.state)
 
-    if (this.state.fieldAction == "VENTA" && this.state.fieldPrice == "") {
+    if (this.state.fieldAction == "VENTA" && this.state.fieldPrice == null) {
+      this.setState({correctBook:""})
       const dataError = []
       dataError.push("El precio es un campo requerido.");
       this.setState({errorField:dataError});
     } else {
       if (res.success) {
-        window.location.replace("/")
+        this.setState({correctBook:"*Se ha actualizado correctamente.", errorField:[]})
+        //window.location.replace("/")
       } else if(res.status == 400) {
+        this.setState({correctBook:""})
         const dataError = []
         const error = res.data.errors
         error.map((itemerror)=>{
