@@ -29,7 +29,7 @@ public class BookController {
     @Autowired
     private BookService bookService;
 
-    @GetMapping(value = {"/new", "/me", "/all", "/{id}/edit"})
+    @GetMapping(value = {"/new", "/me", "/all", "/{id}/edit", "/{id}"})
 	public ModelAndView main() {
 		ModelAndView model = new ModelAndView();
 		model.setViewName("Main");
@@ -103,7 +103,7 @@ public class BookController {
         return res;
     }
 
-    @GetMapping(value = "/{id}")
+    @GetMapping(value = "/get/{id}")
     public Map<String, Object> getBookById(@PathVariable(name = "id") String id) {
         Map<String, Object> res = new HashMap<>();
         try {

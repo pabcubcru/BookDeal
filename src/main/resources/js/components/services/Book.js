@@ -54,10 +54,11 @@ book.edit = async(state) => {
 }
 
 book.getBook = async(id) => {
-    const urlGet = baseUrl+"/"+id
+    const urlGet = baseUrl+"/get/"+id
     const res = await axios.get(urlGet)
     .then(response => {return response.data})
     .catch(error => {return error.response})
+
     
     return res;
 }

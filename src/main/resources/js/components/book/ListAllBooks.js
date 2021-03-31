@@ -21,16 +21,22 @@ export default class List extends Component {
                 {this.state.books.map((book) => {
                     return(
                     <div style={{backgroundImage: "url(https://i.pinimg.com/originals/8d/23/06/8d2306b98839234e49ce96a8b76e20ae.jpg)", 
-                    backgroundSize: "cover" ,  fontWeight: "bold", padding: "41px", marginBlock:"30px", margin:"0px 20px 20px 0px", display: 'inline-block'}}>
-                    <center><div><img src={book.image} 
-                    style={{padding: '10px', margin:"0px 0px 0px 0px", float: 'left', width: '175px'}}></img></div>
+                    backgroundSize: "auto auto" ,  fontWeight: "bold", padding: "41px", marginBlock:"30px", margin:"0px 20px 20px 0px", display: 'inline-flex'}}>
+                    <center><div>
+                    <h4><strong>{book.title}</strong></h4>{book.originalTitle != "" ? <h5>({book.originalTitle})</h5> : <p></p>}
+                    <a href={"/books/"+book.id}><img src={book.image} 
+                    style={{padding: '10px', margin:"0px 0px 0px 0px", width: '175px'}}></img></a></div>
                     <div>
-                    <h4><strong>{book.title}</strong></h4>
-                    <p>{book.genres}</p>
+                    <br clear="left"></br>
+                    <p><strong>Autor: </strong>{book.author}</p>
+                    <p><strong>Editorial: </strong>{book.publisher}</p>
                     {book.action == "VENTA" ?
                         <p>{book.action} por {book.price} €</p>
                     :
-                        <p>{book.action}</p>}</div></center>
+                        <p>{book.action}</p>}</div>
+                        <hr></hr>
+                        <a href={"/books/"+book.id} class="btn btn-primary">Más detalles</a>
+                        </center>
                     </div>)
                 })}
             </div>

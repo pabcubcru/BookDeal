@@ -115,7 +115,7 @@ export default class Form extends Component {
         <div class="form-group row">
             <label for="firstName" class="col-sm-3 col-form-label">Generos<sup class='text-danger'>*</sup></label>
           <div class="col-sm-9">
-          <select class="form-control chosen-select" id="selectGenres" onClick={(event) => this.editGenres(event.target.value)} multiple>
+          <select class="form-control chosen-select" id="selectGenres" value={this.state.fieldGen} onClick={(event) => this.editGenres(event.target.value)} multiple>
             {this.state.genres.map((genre) => {
               return (
                 <option selected={this.state.fieldGen.includes(genre) ? true : false} value={genre}>{genre}</option>
