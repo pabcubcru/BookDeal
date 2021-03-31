@@ -14,6 +14,7 @@ book.create = async(state) => {
         author: state.fieldAuthor,
         description: state.fieldDescription,
         image: state.fieldImage,
+        status: state.fieldStatus,
         action: state.fieldAction,
         price: state.fieldPrice
     }
@@ -39,6 +40,7 @@ book.edit = async(state) => {
         author: state.fieldAuthor,
         description: state.fieldDescription,
         image: state.fieldImage,
+        status: state.fieldStatus,
         action: state.fieldAction,
         price: state.fieldPrice
     }
@@ -51,11 +53,29 @@ book.edit = async(state) => {
     return res;
 }
 
-book.findAll = async() => {
-    const urlGet = baseUrl+"/all"
+book.getBook = async(id) => {
+    const urlGet = baseUrl+"/"+id
     const res = await axios.get(urlGet)
     .then(response => {return response.data})
-    .catch(error => {return error})
+    .catch(error => {return error.response})
+    
+    return res;
+}
+
+book.listAll = async() => {
+    const urlGet = baseUrl+"/list/all"
+    const res = await axios.get(urlGet)
+    .then(response => {return response.data;})
+    .catch(error => {return error.response;})
+
+    return res;
+}
+
+book.listMyBooks = async() => {
+    const urlGet = baseUrl+"/list/me"
+    const res = await axios.get(urlGet)
+    .then(response => {return response.data;})
+    .catch(error => {return error.response;})
 
     return res;
 }
@@ -65,6 +85,15 @@ book.getGenres = async() => {
     const res = await axios.get(urlGet)
     .then(response => {return response.data})
     .catch(error => {return error})
+    return res;
+}
+
+book.delete = async(id) => {
+    const urlDelete = baseUrl+"/"+id+"/delete"
+    const res = await axios.delete(urlDelete)
+    .then(response => {return response.data})
+    .catch(error => {return error.response})
+
     return res;
 }
    

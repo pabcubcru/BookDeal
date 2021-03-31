@@ -8,6 +8,9 @@ import LoginerrorUser from "./user/Login-error";
 import EditUser from "./user/Edit";
 import Home from "./Home";
 import CreateBook from "./book/Create";
+import ListAllBooks from "./book/ListAllBooks";
+import ListMyBooks from "./book/ListMyBooks";
+import EditBook from "./book/Edit";
 
 import {
     BrowserRouter as Router,
@@ -28,6 +31,9 @@ export default class Main extends Component{
                         <Route path="/profile" exact component={EditUser}/>
                         <Route path="/" exact component={Home}/>
                         <Route path="/books/new" exact component={CreateBook}/>
+                        <Route path="/books/all" exact component={ListAllBooks}/>
+                        <Route path="/books/me" exact component={ListMyBooks}/>
+                        <Route path="/books/:id/edit" exact component={EditBook}/>
                     </Switch>
                 </main>
             </Router>
