@@ -24,6 +24,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 		.antMatchers("/").permitAll()
 		.antMatchers("/resources/**").permitAll()
 		.antMatchers("/user/**").hasAnyAuthority("user")
+		.antMatchers("/books/list/all-me", "/books/{id}", "/books/get/{id}").permitAll()
 		.antMatchers("/books/**").authenticated()
 		.antMatchers("/register", "/login", "/login-error").anonymous()
 		.and().csrf().disable()

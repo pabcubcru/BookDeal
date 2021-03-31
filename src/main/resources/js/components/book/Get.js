@@ -26,9 +26,9 @@ export default class Get extends Component {
             <div style={{backgroundImage: "url(https://i.pinimg.com/originals/8d/23/06/8d2306b98839234e49ce96a8b76e20ae.jpg)", 
             backgroundSize: "auto auto" ,  fontWeight: "bold", padding: "41px", marginBlock:"30px", margin:"0px 150px 0px 150px"}}>
             <center><div>
-            <h1><strong>{this.state.book.title}</strong></h1>{this.state.book.originalTitle != "" ? <h1> ({this.state.book.originalTitle})</h1> : <p></p>}
+            <h1><strong>{this.state.book.title}</strong></h1>{this.state.book.originalTitle != "" ? <h3> ({this.state.book.originalTitle})</h3> : <p></p>}
             <img src={this.state.book.image} 
-            style={{padding: '10px', margin:"50px 50px 50px 50px", width: '250px'}}></img></div>
+            style={{padding: '10px', width: '250px'}}></img></div>
             <div>
             <br clear="left"></br>
             <h6><strong>Autor:</strong> {this.state.book.author}</h6>

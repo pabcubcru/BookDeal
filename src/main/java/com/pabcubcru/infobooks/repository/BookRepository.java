@@ -14,4 +14,6 @@ public interface BookRepository extends ElasticsearchRepository<Book, String> {
     public List<Book> findByUsername(String username);
 
     public Optional<Book> findById(String id);
+
+    public List<Book> findByUsernameNot(String username);
 }

@@ -29,12 +29,41 @@ public class BookController {
     @Autowired
     private BookService bookService;
 
-    @GetMapping(value = {"/new", "/me", "/all", "/{id}/edit", "/{id}"})
+    @GetMapping(value = {"/new", "/me", "/all"})
 	public ModelAndView main() {
 		ModelAndView model = new ModelAndView();
 		model.setViewName("Main");
 		return model;
 	}
+
+    @GetMapping(value = {"/{id}"})
+	public ModelAndView mainwithSecurity(@PathVariable("id") String id) {
+		ModelAndView model = new ModelAndView();
+		model.setViewName("Main");
+        if(id != null) {
+            Book book = this.bookService.findBookById(id);
+            if(book == null) {
+                model.setViewName("errors/Error404");
+            }
+        }
+		return model;
+	}
+
+    @GetMapping(value = {"/{id}/edit"})
+    public ModelAndView mainWithUserSecurity(Principal principal, @PathVariable("id") String id) {
+        ModelAndView model = new ModelAndView();
+        model.setViewName("Main");
+        if(id != null) {
+            Book book = this.bookService.findBookById(id);
+            if(book == null) {
+                model.setViewName("errors/Error404");
+            } else if(!book.getUsername().equals(principal.getName())) {
+                model.setViewName("errors/Error403");
+            }
+        }
+        
+        return model;
+    }
 
     @PostMapping(value = "/new")
     public Map<String, Object> create(@RequestBody @Valid Book book, Principal principal) {
@@ -72,15 +101,22 @@ public class BookController {
     }
 
     @DeleteMapping("/{id}/delete")
-    public void delete(@PathVariable("id") String id) {
-        this.bookService.deleteBookById(id);
+    public void delete(@PathVariable("id") String id, Principal principal) {
+        Book book = this.bookService.findBookById(id);
+        if(book.getUsername().equals(principal.getName())) {
+            this.bookService.deleteBookById(id);
+        }
     }
 
-    @GetMapping(value="/list/all")
-    public Map<String, Object> findAll() {
+    @GetMapping(value="/list/all-me")
+    public Map<String, Object> findAllExceptMine(Principal principal) {
         Map<String, Object> res = new HashMap<>();
 
-        res.put("books", this.bookService.findAll());
+        if(principal == null) {
+            res.put("books", this.bookService.findAll());
+        } else {
+            res.put("books", this.bookService.findAllExceptMine(principal.getName()));
+        }
 
         return res;
     }

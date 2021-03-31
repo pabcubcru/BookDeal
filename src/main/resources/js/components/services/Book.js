@@ -63,8 +63,8 @@ book.getBook = async(id) => {
     return res;
 }
 
-book.listAll = async() => {
-    const urlGet = baseUrl+"/list/all"
+book.listAllExceptMine = async() => {
+    const urlGet = baseUrl+"/list/all-me"
     const res = await axios.get(urlGet)
     .then(response => {return response.data;})
     .catch(error => {return error.response;})

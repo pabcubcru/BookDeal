@@ -11,7 +11,7 @@ export default class List extends Component {
   }
     
   async componentDidMount() {
-    const res = await bookService.listAll()
+    const res = await bookService.listAllExceptMine()
     this.setState({books:res.books})
   }
 
