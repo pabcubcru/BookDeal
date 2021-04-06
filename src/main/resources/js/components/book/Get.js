@@ -8,7 +8,8 @@ export default class Get extends Component {
         super();
         this.state = {
             book: "",
-            username:""
+            username:"",
+            genres:""
         }
     }
 
@@ -18,7 +19,7 @@ export default class Get extends Component {
 
         const username = await userService.getUsername()
 
-        this.setState({book:b.book, username:username.username})
+        this.setState({book:b.book, username:username.username, genres:b.book.genres})
     }
 
     render() {
@@ -35,8 +36,8 @@ export default class Get extends Component {
             <h6><strong>Editorial:</strong> {this.state.book.publisher}</h6>
             <h6><strong>ISBN:</strong> {this.state.book.isbn}</h6>
             <h6><strong>Publicado en:</strong> {this.state.book.publicationYear}</h6>
-            <h6><strong>Descripción: </strong>{this.state.book.description}</h6>
-            <h6><strong>Géneros:</strong> {this.state.book.genres}</h6>
+            <h6><strong>Sinopsis: </strong>{this.state.book.description}</h6>
+            <h6><strong>Géneros:</strong> {this.state.genres.replaceAll("_", " ").replaceAll(",", ", ")}</h6>
             {this.state.book.action == "VENTA" ?
                 <h6><strong>¿Qué quiere hacer?</strong> {this.state.book.action} por {this.state.book.price} €</h6>
             :

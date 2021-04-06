@@ -85,7 +85,7 @@ book.getGenres = async() => {
     const urlGet = baseUrl+"/genres"
     const res = await axios.get(urlGet)
     .then(response => {return response.data})
-    .catch(error => {return error})
+    .catch(error => {return error.response})
     return res;
 }
 
@@ -98,5 +98,4 @@ book.delete = async(id) => {
     return res;
 }
    
-
 export default book

@@ -75,7 +75,7 @@ export default class Form extends Component {
 				<div class="form-group row">
             <label for="firstName" class="col-sm-3 col-form-label">Teléfono<sup class='text-danger'>*</sup></label>
           <div class="col-sm-9">
-            <input type="text" class="form-control" placeholder="+34 123456789"  
+            <input type="tel" class="form-control" placeholder="+34 123456789"  
               value={this.state.fieldPhone} 
               onChange={(event)=>this.setState({fieldPhone:event.target.value})}/>
           </div>

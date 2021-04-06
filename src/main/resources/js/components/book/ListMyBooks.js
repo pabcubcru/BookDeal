@@ -21,10 +21,11 @@ export default class List extends Component {
                 {this.state.books.map((book) => {
                     return(
                       <div style={{backgroundImage: "url(https://i.pinimg.com/originals/8d/23/06/8d2306b98839234e49ce96a8b76e20ae.jpg)", 
-                      backgroundSize: "auto auto" ,  fontWeight: "bold", padding: "41px", marginBlock:"30px", margin:"0px 20px 20px 0px", display: 'inline-flex'}}>
+                      backgroundSize: "auto auto" ,  fontWeight: "bold", padding: "60px", paddingTop:"20px", marginBlock:"30px", margin:"0px 20px 20px 0px", width: '333px',
+                      height: '600px', display: 'inline-flex'}}>
                       <center><div>
-                      <h4><strong>{book.title}</strong></h4>{book.originalTitle != "" ? <h5>({book.originalTitle})</h5> : <p></p>}
-                      <a href={"/books/"+book.id}><img src={book.image} 
+                      <h4><strong>{book.title}</strong></h4>
+                      <a href={"/books/"+book.id}><img style={{height:"100px", width:"100px"}} src={book.image} 
                       style={{padding: '10px', margin:"0px 0px 0px 0px", width: '175px'}}></img></a></div>
                       <div>
                       <br clear="left"></br>
