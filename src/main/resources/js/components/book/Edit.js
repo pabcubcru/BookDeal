@@ -31,12 +31,7 @@ export default class Form extends Component {
 
     const id = this.props.match.params.id;
     const b = await bookService.getBook(id)
-    const array = b.book.genres.split(",")
-    const genr = []
-
-    array.map((g) => {
-      genr.push(g)
-    })
+    const genrs = b.book.genres.split(",")
 
     if(b.success) {
       this.setState({
@@ -54,7 +49,7 @@ export default class Form extends Component {
         fieldStatus: b.book.status,
         fieldAction: b.book.action,
         fieldPrice: b.book.price,
-        fieldGen: genr,
+        fieldGen: genrs,
         correctBook:""
       })
     }
@@ -118,7 +113,7 @@ export default class Form extends Component {
           <select class="form-control chosen-select" id="selectGenres" value={this.state.fieldGen} onClick={(event) => this.editGenres(event.target.value)} multiple>
             {this.state.genres.map((genre) => {
               return (
-                <option selected={this.state.fieldGen.includes(genre) ? true : false} value={genre}>{genre}</option>
+                <option value={genre}>{genre.replaceAll("_", " ")}</option>
               )
             })}
             </select>
@@ -135,7 +130,7 @@ export default class Form extends Component {
         </div>
 
         <div class="form-group row">
-            <label for="firstName" class="col-sm-3 col-form-label">Descripción<sup class='text-danger'>*</sup></label>
+            <label for="firstName" class="col-sm-3 col-form-label">Sinopsis<sup class='text-danger'>*</sup></label>
           <div class="col-sm-9">
             <input type="text" class="form-control"
               value={this.state.fieldDescription} 
@@ -239,7 +234,7 @@ export default class Form extends Component {
       gen.splice(gen.indexOf(element), 1)
     }
     this.setState({fieldGen:gen})
-    this.setState({fieldGenres:gen.join(", ")})
+    this.setState({fieldGenres:gen.join(",")})
   }
 }
 
