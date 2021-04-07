@@ -13,6 +13,7 @@ import com.pabcubcru.infobooks.services.BookService;
 import com.pabcubcru.infobooks.services.RequestService;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -56,7 +57,8 @@ public class RequestController {
         Map<String, Object> res = new HashMap<>();
 
         try {
-            if(this.requestService.findByUsername1AndIdBook2(principal.getName(), id) == null) {
+            Request req = this.requestService.findByUsername1AndIdBook2(principal.getName(), id);
+            if(req == null) {
                 Book book = this.bookService.findBookById(id);
                 if(book.getAction().equals("INTERCAMBIO")) {
                     request.setAction("INTERCAMBIO");
@@ -99,5 +101,24 @@ public class RequestController {
         res.put("books2", this.bookService.findByIds(idBooks2));
 
         return res;
+    }
+
+    @GetMapping(value = "/{id}/cancel")
+    public void cancelRequest(@PathVariable("id") String id) {
+        Request request = this.requestService.findById(id);
+
+        if(request.getStatus().equals(RequestStatus.PENDIENTE.toString())) {
+            request.setStatus(RequestStatus.CANCELADA.toString());
+            this.requestService.save(request);
+        }
+    }
+
+    @DeleteMapping(value = "/{id}/delete")
+    public void deleteRequest(@PathVariable("id") String id) {
+        Request request = this.requestService.findById(id);
+
+        if(request.getStatus().equals(RequestStatus.CANCELADA.toString())) {
+            this.requestService.deleteById(id);
+        }
     }
 }

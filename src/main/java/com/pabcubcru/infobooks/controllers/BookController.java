@@ -10,6 +10,7 @@ import javax.validation.Valid;
 
 import com.pabcubcru.infobooks.models.Book;
 import com.pabcubcru.infobooks.models.GenreEnum;
+import com.pabcubcru.infobooks.models.Request;
 import com.pabcubcru.infobooks.services.BookService;
 import com.pabcubcru.infobooks.services.RequestService;
 import com.pabcubcru.infobooks.services.UserFavouriteBookService;
@@ -159,13 +160,16 @@ public class BookController {
     }
 
     @GetMapping(value = "/get/{id}")
-    public Map<String, Object> getBookById(@PathVariable(name = "id") String id, Principal principal) {
+    public Map<String, Object> getBookById(@PathVariable("id") String id, Principal principal) {
         Map<String, Object> res = new HashMap<>();
         try {
-            if(this.requestService.findByUsername1AndIdBook2(principal.getName(), id) != null) {
-                res.put("alreadyRequest", true);
-            } else {
-                res.put("alreadyRequest", false);
+            if(principal != null) {
+                Request request = this.requestService.findByUsername1AndIdBook2(principal.getName(), id);
+                if(request != null) {
+                    res.put("alreadyRequest", true);
+                } else {
+                    res.put("alreadyRequest", false);
+                }
             }
             Book book = this.bookService.findBookById(id);
             res.put("book", book);

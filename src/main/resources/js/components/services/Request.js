@@ -32,4 +32,24 @@ request.listMyRequests = async() => {
     return res;
 }
 
+request.cancel = async(id) => {
+
+    const urlCancel = baseUrl+"/"+id+"/cancel"
+    const res = await axios.get(urlCancel)
+    .then(response => {return response.data})
+    .catch(error => {return error.response})
+
+    return res;
+}
+
+request.delete = async(id) => {
+
+    const urlDelete = baseUrl+"/"+id+"/delete"
+    const res = await axios.delete(urlDelete)
+    .then(response => {return response.data})
+    .catch(error => {return error.response})
+
+    return res;
+}
+
 export default request

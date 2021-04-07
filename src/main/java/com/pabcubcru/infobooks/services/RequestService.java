@@ -31,5 +31,15 @@ public class RequestService {
     public Request findByUsername1AndIdBook2(String username, String idBook) {
         return this.requestRepository.findByUsername1AndIdBook2(username, idBook);
     }
+
+    @Transactional
+    public Request findById(String id) {
+        return this.requestRepository.findById(id).orElse(null);
+    }
+
+    @Transactional
+    public void deleteById(String id) {
+        this.requestRepository.deleteById(id);
+    }
     
 }
