@@ -1,7 +1,9 @@
 package com.pabcubcru.infobooks.controllers;
 
 import java.security.Principal;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import com.pabcubcru.infobooks.models.Book;
@@ -54,19 +56,23 @@ public class RequestController {
         Map<String, Object> res = new HashMap<>();
 
         try {
-            Book book = this.bookService.findBookById(id);
-            if(book.getAction().equals("INTERCAMBIO")) {
-                request.setAction("INTERCAMBIO");
-            } else if(book.getAction().equals("VENTA")) {
-                request.setAction("VENTA");
-                request.setIdBook1("");
+            if(this.requestService.findByUsername1AndIdBook2(principal.getName(), id) == null) {
+                Book book = this.bookService.findBookById(id);
+                if(book.getAction().equals("INTERCAMBIO")) {
+                    request.setAction("INTERCAMBIO");
+                } else if(book.getAction().equals("VENTA")) {
+                    request.setAction("VENTA");
+                    request.setIdBook1("");
+                }
+                request.setIdBook2(id);
+                request.setStatus(RequestStatus.PENDIENTE.toString());
+                request.setUsername1(principal.getName());
+                request.setUsername2(book.getUsername());
+                this.requestService.save(request);
+                res.put("success", true);
+            } else {
+                res.put("success", false);
             }
-            request.setIdBook2(id);
-            request.setStatus(RequestStatus.PENDIENTE.toString());
-            request.setUsername1(principal.getName());
-            request.setUsername2(book.getUsername());
-            this.requestService.save(request);
-            res.put("success", true);
         } catch (Exception e) {
             res.put("success", false);
         }
@@ -77,8 +83,20 @@ public class RequestController {
     @GetMapping("/my-requests")
     public Map<String, Object> listMyRequest(Principal principal) {
         Map<String, Object> res = new HashMap<>();
+        List<String> idBooks1 = new ArrayList<>();
+        List<String> idBooks2 = new ArrayList<>();
 
-        res.put("requests", this.requestService.listMyRequests(principal.getName()));
+        List<Request> requests = this.requestService.listMyRequests(principal.getName());
+
+        for(int i = 0; i<requests.size(); i++){
+            Request r = requests.get(i);
+            idBooks1.add(i, r.getIdBook1());
+            idBooks2.add(i, r.getIdBook2());
+        }
+
+        res.put("requests", requests);
+        res.put("books1", this.bookService.findByIds(idBooks1));
+        res.put("books2", this.bookService.findByIds(idBooks2));
 
         return res;
     }

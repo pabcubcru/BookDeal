@@ -11,7 +11,8 @@ export default class Get extends Component {
             book: "",
             username:"",
             genres:"",
-            isAdded:""
+            isAdded:"",
+            alreadyRequest:""
         }
     }
 
@@ -21,7 +22,7 @@ export default class Get extends Component {
 
         const username = await userService.getUsername()
                           
-        this.setState({book:b.book, username:username.username, genres:b.book.genres, isAdded:b.isAdded})
+        this.setState({book:b.book, username:username.username, genres:b.book.genres, isAdded:b.isAdded, alreadyRequest:b.alreadyRequest})
     }
 
     render() {
@@ -56,9 +57,13 @@ export default class Get extends Component {
                 :                              
                     <center><h6><strong>Publicado por:</strong> {this.state.book.username}</h6><br></br><hr></hr>
                     <button style={{background:"#099C01",color:"white", margin:"10px"}} class="btn btn-primary" disabled>Favorito</button></center>
+                
             }
-            {this.state.username != this.state.book.username && this.state.username != null ?
+            {this.state.username != this.state.book.username ?
+                !this.state.alreadyRequest ?
                 <a href={"/requests/"+this.state.book.id+"/add"} style={{color:"white", margin:"10px"}} class="btn btn-primary">Realizar petición</a>
+                :
+                <button style={{background:"#099C01",color:"white", margin:"10px"}} class="btn btn-primary" disabled>Petición realizada</button>
             :
                 <p></p>
             }

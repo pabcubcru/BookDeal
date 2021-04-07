@@ -26,5 +26,10 @@ public class RequestService {
     public List<Request> listMyRequests(String username) {
         return this.requestRepository.findByUsername1(username);
     }
+
+    @Transactional
+    public Request findByUsername1AndIdBook2(String username, String idBook) {
+        return this.requestRepository.findByUsername1AndIdBook2(username, idBook);
+    }
     
 }

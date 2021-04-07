@@ -11,6 +11,7 @@ import javax.validation.Valid;
 import com.pabcubcru.infobooks.models.Book;
 import com.pabcubcru.infobooks.models.GenreEnum;
 import com.pabcubcru.infobooks.services.BookService;
+import com.pabcubcru.infobooks.services.RequestService;
 import com.pabcubcru.infobooks.services.UserFavouriteBookService;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -33,6 +34,9 @@ public class BookController {
 
     @Autowired
     private UserFavouriteBookService userFavouriteBookService;
+
+    @Autowired
+    private RequestService requestService;
 
     @GetMapping(value = {"/new", "/me", "/all"})
 	public ModelAndView main() {
@@ -158,6 +162,11 @@ public class BookController {
     public Map<String, Object> getBookById(@PathVariable(name = "id") String id, Principal principal) {
         Map<String, Object> res = new HashMap<>();
         try {
+            if(this.requestService.findByUsername1AndIdBook2(principal.getName(), id) != null) {
+                res.put("alreadyRequest", true);
+            } else {
+                res.put("alreadyRequest", false);
+            }
             Book book = this.bookService.findBookById(id);
             res.put("book", book);
             res.put("success", true);

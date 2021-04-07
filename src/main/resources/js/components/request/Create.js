@@ -23,7 +23,7 @@ export default class Form extends Component {
 
     const bk = await bookService.listMyBooks()
 
-    this.setState({book:b.book, books:bk.books, fieldIdBook2:id})
+    this.setState({book:b.book, books:bk.books, fieldIdBook2:id, fieldIdBook1:bk.books[0].id})
   }
 
   render() {
@@ -31,12 +31,12 @@ export default class Form extends Component {
       
       <div style={{backgroundImage: "url(https://i.pinimg.com/originals/8d/23/06/8d2306b98839234e49ce96a8b76e20ae.jpg)", 
       backgroundSize: "cover" , padding: "50px", fontWeight: "bold", marginLeft: "-100"}}>
-        <h3 style={{color: "#007bff"}}>Petición de {this.state.book.action == "INTERCAMBIO" ? "INTERCAMBIO" : "COMPRA por" + this.state.book.price + "€"} para {this.state.book.title}</h3>
+        <h3 style={{color: "#007bff"}}>Petición de {this.state.book.action == "INTERCAMBIO" ? "INTERCAMBIO" : "COMPRA por " + this.state.book.price + "€"} para {this.state.book.title}</h3>
         <p class='text-danger'>*Obligatorio</p>
 
         {this.state.book.action == "INTERCAMBIO" ?
             <div class="form-group row">
-                <label for="firstName" class="col-sm-3 col-form-label">Seleccione un libro<sup class='text-danger'>*</sup></label>
+                <label for="firstName" class="col-sm-3 col-form-label">Seleccione su libro<sup class='text-danger'>*</sup></label>
                 <div class="col-sm-9">
                     <select class="form-control chosen-select" id="selectBook" value={this.state.fieldIdBook1} onChange={(event) => this.setState({fieldIdBook1:event.target.value})}> 
                         {this.state.books.map((book) => {
@@ -79,7 +79,7 @@ export default class Form extends Component {
   }
 
   async onClickSave() {
-	const res = await requestService.create(this.state)
+	  const res = await requestService.create(this.state)
 
     if (this.state.book.action == "INTERCAMBIO" && this.state.fieldIdBook1 == "") {
       const dataError = []
