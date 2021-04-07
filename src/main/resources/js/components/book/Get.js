@@ -57,6 +57,11 @@ export default class Get extends Component {
                     <center><h6><strong>Publicado por:</strong> {this.state.book.username}</h6><br></br><hr></hr>
                     <button style={{background:"#099C01",color:"white", margin:"10px"}} class="btn btn-primary" disabled>Favorito</button></center>
             }
+            {this.state.username != this.state.book.username && this.state.username != null ?
+                <a href={"/requests/"+this.state.book.id+"/add"} style={{color:"white", margin:"10px"}} class="btn btn-primary">Realizar petición</a>
+            :
+                <p></p>
+            }
             </center>
             </div>
         )

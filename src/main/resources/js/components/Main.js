@@ -13,6 +13,8 @@ import ListMyBooks from "./book/ListMyBooks";
 import EditBook from "./book/Edit";
 import GetBook from "./book/Get";
 import ListFavouritesBooks from "./userFavouriteBook/ListFavouritesBooks";
+import CreateRequest from "./request/Create";
+import ListMyRequests from "./request/ListMyRequest";
 
 import {
     BrowserRouter as Router,
@@ -37,6 +39,8 @@ export default class Main extends Component{
                         <Route path="/books/:id/edit" exact component={EditBook}/>
                         <Route path="/books/:id" exact component={GetBook}/>
                         <Route path="/favourites" exact component={ListFavouritesBooks}/>
+                        <Route path="/requests/:id/add" exact component={CreateRequest}/>
+                        <Route path="/requests/me" exact component={ListMyRequests}/>
                     </Switch>
                 </main>
             </Router>
