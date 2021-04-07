@@ -95,7 +95,11 @@ public class UserController {
 	public Map<String, Object> getIdPrincipal(Principal principal) {
 		Map<String, Object> res = new HashMap<>();
 		
-		res.put("username", principal.getName());
+		try {
+			res.put("username", principal.getName());
+		} catch (Exception e) {
+			res.put("username", null);
+		}
 
 		return res;
 	}

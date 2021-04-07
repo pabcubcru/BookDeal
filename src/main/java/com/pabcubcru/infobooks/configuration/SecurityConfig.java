@@ -26,6 +26,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 		.antMatchers("/user/**").hasAnyAuthority("user")
 		.antMatchers("/books/list/all-me", "/books/{id}", "/books/get/{id}").permitAll()
 		.antMatchers("/books/**").authenticated()
+		.antMatchers("/favourites/**").authenticated()
 		.antMatchers("/register", "/login", "/login-error").anonymous()
 		.and().csrf().disable()
 		.formLogin().loginPage("/login")

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import bookService from "../services/Book";
 import userService from "../services/User";
+import userFavouriteBook from "../services/UserFavouriteBook";
 
 export default class Get extends Component {
 
@@ -9,7 +10,8 @@ export default class Get extends Component {
         this.state = {
             book: "",
             username:"",
-            genres:""
+            genres:"",
+            isAdded:""
         }
     }
 
@@ -18,8 +20,8 @@ export default class Get extends Component {
         const b = await bookService.getBook(id)
 
         const username = await userService.getUsername()
-
-        this.setState({book:b.book, username:username.username, genres:b.book.genres})
+                          
+        this.setState({book:b.book, username:username.username, genres:b.book.genres, isAdded:b.isAdded})
     }
 
     render() {
@@ -47,8 +49,13 @@ export default class Get extends Component {
                 
                 <center><br></br><hr></hr><a href={'/books/'+this.state.book.id+'/edit'} style={{margin:"10px"}} class="btn btn-primary">Editar</a>
                 <a onClick={() => this.deleteBook(this.state.book.id)} style={{background:"red", color:"white"}} class="btn btn-primary">Eliminar</a></center>
-                :
-                <h6><strong>Publicado por:</strong> {this.state.book.username}</h6> 
+            :
+                !this.state.isAdded ? 
+                    <center><h6><strong>Publicado por:</strong> {this.state.book.username}</h6><br></br><hr></hr>
+                    <a onClick={() => this.addFavouriteBook(this.state.book.id)} style={{color:"white", margin:"10px"}} class="btn btn-primary">Añadir a favoritos</a></center>
+                :                              
+                    <center><h6><strong>Publicado por:</strong> {this.state.book.username}</h6><br></br><hr></hr>
+                    <button style={{background:"#099C01",color:"white", margin:"10px"}} class="btn btn-primary" disabled>Favorito</button></center>
             }
             </center>
             </div>
@@ -62,4 +69,10 @@ export default class Get extends Component {
           window.location.replace("/books/me")
         }
       }
+
+    async addFavouriteBook(id) {
+        const res = await userFavouriteBook.addFavouriteBook(id)
+        window.location.replace("/books/"+id)
+    
+    }
 }

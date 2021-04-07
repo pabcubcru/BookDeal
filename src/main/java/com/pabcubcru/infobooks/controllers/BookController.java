@@ -1,6 +1,7 @@
 package com.pabcubcru.infobooks.controllers;
 
 import java.security.Principal;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -10,6 +11,7 @@ import javax.validation.Valid;
 import com.pabcubcru.infobooks.models.Book;
 import com.pabcubcru.infobooks.models.GenreEnum;
 import com.pabcubcru.infobooks.services.BookService;
+import com.pabcubcru.infobooks.services.UserFavouriteBookService;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -28,6 +30,9 @@ public class BookController {
 
     @Autowired
     private BookService bookService;
+
+    @Autowired
+    private UserFavouriteBookService userFavouriteBookService;
 
     @GetMapping(value = {"/new", "/me", "/all"})
 	public ModelAndView main() {
@@ -115,7 +120,17 @@ public class BookController {
         if(principal == null) {
             res.put("books", this.bookService.findAll());
         } else {
-            res.put("books", this.bookService.findAllExceptMine(principal.getName()));
+            List<Book> books = this.bookService.findAllExceptMine(principal.getName());
+            res.put("books", books);
+            List<Boolean> isAdded = new ArrayList<>();
+            for(Book book : books) {
+                if(this.userFavouriteBookService.findByUsernameAndBookId(principal.getName(), book.getId()) == null) {
+                    isAdded.add(false);
+                } else {
+                    isAdded.add(true);
+                }
+            }
+            res.put("isAdded", isAdded);
         }
 
         return res;
@@ -140,12 +155,17 @@ public class BookController {
     }
 
     @GetMapping(value = "/get/{id}")
-    public Map<String, Object> getBookById(@PathVariable(name = "id") String id) {
+    public Map<String, Object> getBookById(@PathVariable(name = "id") String id, Principal principal) {
         Map<String, Object> res = new HashMap<>();
         try {
             Book book = this.bookService.findBookById(id);
             res.put("book", book);
             res.put("success", true);
+            if(this.userFavouriteBookService.findByUsernameAndBookId(principal.getName(), book.getId()) == null) {
+                res.put("isAdded", false);
+            } else {
+                res.put("isAdded", true);
+            }
         } catch (Exception e) {
             res.put("success", false);
         }
