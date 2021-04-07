@@ -1,30 +1,41 @@
 import React, { Component } from 'react';
 import bookService from "../services/Book";
+import userService from "../services/User";
+import userFavouriteBook from "../services/UserFavouriteBook";
 
 export default class List extends Component {
 
   constructor(){
     super();
     this.state = {
-      books: []
+      books: [],
+      isAdded: [],
+      username: "",
+      isAdded:false
     }
   }
     
   async componentDidMount() {
     const res = await bookService.listAllExceptMine()
-    this.setState({books:res.books})
+    
+    const username = await userService.getUsername()
+
+    this.setState({books:res.books, username:username.username, isAdded:res.isAdded})
   }
 
     render() {
         return (
             <div>
-                {this.state.books.map((book) => {
+                <div>
+                  <p style={{color: "#007bff"}}><strong>{this.state.messageCorrect}</strong></p><p class='text-danger'><strong>{this.state.messageError}</strong></p>
+                </div>
+                {this.state.books.map((book, i) => {
                     return(
                     <div style={{backgroundImage: "url(https://i.pinimg.com/originals/8d/23/06/8d2306b98839234e49ce96a8b76e20ae.jpg)", 
                     backgroundSize: "auto auto" ,  fontWeight: "bold", padding: "60px", paddingTop:"20px", marginBlock:"30px", margin:"0px 20px 20px 0px", width: '333px',
-                    height: '600px', display: 'inline-flex'}}>
+                    height: '630px', display: 'inline-flex'}}>
                     <center><div>
-                    <h4><strong>{book.title}</strong></h4>
+                    <h5><strong>{book.title}</strong></h5>
                     <a href={"/books/"+book.id}><img src={book.image} 
                     style={{padding: '10px', margin:"0px 0px 0px 0px", width: '175px'}}></img></a></div>
                     <div>
@@ -36,11 +47,25 @@ export default class List extends Component {
                     :
                         <p>{book.action}</p>}</div>
                         <hr></hr>
-                        <a href={"/books/"+book.id} class="btn btn-primary">Más detalles</a>
+                        <a href={"/books/"+book.id} class="btn btn-primary" style={{margin:"10px", marginTop:"0px"}}>Más detalles</a>
+                        {this.state.username != null ?
+                            this.state.isAdded[i] == false ? 
+                              <a onClick={() => this.addFavouriteBook(book.id)} style={{color:"white"}} class="btn btn-primary">Añadir a favoritos</a>
+                            :                              
+                            <button style={{background:"#099C01",color:"white"}} class="btn btn-primary" disabled>Favorito</button>
+                          :
+                            <p></p>
+                        }
                         </center>
                     </div>)
                 })}
             </div>
           );
+    }
+
+    async addFavouriteBook(id) {
+      const res = await userFavouriteBook.addFavouriteBook(id)
+      window.location.replace("/")
+      
     }
 }

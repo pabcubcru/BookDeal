@@ -55,5 +55,13 @@ public class BookService {
     public void deleteBookById(String id) {
         this.bookRepository.deleteById(id);
     }
+
+    @Transactional
+    public List<Book> findByIds(List<String> bookIds) {
+        List<Book> res = new ArrayList<>();
+        this.bookRepository.findAllById(bookIds).iterator().forEachRemaining(res::add);
+        
+        return res;
+    }
     
 }
