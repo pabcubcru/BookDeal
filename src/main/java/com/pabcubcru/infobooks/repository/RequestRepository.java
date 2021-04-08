@@ -12,6 +12,10 @@ public interface RequestRepository extends ElasticsearchRepository<Request, Stri
 
     public List<Request> findByUsername1OrderByAction(String username);
 
+    public List<Request> findByUsername2OrderByAction(String username);
+
     public Request findByUsername1AndIdBook2(String username, String idBook);
+
+    public List<Request> findByUsername2AndIdBook2AndStatusNot(String username, String idBook, String status);
 
 }

@@ -29,6 +29,7 @@ export default class Nav extends Component {
     let button4;
     let button5;
     let button6;
+    let button7;
     if(this.state.isLogged != true){
       button1 = <Link class="nav-link ml-auto" to="/login">Iniciar sesión</Link>;
       button2 = <Link class="nav-link" to="/register">Registrarme</Link>;
@@ -38,12 +39,14 @@ export default class Nav extends Component {
       button3 = <a class="nav-link " href="/books/new">Añadir libro</a>;
       button4 = <a class="nav-link" href="/books/me">Mis libros</a>;
       button5 = <a class="nav-link" href="/favourites">Favoritos</a>;
-      button6 = <a class="nav-link ml-auto" href="/requests/me">Mis peticiones</a>;
+      button6 = <a class="nav-link" href="/requests/me">Mis peticiones</a>;
+      button7 = <a class="nav-link ml-auto" href="/requests/received">Peticiones recibidas</a>;
     }
     return (
       <nav class="navbar navbar-expand-sm navbar-dark bg-dark rounded w-100">
         <Link class="navbar-brand" to="/">InfoBooks</Link>
         {button3}
+        {button7}
         {button6}
         {button5}
         {button4}

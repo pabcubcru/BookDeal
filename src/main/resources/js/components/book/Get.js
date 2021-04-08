@@ -47,6 +47,8 @@ export default class Get extends Component {
             :
                 <h6><strong>¿Qué quiere hacer?</strong> {this.state.book.action}</h6>} 
                 </div>
+            
+            <h6><strong>Estado: </strong>{this.state.book.status}</h6>
 
             {this.state.username == this.state.book.username ? 
                 <center><br></br><hr></hr><a href={'/books/'+this.state.book.id+'/edit'} style={{margin:"10px"}} class="btn btn-primary">Editar</a>
