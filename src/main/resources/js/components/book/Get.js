@@ -11,7 +11,8 @@ export default class Get extends Component {
             book: "",
             username:"",
             genres:"",
-            isAdded:""
+            isAdded:"",
+            alreadyRequest:""
         }
     }
 
@@ -21,7 +22,7 @@ export default class Get extends Component {
 
         const username = await userService.getUsername()
                           
-        this.setState({book:b.book, username:username.username, genres:b.book.genres, isAdded:b.isAdded})
+        this.setState({book:b.book, username:username.username, genres:b.book.genres, isAdded:b.isAdded, alreadyRequest:b.alreadyRequest})
     }
 
     render() {
@@ -40,22 +41,38 @@ export default class Get extends Component {
             <h6><strong>Publicado en:</strong> {this.state.book.publicationYear}</h6>
             <h6><strong>Sinopsis: </strong>{this.state.book.description}</h6>
             <h6><strong>Géneros:</strong> {this.state.genres.replaceAll("_", " ").replaceAll(",", ", ")}</h6>
+
             {this.state.book.action == "VENTA" ?
                 <h6><strong>¿Qué quiere hacer?</strong> {this.state.book.action} por {this.state.book.price} €</h6>
             :
                 <h6><strong>¿Qué quiere hacer?</strong> {this.state.book.action}</h6>} 
                 </div>
+
             {this.state.username == this.state.book.username ? 
-                
                 <center><br></br><hr></hr><a href={'/books/'+this.state.book.id+'/edit'} style={{margin:"10px"}} class="btn btn-primary">Editar</a>
                 <a onClick={() => this.deleteBook(this.state.book.id)} style={{background:"red", color:"white"}} class="btn btn-primary">Eliminar</a></center>
             :
+                <p></p>
+            }
+
+            {this.state.username != null && this.state.username != this.state.book.username?
                 !this.state.isAdded ? 
                     <center><h6><strong>Publicado por:</strong> {this.state.book.username}</h6><br></br><hr></hr>
                     <a onClick={() => this.addFavouriteBook(this.state.book.id)} style={{color:"white", margin:"10px"}} class="btn btn-primary">Añadir a favoritos</a></center>
-                :                              
+                :
                     <center><h6><strong>Publicado por:</strong> {this.state.book.username}</h6><br></br><hr></hr>
                     <button style={{background:"#099C01",color:"white", margin:"10px"}} class="btn btn-primary" disabled>Favorito</button></center>
+            :                              
+                <p></p>
+            }   
+
+            {this.state.username != this.state.book.username && this.state.username != null ?
+                !this.state.alreadyRequest ?
+                <a href={"/requests/"+this.state.book.id+"/add"} style={{color:"white", margin:"10px"}} class="btn btn-primary">Realizar petición</a>
+                :
+                <button style={{background:"#099C01",color:"white", margin:"10px"}} class="btn btn-primary" disabled>Petición realizada</button>
+            :
+                <p></p>
             }
             </center>
             </div>
