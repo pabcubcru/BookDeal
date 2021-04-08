@@ -10,7 +10,7 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface RequestRepository extends ElasticsearchRepository<Request, String> {
 
-    public List<Request> findByUsername1(String username);
+    public List<Request> findByUsername1OrderByAction(String username);
 
     public Request findByUsername1AndIdBook2(String username, String idBook);
 

@@ -24,7 +24,7 @@ public class RequestService {
 
     @Transactional(readOnly = true)
     public List<Request> listMyRequests(String username) {
-        return this.requestRepository.findByUsername1(username);
+        return this.requestRepository.findByUsername1OrderByAction(username);
     }
 
     @Transactional

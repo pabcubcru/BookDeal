@@ -85,20 +85,23 @@ public class RequestController {
     @GetMapping("/my-requests")
     public Map<String, Object> listMyRequest(Principal principal) {
         Map<String, Object> res = new HashMap<>();
-        List<String> idBooks1 = new ArrayList<>();
-        List<String> idBooks2 = new ArrayList<>();
+        List<Book> books1 = new ArrayList<>();
+        List<Book> books2 = new ArrayList<>();
 
         List<Request> requests = this.requestService.listMyRequests(principal.getName());
 
-        for(int i = 0; i<requests.size(); i++){
-            Request r = requests.get(i);
-            idBooks1.add(i, r.getIdBook1());
-            idBooks2.add(i, r.getIdBook2());
+        for(Request r : requests){
+            if(r.getAction().equals("INTERCAMBIO")) {
+                books1.add(this.bookService.findBookById(r.getIdBook1()));
+            } else {
+                books1.add(null);
+            }
+            books2.add(this.bookService.findBookById(r.getIdBook2()));
         }
 
         res.put("requests", requests);
-        res.put("books1", this.bookService.findByIds(idBooks1));
-        res.put("books2", this.bookService.findByIds(idBooks2));
+        res.put("books1", books1);
+        res.put("books2", books2);
 
         return res;
     }
