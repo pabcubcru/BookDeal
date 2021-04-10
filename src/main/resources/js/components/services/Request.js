@@ -32,6 +32,16 @@ request.listMyRequests = async() => {
     return res;
 }
 
+request.listReceivedRequests = async() => {
+
+    const urlGet = baseUrl+"/received-requests"
+    const res = await axios.get(urlGet)
+    .then(response => {return response.data})
+    .catch(error => {return error.response})
+
+    return res;
+}
+
 request.cancel = async(id) => {
 
     const urlCancel = baseUrl+"/"+id+"/cancel"
@@ -46,6 +56,26 @@ request.delete = async(id) => {
 
     const urlDelete = baseUrl+"/"+id+"/delete"
     const res = await axios.delete(urlDelete)
+    .then(response => {return response.data})
+    .catch(error => {return error.response})
+
+    return res;
+}
+
+request.accept = async(id) => {
+
+    const urlCancel = baseUrl+"/"+id+"/accept"
+    const res = await axios.get(urlCancel)
+    .then(response => {return response.data})
+    .catch(error => {return error.response})
+
+    return res;
+}
+
+request.reject = async(id) => {
+
+    const urlCancel = baseUrl+"/"+id+"/reject"
+    const res = await axios.get(urlCancel)
     .then(response => {return response.data})
     .catch(error => {return error.response})
 

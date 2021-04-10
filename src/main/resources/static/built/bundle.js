@@ -35865,7 +35865,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _userFavouriteBook_ListFavouritesBooks__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./userFavouriteBook/ListFavouritesBooks */ "./src/main/resources/js/components/userFavouriteBook/ListFavouritesBooks.js");
 /* harmony import */ var _request_Create__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./request/Create */ "./src/main/resources/js/components/request/Create.js");
 /* harmony import */ var _request_ListMyRequest__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./request/ListMyRequest */ "./src/main/resources/js/components/request/ListMyRequest.js");
-/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+/* harmony import */ var _request_ListReceivedRequest__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./request/ListReceivedRequest */ "./src/main/resources/js/components/request/ListReceivedRequest.js");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
 
 
 
@@ -35875,6 +35876,7 @@ __webpack_require__.r(__webpack_exports__);
 function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4___default()(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4___default()(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_3___default()(this, result); }; }
 
 function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+
 
 
 
@@ -35908,54 +35910,58 @@ var Main = /*#__PURE__*/function (_Component) {
   _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1___default()(Main, [{
     key: "render",
     value: function render() {
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_21__["BrowserRouter"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("main", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(_Nav__WEBPACK_IMPORTED_MODULE_7__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_21__["Switch"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_21__["Route"], {
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_22__["BrowserRouter"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("main", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(_Nav__WEBPACK_IMPORTED_MODULE_7__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_22__["Switch"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_22__["Route"], {
         path: "/register",
         exact: true,
         component: _user_Register__WEBPACK_IMPORTED_MODULE_8__["default"]
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_21__["Route"], {
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_22__["Route"], {
         path: "/login",
         exact: true,
         component: _user_Login__WEBPACK_IMPORTED_MODULE_9__["default"]
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_21__["Route"], {
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_22__["Route"], {
         path: "/login-error",
         exact: true,
         component: _user_Login_error__WEBPACK_IMPORTED_MODULE_10__["default"]
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_21__["Route"], {
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_22__["Route"], {
         path: "/profile",
         exact: true,
         component: _user_Edit__WEBPACK_IMPORTED_MODULE_11__["default"]
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_21__["Route"], {
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_22__["Route"], {
         path: "/books/new",
         exact: true,
         component: _book_Create__WEBPACK_IMPORTED_MODULE_13__["default"]
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_21__["Route"], {
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_22__["Route"], {
         path: "/",
         exact: true,
         component: _book_ListAllBooks__WEBPACK_IMPORTED_MODULE_14__["default"]
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_21__["Route"], {
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_22__["Route"], {
         path: "/books/me",
         exact: true,
         component: _book_ListMyBooks__WEBPACK_IMPORTED_MODULE_15__["default"]
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_21__["Route"], {
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_22__["Route"], {
         path: "/books/:id/edit",
         exact: true,
         component: _book_Edit__WEBPACK_IMPORTED_MODULE_16__["default"]
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_21__["Route"], {
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_22__["Route"], {
         path: "/books/:id",
         exact: true,
         component: _book_Get__WEBPACK_IMPORTED_MODULE_17__["default"]
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_21__["Route"], {
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_22__["Route"], {
         path: "/favourites",
         exact: true,
         component: _userFavouriteBook_ListFavouritesBooks__WEBPACK_IMPORTED_MODULE_18__["default"]
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_21__["Route"], {
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_22__["Route"], {
         path: "/requests/:id/add",
         exact: true,
         component: _request_Create__WEBPACK_IMPORTED_MODULE_19__["default"]
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_21__["Route"], {
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_22__["Route"], {
         path: "/requests/me",
         exact: true,
         component: _request_ListMyRequest__WEBPACK_IMPORTED_MODULE_20__["default"]
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_22__["Route"], {
+        path: "/requests/received",
+        exact: true,
+        component: _request_ListReceivedRequest__WEBPACK_IMPORTED_MODULE_21__["default"]
       }))));
     }
   }]);
@@ -36072,6 +36078,7 @@ var Nav = /*#__PURE__*/function (_Component) {
       var button4;
       var button5;
       var button6;
+      var button7;
 
       if (this.state.isLogged != true) {
         button1 = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_8__["Link"], {
@@ -36104,9 +36111,13 @@ var Nav = /*#__PURE__*/function (_Component) {
           href: "/favourites"
         }, "Favoritos");
         button6 = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
-          "class": "nav-link ml-auto",
+          "class": "nav-link",
           href: "/requests/me"
         }, "Mis peticiones");
+        button7 = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
+          "class": "nav-link ml-auto",
+          href: "/requests/received"
+        }, "Peticiones recibidas");
       }
 
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("nav", {
@@ -36114,7 +36125,7 @@ var Nav = /*#__PURE__*/function (_Component) {
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_8__["Link"], {
         "class": "navbar-brand",
         to: "/"
-      }, "InfoBooks"), button3, button6, button5, button4, button1, button2);
+      }, "InfoBooks"), button3, button7, button6, button5, button4, button1, button2);
     }
   }]);
 
@@ -36387,7 +36398,7 @@ var Form = /*#__PURE__*/function (_Component) {
         "class": "text-danger"
       }, "*")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         "class": "col-sm-9"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("input", {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("textarea", {
         type: "text",
         "class": "form-control",
         value: this.state.fieldDescription,
@@ -37172,7 +37183,8 @@ var Get = /*#__PURE__*/function (_Component) {
       username: "",
       genres: "",
       isAdded: "",
-      alreadyRequest: ""
+      alreadyRequest: "",
+      hasRequestAccepted: ""
     };
     return _this;
   }
@@ -37202,7 +37214,8 @@ var Get = /*#__PURE__*/function (_Component) {
                   username: username.username,
                   genres: b.book.genres,
                   isAdded: b.isAdded,
-                  alreadyRequest: b.alreadyRequest
+                  alreadyRequest: b.alreadyRequest,
+                  hasRequestAccepted: b.hasRequestAccepted
                 });
 
               case 8:
@@ -37241,13 +37254,13 @@ var Get = /*#__PURE__*/function (_Component) {
         }
       })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", {
         clear: "left"
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("h6", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("strong", null, "Autor:"), " ", this.state.book.author), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("h6", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("strong", null, "Editorial:"), " ", this.state.book.publisher), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("h6", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("strong", null, "ISBN:"), " ", this.state.book.isbn), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("h6", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("strong", null, "Publicado en:"), " ", this.state.book.publicationYear), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("h6", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("strong", null, "Sinopsis: "), this.state.book.description), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("h6", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("strong", null, "G\xE9neros:"), " ", this.state.genres.replaceAll("_", " ").replaceAll(",", ", ")), this.state.book.action == "VENTA" ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("h6", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("strong", null, "\xBFQu\xE9 quiere hacer?"), " ", this.state.book.action, " por ", this.state.book.price, " \u20AC") : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("h6", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("strong", null, "\xBFQu\xE9 quiere hacer?"), " ", this.state.book.action)), this.state.username == this.state.book.username ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("center", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("hr", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("h6", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("strong", null, "Autor:"), " ", this.state.book.author), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("h6", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("strong", null, "Editorial:"), " ", this.state.book.publisher), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("h6", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("strong", null, "ISBN:"), " ", this.state.book.isbn), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("h6", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("strong", null, "Publicado en:"), " ", this.state.book.publicationYear), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("h6", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("strong", null, "Sinopsis: "), this.state.book.description), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("h6", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("strong", null, "G\xE9neros:"), " ", this.state.genres.replaceAll("_", " ").replaceAll(",", ", ")), this.state.book.action == "VENTA" ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("h6", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("strong", null, "\xBFQu\xE9 quiere hacer?"), " ", this.state.book.action, " por ", this.state.book.price, " \u20AC") : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("h6", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("strong", null, "\xBFQu\xE9 quiere hacer?"), " ", this.state.book.action)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("h6", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("strong", null, "Estado: "), this.state.book.status), this.state.username == this.state.book.username ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("center", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("hr", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
         href: '/books/' + this.state.book.id + '/edit',
         style: {
           margin: "10px"
         },
         "class": "btn btn-primary"
-      }, "Editar"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
+      }, "Editar"), !this.state.hasRequestAccepted ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
         onClick: function onClick() {
           return _this2.deleteBook(_this2.state.book.id);
         },
@@ -37256,7 +37269,16 @@ var Get = /*#__PURE__*/function (_Component) {
           color: "white"
         },
         "class": "btn btn-primary"
-      }, "Eliminar")) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null), this.state.username != null && this.state.username != this.state.book.username ? !this.state.isAdded ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("center", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("h6", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("strong", null, "Publicado por:"), " ", this.state.book.username), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("hr", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
+      }, "Eliminar") : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("center", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("button", {
+        style: {
+          background: "red",
+          color: "white"
+        },
+        "class": "btn btn-primary",
+        disabled: true
+      }, "No se puede eliminar"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
+        "class": "text-danger"
+      }, "*Tiene una petici\xF3n ACEPTADA"))) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null), this.state.username != null && this.state.username != this.state.book.username ? !this.state.isAdded ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("center", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("h6", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("strong", null, "Publicado por:"), " ", this.state.book.username), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("hr", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
         onClick: function onClick() {
           return _this2.addFavouriteBook(_this2.state.book.id);
         },
@@ -37273,14 +37295,14 @@ var Get = /*#__PURE__*/function (_Component) {
         },
         "class": "btn btn-primary",
         disabled: true
-      }, "Favorito")) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null), this.state.username != this.state.book.username && this.state.username != null ? !this.state.alreadyRequest ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
+      }, "Favorito")) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null), this.state.username != this.state.book.username && this.state.username != null ? !this.state.alreadyRequest ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("center", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
         href: "/requests/" + this.state.book.id + "/add",
         style: {
           color: "white",
           margin: "10px"
         },
         "class": "btn btn-primary"
-      }, "Realizar petici\xF3n") : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("button", {
+      }, "Realizar petici\xF3n")) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("button", {
         style: {
           background: "#099C01",
           color: "white",
@@ -37777,7 +37799,8 @@ var Form = /*#__PURE__*/function (_Component) {
       fieldIdBook2: "",
       book: "",
       books: [],
-      errorField: []
+      errorField: [],
+      noBooks: true
     };
     return _this;
   }
@@ -37805,11 +37828,17 @@ var Form = /*#__PURE__*/function (_Component) {
                 this.setState({
                   book: b.book,
                   books: bk.books,
-                  fieldIdBook2: id,
-                  fieldIdBook1: bk.books[0].id
+                  fieldIdBook2: id
                 });
 
-              case 8:
+                if (bk.books.length >= 1) {
+                  this.setState({
+                    fieldIdBook1: bk.books[0].id,
+                    noBooks: false
+                  });
+                }
+
+              case 9:
               case "end":
                 return _context.stop();
             }
@@ -37859,7 +37888,8 @@ var Form = /*#__PURE__*/function (_Component) {
           return _this2.setState({
             fieldIdBook1: event.target.value
           });
-        }
+        },
+        disabled: this.state.noBooks && this.state.book.action == "INTERCAMBIO"
       }, this.state.books.map(function (book) {
         return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("option", {
           value: book.id
@@ -37879,12 +37909,18 @@ var Form = /*#__PURE__*/function (_Component) {
           return _this2.setState({
             fieldComment: event.target.value
           });
-        }
+        },
+        disabled: this.state.noBooks && this.state.book.action == "INTERCAMBIO"
       }))), this.state.errorField.map(function (itemerror) {
         return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
           "class": "text-danger"
         }, "*", itemerror);
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+      }), this.state.noBooks && this.state.book.action == "INTERCAMBIO" ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
+        "class": "text-danger"
+      }, "*No tiene libros para intercambiar. ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
+        href: "/books/new",
+        "class": "btn btn-primary"
+      }, "Sube uno ahora!")) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         "class": "form-group row"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         "class": "col-sm-6"
@@ -37893,7 +37929,11 @@ var Form = /*#__PURE__*/function (_Component) {
           return _this2.onClickSave();
         },
         "class": "btn btn-primary",
-        type: "submit"
+        style: {
+          "float": "right"
+        },
+        type: "submit",
+        disabled: this.state.noBooks && this.state.book.action == "INTERCAMBIO"
       }, "Enviar"))));
     }
   }, {
@@ -37975,6 +38015,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_8__);
 /* harmony import */ var _services_Request__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../services/Request */ "./src/main/resources/js/components/services/Request.js");
+/* harmony import */ var _services_User__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../services/User */ "./src/main/resources/js/components/services/User.js");
 
 
 
@@ -37987,6 +38028,7 @@ __webpack_require__.r(__webpack_exports__);
 function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_6___default()(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_6___default()(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_5___default()(this, result); }; }
 
 function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+
 
 
 
@@ -38005,7 +38047,8 @@ var List = /*#__PURE__*/function (_Component) {
     _this.state = {
       requests: [],
       books1: [],
-      books2: []
+      books2: [],
+      users: []
     };
     return _this;
   }
@@ -38027,7 +38070,8 @@ var List = /*#__PURE__*/function (_Component) {
                 this.setState({
                   requests: res.requests,
                   books1: res.books1,
-                  books2: res.books2
+                  books2: res.books2,
+                  users: res.users
                 });
 
               case 4:
@@ -38045,6 +38089,36 @@ var List = /*#__PURE__*/function (_Component) {
       return componentDidMount;
     }()
   }, {
+    key: "getUser",
+    value: function () {
+      var _getUser = _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_7___default.a.mark(function _callee2(username) {
+        var user;
+        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_7___default.a.wrap(function _callee2$(_context2) {
+          while (1) {
+            switch (_context2.prev = _context2.next) {
+              case 0:
+                _context2.next = 2;
+                return _services_User__WEBPACK_IMPORTED_MODULE_10__["default"].getUser(username);
+
+              case 2:
+                user = _context2.sent;
+                return _context2.abrupt("return", user.user);
+
+              case 4:
+              case "end":
+                return _context2.stop();
+            }
+          }
+        }, _callee2);
+      }));
+
+      function getUser(_x) {
+        return _getUser.apply(this, arguments);
+      }
+
+      return getUser;
+    }()
+  }, {
     key: "render",
     value: function render() {
       var _this2 = this;
@@ -38059,7 +38133,7 @@ var List = /*#__PURE__*/function (_Component) {
             marginBlock: "30px",
             margin: "0px 20px 20px 0px",
             width: '510px',
-            height: '450px',
+            height: '460px',
             display: "inline-grid"
           }
         }, request.action == "INTERCAMBIO" ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("center", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("h5", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("strong", null, "INTERCAMBIO: ", _this2.state.books1[i].title, " por ", _this2.state.books2[i].title))) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("center", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("h5", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("strong", null, "COMPRA: ", _this2.state.books2[i].title))), request.action == "INTERCAMBIO" ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("center", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("a", {
@@ -38101,7 +38175,7 @@ var List = /*#__PURE__*/function (_Component) {
           padding: '10px',
           margin: "0px 0px 0px 0px",
           width: '120px'
-        }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("strong", null, "Precio: "), _this2.state.books2[i].price, " \u20AC")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("center", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("strong", null, "Comentario adicional: "), request.comment), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("strong", null, "Petici\xF3n enviada a: "), request.username2), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("strong", null, "Estado: "), request.status)), request.status == "PENDIENTE" ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("center", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("a", {
+        }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("strong", null, "Precio: "), _this2.state.books2[i].price, " \u20AC")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("center", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("strong", null, "Comentario adicional: "), request.comment), request.status != "ACEPTADA" ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("strong", null, "Petici\xF3n enviada a: "), request.username2) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("strong", null, "Estado: "), request.status)), request.status == "PENDIENTE" ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("center", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("a", {
           onClick: function onClick() {
             return _this2.cancelRequest(request.id);
           },
@@ -38110,7 +38184,7 @@ var List = /*#__PURE__*/function (_Component) {
             color: "white"
           },
           "class": "btn btn-primary"
-        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("strong", null, "Cancelar"))) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("center", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("a", {
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("strong", null, "Cancelar"))) : request.status != "ACEPTADA" ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("center", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("a", {
           onClick: function onClick() {
             return _this2.deleteRequest(request.id);
           },
@@ -38119,59 +38193,22 @@ var List = /*#__PURE__*/function (_Component) {
             color: "white"
           },
           "class": "btn btn-primary"
-        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("strong", null, "Eliminar"))));
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("strong", null, "Eliminar"))) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("center", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("strong", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("i", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("u", null, "Datos de contacto con ", request.username2)))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("strong", null, "N\xFAmero de tel\xE9fono: "), _this2.state.users[i].phone), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("strong", null, " Email: "), _this2.state.users[i].email)));
       }), this.state.requests.length == 0 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("strong", null, "\xBFNo tienes todav\xEDa peticiones? ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("a", {
         href: "/",
         "class": "btn btn-primary"
-      }, "Realiza una"))) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", null));
+      }, "Realiza una!"))) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", null));
     }
   }, {
     key: "cancelRequest",
     value: function () {
-      var _cancelRequest = _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_7___default.a.mark(function _callee2(id) {
-        var conf, res;
-        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_7___default.a.wrap(function _callee2$(_context2) {
-          while (1) {
-            switch (_context2.prev = _context2.next) {
-              case 0:
-                conf = confirm("¿Está seguro de que quiere cancelarla? Esta acción no es reversible.");
-
-                if (!conf) {
-                  _context2.next = 6;
-                  break;
-                }
-
-                _context2.next = 4;
-                return _services_Request__WEBPACK_IMPORTED_MODULE_9__["default"].cancel(id);
-
-              case 4:
-                res = _context2.sent;
-                window.location.replace("/requests/me");
-
-              case 6:
-              case "end":
-                return _context2.stop();
-            }
-          }
-        }, _callee2);
-      }));
-
-      function cancelRequest(_x) {
-        return _cancelRequest.apply(this, arguments);
-      }
-
-      return cancelRequest;
-    }()
-  }, {
-    key: "deleteRequest",
-    value: function () {
-      var _deleteRequest = _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_7___default.a.mark(function _callee3(id) {
+      var _cancelRequest = _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_7___default.a.mark(function _callee3(id) {
         var conf, res;
         return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_7___default.a.wrap(function _callee3$(_context3) {
           while (1) {
             switch (_context3.prev = _context3.next) {
               case 0:
-                conf = confirm("¿Está seguro de que quiere eliminarla? Esta acción no es reversible.");
+                conf = confirm("¿Está seguro de que quiere cancelarla? Esta acción no es reversible.");
 
                 if (!conf) {
                   _context3.next = 6;
@@ -38179,7 +38216,7 @@ var List = /*#__PURE__*/function (_Component) {
                 }
 
                 _context3.next = 4;
-                return _services_Request__WEBPACK_IMPORTED_MODULE_9__["default"]["delete"](id);
+                return _services_Request__WEBPACK_IMPORTED_MODULE_9__["default"].cancel(id);
 
               case 4:
                 res = _context3.sent;
@@ -38193,11 +38230,313 @@ var List = /*#__PURE__*/function (_Component) {
         }, _callee3);
       }));
 
-      function deleteRequest(_x2) {
+      function cancelRequest(_x2) {
+        return _cancelRequest.apply(this, arguments);
+      }
+
+      return cancelRequest;
+    }()
+  }, {
+    key: "deleteRequest",
+    value: function () {
+      var _deleteRequest = _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_7___default.a.mark(function _callee4(id) {
+        var conf, res;
+        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_7___default.a.wrap(function _callee4$(_context4) {
+          while (1) {
+            switch (_context4.prev = _context4.next) {
+              case 0:
+                conf = confirm("¿Está seguro de que quiere eliminarla? Esta acción no es reversible.");
+
+                if (!conf) {
+                  _context4.next = 6;
+                  break;
+                }
+
+                _context4.next = 4;
+                return _services_Request__WEBPACK_IMPORTED_MODULE_9__["default"]["delete"](id);
+
+              case 4:
+                res = _context4.sent;
+                window.location.replace("/requests/me");
+
+              case 6:
+              case "end":
+                return _context4.stop();
+            }
+          }
+        }, _callee4);
+      }));
+
+      function deleteRequest(_x3) {
         return _deleteRequest.apply(this, arguments);
       }
 
       return deleteRequest;
+    }()
+  }]);
+
+  return List;
+}(react__WEBPACK_IMPORTED_MODULE_8__["Component"]);
+
+
+
+/***/ }),
+
+/***/ "./src/main/resources/js/components/request/ListReceivedRequest.js":
+/*!*************************************************************************!*\
+  !*** ./src/main/resources/js/components/request/ListReceivedRequest.js ***!
+  \*************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return List; });
+/* harmony import */ var _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/defineProperty */ "./node_modules/@babel/runtime/helpers/defineProperty.js");
+/* harmony import */ var _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/asyncToGenerator */ "./node_modules/@babel/runtime/helpers/asyncToGenerator.js");
+/* harmony import */ var _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime/helpers/classCallCheck */ "./node_modules/@babel/runtime/helpers/classCallCheck.js");
+/* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @babel/runtime/helpers/createClass */ "./node_modules/@babel/runtime/helpers/createClass.js");
+/* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @babel/runtime/helpers/inherits */ "./node_modules/@babel/runtime/helpers/inherits.js");
+/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @babel/runtime/helpers/possibleConstructorReturn */ "./node_modules/@babel/runtime/helpers/possibleConstructorReturn.js");
+/* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @babel/runtime/helpers/getPrototypeOf */ "./node_modules/@babel/runtime/helpers/getPrototypeOf.js");
+/* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var _services_Request__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../services/Request */ "./src/main/resources/js/components/services/Request.js");
+
+
+
+
+
+
+
+
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_6___default()(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_6___default()(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_5___default()(this, result); }; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+
+
+
+
+var List = /*#__PURE__*/function (_Component) {
+  _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_4___default()(List, _Component);
+
+  var _super = _createSuper(List);
+
+  function List() {
+    var _this;
+
+    _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_2___default()(this, List);
+
+    _this = _super.call(this);
+    _this.state = {
+      requests: [],
+      books1: [],
+      books2: [],
+      users: []
+    };
+    return _this;
+  }
+
+  _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_3___default()(List, [{
+    key: "componentDidMount",
+    value: function () {
+      var _componentDidMount = _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_7___default.a.mark(function _callee() {
+        var res;
+        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_7___default.a.wrap(function _callee$(_context) {
+          while (1) {
+            switch (_context.prev = _context.next) {
+              case 0:
+                _context.next = 2;
+                return _services_Request__WEBPACK_IMPORTED_MODULE_9__["default"].listReceivedRequests();
+
+              case 2:
+                res = _context.sent;
+                this.setState({
+                  requests: res.requests,
+                  books1: res.books1,
+                  books2: res.books2,
+                  users: res.users
+                });
+
+              case 4:
+              case "end":
+                return _context.stop();
+            }
+          }
+        }, _callee, this);
+      }));
+
+      function componentDidMount() {
+        return _componentDidMount.apply(this, arguments);
+      }
+
+      return componentDidMount;
+    }()
+  }, {
+    key: "render",
+    value: function render() {
+      var _this2 = this;
+
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("div", null, this.state.requests.map(function (request, i) {
+        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("div", {
+          style: {
+            backgroundImage: "url(https://i.pinimg.com/originals/8d/23/06/8d2306b98839234e49ce96a8b76e20ae.jpg)",
+            backgroundSize: "auto auto",
+            padding: "30px",
+            paddingTop: "20px",
+            marginBlock: "30px",
+            margin: "0px 20px 20px 0px",
+            width: '510px',
+            height: '460px',
+            display: "inline-grid"
+          }
+        }, request.action == "INTERCAMBIO" ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("center", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("h5", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("strong", null, "INTERCAMBIO: ", _this2.state.books2[i].title, " por ", _this2.state.books1[i].title))) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("center", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("h5", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("strong", null, "COMPRA: ", _this2.state.books2[i].title))), request.action == "INTERCAMBIO" ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("center", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("a", {
+          style: {
+            color: "black"
+          },
+          href: "/books/" + _this2.state.books2[i].id
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("img", _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0___default()({
+          style: {
+            height: "100px",
+            width: "100px"
+          },
+          src: _this2.state.books2[i].image
+        }, "style", {
+          padding: '10px',
+          margin: "0px 0px 0px 0px",
+          width: '120px'
+        })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("strong", null, "  \u21C4  ")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("a", {
+          href: "/books/" + _this2.state.books1[i].id
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("img", _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0___default()({
+          style: {
+            height: "100px",
+            width: "100px"
+          },
+          src: _this2.state.books1[i].image
+        }, "style", {
+          padding: '10px',
+          margin: "0px 0px 0px 0px",
+          width: '120px'
+        }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", null)) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("center", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("a", {
+          href: "/books/" + _this2.state.books2[i].id
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("img", _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0___default()({
+          style: {
+            height: "100px",
+            width: "100px"
+          },
+          src: _this2.state.books2[i].image
+        }, "style", {
+          padding: '10px',
+          margin: "0px 0px 0px 0px",
+          width: '120px'
+        }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("strong", null, "Precio: "), _this2.state.books2[i].price, " \u20AC")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("center", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("strong", null, "Comentario adicional: "), request.comment), request.status != "ACEPTADA" ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("strong", null, "Petici\xF3n enviada por: "), request.username1) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("strong", null, "Estado: "), request.status)), request.status == "PENDIENTE" ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("center", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("a", {
+          onClick: function onClick() {
+            return _this2.acceptRequest(request.id, _this2.state.books2[i].title);
+          },
+          style: {
+            background: "#099C01",
+            color: "white",
+            margin: "10px"
+          },
+          "class": "btn btn-primary"
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("strong", null, "Aceptar")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("a", {
+          onClick: function onClick() {
+            return _this2.rejectRequest(request.id);
+          },
+          style: {
+            background: "red",
+            color: "white"
+          },
+          "class": "btn btn-primary"
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("strong", null, "Rechazar"))) : request.status == "ACEPTADA" ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("center", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("strong", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("i", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("u", null, "Datos de contacto con ", request.username1)))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("strong", null, "N\xFAmero de tel\xE9fono: "), _this2.state.users[i].phone), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("strong", null, " Email: "), _this2.state.users[i].email)) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", null));
+      }), this.state.requests.length == 0 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("strong", null, "\xBFNo has recibido peticiones todav\xEDa? ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("a", {
+        href: "/books/new",
+        "class": "btn btn-primary"
+      }, "A\xF1ade un libro!"))) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", null));
+    }
+  }, {
+    key: "acceptRequest",
+    value: function () {
+      var _acceptRequest = _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_7___default.a.mark(function _callee2(id, title) {
+        var conf, res;
+        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_7___default.a.wrap(function _callee2$(_context2) {
+          while (1) {
+            switch (_context2.prev = _context2.next) {
+              case 0:
+                conf = confirm("¿Está seguro de que quiere aceptarla? Las otras peticiones a " + title + " se rechazarán.");
+
+                if (!conf) {
+                  _context2.next = 6;
+                  break;
+                }
+
+                _context2.next = 4;
+                return _services_Request__WEBPACK_IMPORTED_MODULE_9__["default"].accept(id);
+
+              case 4:
+                res = _context2.sent;
+                window.location.replace("/requests/received");
+
+              case 6:
+              case "end":
+                return _context2.stop();
+            }
+          }
+        }, _callee2);
+      }));
+
+      function acceptRequest(_x, _x2) {
+        return _acceptRequest.apply(this, arguments);
+      }
+
+      return acceptRequest;
+    }()
+  }, {
+    key: "rejectRequest",
+    value: function () {
+      var _rejectRequest = _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_7___default.a.mark(function _callee3(id) {
+        var conf, res;
+        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_7___default.a.wrap(function _callee3$(_context3) {
+          while (1) {
+            switch (_context3.prev = _context3.next) {
+              case 0:
+                conf = confirm("¿Está seguro de que quiere rechazarla? Esta acción no es reversible.");
+
+                if (!conf) {
+                  _context3.next = 6;
+                  break;
+                }
+
+                _context3.next = 4;
+                return _services_Request__WEBPACK_IMPORTED_MODULE_9__["default"].reject(id);
+
+              case 4:
+                res = _context3.sent;
+                window.location.replace("/requests/received");
+
+              case 6:
+              case "end":
+                return _context3.stop();
+            }
+          }
+        }, _callee3);
+      }));
+
+      function rejectRequest(_x3) {
+        return _rejectRequest.apply(this, arguments);
+      }
+
+      return rejectRequest;
     }()
   }]);
 
@@ -38553,49 +38892,42 @@ request.listMyRequests = /*#__PURE__*/_babel_runtime_helpers_asyncToGenerator__W
     }
   }, _callee2);
 }));
+request.listReceivedRequests = /*#__PURE__*/_babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.mark(function _callee3() {
+  var urlGet, res;
+  return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.wrap(function _callee3$(_context3) {
+    while (1) {
+      switch (_context3.prev = _context3.next) {
+        case 0:
+          urlGet = baseUrl + "/received-requests";
+          _context3.next = 3;
+          return axios__WEBPACK_IMPORTED_MODULE_2___default.a.get(urlGet).then(function (response) {
+            return response.data;
+          })["catch"](function (error) {
+            return error.response;
+          });
+
+        case 3:
+          res = _context3.sent;
+          return _context3.abrupt("return", res);
+
+        case 5:
+        case "end":
+          return _context3.stop();
+      }
+    }
+  }, _callee3);
+}));
 
 request.cancel = /*#__PURE__*/function () {
-  var _ref3 = _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.mark(function _callee3(id) {
-    var urlCancel, res;
-    return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.wrap(function _callee3$(_context3) {
-      while (1) {
-        switch (_context3.prev = _context3.next) {
-          case 0:
-            urlCancel = baseUrl + "/" + id + "/cancel";
-            _context3.next = 3;
-            return axios__WEBPACK_IMPORTED_MODULE_2___default.a.get(urlCancel).then(function (response) {
-              return response.data;
-            })["catch"](function (error) {
-              return error.response;
-            });
-
-          case 3:
-            res = _context3.sent;
-            return _context3.abrupt("return", res);
-
-          case 5:
-          case "end":
-            return _context3.stop();
-        }
-      }
-    }, _callee3);
-  }));
-
-  return function (_x2) {
-    return _ref3.apply(this, arguments);
-  };
-}();
-
-request["delete"] = /*#__PURE__*/function () {
   var _ref4 = _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.mark(function _callee4(id) {
-    var urlDelete, res;
+    var urlCancel, res;
     return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.wrap(function _callee4$(_context4) {
       while (1) {
         switch (_context4.prev = _context4.next) {
           case 0:
-            urlDelete = baseUrl + "/" + id + "/delete";
+            urlCancel = baseUrl + "/" + id + "/cancel";
             _context4.next = 3;
-            return axios__WEBPACK_IMPORTED_MODULE_2___default.a["delete"](urlDelete).then(function (response) {
+            return axios__WEBPACK_IMPORTED_MODULE_2___default.a.get(urlCancel).then(function (response) {
               return response.data;
             })["catch"](function (error) {
               return error.response;
@@ -38613,8 +38945,104 @@ request["delete"] = /*#__PURE__*/function () {
     }, _callee4);
   }));
 
-  return function (_x3) {
+  return function (_x2) {
     return _ref4.apply(this, arguments);
+  };
+}();
+
+request["delete"] = /*#__PURE__*/function () {
+  var _ref5 = _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.mark(function _callee5(id) {
+    var urlDelete, res;
+    return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.wrap(function _callee5$(_context5) {
+      while (1) {
+        switch (_context5.prev = _context5.next) {
+          case 0:
+            urlDelete = baseUrl + "/" + id + "/delete";
+            _context5.next = 3;
+            return axios__WEBPACK_IMPORTED_MODULE_2___default.a["delete"](urlDelete).then(function (response) {
+              return response.data;
+            })["catch"](function (error) {
+              return error.response;
+            });
+
+          case 3:
+            res = _context5.sent;
+            return _context5.abrupt("return", res);
+
+          case 5:
+          case "end":
+            return _context5.stop();
+        }
+      }
+    }, _callee5);
+  }));
+
+  return function (_x3) {
+    return _ref5.apply(this, arguments);
+  };
+}();
+
+request.accept = /*#__PURE__*/function () {
+  var _ref6 = _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.mark(function _callee6(id) {
+    var urlCancel, res;
+    return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.wrap(function _callee6$(_context6) {
+      while (1) {
+        switch (_context6.prev = _context6.next) {
+          case 0:
+            urlCancel = baseUrl + "/" + id + "/accept";
+            _context6.next = 3;
+            return axios__WEBPACK_IMPORTED_MODULE_2___default.a.get(urlCancel).then(function (response) {
+              return response.data;
+            })["catch"](function (error) {
+              return error.response;
+            });
+
+          case 3:
+            res = _context6.sent;
+            return _context6.abrupt("return", res);
+
+          case 5:
+          case "end":
+            return _context6.stop();
+        }
+      }
+    }, _callee6);
+  }));
+
+  return function (_x4) {
+    return _ref6.apply(this, arguments);
+  };
+}();
+
+request.reject = /*#__PURE__*/function () {
+  var _ref7 = _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.mark(function _callee7(id) {
+    var urlCancel, res;
+    return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.wrap(function _callee7$(_context7) {
+      while (1) {
+        switch (_context7.prev = _context7.next) {
+          case 0:
+            urlCancel = baseUrl + "/" + id + "/reject";
+            _context7.next = 3;
+            return axios__WEBPACK_IMPORTED_MODULE_2___default.a.get(urlCancel).then(function (response) {
+              return response.data;
+            })["catch"](function (error) {
+              return error.response;
+            });
+
+          case 3:
+            res = _context7.sent;
+            return _context7.abrupt("return", res);
+
+          case 5:
+          case "end":
+            return _context7.stop();
+        }
+      }
+    }, _callee7);
+  }));
+
+  return function (_x5) {
+    return _ref7.apply(this, arguments);
   };
 }();
 

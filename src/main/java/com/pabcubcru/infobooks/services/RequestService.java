@@ -27,9 +27,29 @@ public class RequestService {
         return this.requestRepository.findByUsername1OrderByAction(username);
     }
 
+    @Transactional(readOnly = true)
+    public List<Request> listReceivedRequests(String username) {
+        return this.requestRepository.findByUsername2OrderByAction(username);
+    }
+
     @Transactional
     public Request findByUsername1AndIdBook2(String username, String idBook) {
         return this.requestRepository.findByUsername1AndIdBook2(username, idBook);
+    }
+
+    @Transactional
+    public List<Request> findByUsername2AndIdBook2(String username, String idBook, String status) {
+        return this.requestRepository.findByUsername2AndIdBook2AndStatusNot(username, idBook, status);
+    }
+
+    @Transactional
+    public Request findFirstByIdBook1AndStatus(String idBook1, String status) {
+        return this.requestRepository.findFirstByIdBook1AndStatus(idBook1, status);
+    }
+
+    @Transactional
+    public Request findFirstByIdBook2AndStatus(String idBook1, String status) {
+        return this.requestRepository.findFirstByIdBook2AndStatus(idBook1, status);
     }
 
     @Transactional
@@ -40,6 +60,11 @@ public class RequestService {
     @Transactional
     public void deleteById(String id) {
         this.requestRepository.deleteById(id);
+    }
+
+    @Transactional
+    public void saveAll(List<Request> requests) {
+        this.requestRepository.saveAll(requests);
     }
     
 }

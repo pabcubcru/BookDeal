@@ -9,8 +9,10 @@ import java.util.Map;
 import com.pabcubcru.infobooks.models.Book;
 import com.pabcubcru.infobooks.models.Request;
 import com.pabcubcru.infobooks.models.RequestStatus;
+import com.pabcubcru.infobooks.models.User;
 import com.pabcubcru.infobooks.services.BookService;
 import com.pabcubcru.infobooks.services.RequestService;
+import com.pabcubcru.infobooks.services.UserService;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -32,7 +34,10 @@ public class RequestController {
     @Autowired
     private BookService bookService;
 
-    @GetMapping(value = {"/me"})
+    @Autowired
+    private UserService userService;
+
+    @GetMapping(value = {"/me", "/received"})
     public ModelAndView mainWithSecurity() {
         ModelAndView model = new ModelAndView();
         model.setViewName("Main");
@@ -87,6 +92,7 @@ public class RequestController {
         Map<String, Object> res = new HashMap<>();
         List<Book> books1 = new ArrayList<>();
         List<Book> books2 = new ArrayList<>();
+        List<User> users = new ArrayList<>();
 
         List<Request> requests = this.requestService.listMyRequests(principal.getName());
 
@@ -96,12 +102,49 @@ public class RequestController {
             } else {
                 books1.add(null);
             }
+            if(r.getStatus().equals(RequestStatus.ACEPTADA.toString())) {
+                users.add(this.userService.findByUsername(r.getUsername2()));
+            } else{
+                users.add(null);
+            }
             books2.add(this.bookService.findBookById(r.getIdBook2()));
         }
 
         res.put("requests", requests);
         res.put("books1", books1);
         res.put("books2", books2);
+        res.put("users", users);
+
+        return res;
+    }
+
+    @GetMapping("/received-requests")
+    public Map<String, Object> listReceivedRequest(Principal principal) {
+        Map<String, Object> res = new HashMap<>();
+        List<Book> books1 = new ArrayList<>();
+        List<Book> books2 = new ArrayList<>();
+        List<User> users = new ArrayList<>();
+
+        List<Request> requests = this.requestService.listReceivedRequests(principal.getName());
+
+        for(Request r : requests){
+            if(r.getAction().equals("INTERCAMBIO")) {
+                books1.add(this.bookService.findBookById(r.getIdBook1()));
+            } else {
+                books1.add(null);
+            }
+            books2.add(this.bookService.findBookById(r.getIdBook2()));
+            if(r.getStatus().equals(RequestStatus.ACEPTADA.toString())) {
+                users.add(this.userService.findByUsername(r.getUsername1()));
+            } else{
+                users.add(null);
+            }
+        }
+
+        res.put("requests", requests);
+        res.put("books1", books1);
+        res.put("books2", books2);
+        res.put("users", users);
 
         return res;
     }
@@ -120,8 +163,49 @@ public class RequestController {
     public void deleteRequest(@PathVariable("id") String id) {
         Request request = this.requestService.findById(id);
 
-        if(request.getStatus().equals(RequestStatus.CANCELADA.toString())) {
+        if(request.getStatus().equals(RequestStatus.CANCELADA.toString()) || request.getStatus().equals(RequestStatus.RECHAZADA.toString())) {
             this.requestService.deleteById(id);
+        }
+    }
+
+    @GetMapping("/{id}/accept")
+    public ModelAndView acceptRequest(@PathVariable("id") String id, Principal principal) {
+        Request request = this.requestService.findById(id);
+
+        if(request.getUsername2().equals(principal.getName())) {
+            if(request.getStatus().equals(RequestStatus.PENDIENTE.toString())) {
+                List<Request> requestsReceivedToOneBook = this.requestService.findByUsername2AndIdBook2(principal.getName(), request.getIdBook2(), RequestStatus.CANCELADA.toString());
+                requestsReceivedToOneBook.remove(request);
+                for(Request r : requestsReceivedToOneBook) {
+                    r.setStatus(RequestStatus.RECHAZADA.toString());
+                }
+                this.requestService.saveAll(requestsReceivedToOneBook);
+                request.setStatus(RequestStatus.ACEPTADA.toString());
+                this.requestService.save(request);
+            }
+            return null;
+        } else {
+            ModelAndView model = new ModelAndView();
+            model.setViewName("errors/Error403");
+            return model;
+        }
+    }
+
+    @GetMapping("/{id}/reject")
+    public ModelAndView rejectRequest(@PathVariable("id") String id, Principal principal) {
+        Request request = this.requestService.findById(id);
+
+        if(request.getUsername2().equals(principal.getName())) {
+            if(request.getStatus().equals(RequestStatus.PENDIENTE.toString())) {
+
+                request.setStatus(RequestStatus.RECHAZADA.toString());
+                this.requestService.save(request);
+            }
+            return null;
+        } else {
+            ModelAndView model = new ModelAndView();
+            model.setViewName("errors/Error403");
+            return model;
         }
     }
 }

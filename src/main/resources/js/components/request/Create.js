@@ -12,7 +12,8 @@ export default class Form extends Component {
       fieldIdBook2:"",
       book:"",
       books:[],
-      errorField:[]
+      errorField:[],
+      noBooks:true
     }
   }
 
@@ -23,7 +24,11 @@ export default class Form extends Component {
 
     const bk = await bookService.listMyBooks()
 
-    this.setState({book:b.book, books:bk.books, fieldIdBook2:id, fieldIdBook1:bk.books[0].id})
+    this.setState({book:b.book, books:bk.books, fieldIdBook2:id})
+
+    if(bk.books.length >= 1) {
+      this.setState({fieldIdBook1:bk.books[0].id, noBooks:false})
+    }
   }
 
   render() {
@@ -38,7 +43,8 @@ export default class Form extends Component {
             <div class="form-group row">
                 <label for="firstName" class="col-sm-3 col-form-label">Seleccione su libro<sup class='text-danger'>*</sup></label>
                 <div class="col-sm-9">
-                    <select class="form-control chosen-select" id="selectBook" value={this.state.fieldIdBook1} onChange={(event) => this.setState({fieldIdBook1:event.target.value})}> 
+                    <select class="form-control chosen-select" id="selectBook" value={this.state.fieldIdBook1} onChange={(event) => this.setState({fieldIdBook1:event.target.value})} 
+                    disabled={this.state.noBooks && this.state.book.action == "INTERCAMBIO"}> 
                         {this.state.books.map((book) => {
                         return (
                             <option value={book.id}>{book.title}</option>
@@ -56,7 +62,7 @@ export default class Form extends Component {
           <div class="col-sm-9">
             <input type="text" class="form-control"
               value={this.state.fieldComment} 
-              onChange={(event)=>this.setState({fieldComment:event.target.value})}/>
+              onChange={(event)=>this.setState({fieldComment:event.target.value})} disabled={this.state.noBooks && this.state.book.action == "INTERCAMBIO"}/>
           </div>
         </div>
                                     
@@ -68,9 +74,15 @@ export default class Form extends Component {
           })
         }
 
+        {this.state.noBooks && this.state.book.action == "INTERCAMBIO" ?
+          <p class='text-danger'>*No tiene libros para intercambiar. <a href="/books/new" class="btn btn-primary">Sube uno ahora!</a></p>
+        :
+          <p></p>
+        }
+
         <div class="form-group row">
             <div class="col-sm-6" >
-        <button onClick={()=>this.onClickSave()} class="btn btn-primary" type="submit">Enviar</button>
+        <button onClick={()=>this.onClickSave()} class="btn btn-primary" style={{float:"right"}} type="submit" disabled={this.state.noBooks && this.state.book.action == "INTERCAMBIO"}>Enviar</button>
             </div>
         </div>
       </div>
