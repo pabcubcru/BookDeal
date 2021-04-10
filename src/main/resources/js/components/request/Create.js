@@ -82,7 +82,7 @@ export default class Form extends Component {
 
         <div class="form-group row">
             <div class="col-sm-6" >
-        <button onClick={()=>this.onClickSave()} class="btn btn-primary" type="submit" disabled={this.state.noBooks && this.state.book.action == "INTERCAMBIO"}>Enviar</button>
+        <button onClick={()=>this.onClickSave()} class="btn btn-primary" style={{float:"right"}} type="submit" disabled={this.state.noBooks && this.state.book.action == "INTERCAMBIO"}>Enviar</button>
             </div>
         </div>
       </div>

@@ -12,7 +12,8 @@ export default class Get extends Component {
             username:"",
             genres:"",
             isAdded:"",
-            alreadyRequest:""
+            alreadyRequest:"",
+            hasRequestAccepted:""
         }
     }
 
@@ -22,7 +23,7 @@ export default class Get extends Component {
 
         const username = await userService.getUsername()
                           
-        this.setState({book:b.book, username:username.username, genres:b.book.genres, isAdded:b.isAdded, alreadyRequest:b.alreadyRequest})
+        this.setState({book:b.book, username:username.username, genres:b.book.genres, isAdded:b.isAdded, alreadyRequest:b.alreadyRequest, hasRequestAccepted:b.hasRequestAccepted})
     }
 
     render() {
@@ -52,7 +53,12 @@ export default class Get extends Component {
 
             {this.state.username == this.state.book.username ? 
                 <center><br></br><hr></hr><a href={'/books/'+this.state.book.id+'/edit'} style={{margin:"10px"}} class="btn btn-primary">Editar</a>
-                <a onClick={() => this.deleteBook(this.state.book.id)} style={{background:"red", color:"white"}} class="btn btn-primary">Eliminar</a></center>
+                {!this.state.hasRequestAccepted ? 
+                    <a onClick={() => this.deleteBook(this.state.book.id)} style={{background:"red", color:"white"}} class="btn btn-primary">Eliminar</a>
+                :
+                    <center><button style={{background:"red", color:"white"}} class="btn btn-primary" disabled>No se puede eliminar</button>
+                    <p class='text-danger'>*Tiene una petición ACEPTADA</p></center>
+                }</center>
             :
                 <p></p>
             }
@@ -70,7 +76,7 @@ export default class Get extends Component {
 
             {this.state.username != this.state.book.username && this.state.username != null ?
                 !this.state.alreadyRequest ?
-                <a href={"/requests/"+this.state.book.id+"/add"} style={{color:"white", margin:"10px"}} class="btn btn-primary">Realizar petición</a>
+                <center><a href={"/requests/"+this.state.book.id+"/add"} style={{color:"white", margin:"10px"}} class="btn btn-primary">Realizar petición</a></center>
                 :
                 <button style={{background:"#099C01",color:"white", margin:"10px"}} class="btn btn-primary" disabled>Petición realizada</button>
             :

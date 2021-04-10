@@ -11,6 +11,7 @@ import javax.validation.Valid;
 import com.pabcubcru.infobooks.models.Book;
 import com.pabcubcru.infobooks.models.GenreEnum;
 import com.pabcubcru.infobooks.models.Request;
+import com.pabcubcru.infobooks.models.RequestStatus;
 import com.pabcubcru.infobooks.services.BookService;
 import com.pabcubcru.infobooks.services.RequestService;
 import com.pabcubcru.infobooks.services.UserFavouriteBookService;
@@ -169,6 +170,13 @@ public class BookController {
                     res.put("alreadyRequest", true);
                 } else {
                     res.put("alreadyRequest", false);
+                }
+                Request requestAcceptedToBook1 = this.requestService.findFirstByIdBook1AndStatus(id, RequestStatus.ACEPTADA.toString());
+                Request requestAcceptedToBook2 = this.requestService.findFirstByIdBook2AndStatus(id, RequestStatus.ACEPTADA.toString());
+                if(requestAcceptedToBook1 != null || requestAcceptedToBook2 != null) {
+                    res.put("hasRequestAccepted", true);
+                } else {
+                    res.put("hasRequestAccepted", false);
                 }
             }
             Book book = this.bookService.findBookById(id);

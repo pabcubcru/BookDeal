@@ -36398,7 +36398,7 @@ var Form = /*#__PURE__*/function (_Component) {
         "class": "text-danger"
       }, "*")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         "class": "col-sm-9"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("input", {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("textarea", {
         type: "text",
         "class": "form-control",
         value: this.state.fieldDescription,
@@ -37183,7 +37183,8 @@ var Get = /*#__PURE__*/function (_Component) {
       username: "",
       genres: "",
       isAdded: "",
-      alreadyRequest: ""
+      alreadyRequest: "",
+      hasRequestAccepted: ""
     };
     return _this;
   }
@@ -37213,7 +37214,8 @@ var Get = /*#__PURE__*/function (_Component) {
                   username: username.username,
                   genres: b.book.genres,
                   isAdded: b.isAdded,
-                  alreadyRequest: b.alreadyRequest
+                  alreadyRequest: b.alreadyRequest,
+                  hasRequestAccepted: b.hasRequestAccepted
                 });
 
               case 8:
@@ -37258,7 +37260,7 @@ var Get = /*#__PURE__*/function (_Component) {
           margin: "10px"
         },
         "class": "btn btn-primary"
-      }, "Editar"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
+      }, "Editar"), !this.state.hasRequestAccepted ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
         onClick: function onClick() {
           return _this2.deleteBook(_this2.state.book.id);
         },
@@ -37267,7 +37269,16 @@ var Get = /*#__PURE__*/function (_Component) {
           color: "white"
         },
         "class": "btn btn-primary"
-      }, "Eliminar")) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null), this.state.username != null && this.state.username != this.state.book.username ? !this.state.isAdded ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("center", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("h6", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("strong", null, "Publicado por:"), " ", this.state.book.username), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("hr", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
+      }, "Eliminar") : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("center", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("button", {
+        style: {
+          background: "red",
+          color: "white"
+        },
+        "class": "btn btn-primary",
+        disabled: true
+      }, "No se puede eliminar"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
+        "class": "text-danger"
+      }, "*Tiene una petici\xF3n ACEPTADA"))) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null), this.state.username != null && this.state.username != this.state.book.username ? !this.state.isAdded ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("center", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("h6", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("strong", null, "Publicado por:"), " ", this.state.book.username), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("hr", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
         onClick: function onClick() {
           return _this2.addFavouriteBook(_this2.state.book.id);
         },
@@ -37284,14 +37295,14 @@ var Get = /*#__PURE__*/function (_Component) {
         },
         "class": "btn btn-primary",
         disabled: true
-      }, "Favorito")) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null), this.state.username != this.state.book.username && this.state.username != null ? !this.state.alreadyRequest ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
+      }, "Favorito")) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null), this.state.username != this.state.book.username && this.state.username != null ? !this.state.alreadyRequest ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("center", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
         href: "/requests/" + this.state.book.id + "/add",
         style: {
           color: "white",
           margin: "10px"
         },
         "class": "btn btn-primary"
-      }, "Realizar petici\xF3n") : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("button", {
+      }, "Realizar petici\xF3n")) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("button", {
         style: {
           background: "#099C01",
           color: "white",
@@ -37918,6 +37929,9 @@ var Form = /*#__PURE__*/function (_Component) {
           return _this2.onClickSave();
         },
         "class": "btn btn-primary",
+        style: {
+          "float": "right"
+        },
         type: "submit",
         disabled: this.state.noBooks && this.state.book.action == "INTERCAMBIO"
       }, "Enviar"))));
@@ -38001,6 +38015,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_8__);
 /* harmony import */ var _services_Request__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../services/Request */ "./src/main/resources/js/components/services/Request.js");
+/* harmony import */ var _services_User__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../services/User */ "./src/main/resources/js/components/services/User.js");
 
 
 
@@ -38013,6 +38028,7 @@ __webpack_require__.r(__webpack_exports__);
 function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_6___default()(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_6___default()(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_5___default()(this, result); }; }
 
 function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+
 
 
 
@@ -38031,7 +38047,8 @@ var List = /*#__PURE__*/function (_Component) {
     _this.state = {
       requests: [],
       books1: [],
-      books2: []
+      books2: [],
+      users: []
     };
     return _this;
   }
@@ -38053,7 +38070,8 @@ var List = /*#__PURE__*/function (_Component) {
                 this.setState({
                   requests: res.requests,
                   books1: res.books1,
-                  books2: res.books2
+                  books2: res.books2,
+                  users: res.users
                 });
 
               case 4:
@@ -38071,6 +38089,36 @@ var List = /*#__PURE__*/function (_Component) {
       return componentDidMount;
     }()
   }, {
+    key: "getUser",
+    value: function () {
+      var _getUser = _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_7___default.a.mark(function _callee2(username) {
+        var user;
+        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_7___default.a.wrap(function _callee2$(_context2) {
+          while (1) {
+            switch (_context2.prev = _context2.next) {
+              case 0:
+                _context2.next = 2;
+                return _services_User__WEBPACK_IMPORTED_MODULE_10__["default"].getUser(username);
+
+              case 2:
+                user = _context2.sent;
+                return _context2.abrupt("return", user.user);
+
+              case 4:
+              case "end":
+                return _context2.stop();
+            }
+          }
+        }, _callee2);
+      }));
+
+      function getUser(_x) {
+        return _getUser.apply(this, arguments);
+      }
+
+      return getUser;
+    }()
+  }, {
     key: "render",
     value: function render() {
       var _this2 = this;
@@ -38085,7 +38133,7 @@ var List = /*#__PURE__*/function (_Component) {
             marginBlock: "30px",
             margin: "0px 20px 20px 0px",
             width: '510px',
-            height: '450px',
+            height: '460px',
             display: "inline-grid"
           }
         }, request.action == "INTERCAMBIO" ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("center", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("h5", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("strong", null, "INTERCAMBIO: ", _this2.state.books1[i].title, " por ", _this2.state.books2[i].title))) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("center", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("h5", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("strong", null, "COMPRA: ", _this2.state.books2[i].title))), request.action == "INTERCAMBIO" ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("center", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("a", {
@@ -38127,7 +38175,7 @@ var List = /*#__PURE__*/function (_Component) {
           padding: '10px',
           margin: "0px 0px 0px 0px",
           width: '120px'
-        }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("strong", null, "Precio: "), _this2.state.books2[i].price, " \u20AC")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("center", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("strong", null, "Comentario adicional: "), request.comment), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("strong", null, "Petici\xF3n enviada a: "), request.username2), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("strong", null, "Estado: "), request.status)), request.status == "PENDIENTE" ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("center", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("a", {
+        }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("strong", null, "Precio: "), _this2.state.books2[i].price, " \u20AC")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("center", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("strong", null, "Comentario adicional: "), request.comment), request.status != "ACEPTADA" ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("strong", null, "Petici\xF3n enviada a: "), request.username2) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("strong", null, "Estado: "), request.status)), request.status == "PENDIENTE" ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("center", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("a", {
           onClick: function onClick() {
             return _this2.cancelRequest(request.id);
           },
@@ -38145,7 +38193,7 @@ var List = /*#__PURE__*/function (_Component) {
             color: "white"
           },
           "class": "btn btn-primary"
-        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("strong", null, "Eliminar"))) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", null));
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("strong", null, "Eliminar"))) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("center", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("strong", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("i", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("u", null, "Datos de contacto con ", request.username2)))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("strong", null, "N\xFAmero de tel\xE9fono: "), _this2.state.users[i].phone), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("strong", null, " Email: "), _this2.state.users[i].email)));
       }), this.state.requests.length == 0 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("strong", null, "\xBFNo tienes todav\xEDa peticiones? ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("a", {
         href: "/",
         "class": "btn btn-primary"
@@ -38154,50 +38202,13 @@ var List = /*#__PURE__*/function (_Component) {
   }, {
     key: "cancelRequest",
     value: function () {
-      var _cancelRequest = _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_7___default.a.mark(function _callee2(id) {
-        var conf, res;
-        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_7___default.a.wrap(function _callee2$(_context2) {
-          while (1) {
-            switch (_context2.prev = _context2.next) {
-              case 0:
-                conf = confirm("¿Está seguro de que quiere cancelarla? Esta acción no es reversible.");
-
-                if (!conf) {
-                  _context2.next = 6;
-                  break;
-                }
-
-                _context2.next = 4;
-                return _services_Request__WEBPACK_IMPORTED_MODULE_9__["default"].cancel(id);
-
-              case 4:
-                res = _context2.sent;
-                window.location.replace("/requests/me");
-
-              case 6:
-              case "end":
-                return _context2.stop();
-            }
-          }
-        }, _callee2);
-      }));
-
-      function cancelRequest(_x) {
-        return _cancelRequest.apply(this, arguments);
-      }
-
-      return cancelRequest;
-    }()
-  }, {
-    key: "deleteRequest",
-    value: function () {
-      var _deleteRequest = _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_7___default.a.mark(function _callee3(id) {
+      var _cancelRequest = _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_7___default.a.mark(function _callee3(id) {
         var conf, res;
         return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_7___default.a.wrap(function _callee3$(_context3) {
           while (1) {
             switch (_context3.prev = _context3.next) {
               case 0:
-                conf = confirm("¿Está seguro de que quiere eliminarla? Esta acción no es reversible.");
+                conf = confirm("¿Está seguro de que quiere cancelarla? Esta acción no es reversible.");
 
                 if (!conf) {
                   _context3.next = 6;
@@ -38205,7 +38216,7 @@ var List = /*#__PURE__*/function (_Component) {
                 }
 
                 _context3.next = 4;
-                return _services_Request__WEBPACK_IMPORTED_MODULE_9__["default"]["delete"](id);
+                return _services_Request__WEBPACK_IMPORTED_MODULE_9__["default"].cancel(id);
 
               case 4:
                 res = _context3.sent;
@@ -38219,7 +38230,44 @@ var List = /*#__PURE__*/function (_Component) {
         }, _callee3);
       }));
 
-      function deleteRequest(_x2) {
+      function cancelRequest(_x2) {
+        return _cancelRequest.apply(this, arguments);
+      }
+
+      return cancelRequest;
+    }()
+  }, {
+    key: "deleteRequest",
+    value: function () {
+      var _deleteRequest = _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_7___default.a.mark(function _callee4(id) {
+        var conf, res;
+        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_7___default.a.wrap(function _callee4$(_context4) {
+          while (1) {
+            switch (_context4.prev = _context4.next) {
+              case 0:
+                conf = confirm("¿Está seguro de que quiere eliminarla? Esta acción no es reversible.");
+
+                if (!conf) {
+                  _context4.next = 6;
+                  break;
+                }
+
+                _context4.next = 4;
+                return _services_Request__WEBPACK_IMPORTED_MODULE_9__["default"]["delete"](id);
+
+              case 4:
+                res = _context4.sent;
+                window.location.replace("/requests/me");
+
+              case 6:
+              case "end":
+                return _context4.stop();
+            }
+          }
+        }, _callee4);
+      }));
+
+      function deleteRequest(_x3) {
         return _deleteRequest.apply(this, arguments);
       }
 
@@ -38293,7 +38341,8 @@ var List = /*#__PURE__*/function (_Component) {
     _this.state = {
       requests: [],
       books1: [],
-      books2: []
+      books2: [],
+      users: []
     };
     return _this;
   }
@@ -38315,7 +38364,8 @@ var List = /*#__PURE__*/function (_Component) {
                 this.setState({
                   requests: res.requests,
                   books1: res.books1,
-                  books2: res.books2
+                  books2: res.books2,
+                  users: res.users
                 });
 
               case 4:
@@ -38347,7 +38397,7 @@ var List = /*#__PURE__*/function (_Component) {
             marginBlock: "30px",
             margin: "0px 20px 20px 0px",
             width: '510px',
-            height: '450px',
+            height: '460px',
             display: "inline-grid"
           }
         }, request.action == "INTERCAMBIO" ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("center", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("h5", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("strong", null, "INTERCAMBIO: ", _this2.state.books2[i].title, " por ", _this2.state.books1[i].title))) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("center", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("h5", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("strong", null, "COMPRA: ", _this2.state.books2[i].title))), request.action == "INTERCAMBIO" ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("center", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("a", {
@@ -38389,7 +38439,7 @@ var List = /*#__PURE__*/function (_Component) {
           padding: '10px',
           margin: "0px 0px 0px 0px",
           width: '120px'
-        }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("strong", null, "Precio: "), _this2.state.books2[i].price, " \u20AC")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("center", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("strong", null, "Comentario adicional: "), request.comment), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("strong", null, "Petici\xF3n enviada por: "), request.username1), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("strong", null, "Estado: "), request.status)), request.status == "PENDIENTE" ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("center", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("a", {
+        }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("strong", null, "Precio: "), _this2.state.books2[i].price, " \u20AC")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("center", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("strong", null, "Comentario adicional: "), request.comment), request.status != "ACEPTADA" ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("strong", null, "Petici\xF3n enviada por: "), request.username1) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("strong", null, "Estado: "), request.status)), request.status == "PENDIENTE" ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("center", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("a", {
           onClick: function onClick() {
             return _this2.acceptRequest(request.id, _this2.state.books2[i].title);
           },
@@ -38408,11 +38458,11 @@ var List = /*#__PURE__*/function (_Component) {
             color: "white"
           },
           "class": "btn btn-primary"
-        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("strong", null, "Rechazar"))) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", null));
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("strong", null, "Rechazar"))) : request.status == "ACEPTADA" ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("center", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("strong", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("i", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("u", null, "Datos de contacto con ", request.username1)))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("strong", null, "N\xFAmero de tel\xE9fono: "), _this2.state.users[i].phone), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("strong", null, " Email: "), _this2.state.users[i].email)) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", null));
       }), this.state.requests.length == 0 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("strong", null, "\xBFNo has recibido peticiones todav\xEDa? ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("a", {
         href: "/books/new",
         "class": "btn btn-primary"
-      }, "Sube un libro!"))) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", null));
+      }, "A\xF1ade un libro!"))) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", null));
     }
   }, {
     key: "acceptRequest",

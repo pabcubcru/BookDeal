@@ -1,21 +1,29 @@
 import React, { Component } from 'react';
 import requestService from "../services/Request";
+import userService from "../services/User";
 
 export default class List extends Component {
 
-  constructor(){
+  constructor() {
     super();
     this.state = {
       requests: [],
       books1:[],
-      books2:[]
+      books2:[],
+      users:[]
     }
   }
     
   async componentDidMount() {
     const res = await requestService.listMyRequests()
 
-    this.setState({requests:res.requests, books1:res.books1, books2:res.books2})
+    this.setState({requests:res.requests, books1:res.books1, books2:res.books2, users:res.users})
+
+  }
+
+  async getUser(username) {
+    const user = await userService.getUser(username)
+    return user.user
   }
 
     render() {
@@ -24,7 +32,7 @@ export default class List extends Component {
                 {this.state.requests.map((request, i) => {
                     return(
                     <div style={{backgroundImage: "url(https://i.pinimg.com/originals/8d/23/06/8d2306b98839234e49ce96a8b76e20ae.jpg)", 
-                    backgroundSize: "auto auto", padding: "30px", paddingTop:"20px", marginBlock:"30px", margin:"0px 20px 20px 0px", width: '510px', height: '450px', display:"inline-grid"}}>
+                    backgroundSize: "auto auto", padding: "30px", paddingTop:"20px", marginBlock:"30px", margin:"0px 20px 20px 0px", width: '510px', height: '460px', display:"inline-grid"}}>
 
                     {request.action == "INTERCAMBIO" ?
                       <center><h5><strong>INTERCAMBIO: {this.state.books1[i].title} por {this.state.books2[i].title}</strong></h5></center>
@@ -45,7 +53,12 @@ export default class List extends Component {
                     }
                     <center>
                     <p><strong>Comentario adicional: </strong>{request.comment}</p>
-                    <p><strong>Petición enviada a: </strong>{request.username2}</p>
+                    {request.status != "ACEPTADA" ?
+                      <p><strong>Petición enviada a: </strong>{request.username2}</p>
+                    :
+                      <p></p>
+                    }
+                    
                     <p><strong>Estado: </strong>{request.status}</p>
                     
                     </center>
@@ -56,7 +69,9 @@ export default class List extends Component {
                       request.status != "ACEPTADA" ?
                         <center><a onClick={() => this.deleteRequest(request.id)} style={{background:"red", color:"white"}} class="btn btn-primary"><strong>Eliminar</strong></a></center>
                       :
-                        <p></p>
+                        <center><p><strong><i><u>Datos de contacto con {request.username2}</u></i></strong></p>
+                        <p><strong>Número de teléfono: </strong>{this.state.users[i].phone}</p>
+                        <p><strong> Email: </strong>{this.state.users[i].email}</p></center>
                     }
                     </div>)
                 })}
@@ -84,4 +99,5 @@ export default class List extends Component {
         window.location.replace("/requests/me")
       }
     }
+
 }

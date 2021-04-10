@@ -43,6 +43,16 @@ public class RequestService {
     }
 
     @Transactional
+    public Request findFirstByIdBook1AndStatus(String idBook1, String status) {
+        return this.requestRepository.findFirstByIdBook1AndStatus(idBook1, status);
+    }
+
+    @Transactional
+    public Request findFirstByIdBook2AndStatus(String idBook1, String status) {
+        return this.requestRepository.findFirstByIdBook2AndStatus(idBook1, status);
+    }
+
+    @Transactional
     public Request findById(String id) {
         return this.requestRepository.findById(id).orElse(null);
     }

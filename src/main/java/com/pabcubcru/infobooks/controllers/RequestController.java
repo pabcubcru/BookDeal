@@ -9,8 +9,10 @@ import java.util.Map;
 import com.pabcubcru.infobooks.models.Book;
 import com.pabcubcru.infobooks.models.Request;
 import com.pabcubcru.infobooks.models.RequestStatus;
+import com.pabcubcru.infobooks.models.User;
 import com.pabcubcru.infobooks.services.BookService;
 import com.pabcubcru.infobooks.services.RequestService;
+import com.pabcubcru.infobooks.services.UserService;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -31,6 +33,9 @@ public class RequestController {
 
     @Autowired
     private BookService bookService;
+
+    @Autowired
+    private UserService userService;
 
     @GetMapping(value = {"/me", "/received"})
     public ModelAndView mainWithSecurity() {
@@ -87,6 +92,7 @@ public class RequestController {
         Map<String, Object> res = new HashMap<>();
         List<Book> books1 = new ArrayList<>();
         List<Book> books2 = new ArrayList<>();
+        List<User> users = new ArrayList<>();
 
         List<Request> requests = this.requestService.listMyRequests(principal.getName());
 
@@ -96,12 +102,18 @@ public class RequestController {
             } else {
                 books1.add(null);
             }
+            if(r.getStatus().equals(RequestStatus.ACEPTADA.toString())) {
+                users.add(this.userService.findByUsername(r.getUsername2()));
+            } else{
+                users.add(null);
+            }
             books2.add(this.bookService.findBookById(r.getIdBook2()));
         }
 
         res.put("requests", requests);
         res.put("books1", books1);
         res.put("books2", books2);
+        res.put("users", users);
 
         return res;
     }
@@ -111,6 +123,7 @@ public class RequestController {
         Map<String, Object> res = new HashMap<>();
         List<Book> books1 = new ArrayList<>();
         List<Book> books2 = new ArrayList<>();
+        List<User> users = new ArrayList<>();
 
         List<Request> requests = this.requestService.listReceivedRequests(principal.getName());
 
@@ -121,11 +134,17 @@ public class RequestController {
                 books1.add(null);
             }
             books2.add(this.bookService.findBookById(r.getIdBook2()));
+            if(r.getStatus().equals(RequestStatus.ACEPTADA.toString())) {
+                users.add(this.userService.findByUsername(r.getUsername1()));
+            } else{
+                users.add(null);
+            }
         }
 
         res.put("requests", requests);
         res.put("books1", books1);
         res.put("books2", books2);
+        res.put("users", users);
 
         return res;
     }

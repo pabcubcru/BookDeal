@@ -8,14 +8,15 @@ export default class List extends Component {
     this.state = {
       requests: [],
       books1:[],
-      books2:[]
+      books2:[],
+      users:[]
     }
   }
     
   async componentDidMount() {
     const res = await requestService.listReceivedRequests()
 
-    this.setState({requests:res.requests, books1:res.books1, books2:res.books2})
+    this.setState({requests:res.requests, books1:res.books1, books2:res.books2, users:res.users})
   }
 
     render() {
@@ -24,7 +25,7 @@ export default class List extends Component {
                 {this.state.requests.map((request, i) => {
                     return(
                     <div style={{backgroundImage: "url(https://i.pinimg.com/originals/8d/23/06/8d2306b98839234e49ce96a8b76e20ae.jpg)", 
-                    backgroundSize: "auto auto", padding: "30px", paddingTop:"20px", marginBlock:"30px", margin:"0px 20px 20px 0px", width: '510px', height: '450px', display:"inline-grid"}}>
+                    backgroundSize: "auto auto", padding: "30px", paddingTop:"20px", marginBlock:"30px", margin:"0px 20px 20px 0px", width: '510px', height: '460px', display:"inline-grid"}}>
 
                     {request.action == "INTERCAMBIO" ?
                       <center><h5><strong>INTERCAMBIO: {this.state.books2[i].title} por {this.state.books1[i].title}</strong></h5></center>
@@ -45,7 +46,11 @@ export default class List extends Component {
                     }
                     <center>
                     <p><strong>Comentario adicional: </strong>{request.comment}</p>
-                    <p><strong>Petición enviada por: </strong>{request.username1}</p>
+                    {request.status != "ACEPTADA" ?
+                      <p><strong>Petición enviada por: </strong>{request.username1}</p>
+                    :
+                      <p></p>
+                    }
                     <p><strong>Estado: </strong>{request.status}</p>
                     
                     </center>
@@ -54,13 +59,18 @@ export default class List extends Component {
                       <center><a onClick={() => this.acceptRequest(request.id, this.state.books2[i].title)} style={{background:"#099C01",color:"white", margin:"10px"}} class="btn btn-primary"><strong>Aceptar</strong></a>
                       <a onClick={() => this.rejectRequest(request.id)} style={{background:"red", color:"white"}} class="btn btn-primary"><strong>Rechazar</strong></a></center>
                     :
-                      <p></p>
-                    }
+                      request.status == "ACEPTADA" ?
+                        <center><p><strong><i><u>Datos de contacto con {request.username1}</u></i></strong></p>
+                        <p><strong>Número de teléfono: </strong>{this.state.users[i].phone}</p>
+                        <p><strong> Email: </strong>{this.state.users[i].email}</p></center>
+                      :
+                        <p></p>
+                      }
                     </div>)
                 })}
 
                 {this.state.requests.length == 0 ?
-                <p><strong>¿No has recibido peticiones todavía? <a href="/books/new" class="btn btn-primary">Sube un libro!</a></strong></p>
+                <p><strong>¿No has recibido peticiones todavía? <a href="/books/new" class="btn btn-primary">Añade un libro!</a></strong></p>
                 :
                 <p></p>}
             </div>

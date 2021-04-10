@@ -18,4 +18,8 @@ public interface RequestRepository extends ElasticsearchRepository<Request, Stri
 
     public List<Request> findByUsername2AndIdBook2AndStatusNot(String username, String idBook, String status);
 
+    public Request findFirstByIdBook1AndStatus(String idBook1, String status);
+
+    public Request findFirstByIdBook2AndStatus(String idBook2, String status);
+
 }

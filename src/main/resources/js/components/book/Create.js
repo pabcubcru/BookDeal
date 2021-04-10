@@ -107,7 +107,7 @@ export default class Form extends Component {
         <div class="form-group row">
             <label for="firstName" class="col-sm-3 col-form-label">Sinopsis<sup class='text-danger'>*</sup></label>
           <div class="col-sm-9">
-            <input type="text" class="form-control"
+            <textarea type="text" class="form-control"
               value={this.state.fieldDescription} 
               onChange={(event)=>this.setState({fieldDescription:event.target.value})}/>
           </div>
