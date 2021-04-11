@@ -173,13 +173,27 @@ public class RequestController {
         Request request = this.requestService.findById(id);
 
         if(request.getUsername2().equals(principal.getName())) {
-            if(request.getStatus().equals(RequestStatus.PENDIENTE.toString())) {
-                List<Request> requestsReceivedToOneBook = this.requestService.findByUsername2AndIdBook2(principal.getName(), request.getIdBook2(), RequestStatus.CANCELADA.toString());
-                requestsReceivedToOneBook.remove(request);
-                for(Request r : requestsReceivedToOneBook) {
-                    r.setStatus(RequestStatus.RECHAZADA.toString());
+            if(request.getAction().equals("VENTA")) {
+                List<Request> requests = this.requestService.findByIdBook2AndStatusNotAndStatusNotAndAction(request.getIdBook2(), "VENTA");
+                requests.remove(request);
+                for(Request r : requests) {
+                    if(r.getStatus().equals(RequestStatus.PENDIENTE.toString())) {
+                        r.setStatus(RequestStatus.RECHAZADA.toString());
+                    }
                 }
-                this.requestService.saveAll(requestsReceivedToOneBook);
+                this.requestService.saveAll(requests);
+                request.setStatus(RequestStatus.ACEPTADA.toString());
+                this.requestService.save(request);
+            } else {
+                List<Request> requests = this.requestService.findByIdBook1AndStatusNotAndStatusNotAndAction(request.getIdBook1(), "INTERCAMBIO");
+                requests.addAll(this.requestService.findByIdBook2AndStatusNotAndStatusNotAndAction(request.getIdBook2(), "INTERCAMBIO"));
+                requests.remove(request);
+                for(Request r : requests) {
+                    if(r.getStatus().equals(RequestStatus.PENDIENTE.toString())) {
+                        r.setStatus(RequestStatus.RECHAZADA.toString());
+                    }
+                }
+                this.requestService.saveAll(requests);
                 request.setStatus(RequestStatus.ACEPTADA.toString());
                 this.requestService.save(request);
             }

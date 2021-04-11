@@ -1,0 +1,78 @@
+.menu, .menu ul, .menu li, .menu a {
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+}
+
+.menu {
+  height: 70px;
+  width: 100%;
+  background-color: rgb(0, 0, 0);
+  border-radius: 3px;
+}
+
+
+.menu li {
+  position: relative;
+  list-style: none;
+  float: left;
+  display: block;
+  height: 50px;
+}
+
+.menu a {
+  display: block;
+  padding: 0 30px;
+  margin: 20px 0;
+  line-height: 28px;
+  text-decoration: solid;
+  
+  font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+  color: rgb(255, 255, 255);
+  
+}
+
+
+
+.menu li:hover > a {color: #ff0000}
+
+.menu ul {
+  position: absolute;
+  top: 50px;
+  left: 20px;
+  
+  opacity: 0;
+  background: rgb(0, 0, 0);
+  
+  border-radius: 0 0 10px 10px;
+  transition: opacity .20s ease .1s;
+}
+
+.menu li:hover > ul {opacity: 1;}
+
+.menu ul li {
+  height: 0;
+  overflow: hidden;
+  padding: 0;
+  
+  transition: height .25s ease .1s;
+}
+
+.menu li:hover > ul li {
+  height: 50px;
+  overflow: visible;
+  padding: 0;
+}
+
+.menu ul li a {
+  width: 180px;
+  padding: 10px 20px;
+  margin: 0;
+  border: none;
+  border-bottom: 1px solid #ffffff;
+  font-weight: normal;
+}
+.menu ul li:last-child a { border: none; }

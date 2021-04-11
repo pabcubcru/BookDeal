@@ -22,7 +22,7 @@ export default class Form extends Component {
 
     const b = await bookService.getBook(id)
 
-    const bk = await bookService.listMyBooks()
+    const bk = await bookService.listMyBooksForChange()
 
     this.setState({book:b.book, books:bk.books, fieldIdBook2:id})
 

@@ -115,7 +115,14 @@ public class BookController {
     public void delete(@PathVariable("id") String id, Principal principal) {
         Book book = this.bookService.findBookById(id);
         if(book.getUsername().equals(principal.getName())) {
-            this.bookService.deleteBookById(id);
+            Request requestAcceptedToBook1 = this.requestService.findFirstByIdBook1AndStatus(id, RequestStatus.ACEPTADA.toString());
+            Request requestAcceptedToBook2 = this.requestService.findFirstByIdBook2AndStatus(id, RequestStatus.ACEPTADA.toString());
+            if(requestAcceptedToBook1 == null && requestAcceptedToBook2 == null) {
+                List<Request> requests = this.requestService.findByIdBook1OrIdBook2(id, id);
+                this.requestService.deleteAll(requests);
+                this.bookService.deleteBookById(id);
+            }
+            
         }
     }
 
@@ -126,7 +133,15 @@ public class BookController {
         if(principal == null) {
             res.put("books", this.bookService.findAll());
         } else {
-            List<Book> books = this.bookService.findAllExceptMine(principal.getName());
+            List<Book> books = new ArrayList<>();
+            List<Book> allBooksExceptMine = this.bookService.findAllExceptMine(principal.getName());
+            for(Book b : allBooksExceptMine) {
+                Request requestAcceptedToBook1 = this.requestService.findFirstByIdBook1AndStatus(b.getId(), RequestStatus.ACEPTADA.toString());
+                Request requestAcceptedToBook2 = this.requestService.findFirstByIdBook2AndStatus(b.getId(), RequestStatus.ACEPTADA.toString());
+                if(requestAcceptedToBook1 == null && requestAcceptedToBook2 == null) {
+                    books.add(b);
+                }
+            }
             res.put("books", books);
             List<Boolean> isAdded = new ArrayList<>();
             for(Book book : books) {
@@ -150,6 +165,26 @@ public class BookController {
 
         return res;
     }
+
+    @GetMapping(value="/list/me-change")
+    public Map<String, Object> findMyBooksForChange(Principal principal) {
+        Map<String, Object> res = new HashMap<>();
+        List<Book> books = new ArrayList<>();
+
+        List<Book> booksForChange = this.bookService.findByUsernameAndAction(principal.getName(), "INTERCAMBIO");
+
+        for(Book b : booksForChange) {
+            Request requestAcceptedToBook1 = this.requestService.findFirstByIdBook1AndStatus(b.getId(), RequestStatus.ACEPTADA.toString());
+            Request requestAcceptedToBook2 = this.requestService.findFirstByIdBook2AndStatus(b.getId(), RequestStatus.ACEPTADA.toString());
+            if(requestAcceptedToBook1 == null && requestAcceptedToBook2 == null) {
+                books.add(b);
+            }
+        }
+
+        res.put("books", books);
+
+        return res;
+    } 
 
     @GetMapping(value="/genres")
     public Map<String, Object> getGenres() {

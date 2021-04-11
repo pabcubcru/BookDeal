@@ -56,14 +56,14 @@ export default class Get extends Component {
                 {!this.state.hasRequestAccepted ? 
                     <a onClick={() => this.deleteBook(this.state.book.id)} style={{background:"red", color:"white"}} class="btn btn-primary">Eliminar</a>
                 :
-                    <center><button style={{background:"red", color:"white"}} class="btn btn-primary" disabled>No se puede eliminar</button>
+                    <center><button style={{background:"red", color:"white"}} class="btn btn-primary" disabled>Eliminar</button>
                     <p class='text-danger'>*Tiene una petición ACEPTADA</p></center>
                 }</center>
             :
                 <p></p>
             }
 
-            {this.state.username != null && this.state.username != this.state.book.username?
+            {this.state.username != null && this.state.username != this.state.book.username ?
                 !this.state.isAdded ? 
                     <center><h6><strong>Publicado por:</strong> {this.state.book.username}</h6><br></br><hr></hr>
                     <a onClick={() => this.addFavouriteBook(this.state.book.id)} style={{color:"white", margin:"10px"}} class="btn btn-primary">Añadir a favoritos</a></center>
@@ -76,7 +76,14 @@ export default class Get extends Component {
 
             {this.state.username != this.state.book.username && this.state.username != null ?
                 !this.state.alreadyRequest ?
-                <center><a href={"/requests/"+this.state.book.id+"/add"} style={{color:"white", margin:"10px"}} class="btn btn-primary">Realizar petición</a></center>
+                <center>
+                    {!this.state.hasRequestAccepted ?
+                        <a href={"/requests/"+this.state.book.id+"/add"} style={{color:"white", margin:"10px"}} class="btn btn-primary">Realizar petición</a>
+                    :
+                        <center><button style={{color:"white", margin:"10px"}} class="btn btn-primary" disabled>Realizar petición</button>
+                        <p class='text-danger'>*Ya tiene una petición ACEPTADA</p></center>
+                    }
+                </center>
                 :
                 <button style={{background:"#099C01",color:"white", margin:"10px"}} class="btn btn-primary" disabled>Petición realizada</button>
             :
