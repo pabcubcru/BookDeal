@@ -1,7 +1,7 @@
 import React, { Component } from 'react'; 
 import { Link } from "react-router-dom";
 import userService from "./services/User";
-
+import "./Nav.css";
 
 
 export default class Nav extends Component {
@@ -25,34 +25,49 @@ export default class Nav extends Component {
   render() {
     let button1;
     let button2;
-    let button3;
-    let button4;
-    let button5;
-    let button6;
-    let button7;
     if(this.state.isLogged != true){
-      button1 = <Link class="nav-link ml-auto" to="/login">Iniciar sesión</Link>;
-      button2 = <Link class="nav-link" to="/register">Registrarme</Link>;
+      button1 = <a class="nav-link ml-auto" href="/login">Iniciar sesión</a>;
+      button2 = <a class="nav-link" href="/register">Registrarme</a>;
     } else {
-      button1 = <a class="nav-link" href="/profile">Mi perfil</a>;
-      button2 = <a class="nav-link " href="/logout">Cerrar sesión</a>;
-      button3 = <a class="nav-link " href="/books/new">Añadir libro</a>;
-      button4 = <a class="nav-link" href="/books/me">Mis libros</a>;
-      button5 = <a class="nav-link" href="/favourites">Favoritos</a>;
-      button6 = <a class="nav-link" href="/requests/me">Mis peticiones</a>;
-      button7 = <a class="nav-link ml-auto" href="/requests/received">Peticiones recibidas</a>;
+      button1 = <a  class="nav-link" href="/profile">Mi perfil</a>;
+      button2 = <a  class="nav-link " href="/logout">Cerrar sesión</a>;
     }
+
     return (
-      <nav class="navbar navbar-expand-sm navbar-dark bg-dark rounded w-100">
-        <Link class="navbar-brand" to="/">InfoBooks</Link>
-        {button3}
-        {button7}
-        {button6}
-        {button5}
-        {button4}
-        {button1}
-        {button2}
-        
+      <nav style={{marginBottom:"30px"}}>
+        <ul class="menu">
+          <li ><a href="/">InfoBooks</a></li>
+          {this.state.isLogged ? 
+            <div><li ><a  href="#">Libros</a>
+            <ul>
+                <li ><a  href="/books/me">Mis libros</a></li>
+                <li ><a  href="/favourites">Favoritos</a></li>
+                <li ><a  href="/books/new">Añadir libro</a></li>
+            </ul>
+          </li>
+          <li ><a  href="#">Peticiones</a>
+            <ul>
+                <li ><a  href="/requests/me">Enviadas</a></li>
+                <li ><a  href="/requests/received">Recibidas</a></li>
+            </ul>
+          </li>
+          </div>
+        :
+            <p></p>
+        }  
+        {this.state.isLogged ? 
+          <li style={{float:"right"}}><a href="#" >Perfil</a>
+            <ul>
+                <li >{button1}</li>
+                <li >{button2}</li>
+            </ul>
+          </li>
+        :
+          <div><li style={{float:"right"}}>{button2}</li>
+          <li style={{float:"right"}}>{button1}</li></div>
+        }
+          
+        </ul>
       </nav>
     )
   }

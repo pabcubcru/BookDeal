@@ -81,6 +81,15 @@ book.listMyBooks = async() => {
     return res;
 }
 
+book.listMyBooksForChange = async() => {
+    const urlGet = baseUrl+"/list/me-change"
+    const res = await axios.get(urlGet)
+    .then(response => {return response.data;})
+    .catch(error => {return error.response;})
+
+    return res;
+}
+
 book.getGenres = async() => {
     const urlGet = baseUrl+"/genres"
     const res = await axios.get(urlGet)

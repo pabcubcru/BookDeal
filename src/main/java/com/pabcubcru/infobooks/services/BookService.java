@@ -63,5 +63,10 @@ public class BookService {
         
         return res;
     }
+
+    @Transactional
+    public List<Book> findByUsernameAndAction(String username, String action) {
+        return this.bookRepository.findByUsernameAndAction(username, action);
+    }
     
 }

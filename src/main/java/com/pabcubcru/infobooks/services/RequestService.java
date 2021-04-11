@@ -3,6 +3,7 @@ package com.pabcubcru.infobooks.services;
 import java.util.List;
 
 import com.pabcubcru.infobooks.models.Request;
+import com.pabcubcru.infobooks.models.RequestStatus;
 import com.pabcubcru.infobooks.repository.RequestRepository;
 
 import org.springframework.stereotype.Service;
@@ -24,12 +25,12 @@ public class RequestService {
 
     @Transactional(readOnly = true)
     public List<Request> listMyRequests(String username) {
-        return this.requestRepository.findByUsername1OrderByAction(username);
+        return this.requestRepository.findByUsername1OrderByStatus(username);
     }
 
     @Transactional(readOnly = true)
     public List<Request> listReceivedRequests(String username) {
-        return this.requestRepository.findByUsername2OrderByAction(username);
+        return this.requestRepository.findByUsername2AndStatusNotAndStatusNotOrderByStatusDesc(username, RequestStatus.RECHAZADA.toString(), RequestStatus.CANCELADA.toString());
     }
 
     @Transactional
@@ -38,7 +39,7 @@ public class RequestService {
     }
 
     @Transactional
-    public List<Request> findByUsername2AndIdBook2(String username, String idBook, String status) {
+    public List<Request> findByUsername2AndIdBook2AndStatusNot(String username, String idBook, String status) {
         return this.requestRepository.findByUsername2AndIdBook2AndStatusNot(username, idBook, status);
     }
 
@@ -58,8 +59,28 @@ public class RequestService {
     }
 
     @Transactional
+    public List<Request> findByIdBook1AndStatusNotAndStatusNotAndAction(String idBook1, String action) {
+        return this.requestRepository.findByIdBook1AndStatusNotAndStatusNotAndAction(idBook1, RequestStatus.RECHAZADA.toString(), RequestStatus.CANCELADA.toString(), action);
+    }
+
+    @Transactional
+    public List<Request> findByIdBook2AndStatusNotAndStatusNotAndAction(String idBook2, String action) {
+        return this.requestRepository.findByIdBook2AndStatusNotAndStatusNotAndAction(idBook2, RequestStatus.RECHAZADA.toString(), RequestStatus.CANCELADA.toString(), action);
+    }
+
+    @Transactional
+    public List<Request> findByIdBook1OrIdBook2(String idBook1, String idBook2) {
+        return this.requestRepository.findByIdBook1OrIdBook2(idBook1, idBook2);
+    }
+
+    @Transactional
     public void deleteById(String id) {
         this.requestRepository.deleteById(id);
+    }
+
+    @Transactional
+    public void deleteAll(List<Request> requests) {
+        this.requestRepository.deleteAll(requests);
     }
 
     @Transactional

@@ -32,12 +32,12 @@ export default class List extends Component {
                 {this.state.requests.map((request, i) => {
                     return(
                     <div style={{backgroundImage: "url(https://i.pinimg.com/originals/8d/23/06/8d2306b98839234e49ce96a8b76e20ae.jpg)", 
-                    backgroundSize: "auto auto", padding: "30px", paddingTop:"20px", marginBlock:"30px", margin:"0px 20px 20px 0px", width: '510px', height: '460px', display:"inline-grid"}}>
+                    backgroundSize: "auto auto", padding: "30px", paddingTop:"20px", marginBlock:"30px", margin:"0px 20px 20px 0px", width: '510px', height: '480px', display:"inline-grid"}}>
 
                     {request.action == "INTERCAMBIO" ?
-                      <center><h5><strong>INTERCAMBIO: {this.state.books1[i].title} por {this.state.books2[i].title}</strong></h5></center>
+                      <center><h5 style={{color: "#007bff"}}><strong><i><u>INTERCAMBIO:</u></i><br></br> {this.state.books1[i].title} ⇄ {this.state.books2[i].title}</strong></h5></center>
                     :
-                      <center><h5><strong>COMPRA: {this.state.books2[i].title}</strong></h5></center>
+                      <center><h5 style={{color: "#007bff"}}><strong><i><u>COMPRA:</u></i><br></br> {this.state.books2[i].title}</strong></h5></center>
                     }
 
                     {request.action == "INTERCAMBIO" ?
