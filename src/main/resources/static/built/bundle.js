@@ -37975,7 +37975,6 @@ var List = /*#__PURE__*/function (_Component) {
             marginBlock: "30px",
             margin: "0px 20px 20px 0px",
             width: '333px',
-            height: '630px',
             display: 'inline-flex'
           }
         }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("center", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("h5", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("strong", null, book.title)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("a", {
@@ -38161,7 +38160,6 @@ var List = /*#__PURE__*/function (_Component) {
             marginBlock: "30px",
             margin: "0px 20px 20px 0px",
             width: '333px',
-            height: '600px',
             display: 'inline-flex'
           }
         }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("center", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("h4", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("strong", null, book.title)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("a", {

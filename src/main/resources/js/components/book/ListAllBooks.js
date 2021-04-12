@@ -30,7 +30,7 @@ export default class List extends Component {
                     return(
                     <div style={{backgroundImage: "url(https://i.pinimg.com/originals/8d/23/06/8d2306b98839234e49ce96a8b76e20ae.jpg)", 
                     backgroundSize: "auto auto" ,  fontWeight: "bold", padding: "60px", paddingTop:"20px", marginBlock:"30px", margin:"0px 20px 20px 0px", width: '333px',
-                    height: '630px', display: 'inline-flex'}}>
+                    display: 'inline-flex'}}>
                     <center><div>
                     <h5><strong>{book.title}</strong></h5>
                     <a href={"/books/"+book.id}><img src={book.image} 
