@@ -5,17 +5,21 @@ import java.util.Optional;
 
 import com.pabcubcru.infobooks.models.Book;
 
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.data.elasticsearch.repository.ElasticsearchRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
 public interface BookRepository extends ElasticsearchRepository<Book, String> {
     
-    public List<Book> findByUsername(String username);
+    public Page<Book> findAll(Pageable pageable);
+
+    public Page<Book> findByUsername(String username, Pageable pageable);
 
     public Optional<Book> findById(String id);
 
-    public List<Book> findByUsernameNot(String username);
+    public Page<Book> findByUsernameNot(String username, Pageable pageable);
 
     public List<Book> findByUsernameAndAction(String username, String action);
 }

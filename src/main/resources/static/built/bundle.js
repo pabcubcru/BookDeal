@@ -398,6 +398,22 @@ module.exports["default"] = module.exports, module.exports.__esModule = true;
 
 /***/ }),
 
+/***/ "./node_modules/@babel/runtime/helpers/readOnlyError.js":
+/*!**************************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/readOnlyError.js ***!
+  \**************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+function _readOnlyError(name) {
+  throw new TypeError("\"" + name + "\" is read-only");
+}
+
+module.exports = _readOnlyError;
+module.exports["default"] = module.exports, module.exports.__esModule = true;
+
+/***/ }),
+
 /***/ "./node_modules/@babel/runtime/helpers/setPrototypeOf.js":
 /*!***************************************************************!*\
   !*** ./node_modules/@babel/runtime/helpers/setPrototypeOf.js ***!
@@ -2343,6 +2359,31 @@ __webpack_require__.r(__webpack_exports__);
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()(_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0___default.a);
 // Module
 ___CSS_LOADER_EXPORT___.push([module.i, ".menu, .menu ul, .menu li, .menu a {\r\n  margin: 0;\r\n  padding: 0;\r\n  border: none;\r\n  outline: none;\r\n}\r\n\r\n.menu {\r\n  height: 70px;\r\n  width: 100%;\r\n  background-color: rgb(0, 0, 0);\r\n  border-radius: 3px;\r\n}\r\n\r\n\r\n.menu li {\r\n  position: relative;\r\n  list-style: none;\r\n  float: left;\r\n  display: block;\r\n  height: 50px;\r\n}\r\n\r\n.menu a {\r\n  display: block;\r\n  padding: 0 30px;\r\n  margin: 20px 0;\r\n  line-height: 28px;\r\n  text-decoration: solid;\r\n  \r\n  font-family:\"Trebuchet MS\", Arial, Helvetica, sans-serif;\r\n  font-weight: bold;\r\n  font-size: 20px;\r\n  color: rgb(255, 255, 255);\r\n  \r\n}\r\n\r\n\r\n\r\n.menu li:hover > a {color: #ff0000}\r\n\r\n.menu ul {\r\n  position: absolute;\r\n  top: 50px;\r\n  left: 20px;\r\n  \r\n  opacity: 0;\r\n  background: rgb(0, 0, 0);\r\n  \r\n  border-radius: 0 0 10px 10px;\r\n  transition: opacity .20s ease .1s;\r\n}\r\n\r\n.menu li:hover > ul {opacity: 1;}\r\n\r\n.menu ul li {\r\n  height: 0;\r\n  overflow: hidden;\r\n  padding: 0;\r\n  \r\n  transition: height .25s ease .1s;\r\n}\r\n\r\n.menu li:hover > ul li {\r\n  height: 50px;\r\n  overflow: visible;\r\n  padding: 0;\r\n}\r\n\r\n.menu ul li a {\r\n  width: 180px;\r\n  padding: 10px 20px;\r\n  margin: 0;\r\n  border: none;\r\n  border-bottom: 1px solid #ffffff;\r\n  font-weight: normal;\r\n}\r\n.menu ul li:last-child a { border: none; }", "",{"version":3,"sources":["webpack://./src/main/resources/js/components/Nav.css"],"names":[],"mappings":"AAAA;EACE,SAAS;EACT,UAAU;EACV,YAAY;EACZ,aAAa;AACf;;AAEA;EACE,YAAY;EACZ,WAAW;EACX,8BAA8B;EAC9B,kBAAkB;AACpB;;;AAGA;EACE,kBAAkB;EAClB,gBAAgB;EAChB,WAAW;EACX,cAAc;EACd,YAAY;AACd;;AAEA;EACE,cAAc;EACd,eAAe;EACf,cAAc;EACd,iBAAiB;EACjB,sBAAsB;;EAEtB,wDAAwD;EACxD,iBAAiB;EACjB,eAAe;EACf,yBAAyB;;AAE3B;;;;AAIA,oBAAoB,cAAc;;AAElC;EACE,kBAAkB;EAClB,SAAS;EACT,UAAU;;EAEV,UAAU;EACV,wBAAwB;;EAExB,4BAA4B;EAC5B,iCAAiC;AACnC;;AAEA,qBAAqB,UAAU,CAAC;;AAEhC;EACE,SAAS;EACT,gBAAgB;EAChB,UAAU;;EAEV,gCAAgC;AAClC;;AAEA;EACE,YAAY;EACZ,iBAAiB;EACjB,UAAU;AACZ;;AAEA;EACE,YAAY;EACZ,kBAAkB;EAClB,SAAS;EACT,YAAY;EACZ,gCAAgC;EAChC,mBAAmB;AACrB;AACA,2BAA2B,YAAY,EAAE","sourcesContent":[".menu, .menu ul, .menu li, .menu a {\r\n  margin: 0;\r\n  padding: 0;\r\n  border: none;\r\n  outline: none;\r\n}\r\n\r\n.menu {\r\n  height: 70px;\r\n  width: 100%;\r\n  background-color: rgb(0, 0, 0);\r\n  border-radius: 3px;\r\n}\r\n\r\n\r\n.menu li {\r\n  position: relative;\r\n  list-style: none;\r\n  float: left;\r\n  display: block;\r\n  height: 50px;\r\n}\r\n\r\n.menu a {\r\n  display: block;\r\n  padding: 0 30px;\r\n  margin: 20px 0;\r\n  line-height: 28px;\r\n  text-decoration: solid;\r\n  \r\n  font-family:\"Trebuchet MS\", Arial, Helvetica, sans-serif;\r\n  font-weight: bold;\r\n  font-size: 20px;\r\n  color: rgb(255, 255, 255);\r\n  \r\n}\r\n\r\n\r\n\r\n.menu li:hover > a {color: #ff0000}\r\n\r\n.menu ul {\r\n  position: absolute;\r\n  top: 50px;\r\n  left: 20px;\r\n  \r\n  opacity: 0;\r\n  background: rgb(0, 0, 0);\r\n  \r\n  border-radius: 0 0 10px 10px;\r\n  transition: opacity .20s ease .1s;\r\n}\r\n\r\n.menu li:hover > ul {opacity: 1;}\r\n\r\n.menu ul li {\r\n  height: 0;\r\n  overflow: hidden;\r\n  padding: 0;\r\n  \r\n  transition: height .25s ease .1s;\r\n}\r\n\r\n.menu li:hover > ul li {\r\n  height: 50px;\r\n  overflow: visible;\r\n  padding: 0;\r\n}\r\n\r\n.menu ul li a {\r\n  width: 180px;\r\n  padding: 10px 20px;\r\n  margin: 0;\r\n  border: none;\r\n  border-bottom: 1px solid #ffffff;\r\n  font-weight: normal;\r\n}\r\n.menu ul li:last-child a { border: none; }"],"sourceRoot":""}]);
+// Exports
+/* harmony default export */ __webpack_exports__["default"] = (___CSS_LOADER_EXPORT___);
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/cjs.js!./src/main/resources/js/components/book/Pagination.css":
+/*!****************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js!./src/main/resources/js/components/book/Pagination.css ***!
+  \****************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../../../../node_modules/css-loader/dist/runtime/cssWithMappingToString.js */ "./node_modules/css-loader/dist/runtime/cssWithMappingToString.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);
+// Imports
+
+
+var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()(_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0___default.a);
+// Module
+___CSS_LOADER_EXPORT___.push([module.i, "\r\n  a.pag {\r\n    width:32px;\r\n    height:32px;\r\n    display:inline-block;\r\n    position:relative;\r\n    text-align:center;\r\n    line-height:32px;\r\n    text-decoration:none;\r\n    color:#000000;\r\n    transition:.3s all;\r\n    font-weight: bold;\r\n  }", "",{"version":3,"sources":["webpack://./src/main/resources/js/components/book/Pagination.css"],"names":[],"mappings":";EACE;IACE,UAAU;IACV,WAAW;IACX,oBAAoB;IACpB,iBAAiB;IACjB,iBAAiB;IACjB,gBAAgB;IAChB,oBAAoB;IACpB,aAAa;IACb,kBAAkB;IAClB,iBAAiB;EACnB","sourcesContent":["\r\n  a.pag {\r\n    width:32px;\r\n    height:32px;\r\n    display:inline-block;\r\n    position:relative;\r\n    text-align:center;\r\n    line-height:32px;\r\n    text-decoration:none;\r\n    color:#000000;\r\n    transition:.3s all;\r\n    font-weight: bold;\r\n  }"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ __webpack_exports__["default"] = (___CSS_LOADER_EXPORT___);
 
@@ -36356,11 +36397,15 @@ var Main = /*#__PURE__*/function (_Component) {
         exact: true,
         component: _book_Create__WEBPACK_IMPORTED_MODULE_13__["default"]
       }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_22__["Route"], {
+        path: "/home/:page",
+        exact: true,
+        component: _book_ListAllBooks__WEBPACK_IMPORTED_MODULE_14__["default"]
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_22__["Route"], {
         path: "/",
         exact: true,
         component: _book_ListAllBooks__WEBPACK_IMPORTED_MODULE_14__["default"]
       }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_22__["Route"], {
-        path: "/books/me",
+        path: "/books/me/:page",
         exact: true,
         component: _book_ListMyBooks__WEBPACK_IMPORTED_MODULE_15__["default"]
       }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_22__["Route"], {
@@ -36551,11 +36596,11 @@ var Nav = /*#__PURE__*/function (_Component) {
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("ul", {
         "class": "menu"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
-        href: "/"
+        href: "/home/0"
       }, "InfoBooks")), this.state.isLogged ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
         href: "#"
       }, "Libros"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("ul", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
-        href: "/books/me"
+        href: "/books/me/0"
       }, "Mis libros")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
         href: "/favourites"
       }, "Favoritos")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
@@ -37862,27 +37907,30 @@ var Get = /*#__PURE__*/function (_Component) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return List; });
-/* harmony import */ var _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/asyncToGenerator */ "./node_modules/@babel/runtime/helpers/asyncToGenerator.js");
-/* harmony import */ var _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/defineProperty */ "./node_modules/@babel/runtime/helpers/defineProperty.js");
-/* harmony import */ var _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime/helpers/classCallCheck */ "./node_modules/@babel/runtime/helpers/classCallCheck.js");
-/* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @babel/runtime/helpers/createClass */ "./node_modules/@babel/runtime/helpers/createClass.js");
-/* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @babel/runtime/helpers/inherits */ "./node_modules/@babel/runtime/helpers/inherits.js");
-/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @babel/runtime/helpers/possibleConstructorReturn */ "./node_modules/@babel/runtime/helpers/possibleConstructorReturn.js");
-/* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @babel/runtime/helpers/getPrototypeOf */ "./node_modules/@babel/runtime/helpers/getPrototypeOf.js");
-/* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
-/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_7__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_8__);
-/* harmony import */ var _services_Book__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../services/Book */ "./src/main/resources/js/components/services/Book.js");
-/* harmony import */ var _services_User__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../services/User */ "./src/main/resources/js/components/services/User.js");
-/* harmony import */ var _services_UserFavouriteBook__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../services/UserFavouriteBook */ "./src/main/resources/js/components/services/UserFavouriteBook.js");
+/* harmony import */ var _babel_runtime_helpers_readOnlyError__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/readOnlyError */ "./node_modules/@babel/runtime/helpers/readOnlyError.js");
+/* harmony import */ var _babel_runtime_helpers_readOnlyError__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_readOnlyError__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/asyncToGenerator */ "./node_modules/@babel/runtime/helpers/asyncToGenerator.js");
+/* harmony import */ var _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime/helpers/defineProperty */ "./node_modules/@babel/runtime/helpers/defineProperty.js");
+/* harmony import */ var _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @babel/runtime/helpers/classCallCheck */ "./node_modules/@babel/runtime/helpers/classCallCheck.js");
+/* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @babel/runtime/helpers/createClass */ "./node_modules/@babel/runtime/helpers/createClass.js");
+/* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @babel/runtime/helpers/inherits */ "./node_modules/@babel/runtime/helpers/inherits.js");
+/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @babel/runtime/helpers/possibleConstructorReturn */ "./node_modules/@babel/runtime/helpers/possibleConstructorReturn.js");
+/* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @babel/runtime/helpers/getPrototypeOf */ "./node_modules/@babel/runtime/helpers/getPrototypeOf.js");
+/* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_9__);
+/* harmony import */ var _services_Book__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../services/Book */ "./src/main/resources/js/components/services/Book.js");
+/* harmony import */ var _services_User__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../services/User */ "./src/main/resources/js/components/services/User.js");
+/* harmony import */ var _services_UserFavouriteBook__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../services/UserFavouriteBook */ "./src/main/resources/js/components/services/UserFavouriteBook.js");
+/* harmony import */ var _Pagination_css__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./Pagination.css */ "./src/main/resources/js/components/book/Pagination.css");
 
 
 
@@ -37892,7 +37940,8 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_6___default()(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_6___default()(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_5___default()(this, result); }; }
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_7___default()(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_7___default()(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_6___default()(this, result); }; }
 
 function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
 
@@ -37901,51 +37950,65 @@ function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Re
 
 
 
+
 var List = /*#__PURE__*/function (_Component) {
-  _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_4___default()(List, _Component);
+  _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_5___default()(List, _Component);
 
   var _super = _createSuper(List);
 
   function List() {
+    var _this$state;
+
     var _this;
 
-    _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_2___default()(this, List);
+    _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_3___default()(this, List);
 
     _this = _super.call(this);
-    _this.state = _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_1___default()({
+    _this.state = (_this$state = {
       books: [],
       isAdded: [],
       username: ""
-    }, "isAdded", false);
+    }, _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2___default()(_this$state, "isAdded", false), _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2___default()(_this$state, "pages", []), _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2___default()(_this$state, "actualPage", 0), _this$state);
     return _this;
   }
 
-  _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_3___default()(List, [{
+  _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_4___default()(List, [{
     key: "componentDidMount",
     value: function () {
-      var _componentDidMount = _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_7___default.a.mark(function _callee() {
-        var res, username;
-        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_7___default.a.wrap(function _callee$(_context) {
+      var _componentDidMount = _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_8___default.a.mark(function _callee() {
+        var page, res, username;
+        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_8___default.a.wrap(function _callee$(_context) {
           while (1) {
             switch (_context.prev = _context.next) {
               case 0:
-                _context.next = 2;
-                return _services_Book__WEBPACK_IMPORTED_MODULE_9__["default"].listAllExceptMine();
+                page = this.props.match.params.page;
 
-              case 2:
+                if (page) {
+                  this.setState({
+                    actualPage: parseInt(page)
+                  });
+                } else {
+                  page = (_babel_runtime_helpers_readOnlyError__WEBPACK_IMPORTED_MODULE_0___default()("page"), 0);
+                }
+
+                _context.next = 4;
+                return _services_Book__WEBPACK_IMPORTED_MODULE_10__["default"].listAllExceptMine(page);
+
+              case 4:
                 res = _context.sent;
-                _context.next = 5;
-                return _services_User__WEBPACK_IMPORTED_MODULE_10__["default"].getUsername();
+                _context.next = 7;
+                return _services_User__WEBPACK_IMPORTED_MODULE_11__["default"].getUsername();
 
-              case 5:
+              case 7:
                 username = _context.sent;
                 this.setState({
                   books: res.books,
                   username: username.username,
-                  isAdded: res.isAdded
+                  isAdded: res.isAdded,
+                  pages: res.pages
                 });
 
-              case 7:
+              case 9:
               case "end":
                 return _context.stop();
             }
@@ -37964,8 +38027,8 @@ var List = /*#__PURE__*/function (_Component) {
     value: function render() {
       var _this2 = this;
 
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("div", null, this.state.books.map(function (book, i) {
-        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("div", {
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("div", null, this.state.books.map(function (book, i) {
+        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("div", {
           style: {
             backgroundImage: "url(https://i.pinimg.com/originals/8d/23/06/8d2306b98839234e49ce96a8b76e20ae.jpg)",
             backgroundSize: "auto auto",
@@ -37975,27 +38038,28 @@ var List = /*#__PURE__*/function (_Component) {
             marginBlock: "30px",
             margin: "0px 20px 20px 0px",
             width: '333px',
+            height: "700px",
             display: 'inline-flex'
           }
-        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("center", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("h5", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("strong", null, book.title)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("a", {
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("center", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("h5", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("strong", null, book.title)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("a", {
           href: "/books/" + book.id
-        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("img", {
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("img", {
           src: book.image,
           style: {
             padding: '10px',
             margin: "0px 0px 0px 0px",
             width: '175px'
           }
-        }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", {
+        }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("br", {
           clear: "left"
-        }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("strong", null, "Autor: "), book.author), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("strong", null, "Editorial: "), book.publisher), book.action == "VENTA" ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", null, book.action, " por ", book.price, " \u20AC") : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", null, book.action)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("hr", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("a", {
+        }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("strong", null, "Autor: "), book.author), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("strong", null, "Editorial: "), book.publisher), book.action == "VENTA" ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("p", null, book.action, " por ", book.price, " \u20AC") : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("p", null, book.action)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("hr", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("a", {
           href: "/books/" + book.id,
           "class": "btn btn-primary",
           style: {
             margin: "10px",
             marginTop: "0px"
           }
-        }, "M\xE1s detalles"), _this2.state.username != null ? _this2.state.isAdded[i] == false ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("a", {
+        }, "M\xE1s detalles"), _this2.state.username != null ? _this2.state.isAdded[i] == false ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("a", {
           onClick: function onClick() {
             return _this2.addFavouriteBook(book.id);
           },
@@ -38003,27 +38067,41 @@ var List = /*#__PURE__*/function (_Component) {
             color: "white"
           },
           "class": "btn btn-primary"
-        }, "A\xF1adir a favoritos") : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("button", {
+        }, "A\xF1adir a favoritos") : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("button", {
           style: {
             background: "#099C01",
             color: "white"
           },
           "class": "btn btn-primary",
           disabled: true
-        }, "Favorito") : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", null)));
-      }), this.state.books.length == 0 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("b", null, "Actualmente no existen libros para mostrar.")) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", null));
+        }, "Favorito") : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("p", null)));
+      }), this.state.books.length == 0 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("b", null, "Actualmente no existen libros para mostrar.")) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("center", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("br", null), this.state.actualPage != 0 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("a", {
+        "class": "btn btn-primary",
+        href: "/home/" + parseInt(this.state.actualPage - 1)
+      }, "Anterior") : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("p", null), this.state.pages.map(function (page) {
+        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("a", {
+          style: {
+            color: _this2.state.actualPage == page ? "red" : "black"
+          },
+          "class": "pag",
+          href: "/home/" + page
+        }, page);
+      }), this.state.actualPage != this.state.pages.length - 1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("a", {
+        "class": "btn btn-primary",
+        href: "/home/" + parseInt(this.state.actualPage + 1)
+      }, "Siguiente") : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("p", null)));
     }
   }, {
     key: "addFavouriteBook",
     value: function () {
-      var _addFavouriteBook = _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_7___default.a.mark(function _callee2(id) {
+      var _addFavouriteBook = _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_8___default.a.mark(function _callee2(id) {
         var res;
-        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_7___default.a.wrap(function _callee2$(_context2) {
+        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_8___default.a.wrap(function _callee2$(_context2) {
           while (1) {
             switch (_context2.prev = _context2.next) {
               case 0:
                 _context2.next = 2;
-                return _services_UserFavouriteBook__WEBPACK_IMPORTED_MODULE_11__["default"].addFavouriteBook(id);
+                return _services_UserFavouriteBook__WEBPACK_IMPORTED_MODULE_12__["default"].addFavouriteBook(id);
 
               case 2:
                 res = _context2.sent;
@@ -38046,7 +38124,7 @@ var List = /*#__PURE__*/function (_Component) {
   }]);
 
   return List;
-}(react__WEBPACK_IMPORTED_MODULE_8__["Component"]);
+}(react__WEBPACK_IMPORTED_MODULE_9__["Component"]);
 
 
 
@@ -38109,7 +38187,9 @@ var List = /*#__PURE__*/function (_Component) {
 
     _this = _super.call(this);
     _this.state = {
-      books: []
+      books: [],
+      pages: [],
+      actualPage: 0
     };
     return _this;
   }
@@ -38118,21 +38198,24 @@ var List = /*#__PURE__*/function (_Component) {
     key: "componentDidMount",
     value: function () {
       var _componentDidMount = _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_7___default.a.mark(function _callee() {
-        var res;
+        var page, res;
         return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_7___default.a.wrap(function _callee$(_context) {
           while (1) {
             switch (_context.prev = _context.next) {
               case 0:
-                _context.next = 2;
-                return _services_Book__WEBPACK_IMPORTED_MODULE_9__["default"].listMyBooks();
+                page = this.props.match.params.page;
+                _context.next = 3;
+                return _services_Book__WEBPACK_IMPORTED_MODULE_9__["default"].listMyBooks(page);
 
-              case 2:
+              case 3:
                 res = _context.sent;
                 this.setState({
-                  books: res.books
+                  books: res.books,
+                  pages: res.pages,
+                  actualPage: parseInt(page)
                 });
 
-              case 4:
+              case 5:
               case "end":
                 return _context.stop();
             }
@@ -38149,6 +38232,8 @@ var List = /*#__PURE__*/function (_Component) {
   }, {
     key: "render",
     value: function render() {
+      var _this2 = this;
+
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("div", null, this.state.books.map(function (book) {
         return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("div", {
           style: {
@@ -38160,9 +38245,10 @@ var List = /*#__PURE__*/function (_Component) {
             marginBlock: "30px",
             margin: "0px 20px 20px 0px",
             width: '333px',
+            height: "700px",
             display: 'inline-flex'
           }
-        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("center", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("h4", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("strong", null, book.title)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("a", {
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("center", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("h5", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("strong", null, book.title)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("a", {
           href: "/books/" + book.id
         }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("img", _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0___default()({
           style: {
@@ -38183,7 +38269,21 @@ var List = /*#__PURE__*/function (_Component) {
       }), this.state.books.length == 0 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("strong", null, "\xBFNo has subido libros todav\xEDa? ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("a", {
         href: "/books/new",
         "class": "btn btn-primary"
-      }, "A\xF1ade uno"))) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", null));
+      }, "A\xF1ade uno"))) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("center", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", null), this.state.actualPage != 0 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("a", {
+        "class": "btn btn-primary",
+        href: "/books/me/" + parseInt(this.state.actualPage - 1)
+      }, "Anterior") : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", null), this.state.pages.map(function (page) {
+        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("a", {
+          style: {
+            color: _this2.state.actualPage == page ? "red" : "black"
+          },
+          "class": "pag",
+          href: "/books/me/" + page
+        }, page);
+      }), this.state.actualPage != this.state.pages.length - 1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("a", {
+        "class": "btn btn-primary",
+        href: "/books/me/" + parseInt(this.state.actualPage + 1)
+      }, "Siguiente") : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", null)));
     }
   }]);
 
@@ -38191,6 +38291,28 @@ var List = /*#__PURE__*/function (_Component) {
 }(react__WEBPACK_IMPORTED_MODULE_8__["Component"]);
 
 
+
+/***/ }),
+
+/***/ "./src/main/resources/js/components/book/Pagination.css":
+/*!**************************************************************!*\
+  !*** ./src/main/resources/js/components/book/Pagination.css ***!
+  \**************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../../../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_css_loader_dist_cjs_js_Pagination_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !../../../../../../node_modules/css-loader/dist/cjs.js!./Pagination.css */ "./node_modules/css-loader/dist/cjs.js!./src/main/resources/js/components/book/Pagination.css");
+
+
+var options = {};
+options.insert = "head";
+options.singleton = false;
+var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_Pagination_css__WEBPACK_IMPORTED_MODULE_1__["default"], options);
+/* harmony default export */ __webpack_exports__["default"] = (_node_modules_css_loader_dist_cjs_js_Pagination_css__WEBPACK_IMPORTED_MODULE_1__["default"].locals || {});
 
 /***/ }),
 
@@ -39165,56 +39287,70 @@ book.getBook = /*#__PURE__*/function () {
   };
 }();
 
-book.listAllExceptMine = /*#__PURE__*/_babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.mark(function _callee4() {
-  var urlGet, res;
-  return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.wrap(function _callee4$(_context4) {
-    while (1) {
-      switch (_context4.prev = _context4.next) {
-        case 0:
-          urlGet = baseUrl + "/list/all-me";
-          _context4.next = 3;
-          return axios__WEBPACK_IMPORTED_MODULE_2___default.a.get(urlGet).then(function (response) {
-            return response.data;
-          })["catch"](function (error) {
-            return error.response;
-          });
+book.listAllExceptMine = /*#__PURE__*/function () {
+  var _ref4 = _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.mark(function _callee4(page) {
+    var urlGet, res;
+    return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.wrap(function _callee4$(_context4) {
+      while (1) {
+        switch (_context4.prev = _context4.next) {
+          case 0:
+            urlGet = baseUrl + "/list/all-me?page=" + page;
+            _context4.next = 3;
+            return axios__WEBPACK_IMPORTED_MODULE_2___default.a.get(urlGet).then(function (response) {
+              return response.data;
+            })["catch"](function (error) {
+              return error.response;
+            });
 
-        case 3:
-          res = _context4.sent;
-          return _context4.abrupt("return", res);
+          case 3:
+            res = _context4.sent;
+            return _context4.abrupt("return", res);
 
-        case 5:
-        case "end":
-          return _context4.stop();
+          case 5:
+          case "end":
+            return _context4.stop();
+        }
       }
-    }
-  }, _callee4);
-}));
-book.listMyBooks = /*#__PURE__*/_babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.mark(function _callee5() {
-  var urlGet, res;
-  return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.wrap(function _callee5$(_context5) {
-    while (1) {
-      switch (_context5.prev = _context5.next) {
-        case 0:
-          urlGet = baseUrl + "/list/me";
-          _context5.next = 3;
-          return axios__WEBPACK_IMPORTED_MODULE_2___default.a.get(urlGet).then(function (response) {
-            return response.data;
-          })["catch"](function (error) {
-            return error.response;
-          });
+    }, _callee4);
+  }));
 
-        case 3:
-          res = _context5.sent;
-          return _context5.abrupt("return", res);
+  return function (_x4) {
+    return _ref4.apply(this, arguments);
+  };
+}();
 
-        case 5:
-        case "end":
-          return _context5.stop();
+book.listMyBooks = /*#__PURE__*/function () {
+  var _ref5 = _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.mark(function _callee5(page) {
+    var urlGet, res;
+    return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.wrap(function _callee5$(_context5) {
+      while (1) {
+        switch (_context5.prev = _context5.next) {
+          case 0:
+            urlGet = baseUrl + "/list/me?page=" + page;
+            _context5.next = 3;
+            return axios__WEBPACK_IMPORTED_MODULE_2___default.a.get(urlGet).then(function (response) {
+              return response.data;
+            })["catch"](function (error) {
+              return error.response;
+            });
+
+          case 3:
+            res = _context5.sent;
+            return _context5.abrupt("return", res);
+
+          case 5:
+          case "end":
+            return _context5.stop();
+        }
       }
-    }
-  }, _callee5);
-}));
+    }, _callee5);
+  }));
+
+  return function (_x5) {
+    return _ref5.apply(this, arguments);
+  };
+}();
+
 book.listMyBooksForChange = /*#__PURE__*/_babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.mark(function _callee6() {
   var urlGet, res;
   return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.wrap(function _callee6$(_context6) {
@@ -39293,7 +39429,7 @@ book["delete"] = /*#__PURE__*/function () {
     }, _callee8);
   }));
 
-  return function (_x4) {
+  return function (_x6) {
     return _ref8.apply(this, arguments);
   };
 }();

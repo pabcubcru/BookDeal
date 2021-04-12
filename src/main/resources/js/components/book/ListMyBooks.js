@@ -6,13 +6,17 @@ export default class List extends Component {
   constructor(){
     super();
     this.state = {
-      books: []
+      books: [],
+      pages:[],
+      actualPage:0
     }
   }
     
   async componentDidMount() {
-    const res = await bookService.listMyBooks()
-    this.setState({books:res.books})
+    const page = this.props.match.params.page;
+    const res = await bookService.listMyBooks(page)
+
+    this.setState({books:res.books, pages:res.pages, actualPage:parseInt(page)})
   }
 
     render() {
@@ -22,9 +26,9 @@ export default class List extends Component {
                     return(
                       <div style={{backgroundImage: "url(https://i.pinimg.com/originals/8d/23/06/8d2306b98839234e49ce96a8b76e20ae.jpg)", 
                       backgroundSize: "auto auto" ,  fontWeight: "bold", padding: "60px", paddingTop:"20px", marginBlock:"30px", margin:"0px 20px 20px 0px", width: '333px',
-                      display: 'inline-flex'}}>
+                      height:"700px", display: 'inline-flex'}}>
                       <center><div>
-                      <h4><strong>{book.title}</strong></h4>
+                      <h5><strong>{book.title}</strong></h5>
                       <a href={"/books/"+book.id}><img style={{height:"100px", width:"100px"}} src={book.image} 
                       style={{padding: '10px', margin:"0px 0px 0px 0px", width: '175px'}}></img></a></div>
                       <div>
@@ -43,7 +47,15 @@ export default class List extends Component {
                 {this.state.books.length == 0 ?
                 <p><strong>¿No has subido libros todavía? <a href="/books/new" class="btn btn-primary">Añade uno</a></strong></p>
                 :
-                <p></p>}
+                <center><br></br>{this.state.actualPage != 0 ? <a class="btn btn-primary" href={"/books/me/"+parseInt(this.state.actualPage-1)}>Anterior</a> : <p></p>}
+                  {this.state.pages.map((page) => {
+                    return(
+                      <a style={{color:this.state.actualPage == page ? "red" : "black"}} class="pag" href={"/books/me/"+page}>{page}</a>
+                    )
+                  })}
+                  {this.state.actualPage != this.state.pages.length-1 ? <a class="btn btn-primary" href={"/books/me/"+parseInt(this.state.actualPage+1)}>Siguiente</a> : <p></p>}
+                  </center>
+                }
             </div>
           );
     }

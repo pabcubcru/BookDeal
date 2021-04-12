@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import bookService from "../services/Book";
 import userService from "../services/User";
 import userFavouriteBook from "../services/UserFavouriteBook";
+import "./Pagination.css";
 
 export default class List extends Component {
 
@@ -11,16 +12,25 @@ export default class List extends Component {
       books: [],
       isAdded: [],
       username: "",
-      isAdded:false
+      isAdded:false,
+      pages:[],
+      actualPage:0
     }
   }
     
   async componentDidMount() {
-    const res = await bookService.listAllExceptMine()
+    const page = this.props.match.params.page;
+    if(page) {
+      this.setState({actualPage:parseInt(page)})
+    } else {
+      page = 0
+    }
+
+    const res = await bookService.listAllExceptMine(page)
     
     const username = await userService.getUsername()
 
-    this.setState({books:res.books, username:username.username, isAdded:res.isAdded})
+    this.setState({books:res.books, username:username.username, isAdded:res.isAdded, pages:res.pages})
   }
 
     render() {
@@ -30,7 +40,7 @@ export default class List extends Component {
                     return(
                     <div style={{backgroundImage: "url(https://i.pinimg.com/originals/8d/23/06/8d2306b98839234e49ce96a8b76e20ae.jpg)", 
                     backgroundSize: "auto auto" ,  fontWeight: "bold", padding: "60px", paddingTop:"20px", marginBlock:"30px", margin:"0px 20px 20px 0px", width: '333px',
-                    display: 'inline-flex'}}>
+                    height:"700px", display: 'inline-flex'}}>
                     <center><div>
                     <h5><strong>{book.title}</strong></h5>
                     <a href={"/books/"+book.id}><img src={book.image} 
@@ -59,7 +69,14 @@ export default class List extends Component {
                 {this.state.books.length == 0 ?
                   <p><b>Actualmente no existen libros para mostrar.</b></p>
                 :
-                  <p></p>
+                  <center><br></br>{this.state.actualPage != 0 ? <a class="btn btn-primary" href={"/home/"+parseInt(this.state.actualPage-1)}>Anterior</a> : <p></p>}
+                  {this.state.pages.map((page) => {
+                    return(
+                      <a style={{color:this.state.actualPage == page ? "red" : "black"}} class="pag" href={"/home/"+page}>{page}</a>
+                    )
+                  })}
+                  {this.state.actualPage != this.state.pages.length-1 ? <a class="btn btn-primary" href={"/home/"+parseInt(this.state.actualPage+1)}>Siguiente</a> : <p></p>}
+                  </center>
                 }
             </div>
           );

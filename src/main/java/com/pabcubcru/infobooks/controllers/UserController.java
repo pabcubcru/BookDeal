@@ -30,7 +30,7 @@ public class UserController {
 	@Autowired
 	private AuthoritiesService authoritiesService;
 
-	@GetMapping(value = {"/", "/profile", "/register", "/login", "/login-error"})
+	@GetMapping(value = {"/", "/home/{page}", "/profile", "/register", "/login", "/login-error"})
 	public ModelAndView main() {
 		ModelAndView model = new ModelAndView();
 		model.setViewName("Main");

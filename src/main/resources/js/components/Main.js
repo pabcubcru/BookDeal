@@ -35,8 +35,9 @@ export default class Main extends Component{
                         <Route path="/login-error" exact component={LoginerrorUser}/>
                         <Route path="/profile" exact component={EditUser}/>
                         <Route path="/books/new" exact component={CreateBook}/>
+                        <Route path="/home/:page" exact component={ListAllBooks}/>
                         <Route path="/" exact component={ListAllBooks}/>
-                        <Route path="/books/me" exact component={ListMyBooks}/>
+                        <Route path="/books/me/:page" exact component={ListMyBooks}/>
                         <Route path="/books/:id/edit" exact component={EditBook}/>
                         <Route path="/books/:id" exact component={GetBook}/>
                         <Route path="/favourites" exact component={ListFavouritesBooks}/>

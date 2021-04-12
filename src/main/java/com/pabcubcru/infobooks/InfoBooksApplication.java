@@ -96,7 +96,12 @@ public class InfoBooksApplication {
 				action = "VENTA";
 				price = Double.parseDouble(String.valueOf(Math.floor(Math.random()*100)));
 			}
-			Book book = new Book(title, originalTitle, isbn, publicationYear, publisher, genre, author, description, urlImage, status, action, price, "carmen12");
+			int numRandomUsername = (int) Math.floor(Math.random()*2);
+			String username = "pablo123";
+			if(numRandomUsername == 1) {
+				username = "juan1234";
+			}
+			Book book = new Book(title, originalTitle, isbn, publicationYear, publisher, genre, author, description, urlImage, status, action, price, username);
 			return book;
 		} else {
 			return null;

@@ -36,11 +36,11 @@ export default class Nav extends Component {
     return (
       <nav style={{marginBottom:"30px"}}>
         <ul class="menu">
-          <li ><a href="/">InfoBooks</a></li>
+          <li ><a href="/home/0">InfoBooks</a></li>
           {this.state.isLogged ? 
             <div><li ><a  href="#">Libros</a>
             <ul>
-                <li ><a  href="/books/me">Mis libros</a></li>
+                <li ><a  href="/books/me/0">Mis libros</a></li>
                 <li ><a  href="/favourites">Favoritos</a></li>
                 <li ><a  href="/books/new">Añadir libro</a></li>
             </ul>

@@ -21,7 +21,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 	
 	public void configure(HttpSecurity http) throws Exception {
 		http.authorizeRequests()
-		.antMatchers("/").permitAll()
+		.antMatchers("/home").permitAll()
 		.antMatchers("/resources/**").permitAll()
 		.antMatchers("/user/**").hasAnyAuthority("user")
 		.antMatchers("/books/list/all-me", "/books/{id}", "/books/get/{id}").permitAll()
@@ -29,13 +29,13 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 		.antMatchers("/favourites/**").authenticated()
 		.antMatchers("/requests/**").authenticated()
 		.antMatchers("/register", "/login", "/login-error").anonymous()
-		.anyRequest().authenticated()
 		.and().csrf().disable()
 		.formLogin().loginPage("/login")
+		.defaultSuccessUrl("/home/0")
 		.failureUrl("/login-error")
 		.and()
 		.logout()
-		.logoutSuccessUrl("/");
+		.logoutSuccessUrl("/home/0");
 
 		http.headers().frameOptions().sameOrigin();
 	}
