@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 
-import Nav from "./Nav"
+import Nav from "./Nav";
+import Footer from "./Footer";
 import RegisterUser from "./user/Register";
 import LoginUser from "./user/Login";
 import LoginerrorUser from "./user/Login-error";
@@ -35,16 +36,18 @@ export default class Main extends Component{
                         <Route path="/login-error" exact component={LoginerrorUser}/>
                         <Route path="/profile" exact component={EditUser}/>
                         <Route path="/books/new" exact component={CreateBook}/>
-                        <Route path="/home/:page" exact component={ListAllBooks}/>
-                        <Route path="/" exact component={ListAllBooks}/>
+                        <Route path="/books/all/:page" exact component={ListAllBooks}/>
+                        <Route path="/" exact component={Home}/>
                         <Route path="/books/me/:page" exact component={ListMyBooks}/>
                         <Route path="/books/:id/edit" exact component={EditBook}/>
                         <Route path="/books/:id" exact component={GetBook}/>
-                        <Route path="/favourites" exact component={ListFavouritesBooks}/>
+                        <Route path="/favourites/:page" exact component={ListFavouritesBooks}/>
                         <Route path="/requests/:id/add" exact component={CreateRequest}/>
                         <Route path="/requests/me" exact component={ListMyRequests}/>
                         <Route path="/requests/received" exact component={ListReceivedRequests}/>
                     </Switch>
+                    <br></br><br></br>
+                    <Footer/>
                 </main>
             </Router>
         )

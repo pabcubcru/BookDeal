@@ -36,12 +36,13 @@ export default class Nav extends Component {
     return (
       <nav style={{marginBottom:"30px"}}>
         <ul class="menu">
-          <li ><a href="/home/0">InfoBooks</a></li>
+          <li ><a href="/">InfoBooks</a></li>
           {this.state.isLogged ? 
             <div><li ><a  href="#">Libros</a>
             <ul>
+                <li ><a  href="/books/all/0">Todos</a></li>
                 <li ><a  href="/books/me/0">Mis libros</a></li>
-                <li ><a  href="/favourites">Favoritos</a></li>
+                <li ><a  href="/favourites/0">Favoritos</a></li>
                 <li ><a  href="/books/new">Añadir libro</a></li>
             </ul>
           </li>
@@ -51,21 +52,18 @@ export default class Nav extends Component {
                 <li ><a  href="/requests/received">Recibidas</a></li>
             </ul>
           </li>
-          </div>
-        :
-            <p></p>
-        }  
-        {this.state.isLogged ? 
           <li style={{float:"right"}}><a href="#" >Perfil</a>
             <ul>
                 <li >{button1}</li>
                 <li >{button2}</li>
             </ul>
           </li>
+          </div>
         :
-          <div><li style={{float:"right"}}>{button2}</li>
+          <div><li style={{float:"left"}}><a  href="/books/all/0">Libros</a></li>
+          <li style={{float:"right"}}>{button2}</li>
           <li style={{float:"right"}}>{button1}</li></div>
-        }
+        }  
           
         </ul>
       </nav>

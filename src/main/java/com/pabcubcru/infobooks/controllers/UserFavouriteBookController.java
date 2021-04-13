@@ -5,16 +5,21 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 
 import com.pabcubcru.infobooks.models.UserFavouriteBook;
 import com.pabcubcru.infobooks.services.BookService;
 import com.pabcubcru.infobooks.services.UserFavouriteBookService;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -28,7 +33,7 @@ public class UserFavouriteBookController {
     @Autowired
     private BookService bookService;
 
-    @GetMapping(value = {""})
+    @GetMapping(value = {"/{page}"})
     public ModelAndView main() {
         ModelAndView model = new ModelAndView();
         model.setViewName("Main");
@@ -36,14 +41,23 @@ public class UserFavouriteBookController {
     }
 
     @GetMapping(value = "/all")
-    public Map<String, Object> findAllByUsername(Principal principal) {
+    public Map<String, Object> findAllByUsername(Principal principal, @RequestParam(name = "page", defaultValue = "0") Integer page) {
         Map<String, Object> res = new HashMap<>();
         List<String> idBooks = new ArrayList<>();
+        PageRequest pageRequest = PageRequest.of(page, 12);
 
-        List<UserFavouriteBook> ufbooks = this.userFavouriteBookService.findAllByUsername(principal.getName());
+        Page<UserFavouriteBook> pageOfBooks = this.userFavouriteBookService.findAllByUsername(principal.getName(), pageRequest);
+        List<UserFavouriteBook> ufbooks = pageOfBooks.getContent();
         ufbooks.stream().forEach(x -> idBooks.add(x.getBookId()));
         
         res.put("books", this.bookService.findByIds(idBooks));
+
+        Integer numberOfPages = pageOfBooks.getTotalPages();
+        res.put("pages", new ArrayList<Integer>());
+        if(numberOfPages > 0) {
+            List<Integer> pages = IntStream.rangeClosed(0, numberOfPages-1).boxed().collect(Collectors.toList());
+            res.put("pages", pages);
+        }
 
         return res;
     }

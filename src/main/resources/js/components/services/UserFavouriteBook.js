@@ -2,8 +2,8 @@ const baseUrl = "http://localhost:8080/favourites"
 import axios from "axios";
 const userFavouriteBook = {}
 
-userFavouriteBook.findAllFavouritesBooks = async() => {
-    const urlGet = baseUrl+"/all"
+userFavouriteBook.findAllFavouritesBooks = async(page) => {
+    const urlGet = baseUrl+"/all?page="+page
     const res = await axios.get(urlGet)
     .then(response => {return response.data})
     .catch(error => {return error.response})

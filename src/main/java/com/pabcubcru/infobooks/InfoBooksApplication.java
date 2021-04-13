@@ -10,6 +10,8 @@ import javax.annotation.PostConstruct;
 import com.pabcubcru.infobooks.models.Book;
 import com.pabcubcru.infobooks.models.GenreEnum;
 import com.pabcubcru.infobooks.repository.BookRepository;
+import com.pabcubcru.infobooks.repository.RequestRepository;
+import com.pabcubcru.infobooks.repository.UserFavouriteBookRepository;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
@@ -28,12 +30,20 @@ public class InfoBooksApplication {
 	@Autowired
 	private BookRepository bookRepository;
 
+	@Autowired
+	private UserFavouriteBookRepository userFavouriteBookRepository;
+
+	@Autowired
+	private RequestRepository requestRepository;
+
 	public static void main(String[] args) {
 		SpringApplication.run(InfoBooksApplication.class, args);
 	}
 
 	@PostConstruct
 	public void buildBookIndex() {
+		requestRepository.deleteAll();
+		userFavouriteBookRepository.deleteAll();
 		bookRepository.deleteAll();
 		elasticSearchOperations.indexOps(Book.class).refresh();
 		List<Book> books = prepareDataset();

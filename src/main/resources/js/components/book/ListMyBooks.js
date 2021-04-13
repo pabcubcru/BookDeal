@@ -20,43 +20,68 @@ export default class List extends Component {
   }
 
     render() {
-        return (
-            <div>
-                {this.state.books.map((book) => {
-                    return(
-                      <div style={{backgroundImage: "url(https://i.pinimg.com/originals/8d/23/06/8d2306b98839234e49ce96a8b76e20ae.jpg)", 
-                      backgroundSize: "auto auto" ,  fontWeight: "bold", padding: "60px", paddingTop:"20px", marginBlock:"30px", margin:"0px 20px 20px 0px", width: '333px',
-                      height:"700px", display: 'inline-flex'}}>
-                      <center><div>
-                      <h5><strong>{book.title}</strong></h5>
-                      <a href={"/books/"+book.id}><img style={{height:"100px", width:"100px"}} src={book.image} 
-                      style={{padding: '10px', margin:"0px 0px 0px 0px", width: '175px'}}></img></a></div>
-                      <div>
-                      <br clear="left"></br>
-                      <p><strong>Autor: </strong>{book.author}</p>
-                      <p><strong>Editorial: </strong>{book.publisher}</p>
-                      {book.action == "VENTA" ?
-                          <p>{book.action} por {book.price} €</p>
-                      :
-                          <p>{book.action}</p>}</div>
-                          <hr></hr>
-                          <a href={"/books/"+book.id} class="btn btn-primary">Más detalles</a>
-                          </center>
-                      </div>)
-                })}
-                {this.state.books.length == 0 ?
-                <p><strong>¿No has subido libros todavía? <a href="/books/new" class="btn btn-primary">Añade uno</a></strong></p>
+      return (
+        <div >
+            {this.state.books.length == 0 ?
+                  <p><b>Actualmente no existen libros para mostrar.</b></p>
                 :
-                <center><br></br>{this.state.actualPage != 0 ? <a class="btn btn-primary" href={"/books/me/"+parseInt(this.state.actualPage-1)}>Anterior</a> : <p></p>}
+                  <center>
+                  {this.state.pages.length > 1 ?
+                  <center>{this.state.actualPage != 0 ? <a class="btn btn-primary" href={"/books/me/"+parseInt(this.state.actualPage-1)}>Anterior</a> : <p></p>}
                   {this.state.pages.map((page) => {
                     return(
-                      <a style={{color:this.state.actualPage == page ? "red" : "black"}} class="pag" href={"/books/me/"+page}>{page}</a>
+                      <a style={{color:this.state.actualPage == page ? "white" : "black", backgroundColor:this.state.actualPage == page ? "#007bff" : ""}} class="pag" href={"/books/me/"+page}>{page}</a>
                     )
                   })}
-                  {this.state.actualPage != this.state.pages.length-1 ? <a class="btn btn-primary" href={"/books/me/"+parseInt(this.state.actualPage+1)}>Siguiente</a> : <p></p>}
-                  </center>
+                  {this.state.actualPage != this.state.pages.length-1 ? <a class="btn btn-primary" href={"/books/me/"+parseInt(this.state.actualPage+1)}>Siguiente</a> : <p></p>}</center>
+                  :
+                    <p></p>
+                  }<br></br><br></br></center>
                 }
-            </div>
-          );
+              {this.state.books.map((book) => {
+                return(
+                  <main class="mainBooks">
+                    <div class="book-card">
+                      <div class="book-card__cover">
+                        <div class="book-card__book">
+                          <div class="book-card__book-front">
+                            <a style={{zIndex:"-10"}}  href={"/books/"+book.id}><img class="book-card__img" src={book.image} /></a>
+                          </div>
+                          <div class="book-card__book-back"></div>
+                          <div class="book-card__book-side"></div>
+                        </div>
+                      </div>
+                      <div>
+                        <div class="book-card__title">
+                          {book.title} 
+                        </div>
+                        <div class="book-card__author">
+                          {book.author}
+                        </div>
+                        <div class="book-card__author">
+                        {book.action == "VENTA" ?
+                          <span>{book.action} por {book.price} €</span>
+                        :
+                          book.action}
+                        </div>
+                                               
+                      </div>
+                    </div>
+                  </main>)
+            })}
+            {this.state.books.length != 0 && this.state.pages.length > 1 ?
+              <center style={{zIndex:"-1"}}>{this.state.actualPage != 0 ? <a class="btn btn-primary" href={"/books/me/"+parseInt(this.state.actualPage-1)}>Anterior</a> : <p></p>}
+              {this.state.pages.map((page) => {
+                return(
+                  <a style={{color:this.state.actualPage == page ? "white" : "black", backgroundColor:this.state.actualPage == page ? "#007bff" : ""}} class="pag" href={"/books/me/"+page}>{page}</a>
+                )
+              })}
+              {this.state.actualPage != this.state.pages.length-1 ? <a class="btn btn-primary" href={"/books/me/"+parseInt(this.state.actualPage+1)}>Siguiente</a> : <p></p>}
+              <br></br><br></br></center>
+            :
+              <p></p>
+            }
+        </div>
+      );
     }
 }

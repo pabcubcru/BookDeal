@@ -1,59 +1,92 @@
 import React, { Component } from 'react';
 import userFavouriteBook from "../services/UserFavouriteBook";
+import "../Listbooks.css";
 
 export default class List extends Component {
 
   constructor(){
     super();
     this.state = {
-      books: []
+      books: [],
+      pages:[],
+      actualPage:0
     }
   }
     
   async componentDidMount() {
-    const res = await userFavouriteBook.findAllFavouritesBooks()
-    this.setState({books:res.books})
+    const page = this.props.match.params.page;
+    if(page) {
+      this.setState({actualPage:parseInt(page)})
+    } else {
+      page = 0
+    }
+    const res = await userFavouriteBook.findAllFavouritesBooks(page)
+    this.setState({books:res.books, pages:res.pages})
   }
 
     render() {
         return (
             <div>
-                {this.state.books.map((book) => {
-                    return(
-                      <div style={{backgroundImage: "url(https://i.pinimg.com/originals/8d/23/06/8d2306b98839234e49ce96a8b76e20ae.jpg)", 
-                      backgroundSize: "auto auto" ,  fontWeight: "bold", padding: "60px", paddingTop:"20px", marginBlock:"30px", margin:"0px 20px 20px 0px", width: '333px',
-                      height: '630px', display: 'inline-flex'}}>
-                      <center><div>
-                      <h5><strong>{book.title}</strong></h5>
-                      <a href={"/books/"+book.id}><img style={{height:"100px", width:"100px"}} src={book.image} 
-                      style={{padding: '10px', margin:"0px 0px 0px 0px", width: '175px'}}></img></a></div>
-                      <div>
-                      <br clear="left"></br>
-                      <p><strong>Autor: </strong>{book.author}</p>
-                      <p><strong>Editorial: </strong>{book.publisher}</p>
-                      {book.action == "VENTA" ?
-                          <p>{book.action} por {book.price} €</p>
-                      :
-                          <p>{book.action}</p>}</div>
-                          <hr></hr>
-                          <a href={"/books/"+book.id} class="btn btn-primary" style={{margin:"10px", marginTop:"0px"}}>Más detalles</a>
-                          <a onClick={() => {this.deleteFavouriteBook(book.id, book.title)}} style={{background:"red", color:"white"}} class="btn btn-primary">Eliminar de favoritos</a>
-                          </center>
-                      </div>)
-                })}
-                {this.state.books.length == 0 ?
+              {this.state.books.length == 0 ?
                 <p><strong>¿No tienes todavía libros favoritos? <a href="/" class="btn btn-primary">Añade uno</a></strong></p>
                 :
-                <p></p>}
+                <center>
+                  {this.state.pages.length > 1 ? 
+                    <center><br></br>{this.state.actualPage != 0 ? <a class="btn btn-primary" href={"/favourites/"+parseInt(this.state.actualPage-1)}>Anterior</a> : <p></p>}
+                    {this.state.pages.map((page) => {
+                    return(
+                      <a style={{color:this.state.actualPage == page ? "white" : "black", backgroundColor:this.state.actualPage == page ? "#007bff" : ""}} class="pag" href={"/favourites/"+page}>{page}</a>
+                    )
+                  })}
+                  {this.state.actualPage != this.state.pages.length-1 ? <a class="btn btn-primary" href={"/favourites/"+parseInt(this.state.actualPage+1)}>Siguiente</a> : <p></p>}</center>
+                  :
+                  <p></p>
+                  }</center>}
+                {this.state.books.map((book) => {
+                    return(
+                      <main>
+                        <div class="book-card">
+                          <div class="book-card__cover">
+                            <div class="book-card__book">
+                              <div class="book-card__book-front">
+                                <a href={"/books/"+book.id}><img class="book-card__img" src={book.image} /></a>
+                              </div>
+                              <div class="book-card__book-back"></div>
+                              <div class="book-card__book-side"></div>
+                            </div>
+                          </div>
+                          <div>
+                            <div class="book-card__title">
+                              {book.title} <a onClick={() => {this.deleteFavouriteBook(book.id, book.title, this.state.actualPage)}} style={{float:"right"}}><img style={{height:"25px", width:"25px"}} src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Coraz%C3%B3n.svg/1121px-Coraz%C3%B3n.svg.png"></img></a>
+                            </div>
+                            <div class="book-card__author">
+                              {book.author}
+                            </div>
+                          </div>
+                        </div>
+                      </main>)
+                })}
+                {this.state.books.length != 0 && this.state.pages.length > 1?
+                <center><br></br>{this.state.actualPage != 0 ? <a class="btn btn-primary" href={"/favourites/"+parseInt(this.state.actualPage-1)}>Anterior</a> : <p></p>}
+                {this.state.pages.map((page) => {
+                  return(
+                    <a style={{color:this.state.actualPage == page ? "white" : "black", backgroundColor:this.state.actualPage == page ? "#007bff" : ""}} class="pag" href={"/favourites/"+page}>{page}</a>
+                  )
+                })}
+                {this.state.actualPage != this.state.pages.length-1 ? <a class="btn btn-primary" href={"/favourites/"+parseInt(this.state.actualPage+1)}>Siguiente</a> : <p></p>}
+                </center>
+                :
+                  <p></p>
+                }
             </div>
           );
     }
 
-    async deleteFavouriteBook(id, title) {
+    async deleteFavouriteBook(id, title, actualPage) {
       const conf = confirm("¿Está seguro de que quiere eliminar "+title+" de favoritos?")
       if(conf) {
-        const res = await userFavouriteBook.deleteFavouriteBook(id)
-        window.location.replace("/favourites")
+        const del = await userFavouriteBook.deleteFavouriteBook(id)
+        window.location.replace("/favourites/"+actualPage)
       }
     }
 }

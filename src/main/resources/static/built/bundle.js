@@ -2340,6 +2340,56 @@ module.exports = {
 
 /***/ }),
 
+/***/ "./node_modules/css-loader/dist/cjs.js!./src/main/resources/js/components/Footer.css":
+/*!*******************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js!./src/main/resources/js/components/Footer.css ***!
+  \*******************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../../../node_modules/css-loader/dist/runtime/cssWithMappingToString.js */ "./node_modules/css-loader/dist/runtime/cssWithMappingToString.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);
+// Imports
+
+
+var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()(_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0___default.a);
+// Module
+___CSS_LOADER_EXPORT___.push([module.i, ".site-footer\r\n{\r\n  position: relative;\r\n  background-color:#26272b;\r\n  padding:20px 0 20px;\r\n  font-size:15px;\r\n  line-height:24px;\r\n  color:#737373;\r\n}\r\n.site-footer hr\r\n{\r\n  border-top-color:#bbb;\r\n  opacity:0.5\r\n}\r\n.site-footer hr.small\r\n{\r\n  margin:20px 0\r\n}\r\n.site-footer h6\r\n{\r\n  color:#fff;\r\n  font-size:16px;\r\n  text-transform:uppercase;\r\n  margin-top:5px;\r\n  letter-spacing:2px\r\n}\r\n.site-footer a\r\n{\r\n  color:#737373;\r\n}\r\n.site-footer a:hover\r\n{\r\n  color:#3366cc;\r\n  text-decoration:none;\r\n}\r\n.footer-links\r\n{\r\n  padding-left:0;\r\n  list-style:none\r\n}\r\n.footer-links li\r\n{\r\n  display:block\r\n}\r\n.footer-links a\r\n{\r\n  color:#737373\r\n}\r\n.footer-links a:active,.footer-links a:focus,.footer-links a:hover\r\n{\r\n  color:#3366cc;\r\n  text-decoration:none;\r\n}\r\n.footer-links.inline li\r\n{\r\n  display:inline-block\r\n}\r\n.site-footer .social-icons\r\n{\r\n  text-align:right\r\n}\r\n.site-footer .social-icons a\r\n{\r\n  width:40px;\r\n  height:40px;\r\n  line-height:40px;\r\n  margin-left:6px;\r\n  margin-right:0;\r\n  border-radius:100%;\r\n  background-color:#33353d\r\n}\r\n.copyright-text\r\n{\r\n  margin:0\r\n}\r\n@media (max-width:991px)\r\n{\r\n  .site-footer [class^=col-]\r\n  {\r\n    margin-bottom:30px\r\n  }\r\n}\r\n@media (max-width:767px)\r\n{\r\n  .site-footer\r\n  {\r\n    padding-bottom:0\r\n  }\r\n  .site-footer .copyright-text,.site-footer .social-icons\r\n  {\r\n    text-align:center\r\n  }\r\n}\r\n.social-icons\r\n{\r\n  padding-left:0;\r\n  margin-bottom:0;\r\n  list-style:none\r\n}\r\n.social-icons li\r\n{\r\n  display:inline-block;\r\n  margin-bottom:4px\r\n}\r\n.social-icons li.title\r\n{\r\n  margin-right:15px;\r\n  text-transform:uppercase;\r\n  color:#96a2b2;\r\n  font-weight:700;\r\n  font-size:13px\r\n}\r\n.social-icons a{\r\n  background-color:#eceeef;\r\n  color:#818a91;\r\n  font-size:16px;\r\n  display:inline-block;\r\n  line-height:44px;\r\n  width:44px;\r\n  height:44px;\r\n  text-align:center;\r\n  margin-right:8px;\r\n  border-radius:100%;\r\n  -webkit-transition:all .2s linear;\r\n  -o-transition:all .2s linear;\r\n  transition:all .2s linear\r\n}\r\n.social-icons a:active,.social-icons a:focus,.social-icons a:hover\r\n{\r\n  color:#fff;\r\n  background-color:#29aafe\r\n}\r\n.social-icons.size-sm a\r\n{\r\n  line-height:34px;\r\n  height:34px;\r\n  width:34px;\r\n  font-size:14px\r\n}\r\n.social-icons a.facebook:hover\r\n{\r\n  background-color:#3b5998\r\n}\r\n.social-icons a.twitter:hover\r\n{\r\n  background-color:#00aced\r\n}\r\n.social-icons a.linkedin:hover\r\n{\r\n  background-color:#007bb6\r\n}\r\n.social-icons a.dribbble:hover\r\n{\r\n  background-color:#ea4c89\r\n}\r\n@media (max-width:767px)\r\n{\r\n  .social-icons li.title\r\n  {\r\n    display:block;\r\n    margin-right:0;\r\n    font-weight:600\r\n  }\r\n}", "",{"version":3,"sources":["webpack://./src/main/resources/js/components/Footer.css"],"names":[],"mappings":"AAAA;;EAEE,kBAAkB;EAClB,wBAAwB;EACxB,mBAAmB;EACnB,cAAc;EACd,gBAAgB;EAChB,aAAa;AACf;AACA;;EAEE,qBAAqB;EACrB;AACF;AACA;;EAEE;AACF;AACA;;EAEE,UAAU;EACV,cAAc;EACd,wBAAwB;EACxB,cAAc;EACd;AACF;AACA;;EAEE,aAAa;AACf;AACA;;EAEE,aAAa;EACb,oBAAoB;AACtB;AACA;;EAEE,cAAc;EACd;AACF;AACA;;EAEE;AACF;AACA;;EAEE;AACF;AACA;;EAEE,aAAa;EACb,oBAAoB;AACtB;AACA;;EAEE;AACF;AACA;;EAEE;AACF;AACA;;EAEE,UAAU;EACV,WAAW;EACX,gBAAgB;EAChB,eAAe;EACf,cAAc;EACd,kBAAkB;EAClB;AACF;AACA;;EAEE;AACF;AACA;;EAEE;;IAEE;EACF;AACF;AACA;;EAEE;;IAEE;EACF;EACA;;IAEE;EACF;AACF;AACA;;EAEE,cAAc;EACd,eAAe;EACf;AACF;AACA;;EAEE,oBAAoB;EACpB;AACF;AACA;;EAEE,iBAAiB;EACjB,wBAAwB;EACxB,aAAa;EACb,eAAe;EACf;AACF;AACA;EACE,wBAAwB;EACxB,aAAa;EACb,cAAc;EACd,oBAAoB;EACpB,gBAAgB;EAChB,UAAU;EACV,WAAW;EACX,iBAAiB;EACjB,gBAAgB;EAChB,kBAAkB;EAClB,iCAAiC;EACjC,4BAA4B;EAC5B;AACF;AACA;;EAEE,UAAU;EACV;AACF;AACA;;EAEE,gBAAgB;EAChB,WAAW;EACX,UAAU;EACV;AACF;AACA;;EAEE;AACF;AACA;;EAEE;AACF;AACA;;EAEE;AACF;AACA;;EAEE;AACF;AACA;;EAEE;;IAEE,aAAa;IACb,cAAc;IACd;EACF;AACF","sourcesContent":[".site-footer\r\n{\r\n  position: relative;\r\n  background-color:#26272b;\r\n  padding:20px 0 20px;\r\n  font-size:15px;\r\n  line-height:24px;\r\n  color:#737373;\r\n}\r\n.site-footer hr\r\n{\r\n  border-top-color:#bbb;\r\n  opacity:0.5\r\n}\r\n.site-footer hr.small\r\n{\r\n  margin:20px 0\r\n}\r\n.site-footer h6\r\n{\r\n  color:#fff;\r\n  font-size:16px;\r\n  text-transform:uppercase;\r\n  margin-top:5px;\r\n  letter-spacing:2px\r\n}\r\n.site-footer a\r\n{\r\n  color:#737373;\r\n}\r\n.site-footer a:hover\r\n{\r\n  color:#3366cc;\r\n  text-decoration:none;\r\n}\r\n.footer-links\r\n{\r\n  padding-left:0;\r\n  list-style:none\r\n}\r\n.footer-links li\r\n{\r\n  display:block\r\n}\r\n.footer-links a\r\n{\r\n  color:#737373\r\n}\r\n.footer-links a:active,.footer-links a:focus,.footer-links a:hover\r\n{\r\n  color:#3366cc;\r\n  text-decoration:none;\r\n}\r\n.footer-links.inline li\r\n{\r\n  display:inline-block\r\n}\r\n.site-footer .social-icons\r\n{\r\n  text-align:right\r\n}\r\n.site-footer .social-icons a\r\n{\r\n  width:40px;\r\n  height:40px;\r\n  line-height:40px;\r\n  margin-left:6px;\r\n  margin-right:0;\r\n  border-radius:100%;\r\n  background-color:#33353d\r\n}\r\n.copyright-text\r\n{\r\n  margin:0\r\n}\r\n@media (max-width:991px)\r\n{\r\n  .site-footer [class^=col-]\r\n  {\r\n    margin-bottom:30px\r\n  }\r\n}\r\n@media (max-width:767px)\r\n{\r\n  .site-footer\r\n  {\r\n    padding-bottom:0\r\n  }\r\n  .site-footer .copyright-text,.site-footer .social-icons\r\n  {\r\n    text-align:center\r\n  }\r\n}\r\n.social-icons\r\n{\r\n  padding-left:0;\r\n  margin-bottom:0;\r\n  list-style:none\r\n}\r\n.social-icons li\r\n{\r\n  display:inline-block;\r\n  margin-bottom:4px\r\n}\r\n.social-icons li.title\r\n{\r\n  margin-right:15px;\r\n  text-transform:uppercase;\r\n  color:#96a2b2;\r\n  font-weight:700;\r\n  font-size:13px\r\n}\r\n.social-icons a{\r\n  background-color:#eceeef;\r\n  color:#818a91;\r\n  font-size:16px;\r\n  display:inline-block;\r\n  line-height:44px;\r\n  width:44px;\r\n  height:44px;\r\n  text-align:center;\r\n  margin-right:8px;\r\n  border-radius:100%;\r\n  -webkit-transition:all .2s linear;\r\n  -o-transition:all .2s linear;\r\n  transition:all .2s linear\r\n}\r\n.social-icons a:active,.social-icons a:focus,.social-icons a:hover\r\n{\r\n  color:#fff;\r\n  background-color:#29aafe\r\n}\r\n.social-icons.size-sm a\r\n{\r\n  line-height:34px;\r\n  height:34px;\r\n  width:34px;\r\n  font-size:14px\r\n}\r\n.social-icons a.facebook:hover\r\n{\r\n  background-color:#3b5998\r\n}\r\n.social-icons a.twitter:hover\r\n{\r\n  background-color:#00aced\r\n}\r\n.social-icons a.linkedin:hover\r\n{\r\n  background-color:#007bb6\r\n}\r\n.social-icons a.dribbble:hover\r\n{\r\n  background-color:#ea4c89\r\n}\r\n@media (max-width:767px)\r\n{\r\n  .social-icons li.title\r\n  {\r\n    display:block;\r\n    margin-right:0;\r\n    font-weight:600\r\n  }\r\n}"],"sourceRoot":""}]);
+// Exports
+/* harmony default export */ __webpack_exports__["default"] = (___CSS_LOADER_EXPORT___);
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/cjs.js!./src/main/resources/js/components/Listbooks.css":
+/*!**********************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js!./src/main/resources/js/components/Listbooks.css ***!
+  \**********************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../../../node_modules/css-loader/dist/runtime/cssWithMappingToString.js */ "./node_modules/css-loader/dist/runtime/cssWithMappingToString.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);
+// Imports
+
+
+var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()(_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0___default.a);
+// Module
+___CSS_LOADER_EXPORT___.push([module.i, "  .mainBooks {\r\n    display: inline-table;\r\n    margin: 20px;\r\n  }\r\n\r\n  .book-card {\r\n    width: 313px;\r\n    padding: 16px;\r\n    border-radius: 5px;\r\n    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);\r\n    background-image: url(https://i.pinimg.com/originals/8d/23/06/8d2306b98839234e49ce96a8b76e20ae.jpg);\r\n    background-size: auto;\r\n  }\r\n  .book-card .book-card__cover {\r\n    position: relative;\r\n    width: 200px;\r\n    height: 300px;\r\n    margin: 0 auto 8px auto;\r\n    perspective: 1000px;\r\n  }\r\n  .book-card .book-card__book {\r\n    height: 100%;\r\n    transform-style: preserve-3d;\r\n    transition: all 250ms ease;\r\n  }\r\n  .book-card .book-card__book-front {\r\n    position: absolute;\r\n    height: 100%;\r\n  }\r\n  .book-card .book-card__book-back {\r\n    position: absolute;\r\n    top: 0;\r\n    height: 100%;\r\n    width: 100%;\r\n    transform: translateZ(-40px);\r\n  }\r\n  .book-card .book-card__book-side {\r\n    position: absolute;\r\n    top: 5px;\r\n    bottom: 2px;\r\n    right: -29px;\r\n    width: 40px;\r\n    background-size: 5px;\r\n    background-color: #e1e1e1;\r\n    background-image: linear-gradient(to right, #ccc 35%, #e1e1e1 35%);\r\n    opacity: 0;\r\n    transform: rotate3d(0, 1, 0, 90deg);\r\n  }\r\n  .book-card .book-card__img {\r\n    width: 100%;\r\n    height: 100%;\r\n    background-color: #e1e1e1;\r\n  }\r\n  .book-card .book-card__title {\r\n    font-size: 1.5em;\r\n    margin-bottom: 8px;\r\n  }\r\n  .book-card .book-card__author {\r\n    color: #424242;\r\n    font-size: 1em;\r\n    font-weight: bold;\r\n  }\r\n  .book-card:hover .book-card__book {\r\n    transform: rotate3d(0, -1, 0, 30deg) translate(-15px, -30px);\r\n  }\r\n  .book-card:hover .book-card__book-back {\r\n    box-shadow: 5px 10px 15px rgba(0, 0, 0, 0.35);\r\n  }\r\n  .book-card:hover .book-card__book-side {\r\n    opacity: 1;\r\n  }\r\n\r\n  ", "",{"version":3,"sources":["webpack://./src/main/resources/js/components/Listbooks.css"],"names":[],"mappings":"EAAE;IACE,qBAAqB;IACrB,YAAY;EACd;;EAEA;IACE,YAAY;IACZ,aAAa;IACb,kBAAkB;IAClB,wEAAwE;IACxE,mGAAmG;IACnG,qBAAqB;EACvB;EACA;IACE,kBAAkB;IAClB,YAAY;IACZ,aAAa;IACb,uBAAuB;IACvB,mBAAmB;EACrB;EACA;IACE,YAAY;IACZ,4BAA4B;IAC5B,0BAA0B;EAC5B;EACA;IACE,kBAAkB;IAClB,YAAY;EACd;EACA;IACE,kBAAkB;IAClB,MAAM;IACN,YAAY;IACZ,WAAW;IACX,4BAA4B;EAC9B;EACA;IACE,kBAAkB;IAClB,QAAQ;IACR,WAAW;IACX,YAAY;IACZ,WAAW;IACX,oBAAoB;IACpB,yBAAyB;IACzB,kEAAkE;IAClE,UAAU;IACV,mCAAmC;EACrC;EACA;IACE,WAAW;IACX,YAAY;IACZ,yBAAyB;EAC3B;EACA;IACE,gBAAgB;IAChB,kBAAkB;EACpB;EACA;IACE,cAAc;IACd,cAAc;IACd,iBAAiB;EACnB;EACA;IACE,4DAA4D;EAC9D;EACA;IACE,6CAA6C;EAC/C;EACA;IACE,UAAU;EACZ","sourcesContent":["  .mainBooks {\r\n    display: inline-table;\r\n    margin: 20px;\r\n  }\r\n\r\n  .book-card {\r\n    width: 313px;\r\n    padding: 16px;\r\n    border-radius: 5px;\r\n    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);\r\n    background-image: url(https://i.pinimg.com/originals/8d/23/06/8d2306b98839234e49ce96a8b76e20ae.jpg);\r\n    background-size: auto;\r\n  }\r\n  .book-card .book-card__cover {\r\n    position: relative;\r\n    width: 200px;\r\n    height: 300px;\r\n    margin: 0 auto 8px auto;\r\n    perspective: 1000px;\r\n  }\r\n  .book-card .book-card__book {\r\n    height: 100%;\r\n    transform-style: preserve-3d;\r\n    transition: all 250ms ease;\r\n  }\r\n  .book-card .book-card__book-front {\r\n    position: absolute;\r\n    height: 100%;\r\n  }\r\n  .book-card .book-card__book-back {\r\n    position: absolute;\r\n    top: 0;\r\n    height: 100%;\r\n    width: 100%;\r\n    transform: translateZ(-40px);\r\n  }\r\n  .book-card .book-card__book-side {\r\n    position: absolute;\r\n    top: 5px;\r\n    bottom: 2px;\r\n    right: -29px;\r\n    width: 40px;\r\n    background-size: 5px;\r\n    background-color: #e1e1e1;\r\n    background-image: linear-gradient(to right, #ccc 35%, #e1e1e1 35%);\r\n    opacity: 0;\r\n    transform: rotate3d(0, 1, 0, 90deg);\r\n  }\r\n  .book-card .book-card__img {\r\n    width: 100%;\r\n    height: 100%;\r\n    background-color: #e1e1e1;\r\n  }\r\n  .book-card .book-card__title {\r\n    font-size: 1.5em;\r\n    margin-bottom: 8px;\r\n  }\r\n  .book-card .book-card__author {\r\n    color: #424242;\r\n    font-size: 1em;\r\n    font-weight: bold;\r\n  }\r\n  .book-card:hover .book-card__book {\r\n    transform: rotate3d(0, -1, 0, 30deg) translate(-15px, -30px);\r\n  }\r\n  .book-card:hover .book-card__book-back {\r\n    box-shadow: 5px 10px 15px rgba(0, 0, 0, 0.35);\r\n  }\r\n  .book-card:hover .book-card__book-side {\r\n    opacity: 1;\r\n  }\r\n\r\n  "],"sourceRoot":""}]);
+// Exports
+/* harmony default export */ __webpack_exports__["default"] = (___CSS_LOADER_EXPORT___);
+
+
+/***/ }),
+
 /***/ "./node_modules/css-loader/dist/cjs.js!./src/main/resources/js/components/Nav.css":
 /*!****************************************************************************************!*\
   !*** ./node_modules/css-loader/dist/cjs.js!./src/main/resources/js/components/Nav.css ***!
@@ -2358,7 +2408,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()(_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0___default.a);
 // Module
-___CSS_LOADER_EXPORT___.push([module.i, ".menu, .menu ul, .menu li, .menu a {\r\n  margin: 0;\r\n  padding: 0;\r\n  border: none;\r\n  outline: none;\r\n}\r\n\r\n.menu {\r\n  height: 70px;\r\n  width: 100%;\r\n  background-color: rgb(0, 0, 0);\r\n  border-radius: 3px;\r\n}\r\n\r\n\r\n.menu li {\r\n  position: relative;\r\n  list-style: none;\r\n  float: left;\r\n  display: block;\r\n  height: 50px;\r\n}\r\n\r\n.menu a {\r\n  display: block;\r\n  padding: 0 30px;\r\n  margin: 20px 0;\r\n  line-height: 28px;\r\n  text-decoration: solid;\r\n  \r\n  font-family:\"Trebuchet MS\", Arial, Helvetica, sans-serif;\r\n  font-weight: bold;\r\n  font-size: 20px;\r\n  color: rgb(255, 255, 255);\r\n  \r\n}\r\n\r\n\r\n\r\n.menu li:hover > a {color: #ff0000}\r\n\r\n.menu ul {\r\n  position: absolute;\r\n  top: 50px;\r\n  left: 20px;\r\n  \r\n  opacity: 0;\r\n  background: rgb(0, 0, 0);\r\n  \r\n  border-radius: 0 0 10px 10px;\r\n  transition: opacity .20s ease .1s;\r\n}\r\n\r\n.menu li:hover > ul {opacity: 1;}\r\n\r\n.menu ul li {\r\n  height: 0;\r\n  overflow: hidden;\r\n  padding: 0;\r\n  \r\n  transition: height .25s ease .1s;\r\n}\r\n\r\n.menu li:hover > ul li {\r\n  height: 50px;\r\n  overflow: visible;\r\n  padding: 0;\r\n}\r\n\r\n.menu ul li a {\r\n  width: 180px;\r\n  padding: 10px 20px;\r\n  margin: 0;\r\n  border: none;\r\n  border-bottom: 1px solid #ffffff;\r\n  font-weight: normal;\r\n}\r\n.menu ul li:last-child a { border: none; }", "",{"version":3,"sources":["webpack://./src/main/resources/js/components/Nav.css"],"names":[],"mappings":"AAAA;EACE,SAAS;EACT,UAAU;EACV,YAAY;EACZ,aAAa;AACf;;AAEA;EACE,YAAY;EACZ,WAAW;EACX,8BAA8B;EAC9B,kBAAkB;AACpB;;;AAGA;EACE,kBAAkB;EAClB,gBAAgB;EAChB,WAAW;EACX,cAAc;EACd,YAAY;AACd;;AAEA;EACE,cAAc;EACd,eAAe;EACf,cAAc;EACd,iBAAiB;EACjB,sBAAsB;;EAEtB,wDAAwD;EACxD,iBAAiB;EACjB,eAAe;EACf,yBAAyB;;AAE3B;;;;AAIA,oBAAoB,cAAc;;AAElC;EACE,kBAAkB;EAClB,SAAS;EACT,UAAU;;EAEV,UAAU;EACV,wBAAwB;;EAExB,4BAA4B;EAC5B,iCAAiC;AACnC;;AAEA,qBAAqB,UAAU,CAAC;;AAEhC;EACE,SAAS;EACT,gBAAgB;EAChB,UAAU;;EAEV,gCAAgC;AAClC;;AAEA;EACE,YAAY;EACZ,iBAAiB;EACjB,UAAU;AACZ;;AAEA;EACE,YAAY;EACZ,kBAAkB;EAClB,SAAS;EACT,YAAY;EACZ,gCAAgC;EAChC,mBAAmB;AACrB;AACA,2BAA2B,YAAY,EAAE","sourcesContent":[".menu, .menu ul, .menu li, .menu a {\r\n  margin: 0;\r\n  padding: 0;\r\n  border: none;\r\n  outline: none;\r\n}\r\n\r\n.menu {\r\n  height: 70px;\r\n  width: 100%;\r\n  background-color: rgb(0, 0, 0);\r\n  border-radius: 3px;\r\n}\r\n\r\n\r\n.menu li {\r\n  position: relative;\r\n  list-style: none;\r\n  float: left;\r\n  display: block;\r\n  height: 50px;\r\n}\r\n\r\n.menu a {\r\n  display: block;\r\n  padding: 0 30px;\r\n  margin: 20px 0;\r\n  line-height: 28px;\r\n  text-decoration: solid;\r\n  \r\n  font-family:\"Trebuchet MS\", Arial, Helvetica, sans-serif;\r\n  font-weight: bold;\r\n  font-size: 20px;\r\n  color: rgb(255, 255, 255);\r\n  \r\n}\r\n\r\n\r\n\r\n.menu li:hover > a {color: #ff0000}\r\n\r\n.menu ul {\r\n  position: absolute;\r\n  top: 50px;\r\n  left: 20px;\r\n  \r\n  opacity: 0;\r\n  background: rgb(0, 0, 0);\r\n  \r\n  border-radius: 0 0 10px 10px;\r\n  transition: opacity .20s ease .1s;\r\n}\r\n\r\n.menu li:hover > ul {opacity: 1;}\r\n\r\n.menu ul li {\r\n  height: 0;\r\n  overflow: hidden;\r\n  padding: 0;\r\n  \r\n  transition: height .25s ease .1s;\r\n}\r\n\r\n.menu li:hover > ul li {\r\n  height: 50px;\r\n  overflow: visible;\r\n  padding: 0;\r\n}\r\n\r\n.menu ul li a {\r\n  width: 180px;\r\n  padding: 10px 20px;\r\n  margin: 0;\r\n  border: none;\r\n  border-bottom: 1px solid #ffffff;\r\n  font-weight: normal;\r\n}\r\n.menu ul li:last-child a { border: none; }"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.i, ".menu, .menu ul, .menu li, .menu a {\r\n  z-index: 5;\r\n  margin: 0;\r\n  padding: 0;\r\n  border: none;\r\n  outline: none;\r\n}\r\n\r\n.menu {\r\n  height: 70px;\r\n  width: 100%;\r\n  background-color: rgb(0, 0, 0);\r\n  border-radius: 3px;\r\n}\r\n\r\n.menu li {\r\n  position: relative;\r\n  list-style: none;\r\n  float: left;\r\n  display: block;\r\n  height: 50px;\r\n}\r\n\r\n.menu a {\r\n  display: block;\r\n  padding: 0 30px;\r\n  margin: 20px 0;\r\n  line-height: 28px;\r\n  text-decoration: solid;\r\n  \r\n  font-family:\"Trebuchet MS\", Arial, Helvetica, sans-serif;\r\n  font-weight: bold;\r\n  font-size: 20px;\r\n  color: rgb(255, 255, 255);\r\n  \r\n}\r\n\r\n\r\n\r\n.menu li:hover > a {color: #ff0000}\r\n\r\n.menu ul {\r\n  position: absolute;\r\n  top: 50px;\r\n  left: 20px;\r\n  \r\n  opacity: 0;\r\n  background: rgb(0, 0, 0);\r\n  \r\n  border-radius: 0 0 10px 10px;\r\n  transition: opacity .20s ease .1s;\r\n}\r\n\r\n.menu li:hover > ul {opacity: 1;}\r\n\r\n.menu ul li {\r\n  height: 0;\r\n  overflow: hidden;\r\n  padding: 0;\r\n  \r\n  transition: height .25s ease .1s;\r\n}\r\n\r\n.menu li:hover > ul li {\r\n  height: 50px;\r\n  overflow: visible;\r\n  padding: 0;\r\n}\r\n\r\n.menu ul li a {\r\n  width: 180px;\r\n  padding: 10px 20px;\r\n  margin: 0;\r\n  border: none;\r\n  border-bottom: 1px solid #ffffff;\r\n  font-weight: normal;\r\n}\r\n.menu ul li:last-child a { border: none; }", "",{"version":3,"sources":["webpack://./src/main/resources/js/components/Nav.css"],"names":[],"mappings":"AAAA;EACE,UAAU;EACV,SAAS;EACT,UAAU;EACV,YAAY;EACZ,aAAa;AACf;;AAEA;EACE,YAAY;EACZ,WAAW;EACX,8BAA8B;EAC9B,kBAAkB;AACpB;;AAEA;EACE,kBAAkB;EAClB,gBAAgB;EAChB,WAAW;EACX,cAAc;EACd,YAAY;AACd;;AAEA;EACE,cAAc;EACd,eAAe;EACf,cAAc;EACd,iBAAiB;EACjB,sBAAsB;;EAEtB,wDAAwD;EACxD,iBAAiB;EACjB,eAAe;EACf,yBAAyB;;AAE3B;;;;AAIA,oBAAoB,cAAc;;AAElC;EACE,kBAAkB;EAClB,SAAS;EACT,UAAU;;EAEV,UAAU;EACV,wBAAwB;;EAExB,4BAA4B;EAC5B,iCAAiC;AACnC;;AAEA,qBAAqB,UAAU,CAAC;;AAEhC;EACE,SAAS;EACT,gBAAgB;EAChB,UAAU;;EAEV,gCAAgC;AAClC;;AAEA;EACE,YAAY;EACZ,iBAAiB;EACjB,UAAU;AACZ;;AAEA;EACE,YAAY;EACZ,kBAAkB;EAClB,SAAS;EACT,YAAY;EACZ,gCAAgC;EAChC,mBAAmB;AACrB;AACA,2BAA2B,YAAY,EAAE","sourcesContent":[".menu, .menu ul, .menu li, .menu a {\r\n  z-index: 5;\r\n  margin: 0;\r\n  padding: 0;\r\n  border: none;\r\n  outline: none;\r\n}\r\n\r\n.menu {\r\n  height: 70px;\r\n  width: 100%;\r\n  background-color: rgb(0, 0, 0);\r\n  border-radius: 3px;\r\n}\r\n\r\n.menu li {\r\n  position: relative;\r\n  list-style: none;\r\n  float: left;\r\n  display: block;\r\n  height: 50px;\r\n}\r\n\r\n.menu a {\r\n  display: block;\r\n  padding: 0 30px;\r\n  margin: 20px 0;\r\n  line-height: 28px;\r\n  text-decoration: solid;\r\n  \r\n  font-family:\"Trebuchet MS\", Arial, Helvetica, sans-serif;\r\n  font-weight: bold;\r\n  font-size: 20px;\r\n  color: rgb(255, 255, 255);\r\n  \r\n}\r\n\r\n\r\n\r\n.menu li:hover > a {color: #ff0000}\r\n\r\n.menu ul {\r\n  position: absolute;\r\n  top: 50px;\r\n  left: 20px;\r\n  \r\n  opacity: 0;\r\n  background: rgb(0, 0, 0);\r\n  \r\n  border-radius: 0 0 10px 10px;\r\n  transition: opacity .20s ease .1s;\r\n}\r\n\r\n.menu li:hover > ul {opacity: 1;}\r\n\r\n.menu ul li {\r\n  height: 0;\r\n  overflow: hidden;\r\n  padding: 0;\r\n  \r\n  transition: height .25s ease .1s;\r\n}\r\n\r\n.menu li:hover > ul li {\r\n  height: 50px;\r\n  overflow: visible;\r\n  padding: 0;\r\n}\r\n\r\n.menu ul li a {\r\n  width: 180px;\r\n  padding: 10px 20px;\r\n  margin: 0;\r\n  border: none;\r\n  border-bottom: 1px solid #ffffff;\r\n  font-weight: normal;\r\n}\r\n.menu ul li:last-child a { border: none; }"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ __webpack_exports__["default"] = (___CSS_LOADER_EXPORT___);
 
@@ -36231,6 +36281,133 @@ __webpack_require__(/*! ./components/Main */ "./src/main/resources/js/components
 
 /***/ }),
 
+/***/ "./src/main/resources/js/components/Footer.css":
+/*!*****************************************************!*\
+  !*** ./src/main/resources/js/components/Footer.css ***!
+  \*****************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_css_loader_dist_cjs_js_Footer_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !../../../../../node_modules/css-loader/dist/cjs.js!./Footer.css */ "./node_modules/css-loader/dist/cjs.js!./src/main/resources/js/components/Footer.css");
+
+
+var options = {};
+options.insert = "head";
+options.singleton = false;
+var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_Footer_css__WEBPACK_IMPORTED_MODULE_1__["default"], options);
+/* harmony default export */ __webpack_exports__["default"] = (_node_modules_css_loader_dist_cjs_js_Footer_css__WEBPACK_IMPORTED_MODULE_1__["default"].locals || {});
+
+/***/ }),
+
+/***/ "./src/main/resources/js/components/Footer.js":
+/*!****************************************************!*\
+  !*** ./src/main/resources/js/components/Footer.js ***!
+  \****************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Home; });
+/* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/classCallCheck */ "./node_modules/@babel/runtime/helpers/classCallCheck.js");
+/* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/createClass */ "./node_modules/@babel/runtime/helpers/createClass.js");
+/* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime/helpers/inherits */ "./node_modules/@babel/runtime/helpers/inherits.js");
+/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @babel/runtime/helpers/possibleConstructorReturn */ "./node_modules/@babel/runtime/helpers/possibleConstructorReturn.js");
+/* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @babel/runtime/helpers/getPrototypeOf */ "./node_modules/@babel/runtime/helpers/getPrototypeOf.js");
+/* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _Footer_css__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./Footer.css */ "./src/main/resources/js/components/Footer.css");
+
+
+
+
+
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4___default()(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4___default()(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_3___default()(this, result); }; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+
+
+
+
+var Home = /*#__PURE__*/function (_Component) {
+  _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_2___default()(Home, _Component);
+
+  var _super = _createSuper(Home);
+
+  function Home() {
+    _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0___default()(this, Home);
+
+    return _super.apply(this, arguments);
+  }
+
+  _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1___default()(Home, [{
+    key: "render",
+    value: function render() {
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("footer", {
+        "class": "site-footer"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        "class": "container"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        "class": "row"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        "class": "col-sm-12 col-md-8"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("h6", null, "About"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", {
+        "class": "text-justify"
+      }, "Web desarrollada para el Trabajo Fin de Grado de Pablo Cubero Cruz en la Universidad de Sevilla."))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("hr", null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        "class": "container"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        "class": "row"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        "class": "col-md-8 col-sm-6 col-xs-12"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", {
+        "class": "copyright-text"
+      }, "Copyright \xA9 2021 All Rights Reserved by", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("a", {
+        href: "/"
+      }, " InfoBooks"), ".")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        "class": "col-md-4 col-sm-6 col-xs-12"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("ul", {
+        "class": "social-icons"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("a", {
+        "class": "facebook",
+        href: "#"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("i", {
+        "class": "fa fa-facebook"
+      }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("a", {
+        "class": "twitter",
+        href: "#"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("i", {
+        "class": "fa fa-twitter"
+      }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("a", {
+        "class": "dribbble",
+        href: "#"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("i", {
+        "class": "fa fa-dribbble"
+      }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("a", {
+        "class": "linkedin",
+        href: "#"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("i", {
+        "class": "fa fa-linkedin"
+      }))))))));
+    }
+  }]);
+
+  return Home;
+}(react__WEBPACK_IMPORTED_MODULE_5__["Component"]);
+
+
+
+/***/ }),
+
 /***/ "./src/main/resources/js/components/Home.js":
 /*!**************************************************!*\
   !*** ./src/main/resources/js/components/Home.js ***!
@@ -36281,8 +36458,11 @@ var Home = /*#__PURE__*/function (_Component) {
     value: function render() {
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("center", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("img", {
         width: "900px",
-        src: "https://i2.wp.com/academy.leewayweb.com/wp-content/uploads/edd/2021/01/proximamente.png?resize=503%2C218&ssl=1"
-      }));
+        src: "https://cdn.shopify.com/s/files/1/0405/7065/0788/files/logo_welcome.svg_72f96623-3169-48db-b78e-27f4ebc1b6db.png?v=1615208283"
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("h1", null, "a InfoBooks,"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("h2", null, "tu web preferida de compra venta o intercambio de libros."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("a", {
+        href: "/books/all/0",
+        "class": "btn btn-primary"
+      }, "Empezar a buscar libros"));
     }
   }]);
 
@@ -36290,6 +36470,28 @@ var Home = /*#__PURE__*/function (_Component) {
 }(react__WEBPACK_IMPORTED_MODULE_5__["Component"]);
 
 
+
+/***/ }),
+
+/***/ "./src/main/resources/js/components/Listbooks.css":
+/*!********************************************************!*\
+  !*** ./src/main/resources/js/components/Listbooks.css ***!
+  \********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_css_loader_dist_cjs_js_Listbooks_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !../../../../../node_modules/css-loader/dist/cjs.js!./Listbooks.css */ "./node_modules/css-loader/dist/cjs.js!./src/main/resources/js/components/Listbooks.css");
+
+
+var options = {};
+options.insert = "head";
+options.singleton = false;
+var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_Listbooks_css__WEBPACK_IMPORTED_MODULE_1__["default"], options);
+/* harmony default export */ __webpack_exports__["default"] = (_node_modules_css_loader_dist_cjs_js_Listbooks_css__WEBPACK_IMPORTED_MODULE_1__["default"].locals || {});
 
 /***/ }),
 
@@ -36318,21 +36520,22 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
 /* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(react_dom__WEBPACK_IMPORTED_MODULE_6__);
 /* harmony import */ var _Nav__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./Nav */ "./src/main/resources/js/components/Nav.js");
-/* harmony import */ var _user_Register__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./user/Register */ "./src/main/resources/js/components/user/Register.js");
-/* harmony import */ var _user_Login__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./user/Login */ "./src/main/resources/js/components/user/Login.js");
-/* harmony import */ var _user_Login_error__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./user/Login-error */ "./src/main/resources/js/components/user/Login-error.js");
-/* harmony import */ var _user_Edit__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./user/Edit */ "./src/main/resources/js/components/user/Edit.js");
-/* harmony import */ var _Home__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./Home */ "./src/main/resources/js/components/Home.js");
-/* harmony import */ var _book_Create__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./book/Create */ "./src/main/resources/js/components/book/Create.js");
-/* harmony import */ var _book_ListAllBooks__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./book/ListAllBooks */ "./src/main/resources/js/components/book/ListAllBooks.js");
-/* harmony import */ var _book_ListMyBooks__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./book/ListMyBooks */ "./src/main/resources/js/components/book/ListMyBooks.js");
-/* harmony import */ var _book_Edit__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./book/Edit */ "./src/main/resources/js/components/book/Edit.js");
-/* harmony import */ var _book_Get__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./book/Get */ "./src/main/resources/js/components/book/Get.js");
-/* harmony import */ var _userFavouriteBook_ListFavouritesBooks__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./userFavouriteBook/ListFavouritesBooks */ "./src/main/resources/js/components/userFavouriteBook/ListFavouritesBooks.js");
-/* harmony import */ var _request_Create__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./request/Create */ "./src/main/resources/js/components/request/Create.js");
-/* harmony import */ var _request_ListMyRequest__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./request/ListMyRequest */ "./src/main/resources/js/components/request/ListMyRequest.js");
-/* harmony import */ var _request_ListReceivedRequest__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./request/ListReceivedRequest */ "./src/main/resources/js/components/request/ListReceivedRequest.js");
-/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+/* harmony import */ var _Footer__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./Footer */ "./src/main/resources/js/components/Footer.js");
+/* harmony import */ var _user_Register__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./user/Register */ "./src/main/resources/js/components/user/Register.js");
+/* harmony import */ var _user_Login__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./user/Login */ "./src/main/resources/js/components/user/Login.js");
+/* harmony import */ var _user_Login_error__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./user/Login-error */ "./src/main/resources/js/components/user/Login-error.js");
+/* harmony import */ var _user_Edit__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./user/Edit */ "./src/main/resources/js/components/user/Edit.js");
+/* harmony import */ var _Home__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./Home */ "./src/main/resources/js/components/Home.js");
+/* harmony import */ var _book_Create__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./book/Create */ "./src/main/resources/js/components/book/Create.js");
+/* harmony import */ var _book_ListAllBooks__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./book/ListAllBooks */ "./src/main/resources/js/components/book/ListAllBooks.js");
+/* harmony import */ var _book_ListMyBooks__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./book/ListMyBooks */ "./src/main/resources/js/components/book/ListMyBooks.js");
+/* harmony import */ var _book_Edit__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./book/Edit */ "./src/main/resources/js/components/book/Edit.js");
+/* harmony import */ var _book_Get__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./book/Get */ "./src/main/resources/js/components/book/Get.js");
+/* harmony import */ var _userFavouriteBook_ListFavouritesBooks__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./userFavouriteBook/ListFavouritesBooks */ "./src/main/resources/js/components/userFavouriteBook/ListFavouritesBooks.js");
+/* harmony import */ var _request_Create__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./request/Create */ "./src/main/resources/js/components/request/Create.js");
+/* harmony import */ var _request_ListMyRequest__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./request/ListMyRequest */ "./src/main/resources/js/components/request/ListMyRequest.js");
+/* harmony import */ var _request_ListReceivedRequest__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./request/ListReceivedRequest */ "./src/main/resources/js/components/request/ListReceivedRequest.js");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
 
 
 
@@ -36342,6 +36545,7 @@ __webpack_require__.r(__webpack_exports__);
 function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4___default()(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4___default()(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_3___default()(this, result); }; }
 
 function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+
 
 
 
@@ -36376,63 +36580,63 @@ var Main = /*#__PURE__*/function (_Component) {
   _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1___default()(Main, [{
     key: "render",
     value: function render() {
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_22__["BrowserRouter"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("main", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(_Nav__WEBPACK_IMPORTED_MODULE_7__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_22__["Switch"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_22__["Route"], {
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_23__["BrowserRouter"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("main", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(_Nav__WEBPACK_IMPORTED_MODULE_7__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_23__["Switch"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_23__["Route"], {
         path: "/register",
         exact: true,
-        component: _user_Register__WEBPACK_IMPORTED_MODULE_8__["default"]
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_22__["Route"], {
+        component: _user_Register__WEBPACK_IMPORTED_MODULE_9__["default"]
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_23__["Route"], {
         path: "/login",
         exact: true,
-        component: _user_Login__WEBPACK_IMPORTED_MODULE_9__["default"]
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_22__["Route"], {
+        component: _user_Login__WEBPACK_IMPORTED_MODULE_10__["default"]
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_23__["Route"], {
         path: "/login-error",
         exact: true,
-        component: _user_Login_error__WEBPACK_IMPORTED_MODULE_10__["default"]
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_22__["Route"], {
+        component: _user_Login_error__WEBPACK_IMPORTED_MODULE_11__["default"]
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_23__["Route"], {
         path: "/profile",
         exact: true,
-        component: _user_Edit__WEBPACK_IMPORTED_MODULE_11__["default"]
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_22__["Route"], {
+        component: _user_Edit__WEBPACK_IMPORTED_MODULE_12__["default"]
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_23__["Route"], {
         path: "/books/new",
         exact: true,
-        component: _book_Create__WEBPACK_IMPORTED_MODULE_13__["default"]
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_22__["Route"], {
-        path: "/home/:page",
+        component: _book_Create__WEBPACK_IMPORTED_MODULE_14__["default"]
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_23__["Route"], {
+        path: "/books/all/:page",
         exact: true,
-        component: _book_ListAllBooks__WEBPACK_IMPORTED_MODULE_14__["default"]
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_22__["Route"], {
+        component: _book_ListAllBooks__WEBPACK_IMPORTED_MODULE_15__["default"]
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_23__["Route"], {
         path: "/",
         exact: true,
-        component: _book_ListAllBooks__WEBPACK_IMPORTED_MODULE_14__["default"]
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_22__["Route"], {
+        component: _Home__WEBPACK_IMPORTED_MODULE_13__["default"]
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_23__["Route"], {
         path: "/books/me/:page",
         exact: true,
-        component: _book_ListMyBooks__WEBPACK_IMPORTED_MODULE_15__["default"]
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_22__["Route"], {
+        component: _book_ListMyBooks__WEBPACK_IMPORTED_MODULE_16__["default"]
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_23__["Route"], {
         path: "/books/:id/edit",
         exact: true,
-        component: _book_Edit__WEBPACK_IMPORTED_MODULE_16__["default"]
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_22__["Route"], {
+        component: _book_Edit__WEBPACK_IMPORTED_MODULE_17__["default"]
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_23__["Route"], {
         path: "/books/:id",
         exact: true,
-        component: _book_Get__WEBPACK_IMPORTED_MODULE_17__["default"]
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_22__["Route"], {
-        path: "/favourites",
+        component: _book_Get__WEBPACK_IMPORTED_MODULE_18__["default"]
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_23__["Route"], {
+        path: "/favourites/:page",
         exact: true,
-        component: _userFavouriteBook_ListFavouritesBooks__WEBPACK_IMPORTED_MODULE_18__["default"]
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_22__["Route"], {
+        component: _userFavouriteBook_ListFavouritesBooks__WEBPACK_IMPORTED_MODULE_19__["default"]
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_23__["Route"], {
         path: "/requests/:id/add",
         exact: true,
-        component: _request_Create__WEBPACK_IMPORTED_MODULE_19__["default"]
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_22__["Route"], {
+        component: _request_Create__WEBPACK_IMPORTED_MODULE_20__["default"]
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_23__["Route"], {
         path: "/requests/me",
         exact: true,
-        component: _request_ListMyRequest__WEBPACK_IMPORTED_MODULE_20__["default"]
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_22__["Route"], {
+        component: _request_ListMyRequest__WEBPACK_IMPORTED_MODULE_21__["default"]
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_23__["Route"], {
         path: "/requests/received",
         exact: true,
-        component: _request_ListReceivedRequest__WEBPACK_IMPORTED_MODULE_21__["default"]
-      }))));
+        component: _request_ListReceivedRequest__WEBPACK_IMPORTED_MODULE_22__["default"]
+      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(_Footer__WEBPACK_IMPORTED_MODULE_8__["default"], null)));
     }
   }]);
 
@@ -36596,13 +36800,15 @@ var Nav = /*#__PURE__*/function (_Component) {
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("ul", {
         "class": "menu"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
-        href: "/home/0"
+        href: "/"
       }, "InfoBooks")), this.state.isLogged ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
         href: "#"
       }, "Libros"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("ul", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
+        href: "/books/all/0"
+      }, "Todos")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
         href: "/books/me/0"
       }, "Mis libros")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
-        href: "/favourites"
+        href: "/favourites/0"
       }, "Favoritos")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
         href: "/books/new"
       }, "A\xF1adir libro")))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
@@ -36611,13 +36817,19 @@ var Nav = /*#__PURE__*/function (_Component) {
         href: "/requests/me"
       }, "Enviadas")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
         href: "/requests/received"
-      }, "Recibidas"))))) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null), this.state.isLogged ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("li", {
+      }, "Recibidas")))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("li", {
         style: {
           "float": "right"
         }
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
         href: "#"
-      }, "Perfil"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("ul", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("li", null, button1), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("li", null, button2))) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("li", {
+      }, "Perfil"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("ul", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("li", null, button1), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("li", null, button2)))) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("li", {
+        style: {
+          "float": "left"
+        }
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
+        href: "/books/all/0"
+      }, "Libros")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("li", {
         style: {
           "float": "right"
         }
@@ -37787,15 +37999,16 @@ var Get = /*#__PURE__*/function (_Component) {
           margin: "10px"
         },
         "class": "btn btn-primary"
-      }, "A\xF1adir a favoritos")) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("center", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("h6", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("strong", null, "Publicado por:"), " ", this.state.book.username), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("hr", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("button", {
-        style: {
-          background: "#099C01",
-          color: "white",
-          margin: "10px"
+      }, "A\xF1adir a favoritos")) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("center", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("h6", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("strong", null, "Publicado por:"), " ", this.state.book.username), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("hr", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
+        onClick: function onClick() {
+          _this2.deleteFavouriteBook(_this2.state.book.id, _this2.state.book.title);
         },
-        "class": "btn btn-primary",
-        disabled: true
-      }, "Favorito")) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null), this.state.username != this.state.book.username && this.state.username != null ? !this.state.alreadyRequest ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("center", null, !this.state.hasRequestAccepted ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
+        style: {
+          background: "red",
+          color: "white"
+        },
+        "class": "btn btn-primary"
+      }, "Eliminar de favoritos")) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null), this.state.username != this.state.book.username && this.state.username != null ? !this.state.alreadyRequest ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("center", null, !this.state.hasRequestAccepted ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
         href: "/requests/" + this.state.book.id + "/add",
         style: {
           color: "white",
@@ -37888,6 +38101,43 @@ var Get = /*#__PURE__*/function (_Component) {
 
       return addFavouriteBook;
     }()
+  }, {
+    key: "deleteFavouriteBook",
+    value: function () {
+      var _deleteFavouriteBook = _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_6___default.a.mark(function _callee4(id, title) {
+        var conf, res;
+        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_6___default.a.wrap(function _callee4$(_context4) {
+          while (1) {
+            switch (_context4.prev = _context4.next) {
+              case 0:
+                conf = confirm("¿Está seguro de que quiere eliminar " + title + " de favoritos?");
+
+                if (!conf) {
+                  _context4.next = 6;
+                  break;
+                }
+
+                _context4.next = 4;
+                return _services_UserFavouriteBook__WEBPACK_IMPORTED_MODULE_10__["default"].deleteFavouriteBook(id);
+
+              case 4:
+                res = _context4.sent;
+                window.location.replace("/books/" + id);
+
+              case 6:
+              case "end":
+                return _context4.stop();
+            }
+          }
+        }, _callee4);
+      }));
+
+      function deleteFavouriteBook(_x3, _x4) {
+        return _deleteFavouriteBook.apply(this, arguments);
+      }
+
+      return deleteFavouriteBook;
+    }()
   }]);
 
   return Get;
@@ -37931,6 +38181,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _services_User__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../services/User */ "./src/main/resources/js/components/services/User.js");
 /* harmony import */ var _services_UserFavouriteBook__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../services/UserFavouriteBook */ "./src/main/resources/js/components/services/UserFavouriteBook.js");
 /* harmony import */ var _Pagination_css__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./Pagination.css */ "./src/main/resources/js/components/book/Pagination.css");
+/* harmony import */ var _Listbooks_css__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ../Listbooks.css */ "./src/main/resources/js/components/Listbooks.css");
 
 
 
@@ -37944,6 +38195,7 @@ __webpack_require__.r(__webpack_exports__);
 function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_7___default()(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_7___default()(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_6___default()(this, result); }; }
 
 function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+
 
 
 
@@ -38027,74 +38279,102 @@ var List = /*#__PURE__*/function (_Component) {
     value: function render() {
       var _this2 = this;
 
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("div", null, this.state.books.map(function (book, i) {
-        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("div", {
-          style: {
-            backgroundImage: "url(https://i.pinimg.com/originals/8d/23/06/8d2306b98839234e49ce96a8b76e20ae.jpg)",
-            backgroundSize: "auto auto",
-            fontWeight: "bold",
-            padding: "60px",
-            paddingTop: "20px",
-            marginBlock: "30px",
-            margin: "0px 20px 20px 0px",
-            width: '333px',
-            height: "700px",
-            display: 'inline-flex'
-          }
-        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("center", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("h5", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("strong", null, book.title)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("a", {
-          href: "/books/" + book.id
-        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("img", {
-          src: book.image,
-          style: {
-            padding: '10px',
-            margin: "0px 0px 0px 0px",
-            width: '175px'
-          }
-        }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("br", {
-          clear: "left"
-        }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("strong", null, "Autor: "), book.author), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("strong", null, "Editorial: "), book.publisher), book.action == "VENTA" ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("p", null, book.action, " por ", book.price, " \u20AC") : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("p", null, book.action)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("hr", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("a", {
-          href: "/books/" + book.id,
-          "class": "btn btn-primary",
-          style: {
-            margin: "10px",
-            marginTop: "0px"
-          }
-        }, "M\xE1s detalles"), _this2.state.username != null ? _this2.state.isAdded[i] == false ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("a", {
-          onClick: function onClick() {
-            return _this2.addFavouriteBook(book.id);
-          },
-          style: {
-            color: "white"
-          },
-          "class": "btn btn-primary"
-        }, "A\xF1adir a favoritos") : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("button", {
-          style: {
-            background: "#099C01",
-            color: "white"
-          },
-          "class": "btn btn-primary",
-          disabled: true
-        }, "Favorito") : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("p", null)));
-      }), this.state.books.length == 0 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("b", null, "Actualmente no existen libros para mostrar.")) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("center", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("br", null), this.state.actualPage != 0 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("a", {
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("div", null, this.state.books.length == 0 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("b", null, "Actualmente no existen libros para mostrar.")) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("center", null, this.state.pages.length > 1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("center", null, this.state.actualPage != 0 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("a", {
         "class": "btn btn-primary",
-        href: "/home/" + parseInt(this.state.actualPage - 1)
+        href: "/books/all/" + parseInt(this.state.actualPage - 1)
       }, "Anterior") : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("p", null), this.state.pages.map(function (page) {
         return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("a", {
           style: {
-            color: _this2.state.actualPage == page ? "red" : "black"
+            color: _this2.state.actualPage == page ? "white" : "black",
+            backgroundColor: _this2.state.actualPage == page ? "#007bff" : ""
           },
           "class": "pag",
-          href: "/home/" + page
+          href: "/books/all/" + page
         }, page);
       }), this.state.actualPage != this.state.pages.length - 1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("a", {
         "class": "btn btn-primary",
-        href: "/home/" + parseInt(this.state.actualPage + 1)
-      }, "Siguiente") : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("p", null)));
+        href: "/books/all/" + parseInt(this.state.actualPage + 1)
+      }, "Siguiente") : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("p", null)) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("p", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("br", null)), this.state.books.map(function (book, i) {
+        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("main", {
+          "class": "mainBooks"
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("div", {
+          "class": "book-card"
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("div", {
+          "class": "book-card__cover"
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("div", {
+          "class": "book-card__book"
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("div", {
+          "class": "book-card__book-front"
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("a", {
+          style: {
+            zIndex: "-10"
+          },
+          href: "/books/" + book.id
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("img", {
+          "class": "book-card__img",
+          src: book.image
+        }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("div", {
+          "class": "book-card__book-back"
+        }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("div", {
+          "class": "book-card__book-side"
+        }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("div", {
+          "class": "book-card__title"
+        }, book.title, _this2.state.username != null ? _this2.state.isAdded[i] == false ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("a", {
+          onClick: function onClick() {
+            return _this2.addFavouriteBook(book.id, _this2.state.actualPage);
+          },
+          style: {
+            "float": "right"
+          }
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("img", {
+          style: {
+            height: "25px",
+            width: "25px"
+          },
+          src: "http://assets.stickpng.com/images/5a02bfca18e87004f1ca4395.png"
+        })) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("a", {
+          onClick: function onClick() {
+            _this2.deleteFavouriteBook(book.id, book.title, _this2.state.actualPage);
+          },
+          style: {
+            "float": "right"
+          }
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("img", {
+          style: {
+            height: "25px",
+            width: "25px"
+          },
+          src: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Coraz%C3%B3n.svg/1121px-Coraz%C3%B3n.svg.png"
+        })) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("p", null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("div", {
+          "class": "book-card__author"
+        }, book.author), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("div", {
+          "class": "book-card__author"
+        }, book.action == "VENTA" ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("span", null, book.action, " por ", book.price, " \u20AC") : book.action))));
+      }), this.state.books.length != 0 && this.state.pages.length > 1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("center", {
+        style: {
+          zIndex: "-1"
+        }
+      }, this.state.actualPage != 0 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("a", {
+        "class": "btn btn-primary",
+        href: "/books/all/" + parseInt(this.state.actualPage - 1)
+      }, "Anterior") : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("p", null), this.state.pages.map(function (page) {
+        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("a", {
+          style: {
+            color: _this2.state.actualPage == page ? "white" : "black",
+            backgroundColor: _this2.state.actualPage == page ? "#007bff" : ""
+          },
+          "class": "pag",
+          href: "/books/all/" + page
+        }, page);
+      }), this.state.actualPage != this.state.pages.length - 1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("a", {
+        "class": "btn btn-primary",
+        href: "/books/all/" + parseInt(this.state.actualPage + 1)
+      }, "Siguiente") : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("p", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("br", null)) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("p", null));
     }
   }, {
     key: "addFavouriteBook",
     value: function () {
-      var _addFavouriteBook = _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_8___default.a.mark(function _callee2(id) {
+      var _addFavouriteBook = _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_8___default.a.mark(function _callee2(id, actualPage) {
         var res;
         return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_8___default.a.wrap(function _callee2$(_context2) {
           while (1) {
@@ -38105,7 +38385,7 @@ var List = /*#__PURE__*/function (_Component) {
 
               case 2:
                 res = _context2.sent;
-                window.location.replace("/");
+                window.location.replace("/books/all/" + actualPage);
 
               case 4:
               case "end":
@@ -38115,11 +38395,48 @@ var List = /*#__PURE__*/function (_Component) {
         }, _callee2);
       }));
 
-      function addFavouriteBook(_x) {
+      function addFavouriteBook(_x, _x2) {
         return _addFavouriteBook.apply(this, arguments);
       }
 
       return addFavouriteBook;
+    }()
+  }, {
+    key: "deleteFavouriteBook",
+    value: function () {
+      var _deleteFavouriteBook = _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_8___default.a.mark(function _callee3(id, title, actualPage) {
+        var conf, res;
+        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_8___default.a.wrap(function _callee3$(_context3) {
+          while (1) {
+            switch (_context3.prev = _context3.next) {
+              case 0:
+                conf = confirm("¿Está seguro de que quiere eliminar " + title + " de favoritos?");
+
+                if (!conf) {
+                  _context3.next = 6;
+                  break;
+                }
+
+                _context3.next = 4;
+                return _services_UserFavouriteBook__WEBPACK_IMPORTED_MODULE_12__["default"].deleteFavouriteBook(id);
+
+              case 4:
+                res = _context3.sent;
+                window.location.replace("/books/all/" + actualPage);
+
+              case 6:
+              case "end":
+                return _context3.stop();
+            }
+          }
+        }, _callee3);
+      }));
+
+      function deleteFavouriteBook(_x3, _x4, _x5) {
+        return _deleteFavouriteBook.apply(this, arguments);
+      }
+
+      return deleteFavouriteBook;
     }()
   }]);
 
@@ -38140,25 +38457,23 @@ var List = /*#__PURE__*/function (_Component) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return List; });
-/* harmony import */ var _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/defineProperty */ "./node_modules/@babel/runtime/helpers/defineProperty.js");
-/* harmony import */ var _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/asyncToGenerator */ "./node_modules/@babel/runtime/helpers/asyncToGenerator.js");
-/* harmony import */ var _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime/helpers/classCallCheck */ "./node_modules/@babel/runtime/helpers/classCallCheck.js");
-/* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @babel/runtime/helpers/createClass */ "./node_modules/@babel/runtime/helpers/createClass.js");
-/* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @babel/runtime/helpers/inherits */ "./node_modules/@babel/runtime/helpers/inherits.js");
-/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @babel/runtime/helpers/possibleConstructorReturn */ "./node_modules/@babel/runtime/helpers/possibleConstructorReturn.js");
-/* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @babel/runtime/helpers/getPrototypeOf */ "./node_modules/@babel/runtime/helpers/getPrototypeOf.js");
-/* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
-/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_7__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_8__);
-/* harmony import */ var _services_Book__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../services/Book */ "./src/main/resources/js/components/services/Book.js");
+/* harmony import */ var _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/asyncToGenerator */ "./node_modules/@babel/runtime/helpers/asyncToGenerator.js");
+/* harmony import */ var _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/classCallCheck */ "./node_modules/@babel/runtime/helpers/classCallCheck.js");
+/* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime/helpers/createClass */ "./node_modules/@babel/runtime/helpers/createClass.js");
+/* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @babel/runtime/helpers/inherits */ "./node_modules/@babel/runtime/helpers/inherits.js");
+/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @babel/runtime/helpers/possibleConstructorReturn */ "./node_modules/@babel/runtime/helpers/possibleConstructorReturn.js");
+/* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @babel/runtime/helpers/getPrototypeOf */ "./node_modules/@babel/runtime/helpers/getPrototypeOf.js");
+/* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var _services_Book__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../services/Book */ "./src/main/resources/js/components/services/Book.js");
 
 
 
@@ -38167,8 +38482,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-
-function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_6___default()(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_6___default()(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_5___default()(this, result); }; }
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_5___default()(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_5___default()(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_4___default()(this, result); }; }
 
 function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
 
@@ -38176,14 +38490,14 @@ function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Re
 
 
 var List = /*#__PURE__*/function (_Component) {
-  _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_4___default()(List, _Component);
+  _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_3___default()(List, _Component);
 
   var _super = _createSuper(List);
 
   function List() {
     var _this;
 
-    _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_2___default()(this, List);
+    _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_1___default()(this, List);
 
     _this = _super.call(this);
     _this.state = {
@@ -38194,18 +38508,18 @@ var List = /*#__PURE__*/function (_Component) {
     return _this;
   }
 
-  _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_3___default()(List, [{
+  _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_2___default()(List, [{
     key: "componentDidMount",
     value: function () {
-      var _componentDidMount = _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_7___default.a.mark(function _callee() {
+      var _componentDidMount = _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_6___default.a.mark(function _callee() {
         var page, res;
-        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_7___default.a.wrap(function _callee$(_context) {
+        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_6___default.a.wrap(function _callee$(_context) {
           while (1) {
             switch (_context.prev = _context.next) {
               case 0:
                 page = this.props.match.params.page;
                 _context.next = 3;
-                return _services_Book__WEBPACK_IMPORTED_MODULE_9__["default"].listMyBooks(page);
+                return _services_Book__WEBPACK_IMPORTED_MODULE_8__["default"].listMyBooks(page);
 
               case 3:
                 res = _context.sent;
@@ -38234,61 +38548,76 @@ var List = /*#__PURE__*/function (_Component) {
     value: function render() {
       var _this2 = this;
 
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("div", null, this.state.books.map(function (book) {
-        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("div", {
-          style: {
-            backgroundImage: "url(https://i.pinimg.com/originals/8d/23/06/8d2306b98839234e49ce96a8b76e20ae.jpg)",
-            backgroundSize: "auto auto",
-            fontWeight: "bold",
-            padding: "60px",
-            paddingTop: "20px",
-            marginBlock: "30px",
-            margin: "0px 20px 20px 0px",
-            width: '333px',
-            height: "700px",
-            display: 'inline-flex'
-          }
-        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("center", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("h5", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("strong", null, book.title)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("a", {
-          href: "/books/" + book.id
-        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("img", _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0___default()({
-          style: {
-            height: "100px",
-            width: "100px"
-          },
-          src: book.image
-        }, "style", {
-          padding: '10px',
-          margin: "0px 0px 0px 0px",
-          width: '175px'
-        })))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", {
-          clear: "left"
-        }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("strong", null, "Autor: "), book.author), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("strong", null, "Editorial: "), book.publisher), book.action == "VENTA" ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", null, book.action, " por ", book.price, " \u20AC") : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", null, book.action)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("hr", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("a", {
-          href: "/books/" + book.id,
-          "class": "btn btn-primary"
-        }, "M\xE1s detalles")));
-      }), this.state.books.length == 0 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("strong", null, "\xBFNo has subido libros todav\xEDa? ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("a", {
-        href: "/books/new",
-        "class": "btn btn-primary"
-      }, "A\xF1ade uno"))) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("center", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", null), this.state.actualPage != 0 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("a", {
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", null, this.state.books.length == 0 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("b", null, "Actualmente no existen libros para mostrar.")) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("center", null, this.state.pages.length > 1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("center", null, this.state.actualPage != 0 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
         "class": "btn btn-primary",
         href: "/books/me/" + parseInt(this.state.actualPage - 1)
-      }, "Anterior") : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", null), this.state.pages.map(function (page) {
-        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("a", {
+      }, "Anterior") : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null), this.state.pages.map(function (page) {
+        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
           style: {
-            color: _this2.state.actualPage == page ? "red" : "black"
+            color: _this2.state.actualPage == page ? "white" : "black",
+            backgroundColor: _this2.state.actualPage == page ? "#007bff" : ""
           },
           "class": "pag",
           href: "/books/me/" + page
         }, page);
-      }), this.state.actualPage != this.state.pages.length - 1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("a", {
+      }), this.state.actualPage != this.state.pages.length - 1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
         "class": "btn btn-primary",
         href: "/books/me/" + parseInt(this.state.actualPage + 1)
-      }, "Siguiente") : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", null)));
+      }, "Siguiente") : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null)) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", null)), this.state.books.map(function (book) {
+        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("main", {
+          "class": "mainBooks"
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+          "class": "book-card"
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+          "class": "book-card__cover"
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+          "class": "book-card__book"
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+          "class": "book-card__book-front"
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
+          style: {
+            zIndex: "-10"
+          },
+          href: "/books/" + book.id
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("img", {
+          "class": "book-card__img",
+          src: book.image
+        }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+          "class": "book-card__book-back"
+        }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+          "class": "book-card__book-side"
+        }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+          "class": "book-card__title"
+        }, book.title), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+          "class": "book-card__author"
+        }, book.author), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+          "class": "book-card__author"
+        }, book.action == "VENTA" ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("span", null, book.action, " por ", book.price, " \u20AC") : book.action))));
+      }), this.state.books.length != 0 && this.state.pages.length > 1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("center", {
+        style: {
+          zIndex: "-1"
+        }
+      }, this.state.actualPage != 0 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
+        "class": "btn btn-primary",
+        href: "/books/me/" + parseInt(this.state.actualPage - 1)
+      }, "Anterior") : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null), this.state.pages.map(function (page) {
+        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
+          style: {
+            color: _this2.state.actualPage == page ? "white" : "black",
+            backgroundColor: _this2.state.actualPage == page ? "#007bff" : ""
+          },
+          "class": "pag",
+          href: "/books/me/" + page
+        }, page);
+      }), this.state.actualPage != this.state.pages.length - 1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
+        "class": "btn btn-primary",
+        href: "/books/me/" + parseInt(this.state.actualPage + 1)
+      }, "Siguiente") : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", null)) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null));
     }
   }]);
 
   return List;
-}(react__WEBPACK_IMPORTED_MODULE_8__["Component"]);
+}(react__WEBPACK_IMPORTED_MODULE_7__["Component"]);
 
 
 
@@ -39923,31 +40252,38 @@ __webpack_require__.r(__webpack_exports__);
 var baseUrl = "http://localhost:8080/favourites";
 
 var userFavouriteBook = {};
-userFavouriteBook.findAllFavouritesBooks = /*#__PURE__*/_babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.mark(function _callee() {
-  var urlGet, res;
-  return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.wrap(function _callee$(_context) {
-    while (1) {
-      switch (_context.prev = _context.next) {
-        case 0:
-          urlGet = baseUrl + "/all";
-          _context.next = 3;
-          return axios__WEBPACK_IMPORTED_MODULE_2___default.a.get(urlGet).then(function (response) {
-            return response.data;
-          })["catch"](function (error) {
-            return error.response;
-          });
 
-        case 3:
-          res = _context.sent;
-          return _context.abrupt("return", res);
+userFavouriteBook.findAllFavouritesBooks = /*#__PURE__*/function () {
+  var _ref = _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.mark(function _callee(page) {
+    var urlGet, res;
+    return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.wrap(function _callee$(_context) {
+      while (1) {
+        switch (_context.prev = _context.next) {
+          case 0:
+            urlGet = baseUrl + "/all?page=" + page;
+            _context.next = 3;
+            return axios__WEBPACK_IMPORTED_MODULE_2___default.a.get(urlGet).then(function (response) {
+              return response.data;
+            })["catch"](function (error) {
+              return error.response;
+            });
 
-        case 5:
-        case "end":
-          return _context.stop();
+          case 3:
+            res = _context.sent;
+            return _context.abrupt("return", res);
+
+          case 5:
+          case "end":
+            return _context.stop();
+        }
       }
-    }
-  }, _callee);
-}));
+    }, _callee);
+  }));
+
+  return function (_x) {
+    return _ref.apply(this, arguments);
+  };
+}();
 
 userFavouriteBook.addFavouriteBook = /*#__PURE__*/function () {
   var _ref2 = _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.mark(function _callee2(id) {
@@ -39976,7 +40312,7 @@ userFavouriteBook.addFavouriteBook = /*#__PURE__*/function () {
     }, _callee2);
   }));
 
-  return function (_x) {
+  return function (_x2) {
     return _ref2.apply(this, arguments);
   };
 }();
@@ -40008,7 +40344,7 @@ userFavouriteBook.deleteFavouriteBook = /*#__PURE__*/function () {
     }, _callee3);
   }));
 
-  return function (_x2) {
+  return function (_x3) {
     return _ref3.apply(this, arguments);
   };
 }();
@@ -41120,8 +41456,8 @@ var Form = /*#__PURE__*/function (_Component) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return List; });
-/* harmony import */ var _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/defineProperty */ "./node_modules/@babel/runtime/helpers/defineProperty.js");
-/* harmony import */ var _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _babel_runtime_helpers_readOnlyError__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/readOnlyError */ "./node_modules/@babel/runtime/helpers/readOnlyError.js");
+/* harmony import */ var _babel_runtime_helpers_readOnlyError__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_readOnlyError__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/asyncToGenerator */ "./node_modules/@babel/runtime/helpers/asyncToGenerator.js");
 /* harmony import */ var _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime/helpers/classCallCheck */ "./node_modules/@babel/runtime/helpers/classCallCheck.js");
@@ -41139,6 +41475,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_8__);
 /* harmony import */ var _services_UserFavouriteBook__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../services/UserFavouriteBook */ "./src/main/resources/js/components/services/UserFavouriteBook.js");
+/* harmony import */ var _Listbooks_css__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../Listbooks.css */ "./src/main/resources/js/components/Listbooks.css");
 
 
 
@@ -41155,6 +41492,7 @@ function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Re
 
 
 
+
 var List = /*#__PURE__*/function (_Component) {
   _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_4___default()(List, _Component);
 
@@ -41167,7 +41505,9 @@ var List = /*#__PURE__*/function (_Component) {
 
     _this = _super.call(this);
     _this.state = {
-      books: []
+      books: [],
+      pages: [],
+      actualPage: 0
     };
     return _this;
   }
@@ -41176,21 +41516,32 @@ var List = /*#__PURE__*/function (_Component) {
     key: "componentDidMount",
     value: function () {
       var _componentDidMount = _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_7___default.a.mark(function _callee() {
-        var res;
+        var page, res;
         return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_7___default.a.wrap(function _callee$(_context) {
           while (1) {
             switch (_context.prev = _context.next) {
               case 0:
-                _context.next = 2;
-                return _services_UserFavouriteBook__WEBPACK_IMPORTED_MODULE_9__["default"].findAllFavouritesBooks();
+                page = this.props.match.params.page;
 
-              case 2:
-                res = _context.sent;
-                this.setState({
-                  books: res.books
-                });
+                if (page) {
+                  this.setState({
+                    actualPage: parseInt(page)
+                  });
+                } else {
+                  page = (_babel_runtime_helpers_readOnlyError__WEBPACK_IMPORTED_MODULE_0___default()("page"), 0);
+                }
+
+                _context.next = 4;
+                return _services_UserFavouriteBook__WEBPACK_IMPORTED_MODULE_9__["default"].findAllFavouritesBooks(page);
 
               case 4:
+                res = _context.sent;
+                this.setState({
+                  books: res.books,
+                  pages: res.pages
+                });
+
+              case 6:
               case "end":
                 return _context.stop();
             }
@@ -41209,61 +41560,82 @@ var List = /*#__PURE__*/function (_Component) {
     value: function render() {
       var _this2 = this;
 
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("div", null, this.state.books.map(function (book) {
-        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("div", {
-          style: {
-            backgroundImage: "url(https://i.pinimg.com/originals/8d/23/06/8d2306b98839234e49ce96a8b76e20ae.jpg)",
-            backgroundSize: "auto auto",
-            fontWeight: "bold",
-            padding: "60px",
-            paddingTop: "20px",
-            marginBlock: "30px",
-            margin: "0px 20px 20px 0px",
-            width: '333px',
-            height: '630px',
-            display: 'inline-flex'
-          }
-        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("center", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("h5", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("strong", null, book.title)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("a", {
-          href: "/books/" + book.id
-        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("img", _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0___default()({
-          style: {
-            height: "100px",
-            width: "100px"
-          },
-          src: book.image
-        }, "style", {
-          padding: '10px',
-          margin: "0px 0px 0px 0px",
-          width: '175px'
-        })))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", {
-          clear: "left"
-        }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("strong", null, "Autor: "), book.author), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("strong", null, "Editorial: "), book.publisher), book.action == "VENTA" ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", null, book.action, " por ", book.price, " \u20AC") : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", null, book.action)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("hr", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("a", {
-          href: "/books/" + book.id,
-          "class": "btn btn-primary",
-          style: {
-            margin: "10px",
-            marginTop: "0px"
-          }
-        }, "M\xE1s detalles"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("a", {
-          onClick: function onClick() {
-            _this2.deleteFavouriteBook(book.id, book.title);
-          },
-          style: {
-            background: "red",
-            color: "white"
-          },
-          "class": "btn btn-primary"
-        }, "Eliminar de favoritos")));
-      }), this.state.books.length == 0 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("strong", null, "\xBFNo tienes todav\xEDa libros favoritos? ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("a", {
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("div", null, this.state.books.length == 0 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("strong", null, "\xBFNo tienes todav\xEDa libros favoritos? ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("a", {
         href: "/",
         "class": "btn btn-primary"
-      }, "A\xF1ade uno"))) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", null));
+      }, "A\xF1ade uno"))) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("center", null, this.state.pages.length > 1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("center", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", null), this.state.actualPage != 0 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("a", {
+        "class": "btn btn-primary",
+        href: "/favourites/" + parseInt(this.state.actualPage - 1)
+      }, "Anterior") : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", null), this.state.pages.map(function (page) {
+        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("a", {
+          style: {
+            color: _this2.state.actualPage == page ? "white" : "black",
+            backgroundColor: _this2.state.actualPage == page ? "#007bff" : ""
+          },
+          "class": "pag",
+          href: "/favourites/" + page
+        }, page);
+      }), this.state.actualPage != this.state.pages.length - 1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("a", {
+        "class": "btn btn-primary",
+        href: "/favourites/" + parseInt(this.state.actualPage + 1)
+      }, "Siguiente") : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", null)) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", null)), this.state.books.map(function (book) {
+        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("main", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("div", {
+          "class": "book-card"
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("div", {
+          "class": "book-card__cover"
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("div", {
+          "class": "book-card__book"
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("div", {
+          "class": "book-card__book-front"
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("a", {
+          href: "/books/" + book.id
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("img", {
+          "class": "book-card__img",
+          src: book.image
+        }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("div", {
+          "class": "book-card__book-back"
+        }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("div", {
+          "class": "book-card__book-side"
+        }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("div", {
+          "class": "book-card__title"
+        }, book.title, " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("a", {
+          onClick: function onClick() {
+            _this2.deleteFavouriteBook(book.id, book.title, _this2.state.actualPage);
+          },
+          style: {
+            "float": "right"
+          }
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("img", {
+          style: {
+            height: "25px",
+            width: "25px"
+          },
+          src: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Coraz%C3%B3n.svg/1121px-Coraz%C3%B3n.svg.png"
+        }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("div", {
+          "class": "book-card__author"
+        }, book.author))));
+      }), this.state.books.length != 0 && this.state.pages.length > 1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("center", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", null), this.state.actualPage != 0 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("a", {
+        "class": "btn btn-primary",
+        href: "/favourites/" + parseInt(this.state.actualPage - 1)
+      }, "Anterior") : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", null), this.state.pages.map(function (page) {
+        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("a", {
+          style: {
+            color: _this2.state.actualPage == page ? "white" : "black",
+            backgroundColor: _this2.state.actualPage == page ? "#007bff" : ""
+          },
+          "class": "pag",
+          href: "/favourites/" + page
+        }, page);
+      }), this.state.actualPage != this.state.pages.length - 1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("a", {
+        "class": "btn btn-primary",
+        href: "/favourites/" + parseInt(this.state.actualPage + 1)
+      }, "Siguiente") : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", null)) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", null));
     }
   }, {
     key: "deleteFavouriteBook",
     value: function () {
-      var _deleteFavouriteBook = _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_7___default.a.mark(function _callee2(id, title) {
-        var conf, res;
+      var _deleteFavouriteBook = _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_7___default.a.mark(function _callee2(id, title, actualPage) {
+        var conf, del;
         return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_7___default.a.wrap(function _callee2$(_context2) {
           while (1) {
             switch (_context2.prev = _context2.next) {
@@ -41279,8 +41651,8 @@ var List = /*#__PURE__*/function (_Component) {
                 return _services_UserFavouriteBook__WEBPACK_IMPORTED_MODULE_9__["default"].deleteFavouriteBook(id);
 
               case 4:
-                res = _context2.sent;
-                window.location.replace("/favourites");
+                del = _context2.sent;
+                window.location.replace("/favourites/" + actualPage);
 
               case 6:
               case "end":
@@ -41290,7 +41662,7 @@ var List = /*#__PURE__*/function (_Component) {
         }, _callee2);
       }));
 
-      function deleteFavouriteBook(_x, _x2) {
+      function deleteFavouriteBook(_x, _x2, _x3) {
         return _deleteFavouriteBook.apply(this, arguments);
       }
 

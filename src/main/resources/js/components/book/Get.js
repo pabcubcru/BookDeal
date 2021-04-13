@@ -69,7 +69,7 @@ export default class Get extends Component {
                     <a onClick={() => this.addFavouriteBook(this.state.book.id)} style={{color:"white", margin:"10px"}} class="btn btn-primary">Añadir a favoritos</a></center>
                 :
                     <center><h6><strong>Publicado por:</strong> {this.state.book.username}</h6><br></br><hr></hr>
-                    <button style={{background:"#099C01",color:"white", margin:"10px"}} class="btn btn-primary" disabled>Favorito</button></center>
+                    <a onClick={() => {this.deleteFavouriteBook(this.state.book.id, this.state.book.title)}} style={{background:"red", color:"white"}} class="btn btn-primary">Eliminar de favoritos</a></center>
             :                              
                 <p></p>
             }   
@@ -107,4 +107,12 @@ export default class Get extends Component {
         window.location.replace("/books/"+id)
     
     }
+
+    async deleteFavouriteBook(id, title) {
+        const conf = confirm("¿Está seguro de que quiere eliminar "+title+" de favoritos?")
+        if(conf) {
+          const res = await userFavouriteBook.deleteFavouriteBook(id)
+          window.location.replace("/books/"+id)
+        }
+      }
 }

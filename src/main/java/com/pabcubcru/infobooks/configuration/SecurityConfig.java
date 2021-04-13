@@ -24,18 +24,18 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 		.antMatchers("/home").permitAll()
 		.antMatchers("/resources/**").permitAll()
 		.antMatchers("/user/**").hasAnyAuthority("user")
-		.antMatchers("/books/list/all-me", "/books/{id}", "/books/get/{id}").permitAll()
+		.antMatchers("/books/list/all-me", "/books/{id}", "/books/get/{id}", "/books/all/{page}").permitAll()
 		.antMatchers("/books/**").authenticated()
 		.antMatchers("/favourites/**").authenticated()
 		.antMatchers("/requests/**").authenticated()
 		.antMatchers("/register", "/login", "/login-error").anonymous()
 		.and().csrf().disable()
 		.formLogin().loginPage("/login")
-		.defaultSuccessUrl("/home/0")
+		.defaultSuccessUrl("/books/all/0")
 		.failureUrl("/login-error")
 		.and()
 		.logout()
-		.logoutSuccessUrl("/home/0");
+		.logoutSuccessUrl("/books/all/0");
 
 		http.headers().frameOptions().sameOrigin();
 	}

@@ -46,7 +46,7 @@ public class BookController {
     @Autowired
     private RequestService requestService;
 
-    @GetMapping(value = {"/new", "/me/{page}", "/all"})
+    @GetMapping(value = {"/new", "/me/{page}", "/all/{page}"})
 	public ModelAndView main() {
 		ModelAndView model = new ModelAndView();
 		model.setViewName("Main");
