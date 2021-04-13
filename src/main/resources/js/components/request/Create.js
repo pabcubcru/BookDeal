@@ -99,7 +99,7 @@ export default class Form extends Component {
       this.setState({errorField:dataError});
     } else {
       if (res.success) {
-        window.location.replace("/")
+        window.location.replace("/books/"+this.state.book.id)
       }
     }
   }

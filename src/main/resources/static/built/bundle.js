@@ -2415,6 +2415,32 @@ ___CSS_LOADER_EXPORT___.push([module.i, ".menu, .menu ul, .menu li, .menu a {\r\
 
 /***/ }),
 
+/***/ "./node_modules/css-loader/dist/cjs.js!./src/main/resources/js/components/book/Get.css":
+/*!*********************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js!./src/main/resources/js/components/book/Get.css ***!
+  \*********************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../../../../node_modules/css-loader/dist/runtime/cssWithMappingToString.js */ "./node_modules/css-loader/dist/runtime/cssWithMappingToString.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);
+// Imports
+
+
+var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()(_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0___default.a);
+___CSS_LOADER_EXPORT___.push([module.i, "@import url(https://fonts.googleapis.com/css?family=Cormorant+Garamond:300,400,600|Tulpen+One&display=swap);"]);
+// Module
+___CSS_LOADER_EXPORT___.push([module.i, ":root {\r\n  /* colors */\r\n  --body-bg: #FAFAFA;\r\n  --page-bg: #F5F5F5;\r\n  --dark-text: #2A2935;\r\n  /* spacing */\r\n  /* this is what defines the global scale */\r\n  --baseline: 12px;\r\n  /* fonts */\r\n  --book-title: \"Tulpen One\", sans-serif;\r\n  --title: \"Cormorant Garamond\", serif;\r\n  --body: \"Cormorant Garamond\", serif;\r\n  --base-size: var(--baseline) * 1.2;\r\n}\r\n\r\n* {\r\n  box-sizing: border-box;\r\n}\r\n\r\n.cover {\r\n  width: 100%;\r\n  height: 200%;\r\n  box-shadow: 0 0 100px rgba(0, 0, 0, 0.3);\r\n}\r\n\r\n.book {\r\n  width: 100%;\r\n  height: 100%;\r\n  display: flex;\r\n  perspective: 1200px;\r\n}\r\n.book__page {\r\n  position: relative;\r\n  width: 50%;\r\n  height: 100%;\r\n  display: grid;\r\n  transform: rotateY(0deg);\r\n  transition: transform 0.9s cubic-bezier(0.645, 0.045, 0.355, 1);\r\n  transform-origin: 0% 0%;\r\n  background-image: url(https://i.pinimg.com/originals/8d/23/06/8d2306b98839234e49ce96a8b76e20ae.jpg);\r\n}\r\n.book__page:nth-of-type(1) {\r\n  background-image: url(https://i.pinimg.com/originals/8d/23/06/8d2306b98839234e49ce96a8b76e20ae.jpg);\r\n}\r\n.book__page--1 {\r\n  cursor: pointer;\r\n  overflow: hidden;\r\n}\r\n.book__page--1 img {\r\n  height: 100%;\r\n  width: 100%;\r\n  height: auto;\r\n}\r\n.book__page--4 {\r\n  cursor: pointer;\r\n  overflow: hidden;\r\n}\r\n.book__page--4 img {\r\n  height: 100%;\r\n  width: 100%;\r\n  height: auto;\r\n}\r\n.book__page--2 {\r\n  position: absolute;\r\n  right: 0;\r\n  pointer-events: none;\r\n  transform-style: preserve-3d;\r\n  background-image: url(https://i.pinimg.com/originals/8d/23/06/8d2306b98839234e49ce96a8b76e20ae.jpg);\r\n}\r\n.book__page-front {\r\n  position: absolute;\r\n  width: 100%;\r\n  height: 100%;\r\n  transform: rotateY(0deg) translateZ(1px);\r\n}\r\n.book__page-back {\r\n  position: absolute;\r\n  width: 100%;\r\n  height: 100%;\r\n  padding: 0 calc(var(--baseline) * 1.8);\r\n  transform: rotateY(180deg) translateZ(1px);\r\n}\r\n.book__page-back img {\r\n  width: 100%;\r\n  max-width: 100%;\r\n  height: auto;\r\n}\r\n.book__page .page__content {\r\n  padding: var(--baseline);\r\n  height: 100%;\r\n  position: relative;\r\n  text-align: center;\r\n}\r\n.book__page .page__content-book-title {\r\n  font-family: var(--book-title);\r\n  font-size: calc(var(--base-size) * 3);\r\n  font-weight: bold;\r\n  text-transform: uppercase;\r\n  letter-spacing: 3px;\r\n  color: var(--dark-text);\r\n  margin-top: calc(var(--baseline) * 3);\r\n  margin-bottom: calc(var(--baseline) * 2);\r\n}\r\n.book__page .page__content-author {\r\n  font-family: var(--title);\r\n  font-size: calc(var(--base-size) * 1.2);\r\n  font-weight: 100;\r\n  text-transform: uppercase;\r\n  color: var(--dark-text);\r\n  border-top: 1px solid var(--dark-text);\r\n  border-bottom: 1px solid var(--dark-text);\r\n  display: inline-block;\r\n  padding: calc(var(--baseline) / 2) calc(var(--baseline) / 5);\r\n  margin-bottom: calc(var(--baseline) * 6);\r\n}\r\n.book__page .page__content-credits {\r\n  font-family: var(--title);\r\n  text-transform: uppercase;\r\n  font-size: calc(var(--base-size) * 0.8);\r\n  margin-bottom: calc(var(--baseline) * 1.5);\r\n  letter-spacing: 1px;\r\n  font-weight: bold;\r\n}\r\n.book__page .page__content-credits span {\r\n  display: block;\r\n  font-size: calc(var(--base-size) * 1.2);\r\n  letter-spacing: 0;\r\n}\r\n.book__page .page__content-copyright {\r\n  position: absolute;\r\n  width: calc(100% - (var(--baseline) * 2));\r\n  bottom: calc(var(--baseline) * 2);\r\n  font-family: var(--title);\r\n  font-size: calc(var(--base-size) * 0.8);\r\n  text-transform: uppercase;\r\n  font-weight: bold;\r\n}\r\n.book__page .page__content-title {\r\n  font-family: var(--title);\r\n  font-size: calc(var(--base-size) * 2);\r\n  text-transform: uppercase;\r\n  letter-spacing: 1px;\r\n  margin-top: calc(var(--baseline) * 5);\r\n  margin-bottom: calc(var(--baseline) * 3);\r\n}\r\n.book__page .page__content-table {\r\n  width: 100%;\r\n  margin-top: calc(var(--baseline) * 2);\r\n}\r\n.book__page .page__content-table td {\r\n  font-family: var(--title);\r\n  font-size: calc(var(--base-size) * 1);\r\n  padding-bottom: calc(var(--baseline) * 1.5);\r\n  text-transform: uppercase;\r\n}\r\n.book__page .page__content-blockquote {\r\n  margin-bottom: calc(var(--baseline) * 2);\r\n}\r\n.book__page .page__content-blockquote-text {\r\n  font-family: var(--title);\r\n  font-size: calc(var(--base-size) * 1.2);\r\n  font-style: italic;\r\n  text-align: justify;\r\n  font-weight: bold;\r\n}\r\n.book__page .page__content-blockquote-reference {\r\n  font-family: var(--title);\r\n  font-size: calc(var(--base-size) * 0.7);\r\n  margin-top: calc(var(--baseline) * 0.3);\r\n  float: right;\r\n  text-transform: uppercase;\r\n}\r\n.book__page .page__content-text {\r\n  font-family: var(--title);\r\n  font-size: calc(var(--base-size));\r\n  text-align: justify;\r\n  text-indent: var(--baseline);\r\n}\r\n.book__page .page__number {\r\n  position: absolute;\r\n  bottom: var(--baseline);\r\n  width: calc(100% - (var(--baseline) * 2));\r\n  font-family: var(--title);\r\n  font-size: calc(var(--base-size));\r\n  text-align: center;\r\n}\r\n.book input[type=radio] {\r\n  display: none;\r\n}\r\n.book input[type=radio]:checked + .book__page {\r\n  transition: transform 0.9s cubic-bezier(0.645, 0.045, 0.355, 1);\r\n  transform: rotateY(-180deg);\r\n}", "",{"version":3,"sources":["webpack://./src/main/resources/js/components/book/Get.css"],"names":[],"mappings":"AACA;EACE,WAAW;EACX,kBAAkB;EAClB,kBAAkB;EAClB,oBAAoB;EACpB,YAAY;EACZ,0CAA0C;EAC1C,gBAAgB;EAChB,UAAU;EACV,sCAAsC;EACtC,oCAAoC;EACpC,mCAAmC;EACnC,kCAAkC;AACpC;;AAEA;EACE,sBAAsB;AACxB;;AAEA;EACE,WAAW;EACX,YAAY;EACZ,wCAAwC;AAC1C;;AAEA;EACE,WAAW;EACX,YAAY;EACZ,aAAa;EACb,mBAAmB;AACrB;AACA;EACE,kBAAkB;EAClB,UAAU;EACV,YAAY;EACZ,aAAa;EACb,wBAAwB;EACxB,+DAA+D;EAC/D,uBAAuB;EACvB,mGAAmG;AACrG;AACA;EACE,mGAAmG;AACrG;AACA;EACE,eAAe;EACf,gBAAgB;AAClB;AACA;EACE,YAAY;EACZ,WAAW;EACX,YAAY;AACd;AACA;EACE,eAAe;EACf,gBAAgB;AAClB;AACA;EACE,YAAY;EACZ,WAAW;EACX,YAAY;AACd;AACA;EACE,kBAAkB;EAClB,QAAQ;EACR,oBAAoB;EACpB,4BAA4B;EAC5B,mGAAmG;AACrG;AACA;EACE,kBAAkB;EAClB,WAAW;EACX,YAAY;EACZ,wCAAwC;AAC1C;AACA;EACE,kBAAkB;EAClB,WAAW;EACX,YAAY;EACZ,sCAAsC;EACtC,0CAA0C;AAC5C;AACA;EACE,WAAW;EACX,eAAe;EACf,YAAY;AACd;AACA;EACE,wBAAwB;EACxB,YAAY;EACZ,kBAAkB;EAClB,kBAAkB;AACpB;AACA;EACE,8BAA8B;EAC9B,qCAAqC;EACrC,iBAAiB;EACjB,yBAAyB;EACzB,mBAAmB;EACnB,uBAAuB;EACvB,qCAAqC;EACrC,wCAAwC;AAC1C;AACA;EACE,yBAAyB;EACzB,uCAAuC;EACvC,gBAAgB;EAChB,yBAAyB;EACzB,uBAAuB;EACvB,sCAAsC;EACtC,yCAAyC;EACzC,qBAAqB;EACrB,4DAA4D;EAC5D,wCAAwC;AAC1C;AACA;EACE,yBAAyB;EACzB,yBAAyB;EACzB,uCAAuC;EACvC,0CAA0C;EAC1C,mBAAmB;EACnB,iBAAiB;AACnB;AACA;EACE,cAAc;EACd,uCAAuC;EACvC,iBAAiB;AACnB;AACA;EACE,kBAAkB;EAClB,yCAAyC;EACzC,iCAAiC;EACjC,yBAAyB;EACzB,uCAAuC;EACvC,yBAAyB;EACzB,iBAAiB;AACnB;AACA;EACE,yBAAyB;EACzB,qCAAqC;EACrC,yBAAyB;EACzB,mBAAmB;EACnB,qCAAqC;EACrC,wCAAwC;AAC1C;AACA;EACE,WAAW;EACX,qCAAqC;AACvC;AACA;EACE,yBAAyB;EACzB,qCAAqC;EACrC,2CAA2C;EAC3C,yBAAyB;AAC3B;AACA;EACE,wCAAwC;AAC1C;AACA;EACE,yBAAyB;EACzB,uCAAuC;EACvC,kBAAkB;EAClB,mBAAmB;EACnB,iBAAiB;AACnB;AACA;EACE,yBAAyB;EACzB,uCAAuC;EACvC,uCAAuC;EACvC,YAAY;EACZ,yBAAyB;AAC3B;AACA;EACE,yBAAyB;EACzB,iCAAiC;EACjC,mBAAmB;EACnB,4BAA4B;AAC9B;AACA;EACE,kBAAkB;EAClB,uBAAuB;EACvB,yCAAyC;EACzC,yBAAyB;EACzB,iCAAiC;EACjC,kBAAkB;AACpB;AACA;EACE,aAAa;AACf;AACA;EACE,+DAA+D;EAC/D,2BAA2B;AAC7B","sourcesContent":["@import url(\"https://fonts.googleapis.com/css?family=Cormorant+Garamond:300,400,600|Tulpen+One&display=swap\");\r\n:root {\r\n  /* colors */\r\n  --body-bg: #FAFAFA;\r\n  --page-bg: #F5F5F5;\r\n  --dark-text: #2A2935;\r\n  /* spacing */\r\n  /* this is what defines the global scale */\r\n  --baseline: 12px;\r\n  /* fonts */\r\n  --book-title: \"Tulpen One\", sans-serif;\r\n  --title: \"Cormorant Garamond\", serif;\r\n  --body: \"Cormorant Garamond\", serif;\r\n  --base-size: var(--baseline) * 1.2;\r\n}\r\n\r\n* {\r\n  box-sizing: border-box;\r\n}\r\n\r\n.cover {\r\n  width: 100%;\r\n  height: 200%;\r\n  box-shadow: 0 0 100px rgba(0, 0, 0, 0.3);\r\n}\r\n\r\n.book {\r\n  width: 100%;\r\n  height: 100%;\r\n  display: flex;\r\n  perspective: 1200px;\r\n}\r\n.book__page {\r\n  position: relative;\r\n  width: 50%;\r\n  height: 100%;\r\n  display: grid;\r\n  transform: rotateY(0deg);\r\n  transition: transform 0.9s cubic-bezier(0.645, 0.045, 0.355, 1);\r\n  transform-origin: 0% 0%;\r\n  background-image: url(https://i.pinimg.com/originals/8d/23/06/8d2306b98839234e49ce96a8b76e20ae.jpg);\r\n}\r\n.book__page:nth-of-type(1) {\r\n  background-image: url(https://i.pinimg.com/originals/8d/23/06/8d2306b98839234e49ce96a8b76e20ae.jpg);\r\n}\r\n.book__page--1 {\r\n  cursor: pointer;\r\n  overflow: hidden;\r\n}\r\n.book__page--1 img {\r\n  height: 100%;\r\n  width: 100%;\r\n  height: auto;\r\n}\r\n.book__page--4 {\r\n  cursor: pointer;\r\n  overflow: hidden;\r\n}\r\n.book__page--4 img {\r\n  height: 100%;\r\n  width: 100%;\r\n  height: auto;\r\n}\r\n.book__page--2 {\r\n  position: absolute;\r\n  right: 0;\r\n  pointer-events: none;\r\n  transform-style: preserve-3d;\r\n  background-image: url(https://i.pinimg.com/originals/8d/23/06/8d2306b98839234e49ce96a8b76e20ae.jpg);\r\n}\r\n.book__page-front {\r\n  position: absolute;\r\n  width: 100%;\r\n  height: 100%;\r\n  transform: rotateY(0deg) translateZ(1px);\r\n}\r\n.book__page-back {\r\n  position: absolute;\r\n  width: 100%;\r\n  height: 100%;\r\n  padding: 0 calc(var(--baseline) * 1.8);\r\n  transform: rotateY(180deg) translateZ(1px);\r\n}\r\n.book__page-back img {\r\n  width: 100%;\r\n  max-width: 100%;\r\n  height: auto;\r\n}\r\n.book__page .page__content {\r\n  padding: var(--baseline);\r\n  height: 100%;\r\n  position: relative;\r\n  text-align: center;\r\n}\r\n.book__page .page__content-book-title {\r\n  font-family: var(--book-title);\r\n  font-size: calc(var(--base-size) * 3);\r\n  font-weight: bold;\r\n  text-transform: uppercase;\r\n  letter-spacing: 3px;\r\n  color: var(--dark-text);\r\n  margin-top: calc(var(--baseline) * 3);\r\n  margin-bottom: calc(var(--baseline) * 2);\r\n}\r\n.book__page .page__content-author {\r\n  font-family: var(--title);\r\n  font-size: calc(var(--base-size) * 1.2);\r\n  font-weight: 100;\r\n  text-transform: uppercase;\r\n  color: var(--dark-text);\r\n  border-top: 1px solid var(--dark-text);\r\n  border-bottom: 1px solid var(--dark-text);\r\n  display: inline-block;\r\n  padding: calc(var(--baseline) / 2) calc(var(--baseline) / 5);\r\n  margin-bottom: calc(var(--baseline) * 6);\r\n}\r\n.book__page .page__content-credits {\r\n  font-family: var(--title);\r\n  text-transform: uppercase;\r\n  font-size: calc(var(--base-size) * 0.8);\r\n  margin-bottom: calc(var(--baseline) * 1.5);\r\n  letter-spacing: 1px;\r\n  font-weight: bold;\r\n}\r\n.book__page .page__content-credits span {\r\n  display: block;\r\n  font-size: calc(var(--base-size) * 1.2);\r\n  letter-spacing: 0;\r\n}\r\n.book__page .page__content-copyright {\r\n  position: absolute;\r\n  width: calc(100% - (var(--baseline) * 2));\r\n  bottom: calc(var(--baseline) * 2);\r\n  font-family: var(--title);\r\n  font-size: calc(var(--base-size) * 0.8);\r\n  text-transform: uppercase;\r\n  font-weight: bold;\r\n}\r\n.book__page .page__content-title {\r\n  font-family: var(--title);\r\n  font-size: calc(var(--base-size) * 2);\r\n  text-transform: uppercase;\r\n  letter-spacing: 1px;\r\n  margin-top: calc(var(--baseline) * 5);\r\n  margin-bottom: calc(var(--baseline) * 3);\r\n}\r\n.book__page .page__content-table {\r\n  width: 100%;\r\n  margin-top: calc(var(--baseline) * 2);\r\n}\r\n.book__page .page__content-table td {\r\n  font-family: var(--title);\r\n  font-size: calc(var(--base-size) * 1);\r\n  padding-bottom: calc(var(--baseline) * 1.5);\r\n  text-transform: uppercase;\r\n}\r\n.book__page .page__content-blockquote {\r\n  margin-bottom: calc(var(--baseline) * 2);\r\n}\r\n.book__page .page__content-blockquote-text {\r\n  font-family: var(--title);\r\n  font-size: calc(var(--base-size) * 1.2);\r\n  font-style: italic;\r\n  text-align: justify;\r\n  font-weight: bold;\r\n}\r\n.book__page .page__content-blockquote-reference {\r\n  font-family: var(--title);\r\n  font-size: calc(var(--base-size) * 0.7);\r\n  margin-top: calc(var(--baseline) * 0.3);\r\n  float: right;\r\n  text-transform: uppercase;\r\n}\r\n.book__page .page__content-text {\r\n  font-family: var(--title);\r\n  font-size: calc(var(--base-size));\r\n  text-align: justify;\r\n  text-indent: var(--baseline);\r\n}\r\n.book__page .page__number {\r\n  position: absolute;\r\n  bottom: var(--baseline);\r\n  width: calc(100% - (var(--baseline) * 2));\r\n  font-family: var(--title);\r\n  font-size: calc(var(--base-size));\r\n  text-align: center;\r\n}\r\n.book input[type=radio] {\r\n  display: none;\r\n}\r\n.book input[type=radio]:checked + .book__page {\r\n  transition: transform 0.9s cubic-bezier(0.645, 0.045, 0.355, 1);\r\n  transform: rotateY(-180deg);\r\n}"],"sourceRoot":""}]);
+// Exports
+/* harmony default export */ __webpack_exports__["default"] = (___CSS_LOADER_EXPORT___);
+
+
+/***/ }),
+
 /***/ "./node_modules/css-loader/dist/cjs.js!./src/main/resources/js/components/book/Pagination.css":
 /*!****************************************************************************************************!*\
   !*** ./node_modules/css-loader/dist/cjs.js!./src/main/resources/js/components/book/Pagination.css ***!
@@ -37833,6 +37859,28 @@ var Form = /*#__PURE__*/function (_Component) {
 
 /***/ }),
 
+/***/ "./src/main/resources/js/components/book/Get.css":
+/*!*******************************************************!*\
+  !*** ./src/main/resources/js/components/book/Get.css ***!
+  \*******************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../../../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_css_loader_dist_cjs_js_Get_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !../../../../../../node_modules/css-loader/dist/cjs.js!./Get.css */ "./node_modules/css-loader/dist/cjs.js!./src/main/resources/js/components/book/Get.css");
+
+
+var options = {};
+options.insert = "head";
+options.singleton = false;
+var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_Get_css__WEBPACK_IMPORTED_MODULE_1__["default"], options);
+/* harmony default export */ __webpack_exports__["default"] = (_node_modules_css_loader_dist_cjs_js_Get_css__WEBPACK_IMPORTED_MODULE_1__["default"].locals || {});
+
+/***/ }),
+
 /***/ "./src/main/resources/js/components/book/Get.js":
 /*!******************************************************!*\
   !*** ./src/main/resources/js/components/book/Get.js ***!
@@ -37862,6 +37910,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _services_Book__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../services/Book */ "./src/main/resources/js/components/services/Book.js");
 /* harmony import */ var _services_User__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../services/User */ "./src/main/resources/js/components/services/User.js");
 /* harmony import */ var _services_UserFavouriteBook__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../services/UserFavouriteBook */ "./src/main/resources/js/components/services/UserFavouriteBook.js");
+/* harmony import */ var _Get_css__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./Get.css */ "./src/main/resources/js/components/book/Get.css");
 
 
 
@@ -37873,6 +37922,7 @@ __webpack_require__.r(__webpack_exports__);
 function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_5___default()(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_5___default()(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_4___default()(this, result); }; }
 
 function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+
 
 
 
@@ -37949,90 +37999,197 @@ var Get = /*#__PURE__*/function (_Component) {
     value: function render() {
       var _this2 = this;
 
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
-        style: {
-          backgroundImage: "url(https://i.pinimg.com/originals/8d/23/06/8d2306b98839234e49ce96a8b76e20ae.jpg)",
-          backgroundSize: "auto auto",
-          fontWeight: "bold",
-          padding: "41px",
-          marginBlock: "30px",
-          margin: "0px 150px 0px 150px"
+      return (
+        /*#__PURE__*/
+
+        /*<div style={{backgroundImage: "url(https://i.pinimg.com/originals/8d/23/06/8d2306b98839234e49ce96a8b76e20ae.jpg)", 
+        backgroundSize: "auto auto" ,  fontWeight: "bold", padding: "41px", marginBlock:"30px", margin:"0px 150px 0px 150px"}}>
+        <center><div>
+        <h1><strong>{this.state.book.title}</strong></h1>{this.state.book.originalTitle != "" ? <h3> ({this.state.book.originalTitle})</h3> : <p></p>}
+        <img src={this.state.book.image} 
+        style={{padding: '10px', width: '250px'}}></img></div>
+        <div>
+        <br clear="left"></br>
+        <h6><strong>Autor:</strong> {this.state.book.author}</h6>
+        <h6><strong>Editorial:</strong> {this.state.book.publisher}</h6>
+        <h6><strong>ISBN:</strong> {this.state.book.isbn}</h6>
+        <h6><strong>Publicado en:</strong> {this.state.book.publicationYear}</h6>
+        <h6><strong>Sinopsis: </strong>{this.state.book.description}</h6>
+        <h6><strong>Géneros:</strong> {this.state.genres.replaceAll("_", " ").replaceAll(",", ", ")}</h6>
+          {this.state.book.action == "VENTA" ?
+            <h6><strong>¿Qué quiere hacer?</strong> {this.state.book.action} por {this.state.book.price} €</h6>
+        :
+            <h6><strong>¿Qué quiere hacer?</strong> {this.state.book.action}</h6>} 
+            </div>
+        
+        <h6><strong>Estado: </strong>{this.state.book.status}</h6>
+          {this.state.username == this.state.book.username ? 
+            <center><br></br><hr></hr><a href={'/books/'+this.state.book.id+'/edit'} style={{margin:"10px"}} class="btn btn-primary">Editar</a>
+            {!this.state.hasRequestAccepted ? 
+                <a onClick={() => this.deleteBook(this.state.book.id)} style={{background:"red", color:"white"}} class="btn btn-primary">Eliminar</a>
+            :
+                <center><button style={{background:"red", color:"white"}} class="btn btn-primary" disabled>Eliminar</button>
+                <p class='text-danger'>*Tiene una petición ACEPTADA</p></center>
+            }</center>
+        :
+            <p></p>
         }
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("center", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("h1", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("strong", null, this.state.book.title)), this.state.book.originalTitle != "" ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("h3", null, " (", this.state.book.originalTitle, ")") : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("img", {
-        src: this.state.book.image,
-        style: {
-          padding: '10px',
-          width: '250px'
+          {this.state.username != null && this.state.username != this.state.book.username ?
+            !this.state.isAdded ? 
+                <center><h6><strong>Publicado por:</strong> {this.state.book.username}</h6><br></br><hr></hr>
+                <a onClick={() => this.addFavouriteBook(this.state.book.id)} style={{color:"white", margin:"10px"}} class="btn btn-primary">Añadir a favoritos</a></center>
+            :
+                <center><h6><strong>Publicado por:</strong> {this.state.book.username}</h6><br></br><hr></hr>
+                <a onClick={() => {this.deleteFavouriteBook(this.state.book.id, this.state.book.title)}} style={{background:"red", color:"white"}} class="btn btn-primary">Eliminar de favoritos</a></center>
+        :                              
+            <p></p>
+        }   
+          {this.state.username != this.state.book.username && this.state.username != null ?
+            !this.state.alreadyRequest ?
+            <center>
+                {!this.state.hasRequestAccepted ?
+                    <a href={"/requests/"+this.state.book.id+"/add"} style={{color:"white", margin:"10px"}} class="btn btn-primary">Realizar petición</a>
+                :
+                    <center><button style={{color:"white", margin:"10px"}} class="btn btn-primary" disabled>Realizar petición</button>
+                    <p class='text-danger'>*Ya tiene una petición ACEPTADA</p></center>
+                }
+            </center>
+            :
+            <button style={{background:"#099C01",color:"white", margin:"10px"}} class="btn btn-primary" disabled>Petición realizada</button>
+        :
+            <p></p>
         }
-      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", {
-        clear: "left"
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("h6", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("strong", null, "Autor:"), " ", this.state.book.author), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("h6", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("strong", null, "Editorial:"), " ", this.state.book.publisher), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("h6", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("strong", null, "ISBN:"), " ", this.state.book.isbn), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("h6", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("strong", null, "Publicado en:"), " ", this.state.book.publicationYear), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("h6", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("strong", null, "Sinopsis: "), this.state.book.description), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("h6", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("strong", null, "G\xE9neros:"), " ", this.state.genres.replaceAll("_", " ").replaceAll(",", ", ")), this.state.book.action == "VENTA" ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("h6", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("strong", null, "\xBFQu\xE9 quiere hacer?"), " ", this.state.book.action, " por ", this.state.book.price, " \u20AC") : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("h6", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("strong", null, "\xBFQu\xE9 quiere hacer?"), " ", this.state.book.action)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("h6", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("strong", null, "Estado: "), this.state.book.status), this.state.username == this.state.book.username ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("center", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("hr", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
-        href: '/books/' + this.state.book.id + '/edit',
-        style: {
-          margin: "10px"
-        },
-        "class": "btn btn-primary"
-      }, "Editar"), !this.state.hasRequestAccepted ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
-        onClick: function onClick() {
-          return _this2.deleteBook(_this2.state.book.id);
-        },
-        style: {
-          background: "red",
-          color: "white"
-        },
-        "class": "btn btn-primary"
-      }, "Eliminar") : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("center", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("button", {
-        style: {
-          background: "red",
-          color: "white"
-        },
-        "class": "btn btn-primary",
-        disabled: true
-      }, "Eliminar"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
-        "class": "text-danger"
-      }, "*Tiene una petici\xF3n ACEPTADA"))) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null), this.state.username != null && this.state.username != this.state.book.username ? !this.state.isAdded ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("center", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("h6", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("strong", null, "Publicado por:"), " ", this.state.book.username), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("hr", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
-        onClick: function onClick() {
-          return _this2.addFavouriteBook(_this2.state.book.id);
-        },
-        style: {
-          color: "white",
-          margin: "10px"
-        },
-        "class": "btn btn-primary"
-      }, "A\xF1adir a favoritos")) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("center", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("h6", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("strong", null, "Publicado por:"), " ", this.state.book.username), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("hr", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
-        onClick: function onClick() {
-          _this2.deleteFavouriteBook(_this2.state.book.id, _this2.state.book.title);
-        },
-        style: {
-          background: "red",
-          color: "white"
-        },
-        "class": "btn btn-primary"
-      }, "Eliminar de favoritos")) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null), this.state.username != this.state.book.username && this.state.username != null ? !this.state.alreadyRequest ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("center", null, !this.state.hasRequestAccepted ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
-        href: "/requests/" + this.state.book.id + "/add",
-        style: {
-          color: "white",
-          margin: "10px"
-        },
-        "class": "btn btn-primary"
-      }, "Realizar petici\xF3n") : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("center", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("button", {
-        style: {
-          color: "white",
-          margin: "10px"
-        },
-        "class": "btn btn-primary",
-        disabled: true
-      }, "Realizar petici\xF3n"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
-        "class": "text-danger"
-      }, "*Ya tiene una petici\xF3n ACEPTADA"))) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("button", {
-        style: {
-          background: "#099C01",
-          color: "white",
-          margin: "10px"
-        },
-        "class": "btn btn-primary",
-        disabled: true
-      }, "Petici\xF3n realizada") : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null)));
+        </center>
+        </div>
+        */
+        react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+          "class": "cover"
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+          "class": "book"
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("label", {
+          "for": "page-1",
+          "class": "book__page book__page--1"
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("img", {
+          src: this.state.book.image,
+          alt: ""
+        })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("label", {
+          "for": "page-2",
+          "class": "book__page book__page--4"
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("img", {
+          src: this.state.book.image,
+          alt: ""
+        })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("input", {
+          type: "radio",
+          name: "page",
+          id: "page-1"
+        }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("input", {
+          type: "radio",
+          name: "page",
+          id: "page-2"
+        }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("label", {
+          "class": "book__page book__page--2"
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+          "class": "book__page-front"
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+          "class": "page__content"
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("h1", {
+          "class": "page__content-book-title"
+        }, this.state.book.title), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("h2", {
+          "class": "page__content-author"
+        }, this.state.book.author), this.state.book.originalTitle != "" && this.state.book.originalTitle != this.state.book.title ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
+          "class": "page__content-credits"
+        }, "T\xEDtulo original", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("span", null, this.state.book.originalTitle)) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
+          "class": "page__content-credits"
+        }, "Editorial", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("span", null, this.state.book.publisher)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
+          "class": "page__content-credits"
+        }, "G\xE9neros", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("span", null, this.state.genres.replaceAll("_", " ").replaceAll(",", ", "))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
+          "class": "page__content-credits"
+        }, "A\xF1o de publicaci\xF3n", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("span", null, this.state.book.publicationYear)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
+          "class": "page__content-credits"
+        }, "\xBFQu\xE9 quiere hacer?", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("span", null, this.state.book.action == "VENTA" ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null, " ", this.state.book.action, " por ", this.state.book.price, " \u20AC") : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null, " ", this.state.book.action), " ")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
+          "class": "page__content-credits"
+        }, "Estado", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("span", null, this.state.book.status)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+          "class": "page__content-copyright"
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null, "Publicado por ", this.state.book.username)))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+          "class": "book__page-back"
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+          "class": "page__content"
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("h1", {
+          "class": "page__content-title"
+        }, "Sinopsis"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+          "class": "page__content-blockquote"
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
+          "class": "page__content-blockquote-text"
+        }, this.state.book.description)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+          "class": "page__number"
+        }, "2")))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("center", null, this.state.username == this.state.book.username ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("center", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
+          href: '/books/' + this.state.book.id + '/edit',
+          style: {
+            margin: "10px"
+          },
+          "class": "btn btn-primary"
+        }, "Editar"), !this.state.hasRequestAccepted ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
+          onClick: function onClick() {
+            return _this2.deleteBook(_this2.state.book.id);
+          },
+          style: {
+            background: "red",
+            color: "white"
+          },
+          "class": "btn btn-primary"
+        }, "Eliminar") : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("center", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("button", {
+          style: {
+            background: "red",
+            color: "white"
+          },
+          "class": "btn btn-primary",
+          disabled: true
+        }, "Eliminar"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
+          "class": "text-danger"
+        }, "*Tiene una petici\xF3n ACEPTADA"))) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null), this.state.username != null && this.state.username != this.state.book.username ? !this.state.isAdded ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("center", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
+          onClick: function onClick() {
+            return _this2.addFavouriteBook(_this2.state.book.id);
+          },
+          style: {
+            color: "white",
+            margin: "10px"
+          },
+          "class": "btn btn-primary"
+        }, "A\xF1adir a favoritos")) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("center", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
+          onClick: function onClick() {
+            _this2.deleteFavouriteBook(_this2.state.book.id, _this2.state.book.title);
+          },
+          style: {
+            background: "red",
+            color: "white"
+          },
+          "class": "btn btn-primary"
+        }, "Eliminar de favoritos")) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null), this.state.username != this.state.book.username && this.state.username != null ? !this.state.alreadyRequest ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("center", null, !this.state.hasRequestAccepted ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
+          href: "/requests/" + this.state.book.id + "/add",
+          style: {
+            color: "white",
+            margin: "10px"
+          },
+          "class": "btn btn-primary"
+        }, "Realizar petici\xF3n") : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("center", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("button", {
+          style: {
+            color: "white",
+            margin: "10px"
+          },
+          "class": "btn btn-primary",
+          disabled: true
+        }, "Realizar petici\xF3n"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
+          "class": "text-danger"
+        }, "*Ya tiene una petici\xF3n ACEPTADA"))) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("button", {
+          style: {
+            background: "#099C01",
+            color: "white",
+            margin: "10px"
+          },
+          "class": "btn btn-primary",
+          disabled: true
+        }, "Petici\xF3n realizada") : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null)))
+      );
     }
   }, {
     key: "deleteBook",
@@ -38866,7 +39023,7 @@ var Form = /*#__PURE__*/function (_Component) {
                   });
                 } else {
                   if (res.success) {
-                    window.location.replace("/");
+                    window.location.replace("/books/" + this.state.book.id);
                   }
                 }
 
