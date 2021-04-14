@@ -29,6 +29,7 @@
   height: 100%;
   display: flex;
   perspective: 1200px;
+
 }
 .book__page {
   position: relative;
@@ -38,6 +39,7 @@
   transform: rotateY(0deg);
   transition: transform 0.9s cubic-bezier(0.645, 0.045, 0.355, 1);
   transform-origin: 0% 0%;
+  border-radius: 5px;
   background-image: url(https://i.pinimg.com/originals/8d/23/06/8d2306b98839234e49ce96a8b76e20ae.jpg);
 }
 .book__page:nth-of-type(1) {

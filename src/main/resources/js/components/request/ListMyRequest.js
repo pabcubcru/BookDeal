@@ -56,7 +56,7 @@ export default class List extends Component {
                 {this.state.requests.map((request, i) => {
                     return(
                     <div style={{backgroundImage: "url(https://i.pinimg.com/originals/8d/23/06/8d2306b98839234e49ce96a8b76e20ae.jpg)", 
-                    backgroundSize: "auto auto", padding: "30px", paddingTop:"20px", marginBlock:"30px", margin:"0px 20px 20px 0px", width: request.action == "VENTA" ? "300px" : "380px", height: '520px', display:"inline-grid"}}>
+                    backgroundSize: "auto auto", padding: "30px", paddingTop:"20px", marginBlock:"30px", margin:"0px 20px 20px 0px", borderRadius: '5px', width: request.action == "VENTA" ? "300px" : "380px", height: '520px', display:"inline-grid"}}>
 
                     {request.action == "INTERCAMBIO" ?
                       <center><h4><strong><u>INTERCAMBIO</u><br></br></strong></h4></center>

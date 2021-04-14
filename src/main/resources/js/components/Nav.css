@@ -11,6 +11,7 @@
   width: 100%;
   background-color: #26272b;
   border-radius: 3px;
+  border-radius: 5px;
 }
 
 .menu li {
@@ -76,3 +77,46 @@
   font-weight: normal;
 }
 .menu ul li:last-child a { border: none; }
+
+.search-box{
+  margin-top: 10px;
+  top: 50%;
+  left: 50%;
+  height:40px;
+  transform: translate(-50%, -50%);
+  position:relative;
+  display: flex;
+  background-color:#ffffff;
+  border-radius: 18px
+}
+
+.search-box button{
+  width: 40px;
+  height:40px ;
+  border-radius: 50%;
+  border:none;
+  color:#2C3A47;
+}
+
+.search-box input{
+  border:none;
+  outline:0px;
+  padding: 0px 0px;
+  background-color:transparent;
+  border-radius: 18px;
+  color:rgb(0, 0, 0);
+  font-size: 20px;
+  width: 0px;
+  box-sizing: border-box;
+  transition: .3s;
+}
+
+.search-box button:hover{
+   cursor: pointer;
+}
+
+.search-box:hover .text{
+  width:240px;
+  padding: 10px 20px;
+  
+}

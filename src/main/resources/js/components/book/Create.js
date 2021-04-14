@@ -34,7 +34,7 @@ export default class Form extends Component {
     return (
       
       <div style={{backgroundImage: "url(https://i.pinimg.com/originals/8d/23/06/8d2306b98839234e49ce96a8b76e20ae.jpg)", 
-      backgroundSize: "cover" , padding: "50px", fontWeight: "bold", marginLeft: "-100"}}>
+      backgroundSize: "cover" , padding: "50px", fontWeight: "bold", borderRadius: '5px', marginLeft: "-100"}}>
         <h1 style={{color: "#007bff"}}>Añadir libro</h1>
         <p class='text-danger'>*Obligatorio</p>
         <div class="form-group row">

@@ -58,11 +58,18 @@ export default class Nav extends Component {
                 <li >{button2}</li>
             </ul>
           </li>
+          <li style={{float:"right"}}><div class="search-box">
+            <input class="text" type="text" placeholder="Título, ISBN, año, ..."/>
+          <button> <i class="fa fa-search"></i></button></div></li>
           </div>
         :
           <div><li style={{float:"left"}}><a  href="/books/all/0">Libros</a></li>
           <li style={{float:"right"}}>{button2}</li>
-          <li style={{float:"right"}}>{button1}</li></div>
+          <li style={{float:"right"}}>{button1}</li>
+          <li style={{float:"right"}}><div class="search-box">
+            <input class="text" type="text" placeholder="Título, ISBN, ..."/>
+          <button> <i class="fa fa-search"></i></button></div></li>
+          </div>
         }  
           
         </ul>
