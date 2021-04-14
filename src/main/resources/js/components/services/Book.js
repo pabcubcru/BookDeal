@@ -63,6 +63,15 @@ book.getBook = async(id) => {
     return res;
 }
 
+book.getBookToEdit = async(id) => {
+    const urlGet = baseUrl+"/edit/"+id
+    const res = await axios.get(urlGet)
+    .then(response => {return response.data})
+    .catch(error => {return error.response})
+    
+    return res;
+}
+
 book.listAllExceptMine = async(page) => {
     const urlGet = baseUrl+"/list/all-me?page="+page
     const res = await axios.get(urlGet)

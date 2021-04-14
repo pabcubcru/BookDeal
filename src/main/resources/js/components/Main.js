@@ -43,8 +43,8 @@ export default class Main extends Component{
                         <Route path="/books/:id" exact component={GetBook}/>
                         <Route path="/favourites/:page" exact component={ListFavouritesBooks}/>
                         <Route path="/requests/:id/add" exact component={CreateRequest}/>
-                        <Route path="/requests/me" exact component={ListMyRequests}/>
-                        <Route path="/requests/received" exact component={ListReceivedRequests}/>
+                        <Route path="/requests/me/:page" exact component={ListMyRequests}/>
+                        <Route path="/requests/received/:page" exact component={ListReceivedRequests}/>
                     </Switch>
                     <br></br><br></br>
                     <Footer/>

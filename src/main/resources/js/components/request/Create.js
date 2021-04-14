@@ -10,6 +10,7 @@ export default class Form extends Component {
       fieldIdBook1:"",
       fieldComment:"",
       fieldIdBook2:"",
+      fieldPay:"",
       book:"",
       books:[],
       errorField:[],
@@ -26,6 +27,10 @@ export default class Form extends Component {
 
     this.setState({book:b.book, books:bk.books, fieldIdBook2:id})
 
+    if(b.book.action == "VENTA") {
+      this.setState({fieldPay:b.book.price})
+    }
+
     if(bk.books.length >= 1) {
       this.setState({fieldIdBook1:bk.books[0].id, noBooks:false})
     }
@@ -36,7 +41,7 @@ export default class Form extends Component {
       
       <div style={{backgroundImage: "url(https://i.pinimg.com/originals/8d/23/06/8d2306b98839234e49ce96a8b76e20ae.jpg)", 
       backgroundSize: "cover" , padding: "50px", fontWeight: "bold", marginLeft: "-100"}}>
-        <h3 style={{color: "#007bff"}}>Petición de {this.state.book.action == "INTERCAMBIO" ? "INTERCAMBIO" : "COMPRA por " + this.state.book.price + "€"} para {this.state.book.title}</h3>
+        <h3 style={{color: "#007bff"}}>Petición de {this.state.book.action == "INTERCAMBIO" ? "INTERCAMBIO" : "COMPRA (" + this.state.book.price + "€)"} para {this.state.book.title}</h3>
         <p class='text-danger'>*Obligatorio</p>
 
         {this.state.book.action == "INTERCAMBIO" ?
@@ -54,7 +59,14 @@ export default class Form extends Component {
                 </div>
             </div>
         :
-            <p></p>
+        <div class="form-group row">
+          <label for="firstName" class="col-sm-3 col-form-label">¿Cuánto pagaría?<sup class='text-danger'>*</sup></label>
+          <div class="col-sm-9">
+            <input type="number" class="form-control"
+              value={this.state.fieldPay} 
+              onChange={(event)=>this.setState({fieldPay:event.target.value})}/>
+          </div>
+        </div>
         }
 
         <div class="form-group row">
@@ -82,7 +94,8 @@ export default class Form extends Component {
 
         <div class="form-group row">
             <div class="col-sm-6" >
-        <button onClick={()=>this.onClickSave()} class="btn btn-primary" style={{float:"right"}} type="submit" disabled={this.state.noBooks && this.state.book.action == "INTERCAMBIO"}>Enviar</button>
+              <br></br>
+        <button onClick={()=>this.onClickSave()} class="btn btn-primary" style={{float:"left"}} type="submit" disabled={this.state.noBooks && this.state.book.action == "INTERCAMBIO"}>Enviar</button>
             </div>
         </div>
       </div>
@@ -91,13 +104,16 @@ export default class Form extends Component {
   }
 
   async onClickSave() {
-	  const res = await requestService.create(this.state)
-
-    if (this.state.book.action == "INTERCAMBIO" && this.state.fieldIdBook1 == "") {
+	  if (this.state.book.action == "INTERCAMBIO" && this.state.fieldIdBook1 == "") {
       const dataError = []
       dataError.push("El libro a intercambiar es un campo requerido.");
       this.setState({errorField:dataError});
+    } else if(this.state.book.action == "VENTA" && this.state.fieldPay == ""){
+      const dataError = []
+      dataError.push("El precio que estaría dispuesto a pagar es un campo requerido.");
+      this.setState({errorField:dataError});
     } else {
+      const res = await requestService.create(this.state)
       if (res.success) {
         window.location.replace("/books/"+this.state.book.id)
       }

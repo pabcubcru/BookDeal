@@ -32,7 +32,7 @@ export default class List extends Component {
                 :
                 <center>
                   {this.state.pages.length > 1 ? 
-                    <center><br></br>{this.state.actualPage != 0 ? <a class="btn btn-primary" href={"/favourites/"+parseInt(this.state.actualPage-1)}>Anterior</a> : <p></p>}
+                    <center>{this.state.actualPage != 0 ? <a class="btn btn-primary" href={"/favourites/"+parseInt(this.state.actualPage-1)}>Anterior</a> : <p></p>}
                     {this.state.pages.map((page) => {
                     return(
                       <a style={{color:this.state.actualPage == page ? "white" : "black", backgroundColor:this.state.actualPage == page ? "#007bff" : ""}} class="pag" href={"/favourites/"+page}>{page}</a>
@@ -41,10 +41,10 @@ export default class List extends Component {
                   {this.state.actualPage != this.state.pages.length-1 ? <a class="btn btn-primary" href={"/favourites/"+parseInt(this.state.actualPage+1)}>Siguiente</a> : <p></p>}</center>
                   :
                   <p></p>
-                  }</center>}
+                  }<br></br></center>}
                 {this.state.books.map((book) => {
                     return(
-                      <main>
+                      <main class="mainBooks">
                         <div class="book-card">
                           <div class="book-card__cover">
                             <div class="book-card__book">
@@ -61,6 +61,12 @@ export default class List extends Component {
                             </div>
                             <div class="book-card__author">
                               {book.author}
+                            </div>
+                            <div class="book-card__author">
+                            {book.action == "VENTA" ?
+                              <span>{book.action} por {book.price} €</span>
+                            :
+                              book.action}
                             </div>
                           </div>
                         </div>

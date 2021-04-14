@@ -6,6 +6,8 @@ import com.pabcubcru.infobooks.models.Request;
 import com.pabcubcru.infobooks.models.RequestStatus;
 import com.pabcubcru.infobooks.repository.RequestRepository;
 
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -24,13 +26,13 @@ public class RequestService {
     }
 
     @Transactional(readOnly = true)
-    public List<Request> listMyRequests(String username) {
-        return this.requestRepository.findByUsername1OrderByStatus(username);
+    public Page<Request> listMyRequests(String username, Pageable pageable) {
+        return this.requestRepository.findByUsername1OrderByStatus(username, pageable);
     }
 
     @Transactional(readOnly = true)
-    public List<Request> listReceivedRequests(String username) {
-        return this.requestRepository.findByUsername2AndStatusNotAndStatusNotOrderByStatusDesc(username, RequestStatus.RECHAZADA.toString(), RequestStatus.CANCELADA.toString());
+    public Page<Request> listReceivedRequests(String username, Pageable pageable) {
+        return this.requestRepository.findByUsername2AndStatusNotAndStatusNotOrderByStatusDesc(username, RequestStatus.RECHAZADA.toString(), RequestStatus.CANCELADA.toString(), pageable);
     }
 
     @Transactional
@@ -71,6 +73,11 @@ public class RequestService {
     @Transactional
     public List<Request> findByIdBook1OrIdBook2(String idBook1, String idBook2) {
         return this.requestRepository.findByIdBook1OrIdBook2(idBook1, idBook2);
+    }
+
+    @Transactional
+    public Request findFirstByIdBook1OrIdBook2(String idBook) {
+        return this.requestRepository.findFirstByIdBook1OrIdBook2(idBook, idBook);
     }
 
     @Transactional

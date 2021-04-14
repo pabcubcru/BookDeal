@@ -21,7 +21,8 @@ export default class Form extends Component {
       fieldPrice: "",
       errorField:[],
       genres:[],
-      fieldGen:[]
+      fieldGen:[],
+      alreadyRequest:false
     }
   }
 
@@ -30,7 +31,7 @@ export default class Form extends Component {
     const res = genres.genres
 
     const id = this.props.match.params.id;
-    const b = await bookService.getBook(id)
+    const b = await bookService.getBookToEdit(id)
     const genrs = b.book.genres.split(",")
 
     if(b.success) {
@@ -50,7 +51,8 @@ export default class Form extends Component {
         fieldAction: b.book.action,
         fieldPrice: b.book.price,
         fieldGen: genrs,
-        correctBook:""
+        correctBook:"",
+        alreadyRequest:b.alreadyRequest
       })
     }
   }
@@ -132,7 +134,7 @@ export default class Form extends Component {
         <div class="form-group row">
             <label for="firstName" class="col-sm-3 col-form-label">Sinopsis<sup class='text-danger'>*</sup></label>
           <div class="col-sm-9">
-            <input type="text" class="form-control"
+            <textarea type="text" class="form-control"
               value={this.state.fieldDescription} 
               onChange={(event)=>this.setState({fieldDescription:event.target.value})}/>
           </div>
@@ -164,10 +166,15 @@ export default class Form extends Component {
         <div class="form-group row">
             <label for="firstName" class="col-sm-3 col-form-label">¿Qué quiere hacer?<sup class='text-danger'>*</sup></label>
           <div class="col-sm-9">
-          <select class="form-control" id="selectAction" value={this.state.fieldAction} onChange={(event) => this.setState({fieldAction:event.target.value})}>
+          <select class="form-control" id="selectAction" value={this.state.fieldAction} onChange={(event) => this.setState({fieldAction:event.target.value})} disabled={this.state.alreadyRequest}>
             <option value="INTERCAMBIO">INTERCAMBIO</option>
             <option value="VENTA">VENTA</option>
           </select>
+          {this.state.alreadyRequest ?
+            <p class='text-danger'>*Tiene una petición en proceso.</p>
+          :
+            <p></p>
+          }
           </div>
         </div>
 
@@ -176,7 +183,7 @@ export default class Form extends Component {
           <div class="col-sm-9">
             <input id="price" type="number" class="form-control"
               value={this.state.fieldPrice} 
-              onChange={(event)=> this.setState({fieldPrice:event.target.value})} />
+              onChange={(event)=> this.setState({fieldPrice:event.target.value})}/>
           </div>
         </div>
                                    

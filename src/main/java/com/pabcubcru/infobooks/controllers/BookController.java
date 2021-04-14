@@ -164,9 +164,10 @@ public class BookController {
             res.put("isAdded", isAdded);
         }
         Integer numberOfPages = pageOfBooks.getTotalPages();
+        res.put("numTotalPages", numberOfPages);
         res.put("pages", new ArrayList<Integer>());
         if(numberOfPages > 0) {
-            List<Integer> pages = IntStream.rangeClosed(0, numberOfPages-1).boxed().collect(Collectors.toList());
+            List<Integer> pages = IntStream.rangeClosed(page-10 <= 0 ? 0 : page-10, page+10 >= numberOfPages-1 ? numberOfPages-1 : page+10).boxed().collect(Collectors.toList());
             res.put("pages", pages);
         }
 
@@ -182,9 +183,10 @@ public class BookController {
         res.put("books", pageOfBooks.getContent());
 
         Integer numberOfPages = pageOfBooks.getTotalPages();
+        res.put("numTotalPages", numberOfPages);
         res.put("pages", new ArrayList<Integer>());
         if(numberOfPages > 0) {
-            List<Integer> pages = IntStream.rangeClosed(0, numberOfPages-1).boxed().collect(Collectors.toList());
+            List<Integer> pages = IntStream.rangeClosed(page-10 <= 0 ? 0 : page-10, page+10 >= numberOfPages-1 ? numberOfPages-1 : page+10).boxed().collect(Collectors.toList());
             res.put("pages", pages);
         }
 
@@ -247,6 +249,27 @@ public class BookController {
             } else {
                 res.put("isAdded", true);
             }
+        } catch (Exception e) {
+            res.put("success", false);
+        }
+
+        return res;
+    }
+
+    @GetMapping(value = "/edit/{id}")
+    public Map<String, Object> getBookByIdToEdit(@PathVariable("id") String id, Principal principal) {
+        Map<String, Object> res = new HashMap<>();
+        try {
+            Book book = this.bookService.findBookById(id);
+            res.put("book", book);
+
+            Request request = this.requestService.findFirstByIdBook1OrIdBook2(id);
+            if(request != null) {
+                res.put("alreadyRequest", true);
+            } else {
+                res.put("alreadyRequest", false);
+            }
+            res.put("success", true);
         } catch (Exception e) {
             res.put("success", false);
         }

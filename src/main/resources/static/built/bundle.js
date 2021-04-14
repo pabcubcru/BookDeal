@@ -2383,7 +2383,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()(_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0___default.a);
 // Module
-___CSS_LOADER_EXPORT___.push([module.i, "  .mainBooks {\r\n    display: inline-table;\r\n    margin: 20px;\r\n  }\r\n\r\n  .book-card {\r\n    width: 313px;\r\n    padding: 16px;\r\n    border-radius: 5px;\r\n    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);\r\n    background-image: url(https://i.pinimg.com/originals/8d/23/06/8d2306b98839234e49ce96a8b76e20ae.jpg);\r\n    background-size: auto;\r\n  }\r\n  .book-card .book-card__cover {\r\n    position: relative;\r\n    width: 200px;\r\n    height: 300px;\r\n    margin: 0 auto 8px auto;\r\n    perspective: 1000px;\r\n  }\r\n  .book-card .book-card__book {\r\n    height: 100%;\r\n    transform-style: preserve-3d;\r\n    transition: all 250ms ease;\r\n  }\r\n  .book-card .book-card__book-front {\r\n    position: absolute;\r\n    height: 100%;\r\n  }\r\n  .book-card .book-card__book-back {\r\n    position: absolute;\r\n    top: 0;\r\n    height: 100%;\r\n    width: 100%;\r\n    transform: translateZ(-40px);\r\n  }\r\n  .book-card .book-card__book-side {\r\n    position: absolute;\r\n    top: 5px;\r\n    bottom: 2px;\r\n    right: -29px;\r\n    width: 40px;\r\n    background-size: 5px;\r\n    background-color: #e1e1e1;\r\n    background-image: linear-gradient(to right, #ccc 35%, #e1e1e1 35%);\r\n    opacity: 0;\r\n    transform: rotate3d(0, 1, 0, 90deg);\r\n  }\r\n  .book-card .book-card__img {\r\n    width: 100%;\r\n    height: 100%;\r\n    background-color: #e1e1e1;\r\n  }\r\n  .book-card .book-card__title {\r\n    font-size: 1.5em;\r\n    margin-bottom: 8px;\r\n  }\r\n  .book-card .book-card__author {\r\n    color: #424242;\r\n    font-size: 1em;\r\n    font-weight: bold;\r\n  }\r\n  .book-card:hover .book-card__book {\r\n    transform: rotate3d(0, -1, 0, 30deg) translate(-15px, -30px);\r\n  }\r\n  .book-card:hover .book-card__book-back {\r\n    box-shadow: 5px 10px 15px rgba(0, 0, 0, 0.35);\r\n  }\r\n  .book-card:hover .book-card__book-side {\r\n    opacity: 1;\r\n  }\r\n\r\n  ", "",{"version":3,"sources":["webpack://./src/main/resources/js/components/Listbooks.css"],"names":[],"mappings":"EAAE;IACE,qBAAqB;IACrB,YAAY;EACd;;EAEA;IACE,YAAY;IACZ,aAAa;IACb,kBAAkB;IAClB,wEAAwE;IACxE,mGAAmG;IACnG,qBAAqB;EACvB;EACA;IACE,kBAAkB;IAClB,YAAY;IACZ,aAAa;IACb,uBAAuB;IACvB,mBAAmB;EACrB;EACA;IACE,YAAY;IACZ,4BAA4B;IAC5B,0BAA0B;EAC5B;EACA;IACE,kBAAkB;IAClB,YAAY;EACd;EACA;IACE,kBAAkB;IAClB,MAAM;IACN,YAAY;IACZ,WAAW;IACX,4BAA4B;EAC9B;EACA;IACE,kBAAkB;IAClB,QAAQ;IACR,WAAW;IACX,YAAY;IACZ,WAAW;IACX,oBAAoB;IACpB,yBAAyB;IACzB,kEAAkE;IAClE,UAAU;IACV,mCAAmC;EACrC;EACA;IACE,WAAW;IACX,YAAY;IACZ,yBAAyB;EAC3B;EACA;IACE,gBAAgB;IAChB,kBAAkB;EACpB;EACA;IACE,cAAc;IACd,cAAc;IACd,iBAAiB;EACnB;EACA;IACE,4DAA4D;EAC9D;EACA;IACE,6CAA6C;EAC/C;EACA;IACE,UAAU;EACZ","sourcesContent":["  .mainBooks {\r\n    display: inline-table;\r\n    margin: 20px;\r\n  }\r\n\r\n  .book-card {\r\n    width: 313px;\r\n    padding: 16px;\r\n    border-radius: 5px;\r\n    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);\r\n    background-image: url(https://i.pinimg.com/originals/8d/23/06/8d2306b98839234e49ce96a8b76e20ae.jpg);\r\n    background-size: auto;\r\n  }\r\n  .book-card .book-card__cover {\r\n    position: relative;\r\n    width: 200px;\r\n    height: 300px;\r\n    margin: 0 auto 8px auto;\r\n    perspective: 1000px;\r\n  }\r\n  .book-card .book-card__book {\r\n    height: 100%;\r\n    transform-style: preserve-3d;\r\n    transition: all 250ms ease;\r\n  }\r\n  .book-card .book-card__book-front {\r\n    position: absolute;\r\n    height: 100%;\r\n  }\r\n  .book-card .book-card__book-back {\r\n    position: absolute;\r\n    top: 0;\r\n    height: 100%;\r\n    width: 100%;\r\n    transform: translateZ(-40px);\r\n  }\r\n  .book-card .book-card__book-side {\r\n    position: absolute;\r\n    top: 5px;\r\n    bottom: 2px;\r\n    right: -29px;\r\n    width: 40px;\r\n    background-size: 5px;\r\n    background-color: #e1e1e1;\r\n    background-image: linear-gradient(to right, #ccc 35%, #e1e1e1 35%);\r\n    opacity: 0;\r\n    transform: rotate3d(0, 1, 0, 90deg);\r\n  }\r\n  .book-card .book-card__img {\r\n    width: 100%;\r\n    height: 100%;\r\n    background-color: #e1e1e1;\r\n  }\r\n  .book-card .book-card__title {\r\n    font-size: 1.5em;\r\n    margin-bottom: 8px;\r\n  }\r\n  .book-card .book-card__author {\r\n    color: #424242;\r\n    font-size: 1em;\r\n    font-weight: bold;\r\n  }\r\n  .book-card:hover .book-card__book {\r\n    transform: rotate3d(0, -1, 0, 30deg) translate(-15px, -30px);\r\n  }\r\n  .book-card:hover .book-card__book-back {\r\n    box-shadow: 5px 10px 15px rgba(0, 0, 0, 0.35);\r\n  }\r\n  .book-card:hover .book-card__book-side {\r\n    opacity: 1;\r\n  }\r\n\r\n  "],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.i, "  .mainBooks {\r\n    display: inline-table;\r\n    margin: 20px;\r\n  }\r\n\r\n  .book-card {\r\n    width: 313px;\r\n    padding: 16px;\r\n    border-radius: 5px;\r\n    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);\r\n    background-image: url(https://i.pinimg.com/originals/8d/23/06/8d2306b98839234e49ce96a8b76e20ae.jpg);\r\n    background-size: auto;\r\n  }\r\n  .book-card .book-card__cover {\r\n    position: relative;\r\n    width: 200px;\r\n    height: 300px;\r\n    margin: 0 auto 8px auto;\r\n    perspective: 1000px;\r\n  }\r\n  .book-card .book-card__book {\r\n    height: 100%;\r\n    transform-style: preserve-3d;\r\n    transition: all 250ms ease;\r\n  }\r\n  .book-card .book-card__book-front {\r\n    position: absolute;\r\n    height: 100%;\r\n  }\r\n  .book-card .book-card__book-back {\r\n    position: absolute;\r\n    top: 0;\r\n    height: 100%;\r\n    width: 100%;\r\n    transform: translateZ(-40px);\r\n  }\r\n  .book-card .book-card__book-side {\r\n    position: absolute;\r\n    top: 5px;\r\n    bottom: 2px;\r\n    right: -29px;\r\n    width: 40px;\r\n    background-size: 5px;\r\n    background-color: #e1e1e1;\r\n    background-image: linear-gradient(to right, #ccc 35%, #e1e1e1 35%);\r\n    opacity: 0;\r\n    transform: rotate3d(0, 1, 0, 90deg);\r\n  }\r\n  .book-card .book-card__img {\r\n    width: 100%;\r\n    height: 100%;\r\n    background-color: #e1e1e1;\r\n  }\r\n  .book-card .book-card__title {\r\n    font-size: 1.5em;\r\n    margin-bottom: 8px;\r\n  }\r\n  .book-card .book-card__author {\r\n    color: #424242;\r\n    font-size: 1em;\r\n    font-weight: bold;\r\n  }\r\n  .book-card:hover .book-card__book {\r\n    transform: rotate3d(0, -1, 0, 30deg) translate(-15px, -30px);\r\n  }\r\n  .book-card:hover .book-card__book-back {\r\n    box-shadow: 5px 10px 15px rgba(0, 0, 0, 0.35);\r\n  }\r\n  .book-card:hover .book-card__book-side {\r\n    opacity: 1;\r\n  } ", "",{"version":3,"sources":["webpack://./src/main/resources/js/components/Listbooks.css"],"names":[],"mappings":"EAAE;IACE,qBAAqB;IACrB,YAAY;EACd;;EAEA;IACE,YAAY;IACZ,aAAa;IACb,kBAAkB;IAClB,wEAAwE;IACxE,mGAAmG;IACnG,qBAAqB;EACvB;EACA;IACE,kBAAkB;IAClB,YAAY;IACZ,aAAa;IACb,uBAAuB;IACvB,mBAAmB;EACrB;EACA;IACE,YAAY;IACZ,4BAA4B;IAC5B,0BAA0B;EAC5B;EACA;IACE,kBAAkB;IAClB,YAAY;EACd;EACA;IACE,kBAAkB;IAClB,MAAM;IACN,YAAY;IACZ,WAAW;IACX,4BAA4B;EAC9B;EACA;IACE,kBAAkB;IAClB,QAAQ;IACR,WAAW;IACX,YAAY;IACZ,WAAW;IACX,oBAAoB;IACpB,yBAAyB;IACzB,kEAAkE;IAClE,UAAU;IACV,mCAAmC;EACrC;EACA;IACE,WAAW;IACX,YAAY;IACZ,yBAAyB;EAC3B;EACA;IACE,gBAAgB;IAChB,kBAAkB;EACpB;EACA;IACE,cAAc;IACd,cAAc;IACd,iBAAiB;EACnB;EACA;IACE,4DAA4D;EAC9D;EACA;IACE,6CAA6C;EAC/C;EACA;IACE,UAAU;EACZ","sourcesContent":["  .mainBooks {\r\n    display: inline-table;\r\n    margin: 20px;\r\n  }\r\n\r\n  .book-card {\r\n    width: 313px;\r\n    padding: 16px;\r\n    border-radius: 5px;\r\n    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);\r\n    background-image: url(https://i.pinimg.com/originals/8d/23/06/8d2306b98839234e49ce96a8b76e20ae.jpg);\r\n    background-size: auto;\r\n  }\r\n  .book-card .book-card__cover {\r\n    position: relative;\r\n    width: 200px;\r\n    height: 300px;\r\n    margin: 0 auto 8px auto;\r\n    perspective: 1000px;\r\n  }\r\n  .book-card .book-card__book {\r\n    height: 100%;\r\n    transform-style: preserve-3d;\r\n    transition: all 250ms ease;\r\n  }\r\n  .book-card .book-card__book-front {\r\n    position: absolute;\r\n    height: 100%;\r\n  }\r\n  .book-card .book-card__book-back {\r\n    position: absolute;\r\n    top: 0;\r\n    height: 100%;\r\n    width: 100%;\r\n    transform: translateZ(-40px);\r\n  }\r\n  .book-card .book-card__book-side {\r\n    position: absolute;\r\n    top: 5px;\r\n    bottom: 2px;\r\n    right: -29px;\r\n    width: 40px;\r\n    background-size: 5px;\r\n    background-color: #e1e1e1;\r\n    background-image: linear-gradient(to right, #ccc 35%, #e1e1e1 35%);\r\n    opacity: 0;\r\n    transform: rotate3d(0, 1, 0, 90deg);\r\n  }\r\n  .book-card .book-card__img {\r\n    width: 100%;\r\n    height: 100%;\r\n    background-color: #e1e1e1;\r\n  }\r\n  .book-card .book-card__title {\r\n    font-size: 1.5em;\r\n    margin-bottom: 8px;\r\n  }\r\n  .book-card .book-card__author {\r\n    color: #424242;\r\n    font-size: 1em;\r\n    font-weight: bold;\r\n  }\r\n  .book-card:hover .book-card__book {\r\n    transform: rotate3d(0, -1, 0, 30deg) translate(-15px, -30px);\r\n  }\r\n  .book-card:hover .book-card__book-back {\r\n    box-shadow: 5px 10px 15px rgba(0, 0, 0, 0.35);\r\n  }\r\n  .book-card:hover .book-card__book-side {\r\n    opacity: 1;\r\n  } "],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ __webpack_exports__["default"] = (___CSS_LOADER_EXPORT___);
 
@@ -2408,7 +2408,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()(_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0___default.a);
 // Module
-___CSS_LOADER_EXPORT___.push([module.i, ".menu, .menu ul, .menu li, .menu a {\r\n  z-index: 5;\r\n  margin: 0;\r\n  padding: 0;\r\n  border: none;\r\n  outline: none;\r\n}\r\n\r\n.menu {\r\n  height: 70px;\r\n  width: 100%;\r\n  background-color: rgb(0, 0, 0);\r\n  border-radius: 3px;\r\n}\r\n\r\n.menu li {\r\n  position: relative;\r\n  list-style: none;\r\n  float: left;\r\n  display: block;\r\n  height: 50px;\r\n}\r\n\r\n.menu a {\r\n  display: block;\r\n  padding: 0 30px;\r\n  margin: 20px 0;\r\n  line-height: 28px;\r\n  text-decoration: solid;\r\n  \r\n  font-family:\"Trebuchet MS\", Arial, Helvetica, sans-serif;\r\n  font-weight: bold;\r\n  font-size: 20px;\r\n  color: rgb(255, 255, 255);\r\n  \r\n}\r\n\r\n\r\n\r\n.menu li:hover > a {color: #ff0000}\r\n\r\n.menu ul {\r\n  position: absolute;\r\n  top: 50px;\r\n  left: 20px;\r\n  \r\n  opacity: 0;\r\n  background: rgb(0, 0, 0);\r\n  \r\n  border-radius: 0 0 10px 10px;\r\n  transition: opacity .20s ease .1s;\r\n}\r\n\r\n.menu li:hover > ul {opacity: 1;}\r\n\r\n.menu ul li {\r\n  height: 0;\r\n  overflow: hidden;\r\n  padding: 0;\r\n  \r\n  transition: height .25s ease .1s;\r\n}\r\n\r\n.menu li:hover > ul li {\r\n  height: 50px;\r\n  overflow: visible;\r\n  padding: 0;\r\n}\r\n\r\n.menu ul li a {\r\n  width: 180px;\r\n  padding: 10px 20px;\r\n  margin: 0;\r\n  border: none;\r\n  border-bottom: 1px solid #ffffff;\r\n  font-weight: normal;\r\n}\r\n.menu ul li:last-child a { border: none; }", "",{"version":3,"sources":["webpack://./src/main/resources/js/components/Nav.css"],"names":[],"mappings":"AAAA;EACE,UAAU;EACV,SAAS;EACT,UAAU;EACV,YAAY;EACZ,aAAa;AACf;;AAEA;EACE,YAAY;EACZ,WAAW;EACX,8BAA8B;EAC9B,kBAAkB;AACpB;;AAEA;EACE,kBAAkB;EAClB,gBAAgB;EAChB,WAAW;EACX,cAAc;EACd,YAAY;AACd;;AAEA;EACE,cAAc;EACd,eAAe;EACf,cAAc;EACd,iBAAiB;EACjB,sBAAsB;;EAEtB,wDAAwD;EACxD,iBAAiB;EACjB,eAAe;EACf,yBAAyB;;AAE3B;;;;AAIA,oBAAoB,cAAc;;AAElC;EACE,kBAAkB;EAClB,SAAS;EACT,UAAU;;EAEV,UAAU;EACV,wBAAwB;;EAExB,4BAA4B;EAC5B,iCAAiC;AACnC;;AAEA,qBAAqB,UAAU,CAAC;;AAEhC;EACE,SAAS;EACT,gBAAgB;EAChB,UAAU;;EAEV,gCAAgC;AAClC;;AAEA;EACE,YAAY;EACZ,iBAAiB;EACjB,UAAU;AACZ;;AAEA;EACE,YAAY;EACZ,kBAAkB;EAClB,SAAS;EACT,YAAY;EACZ,gCAAgC;EAChC,mBAAmB;AACrB;AACA,2BAA2B,YAAY,EAAE","sourcesContent":[".menu, .menu ul, .menu li, .menu a {\r\n  z-index: 5;\r\n  margin: 0;\r\n  padding: 0;\r\n  border: none;\r\n  outline: none;\r\n}\r\n\r\n.menu {\r\n  height: 70px;\r\n  width: 100%;\r\n  background-color: rgb(0, 0, 0);\r\n  border-radius: 3px;\r\n}\r\n\r\n.menu li {\r\n  position: relative;\r\n  list-style: none;\r\n  float: left;\r\n  display: block;\r\n  height: 50px;\r\n}\r\n\r\n.menu a {\r\n  display: block;\r\n  padding: 0 30px;\r\n  margin: 20px 0;\r\n  line-height: 28px;\r\n  text-decoration: solid;\r\n  \r\n  font-family:\"Trebuchet MS\", Arial, Helvetica, sans-serif;\r\n  font-weight: bold;\r\n  font-size: 20px;\r\n  color: rgb(255, 255, 255);\r\n  \r\n}\r\n\r\n\r\n\r\n.menu li:hover > a {color: #ff0000}\r\n\r\n.menu ul {\r\n  position: absolute;\r\n  top: 50px;\r\n  left: 20px;\r\n  \r\n  opacity: 0;\r\n  background: rgb(0, 0, 0);\r\n  \r\n  border-radius: 0 0 10px 10px;\r\n  transition: opacity .20s ease .1s;\r\n}\r\n\r\n.menu li:hover > ul {opacity: 1;}\r\n\r\n.menu ul li {\r\n  height: 0;\r\n  overflow: hidden;\r\n  padding: 0;\r\n  \r\n  transition: height .25s ease .1s;\r\n}\r\n\r\n.menu li:hover > ul li {\r\n  height: 50px;\r\n  overflow: visible;\r\n  padding: 0;\r\n}\r\n\r\n.menu ul li a {\r\n  width: 180px;\r\n  padding: 10px 20px;\r\n  margin: 0;\r\n  border: none;\r\n  border-bottom: 1px solid #ffffff;\r\n  font-weight: normal;\r\n}\r\n.menu ul li:last-child a { border: none; }"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.i, ".menu, .menu ul, .menu li, .menu a {\r\n  z-index: 5;\r\n  margin: 0;\r\n  padding: 0;\r\n  border: none;\r\n  outline: none;\r\n}\r\n\r\n.menu {\r\n  height: 70px;\r\n  width: 100%;\r\n  background-color: #26272b;\r\n  border-radius: 3px;\r\n}\r\n\r\n.menu li {\r\n  position: relative;\r\n  list-style: none;\r\n  float: left;\r\n  display: block;\r\n  height: 50px;\r\n}\r\n\r\n.menu a {\r\n  display: block;\r\n  padding: 0 30px;\r\n  margin: 20px 0;\r\n  line-height: 28px;\r\n  text-decoration: solid;\r\n  \r\n  font-family:\"Trebuchet MS\", Arial, Helvetica, sans-serif;\r\n  font-weight: bold;\r\n  font-size: 20px;\r\n  color: rgb(255, 255, 255);\r\n  \r\n}\r\n\r\n\r\n\r\n.menu li:hover > a {color: #007bff}\r\n\r\n.menu ul {\r\n  position: absolute;\r\n  top: 50px;\r\n  left: 20px;\r\n  \r\n  opacity: 0;\r\n  background: #26272b;\r\n  \r\n  border-radius: 0 0 10px 10px;\r\n  transition: opacity .20s ease .1s;\r\n}\r\n\r\n.menu li:hover > ul {opacity: 1;}\r\n\r\n.menu ul li {\r\n  height: 0;\r\n  overflow: hidden;\r\n  padding: 0;\r\n  \r\n  transition: height .25s ease .1s;\r\n}\r\n\r\n.menu li:hover > ul li {\r\n  height: 50px;\r\n  overflow: visible;\r\n  padding: 0;\r\n}\r\n\r\n.menu ul li a {\r\n  width: 180px;\r\n  padding: 10px 20px;\r\n  margin: 0;\r\n  border: none;\r\n  border-bottom: 1px solid #ffffff;\r\n  font-weight: normal;\r\n}\r\n.menu ul li:last-child a { border: none; }", "",{"version":3,"sources":["webpack://./src/main/resources/js/components/Nav.css"],"names":[],"mappings":"AAAA;EACE,UAAU;EACV,SAAS;EACT,UAAU;EACV,YAAY;EACZ,aAAa;AACf;;AAEA;EACE,YAAY;EACZ,WAAW;EACX,yBAAyB;EACzB,kBAAkB;AACpB;;AAEA;EACE,kBAAkB;EAClB,gBAAgB;EAChB,WAAW;EACX,cAAc;EACd,YAAY;AACd;;AAEA;EACE,cAAc;EACd,eAAe;EACf,cAAc;EACd,iBAAiB;EACjB,sBAAsB;;EAEtB,wDAAwD;EACxD,iBAAiB;EACjB,eAAe;EACf,yBAAyB;;AAE3B;;;;AAIA,oBAAoB,cAAc;;AAElC;EACE,kBAAkB;EAClB,SAAS;EACT,UAAU;;EAEV,UAAU;EACV,mBAAmB;;EAEnB,4BAA4B;EAC5B,iCAAiC;AACnC;;AAEA,qBAAqB,UAAU,CAAC;;AAEhC;EACE,SAAS;EACT,gBAAgB;EAChB,UAAU;;EAEV,gCAAgC;AAClC;;AAEA;EACE,YAAY;EACZ,iBAAiB;EACjB,UAAU;AACZ;;AAEA;EACE,YAAY;EACZ,kBAAkB;EAClB,SAAS;EACT,YAAY;EACZ,gCAAgC;EAChC,mBAAmB;AACrB;AACA,2BAA2B,YAAY,EAAE","sourcesContent":[".menu, .menu ul, .menu li, .menu a {\r\n  z-index: 5;\r\n  margin: 0;\r\n  padding: 0;\r\n  border: none;\r\n  outline: none;\r\n}\r\n\r\n.menu {\r\n  height: 70px;\r\n  width: 100%;\r\n  background-color: #26272b;\r\n  border-radius: 3px;\r\n}\r\n\r\n.menu li {\r\n  position: relative;\r\n  list-style: none;\r\n  float: left;\r\n  display: block;\r\n  height: 50px;\r\n}\r\n\r\n.menu a {\r\n  display: block;\r\n  padding: 0 30px;\r\n  margin: 20px 0;\r\n  line-height: 28px;\r\n  text-decoration: solid;\r\n  \r\n  font-family:\"Trebuchet MS\", Arial, Helvetica, sans-serif;\r\n  font-weight: bold;\r\n  font-size: 20px;\r\n  color: rgb(255, 255, 255);\r\n  \r\n}\r\n\r\n\r\n\r\n.menu li:hover > a {color: #007bff}\r\n\r\n.menu ul {\r\n  position: absolute;\r\n  top: 50px;\r\n  left: 20px;\r\n  \r\n  opacity: 0;\r\n  background: #26272b;\r\n  \r\n  border-radius: 0 0 10px 10px;\r\n  transition: opacity .20s ease .1s;\r\n}\r\n\r\n.menu li:hover > ul {opacity: 1;}\r\n\r\n.menu ul li {\r\n  height: 0;\r\n  overflow: hidden;\r\n  padding: 0;\r\n  \r\n  transition: height .25s ease .1s;\r\n}\r\n\r\n.menu li:hover > ul li {\r\n  height: 50px;\r\n  overflow: visible;\r\n  padding: 0;\r\n}\r\n\r\n.menu ul li a {\r\n  width: 180px;\r\n  padding: 10px 20px;\r\n  margin: 0;\r\n  border: none;\r\n  border-bottom: 1px solid #ffffff;\r\n  font-weight: normal;\r\n}\r\n.menu ul li:last-child a { border: none; }"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ __webpack_exports__["default"] = (___CSS_LOADER_EXPORT___);
 
@@ -2434,7 +2434,7 @@ __webpack_require__.r(__webpack_exports__);
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()(_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0___default.a);
 ___CSS_LOADER_EXPORT___.push([module.i, "@import url(https://fonts.googleapis.com/css?family=Cormorant+Garamond:300,400,600|Tulpen+One&display=swap);"]);
 // Module
-___CSS_LOADER_EXPORT___.push([module.i, ":root {\r\n  /* colors */\r\n  --body-bg: #FAFAFA;\r\n  --page-bg: #F5F5F5;\r\n  --dark-text: #2A2935;\r\n  /* spacing */\r\n  /* this is what defines the global scale */\r\n  --baseline: 12px;\r\n  /* fonts */\r\n  --book-title: \"Tulpen One\", sans-serif;\r\n  --title: \"Cormorant Garamond\", serif;\r\n  --body: \"Cormorant Garamond\", serif;\r\n  --base-size: var(--baseline) * 1.2;\r\n}\r\n\r\n* {\r\n  box-sizing: border-box;\r\n}\r\n\r\n.cover {\r\n  width: 100%;\r\n  height: 200%;\r\n  box-shadow: 0 0 100px rgba(0, 0, 0, 0.3);\r\n}\r\n\r\n.book {\r\n  width: 100%;\r\n  height: 100%;\r\n  display: flex;\r\n  perspective: 1200px;\r\n}\r\n.book__page {\r\n  position: relative;\r\n  width: 50%;\r\n  height: 100%;\r\n  display: grid;\r\n  transform: rotateY(0deg);\r\n  transition: transform 0.9s cubic-bezier(0.645, 0.045, 0.355, 1);\r\n  transform-origin: 0% 0%;\r\n  background-image: url(https://i.pinimg.com/originals/8d/23/06/8d2306b98839234e49ce96a8b76e20ae.jpg);\r\n}\r\n.book__page:nth-of-type(1) {\r\n  background-image: url(https://i.pinimg.com/originals/8d/23/06/8d2306b98839234e49ce96a8b76e20ae.jpg);\r\n}\r\n.book__page--1 {\r\n  cursor: pointer;\r\n  overflow: hidden;\r\n}\r\n.book__page--1 img {\r\n  height: 100%;\r\n  width: 100%;\r\n  height: auto;\r\n}\r\n.book__page--4 {\r\n  cursor: pointer;\r\n  overflow: hidden;\r\n}\r\n.book__page--4 img {\r\n  height: 100%;\r\n  width: 100%;\r\n  height: auto;\r\n}\r\n.book__page--2 {\r\n  position: absolute;\r\n  right: 0;\r\n  pointer-events: none;\r\n  transform-style: preserve-3d;\r\n  background-image: url(https://i.pinimg.com/originals/8d/23/06/8d2306b98839234e49ce96a8b76e20ae.jpg);\r\n}\r\n.book__page-front {\r\n  position: absolute;\r\n  width: 100%;\r\n  height: 100%;\r\n  transform: rotateY(0deg) translateZ(1px);\r\n}\r\n.book__page-back {\r\n  position: absolute;\r\n  width: 100%;\r\n  height: 100%;\r\n  padding: 0 calc(var(--baseline) * 1.8);\r\n  transform: rotateY(180deg) translateZ(1px);\r\n}\r\n.book__page-back img {\r\n  width: 100%;\r\n  max-width: 100%;\r\n  height: auto;\r\n}\r\n.book__page .page__content {\r\n  padding: var(--baseline);\r\n  height: 100%;\r\n  position: relative;\r\n  text-align: center;\r\n}\r\n.book__page .page__content-book-title {\r\n  font-family: var(--book-title);\r\n  font-size: calc(var(--base-size) * 3);\r\n  font-weight: bold;\r\n  text-transform: uppercase;\r\n  letter-spacing: 3px;\r\n  color: var(--dark-text);\r\n  margin-top: calc(var(--baseline) * 3);\r\n  margin-bottom: calc(var(--baseline) * 2);\r\n}\r\n.book__page .page__content-author {\r\n  font-family: var(--title);\r\n  font-size: calc(var(--base-size) * 1.2);\r\n  font-weight: 100;\r\n  text-transform: uppercase;\r\n  color: var(--dark-text);\r\n  border-top: 1px solid var(--dark-text);\r\n  border-bottom: 1px solid var(--dark-text);\r\n  display: inline-block;\r\n  padding: calc(var(--baseline) / 2) calc(var(--baseline) / 5);\r\n  margin-bottom: calc(var(--baseline) * 6);\r\n}\r\n.book__page .page__content-credits {\r\n  font-family: var(--title);\r\n  text-transform: uppercase;\r\n  font-size: calc(var(--base-size) * 0.8);\r\n  margin-bottom: calc(var(--baseline) * 1.5);\r\n  letter-spacing: 1px;\r\n  font-weight: bold;\r\n}\r\n.book__page .page__content-credits span {\r\n  display: block;\r\n  font-size: calc(var(--base-size) * 1.2);\r\n  letter-spacing: 0;\r\n}\r\n.book__page .page__content-copyright {\r\n  position: absolute;\r\n  width: calc(100% - (var(--baseline) * 2));\r\n  bottom: calc(var(--baseline) * 2);\r\n  font-family: var(--title);\r\n  font-size: calc(var(--base-size) * 0.8);\r\n  text-transform: uppercase;\r\n  font-weight: bold;\r\n}\r\n.book__page .page__content-title {\r\n  font-family: var(--title);\r\n  font-size: calc(var(--base-size) * 2);\r\n  text-transform: uppercase;\r\n  letter-spacing: 1px;\r\n  margin-top: calc(var(--baseline) * 5);\r\n  margin-bottom: calc(var(--baseline) * 3);\r\n}\r\n.book__page .page__content-table {\r\n  width: 100%;\r\n  margin-top: calc(var(--baseline) * 2);\r\n}\r\n.book__page .page__content-table td {\r\n  font-family: var(--title);\r\n  font-size: calc(var(--base-size) * 1);\r\n  padding-bottom: calc(var(--baseline) * 1.5);\r\n  text-transform: uppercase;\r\n}\r\n.book__page .page__content-blockquote {\r\n  margin-bottom: calc(var(--baseline) * 2);\r\n}\r\n.book__page .page__content-blockquote-text {\r\n  font-family: var(--title);\r\n  font-size: calc(var(--base-size) * 1.2);\r\n  font-style: italic;\r\n  text-align: justify;\r\n  font-weight: bold;\r\n}\r\n.book__page .page__content-blockquote-reference {\r\n  font-family: var(--title);\r\n  font-size: calc(var(--base-size) * 0.7);\r\n  margin-top: calc(var(--baseline) * 0.3);\r\n  float: right;\r\n  text-transform: uppercase;\r\n}\r\n.book__page .page__content-text {\r\n  font-family: var(--title);\r\n  font-size: calc(var(--base-size));\r\n  text-align: justify;\r\n  text-indent: var(--baseline);\r\n}\r\n.book__page .page__number {\r\n  position: absolute;\r\n  bottom: var(--baseline);\r\n  width: calc(100% - (var(--baseline) * 2));\r\n  font-family: var(--title);\r\n  font-size: calc(var(--base-size));\r\n  text-align: center;\r\n}\r\n.book input[type=radio] {\r\n  display: none;\r\n}\r\n.book input[type=radio]:checked + .book__page {\r\n  transition: transform 0.9s cubic-bezier(0.645, 0.045, 0.355, 1);\r\n  transform: rotateY(-180deg);\r\n}", "",{"version":3,"sources":["webpack://./src/main/resources/js/components/book/Get.css"],"names":[],"mappings":"AACA;EACE,WAAW;EACX,kBAAkB;EAClB,kBAAkB;EAClB,oBAAoB;EACpB,YAAY;EACZ,0CAA0C;EAC1C,gBAAgB;EAChB,UAAU;EACV,sCAAsC;EACtC,oCAAoC;EACpC,mCAAmC;EACnC,kCAAkC;AACpC;;AAEA;EACE,sBAAsB;AACxB;;AAEA;EACE,WAAW;EACX,YAAY;EACZ,wCAAwC;AAC1C;;AAEA;EACE,WAAW;EACX,YAAY;EACZ,aAAa;EACb,mBAAmB;AACrB;AACA;EACE,kBAAkB;EAClB,UAAU;EACV,YAAY;EACZ,aAAa;EACb,wBAAwB;EACxB,+DAA+D;EAC/D,uBAAuB;EACvB,mGAAmG;AACrG;AACA;EACE,mGAAmG;AACrG;AACA;EACE,eAAe;EACf,gBAAgB;AAClB;AACA;EACE,YAAY;EACZ,WAAW;EACX,YAAY;AACd;AACA;EACE,eAAe;EACf,gBAAgB;AAClB;AACA;EACE,YAAY;EACZ,WAAW;EACX,YAAY;AACd;AACA;EACE,kBAAkB;EAClB,QAAQ;EACR,oBAAoB;EACpB,4BAA4B;EAC5B,mGAAmG;AACrG;AACA;EACE,kBAAkB;EAClB,WAAW;EACX,YAAY;EACZ,wCAAwC;AAC1C;AACA;EACE,kBAAkB;EAClB,WAAW;EACX,YAAY;EACZ,sCAAsC;EACtC,0CAA0C;AAC5C;AACA;EACE,WAAW;EACX,eAAe;EACf,YAAY;AACd;AACA;EACE,wBAAwB;EACxB,YAAY;EACZ,kBAAkB;EAClB,kBAAkB;AACpB;AACA;EACE,8BAA8B;EAC9B,qCAAqC;EACrC,iBAAiB;EACjB,yBAAyB;EACzB,mBAAmB;EACnB,uBAAuB;EACvB,qCAAqC;EACrC,wCAAwC;AAC1C;AACA;EACE,yBAAyB;EACzB,uCAAuC;EACvC,gBAAgB;EAChB,yBAAyB;EACzB,uBAAuB;EACvB,sCAAsC;EACtC,yCAAyC;EACzC,qBAAqB;EACrB,4DAA4D;EAC5D,wCAAwC;AAC1C;AACA;EACE,yBAAyB;EACzB,yBAAyB;EACzB,uCAAuC;EACvC,0CAA0C;EAC1C,mBAAmB;EACnB,iBAAiB;AACnB;AACA;EACE,cAAc;EACd,uCAAuC;EACvC,iBAAiB;AACnB;AACA;EACE,kBAAkB;EAClB,yCAAyC;EACzC,iCAAiC;EACjC,yBAAyB;EACzB,uCAAuC;EACvC,yBAAyB;EACzB,iBAAiB;AACnB;AACA;EACE,yBAAyB;EACzB,qCAAqC;EACrC,yBAAyB;EACzB,mBAAmB;EACnB,qCAAqC;EACrC,wCAAwC;AAC1C;AACA;EACE,WAAW;EACX,qCAAqC;AACvC;AACA;EACE,yBAAyB;EACzB,qCAAqC;EACrC,2CAA2C;EAC3C,yBAAyB;AAC3B;AACA;EACE,wCAAwC;AAC1C;AACA;EACE,yBAAyB;EACzB,uCAAuC;EACvC,kBAAkB;EAClB,mBAAmB;EACnB,iBAAiB;AACnB;AACA;EACE,yBAAyB;EACzB,uCAAuC;EACvC,uCAAuC;EACvC,YAAY;EACZ,yBAAyB;AAC3B;AACA;EACE,yBAAyB;EACzB,iCAAiC;EACjC,mBAAmB;EACnB,4BAA4B;AAC9B;AACA;EACE,kBAAkB;EAClB,uBAAuB;EACvB,yCAAyC;EACzC,yBAAyB;EACzB,iCAAiC;EACjC,kBAAkB;AACpB;AACA;EACE,aAAa;AACf;AACA;EACE,+DAA+D;EAC/D,2BAA2B;AAC7B","sourcesContent":["@import url(\"https://fonts.googleapis.com/css?family=Cormorant+Garamond:300,400,600|Tulpen+One&display=swap\");\r\n:root {\r\n  /* colors */\r\n  --body-bg: #FAFAFA;\r\n  --page-bg: #F5F5F5;\r\n  --dark-text: #2A2935;\r\n  /* spacing */\r\n  /* this is what defines the global scale */\r\n  --baseline: 12px;\r\n  /* fonts */\r\n  --book-title: \"Tulpen One\", sans-serif;\r\n  --title: \"Cormorant Garamond\", serif;\r\n  --body: \"Cormorant Garamond\", serif;\r\n  --base-size: var(--baseline) * 1.2;\r\n}\r\n\r\n* {\r\n  box-sizing: border-box;\r\n}\r\n\r\n.cover {\r\n  width: 100%;\r\n  height: 200%;\r\n  box-shadow: 0 0 100px rgba(0, 0, 0, 0.3);\r\n}\r\n\r\n.book {\r\n  width: 100%;\r\n  height: 100%;\r\n  display: flex;\r\n  perspective: 1200px;\r\n}\r\n.book__page {\r\n  position: relative;\r\n  width: 50%;\r\n  height: 100%;\r\n  display: grid;\r\n  transform: rotateY(0deg);\r\n  transition: transform 0.9s cubic-bezier(0.645, 0.045, 0.355, 1);\r\n  transform-origin: 0% 0%;\r\n  background-image: url(https://i.pinimg.com/originals/8d/23/06/8d2306b98839234e49ce96a8b76e20ae.jpg);\r\n}\r\n.book__page:nth-of-type(1) {\r\n  background-image: url(https://i.pinimg.com/originals/8d/23/06/8d2306b98839234e49ce96a8b76e20ae.jpg);\r\n}\r\n.book__page--1 {\r\n  cursor: pointer;\r\n  overflow: hidden;\r\n}\r\n.book__page--1 img {\r\n  height: 100%;\r\n  width: 100%;\r\n  height: auto;\r\n}\r\n.book__page--4 {\r\n  cursor: pointer;\r\n  overflow: hidden;\r\n}\r\n.book__page--4 img {\r\n  height: 100%;\r\n  width: 100%;\r\n  height: auto;\r\n}\r\n.book__page--2 {\r\n  position: absolute;\r\n  right: 0;\r\n  pointer-events: none;\r\n  transform-style: preserve-3d;\r\n  background-image: url(https://i.pinimg.com/originals/8d/23/06/8d2306b98839234e49ce96a8b76e20ae.jpg);\r\n}\r\n.book__page-front {\r\n  position: absolute;\r\n  width: 100%;\r\n  height: 100%;\r\n  transform: rotateY(0deg) translateZ(1px);\r\n}\r\n.book__page-back {\r\n  position: absolute;\r\n  width: 100%;\r\n  height: 100%;\r\n  padding: 0 calc(var(--baseline) * 1.8);\r\n  transform: rotateY(180deg) translateZ(1px);\r\n}\r\n.book__page-back img {\r\n  width: 100%;\r\n  max-width: 100%;\r\n  height: auto;\r\n}\r\n.book__page .page__content {\r\n  padding: var(--baseline);\r\n  height: 100%;\r\n  position: relative;\r\n  text-align: center;\r\n}\r\n.book__page .page__content-book-title {\r\n  font-family: var(--book-title);\r\n  font-size: calc(var(--base-size) * 3);\r\n  font-weight: bold;\r\n  text-transform: uppercase;\r\n  letter-spacing: 3px;\r\n  color: var(--dark-text);\r\n  margin-top: calc(var(--baseline) * 3);\r\n  margin-bottom: calc(var(--baseline) * 2);\r\n}\r\n.book__page .page__content-author {\r\n  font-family: var(--title);\r\n  font-size: calc(var(--base-size) * 1.2);\r\n  font-weight: 100;\r\n  text-transform: uppercase;\r\n  color: var(--dark-text);\r\n  border-top: 1px solid var(--dark-text);\r\n  border-bottom: 1px solid var(--dark-text);\r\n  display: inline-block;\r\n  padding: calc(var(--baseline) / 2) calc(var(--baseline) / 5);\r\n  margin-bottom: calc(var(--baseline) * 6);\r\n}\r\n.book__page .page__content-credits {\r\n  font-family: var(--title);\r\n  text-transform: uppercase;\r\n  font-size: calc(var(--base-size) * 0.8);\r\n  margin-bottom: calc(var(--baseline) * 1.5);\r\n  letter-spacing: 1px;\r\n  font-weight: bold;\r\n}\r\n.book__page .page__content-credits span {\r\n  display: block;\r\n  font-size: calc(var(--base-size) * 1.2);\r\n  letter-spacing: 0;\r\n}\r\n.book__page .page__content-copyright {\r\n  position: absolute;\r\n  width: calc(100% - (var(--baseline) * 2));\r\n  bottom: calc(var(--baseline) * 2);\r\n  font-family: var(--title);\r\n  font-size: calc(var(--base-size) * 0.8);\r\n  text-transform: uppercase;\r\n  font-weight: bold;\r\n}\r\n.book__page .page__content-title {\r\n  font-family: var(--title);\r\n  font-size: calc(var(--base-size) * 2);\r\n  text-transform: uppercase;\r\n  letter-spacing: 1px;\r\n  margin-top: calc(var(--baseline) * 5);\r\n  margin-bottom: calc(var(--baseline) * 3);\r\n}\r\n.book__page .page__content-table {\r\n  width: 100%;\r\n  margin-top: calc(var(--baseline) * 2);\r\n}\r\n.book__page .page__content-table td {\r\n  font-family: var(--title);\r\n  font-size: calc(var(--base-size) * 1);\r\n  padding-bottom: calc(var(--baseline) * 1.5);\r\n  text-transform: uppercase;\r\n}\r\n.book__page .page__content-blockquote {\r\n  margin-bottom: calc(var(--baseline) * 2);\r\n}\r\n.book__page .page__content-blockquote-text {\r\n  font-family: var(--title);\r\n  font-size: calc(var(--base-size) * 1.2);\r\n  font-style: italic;\r\n  text-align: justify;\r\n  font-weight: bold;\r\n}\r\n.book__page .page__content-blockquote-reference {\r\n  font-family: var(--title);\r\n  font-size: calc(var(--base-size) * 0.7);\r\n  margin-top: calc(var(--baseline) * 0.3);\r\n  float: right;\r\n  text-transform: uppercase;\r\n}\r\n.book__page .page__content-text {\r\n  font-family: var(--title);\r\n  font-size: calc(var(--base-size));\r\n  text-align: justify;\r\n  text-indent: var(--baseline);\r\n}\r\n.book__page .page__number {\r\n  position: absolute;\r\n  bottom: var(--baseline);\r\n  width: calc(100% - (var(--baseline) * 2));\r\n  font-family: var(--title);\r\n  font-size: calc(var(--base-size));\r\n  text-align: center;\r\n}\r\n.book input[type=radio] {\r\n  display: none;\r\n}\r\n.book input[type=radio]:checked + .book__page {\r\n  transition: transform 0.9s cubic-bezier(0.645, 0.045, 0.355, 1);\r\n  transform: rotateY(-180deg);\r\n}"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.i, ":root {\r\n  /* colors */\r\n  --body-bg: #FAFAFA;\r\n  --page-bg: #F5F5F5;\r\n  --dark-text: #2A2935;\r\n  /* spacing */\r\n  /* this is what defines the global scale */\r\n  --baseline: 12px;\r\n  /* fonts */\r\n  --book-title: \"Tulpen One\", sans-serif;\r\n  --title: \"Cormorant Garamond\", serif;\r\n  --body: \"Cormorant Garamond\", serif;\r\n  --base-size: var(--baseline) * 1.2;\r\n}\r\n\r\n* {\r\n  box-sizing: border-box;\r\n}\r\n\r\n.cover {\r\n  width: 100%;\r\n  height: 200%;\r\n  box-shadow: 0 0 100px rgba(0, 0, 0, 0.3);\r\n}\r\n\r\n.book {\r\n  width: 100%;\r\n  height: 100%;\r\n  display: flex;\r\n  perspective: 1200px;\r\n}\r\n.book__page {\r\n  position: relative;\r\n  width: 50%;\r\n  height: 100%;\r\n  display: grid;\r\n  transform: rotateY(0deg);\r\n  transition: transform 0.9s cubic-bezier(0.645, 0.045, 0.355, 1);\r\n  transform-origin: 0% 0%;\r\n  background-image: url(https://i.pinimg.com/originals/8d/23/06/8d2306b98839234e49ce96a8b76e20ae.jpg);\r\n}\r\n.book__page:nth-of-type(1) {\r\n  background-image: url(https://i.pinimg.com/originals/8d/23/06/8d2306b98839234e49ce96a8b76e20ae.jpg);\r\n}\r\n.book__page--1 {\r\n  cursor: pointer;\r\n  overflow: hidden;\r\n}\r\n.book__page--1 img {\r\n  height: 100%;\r\n  width: 100%;\r\n  height: auto;\r\n}\r\n.book__page--4 {\r\n  cursor: pointer;\r\n  overflow: hidden;\r\n}\r\n.book__page--4 img {\r\n  height: 100%;\r\n  width: 100%;\r\n  height: auto;\r\n}\r\n.book__page--2 {\r\n  position: absolute;\r\n  right: 0;\r\n  pointer-events: none;\r\n  transform-style: preserve-3d;\r\n  background-image: url(https://i.pinimg.com/originals/8d/23/06/8d2306b98839234e49ce96a8b76e20ae.jpg);\r\n}\r\n.book__page-front {\r\n  position: absolute;\r\n  width: 100%;\r\n  height: 100%;\r\n  transform: rotateY(0deg) translateZ(1px);\r\n}\r\n.book__page-back {\r\n  position: absolute;\r\n  width: 100%;\r\n  height: 100%;\r\n  padding: 0 calc(var(--baseline) * 1.8);\r\n  transform: rotateY(180deg) translateZ(1px);\r\n}\r\n.book__page-back img {\r\n  width: 100%;\r\n  max-width: 100%;\r\n  height: auto;\r\n}\r\n.book__page .page__content {\r\n  padding: var(--baseline);\r\n  height: 100%;\r\n  position: relative;\r\n  text-align: center;\r\n}\r\n.book__page .page__content-book-title {\r\n  font-family: var(--book-title);\r\n  font-size: calc(var(--base-size) * 3);\r\n  font-weight: bold;\r\n  text-transform: uppercase;\r\n  letter-spacing: 3px;\r\n  color: var(--dark-text);\r\n  margin-top: calc(var(--baseline) * 3);\r\n  margin-bottom: calc(var(--baseline) * 2);\r\n}\r\n.book__page .page__content-author {\r\n  font-family: var(--title);\r\n  font-size: calc(var(--base-size) * 1.2);\r\n  font-weight: 100;\r\n  text-transform: uppercase;\r\n  color: var(--dark-text);\r\n  border-top: 1px solid var(--dark-text);\r\n  border-bottom: 1px solid var(--dark-text);\r\n  display: inline-block;\r\n  padding: calc(var(--baseline) / 2) calc(var(--baseline) / 5);\r\n  margin-bottom: calc(var(--baseline) *3);\r\n}\r\n.book__page .page__content-credits {\r\n  font-family: var(--title);\r\n  text-transform: uppercase;\r\n  font-size: calc(var(--base-size) * 0.8);\r\n  margin-bottom: calc(var(--baseline) * 1.5);\r\n  letter-spacing: 1px;\r\n  font-weight: bold;\r\n}\r\n.book__page .page__content-credits span {\r\n  display: block;\r\n  font-size: calc(var(--base-size) * 1.2);\r\n  letter-spacing: 0;\r\n}\r\n.book__page .page__content-copyright {\r\n  position: absolute;\r\n  width: calc(100% - (var(--baseline) * 2));\r\n  bottom: calc(var(--baseline) * 2);\r\n  font-family: var(--title);\r\n  font-size: calc(var(--base-size) * 0.8);\r\n  text-transform: uppercase;\r\n  font-weight: bold;\r\n}\r\n.book__page .page__content-title {\r\n  font-family: var(--title);\r\n  font-size: calc(var(--base-size) * 2);\r\n  text-transform: uppercase;\r\n  letter-spacing: 1px;\r\n  margin-top: calc(var(--baseline) * 2);\r\n  margin-bottom: calc(var(--baseline)*1.5);\r\n}\r\n.book__page .page__content-table {\r\n  width: 100%;\r\n  margin-top: calc(var(--baseline) * 2);\r\n}\r\n.book__page .page__content-table td {\r\n  font-family: var(--title);\r\n  font-size: calc(var(--base-size) * 1);\r\n  padding-bottom: calc(var(--baseline) * 1.5);\r\n  text-transform: uppercase;\r\n}\r\n.book__page .page__content-blockquote {\r\n  margin-bottom: calc(var(--baseline) * 2);\r\n}\r\n.book__page .page__content-blockquote-text {\r\n  font-family: var(--title);\r\n  font-size: calc(var(--base-size) * 1.2);\r\n  font-style: italic;\r\n  text-align: justify;\r\n  font-weight: bold;\r\n}\r\n.book__page .page__content-blockquote-reference {\r\n  font-family: var(--title);\r\n  font-size: calc(var(--base-size) * 0.7);\r\n  margin-top: calc(var(--baseline) * 0.3);\r\n  float: right;\r\n  text-transform: uppercase;\r\n}\r\n.book__page .page__content-text {\r\n  font-family: var(--title);\r\n  font-size: calc(var(--base-size));\r\n  text-align: justify;\r\n  text-indent: var(--baseline);\r\n}\r\n.book__page .page__number {\r\n  position: absolute;\r\n  bottom: var(--baseline);\r\n  width: calc(100% - (var(--baseline) * 2));\r\n  font-family: var(--title);\r\n  font-size: calc(var(--base-size));\r\n  text-align: center;\r\n}\r\n.book input[type=radio] {\r\n  display: none;\r\n}\r\n.book input[type=radio]:checked + .book__page {\r\n  transition: transform 0.9s cubic-bezier(0.645, 0.045, 0.355, 1);\r\n  transform: rotateY(-180deg);\r\n}", "",{"version":3,"sources":["webpack://./src/main/resources/js/components/book/Get.css"],"names":[],"mappings":"AACA;EACE,WAAW;EACX,kBAAkB;EAClB,kBAAkB;EAClB,oBAAoB;EACpB,YAAY;EACZ,0CAA0C;EAC1C,gBAAgB;EAChB,UAAU;EACV,sCAAsC;EACtC,oCAAoC;EACpC,mCAAmC;EACnC,kCAAkC;AACpC;;AAEA;EACE,sBAAsB;AACxB;;AAEA;EACE,WAAW;EACX,YAAY;EACZ,wCAAwC;AAC1C;;AAEA;EACE,WAAW;EACX,YAAY;EACZ,aAAa;EACb,mBAAmB;AACrB;AACA;EACE,kBAAkB;EAClB,UAAU;EACV,YAAY;EACZ,aAAa;EACb,wBAAwB;EACxB,+DAA+D;EAC/D,uBAAuB;EACvB,mGAAmG;AACrG;AACA;EACE,mGAAmG;AACrG;AACA;EACE,eAAe;EACf,gBAAgB;AAClB;AACA;EACE,YAAY;EACZ,WAAW;EACX,YAAY;AACd;AACA;EACE,eAAe;EACf,gBAAgB;AAClB;AACA;EACE,YAAY;EACZ,WAAW;EACX,YAAY;AACd;AACA;EACE,kBAAkB;EAClB,QAAQ;EACR,oBAAoB;EACpB,4BAA4B;EAC5B,mGAAmG;AACrG;AACA;EACE,kBAAkB;EAClB,WAAW;EACX,YAAY;EACZ,wCAAwC;AAC1C;AACA;EACE,kBAAkB;EAClB,WAAW;EACX,YAAY;EACZ,sCAAsC;EACtC,0CAA0C;AAC5C;AACA;EACE,WAAW;EACX,eAAe;EACf,YAAY;AACd;AACA;EACE,wBAAwB;EACxB,YAAY;EACZ,kBAAkB;EAClB,kBAAkB;AACpB;AACA;EACE,8BAA8B;EAC9B,qCAAqC;EACrC,iBAAiB;EACjB,yBAAyB;EACzB,mBAAmB;EACnB,uBAAuB;EACvB,qCAAqC;EACrC,wCAAwC;AAC1C;AACA;EACE,yBAAyB;EACzB,uCAAuC;EACvC,gBAAgB;EAChB,yBAAyB;EACzB,uBAAuB;EACvB,sCAAsC;EACtC,yCAAyC;EACzC,qBAAqB;EACrB,4DAA4D;EAC5D,uCAAuC;AACzC;AACA;EACE,yBAAyB;EACzB,yBAAyB;EACzB,uCAAuC;EACvC,0CAA0C;EAC1C,mBAAmB;EACnB,iBAAiB;AACnB;AACA;EACE,cAAc;EACd,uCAAuC;EACvC,iBAAiB;AACnB;AACA;EACE,kBAAkB;EAClB,yCAAyC;EACzC,iCAAiC;EACjC,yBAAyB;EACzB,uCAAuC;EACvC,yBAAyB;EACzB,iBAAiB;AACnB;AACA;EACE,yBAAyB;EACzB,qCAAqC;EACrC,yBAAyB;EACzB,mBAAmB;EACnB,qCAAqC;EACrC,wCAAwC;AAC1C;AACA;EACE,WAAW;EACX,qCAAqC;AACvC;AACA;EACE,yBAAyB;EACzB,qCAAqC;EACrC,2CAA2C;EAC3C,yBAAyB;AAC3B;AACA;EACE,wCAAwC;AAC1C;AACA;EACE,yBAAyB;EACzB,uCAAuC;EACvC,kBAAkB;EAClB,mBAAmB;EACnB,iBAAiB;AACnB;AACA;EACE,yBAAyB;EACzB,uCAAuC;EACvC,uCAAuC;EACvC,YAAY;EACZ,yBAAyB;AAC3B;AACA;EACE,yBAAyB;EACzB,iCAAiC;EACjC,mBAAmB;EACnB,4BAA4B;AAC9B;AACA;EACE,kBAAkB;EAClB,uBAAuB;EACvB,yCAAyC;EACzC,yBAAyB;EACzB,iCAAiC;EACjC,kBAAkB;AACpB;AACA;EACE,aAAa;AACf;AACA;EACE,+DAA+D;EAC/D,2BAA2B;AAC7B","sourcesContent":["@import url(\"https://fonts.googleapis.com/css?family=Cormorant+Garamond:300,400,600|Tulpen+One&display=swap\");\r\n:root {\r\n  /* colors */\r\n  --body-bg: #FAFAFA;\r\n  --page-bg: #F5F5F5;\r\n  --dark-text: #2A2935;\r\n  /* spacing */\r\n  /* this is what defines the global scale */\r\n  --baseline: 12px;\r\n  /* fonts */\r\n  --book-title: \"Tulpen One\", sans-serif;\r\n  --title: \"Cormorant Garamond\", serif;\r\n  --body: \"Cormorant Garamond\", serif;\r\n  --base-size: var(--baseline) * 1.2;\r\n}\r\n\r\n* {\r\n  box-sizing: border-box;\r\n}\r\n\r\n.cover {\r\n  width: 100%;\r\n  height: 200%;\r\n  box-shadow: 0 0 100px rgba(0, 0, 0, 0.3);\r\n}\r\n\r\n.book {\r\n  width: 100%;\r\n  height: 100%;\r\n  display: flex;\r\n  perspective: 1200px;\r\n}\r\n.book__page {\r\n  position: relative;\r\n  width: 50%;\r\n  height: 100%;\r\n  display: grid;\r\n  transform: rotateY(0deg);\r\n  transition: transform 0.9s cubic-bezier(0.645, 0.045, 0.355, 1);\r\n  transform-origin: 0% 0%;\r\n  background-image: url(https://i.pinimg.com/originals/8d/23/06/8d2306b98839234e49ce96a8b76e20ae.jpg);\r\n}\r\n.book__page:nth-of-type(1) {\r\n  background-image: url(https://i.pinimg.com/originals/8d/23/06/8d2306b98839234e49ce96a8b76e20ae.jpg);\r\n}\r\n.book__page--1 {\r\n  cursor: pointer;\r\n  overflow: hidden;\r\n}\r\n.book__page--1 img {\r\n  height: 100%;\r\n  width: 100%;\r\n  height: auto;\r\n}\r\n.book__page--4 {\r\n  cursor: pointer;\r\n  overflow: hidden;\r\n}\r\n.book__page--4 img {\r\n  height: 100%;\r\n  width: 100%;\r\n  height: auto;\r\n}\r\n.book__page--2 {\r\n  position: absolute;\r\n  right: 0;\r\n  pointer-events: none;\r\n  transform-style: preserve-3d;\r\n  background-image: url(https://i.pinimg.com/originals/8d/23/06/8d2306b98839234e49ce96a8b76e20ae.jpg);\r\n}\r\n.book__page-front {\r\n  position: absolute;\r\n  width: 100%;\r\n  height: 100%;\r\n  transform: rotateY(0deg) translateZ(1px);\r\n}\r\n.book__page-back {\r\n  position: absolute;\r\n  width: 100%;\r\n  height: 100%;\r\n  padding: 0 calc(var(--baseline) * 1.8);\r\n  transform: rotateY(180deg) translateZ(1px);\r\n}\r\n.book__page-back img {\r\n  width: 100%;\r\n  max-width: 100%;\r\n  height: auto;\r\n}\r\n.book__page .page__content {\r\n  padding: var(--baseline);\r\n  height: 100%;\r\n  position: relative;\r\n  text-align: center;\r\n}\r\n.book__page .page__content-book-title {\r\n  font-family: var(--book-title);\r\n  font-size: calc(var(--base-size) * 3);\r\n  font-weight: bold;\r\n  text-transform: uppercase;\r\n  letter-spacing: 3px;\r\n  color: var(--dark-text);\r\n  margin-top: calc(var(--baseline) * 3);\r\n  margin-bottom: calc(var(--baseline) * 2);\r\n}\r\n.book__page .page__content-author {\r\n  font-family: var(--title);\r\n  font-size: calc(var(--base-size) * 1.2);\r\n  font-weight: 100;\r\n  text-transform: uppercase;\r\n  color: var(--dark-text);\r\n  border-top: 1px solid var(--dark-text);\r\n  border-bottom: 1px solid var(--dark-text);\r\n  display: inline-block;\r\n  padding: calc(var(--baseline) / 2) calc(var(--baseline) / 5);\r\n  margin-bottom: calc(var(--baseline) *3);\r\n}\r\n.book__page .page__content-credits {\r\n  font-family: var(--title);\r\n  text-transform: uppercase;\r\n  font-size: calc(var(--base-size) * 0.8);\r\n  margin-bottom: calc(var(--baseline) * 1.5);\r\n  letter-spacing: 1px;\r\n  font-weight: bold;\r\n}\r\n.book__page .page__content-credits span {\r\n  display: block;\r\n  font-size: calc(var(--base-size) * 1.2);\r\n  letter-spacing: 0;\r\n}\r\n.book__page .page__content-copyright {\r\n  position: absolute;\r\n  width: calc(100% - (var(--baseline) * 2));\r\n  bottom: calc(var(--baseline) * 2);\r\n  font-family: var(--title);\r\n  font-size: calc(var(--base-size) * 0.8);\r\n  text-transform: uppercase;\r\n  font-weight: bold;\r\n}\r\n.book__page .page__content-title {\r\n  font-family: var(--title);\r\n  font-size: calc(var(--base-size) * 2);\r\n  text-transform: uppercase;\r\n  letter-spacing: 1px;\r\n  margin-top: calc(var(--baseline) * 2);\r\n  margin-bottom: calc(var(--baseline)*1.5);\r\n}\r\n.book__page .page__content-table {\r\n  width: 100%;\r\n  margin-top: calc(var(--baseline) * 2);\r\n}\r\n.book__page .page__content-table td {\r\n  font-family: var(--title);\r\n  font-size: calc(var(--base-size) * 1);\r\n  padding-bottom: calc(var(--baseline) * 1.5);\r\n  text-transform: uppercase;\r\n}\r\n.book__page .page__content-blockquote {\r\n  margin-bottom: calc(var(--baseline) * 2);\r\n}\r\n.book__page .page__content-blockquote-text {\r\n  font-family: var(--title);\r\n  font-size: calc(var(--base-size) * 1.2);\r\n  font-style: italic;\r\n  text-align: justify;\r\n  font-weight: bold;\r\n}\r\n.book__page .page__content-blockquote-reference {\r\n  font-family: var(--title);\r\n  font-size: calc(var(--base-size) * 0.7);\r\n  margin-top: calc(var(--baseline) * 0.3);\r\n  float: right;\r\n  text-transform: uppercase;\r\n}\r\n.book__page .page__content-text {\r\n  font-family: var(--title);\r\n  font-size: calc(var(--base-size));\r\n  text-align: justify;\r\n  text-indent: var(--baseline);\r\n}\r\n.book__page .page__number {\r\n  position: absolute;\r\n  bottom: var(--baseline);\r\n  width: calc(100% - (var(--baseline) * 2));\r\n  font-family: var(--title);\r\n  font-size: calc(var(--base-size));\r\n  text-align: center;\r\n}\r\n.book input[type=radio] {\r\n  display: none;\r\n}\r\n.book input[type=radio]:checked + .book__page {\r\n  transition: transform 0.9s cubic-bezier(0.645, 0.045, 0.355, 1);\r\n  transform: rotateY(-180deg);\r\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ __webpack_exports__["default"] = (___CSS_LOADER_EXPORT___);
 
@@ -36655,11 +36655,11 @@ var Main = /*#__PURE__*/function (_Component) {
         exact: true,
         component: _request_Create__WEBPACK_IMPORTED_MODULE_20__["default"]
       }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_23__["Route"], {
-        path: "/requests/me",
+        path: "/requests/me/:page",
         exact: true,
         component: _request_ListMyRequest__WEBPACK_IMPORTED_MODULE_21__["default"]
       }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_23__["Route"], {
-        path: "/requests/received",
+        path: "/requests/received/:page",
         exact: true,
         component: _request_ListReceivedRequest__WEBPACK_IMPORTED_MODULE_22__["default"]
       })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(_Footer__WEBPACK_IMPORTED_MODULE_8__["default"], null)));
@@ -36840,9 +36840,9 @@ var Nav = /*#__PURE__*/function (_Component) {
       }, "A\xF1adir libro")))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
         href: "#"
       }, "Peticiones"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("ul", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
-        href: "/requests/me"
+        href: "/requests/me/0"
       }, "Enviadas")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
-        href: "/requests/received"
+        href: "/requests/received/0"
       }, "Recibidas")))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("li", {
         style: {
           "float": "right"
@@ -37416,7 +37416,8 @@ var Form = /*#__PURE__*/function (_Component) {
       fieldPrice: "",
       errorField: [],
       genres: [],
-      fieldGen: []
+      fieldGen: [],
+      alreadyRequest: false
     };
     return _this;
   }
@@ -37438,7 +37439,7 @@ var Form = /*#__PURE__*/function (_Component) {
                 res = genres.genres;
                 id = this.props.match.params.id;
                 _context.next = 7;
-                return _services_Book__WEBPACK_IMPORTED_MODULE_8__["default"].getBook(id);
+                return _services_Book__WEBPACK_IMPORTED_MODULE_8__["default"].getBookToEdit(id);
 
               case 7:
                 b = _context.sent;
@@ -37461,7 +37462,8 @@ var Form = /*#__PURE__*/function (_Component) {
                     fieldAction: b.book.action,
                     fieldPrice: b.book.price,
                     fieldGen: genrs,
-                    correctBook: ""
+                    correctBook: "",
+                    alreadyRequest: b.alreadyRequest
                   });
                 }
 
@@ -37635,7 +37637,7 @@ var Form = /*#__PURE__*/function (_Component) {
         "class": "text-danger"
       }, "*")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         "class": "col-sm-9"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("input", {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("textarea", {
         type: "text",
         "class": "form-control",
         value: this.state.fieldDescription,
@@ -37710,12 +37712,15 @@ var Form = /*#__PURE__*/function (_Component) {
           return _this2.setState({
             fieldAction: event.target.value
           });
-        }
+        },
+        disabled: this.state.alreadyRequest
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("option", {
         value: "INTERCAMBIO"
       }, "INTERCAMBIO"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("option", {
         value: "VENTA"
-      }, "VENTA")))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+      }, "VENTA")), this.state.alreadyRequest ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
+        "class": "text-danger"
+      }, "*Tiene una petici\xF3n en proceso.") : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         "class": "form-group row"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("label", {
         "for": "firstName",
@@ -38106,6 +38111,8 @@ var Get = /*#__PURE__*/function (_Component) {
           "class": "page__content-credits"
         }, "A\xF1o de publicaci\xF3n", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("span", null, this.state.book.publicationYear)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
           "class": "page__content-credits"
+        }, "ISBN", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("span", null, this.state.book.isbn)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
+          "class": "page__content-credits"
         }, "\xBFQu\xE9 quiere hacer?", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("span", null, this.state.book.action == "VENTA" ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null, " ", this.state.book.action, " por ", this.state.book.price, " \u20AC") : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null, " ", this.state.book.action), " ")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
           "class": "page__content-credits"
         }, "Estado", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("span", null, this.state.book.status)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
@@ -38212,7 +38219,7 @@ var Get = /*#__PURE__*/function (_Component) {
 
               case 4:
                 res = _context2.sent;
-                window.location.replace("/books/me");
+                window.location.replace("/books/me/0");
 
               case 6:
               case "end":
@@ -38377,7 +38384,7 @@ var List = /*#__PURE__*/function (_Component) {
       books: [],
       isAdded: [],
       username: ""
-    }, _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2___default()(_this$state, "isAdded", false), _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2___default()(_this$state, "pages", []), _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2___default()(_this$state, "actualPage", 0), _this$state);
+    }, _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2___default()(_this$state, "isAdded", false), _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2___default()(_this$state, "pages", []), _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2___default()(_this$state, "actualPage", 0), _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2___default()(_this$state, "numTotalPages", 0), _this$state);
     return _this;
   }
 
@@ -38414,7 +38421,8 @@ var List = /*#__PURE__*/function (_Component) {
                   books: res.books,
                   username: username.username,
                   isAdded: res.isAdded,
-                  pages: res.pages
+                  pages: res.pages,
+                  numTotalPages: parseInt(res.numTotalPages)
                 });
 
               case 9:
@@ -38436,10 +38444,16 @@ var List = /*#__PURE__*/function (_Component) {
     value: function render() {
       var _this2 = this;
 
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("div", null, this.state.books.length == 0 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("b", null, "Actualmente no existen libros para mostrar.")) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("center", null, this.state.pages.length > 1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("center", null, this.state.actualPage != 0 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("a", {
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("div", null, this.state.books.length == 0 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("b", null, "Actualmente no existen libros para mostrar.")) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("center", null, this.state.books.length != 0 && this.state.pages.length > 1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("center", null, this.state.actualPage != 0 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("span", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("a", {
+        "class": "btn btn-primary",
+        href: "/books/all/0"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("b", null, String("<<"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("a", {
+        style: {
+          margin: "5px"
+        },
         "class": "btn btn-primary",
         href: "/books/all/" + parseInt(this.state.actualPage - 1)
-      }, "Anterior") : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("p", null), this.state.pages.map(function (page) {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("b", null, String("<")))) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("p", null), this.state.pages.map(function (page) {
         return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("a", {
           style: {
             color: _this2.state.actualPage == page ? "white" : "black",
@@ -38448,10 +38462,16 @@ var List = /*#__PURE__*/function (_Component) {
           "class": "pag",
           href: "/books/all/" + page
         }, page);
-      }), this.state.actualPage != this.state.pages.length - 1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("a", {
+      }), this.state.actualPage != this.state.numTotalPages - 1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("span", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("a", {
+        style: {
+          margin: "5px"
+        },
         "class": "btn btn-primary",
         href: "/books/all/" + parseInt(this.state.actualPage + 1)
-      }, "Siguiente") : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("p", null)) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("p", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("br", null)), this.state.books.map(function (book, i) {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("b", null, String(">"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("a", {
+        "class": "btn btn-primary",
+        href: "/books/all/" + parseInt(this.state.numTotalPages - 1)
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("b", null, String(">>")))) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("p", null)) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("p", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("br", null)), this.state.books.map(function (book, i) {
         return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("main", {
           "class": "mainBooks"
         }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("div", {
@@ -38507,14 +38527,16 @@ var List = /*#__PURE__*/function (_Component) {
         }, book.author), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("div", {
           "class": "book-card__author"
         }, book.action == "VENTA" ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("span", null, book.action, " por ", book.price, " \u20AC") : book.action))));
-      }), this.state.books.length != 0 && this.state.pages.length > 1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("center", {
-        style: {
-          zIndex: "-1"
-        }
-      }, this.state.actualPage != 0 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("a", {
+      }), this.state.books.length != 0 && this.state.pages.length > 1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("center", null, this.state.actualPage != 0 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("span", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("a", {
         "class": "btn btn-primary",
+        href: "/books/all/0"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("b", null, String("<<"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("a", {
+        "class": "btn btn-primary",
+        style: {
+          margin: "5px"
+        },
         href: "/books/all/" + parseInt(this.state.actualPage - 1)
-      }, "Anterior") : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("p", null), this.state.pages.map(function (page) {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("b", null, String("<")))) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("p", null), this.state.pages.map(function (page) {
         return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("a", {
           style: {
             color: _this2.state.actualPage == page ? "white" : "black",
@@ -38523,10 +38545,16 @@ var List = /*#__PURE__*/function (_Component) {
           "class": "pag",
           href: "/books/all/" + page
         }, page);
-      }), this.state.actualPage != this.state.pages.length - 1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("a", {
+      }), this.state.actualPage != this.state.numTotalPages - 1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("span", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("a", {
+        style: {
+          margin: "5px"
+        },
         "class": "btn btn-primary",
         href: "/books/all/" + parseInt(this.state.actualPage + 1)
-      }, "Siguiente") : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("p", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("br", null)) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("p", null));
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("b", null, String(">"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("a", {
+        "class": "btn btn-primary",
+        href: "/books/all/" + parseInt(this.state.numTotalPages - 1)
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("b", null, String(">>")))) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("p", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("br", null)) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("p", null));
     }
   }, {
     key: "addFavouriteBook",
@@ -38660,7 +38688,8 @@ var List = /*#__PURE__*/function (_Component) {
     _this.state = {
       books: [],
       pages: [],
-      actualPage: 0
+      actualPage: 0,
+      numTotalPages: 0
     };
     return _this;
   }
@@ -38683,7 +38712,8 @@ var List = /*#__PURE__*/function (_Component) {
                 this.setState({
                   books: res.books,
                   pages: res.pages,
-                  actualPage: parseInt(page)
+                  actualPage: parseInt(page),
+                  numTotalPages: parseInt(res.numTotalPages)
                 });
 
               case 5:
@@ -38705,22 +38735,34 @@ var List = /*#__PURE__*/function (_Component) {
     value: function render() {
       var _this2 = this;
 
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", null, this.state.books.length == 0 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("b", null, "Actualmente no existen libros para mostrar.")) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("center", null, this.state.pages.length > 1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("center", null, this.state.actualPage != 0 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", null, this.state.books.length == 0 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("b", null, "Actualmente no existen libros para mostrar.")) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("center", null, this.state.books.length != 0 && this.state.pages.length > 1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("center", null, this.state.actualPage != 0 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("span", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
         "class": "btn btn-primary",
-        href: "/books/me/" + parseInt(this.state.actualPage - 1)
-      }, "Anterior") : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null), this.state.pages.map(function (page) {
+        href: "/books/all/0"
+      }, String("<<")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
+        style: {
+          margin: "5px"
+        },
+        "class": "btn btn-primary",
+        href: "/books/all/" + parseInt(this.state.actualPage - 1)
+      }, String("<"))) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null), this.state.pages.map(function (page) {
         return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
           style: {
             color: _this2.state.actualPage == page ? "white" : "black",
             backgroundColor: _this2.state.actualPage == page ? "#007bff" : ""
           },
           "class": "pag",
-          href: "/books/me/" + page
+          href: "/books/all/" + page
         }, page);
-      }), this.state.actualPage != this.state.pages.length - 1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
+      }), this.state.actualPage != this.state.numTotalPages - 1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("span", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
+        style: {
+          margin: "5px"
+        },
         "class": "btn btn-primary",
-        href: "/books/me/" + parseInt(this.state.actualPage + 1)
-      }, "Siguiente") : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null)) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", null)), this.state.books.map(function (book) {
+        href: "/books/all/" + parseInt(this.state.actualPage + 1)
+      }, String(">")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
+        "class": "btn btn-primary",
+        href: "/books/all/" + parseInt(this.state.numTotalPages - 1)
+      }, String(">>"))) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null)) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", null)), this.state.books.map(function (book) {
         return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("main", {
           "class": "mainBooks"
         }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
@@ -38750,26 +38792,34 @@ var List = /*#__PURE__*/function (_Component) {
         }, book.author), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
           "class": "book-card__author"
         }, book.action == "VENTA" ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("span", null, book.action, " por ", book.price, " \u20AC") : book.action))));
-      }), this.state.books.length != 0 && this.state.pages.length > 1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("center", {
-        style: {
-          zIndex: "-1"
-        }
-      }, this.state.actualPage != 0 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
+      }), this.state.books.length != 0 && this.state.pages.length > 1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("center", null, this.state.actualPage != 0 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("span", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
         "class": "btn btn-primary",
-        href: "/books/me/" + parseInt(this.state.actualPage - 1)
-      }, "Anterior") : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null), this.state.pages.map(function (page) {
+        href: "/books/all/0"
+      }, String("<<")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
+        "class": "btn btn-primary",
+        style: {
+          margin: "5px"
+        },
+        href: "/books/all/" + parseInt(this.state.actualPage - 1)
+      }, String("<"))) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null), this.state.pages.map(function (page) {
         return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
           style: {
             color: _this2.state.actualPage == page ? "white" : "black",
             backgroundColor: _this2.state.actualPage == page ? "#007bff" : ""
           },
           "class": "pag",
-          href: "/books/me/" + page
+          href: "/books/all/" + page
         }, page);
-      }), this.state.actualPage != this.state.pages.length - 1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
+      }), this.state.actualPage != this.state.numTotalPages - 1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("span", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
+        style: {
+          margin: "5px"
+        },
         "class": "btn btn-primary",
-        href: "/books/me/" + parseInt(this.state.actualPage + 1)
-      }, "Siguiente") : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", null)) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null));
+        href: "/books/all/" + parseInt(this.state.actualPage + 1)
+      }, String(">")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
+        "class": "btn btn-primary",
+        href: "/books/all/" + parseInt(this.state.numTotalPages - 1)
+      }, String(">>"))) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", null)) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null));
     }
   }]);
 
@@ -38861,6 +38911,7 @@ var Form = /*#__PURE__*/function (_Component) {
       fieldIdBook1: "",
       fieldComment: "",
       fieldIdBook2: "",
+      fieldPay: "",
       book: "",
       books: [],
       errorField: [],
@@ -38895,6 +38946,12 @@ var Form = /*#__PURE__*/function (_Component) {
                   fieldIdBook2: id
                 });
 
+                if (b.book.action == "VENTA") {
+                  this.setState({
+                    fieldPay: b.book.price
+                  });
+                }
+
                 if (bk.books.length >= 1) {
                   this.setState({
                     fieldIdBook1: bk.books[0].id,
@@ -38902,7 +38959,7 @@ var Form = /*#__PURE__*/function (_Component) {
                   });
                 }
 
-              case 9:
+              case 10:
               case "end":
                 return _context.stop();
             }
@@ -38933,7 +38990,7 @@ var Form = /*#__PURE__*/function (_Component) {
         style: {
           color: "#007bff"
         }
-      }, "Petici\xF3n de ", this.state.book.action == "INTERCAMBIO" ? "INTERCAMBIO" : "COMPRA por " + this.state.book.price + "€", " para ", this.state.book.title), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
+      }, "Petici\xF3n de ", this.state.book.action == "INTERCAMBIO" ? "INTERCAMBIO" : "COMPRA (" + this.state.book.price + "€)", " para ", this.state.book.title), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
         "class": "text-danger"
       }, "*Obligatorio"), this.state.book.action == "INTERCAMBIO" ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         "class": "form-group row"
@@ -38958,7 +39015,25 @@ var Form = /*#__PURE__*/function (_Component) {
         return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("option", {
           value: book.id
         }, book.title);
-      })))) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+      })))) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+        "class": "form-group row"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("label", {
+        "for": "firstName",
+        "class": "col-sm-3 col-form-label"
+      }, "\xBFCu\xE1nto pagar\xEDa?", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("sup", {
+        "class": "text-danger"
+      }, "*")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+        "class": "col-sm-9"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("input", {
+        type: "number",
+        "class": "form-control",
+        value: this.state.fieldPay,
+        onChange: function onChange(event) {
+          return _this2.setState({
+            fieldPay: event.target.value
+          });
+        }
+      }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         "class": "form-group row"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("label", {
         "for": "firstName",
@@ -38988,13 +39063,13 @@ var Form = /*#__PURE__*/function (_Component) {
         "class": "form-group row"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         "class": "col-sm-6"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("button", {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("button", {
         onClick: function onClick() {
           return _this2.onClickSave();
         },
         "class": "btn btn-primary",
         style: {
-          "float": "right"
+          "float": "left"
         },
         type: "submit",
         disabled: this.state.noBooks && this.state.book.action == "INTERCAMBIO"
@@ -39004,30 +39079,53 @@ var Form = /*#__PURE__*/function (_Component) {
     key: "onClickSave",
     value: function () {
       var _onClickSave = _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_6___default.a.mark(function _callee2() {
-        var res, dataError;
+        var dataError, _dataError, res;
+
         return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_6___default.a.wrap(function _callee2$(_context2) {
           while (1) {
             switch (_context2.prev = _context2.next) {
               case 0:
-                _context2.next = 2;
-                return _services_Request__WEBPACK_IMPORTED_MODULE_9__["default"].create(this.state);
-
-              case 2:
-                res = _context2.sent;
-
-                if (this.state.book.action == "INTERCAMBIO" && this.state.fieldIdBook1 == "") {
-                  dataError = [];
-                  dataError.push("El libro a intercambiar es un campo requerido.");
-                  this.setState({
-                    errorField: dataError
-                  });
-                } else {
-                  if (res.success) {
-                    window.location.replace("/books/" + this.state.book.id);
-                  }
+                if (!(this.state.book.action == "INTERCAMBIO" && this.state.fieldIdBook1 == "")) {
+                  _context2.next = 6;
+                  break;
                 }
 
-              case 4:
+                dataError = [];
+                dataError.push("El libro a intercambiar es un campo requerido.");
+                this.setState({
+                  errorField: dataError
+                });
+                _context2.next = 16;
+                break;
+
+              case 6:
+                if (!(this.state.book.action == "VENTA" && this.state.fieldPay == "")) {
+                  _context2.next = 12;
+                  break;
+                }
+
+                _dataError = [];
+
+                _dataError.push("El precio que estaría dispuesto a pagar es un campo requerido.");
+
+                this.setState({
+                  errorField: _dataError
+                });
+                _context2.next = 16;
+                break;
+
+              case 12:
+                _context2.next = 14;
+                return _services_Request__WEBPACK_IMPORTED_MODULE_9__["default"].create(this.state);
+
+              case 14:
+                res = _context2.sent;
+
+                if (res.success) {
+                  window.location.replace("/books/" + this.state.book.id);
+                }
+
+              case 16:
               case "end":
                 return _context2.stop();
             }
@@ -39060,8 +39158,8 @@ var Form = /*#__PURE__*/function (_Component) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return List; });
-/* harmony import */ var _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/defineProperty */ "./node_modules/@babel/runtime/helpers/defineProperty.js");
-/* harmony import */ var _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _babel_runtime_helpers_readOnlyError__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/readOnlyError */ "./node_modules/@babel/runtime/helpers/readOnlyError.js");
+/* harmony import */ var _babel_runtime_helpers_readOnlyError__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_readOnlyError__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/asyncToGenerator */ "./node_modules/@babel/runtime/helpers/asyncToGenerator.js");
 /* harmony import */ var _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime/helpers/classCallCheck */ "./node_modules/@babel/runtime/helpers/classCallCheck.js");
@@ -39112,7 +39210,9 @@ var List = /*#__PURE__*/function (_Component) {
       requests: [],
       books1: [],
       books2: [],
-      users: []
+      users: [],
+      pages: [],
+      actualPage: 0
     };
     return _this;
   }
@@ -39121,24 +39221,36 @@ var List = /*#__PURE__*/function (_Component) {
     key: "componentDidMount",
     value: function () {
       var _componentDidMount = _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_7___default.a.mark(function _callee() {
-        var res;
+        var page, res;
         return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_7___default.a.wrap(function _callee$(_context) {
           while (1) {
             switch (_context.prev = _context.next) {
               case 0:
-                _context.next = 2;
-                return _services_Request__WEBPACK_IMPORTED_MODULE_9__["default"].listMyRequests();
+                page = this.props.match.params.page;
 
-              case 2:
+                if (page) {
+                  this.setState({
+                    actualPage: parseInt(page)
+                  });
+                } else {
+                  page = (_babel_runtime_helpers_readOnlyError__WEBPACK_IMPORTED_MODULE_0___default()("page"), 0);
+                }
+
+                _context.next = 4;
+                return _services_Request__WEBPACK_IMPORTED_MODULE_9__["default"].listMyRequests(page);
+
+              case 4:
                 res = _context.sent;
                 this.setState({
                   requests: res.requests,
                   books1: res.books1,
                   books2: res.books2,
-                  users: res.users
+                  users: res.users,
+                  pages: res.pages,
+                  numTotalPages: parseInt(res.numTotalPages)
                 });
 
-              case 4:
+              case 6:
               case "end":
                 return _context.stop();
             }
@@ -39187,7 +39299,25 @@ var List = /*#__PURE__*/function (_Component) {
     value: function render() {
       var _this2 = this;
 
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("div", null, this.state.requests.map(function (request, i) {
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("div", null, this.state.requests.length == 0 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("strong", null, "\xBFNo tienes todav\xEDa peticiones? ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("a", {
+        href: "/",
+        "class": "btn btn-primary"
+      }, "Realiza una!"))) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("center", null, this.state.pages.length > 1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("center", null, this.state.actualPage != 0 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("a", {
+        "class": "btn btn-primary",
+        href: "/requests/me/" + parseInt(this.state.actualPage - 1)
+      }, "Anterior") : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", null), this.state.pages.map(function (page) {
+        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("a", {
+          style: {
+            color: _this2.state.actualPage == page ? "white" : "black",
+            backgroundColor: _this2.state.actualPage == page ? "#007bff" : ""
+          },
+          "class": "pag",
+          href: "/requests/me/" + page
+        }, page);
+      }), this.state.actualPage != this.state.pages.length - 1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("a", {
+        "class": "btn btn-primary",
+        href: "/requests/me/" + parseInt(this.state.actualPage + 1)
+      }, "Siguiente") : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", null)) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", null)), this.state.requests.map(function (request, i) {
         return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("div", {
           style: {
             backgroundImage: "url(https://i.pinimg.com/originals/8d/23/06/8d2306b98839234e49ce96a8b76e20ae.jpg)",
@@ -39196,60 +39326,46 @@ var List = /*#__PURE__*/function (_Component) {
             paddingTop: "20px",
             marginBlock: "30px",
             margin: "0px 20px 20px 0px",
-            width: '510px',
-            height: '480px',
+            width: request.action == "VENTA" ? "300px" : "380px",
+            height: '520px',
             display: "inline-grid"
           }
-        }, request.action == "INTERCAMBIO" ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("center", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("h5", {
-          style: {
-            color: "#007bff"
-          }
-        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("strong", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("i", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("u", null, "INTERCAMBIO:")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", null), " ", _this2.state.books1[i].title, " \u21C4 ", _this2.state.books2[i].title))) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("center", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("h5", {
-          style: {
-            color: "#007bff"
-          }
-        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("strong", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("i", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("u", null, "COMPRA:")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", null), " ", _this2.state.books2[i].title))), request.action == "INTERCAMBIO" ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("center", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("a", {
+        }, request.action == "INTERCAMBIO" ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("center", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("h4", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("strong", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("u", null, "INTERCAMBIO"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", null)))) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("center", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("h4", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("strong", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("u", null, "COMPRA POR ", request.pay, " \u20AC"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", null)))), request.action == "INTERCAMBIO" ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("center", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("a", {
           style: {
             color: "black"
           },
           href: "/books/" + _this2.state.books1[i].id
-        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("img", _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0___default()({
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("img", {
           style: {
-            height: "100px",
-            width: "100px"
+            height: "200px",
+            width: "140px",
+            padding: '10px',
+            margin: "0px 0px 0px 0px"
           },
           src: _this2.state.books1[i].image
-        }, "style", {
-          padding: '10px',
-          margin: "0px 0px 0px 0px",
-          width: '120px'
-        })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("strong", null, "  \u21C4  ")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("a", {
+        }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("strong", null, "\u21C4  ")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("a", {
           href: "/books/" + _this2.state.books2[i].id
-        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("img", _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0___default()({
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("img", {
           style: {
-            height: "100px",
-            width: "100px"
+            height: "200px",
+            width: "140px",
+            padding: '10px',
+            margin: "0px 0px 0px 0px"
           },
           src: _this2.state.books2[i].image
-        }, "style", {
-          padding: '10px',
-          margin: "0px 0px 0px 0px",
-          width: '120px'
-        }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", null)) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("center", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("a", {
+        })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", null)) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("center", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("a", {
           href: "/books/" + _this2.state.books2[i].id
-        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("img", _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0___default()({
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("img", {
           style: {
-            height: "100px",
-            width: "100px"
+            height: "200px",
+            width: "140px",
+            padding: '10px',
+            margin: "0px 0px 0px 0px"
           },
           src: _this2.state.books2[i].image
-        }, "style", {
-          padding: '10px',
-          margin: "0px 0px 0px 0px",
-          width: '120px'
-        }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("strong", null, "Precio: "), _this2.state.books2[i].price, " \u20AC")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("center", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("strong", null, "Comentario adicional: "), request.comment), request.status != "ACEPTADA" ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("strong", null, "Petici\xF3n enviada a: "), request.username2) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("strong", null, "Estado: "), request.status)), request.status == "PENDIENTE" ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("center", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("a", {
+        }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("center", null, request.action == "VENTA" ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("strong", null, "Precio original: "), _this2.state.books2[i].price, " \u20AC") : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", null), request.comment != "" ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("strong", null, "Comentario adicional: "), request.comment) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", null), request.status != "ACEPTADA" ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("strong", null, "Petici\xF3n enviada a: "), request.username2) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("strong", null, "Estado: "), request.status)), request.status == "PENDIENTE" ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("center", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("a", {
           onClick: function onClick() {
-            return _this2.cancelRequest(request.id);
+            return _this2.cancelRequest(request.id, _this2.state.actualPage);
           },
           style: {
             background: "red",
@@ -39258,7 +39374,7 @@ var List = /*#__PURE__*/function (_Component) {
           "class": "btn btn-primary"
         }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("strong", null, "Cancelar"))) : request.status != "ACEPTADA" ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("center", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("a", {
           onClick: function onClick() {
-            return _this2.deleteRequest(request.id);
+            return _this2.deleteRequest(request.id, _this2.state.actualPage);
           },
           style: {
             background: "red",
@@ -39266,15 +39382,27 @@ var List = /*#__PURE__*/function (_Component) {
           },
           "class": "btn btn-primary"
         }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("strong", null, "Eliminar"))) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("center", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("strong", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("i", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("u", null, "Datos de contacto con ", request.username2)))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("strong", null, "N\xFAmero de tel\xE9fono: "), _this2.state.users[i].phone), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("strong", null, " Email: "), _this2.state.users[i].email)));
-      }), this.state.requests.length == 0 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("strong", null, "\xBFNo tienes todav\xEDa peticiones? ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("a", {
-        href: "/",
-        "class": "btn btn-primary"
-      }, "Realiza una!"))) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", null));
+      }), this.state.pages.length > 1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("center", null, this.state.actualPage != 0 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("a", {
+        "class": "btn btn-primary",
+        href: "/requests/me/" + parseInt(this.state.actualPage - 1)
+      }, "Anterior") : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", null), this.state.pages.map(function (page) {
+        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("a", {
+          style: {
+            color: _this2.state.actualPage == page ? "white" : "black",
+            backgroundColor: _this2.state.actualPage == page ? "#007bff" : ""
+          },
+          "class": "pag",
+          href: "/requests/me/" + page
+        }, page);
+      }), this.state.actualPage != this.state.pages.length - 1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("a", {
+        "class": "btn btn-primary",
+        href: "/requests/me/" + parseInt(this.state.actualPage + 1)
+      }, "Siguiente") : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", null)) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", null));
     }
   }, {
     key: "cancelRequest",
     value: function () {
-      var _cancelRequest = _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_7___default.a.mark(function _callee3(id) {
+      var _cancelRequest = _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_7___default.a.mark(function _callee3(id, actualPage) {
         var conf, res;
         return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_7___default.a.wrap(function _callee3$(_context3) {
           while (1) {
@@ -39292,7 +39420,7 @@ var List = /*#__PURE__*/function (_Component) {
 
               case 4:
                 res = _context3.sent;
-                window.location.replace("/requests/me");
+                window.location.replace("/requests/me/" + actualPage);
 
               case 6:
               case "end":
@@ -39302,7 +39430,7 @@ var List = /*#__PURE__*/function (_Component) {
         }, _callee3);
       }));
 
-      function cancelRequest(_x2) {
+      function cancelRequest(_x2, _x3) {
         return _cancelRequest.apply(this, arguments);
       }
 
@@ -39311,7 +39439,7 @@ var List = /*#__PURE__*/function (_Component) {
   }, {
     key: "deleteRequest",
     value: function () {
-      var _deleteRequest = _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_7___default.a.mark(function _callee4(id) {
+      var _deleteRequest = _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_7___default.a.mark(function _callee4(id, actualPage) {
         var conf, res;
         return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_7___default.a.wrap(function _callee4$(_context4) {
           while (1) {
@@ -39329,7 +39457,7 @@ var List = /*#__PURE__*/function (_Component) {
 
               case 4:
                 res = _context4.sent;
-                window.location.replace("/requests/me");
+                window.location.replace("/requests/me/" + actualPage);
 
               case 6:
               case "end":
@@ -39339,7 +39467,7 @@ var List = /*#__PURE__*/function (_Component) {
         }, _callee4);
       }));
 
-      function deleteRequest(_x3) {
+      function deleteRequest(_x4, _x5) {
         return _deleteRequest.apply(this, arguments);
       }
 
@@ -39366,23 +39494,25 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return List; });
 /* harmony import */ var _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/defineProperty */ "./node_modules/@babel/runtime/helpers/defineProperty.js");
 /* harmony import */ var _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/asyncToGenerator */ "./node_modules/@babel/runtime/helpers/asyncToGenerator.js");
-/* harmony import */ var _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime/helpers/classCallCheck */ "./node_modules/@babel/runtime/helpers/classCallCheck.js");
-/* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @babel/runtime/helpers/createClass */ "./node_modules/@babel/runtime/helpers/createClass.js");
-/* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @babel/runtime/helpers/inherits */ "./node_modules/@babel/runtime/helpers/inherits.js");
-/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @babel/runtime/helpers/possibleConstructorReturn */ "./node_modules/@babel/runtime/helpers/possibleConstructorReturn.js");
-/* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @babel/runtime/helpers/getPrototypeOf */ "./node_modules/@babel/runtime/helpers/getPrototypeOf.js");
-/* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
-/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_7__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_8__);
-/* harmony import */ var _services_Request__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../services/Request */ "./src/main/resources/js/components/services/Request.js");
+/* harmony import */ var _babel_runtime_helpers_readOnlyError__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/readOnlyError */ "./node_modules/@babel/runtime/helpers/readOnlyError.js");
+/* harmony import */ var _babel_runtime_helpers_readOnlyError__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_readOnlyError__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime/helpers/asyncToGenerator */ "./node_modules/@babel/runtime/helpers/asyncToGenerator.js");
+/* harmony import */ var _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @babel/runtime/helpers/classCallCheck */ "./node_modules/@babel/runtime/helpers/classCallCheck.js");
+/* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @babel/runtime/helpers/createClass */ "./node_modules/@babel/runtime/helpers/createClass.js");
+/* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @babel/runtime/helpers/inherits */ "./node_modules/@babel/runtime/helpers/inherits.js");
+/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @babel/runtime/helpers/possibleConstructorReturn */ "./node_modules/@babel/runtime/helpers/possibleConstructorReturn.js");
+/* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @babel/runtime/helpers/getPrototypeOf */ "./node_modules/@babel/runtime/helpers/getPrototypeOf.js");
+/* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_9__);
+/* harmony import */ var _services_Request__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../services/Request */ "./src/main/resources/js/components/services/Request.js");
 
 
 
@@ -39392,7 +39522,8 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_6___default()(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_6___default()(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_5___default()(this, result); }; }
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_7___default()(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_7___default()(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_6___default()(this, result); }; }
 
 function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
 
@@ -39400,47 +39531,61 @@ function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Re
 
 
 var List = /*#__PURE__*/function (_Component) {
-  _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_4___default()(List, _Component);
+  _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_5___default()(List, _Component);
 
   var _super = _createSuper(List);
 
   function List() {
     var _this;
 
-    _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_2___default()(this, List);
+    _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_3___default()(this, List);
 
     _this = _super.call(this);
     _this.state = {
       requests: [],
       books1: [],
       books2: [],
-      users: []
+      users: [],
+      pages: [],
+      actualPage: 0
     };
     return _this;
   }
 
-  _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_3___default()(List, [{
+  _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_4___default()(List, [{
     key: "componentDidMount",
     value: function () {
-      var _componentDidMount = _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_7___default.a.mark(function _callee() {
-        var res;
-        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_7___default.a.wrap(function _callee$(_context) {
+      var _componentDidMount = _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_2___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_8___default.a.mark(function _callee() {
+        var page, res;
+        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_8___default.a.wrap(function _callee$(_context) {
           while (1) {
             switch (_context.prev = _context.next) {
               case 0:
-                _context.next = 2;
-                return _services_Request__WEBPACK_IMPORTED_MODULE_9__["default"].listReceivedRequests();
+                page = this.props.match.params.page;
 
-              case 2:
+                if (page) {
+                  this.setState({
+                    actualPage: parseInt(page)
+                  });
+                } else {
+                  page = (_babel_runtime_helpers_readOnlyError__WEBPACK_IMPORTED_MODULE_1___default()("page"), 0);
+                }
+
+                _context.next = 4;
+                return _services_Request__WEBPACK_IMPORTED_MODULE_10__["default"].listReceivedRequests(page);
+
+              case 4:
                 res = _context.sent;
                 this.setState({
                   requests: res.requests,
                   books1: res.books1,
                   books2: res.books2,
-                  users: res.users
+                  users: res.users,
+                  pages: res.pages,
+                  numTotalPages: parseInt(res.numTotalPages)
                 });
 
-              case 4:
+              case 6:
               case "end":
                 return _context.stop();
             }
@@ -39459,8 +39604,26 @@ var List = /*#__PURE__*/function (_Component) {
     value: function render() {
       var _this2 = this;
 
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("div", null, this.state.requests.map(function (request, i) {
-        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("div", {
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("div", null, this.state.requests.length == 0 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("strong", null, "\xBFNo has recibido peticiones todav\xEDa? ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("a", {
+        href: "/books/new",
+        "class": "btn btn-primary"
+      }, "A\xF1ade un libro!"))) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("center", null, this.state.pages.length > 1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("center", null, this.state.actualPage != 0 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("a", {
+        "class": "btn btn-primary",
+        href: "/requests/received/" + parseInt(this.state.actualPage - 1)
+      }, "Anterior") : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("p", null), this.state.pages.map(function (page) {
+        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("a", {
+          style: {
+            color: _this2.state.actualPage == page ? "white" : "black",
+            backgroundColor: _this2.state.actualPage == page ? "#007bff" : ""
+          },
+          "class": "pag",
+          href: "/requests/received/" + page
+        }, page);
+      }), this.state.actualPage != this.state.pages.length - 1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("a", {
+        "class": "btn btn-primary",
+        href: "/requests/received/" + parseInt(this.state.actualPage + 1)
+      }, "Siguiente") : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("p", null)) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("p", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("br", null)), this.state.requests.map(function (request, i) {
+        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("div", {
           style: {
             backgroundImage: "url(https://i.pinimg.com/originals/8d/23/06/8d2306b98839234e49ce96a8b76e20ae.jpg)",
             backgroundSize: "auto auto",
@@ -39468,48 +39631,36 @@ var List = /*#__PURE__*/function (_Component) {
             paddingTop: "20px",
             marginBlock: "30px",
             margin: "0px 20px 20px 0px",
-            width: '510px',
+            width: request.action == "VENTA" ? "300px" : "380px",
             height: '480px',
             display: "inline-grid"
           }
-        }, request.action == "INTERCAMBIO" ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("center", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("h5", {
-          style: {
-            color: "#007bff"
-          }
-        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("strong", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("i", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("u", null, "INTERCAMBIO:")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", null), " ", _this2.state.books2[i].title, " \u21C4 ", _this2.state.books1[i].title))) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("center", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("h5", {
-          style: {
-            color: "#007bff"
-          }
-        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("strong", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("i", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("u", null, "COMPRA:")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", null), " ", _this2.state.books2[i].title))), request.action == "INTERCAMBIO" ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("center", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("a", {
+        }, request.action == "INTERCAMBIO" ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("center", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("h4", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("strong", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("u", null, "INTERCAMBIO"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("br", null)))) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("center", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("h4", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("strong", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("u", null, "VENTA POR ", request.pay, " \u20AC"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("br", null)))), request.action == "INTERCAMBIO" ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("center", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("a", {
           style: {
             color: "black"
           },
           href: "/books/" + _this2.state.books2[i].id
-        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("img", _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0___default()({
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("img", {
           style: {
-            height: "100px",
-            width: "100px"
+            height: "200px",
+            width: "140px",
+            padding: '10px',
+            margin: "0px 0px 0px 0px"
           },
           src: _this2.state.books2[i].image
-        }, "style", {
-          padding: '10px',
-          margin: "0px 0px 0px 0px",
-          width: '120px'
-        })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("strong", null, "  \u21C4  ")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("a", {
+        }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("strong", null, "\u21C4  ")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("a", {
           href: "/books/" + _this2.state.books1[i].id
-        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("img", _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0___default()({
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("img", {
           style: {
-            height: "100px",
-            width: "100px"
+            height: "200px",
+            width: "140px",
+            padding: '10px',
+            margin: "0px 0px 0px 0px"
           },
           src: _this2.state.books1[i].image
-        }, "style", {
-          padding: '10px',
-          margin: "0px 0px 0px 0px",
-          width: '120px'
-        }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", null)) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("center", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("a", {
+        })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("br", null)) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("center", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("a", {
           href: "/books/" + _this2.state.books2[i].id
-        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("img", _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0___default()({
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("img", _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0___default()({
           style: {
             height: "100px",
             width: "100px"
@@ -39519,9 +39670,9 @@ var List = /*#__PURE__*/function (_Component) {
           padding: '10px',
           margin: "0px 0px 0px 0px",
           width: '120px'
-        }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("strong", null, "Precio: "), _this2.state.books2[i].price, " \u20AC")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("center", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("strong", null, "Comentario adicional: "), request.comment), request.status != "ACEPTADA" ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("strong", null, "Petici\xF3n enviada por: "), request.username1) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("strong", null, "Estado: "), request.status)), request.status == "PENDIENTE" ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("center", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("a", {
+        })))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("center", null, request.action == "VENTA" ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("strong", null, "Precio original: "), _this2.state.books2[i].price, " \u20AC") : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("p", null), request.comment != "" ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("strong", null, "Comentario adicional: "), request.comment) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("p", null), request.status != "ACEPTADA" ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("strong", null, "Petici\xF3n enviada por: "), request.username1) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("p", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("strong", null, "Estado: "), request.status)), request.status == "PENDIENTE" ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("center", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("a", {
           onClick: function onClick() {
-            return _this2.acceptRequest(request.id, _this2.state.books2[i].title);
+            return _this2.acceptRequest(request.id, _this2.state.books2[i].title, _this2.state.actualPage);
           },
           style: {
             background: "#099C01",
@@ -39529,27 +39680,39 @@ var List = /*#__PURE__*/function (_Component) {
             margin: "10px"
           },
           "class": "btn btn-primary"
-        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("strong", null, "Aceptar")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("a", {
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("strong", null, "Aceptar")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("a", {
           onClick: function onClick() {
-            return _this2.rejectRequest(request.id);
+            return _this2.rejectRequest(request.id, _this2.state.actualPage);
           },
           style: {
             background: "red",
             color: "white"
           },
           "class": "btn btn-primary"
-        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("strong", null, "Rechazar"))) : request.status == "ACEPTADA" ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("center", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("strong", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("i", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("u", null, "Datos de contacto con ", request.username1)))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("strong", null, "N\xFAmero de tel\xE9fono: "), _this2.state.users[i].phone), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("strong", null, " Email: "), _this2.state.users[i].email)) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", null));
-      }), this.state.requests.length == 0 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("strong", null, "\xBFNo has recibido peticiones todav\xEDa? ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("a", {
-        href: "/books/new",
-        "class": "btn btn-primary"
-      }, "A\xF1ade un libro!"))) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", null));
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("strong", null, "Rechazar"))) : request.status == "ACEPTADA" ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("center", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("strong", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("i", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("u", null, "Datos de contacto con ", request.username1)))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("strong", null, "N\xFAmero de tel\xE9fono: "), _this2.state.users[i].phone), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("strong", null, " Email: "), _this2.state.users[i].email)) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("p", null));
+      }), this.state.pages.length > 1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("center", null, this.state.actualPage != 0 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("a", {
+        "class": "btn btn-primary",
+        href: "/requests/received/" + parseInt(this.state.actualPage - 1)
+      }, "Anterior") : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("p", null), this.state.pages.map(function (page) {
+        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("a", {
+          style: {
+            color: _this2.state.actualPage == page ? "white" : "black",
+            backgroundColor: _this2.state.actualPage == page ? "#007bff" : ""
+          },
+          "class": "pag",
+          href: "/requests/received/" + page
+        }, page);
+      }), this.state.actualPage != this.state.pages.length - 1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("a", {
+        "class": "btn btn-primary",
+        href: "/requests/received/" + parseInt(this.state.actualPage + 1)
+      }, "Siguiente") : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("p", null)) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("p", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("br", null));
     }
   }, {
     key: "acceptRequest",
     value: function () {
-      var _acceptRequest = _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_7___default.a.mark(function _callee2(id, title) {
+      var _acceptRequest = _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_2___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_8___default.a.mark(function _callee2(id, title, actualPage) {
         var conf, res;
-        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_7___default.a.wrap(function _callee2$(_context2) {
+        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_8___default.a.wrap(function _callee2$(_context2) {
           while (1) {
             switch (_context2.prev = _context2.next) {
               case 0:
@@ -39561,11 +39724,11 @@ var List = /*#__PURE__*/function (_Component) {
                 }
 
                 _context2.next = 4;
-                return _services_Request__WEBPACK_IMPORTED_MODULE_9__["default"].accept(id);
+                return _services_Request__WEBPACK_IMPORTED_MODULE_10__["default"].accept(id);
 
               case 4:
                 res = _context2.sent;
-                window.location.replace("/requests/received");
+                window.location.replace("/requests/received/" + actualPage);
 
               case 6:
               case "end":
@@ -39575,7 +39738,7 @@ var List = /*#__PURE__*/function (_Component) {
         }, _callee2);
       }));
 
-      function acceptRequest(_x, _x2) {
+      function acceptRequest(_x, _x2, _x3) {
         return _acceptRequest.apply(this, arguments);
       }
 
@@ -39584,9 +39747,9 @@ var List = /*#__PURE__*/function (_Component) {
   }, {
     key: "rejectRequest",
     value: function () {
-      var _rejectRequest = _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_7___default.a.mark(function _callee3(id) {
+      var _rejectRequest = _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_2___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_8___default.a.mark(function _callee3(id, actualPage) {
         var conf, res;
-        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_7___default.a.wrap(function _callee3$(_context3) {
+        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_8___default.a.wrap(function _callee3$(_context3) {
           while (1) {
             switch (_context3.prev = _context3.next) {
               case 0:
@@ -39598,11 +39761,11 @@ var List = /*#__PURE__*/function (_Component) {
                 }
 
                 _context3.next = 4;
-                return _services_Request__WEBPACK_IMPORTED_MODULE_9__["default"].reject(id);
+                return _services_Request__WEBPACK_IMPORTED_MODULE_10__["default"].reject(id);
 
               case 4:
                 res = _context3.sent;
-                window.location.replace("/requests/received");
+                window.location.replace("/requests/received/" + actualPage);
 
               case 6:
               case "end":
@@ -39612,7 +39775,7 @@ var List = /*#__PURE__*/function (_Component) {
         }, _callee3);
       }));
 
-      function rejectRequest(_x3) {
+      function rejectRequest(_x4, _x5) {
         return _rejectRequest.apply(this, arguments);
       }
 
@@ -39621,7 +39784,7 @@ var List = /*#__PURE__*/function (_Component) {
   }]);
 
   return List;
-}(react__WEBPACK_IMPORTED_MODULE_8__["Component"]);
+}(react__WEBPACK_IMPORTED_MODULE_9__["Component"]);
 
 
 
@@ -39773,14 +39936,14 @@ book.getBook = /*#__PURE__*/function () {
   };
 }();
 
-book.listAllExceptMine = /*#__PURE__*/function () {
-  var _ref4 = _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.mark(function _callee4(page) {
+book.getBookToEdit = /*#__PURE__*/function () {
+  var _ref4 = _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.mark(function _callee4(id) {
     var urlGet, res;
     return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.wrap(function _callee4$(_context4) {
       while (1) {
         switch (_context4.prev = _context4.next) {
           case 0:
-            urlGet = baseUrl + "/list/all-me?page=" + page;
+            urlGet = baseUrl + "/edit/" + id;
             _context4.next = 3;
             return axios__WEBPACK_IMPORTED_MODULE_2___default.a.get(urlGet).then(function (response) {
               return response.data;
@@ -39805,14 +39968,14 @@ book.listAllExceptMine = /*#__PURE__*/function () {
   };
 }();
 
-book.listMyBooks = /*#__PURE__*/function () {
+book.listAllExceptMine = /*#__PURE__*/function () {
   var _ref5 = _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.mark(function _callee5(page) {
     var urlGet, res;
     return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.wrap(function _callee5$(_context5) {
       while (1) {
         switch (_context5.prev = _context5.next) {
           case 0:
-            urlGet = baseUrl + "/list/me?page=" + page;
+            urlGet = baseUrl + "/list/all-me?page=" + page;
             _context5.next = 3;
             return axios__WEBPACK_IMPORTED_MODULE_2___default.a.get(urlGet).then(function (response) {
               return response.data;
@@ -39837,38 +40000,45 @@ book.listMyBooks = /*#__PURE__*/function () {
   };
 }();
 
-book.listMyBooksForChange = /*#__PURE__*/_babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.mark(function _callee6() {
-  var urlGet, res;
-  return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.wrap(function _callee6$(_context6) {
-    while (1) {
-      switch (_context6.prev = _context6.next) {
-        case 0:
-          urlGet = baseUrl + "/list/me-change";
-          _context6.next = 3;
-          return axios__WEBPACK_IMPORTED_MODULE_2___default.a.get(urlGet).then(function (response) {
-            return response.data;
-          })["catch"](function (error) {
-            return error.response;
-          });
+book.listMyBooks = /*#__PURE__*/function () {
+  var _ref6 = _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.mark(function _callee6(page) {
+    var urlGet, res;
+    return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.wrap(function _callee6$(_context6) {
+      while (1) {
+        switch (_context6.prev = _context6.next) {
+          case 0:
+            urlGet = baseUrl + "/list/me?page=" + page;
+            _context6.next = 3;
+            return axios__WEBPACK_IMPORTED_MODULE_2___default.a.get(urlGet).then(function (response) {
+              return response.data;
+            })["catch"](function (error) {
+              return error.response;
+            });
 
-        case 3:
-          res = _context6.sent;
-          return _context6.abrupt("return", res);
+          case 3:
+            res = _context6.sent;
+            return _context6.abrupt("return", res);
 
-        case 5:
-        case "end":
-          return _context6.stop();
+          case 5:
+          case "end":
+            return _context6.stop();
+        }
       }
-    }
-  }, _callee6);
-}));
-book.getGenres = /*#__PURE__*/_babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.mark(function _callee7() {
+    }, _callee6);
+  }));
+
+  return function (_x6) {
+    return _ref6.apply(this, arguments);
+  };
+}();
+
+book.listMyBooksForChange = /*#__PURE__*/_babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.mark(function _callee7() {
   var urlGet, res;
   return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.wrap(function _callee7$(_context7) {
     while (1) {
       switch (_context7.prev = _context7.next) {
         case 0:
-          urlGet = baseUrl + "/genres";
+          urlGet = baseUrl + "/list/me-change";
           _context7.next = 3;
           return axios__WEBPACK_IMPORTED_MODULE_2___default.a.get(urlGet).then(function (response) {
             return response.data;
@@ -39887,16 +40057,41 @@ book.getGenres = /*#__PURE__*/_babel_runtime_helpers_asyncToGenerator__WEBPACK_I
     }
   }, _callee7);
 }));
+book.getGenres = /*#__PURE__*/_babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.mark(function _callee8() {
+  var urlGet, res;
+  return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.wrap(function _callee8$(_context8) {
+    while (1) {
+      switch (_context8.prev = _context8.next) {
+        case 0:
+          urlGet = baseUrl + "/genres";
+          _context8.next = 3;
+          return axios__WEBPACK_IMPORTED_MODULE_2___default.a.get(urlGet).then(function (response) {
+            return response.data;
+          })["catch"](function (error) {
+            return error.response;
+          });
+
+        case 3:
+          res = _context8.sent;
+          return _context8.abrupt("return", res);
+
+        case 5:
+        case "end":
+          return _context8.stop();
+      }
+    }
+  }, _callee8);
+}));
 
 book["delete"] = /*#__PURE__*/function () {
-  var _ref8 = _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.mark(function _callee8(id) {
+  var _ref9 = _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.mark(function _callee9(id) {
     var urlDelete, res;
-    return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.wrap(function _callee8$(_context8) {
+    return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.wrap(function _callee9$(_context9) {
       while (1) {
-        switch (_context8.prev = _context8.next) {
+        switch (_context9.prev = _context9.next) {
           case 0:
             urlDelete = baseUrl + "/" + id + "/delete";
-            _context8.next = 3;
+            _context9.next = 3;
             return axios__WEBPACK_IMPORTED_MODULE_2___default.a["delete"](urlDelete).then(function (response) {
               return response.data;
             })["catch"](function (error) {
@@ -39904,19 +40099,19 @@ book["delete"] = /*#__PURE__*/function () {
             });
 
           case 3:
-            res = _context8.sent;
-            return _context8.abrupt("return", res);
+            res = _context9.sent;
+            return _context9.abrupt("return", res);
 
           case 5:
           case "end":
-            return _context8.stop();
+            return _context9.stop();
         }
       }
-    }, _callee8);
+    }, _callee9);
   }));
 
-  return function (_x6) {
-    return _ref8.apply(this, arguments);
+  return function (_x7) {
+    return _ref9.apply(this, arguments);
   };
 }();
 
@@ -39959,6 +40154,7 @@ request.create = /*#__PURE__*/function () {
               idBook2: "",
               status: "",
               action: "",
+              pay: state.fieldPay,
               comment: state.fieldComment
             };
             urlPost = baseUrl + "/" + state.fieldIdBook2 + "/new";
@@ -39986,56 +40182,69 @@ request.create = /*#__PURE__*/function () {
   };
 }();
 
-request.listMyRequests = /*#__PURE__*/_babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.mark(function _callee2() {
-  var urlGet, res;
-  return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.wrap(function _callee2$(_context2) {
-    while (1) {
-      switch (_context2.prev = _context2.next) {
-        case 0:
-          urlGet = baseUrl + "/my-requests";
-          _context2.next = 3;
-          return axios__WEBPACK_IMPORTED_MODULE_2___default.a.get(urlGet).then(function (response) {
-            return response.data;
-          })["catch"](function (error) {
-            return error.response;
-          });
+request.listMyRequests = /*#__PURE__*/function () {
+  var _ref2 = _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.mark(function _callee2(page) {
+    var urlGet, res;
+    return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.wrap(function _callee2$(_context2) {
+      while (1) {
+        switch (_context2.prev = _context2.next) {
+          case 0:
+            urlGet = baseUrl + "/my-requests?page=" + page;
+            _context2.next = 3;
+            return axios__WEBPACK_IMPORTED_MODULE_2___default.a.get(urlGet).then(function (response) {
+              return response.data;
+            })["catch"](function (error) {
+              return error.response;
+            });
 
-        case 3:
-          res = _context2.sent;
-          return _context2.abrupt("return", res);
+          case 3:
+            res = _context2.sent;
+            return _context2.abrupt("return", res);
 
-        case 5:
-        case "end":
-          return _context2.stop();
+          case 5:
+          case "end":
+            return _context2.stop();
+        }
       }
-    }
-  }, _callee2);
-}));
-request.listReceivedRequests = /*#__PURE__*/_babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.mark(function _callee3() {
-  var urlGet, res;
-  return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.wrap(function _callee3$(_context3) {
-    while (1) {
-      switch (_context3.prev = _context3.next) {
-        case 0:
-          urlGet = baseUrl + "/received-requests";
-          _context3.next = 3;
-          return axios__WEBPACK_IMPORTED_MODULE_2___default.a.get(urlGet).then(function (response) {
-            return response.data;
-          })["catch"](function (error) {
-            return error.response;
-          });
+    }, _callee2);
+  }));
 
-        case 3:
-          res = _context3.sent;
-          return _context3.abrupt("return", res);
+  return function (_x2) {
+    return _ref2.apply(this, arguments);
+  };
+}();
 
-        case 5:
-        case "end":
-          return _context3.stop();
+request.listReceivedRequests = /*#__PURE__*/function () {
+  var _ref3 = _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.mark(function _callee3(page) {
+    var urlGet, res;
+    return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.wrap(function _callee3$(_context3) {
+      while (1) {
+        switch (_context3.prev = _context3.next) {
+          case 0:
+            urlGet = baseUrl + "/received-requests?page=" + page;
+            _context3.next = 3;
+            return axios__WEBPACK_IMPORTED_MODULE_2___default.a.get(urlGet).then(function (response) {
+              return response.data;
+            })["catch"](function (error) {
+              return error.response;
+            });
+
+          case 3:
+            res = _context3.sent;
+            return _context3.abrupt("return", res);
+
+          case 5:
+          case "end":
+            return _context3.stop();
+        }
       }
-    }
-  }, _callee3);
-}));
+    }, _callee3);
+  }));
+
+  return function (_x3) {
+    return _ref3.apply(this, arguments);
+  };
+}();
 
 request.cancel = /*#__PURE__*/function () {
   var _ref4 = _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.mark(function _callee4(id) {
@@ -40064,7 +40273,7 @@ request.cancel = /*#__PURE__*/function () {
     }, _callee4);
   }));
 
-  return function (_x2) {
+  return function (_x4) {
     return _ref4.apply(this, arguments);
   };
 }();
@@ -40096,7 +40305,7 @@ request["delete"] = /*#__PURE__*/function () {
     }, _callee5);
   }));
 
-  return function (_x3) {
+  return function (_x5) {
     return _ref5.apply(this, arguments);
   };
 }();
@@ -40128,7 +40337,7 @@ request.accept = /*#__PURE__*/function () {
     }, _callee6);
   }));
 
-  return function (_x4) {
+  return function (_x6) {
     return _ref6.apply(this, arguments);
   };
 }();
@@ -40160,7 +40369,7 @@ request.reject = /*#__PURE__*/function () {
     }, _callee7);
   }));
 
-  return function (_x5) {
+  return function (_x7) {
     return _ref7.apply(this, arguments);
   };
 }();
@@ -41720,7 +41929,7 @@ var List = /*#__PURE__*/function (_Component) {
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("div", null, this.state.books.length == 0 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("strong", null, "\xBFNo tienes todav\xEDa libros favoritos? ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("a", {
         href: "/",
         "class": "btn btn-primary"
-      }, "A\xF1ade uno"))) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("center", null, this.state.pages.length > 1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("center", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", null), this.state.actualPage != 0 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("a", {
+      }, "A\xF1ade uno"))) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("center", null, this.state.pages.length > 1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("center", null, this.state.actualPage != 0 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("a", {
         "class": "btn btn-primary",
         href: "/favourites/" + parseInt(this.state.actualPage - 1)
       }, "Anterior") : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", null), this.state.pages.map(function (page) {
@@ -41735,8 +41944,10 @@ var List = /*#__PURE__*/function (_Component) {
       }), this.state.actualPage != this.state.pages.length - 1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("a", {
         "class": "btn btn-primary",
         href: "/favourites/" + parseInt(this.state.actualPage + 1)
-      }, "Siguiente") : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", null)) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", null)), this.state.books.map(function (book) {
-        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("main", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("div", {
+      }, "Siguiente") : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", null)) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", null)), this.state.books.map(function (book) {
+        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("main", {
+          "class": "mainBooks"
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("div", {
           "class": "book-card"
         }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("div", {
           "class": "book-card__cover"
@@ -41770,7 +41981,9 @@ var List = /*#__PURE__*/function (_Component) {
           src: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Coraz%C3%B3n.svg/1121px-Coraz%C3%B3n.svg.png"
         }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("div", {
           "class": "book-card__author"
-        }, book.author))));
+        }, book.author), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("div", {
+          "class": "book-card__author"
+        }, book.action == "VENTA" ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("span", null, book.action, " por ", book.price, " \u20AC") : book.action))));
       }), this.state.books.length != 0 && this.state.pages.length > 1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("center", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", null), this.state.actualPage != 0 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("a", {
         "class": "btn btn-primary",
         href: "/favourites/" + parseInt(this.state.actualPage - 1)

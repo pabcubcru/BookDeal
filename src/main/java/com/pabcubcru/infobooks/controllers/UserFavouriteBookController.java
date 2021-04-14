@@ -55,7 +55,7 @@ public class UserFavouriteBookController {
         Integer numberOfPages = pageOfBooks.getTotalPages();
         res.put("pages", new ArrayList<Integer>());
         if(numberOfPages > 0) {
-            List<Integer> pages = IntStream.rangeClosed(0, numberOfPages-1).boxed().collect(Collectors.toList());
+            List<Integer> pages = IntStream.rangeClosed(page-10 <= 0 ? 0 : page-10, page+10 >= numberOfPages-1 ? numberOfPages-1 : page+10).boxed().collect(Collectors.toList());
             res.put("pages", pages);
         }
 

@@ -137,6 +137,11 @@ export default class Get extends Component {
           </p>
 
           <p class="page__content-credits">
+            ISBN
+            <span>{this.state.book.isbn}</span>
+          </p>
+
+          <p class="page__content-credits">
             ¿Qué quiere hacer?
             <span>{this.state.book.action == "VENTA" ?
                 <p> {this.state.book.action} por {this.state.book.price} €</p>
@@ -212,7 +217,7 @@ export default class Get extends Component {
         const conf = confirm("¿Está seguro de que quiere eliminarlo? Esta acción no es reversible.")
         if(conf) {
           const res = await bookService.delete(id)
-          window.location.replace("/books/me")
+          window.location.replace("/books/me/0")
         }
       }
 

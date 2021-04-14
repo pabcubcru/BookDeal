@@ -48,8 +48,8 @@ export default class Nav extends Component {
           </li>
           <li ><a  href="#">Peticiones</a>
             <ul>
-                <li ><a  href="/requests/me">Enviadas</a></li>
-                <li ><a  href="/requests/received">Recibidas</a></li>
+                <li ><a  href="/requests/me/0">Enviadas</a></li>
+                <li ><a  href="/requests/received/0">Recibidas</a></li>
             </ul>
           </li>
           <li style={{float:"right"}}><a href="#" >Perfil</a>

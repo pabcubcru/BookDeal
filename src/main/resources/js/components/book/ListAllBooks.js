@@ -15,7 +15,8 @@ export default class List extends Component {
       username: "",
       isAdded:false,
       pages:[],
-      actualPage:0
+      actualPage:0,
+      numTotalPages:0
     }
   }
     
@@ -31,7 +32,7 @@ export default class List extends Component {
     
     const username = await userService.getUsername()
 
-    this.setState({books:res.books, username:username.username, isAdded:res.isAdded, pages:res.pages})
+    this.setState({books:res.books, username:username.username, isAdded:res.isAdded, pages:res.pages, numTotalPages:parseInt(res.numTotalPages)})
   }
 
     render() {
@@ -41,17 +42,19 @@ export default class List extends Component {
                   <p><b>Actualmente no existen libros para mostrar.</b></p>
                 :
                   <center>
-                  {this.state.pages.length > 1 ?
-                  <center>{this.state.actualPage != 0 ? <a class="btn btn-primary" href={"/books/all/"+parseInt(this.state.actualPage-1)}>Anterior</a> : <p></p>}
+                  {this.state.books.length != 0 && this.state.pages.length > 1 ?
+                  <center>{this.state.actualPage != 0 ? <span><a class="btn btn-primary" href={"/books/all/0"}><b>{String("<<")}</b></a><a style={{margin:"5px"}} class="btn btn-primary" href={"/books/all/"+parseInt(this.state.actualPage-1)}><b>{String("<")}</b></a></span> : <p></p>}
                   {this.state.pages.map((page) => {
                     return(
+                      
                       <a style={{color:this.state.actualPage == page ? "white" : "black", backgroundColor:this.state.actualPage == page ? "#007bff" : ""}} class="pag" href={"/books/all/"+page}>{page}</a>
                     )
                   })}
-                  {this.state.actualPage != this.state.pages.length-1 ? <a class="btn btn-primary" href={"/books/all/"+parseInt(this.state.actualPage+1)}>Siguiente</a> : <p></p>}</center>
-                  :
-                    <p></p>
-                  }<br></br><br></br></center>
+                  {this.state.actualPage != this.state.numTotalPages-1 ? <span><a style={{margin:"5px"}} class="btn btn-primary" href={"/books/all/"+parseInt(this.state.actualPage+1)}><b>{String(">")}</b></a><a class="btn btn-primary" href={"/books/all/"+parseInt(this.state.numTotalPages-1)}><b>{String(">>")}</b></a></span> : <p></p>}
+                  </center>
+                :
+                  <p></p>
+                }<br></br></center>
                 }
                   {this.state.books.map((book, i) => {
                     return(
@@ -94,13 +97,14 @@ export default class List extends Component {
                       </main>)
                 })}
                 {this.state.books.length != 0 && this.state.pages.length > 1 ?
-                  <center style={{zIndex:"-1"}}>{this.state.actualPage != 0 ? <a class="btn btn-primary" href={"/books/all/"+parseInt(this.state.actualPage-1)}>Anterior</a> : <p></p>}
+                  <center>{this.state.actualPage != 0 ? <span><a class="btn btn-primary" href={"/books/all/0"}><b>{String("<<")}</b></a><a class="btn btn-primary" style={{margin:"5px"}} href={"/books/all/"+parseInt(this.state.actualPage-1)}><b>{String("<")}</b></a></span> : <p></p>}
                   {this.state.pages.map((page) => {
                     return(
+                      
                       <a style={{color:this.state.actualPage == page ? "white" : "black", backgroundColor:this.state.actualPage == page ? "#007bff" : ""}} class="pag" href={"/books/all/"+page}>{page}</a>
                     )
                   })}
-                  {this.state.actualPage != this.state.pages.length-1 ? <a class="btn btn-primary" href={"/books/all/"+parseInt(this.state.actualPage+1)}>Siguiente</a> : <p></p>}
+                  {this.state.actualPage != this.state.numTotalPages-1 ? <span><a style={{margin:"5px"}} class="btn btn-primary" href={"/books/all/"+parseInt(this.state.actualPage+1)}><b>{String(">")}</b></a><a class="btn btn-primary" href={"/books/all/"+parseInt(this.state.numTotalPages-1)}><b>{String(">>")}</b></a></span> : <p></p>}
                   <br></br><br></br></center>
                 :
                   <p></p>
