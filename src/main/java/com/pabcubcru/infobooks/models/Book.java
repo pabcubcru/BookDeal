@@ -69,6 +69,33 @@ public class Book extends BaseEntity {
     @Field(type = FieldType.Keyword, name = "username")
     private String username;
 
+    public Book(@NotBlank(message = "El título es un campo requerido.") String title, String originalTitle,
+            @NotBlank(message = "El ISBN es un campo requerido.") @Pattern(regexp = "^(?:ISBN(?:-1[03])?:? )?(?=[0-9X]{10}$|(?=(?:[0-9]+[- ]){3})[- 0-9X]{13}$|97[89][0-9]{10}$|(?=(?:[0-9]+[- ]){4})[- 0-9]{17}$)(?:97[89][- ]?)?[0-9]{1,5}[- ]?[0-9]+[- ]?[0-9]+[- ]?[0-9X]$", message = "El ISBN no es válido.") String isbn,
+            @NotNull(message = "El año de publicación es un campo requerido.") @Max(value = 2021, message = "El año de publicación debe ser anterior o igual al presente año.") Integer publicationYear,
+            @NotBlank(message = "La editorial es un campo requerido.") String publisher,
+            @NotBlank(message = "Los géneros es un campo requerido.") String genres,
+            @NotBlank(message = "El autor es un campo requerido.") String author,
+            @NotBlank(message = "La descripción es un campo requerido.") String description,
+            @NotBlank(message = "La imagen es un campo requerido.") String image,
+            @NotBlank(message = "El estado es un campo requerido.") String status,
+            @NotBlank(message = "La acción es un campo requerido.") String action, Double price, String username) {
+        this.title = title;
+        this.originalTitle = originalTitle;
+        this.isbn = isbn;
+        this.publicationYear = publicationYear;
+        this.publisher = publisher;
+        this.genres = genres;
+        this.author = author;
+        this.description = description;
+        this.image = image;
+        this.status = status;
+        this.action = action;
+        this.price = price;
+        this.username = username;
+    }
+
+    
+
     
     
 }

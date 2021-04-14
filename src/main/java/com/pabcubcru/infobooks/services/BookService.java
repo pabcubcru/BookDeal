@@ -7,6 +7,8 @@ import com.pabcubcru.infobooks.models.Book;
 import com.pabcubcru.infobooks.repository.BookRepository;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -26,24 +28,18 @@ public class BookService {
     }
 
     @Transactional(readOnly = true)
-    public List<Book> findAll() {
-        List<Book> res = new ArrayList<Book>();
-        this.bookRepository.findAll().iterator().forEachRemaining(res::add);
-        return res;
+    public Page<Book> findAll(Pageable pageable) {
+        return this.bookRepository.findAll(pageable);
     }
 
     @Transactional(readOnly = true)
-    public List<Book> findAllExceptMine(String username) {
-        List<Book> res = new ArrayList<Book>();
-        this.bookRepository.findByUsernameNot(username).iterator().forEachRemaining(res::add);
-        return res;
+    public Page<Book> findAllExceptMine(String username, Pageable pageable) {
+        return this.bookRepository.findByUsernameNot(username, pageable);
     }
 
     @Transactional(readOnly = true)
-    public List<Book> findMyBooks(String username) {
-        List<Book> res = new ArrayList<>();
-        this.bookRepository.findByUsername(username).iterator().forEachRemaining(res::add);
-        return res;
+    public Page<Book> findMyBooks(String username, Pageable pageable) {
+        return this.bookRepository.findByUsername(username, pageable);
     }
 
     @Transactional

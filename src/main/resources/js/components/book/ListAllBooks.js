@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import bookService from "../services/Book";
 import userService from "../services/User";
 import userFavouriteBook from "../services/UserFavouriteBook";
+import "./Pagination.css";
+import "../Listbooks.css";
 
 export default class List extends Component {
 
@@ -11,53 +13,99 @@ export default class List extends Component {
       books: [],
       isAdded: [],
       username: "",
-      isAdded:false
+      isAdded:false,
+      pages:[],
+      actualPage:0,
+      numTotalPages:0
     }
   }
     
   async componentDidMount() {
-    const res = await bookService.listAllExceptMine()
+    const page = this.props.match.params.page;
+    if(page) {
+      this.setState({actualPage:parseInt(page)})
+    } else {
+      page = 0
+    }
+
+    const res = await bookService.listAllExceptMine(page)
     
     const username = await userService.getUsername()
 
-    this.setState({books:res.books, username:username.username, isAdded:res.isAdded})
+    this.setState({books:res.books, username:username.username, isAdded:res.isAdded, pages:res.pages, numTotalPages:parseInt(res.numTotalPages)})
   }
 
     render() {
         return (
-            <div>
-                  {this.state.books.map((book, i) => {
-                    return(
-                    <div style={{backgroundImage: "url(https://i.pinimg.com/originals/8d/23/06/8d2306b98839234e49ce96a8b76e20ae.jpg)", 
-                    backgroundSize: "auto auto" ,  fontWeight: "bold", padding: "60px", paddingTop:"20px", marginBlock:"30px", margin:"0px 20px 20px 0px", width: '333px',
-                    height: '630px', display: 'inline-flex'}}>
-                    <center><div>
-                    <h5><strong>{book.title}</strong></h5>
-                    <a href={"/books/"+book.id}><img src={book.image} 
-                    style={{padding: '10px', margin:"0px 0px 0px 0px", width: '175px'}}></img></a></div>
-                    <div>
-                    <br clear="left"></br>
-                    <p><strong>Autor: </strong>{book.author}</p>
-                    <p><strong>Editorial: </strong>{book.publisher}</p>
-                    {book.action == "VENTA" ?
-                        <p>{book.action} por {book.price} €</p>
-                    :
-                        <p>{book.action}</p>}</div>
-                        <hr></hr>
-                        <a href={"/books/"+book.id} class="btn btn-primary" style={{margin:"10px", marginTop:"0px"}}>Más detalles</a>
-                        {this.state.username != null ?
-                            this.state.isAdded[i] == false ? 
-                              <a onClick={() => this.addFavouriteBook(book.id)} style={{color:"white"}} class="btn btn-primary">Añadir a favoritos</a>
-                            :                              
-                            <button style={{background:"#099C01",color:"white"}} class="btn btn-primary" disabled>Favorito</button>
-                          :
-                            <p></p>
-                        }
-                        </center>
-                    </div>)
-                })}
+            <div >
                 {this.state.books.length == 0 ?
                   <p><b>Actualmente no existen libros para mostrar.</b></p>
+                :
+                  <center>
+                  {this.state.books.length != 0 && this.state.pages.length > 1 ?
+                  <center>{this.state.actualPage != 0 ? <span><a class="btn btn-primary" href={"/books/all/0"}><b>{String("<<")}</b></a><a style={{margin:"5px"}} class="btn btn-primary" href={"/books/all/"+parseInt(this.state.actualPage-1)}><b>{String("<")}</b></a></span> : <p></p>}
+                  {this.state.pages.map((page) => {
+                    return(
+                      
+                      <a style={{color:this.state.actualPage == page ? "white" : "black", backgroundColor:this.state.actualPage == page ? "#007bff" : ""}} class="pag" href={"/books/all/"+page}>{page}</a>
+                    )
+                  })}
+                  {this.state.actualPage != this.state.numTotalPages-1 ? <span><a style={{margin:"5px"}} class="btn btn-primary" href={"/books/all/"+parseInt(this.state.actualPage+1)}><b>{String(">")}</b></a><a class="btn btn-primary" href={"/books/all/"+parseInt(this.state.numTotalPages-1)}><b>{String(">>")}</b></a></span> : <p></p>}
+                  </center>
+                :
+                  <p></p>
+                }<br></br></center>
+                }
+                  {this.state.books.map((book, i) => {
+                    return(
+                      <main class="mainBooks">
+                        <div class="book-card">
+                          <div class="book-card__cover">
+                            <div class="book-card__book">
+                              <div class="book-card__book-front">
+                                <a style={{zIndex:"-10"}}  href={"/books/"+book.id}><img class="book-card__img" src={book.image} /></a>
+                              </div>
+                              <div class="book-card__book-back"></div>
+                              <div class="book-card__book-side"></div>
+                            </div>
+                          </div>
+                          <div>
+                            <div class="book-card__title">
+                              {book.title} 
+                              {this.state.username != null ?
+                            this.state.isAdded[i] == false ? 
+                              <a onClick={() => this.addFavouriteBook(book.id, this.state.actualPage)} style={{float:"right"}}><img style={{height:"25px", width:"25px"}} src="http://assets.stickpng.com/images/5a02bfca18e87004f1ca4395.png"></img></a>
+                            :                              
+                            <a onClick={() => {this.deleteFavouriteBook(book.id, book.title, this.state.actualPage)}} style={{float:"right"}}><img style={{height:"25px", width:"25px"}} src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Coraz%C3%B3n.svg/1121px-Coraz%C3%B3n.svg.png"></img></a>
+                          :
+                            <p></p>
+                          }
+                            </div>
+                            <div class="book-card__author">
+                              {book.author}
+                            </div>
+                            <div class="book-card__author">
+                            {book.action == "VENTA" ?
+                              <span>{book.action} por {book.price} €</span>
+                            :
+                              book.action}
+                            </div>
+                            
+                            
+                          </div>
+                        </div>
+                      </main>)
+                })}
+                {this.state.books.length != 0 && this.state.pages.length > 1 ?
+                  <center>{this.state.actualPage != 0 ? <span><a class="btn btn-primary" href={"/books/all/0"}><b>{String("<<")}</b></a><a class="btn btn-primary" style={{margin:"5px"}} href={"/books/all/"+parseInt(this.state.actualPage-1)}><b>{String("<")}</b></a></span> : <p></p>}
+                  {this.state.pages.map((page) => {
+                    return(
+                      
+                      <a style={{color:this.state.actualPage == page ? "white" : "black", backgroundColor:this.state.actualPage == page ? "#007bff" : ""}} class="pag" href={"/books/all/"+page}>{page}</a>
+                    )
+                  })}
+                  {this.state.actualPage != this.state.numTotalPages-1 ? <span><a style={{margin:"5px"}} class="btn btn-primary" href={"/books/all/"+parseInt(this.state.actualPage+1)}><b>{String(">")}</b></a><a class="btn btn-primary" href={"/books/all/"+parseInt(this.state.numTotalPages-1)}><b>{String(">>")}</b></a></span> : <p></p>}
+                  <br></br><br></br></center>
                 :
                   <p></p>
                 }
@@ -65,9 +113,17 @@ export default class List extends Component {
           );
     }
 
-    async addFavouriteBook(id) {
+    async addFavouriteBook(id, actualPage) {
       const res = await userFavouriteBook.addFavouriteBook(id)
-      window.location.replace("/")
+      window.location.replace("/books/all/"+actualPage)
       
+    }
+
+    async deleteFavouriteBook(id, title, actualPage) {
+      const conf = confirm("¿Está seguro de que quiere eliminar "+title+" de favoritos?")
+      if(conf) {
+        const res = await userFavouriteBook.deleteFavouriteBook(id)
+        window.location.replace("/books/all/"+actualPage)
+      }
     }
 }

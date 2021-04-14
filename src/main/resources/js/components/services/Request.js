@@ -11,6 +11,7 @@ request.create = async(state) => {
         idBook2:"",
         status:"",
         action:"",
+        pay: state.fieldPay,
         comment: state.fieldComment
     }
 
@@ -22,9 +23,9 @@ request.create = async(state) => {
     return res;
 }
 
-request.listMyRequests = async() => {
+request.listMyRequests = async(page) => {
 
-    const urlGet = baseUrl+"/my-requests"
+    const urlGet = baseUrl+"/my-requests?page="+page
     const res = await axios.get(urlGet)
     .then(response => {return response.data})
     .catch(error => {return error.response})
@@ -32,9 +33,9 @@ request.listMyRequests = async() => {
     return res;
 }
 
-request.listReceivedRequests = async() => {
+request.listReceivedRequests = async(page) => {
 
-    const urlGet = baseUrl+"/received-requests"
+    const urlGet = baseUrl+"/received-requests?page="+page
     const res = await axios.get(urlGet)
     .then(response => {return response.data})
     .catch(error => {return error.response})

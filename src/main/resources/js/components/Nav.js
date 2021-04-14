@@ -40,32 +40,37 @@ export default class Nav extends Component {
           {this.state.isLogged ? 
             <div><li ><a  href="#">Libros</a>
             <ul>
-                <li ><a  href="/books/me">Mis libros</a></li>
-                <li ><a  href="/favourites">Favoritos</a></li>
+                <li ><a  href="/books/all/0">Todos</a></li>
+                <li ><a  href="/books/me/0">Mis libros</a></li>
+                <li ><a  href="/favourites/0">Favoritos</a></li>
                 <li ><a  href="/books/new">Añadir libro</a></li>
             </ul>
           </li>
           <li ><a  href="#">Peticiones</a>
             <ul>
-                <li ><a  href="/requests/me">Enviadas</a></li>
-                <li ><a  href="/requests/received">Recibidas</a></li>
+                <li ><a  href="/requests/me/0">Enviadas</a></li>
+                <li ><a  href="/requests/received/0">Recibidas</a></li>
             </ul>
           </li>
-          </div>
-        :
-            <p></p>
-        }  
-        {this.state.isLogged ? 
           <li style={{float:"right"}}><a href="#" >Perfil</a>
             <ul>
                 <li >{button1}</li>
                 <li >{button2}</li>
             </ul>
           </li>
+          <li style={{float:"right"}}><div class="search-box">
+            <input class="text" type="text" placeholder="Título, ISBN, año, ..."/>
+          <button> <i class="fa fa-search"></i></button></div></li>
+          </div>
         :
-          <div><li style={{float:"right"}}>{button2}</li>
-          <li style={{float:"right"}}>{button1}</li></div>
-        }
+          <div><li style={{float:"left"}}><a  href="/books/all/0">Libros</a></li>
+          <li style={{float:"right"}}>{button2}</li>
+          <li style={{float:"right"}}>{button1}</li>
+          <li style={{float:"right"}}><div class="search-box">
+            <input class="text" type="text" placeholder="Título, ISBN, ..."/>
+          <button> <i class="fa fa-search"></i></button></div></li>
+          </div>
+        }  
           
         </ul>
       </nav>

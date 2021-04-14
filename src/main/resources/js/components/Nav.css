@@ -1,4 +1,5 @@
 .menu, .menu ul, .menu li, .menu a {
+  z-index: 5;
   margin: 0;
   padding: 0;
   border: none;
@@ -8,10 +9,10 @@
 .menu {
   height: 70px;
   width: 100%;
-  background-color: rgb(0, 0, 0);
+  background-color: #26272b;
   border-radius: 3px;
+  border-radius: 5px;
 }
-
 
 .menu li {
   position: relative;
@@ -37,7 +38,7 @@
 
 
 
-.menu li:hover > a {color: #ff0000}
+.menu li:hover > a {color: #007bff}
 
 .menu ul {
   position: absolute;
@@ -45,7 +46,7 @@
   left: 20px;
   
   opacity: 0;
-  background: rgb(0, 0, 0);
+  background: #26272b;
   
   border-radius: 0 0 10px 10px;
   transition: opacity .20s ease .1s;
@@ -76,3 +77,46 @@
   font-weight: normal;
 }
 .menu ul li:last-child a { border: none; }
+
+.search-box{
+  margin-top: 10px;
+  top: 50%;
+  left: 50%;
+  height:40px;
+  transform: translate(-50%, -50%);
+  position:relative;
+  display: flex;
+  background-color:#ffffff;
+  border-radius: 18px
+}
+
+.search-box button{
+  width: 40px;
+  height:40px ;
+  border-radius: 50%;
+  border:none;
+  color:#2C3A47;
+}
+
+.search-box input{
+  border:none;
+  outline:0px;
+  padding: 0px 0px;
+  background-color:transparent;
+  border-radius: 18px;
+  color:rgb(0, 0, 0);
+  font-size: 20px;
+  width: 0px;
+  box-sizing: border-box;
+  transition: .3s;
+}
+
+.search-box button:hover{
+   cursor: pointer;
+}
+
+.search-box:hover .text{
+  width:240px;
+  padding: 10px 20px;
+  
+}

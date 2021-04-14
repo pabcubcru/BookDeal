@@ -1,12 +1,11 @@
 package com.pabcubcru.infobooks.services;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import com.pabcubcru.infobooks.models.UserFavouriteBook;
 import com.pabcubcru.infobooks.repository.UserFavouriteBookRepository;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -31,10 +30,8 @@ public class UserFavouriteBookService {
     }
 
     @Transactional(readOnly = true)
-    public List<UserFavouriteBook> findAllByUsername(String username) {
-        List<UserFavouriteBook> res = new ArrayList<>();
-        this.userFavoruriteBookRepository.findByUsername(username).iterator().forEachRemaining(res::add);
-        return res;
+    public Page<UserFavouriteBook> findAllByUsername(String username, Pageable pageable) {
+        return this.userFavoruriteBookRepository.findByUsername(username, pageable);
     }
 
     @Transactional

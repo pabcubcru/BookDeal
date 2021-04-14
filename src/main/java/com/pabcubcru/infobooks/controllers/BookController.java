@@ -5,6 +5,8 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 
 import javax.validation.Valid;
 
@@ -17,6 +19,9 @@ import com.pabcubcru.infobooks.services.RequestService;
 import com.pabcubcru.infobooks.services.UserFavouriteBookService;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -24,6 +29,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -40,7 +46,7 @@ public class BookController {
     @Autowired
     private RequestService requestService;
 
-    @GetMapping(value = {"/new", "/me", "/all"})
+    @GetMapping(value = {"/new", "/me/{page}", "/all/{page}"})
 	public ModelAndView main() {
 		ModelAndView model = new ModelAndView();
 		model.setViewName("Main");
@@ -127,15 +133,18 @@ public class BookController {
     }
 
     @GetMapping(value="/list/all-me")
-    public Map<String, Object> findAllExceptMine(Principal principal) {
+    public Map<String, Object> findAllExceptMine(Principal principal, Pageable pageable, @RequestParam(name = "page", defaultValue = "0") Integer page) {
         Map<String, Object> res = new HashMap<>();
+        Page<Book> pageOfBooks = null;
+        PageRequest pageRequest = PageRequest.of(page, 21);
 
         if(principal == null) {
-            res.put("books", this.bookService.findAll());
+            pageOfBooks = this.bookService.findAll(pageRequest);
+            res.put("books", pageOfBooks.getContent());
         } else {
             List<Book> books = new ArrayList<>();
-            List<Book> allBooksExceptMine = this.bookService.findAllExceptMine(principal.getName());
-            for(Book b : allBooksExceptMine) {
+            pageOfBooks = this.bookService.findAllExceptMine(principal.getName(), pageRequest);
+            for(Book b : pageOfBooks.getContent()) {
                 Request requestAcceptedToBook1 = this.requestService.findFirstByIdBook1AndStatus(b.getId(), RequestStatus.ACEPTADA.toString());
                 Request requestAcceptedToBook2 = this.requestService.findFirstByIdBook2AndStatus(b.getId(), RequestStatus.ACEPTADA.toString());
                 if(requestAcceptedToBook1 == null && requestAcceptedToBook2 == null) {
@@ -151,17 +160,35 @@ public class BookController {
                     isAdded.add(true);
                 }
             }
+            res.put("page", page);
             res.put("isAdded", isAdded);
+        }
+        Integer numberOfPages = pageOfBooks.getTotalPages();
+        res.put("numTotalPages", numberOfPages);
+        res.put("pages", new ArrayList<Integer>());
+        if(numberOfPages > 0) {
+            List<Integer> pages = IntStream.rangeClosed(page-10 <= 0 ? 0 : page-10, page+10 >= numberOfPages-1 ? numberOfPages-1 : page+10).boxed().collect(Collectors.toList());
+            res.put("pages", pages);
         }
 
         return res;
     }
 
     @GetMapping(value="/list/me")
-    public Map<String, Object> findMyBooks(Principal principal){
+    public Map<String, Object> findMyBooks(Principal principal, Pageable pageable, @RequestParam(name = "page", defaultValue = "0") Integer page){
         Map<String, Object> res = new HashMap<>();
+        PageRequest pageRequest = PageRequest.of(page, 21);
+        Page<Book> pageOfBooks = this.bookService.findMyBooks(principal.getName(), pageRequest);
+        
+        res.put("books", pageOfBooks.getContent());
 
-        res.put("books", this.bookService.findMyBooks(principal.getName()));
+        Integer numberOfPages = pageOfBooks.getTotalPages();
+        res.put("numTotalPages", numberOfPages);
+        res.put("pages", new ArrayList<Integer>());
+        if(numberOfPages > 0) {
+            List<Integer> pages = IntStream.rangeClosed(page-10 <= 0 ? 0 : page-10, page+10 >= numberOfPages-1 ? numberOfPages-1 : page+10).boxed().collect(Collectors.toList());
+            res.put("pages", pages);
+        }
 
         return res;
     }
@@ -222,6 +249,27 @@ public class BookController {
             } else {
                 res.put("isAdded", true);
             }
+        } catch (Exception e) {
+            res.put("success", false);
+        }
+
+        return res;
+    }
+
+    @GetMapping(value = "/edit/{id}")
+    public Map<String, Object> getBookByIdToEdit(@PathVariable("id") String id, Principal principal) {
+        Map<String, Object> res = new HashMap<>();
+        try {
+            Book book = this.bookService.findBookById(id);
+            res.put("book", book);
+
+            Request request = this.requestService.findFirstByIdBook1OrIdBook2(id);
+            if(request != null) {
+                res.put("alreadyRequest", true);
+            } else {
+                res.put("alreadyRequest", false);
+            }
+            res.put("success", true);
         } catch (Exception e) {
             res.put("success", false);
         }

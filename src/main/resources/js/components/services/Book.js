@@ -63,8 +63,17 @@ book.getBook = async(id) => {
     return res;
 }
 
-book.listAllExceptMine = async() => {
-    const urlGet = baseUrl+"/list/all-me"
+book.getBookToEdit = async(id) => {
+    const urlGet = baseUrl+"/edit/"+id
+    const res = await axios.get(urlGet)
+    .then(response => {return response.data})
+    .catch(error => {return error.response})
+    
+    return res;
+}
+
+book.listAllExceptMine = async(page) => {
+    const urlGet = baseUrl+"/list/all-me?page="+page
     const res = await axios.get(urlGet)
     .then(response => {return response.data;})
     .catch(error => {return error.response;})
@@ -72,8 +81,8 @@ book.listAllExceptMine = async() => {
     return res;
 }
 
-book.listMyBooks = async() => {
-    const urlGet = baseUrl+"/list/me"
+book.listMyBooks = async(page) => {
+    const urlGet = baseUrl+"/list/me?page="+page
     const res = await axios.get(urlGet)
     .then(response => {return response.data;})
     .catch(error => {return error.response;})

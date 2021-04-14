@@ -29,6 +29,9 @@ public class Request extends BaseEntity {
     @Field(type = FieldType.Keyword, name = "action")
     private String action;
 
+    @Field(type = FieldType.Keyword, name = "pay")
+    private Double pay;
+
     @Field(type = FieldType.Text, name = "comment")
     private String comment;
 }

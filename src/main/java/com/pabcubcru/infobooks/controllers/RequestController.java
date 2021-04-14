@@ -5,6 +5,8 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 
 import com.pabcubcru.infobooks.models.Book;
 import com.pabcubcru.infobooks.models.Request;
@@ -15,12 +17,15 @@ import com.pabcubcru.infobooks.services.RequestService;
 import com.pabcubcru.infobooks.services.UserService;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -37,7 +42,7 @@ public class RequestController {
     @Autowired
     private UserService userService;
 
-    @GetMapping(value = {"/me", "/received"})
+    @GetMapping(value = {"/me/{page}", "/received/{page}"})
     public ModelAndView mainWithSecurity() {
         ModelAndView model = new ModelAndView();
         model.setViewName("Main");
@@ -67,6 +72,7 @@ public class RequestController {
                 Book book = this.bookService.findBookById(id);
                 if(book.getAction().equals("INTERCAMBIO")) {
                     request.setAction("INTERCAMBIO");
+                    request.setPay(null);
                 } else if(book.getAction().equals("VENTA")) {
                     request.setAction("VENTA");
                     request.setIdBook1("");
@@ -88,15 +94,16 @@ public class RequestController {
     }
 
     @GetMapping("/my-requests")
-    public Map<String, Object> listMyRequest(Principal principal) {
+    public Map<String, Object> listMyRequest(Principal principal, @RequestParam(name = "page", defaultValue = "0") Integer page) {
         Map<String, Object> res = new HashMap<>();
         List<Book> books1 = new ArrayList<>();
         List<Book> books2 = new ArrayList<>();
         List<User> users = new ArrayList<>();
+        PageRequest pageRequest = PageRequest.of(page, 10);
 
-        List<Request> requests = this.requestService.listMyRequests(principal.getName());
+        Page<Request> pageOfRequests = this.requestService.listMyRequests(principal.getName(), pageRequest);
 
-        for(Request r : requests){
+        for(Request r : pageOfRequests.getContent()){
             if(r.getAction().equals("INTERCAMBIO")) {
                 books1.add(this.bookService.findBookById(r.getIdBook1()));
             } else {
@@ -110,24 +117,33 @@ public class RequestController {
             books2.add(this.bookService.findBookById(r.getIdBook2()));
         }
 
-        res.put("requests", requests);
+        res.put("requests", pageOfRequests.getContent());
         res.put("books1", books1);
         res.put("books2", books2);
         res.put("users", users);
+
+        Integer numberOfPages = pageOfRequests.getTotalPages();
+        res.put("numTotalPages", numberOfPages);
+        res.put("pages", new ArrayList<Integer>());
+        if(numberOfPages > 0) {
+            List<Integer> pages = IntStream.rangeClosed(page-10 <= 0 ? 0 : page-10, page+10 >= numberOfPages-1 ? numberOfPages-1 : page+10).boxed().collect(Collectors.toList());
+            res.put("pages", pages);
+        }
 
         return res;
     }
 
     @GetMapping("/received-requests")
-    public Map<String, Object> listReceivedRequest(Principal principal) {
+    public Map<String, Object> listReceivedRequest(Principal principal, @RequestParam(name = "page", defaultValue = "0") Integer page) {
         Map<String, Object> res = new HashMap<>();
         List<Book> books1 = new ArrayList<>();
         List<Book> books2 = new ArrayList<>();
         List<User> users = new ArrayList<>();
+        PageRequest pageRequest = PageRequest.of(page, 10);
 
-        List<Request> requests = this.requestService.listReceivedRequests(principal.getName());
+        Page<Request> pageOfRequests = this.requestService.listReceivedRequests(principal.getName(), pageRequest);
 
-        for(Request r : requests){
+        for(Request r : pageOfRequests.getContent()){
             if(r.getAction().equals("INTERCAMBIO")) {
                 books1.add(this.bookService.findBookById(r.getIdBook1()));
             } else {
@@ -141,10 +157,18 @@ public class RequestController {
             }
         }
 
-        res.put("requests", requests);
+        res.put("requests", pageOfRequests.getContent());
         res.put("books1", books1);
         res.put("books2", books2);
         res.put("users", users);
+
+        Integer numberOfPages = pageOfRequests.getTotalPages();
+        res.put("numTotalPages", numberOfPages);
+        res.put("pages", new ArrayList<Integer>());
+        if(numberOfPages > 0) {
+            List<Integer> pages = IntStream.rangeClosed(page-10 <= 0 ? 0 : page-10, page+10 >= numberOfPages-1 ? numberOfPages-1 : page+10).boxed().collect(Collectors.toList());
+            res.put("pages", pages);
+        }
 
         return res;
     }
