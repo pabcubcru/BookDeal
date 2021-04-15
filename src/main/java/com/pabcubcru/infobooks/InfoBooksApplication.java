@@ -1,22 +1,28 @@
 package com.pabcubcru.infobooks;
 
 import java.io.File;
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
 import javax.annotation.PostConstruct;
 
+import com.pabcubcru.infobooks.models.Authorities;
 import com.pabcubcru.infobooks.models.Book;
 import com.pabcubcru.infobooks.models.GenreEnum;
+import com.pabcubcru.infobooks.models.User;
+import com.pabcubcru.infobooks.repository.AuthoritiesRepository;
 import com.pabcubcru.infobooks.repository.BookRepository;
 import com.pabcubcru.infobooks.repository.RequestRepository;
 import com.pabcubcru.infobooks.repository.UserFavouriteBookRepository;
+import com.pabcubcru.infobooks.repository.UserRepository;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.data.elasticsearch.core.ElasticsearchOperations;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
 import lombok.extern.slf4j.Slf4j;
 
@@ -36,19 +42,109 @@ public class InfoBooksApplication {
 	@Autowired
 	private RequestRepository requestRepository;
 
+	@Autowired
+	private UserRepository userRepository;
+
+	@Autowired
+	private AuthoritiesRepository authoritiesRepository;
+
 	public static void main(String[] args) {
 		SpringApplication.run(InfoBooksApplication.class, args);
 	}
 
-	@PostConstruct
-	public void buildBookIndex() {
+	public void deleteIndex() {
 		requestRepository.deleteAll();
 		userFavouriteBookRepository.deleteAll();
 		bookRepository.deleteAll();
+		userRepository.deleteAll();
+	}
+
+	public void buildBookIndexForTests() {
+		Book book = new Book();
+
+		book.setId("book-001");
+        book.setTitle("Title test 1");
+        book.setIsbn("0-7645-2641-3");
+        book.setPublicationYear(2014);
+        book.setPublisher("Publisher Test");
+        book.setGenres("Comedia");
+        book.setAuthor("Author Test"); 
+        book.setDescription("Description test"); 
+        book.setImage("https://assets.fireside.fm/file/fireside-images/podcasts/images/b/bc7f1faf-8aad-4135-bb12-83a8af679756/cover.jpg?v=3");
+        book.setStatus("COMO NUEVO"); 
+        book.setAction("VENTA"); 
+		book.setPrice(10.);
+        book.setUsername("test001");
+		this.bookRepository.save(book);
+
+		book = new Book();
+
+		book.setId("book-002");
+        book.setTitle("Title test 2");
+        book.setIsbn("0-7645-2641-3");
+        book.setPublicationYear(2014);
+        book.setPublisher("Publisher Test");
+        book.setGenres("Comedia");
+        book.setAuthor("Author Test"); 
+        book.setDescription("Description test"); 
+        book.setImage("https://assets.fireside.fm/file/fireside-images/podcasts/images/b/bc7f1faf-8aad-4135-bb12-83a8af679756/cover.jpg?v=3");
+        book.setStatus("COMO NUEVO"); 
+        book.setAction("INTERCAMBIO");
+        book.setUsername("test002");
+		this.bookRepository.save(book);
+	}
+
+	public void buildAuthoritiesForTests(String username) {
+		Authorities authorities = new Authorities();
+		authorities.setId("authorities-"+username);
+		authorities.setUsername(username);
+		authorities.setAuthority("user");
+		this.authoritiesRepository.save(authorities);
+	}
+
+	public void buildUserIndexForTests() {
+		User user = new User();
+
+		user.setId("userTest-pablo123");
+        user.setName("Pablo");
+        user.setEmail("pablo@us.es"); //No contiene @ ni es correcto
+        user.setPhone("+34654987321");
+        user.setBirthDate(LocalDate.of(2020, 11, 23));
+        user.setProvince("Sevilla");
+        user.setCity("Sevilla");
+        user.setPostCode("41012");
+        user.setUsername("pablo123");
+        user.setPassword(new BCryptPasswordEncoder().encode("pablo123"));
+        user.setEnabled(true);
+		this.userRepository.save(user);
+		this.buildAuthoritiesForTests(user.getUsername());
+
+		user = new User();
+
+		user.setId("userTest-juan1234");
+        user.setName("Juan");
+        user.setEmail("juan@us.es"); //No contiene @ ni es correcto
+        user.setPhone("+34654987321");
+        user.setBirthDate(LocalDate.of(2020, 11, 23));
+        user.setProvince("Sevilla");
+        user.setCity("Sevilla");
+        user.setPostCode("41012");
+        user.setUsername("juan1234");
+        user.setPassword(new BCryptPasswordEncoder().encode("juan1234"));
+        user.setEnabled(true);
+		this.userRepository.save(user);
+		this.buildAuthoritiesForTests(user.getUsername());
+	}
+
+	@PostConstruct
+	public void buildBookIndex() {
+		this.deleteIndex();
+		this.buildUserIndexForTests();
+		this.buildBookIndexForTests();
 		elasticSearchOperations.indexOps(Book.class).refresh();
 		List<Book> books = prepareDataset();
 		bookRepository.saveAll(books);
-		log.info("============== Added " + books.size() + " books. =================================================================================");
+		log.info("================= Added " + books.size() + " books. =================");
 	}
 
 	private List<Book> prepareDataset() {

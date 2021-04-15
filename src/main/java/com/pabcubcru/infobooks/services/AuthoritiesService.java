@@ -28,9 +28,4 @@ public class AuthoritiesService {
     public List<Authorities> findByUsername(String username){
         return this.authoritiesRepository.findByUsername(username);
     }
-
-    @Transactional
-    public void saveAll(List<Authorities> authorities) {
-        this.authoritiesRepository.saveAll(authorities);
-    }
 }
