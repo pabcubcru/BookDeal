@@ -217,7 +217,7 @@ public class BookController {
     public Map<String, Object> getGenres() {
         Map<String, Object> res = new HashMap<>();
 
-        res.put("genres", List.of(GenreEnum.values()));
+        res.put("genres", GenreEnum.values());
 
         return res;
     }

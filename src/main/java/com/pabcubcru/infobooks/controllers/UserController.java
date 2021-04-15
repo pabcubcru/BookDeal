@@ -62,7 +62,7 @@ public class UserController {
 	public Map<String, Object> getProvinces() {
 		Map<String, Object> res = new HashMap<>();
 
-		res.put("provinces", List.of(ProvinceEnum.values()));
+		res.put("provinces", ProvinceEnum.values());
 
 		return res;
 	}

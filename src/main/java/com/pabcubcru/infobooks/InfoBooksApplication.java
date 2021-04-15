@@ -174,8 +174,7 @@ public class InfoBooksApplication {
 	private Book csvRowToBookMapper(final String line) {
 		if(line!="" || line != null) {
 			String[] s = line.split(";");
-			List<String> genres = new ArrayList<>();
-			List.of(GenreEnum.values()).stream().forEach(x -> genres.add(x.toString()));
+			GenreEnum[] genres = GenreEnum.values();
 			String isbn = s[0];
 			String originalTitle = s[1];
 			String title = s[2];
@@ -190,9 +189,9 @@ public class InfoBooksApplication {
 			String urlImage = s[7];
 			int numRandomGenre1 = (int) Math.floor(Math.random()*GenreEnum.values().length);
 			int numRandomGenre2 = (int) Math.floor(Math.random()*GenreEnum.values().length);
-			String genre = genres.get(numRandomGenre1);
+			String genre = genres[numRandomGenre1].toString();
 			if(numRandomGenre1 != numRandomGenre2) {
-				genre = genres.get(numRandomGenre1) + "," + genres.get(numRandomGenre2);
+				genre = genres[numRandomGenre1].toString() + "," + genres[numRandomGenre2].toString();
 			}
 			String status = "NUEVO";
 			int numRandomAction = (int) Math.floor(Math.random()*2);
