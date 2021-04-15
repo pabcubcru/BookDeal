@@ -1,5 +1,6 @@
 package com.pabcubcru.infobooks.service;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import com.pabcubcru.infobooks.models.Book;
@@ -52,8 +53,9 @@ public class BookServiceTests {
     }
 
     @Test
-    public void shouldFindByIds() throws Exception {
-        List<Book> books = this.bookService.findByIds(List.of("book-001", "book-002"));
+    public void shouldFindByIds() throws Exception { 
+        List<String> ids = new ArrayList<>(); ids.add("book-001"); ids.add("book-002");
+        List<Book> books = this.bookService.findByIds(ids);
         Assertions.assertThat(books.size()).isEqualTo(2);
         Assertions.assertThat(books.get(0).getTitle()).isEqualTo("Title test 1");
         Assertions.assertThat(books.get(1).getTitle()).isEqualTo("Title test 2");
