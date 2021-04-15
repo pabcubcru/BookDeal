@@ -1,0 +1,14 @@
+dist: trusty
+language: java
+jdk: oraclejdk8
+services:
+  - elasticsearch
+before_install:
+  - curl https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-7.6.2-amd64.deb -o elasticsearch.deb
+  - sudo dpkg -i --force-confnew elasticsearch.deb
+  - sudo chown -R elasticsearch:elasticsearch /etc/default/elasticsearch
+  - sudo service elasticsearch restart
+before_script:
+  - sleep 10
+script: mvn test -B
+  
