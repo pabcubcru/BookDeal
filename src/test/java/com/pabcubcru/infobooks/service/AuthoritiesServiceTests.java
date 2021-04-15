@@ -21,7 +21,7 @@ public class AuthoritiesServiceTests {
 
     @Test
     public void shouldFindByUsername() throws Exception {
-        List<Authorities> authorities = this.authoritiesService.findByUsername("pablo123");
+        List<Authorities> authorities = this.authoritiesService.findByUsername("juan1234");
         Assertions.assertThat(authorities.get(0).getAuthority()).isEqualTo("user");
     }
 

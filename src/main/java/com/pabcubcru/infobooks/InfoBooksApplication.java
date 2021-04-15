@@ -151,7 +151,7 @@ public class InfoBooksApplication {
 		List<Book> res = new ArrayList<>();
 
 		try {
-			File myObj = new File("src\\main\\java\\com\\pabcubcru\\infobooks\\books.csv");
+			File myObj = new File(".\\src\\main\\java\\com\\pabcubcru\\infobooks\\books.csv");
       		Scanner scanner = new Scanner(myObj);
 			int lineNo = 0;
 			while (scanner.hasNextLine()) {
