@@ -15,7 +15,7 @@ import org.springframework.validation.beanvalidation.LocalValidatorFactoryBean;
 
 public class BookValidatorTests {
 
-    private Validator createValidator() {
+    private Validator createValidator() throws Exception {
         LocalValidatorFactoryBean validator = new LocalValidatorFactoryBean();
         validator.afterPropertiesSet();
 
@@ -23,7 +23,7 @@ public class BookValidatorTests {
     }
 
     @Test
-    void errorWhenFieldsAreNullOrBlank() {
+    void errorWhenFieldsAreNullOrBlank() throws Exception {
         LocaleContextHolder.setLocale(Locale.ENGLISH);
         Book book = new Book();
 
@@ -33,7 +33,7 @@ public class BookValidatorTests {
     }
 
     @Test
-    void errorWhenTitleAndPublisherAreBlank() {
+    void errorWhenTitleAndPublisherAreBlank() throws Exception {
         LocaleContextHolder.setLocale(Locale.ENGLISH);
         Book book = new Book();
 
@@ -55,7 +55,7 @@ public class BookValidatorTests {
     }
 
     @Test
-    void errorWhenGenresAndAuthorAreBlank() {
+    void errorWhenGenresAndAuthorAreBlank() throws Exception {
         LocaleContextHolder.setLocale(Locale.ENGLISH);
         Book book = new Book();
 
@@ -77,7 +77,7 @@ public class BookValidatorTests {
     }
 
     @Test
-    void errorWhenDescriptionAndStatusAreBlank() {
+    void errorWhenDescriptionAndStatusAreBlank() throws Exception {
         LocaleContextHolder.setLocale(Locale.ENGLISH);
         Book book = new Book();
 
@@ -99,7 +99,7 @@ public class BookValidatorTests {
     }
 
     @Test
-    void errorWhenActionBlank() {
+    void errorWhenActionBlank() throws Exception {
         LocaleContextHolder.setLocale(Locale.ENGLISH);
         Book book = new Book();
 
@@ -121,7 +121,7 @@ public class BookValidatorTests {
     }
 
     @Test
-    void errorWhenISBNIsNotValid() {
+    void errorWhenISBNIsNotValid() throws Exception {
         LocaleContextHolder.setLocale(Locale.ENGLISH);
         Book book = new Book();
 
@@ -146,7 +146,7 @@ public class BookValidatorTests {
     }
 
     @Test
-    void errorWhenPublicationYearIsInFuture() {
+    void errorWhenPublicationYearIsInFuture() throws Exception {
         LocaleContextHolder.setLocale(Locale.ENGLISH);
         Book book = new Book();
 
@@ -171,7 +171,7 @@ public class BookValidatorTests {
     }
 
     @Test
-    void errorWhenUrlImageIsNotValid() {
+    void errorWhenUrlImageIsNotValid() throws Exception {
         LocaleContextHolder.setLocale(Locale.ENGLISH);
         Book book = new Book();
 

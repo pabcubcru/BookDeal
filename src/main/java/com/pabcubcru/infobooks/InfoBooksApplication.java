@@ -11,7 +11,9 @@ import javax.annotation.PostConstruct;
 import com.pabcubcru.infobooks.models.Authorities;
 import com.pabcubcru.infobooks.models.Book;
 import com.pabcubcru.infobooks.models.GenreEnum;
+import com.pabcubcru.infobooks.models.Request;
 import com.pabcubcru.infobooks.models.User;
+import com.pabcubcru.infobooks.models.UserFavouriteBook;
 import com.pabcubcru.infobooks.repository.AuthoritiesRepository;
 import com.pabcubcru.infobooks.repository.BookRepository;
 import com.pabcubcru.infobooks.repository.RequestRepository;
@@ -59,6 +61,77 @@ public class InfoBooksApplication {
 		userRepository.deleteAll();
 	}
 
+	public void buildUserFavouriteBookIndexForTests() {
+		UserFavouriteBook ufb = new UserFavouriteBook();
+
+		ufb.setBookId("book-001");
+		ufb.setId("ufb-001");
+		ufb.setUsername("pablo123");
+		this.userFavouriteBookRepository.save(ufb);
+
+		ufb = new UserFavouriteBook();
+
+		ufb.setBookId("book-002");
+		ufb.setId("ufb-002");
+		ufb.setUsername("pablo123");
+		this.userFavouriteBookRepository.save(ufb);
+
+		ufb = new UserFavouriteBook();
+
+		ufb.setBookId("book-001");
+		ufb.setId("ufb-003");
+		ufb.setUsername("juan1234");
+		this.userFavouriteBookRepository.save(ufb);
+
+		ufb = new UserFavouriteBook();
+
+		ufb.setBookId("booktest");
+		ufb.setId("ufb-004");
+		ufb.setUsername("test001");
+		this.userFavouriteBookRepository.save(ufb);
+	}
+
+	public void buildRequestsIndexForTests() {
+		Request request = new Request();
+
+		request.setId("request-001");
+		request.setAction("VENTA");
+		request.setComment("comment");
+		request.setIdBook2("book-002");
+		request.setUsername1("test001");
+		request.setUsername2("test002");
+		request.setStatus("PENDIENTE");
+		request.setPay(10.);
+		this.requestRepository.save(request);
+
+		request = new Request();
+
+		request.setId("request-002");
+		request.setAction("INTERCAMBIO");
+		request.setComment("comment");
+		request.setIdBook1("book-001");
+		request.setIdBook2("book-002");
+		request.setUsername1("test001");
+		request.setUsername2("test002");
+		request.setStatus("ACEPTADA");
+		this.requestRepository.save(request);
+
+		request = new Request();
+
+		request.setId("request-003");
+		this.requestRepository.save(request);
+
+		request = new Request();
+
+		request.setId("request-004");
+		this.requestRepository.save(request);
+
+		request = new Request();
+
+		request.setId("request-005");
+		this.requestRepository.save(request);
+	}
+
 	public void buildBookIndexForTests() {
 		Book book = new Book();
 
@@ -70,26 +143,19 @@ public class InfoBooksApplication {
         book.setGenres("Comedia");
         book.setAuthor("Author Test"); 
         book.setDescription("Description test"); 
-        book.setImage("https://assets.fireside.fm/file/fireside-images/podcasts/images/b/bc7f1faf-8aad-4135-bb12-83a8af679756/cover.jpg?v=3");
+        book.setImage("https://imagessl1.casadellibro.com/a/l/t5/11/9788499926711.jpg");
         book.setStatus("COMO NUEVO"); 
         book.setAction("VENTA"); 
 		book.setPrice(10.);
         book.setUsername("test001");
 		this.bookRepository.save(book);
 
-		book = new Book();
-
 		book.setId("book-002");
         book.setTitle("Title test 2");
-        book.setIsbn("0-7645-2641-3");
-        book.setPublicationYear(2014);
-        book.setPublisher("Publisher Test");
-        book.setGenres("Comedia");
-        book.setAuthor("Author Test"); 
-        book.setDescription("Description test"); 
-        book.setImage("https://assets.fireside.fm/file/fireside-images/podcasts/images/b/bc7f1faf-8aad-4135-bb12-83a8af679756/cover.jpg?v=3");
+        book.setImage("https://images-na.ssl-images-amazon.com/images/I/81sBQfVzziL.jpg");
         book.setStatus("COMO NUEVO"); 
         book.setAction("INTERCAMBIO");
+		book.setPrice(null);
         book.setUsername("test002");
 		this.bookRepository.save(book);
 	}
@@ -107,7 +173,7 @@ public class InfoBooksApplication {
 
 		user.setId("userTest-pablo123");
         user.setName("Pablo");
-        user.setEmail("pablo@us.es"); //No contiene @ ni es correcto
+        user.setEmail("pablo@us.es"); 
         user.setPhone("+34654987321");
         user.setBirthDate(LocalDate.of(2020, 11, 23));
         user.setProvince("Sevilla");
@@ -123,7 +189,7 @@ public class InfoBooksApplication {
 
 		user.setId("userTest-juan1234");
         user.setName("Juan");
-        user.setEmail("juan@us.es"); //No contiene @ ni es correcto
+        user.setEmail("juan@us.es"); 
         user.setPhone("+34654987321");
         user.setBirthDate(LocalDate.of(2020, 11, 23));
         user.setProvince("Sevilla");
@@ -139,12 +205,14 @@ public class InfoBooksApplication {
 	@PostConstruct
 	public void buildBookIndex() {
 		this.deleteIndex();
-		this.buildUserIndexForTests();
-		this.buildBookIndexForTests();
 		elasticSearchOperations.indexOps(Book.class).refresh();
 		List<Book> books = prepareDataset();
 		bookRepository.saveAll(books);
 		log.info("================= Added " + books.size() + " books. =================");
+		this.buildUserIndexForTests();
+		this.buildBookIndexForTests();
+		this.buildRequestsIndexForTests();
+		this.buildUserFavouriteBookIndexForTests();
 	}
 
 	private List<Book> prepareDataset() {
@@ -172,7 +240,7 @@ public class InfoBooksApplication {
 	}
 
 	private Book csvRowToBookMapper(final String line) {
-		if(line!="" || line != null) {
+		if(!line.equals("") || !line.equals(null)) {
 			String[] s = line.split(";");
 			GenreEnum[] genres = GenreEnum.values();
 			String isbn = s[0];
@@ -180,7 +248,7 @@ public class InfoBooksApplication {
 			String title = s[2];
 			String author = s[3];
 			Integer publicationYear = 2010;
-			if(s[4] != "") {
+			if(!s[4].equals("")) {
 				String r = s[4].replace(".0", "");
 				publicationYear = Integer.parseInt(r);
 			}

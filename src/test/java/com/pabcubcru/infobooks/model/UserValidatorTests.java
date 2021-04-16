@@ -17,7 +17,7 @@ import org.springframework.validation.beanvalidation.LocalValidatorFactoryBean;
 
 public class UserValidatorTests {
     
-    private Validator createValidator() {
+    private Validator createValidator() throws Exception {
         LocalValidatorFactoryBean validator = new LocalValidatorFactoryBean();
         validator.afterPropertiesSet();
 
@@ -25,7 +25,7 @@ public class UserValidatorTests {
     }
 
     @Test
-    void errorWhenFieldsAreNullOrBlank() {
+    void errorWhenFieldsAreNullOrBlank() throws Exception {
         LocaleContextHolder.setLocale(Locale.ENGLISH);
         User user = new User();
 
@@ -35,7 +35,7 @@ public class UserValidatorTests {
     }
 
     @Test
-    void errorWhenEmailIsNotValid() {
+    void errorWhenEmailIsNotValid() throws Exception {
         LocaleContextHolder.setLocale(Locale.ENGLISH);
         User user = new User();
 
@@ -59,7 +59,7 @@ public class UserValidatorTests {
     }
 
     @Test
-    void errorWhenPhoneHasNotCorrectPattern() {
+    void errorWhenPhoneHasNotCorrectPattern() throws Exception {
         LocaleContextHolder.setLocale(Locale.ENGLISH);
         User user = new User();
 
@@ -83,7 +83,7 @@ public class UserValidatorTests {
     }
 
     @Test
-    void errorWhenBirthDateIsNotPast() {
+    void errorWhenBirthDateIsNotPast() throws Exception {
         LocaleContextHolder.setLocale(Locale.ENGLISH);
         User user = new User();
 
@@ -107,7 +107,7 @@ public class UserValidatorTests {
     }
 
     @Test
-    void errorWhenPostCodeHasNotCorrectPattern() {
+    void errorWhenPostCodeHasNotCorrectPattern() throws Exception {
         LocaleContextHolder.setLocale(Locale.ENGLISH);
         User user = new User();
 
