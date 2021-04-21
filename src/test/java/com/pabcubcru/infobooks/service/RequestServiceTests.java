@@ -43,8 +43,7 @@ public class RequestServiceTests {
     public void shouldFindByUsername1AndIdBook2() throws Exception {
         Request request = this.requestService.findByUsername1AndIdBook2("test001", "book-002");
 
-        Assertions.assertThat(request.getAction()).isEqualTo("VENTA");
-        Assertions.assertThat(request.getId()).isEqualTo("request-001");
+        Assertions.assertThat(request.getIdBook2()).isEqualTo("book-002");
     }
 
     @Test
@@ -54,8 +53,6 @@ public class RequestServiceTests {
 
         requests = this.requestService.findByUsername2AndIdBook2AndStatusNot("test002", "book-002", RequestStatus.RECHAZADA.toString());
         Assertions.assertThat(requests.size()).isEqualTo(2);
-        Assertions.assertThat(requests.get(0).getId()).isEqualTo("request-001");
-        Assertions.assertThat(requests.get(0).getStatus()).isNotEqualTo(RequestStatus.RECHAZADA.toString());
     }
 
     @Test
