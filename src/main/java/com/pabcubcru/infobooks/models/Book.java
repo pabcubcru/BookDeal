@@ -5,6 +5,7 @@ import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Pattern;
 
+import org.hibernate.validator.constraints.URL;
 import org.springframework.data.elasticsearch.annotations.Document;
 import org.springframework.data.elasticsearch.annotations.Field;
 import org.springframework.data.elasticsearch.annotations.FieldType;
@@ -52,6 +53,7 @@ public class Book extends BaseEntity {
     private String description;
 
     @NotBlank(message = "La imagen es un campo requerido.")
+    @URL(message = "La URL de la imagen no es válida.")
     @Field(type = FieldType.Text, name = "image")
     private String image;
 
@@ -94,7 +96,9 @@ public class Book extends BaseEntity {
         this.username = username;
     }
 
-    
+    public Book() {
+    }
+  
 
     
     

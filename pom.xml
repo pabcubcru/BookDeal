@@ -15,6 +15,7 @@
 	<description>Este es el proyecto de TFG de Pablo Cubero Cruz en la Universidad de Sevilla</description>
 	<properties>
 		<java.version>1.8</java.version>
+		<jacoco.version>0.8.6</jacoco.version>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -132,6 +133,33 @@
 				</executions>
 			</plugin>
 			<!-- end::frontend-maven-plugin[] -->
+
+			<!-- start:jacoco -->
+			<plugin>
+				<groupId>org.jacoco</groupId>
+				<artifactId>jacoco-maven-plugin</artifactId>
+				<version>${jacoco.version}</version>
+				<configuration>
+					<output>file</output>
+					<append>true</append>
+				</configuration>
+				<executions>
+					<execution>
+						<id>jacoco-initialize</id>
+						<goals>
+							<goal>prepare-agent</goal>
+						</goals>
+					</execution>
+					<execution>
+						<id>jacoco-site</id>
+						<phase>test</phase>
+						<goals>
+							<goal>report</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+			<!-- end:jacoco -->
 		</plugins>
 	</build>
 

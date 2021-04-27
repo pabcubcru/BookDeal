@@ -1,8 +1,5 @@
 package com.pabcubcru.infobooks.services;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import com.pabcubcru.infobooks.models.Authorities;
 import com.pabcubcru.infobooks.models.User;
 import com.pabcubcru.infobooks.repository.UserRepository;
@@ -24,13 +21,6 @@ public class UserService {
 	public UserService(UserRepository userRepository) {
 		this.userRepository = userRepository;
 	}
-    
-    @Transactional(readOnly = true)
-    public List<User> listAll(){
-        List<User> res = new ArrayList<User>();
-        this.userRepository.findAll().iterator().forEachRemaining(res::add);
-        return res;
-    }
 
     @Transactional
     public void save(User user, Boolean isNewPassword) {

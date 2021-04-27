@@ -1,22 +1,30 @@
 package com.pabcubcru.infobooks;
 
 import java.io.File;
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
 import javax.annotation.PostConstruct;
 
+import com.pabcubcru.infobooks.models.Authorities;
 import com.pabcubcru.infobooks.models.Book;
 import com.pabcubcru.infobooks.models.GenreEnum;
+import com.pabcubcru.infobooks.models.Request;
+import com.pabcubcru.infobooks.models.User;
+import com.pabcubcru.infobooks.models.UserFavouriteBook;
+import com.pabcubcru.infobooks.repository.AuthoritiesRepository;
 import com.pabcubcru.infobooks.repository.BookRepository;
 import com.pabcubcru.infobooks.repository.RequestRepository;
 import com.pabcubcru.infobooks.repository.UserFavouriteBookRepository;
+import com.pabcubcru.infobooks.repository.UserRepository;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.data.elasticsearch.core.ElasticsearchOperations;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
 import lombok.extern.slf4j.Slf4j;
 
@@ -36,26 +44,182 @@ public class InfoBooksApplication {
 	@Autowired
 	private RequestRepository requestRepository;
 
+	@Autowired
+	private UserRepository userRepository;
+
+	@Autowired
+	private AuthoritiesRepository authoritiesRepository;
+
 	public static void main(String[] args) {
 		SpringApplication.run(InfoBooksApplication.class, args);
 	}
 
-	@PostConstruct
-	public void buildBookIndex() {
+	public void deleteIndex() {
 		requestRepository.deleteAll();
 		userFavouriteBookRepository.deleteAll();
 		bookRepository.deleteAll();
+		userRepository.deleteAll();
+	}
+
+	public void buildUserFavouriteBookIndexForTests() {
+		UserFavouriteBook ufb = new UserFavouriteBook();
+
+		ufb.setBookId("book-001");
+		ufb.setId("ufb-001");
+		ufb.setUsername("pablo123");
+		this.userFavouriteBookRepository.save(ufb);
+
+		ufb = new UserFavouriteBook();
+
+		ufb.setBookId("book-002");
+		ufb.setId("ufb-002");
+		ufb.setUsername("pablo123");
+		this.userFavouriteBookRepository.save(ufb);
+
+		ufb = new UserFavouriteBook();
+
+		ufb.setBookId("book-001");
+		ufb.setId("ufb-003");
+		ufb.setUsername("juan1234");
+		this.userFavouriteBookRepository.save(ufb);
+
+		ufb = new UserFavouriteBook();
+
+		ufb.setBookId("booktest");
+		ufb.setId("ufb-004");
+		ufb.setUsername("test001");
+		this.userFavouriteBookRepository.save(ufb);
+	}
+
+	public void buildRequestsIndexForTests() {
+		Request request = new Request();
+
+		request.setId("request-001");
+		request.setAction("VENTA");
+		request.setComment("comment");
+		request.setIdBook2("book-002");
+		request.setUsername1("test001");
+		request.setUsername2("test002");
+		request.setStatus("PENDIENTE");
+		request.setPay(10.);
+		this.requestRepository.save(request);
+
+		request = new Request();
+
+		request.setId("request-002");
+		request.setAction("INTERCAMBIO");
+		request.setComment("comment");
+		request.setIdBook1("book-001");
+		request.setIdBook2("book-002");
+		request.setUsername1("test001");
+		request.setUsername2("test002");
+		request.setStatus("ACEPTADA");
+		this.requestRepository.save(request);
+
+		request = new Request();
+
+		request.setId("request-003");
+		this.requestRepository.save(request);
+
+		request = new Request();
+
+		request.setId("request-004");
+		this.requestRepository.save(request);
+
+		request = new Request();
+
+		request.setId("request-005");
+		this.requestRepository.save(request);
+	}
+
+	public void buildBookIndexForTests() {
+		Book book = new Book();
+
+		book.setId("book-001");
+        book.setTitle("Title test 1");
+        book.setIsbn("0-7645-2641-3");
+        book.setPublicationYear(2014);
+        book.setPublisher("Publisher Test");
+        book.setGenres("Comedia");
+        book.setAuthor("Author Test"); 
+        book.setDescription("Description test"); 
+        book.setImage("https://imagessl1.casadellibro.com/a/l/t5/11/9788499926711.jpg");
+        book.setStatus("COMO NUEVO"); 
+        book.setAction("VENTA"); 
+		book.setPrice(10.);
+        book.setUsername("test001");
+		this.bookRepository.save(book);
+
+		book.setId("book-002");
+        book.setTitle("Title test 2");
+        book.setImage("https://images-na.ssl-images-amazon.com/images/I/81sBQfVzziL.jpg");
+        book.setStatus("COMO NUEVO"); 
+        book.setAction("INTERCAMBIO");
+		book.setPrice(null);
+        book.setUsername("test002");
+		this.bookRepository.save(book);
+	}
+
+	public void buildAuthoritiesForTests(String username) {
+		Authorities authorities = new Authorities();
+		authorities.setId("authorities-"+username);
+		authorities.setUsername(username);
+		authorities.setAuthority("user");
+		this.authoritiesRepository.save(authorities);
+	}
+
+	public void buildUserIndexForTests() {
+		User user = new User();
+
+		user.setId("userTest-pablo123");
+        user.setName("Pablo");
+        user.setEmail("pablo@us.es"); 
+        user.setPhone("+34654987321");
+        user.setBirthDate(LocalDate.of(2020, 11, 23));
+        user.setProvince("Sevilla");
+        user.setCity("Sevilla");
+        user.setPostCode("41012");
+        user.setUsername("pablo123");
+        user.setPassword(new BCryptPasswordEncoder().encode("pablo123"));
+        user.setEnabled(true);
+		this.userRepository.save(user);
+		this.buildAuthoritiesForTests(user.getUsername());
+
+		user = new User();
+
+		user.setId("userTest-juan1234");
+        user.setName("Juan");
+        user.setEmail("juan@us.es"); 
+        user.setPhone("+34654987321");
+        user.setBirthDate(LocalDate.of(2020, 11, 23));
+        user.setProvince("Sevilla");
+        user.setCity("Sevilla");
+        user.setPostCode("41012");
+        user.setUsername("juan1234");
+        user.setPassword(new BCryptPasswordEncoder().encode("juan1234"));
+        user.setEnabled(true);
+		this.userRepository.save(user);
+		this.buildAuthoritiesForTests(user.getUsername());
+	}
+
+	@PostConstruct
+	public void buildBookIndex() {
+		this.deleteIndex();
 		elasticSearchOperations.indexOps(Book.class).refresh();
 		List<Book> books = prepareDataset();
 		bookRepository.saveAll(books);
-		log.info("============== Added " + books.size() + " books. =================================================================================");
+		log.info("================= Added " + books.size() + " books. =================");
+		this.buildUserIndexForTests();
+		this.buildBookIndexForTests();
+		this.buildRequestsIndexForTests();
+		this.buildUserFavouriteBookIndexForTests();
 	}
 
 	private List<Book> prepareDataset() {
 		List<Book> res = new ArrayList<>();
 
 		try {
-			File myObj = new File("src\\main\\java\\com\\pabcubcru\\infobooks\\books.csv");
+			File myObj = new File(".\\src\\main\\java\\com\\pabcubcru\\infobooks\\books.csv");
       		Scanner scanner = new Scanner(myObj);
 			int lineNo = 0;
 			while (scanner.hasNextLine()) {
@@ -76,16 +240,15 @@ public class InfoBooksApplication {
 	}
 
 	private Book csvRowToBookMapper(final String line) {
-		if(line!="" || line != null) {
+		if(!line.equals("") || !line.equals(null)) {
 			String[] s = line.split(";");
-			List<String> genres = new ArrayList<>();
-			List.of(GenreEnum.values()).stream().forEach(x -> genres.add(x.toString()));
+			GenreEnum[] genres = GenreEnum.values();
 			String isbn = s[0];
 			String originalTitle = s[1];
 			String title = s[2];
 			String author = s[3];
 			Integer publicationYear = 2010;
-			if(s[4] != "") {
+			if(!s[4].equals("")) {
 				String r = s[4].replace(".0", "");
 				publicationYear = Integer.parseInt(r);
 			}
@@ -94,9 +257,9 @@ public class InfoBooksApplication {
 			String urlImage = s[7];
 			int numRandomGenre1 = (int) Math.floor(Math.random()*GenreEnum.values().length);
 			int numRandomGenre2 = (int) Math.floor(Math.random()*GenreEnum.values().length);
-			String genre = genres.get(numRandomGenre1);
+			String genre = genres[numRandomGenre1].toString();
 			if(numRandomGenre1 != numRandomGenre2) {
-				genre = genres.get(numRandomGenre1) + "," + genres.get(numRandomGenre2);
+				genre = genres[numRandomGenre1].toString() + "," + genres[numRandomGenre2].toString();
 			}
 			String status = "NUEVO";
 			int numRandomAction = (int) Math.floor(Math.random()*2);
