@@ -40,10 +40,15 @@ export default class Nav extends Component {
           {this.state.isLogged ? 
             <div><li ><a  href="#">Libros</a>
             <ul>
-                <li ><a  href="/books/all/0">Todos</a></li>
-                <li ><a  href="/books/me/0">Mis libros</a></li>
-                <li ><a  href="/favourites/0">Favoritos</a></li>
                 <li ><a  href="/books/new">Añadir libro</a></li>
+                <li ><a  href="/books/all/0">Cerca de mí</a></li>
+                <li ><a  href="#">Filtrar por</a>
+                  <ul>
+                    <li ><a  href="/books/all/0/postalCode">Mi cod. postal</a></li>
+                    <li ><a  href="/books/all/0/city">Mi ciudad</a></li>
+                    <li ><a  href="/books/all/0/province">Mi provincia</a></li>
+                  </ul>
+                </li>
             </ul>
           </li>
           <li ><a  href="#">Peticiones</a>
@@ -54,6 +59,8 @@ export default class Nav extends Component {
           </li>
           <li style={{float:"right"}}><a href="#" >Perfil</a>
             <ul>
+                <li ><a  href="/books/me/0">Mis libros</a></li>
+                <li ><a  href="/favourites/0">Favoritos</a></li>
                 <li >{button1}</li>
                 <li >{button2}</li>
             </ul>

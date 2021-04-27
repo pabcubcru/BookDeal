@@ -14,9 +14,11 @@ import com.pabcubcru.infobooks.models.Book;
 import com.pabcubcru.infobooks.models.GenreEnum;
 import com.pabcubcru.infobooks.models.Request;
 import com.pabcubcru.infobooks.models.RequestStatus;
+import com.pabcubcru.infobooks.models.User;
 import com.pabcubcru.infobooks.services.BookService;
 import com.pabcubcru.infobooks.services.RequestService;
 import com.pabcubcru.infobooks.services.UserFavouriteBookService;
+import com.pabcubcru.infobooks.services.UserService;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -46,7 +48,10 @@ public class BookController {
     @Autowired
     private RequestService requestService;
 
-    @GetMapping(value = {"/new", "/me/{page}", "/all/{page}"})
+    @Autowired
+    private UserService userService;
+
+    @GetMapping(value = {"/new", "/me/{page}", "/all/{page}/{showMode}", "/all/{page}"})
 	public ModelAndView main() {
 		ModelAndView model = new ModelAndView();
 		model.setViewName("Main");
@@ -128,12 +133,12 @@ public class BookController {
                 this.requestService.deleteAll(requests);
                 this.bookService.deleteBookById(id);
             }
-            
         }
     }
 
     @GetMapping(value="/list/all-me")
-    public Map<String, Object> findAllExceptMine(Principal principal, Pageable pageable, @RequestParam(name = "page", defaultValue = "0") Integer page) {
+    public Map<String, Object> findAllExceptMine(Principal principal, Pageable pageable, 
+    @RequestParam(name = "page", defaultValue = "0") Integer page, @RequestParam("showMode") String showMode) {
         Map<String, Object> res = new HashMap<>();
         Page<Book> pageOfBooks = null;
         PageRequest pageRequest = PageRequest.of(page, 21);
@@ -143,7 +148,8 @@ public class BookController {
             res.put("books", pageOfBooks.getContent());
         } else {
             List<Book> books = new ArrayList<>();
-            pageOfBooks = this.bookService.findAllExceptMine(principal.getName(), pageRequest);
+            User user = this.userService.findByUsername(principal.getName());
+            pageOfBooks = this.bookService.findNearBooks(user, pageRequest, showMode);
             for(Book b : pageOfBooks.getContent()) {
                 Request requestAcceptedToBook1 = this.requestService.findFirstByIdBook1AndStatus(b.getId(), RequestStatus.ACEPTADA.toString());
                 Request requestAcceptedToBook2 = this.requestService.findFirstByIdBook2AndStatus(b.getId(), RequestStatus.ACEPTADA.toString());
