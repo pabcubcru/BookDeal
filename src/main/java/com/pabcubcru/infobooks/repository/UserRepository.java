@@ -1,10 +1,11 @@
 package com.pabcubcru.infobooks.repository;
 
-import java.util.List;
 import java.util.Optional;
 
 import com.pabcubcru.infobooks.models.User;
 
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.data.elasticsearch.repository.ElasticsearchRepository;
 import org.springframework.stereotype.Repository;
 
@@ -17,11 +18,11 @@ public interface UserRepository extends ElasticsearchRepository<User, String> {
 
     public Optional<User> findById(String id);
 
-    public List<User> findByPostCode(String postCode);
+    public Page<User> findByPostCode(String postCode, Pageable pageable);
 
-    public List<User> findByCity(String city);
+    public Page<User> findByCity(String city, Pageable pageable);
 
-    public List<User> findByProvince(String province);
+    public Page<User> findByProvince(String province, Pageable pageable);
 
-    public List<User> findByPostCodeOrCityOrProvince(String postCode, String city, String province);
+    public Page<User> findByPostCodeOrCityOrProvince(String postCode, String city, String province, Pageable pageable);
 }

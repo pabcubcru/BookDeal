@@ -142,14 +142,18 @@ public class BookController {
         Map<String, Object> res = new HashMap<>();
         Page<Book> pageOfBooks = null;
         PageRequest pageRequest = PageRequest.of(page, 21);
+        Integer numberOfPages = 0;
 
         if(principal == null) {
             pageOfBooks = this.bookService.findAll(pageRequest);
+            numberOfPages = pageOfBooks.getTotalPages();
             res.put("books", pageOfBooks.getContent());
         } else {
             List<Book> books = new ArrayList<>();
             User user = this.userService.findByUsername(principal.getName());
-            pageOfBooks = this.bookService.findNearBooks(user, pageRequest, showMode);
+            Map<Integer, Page<Book>> map = this.bookService.findNearBooks(user, pageRequest, showMode);
+            pageOfBooks = map.values().stream().findFirst().orElse(null);
+            numberOfPages = map.keySet().stream().findFirst().get();
             for(Book b : pageOfBooks.getContent()) {
                 Request requestAcceptedToBook1 = this.requestService.findFirstByIdBook1AndStatus(b.getId(), RequestStatus.ACEPTADA.toString());
                 Request requestAcceptedToBook2 = this.requestService.findFirstByIdBook2AndStatus(b.getId(), RequestStatus.ACEPTADA.toString());
@@ -169,7 +173,7 @@ public class BookController {
             res.put("page", page);
             res.put("isAdded", isAdded);
         }
-        Integer numberOfPages = pageOfBooks.getTotalPages();
+        
         res.put("numTotalPages", numberOfPages);
         res.put("pages", new ArrayList<Integer>());
         if(numberOfPages > 0) {
