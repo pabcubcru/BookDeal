@@ -216,8 +216,7 @@ public class InfoBooksApplication {
 			int numRandomProvince = (int) Math.floor(Math.random()*ProvinceEnum.values().length);
 			user.setProvince(provinces[numRandomProvince].toString());
 			user.setCity(provinces[numRandomProvince].toString());
-			//user.setPostCode(""+(int)Math.floor(Math.random()*(50000-1000+1)+1000));
-			user.setPostCode("41006");
+			user.setPostCode(""+(int)Math.floor(Math.random()*(50000-1000+1)+1000));
 			user.setUsername("username"+i);
 			user.setPassword(new BCryptPasswordEncoder().encode("password"+i));
 			user.setEnabled(true);

@@ -45,7 +45,7 @@ export default class Nav extends Component {
                 <li ><a  href="/books/all/0">Cerca de mí</a></li>
                 <li ><a  href="#">Filtrar por</a>
                   <ul>
-                    <li ><a  href="/books/all/0/postalCode">Mi cod. postal</a></li>
+                    <li ><a  href="/books/all/0/postCode">Mi cod. postal</a></li>
                     <li ><a  href="/books/all/0/city">Mi ciudad</a></li>
                     <li ><a  href="/books/all/0/province">Mi provincia</a></li>
                   </ul>
@@ -67,15 +67,15 @@ export default class Nav extends Component {
             </ul>
           </li>
           <li style={{float:"right"}}><div class="search-box">
-            <input class="text" type="text" placeholder="Título, ISBN, año, ..."/>
-          <button> <i class="fa fa-search"></i></button></div></li>
+            <input class="text" type="text" placeholder="Título, ISBN, autor, ..." onChange={(event) => this.setState({query:event.target.value})}/>
+          <button type="button" onClick={() => this.search(this.state.query)} disabled={this.state.query.trim() == ''}> <i class="fa fa-search"></i></button></div></li>
           </div>
         :
           <div><li style={{float:"left"}}><a  href="/books/all/0">Libros</a></li>
           <li style={{float:"right"}}>{button2}</li>
           <li style={{float:"right"}}>{button1}</li>
           <li style={{float:"right"}}><div class="search-box">
-            <input class="text" type="text" placeholder="Título, ISBN, ..." onChange={(event) => this.setState({query:event.target.value})}/>
+            <input class="text" type="text" placeholder="Título, ISBN, autor, ..." onChange={(event) => this.setState({query:event.target.value})}/>
           <button type="button" onClick={() => this.search(this.state.query)} disabled={this.state.query.trim() == ''}> <i class="fa fa-search"></i></button></div></li>
           </div>
         }  
@@ -86,6 +86,6 @@ export default class Nav extends Component {
   }
 
   async search(query) {
-    window.location.replace("/search/"+query)
+    window.location.replace("/search/0/"+query)
   }
 }

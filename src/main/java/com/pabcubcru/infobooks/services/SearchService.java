@@ -1,6 +1,8 @@
 package com.pabcubcru.infobooks.services;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.stream.Collectors;
 
 import com.pabcubcru.infobooks.models.Book;
@@ -11,6 +13,8 @@ import org.elasticsearch.index.query.MultiMatchQueryBuilder;
 import org.elasticsearch.index.query.Operator;
 import org.elasticsearch.index.query.QueryBuilders;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
 import org.springframework.data.elasticsearch.core.ElasticsearchRestTemplate;
 import org.springframework.data.elasticsearch.core.SearchHits;
 import org.springframework.data.elasticsearch.core.mapping.IndexCoordinates;
@@ -31,7 +35,8 @@ public class SearchService {
     }
 
     @Transactional(readOnly = true)
-    public List<Book> searchBook(String query) {
+    public Map<Integer, List<Book>> searchBook(String query, Pageable pageable) {
+        Map<Integer, List<Book>> map = new HashMap<>();
 
         NativeSearchQuery searchQuery = new NativeSearchQueryBuilder()
         .withQuery(QueryBuilders.multiMatchQuery(query)
@@ -46,17 +51,21 @@ public class SearchService {
         .field("action")
         //.field("price")
         //.field("publicationYear")
-        .operator(Operator.AND)
+        .operator(Operator.OR)
         .type(MultiMatchQueryBuilder.Type.BEST_FIELDS)
         .fuzziness(Fuzziness.ONE)
-        .prefixLength(3))
+        .prefixLength(2))
+        .withPageable(pageable)
         .build();
 
         SearchHits<Book> books = elasticsearchTemplate.search(searchQuery, Book.class, IndexCoordinates.of("books"));
 
         List<Book> res = books.stream().map(x -> x.getContent()).collect(Collectors.toList());
 
-        return res;
+        Integer numPages = (int) Math.ceil(books.getTotalHits() / pageable.getPageSize())+1;
+
+        map.put(numPages, res);
+        return map;
 
     }
     

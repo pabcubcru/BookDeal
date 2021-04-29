@@ -48,7 +48,7 @@ export default class Main extends Component{
                         <Route path="/requests/:id/add" exact component={CreateRequest}/>
                         <Route path="/requests/me/:page" exact component={ListMyRequests}/>
                         <Route path="/requests/received/:page" exact component={ListReceivedRequests}/>
-                        <Route path="/search/:query" exact component={ListSearchBooks}/>
+                        <Route path="/search/:page/:query" exact component={ListSearchBooks}/>
                     </Switch>
                     <br></br><br></br>
                     <Footer/>
