@@ -10,7 +10,8 @@ export default class Nav extends Component {
     super();
     this.state = {
       isLogged: false,
-      isAdmin: false
+      isAdmin: false,
+      query:""
     }
   }
 
@@ -74,8 +75,8 @@ export default class Nav extends Component {
           <li style={{float:"right"}}>{button2}</li>
           <li style={{float:"right"}}>{button1}</li>
           <li style={{float:"right"}}><div class="search-box">
-            <input class="text" type="text" placeholder="Título, ISBN, ..."/>
-          <button> <i class="fa fa-search"></i></button></div></li>
+            <input class="text" type="text" placeholder="Título, ISBN, ..." onChange={(event) => this.setState({query:event.target.value})}/>
+          <button type="button" onClick={() => this.search(this.state.query)} disabled={this.state.query.trim() == ''}> <i class="fa fa-search"></i></button></div></li>
           </div>
         }  
           
@@ -83,5 +84,8 @@ export default class Nav extends Component {
       </nav>
     )
   }
-}
 
+  async search(query) {
+    window.location.replace("/search/"+query)
+  }
+}
