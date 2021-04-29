@@ -10,6 +10,7 @@ import EditUser from "./user/Edit";
 import Home from "./Home";
 import CreateBook from "./book/Create";
 import ListAllBooks from "./book/ListAllBooks";
+import ListNearBooks from "./book/ListNearBooks";
 import ListMyBooks from "./book/ListMyBooks";
 import EditBook from "./book/Edit";
 import GetBook from "./book/Get";
@@ -36,6 +37,7 @@ export default class Main extends Component{
                         <Route path="/login-error" exact component={LoginerrorUser}/>
                         <Route path="/profile" exact component={EditUser}/>
                         <Route path="/books/new" exact component={CreateBook}/>
+                        <Route path="/books/all/:page/:show" exact component={ListNearBooks}/>
                         <Route path="/books/all/:page" exact component={ListAllBooks}/>
                         <Route path="/" exact component={Home}/>
                         <Route path="/books/me/:page" exact component={ListMyBooks}/>

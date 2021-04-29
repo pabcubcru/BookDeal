@@ -16,41 +16,43 @@ export default class List extends Component {
       isAdded:false,
       pages:[],
       actualPage:0,
-      numTotalPages:0
+      numTotalPages:0,
+      showMode:""
     }
   }
     
   async componentDidMount() {
     const page = this.props.match.params.page;
+    const showMode = this.props.match.params.show;
     if(page) {
       this.setState({actualPage:parseInt(page)})
     } else {
       page = 0
     }
 
-    const res = await bookService.listAllExceptMine(page)
+    const res = await bookService.listAllExceptMine(page, showMode)
     
     const username = await userService.getUsername()
 
-    this.setState({books:res.books, username:username.username, isAdded:res.isAdded, pages:res.pages, numTotalPages:parseInt(res.numTotalPages)})
+    this.setState({books:res.books, username:username.username, isAdded:res.isAdded, pages:res.pages, numTotalPages:parseInt(res.numTotalPages), showMode:showMode})
   }
 
     render() {
         return (
             <div >
                 {this.state.books.length == 0 ?
-                  <p><b>Actualmente no existen libros para mostrar{this.state.username != null ? ' cerca de usted' : ''}.</b></p>
+                  <p><b>Actualmente no existen libros para mostrar cerca de usted.</b></p>
                 :
                   <center>
                   {this.state.books.length != 0 && this.state.pages.length > 1 ?
-                  <center>{this.state.actualPage != 0 ? <span><a class="btn btn-primary" href={"/books/all/0"}><b>{String("<<")}</b></a><a style={{margin:"5px"}} class="btn btn-primary" href={"/books/all/"+parseInt(this.state.actualPage-1)}><b>{String("<")}</b></a></span> : <p></p>}
+                  <center>{this.state.actualPage != 0 ? <span><a class="btn btn-primary" href={"/books/all/0/"+this.state.showMode}><b>{String("<<")}</b></a><a style={{margin:"5px"}} class="btn btn-primary" href={"/books/all/"+parseInt(this.state.actualPage-1)+"/"+this.state.showMode}><b>{String("<")}</b></a></span> : <p></p>}
                   {this.state.pages.map((page) => {
                     return(
                       
-                      <a style={{color:this.state.actualPage == page ? "white" : "black", backgroundColor:this.state.actualPage == page ? "#007bff" : ""}} class="pag" href={"/books/all/"+page}>{page}</a>
+                      <a style={{color:this.state.actualPage == page ? "white" : "black", backgroundColor:this.state.actualPage == page ? "#007bff" : ""}} class="pag" href={"/books/all/"+page+"/"+this.state.showMode}>{page}</a>
                     )
                   })}
-                  {this.state.actualPage != this.state.numTotalPages-1 ? <span><a style={{margin:"5px"}} class="btn btn-primary" href={"/books/all/"+parseInt(this.state.actualPage+1)}><b>{String(">")}</b></a><a class="btn btn-primary" href={"/books/all/"+parseInt(this.state.numTotalPages-1)}><b>{String(">>")}</b></a></span> : <p></p>}
+                  {this.state.actualPage != this.state.numTotalPages-1 ? <span><a style={{margin:"5px"}} class="btn btn-primary" href={"/books/all/"+parseInt(this.state.actualPage+1)+"/"+this.state.showMode}><b>{String(">")}</b></a><a class="btn btn-primary" href={"/books/all/"+parseInt(this.state.numTotalPages-1)+"/"+this.state.showMode}><b>{String(">>")}</b></a></span> : <p></p>}
                   </center>
                 :
                   <p></p>
@@ -97,14 +99,14 @@ export default class List extends Component {
                       </main>)
                 })}
                 {this.state.books.length != 0 && this.state.pages.length > 1 ?
-                  <center>{this.state.actualPage != 0 ? <span><a class="btn btn-primary" href={"/books/all/0"}><b>{String("<<")}</b></a><a class="btn btn-primary" style={{margin:"5px"}} href={"/books/all/"+parseInt(this.state.actualPage-1)}><b>{String("<")}</b></a></span> : <p></p>}
+                  <center>{this.state.actualPage != 0 ? <span><a class="btn btn-primary" href={"/books/all/0"+"/"+this.state.showMode}><b>{String("<<")}</b></a><a class="btn btn-primary" style={{margin:"5px"}} href={"/books/all/"+parseInt(this.state.actualPage-1)+"/"+this.state.showMode}><b>{String("<")}</b></a></span> : <p></p>}
                   {this.state.pages.map((page) => {
                     return(
                       
-                      <a style={{color:this.state.actualPage == page ? "white" : "black", backgroundColor:this.state.actualPage == page ? "#007bff" : ""}} class="pag" href={"/books/all/"+page}>{page}</a>
+                      <a style={{color:this.state.actualPage == page ? "white" : "black", backgroundColor:this.state.actualPage == page ? "#007bff" : ""}} class="pag" href={"/books/all/"+page+"/"+this.state.showMode}>{page}</a>
                     )
                   })}
-                  {this.state.actualPage != this.state.numTotalPages-1 ? <span><a style={{margin:"5px"}} class="btn btn-primary" href={"/books/all/"+parseInt(this.state.actualPage+1)}><b>{String(">")}</b></a><a class="btn btn-primary" href={"/books/all/"+parseInt(this.state.numTotalPages-1)}><b>{String(">>")}</b></a></span> : <p></p>}
+                  {this.state.actualPage != this.state.numTotalPages-1 ? <span><a style={{margin:"5px"}} class="btn btn-primary" href={"/books/all/"+parseInt(this.state.actualPage+1)+"/"+this.state.showMode}><b>{String(">")}</b></a><a class="btn btn-primary" href={"/books/all/"+parseInt(this.state.numTotalPages-1)+"/"+this.state.showMode}><b>{String(">>")}</b></a></span> : <p></p>}
                   <br></br><br></br></center>
                 :
                   <p></p>

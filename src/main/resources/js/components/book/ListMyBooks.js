@@ -25,7 +25,7 @@ export default class List extends Component {
       return (
         <div >
             {this.state.books.length == 0 ?
-                  <p><b>Actualmente no existen libros para mostrar.</b></p>
+                  <p><b>¿Todavía no has añadido ningún libro? <a class="btn btn-primary" href="/books/new">Añade uno!</a></b></p>
                 :
                   <center>
                   {this.state.books.length != 0 && this.state.pages.length > 1 ?

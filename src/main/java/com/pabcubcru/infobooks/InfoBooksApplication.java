@@ -11,6 +11,7 @@ import javax.annotation.PostConstruct;
 import com.pabcubcru.infobooks.models.Authorities;
 import com.pabcubcru.infobooks.models.Book;
 import com.pabcubcru.infobooks.models.GenreEnum;
+import com.pabcubcru.infobooks.models.ProvinceEnum;
 import com.pabcubcru.infobooks.models.Request;
 import com.pabcubcru.infobooks.models.User;
 import com.pabcubcru.infobooks.models.UserFavouriteBook;
@@ -202,9 +203,33 @@ public class InfoBooksApplication {
 		this.buildAuthoritiesForTests(user.getUsername());
 	}
 
+	public void buildIndexUsersForBooks() {
+		ProvinceEnum[] provinces = ProvinceEnum.values();
+		for(int i=1; i <= 100; i++) {
+			User user = new User();
+
+			user.setId("user"+i);
+			user.setName("User "+i);
+			user.setEmail("user"+i+"@us.es"); 
+			user.setPhone("+34654987321");
+			user.setBirthDate(LocalDate.of(1997, 11, 23));
+			int numRandomProvince = (int) Math.floor(Math.random()*ProvinceEnum.values().length);
+			user.setProvince(provinces[numRandomProvince].toString());
+			user.setCity(provinces[numRandomProvince].toString());
+			user.setPostCode(""+(int)Math.floor(Math.random()*(50000-1000+1)+1000));
+			user.setUsername("username"+i);
+			user.setPassword(new BCryptPasswordEncoder().encode("password"+i));
+			user.setEnabled(true);
+			this.userRepository.save(user);
+			this.buildAuthoritiesForTests(user.getUsername());
+		}
+		log.info("================= Added 100 users. =================");
+	}
+
 	@PostConstruct
 	public void buildBookIndex() {
 		this.deleteIndex();
+		this.buildIndexUsersForBooks();
 		elasticSearchOperations.indexOps(Book.class).refresh();
 		List<Book> books = prepareDataset();
 		bookRepository.saveAll(books);
@@ -269,11 +294,8 @@ public class InfoBooksApplication {
 				action = "VENTA";
 				price = Double.parseDouble(String.valueOf(Math.floor(Math.random()*100)));
 			}
-			int numRandomUsername = (int) Math.floor(Math.random()*2);
-			String username = "pablo123";
-			if(numRandomUsername == 1) {
-				username = "juan1234";
-			}
+			int numRandomUsername = (int) Math.floor(Math.random()*100);
+			String username = "username"+numRandomUsername;
 			Book book = new Book(title, originalTitle, isbn, publicationYear, publisher, genre, author, description, urlImage, status, action, price, username);
 			return book;
 		} else {
