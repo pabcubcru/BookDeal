@@ -36,11 +36,13 @@ export default class Nav extends Component {
     return (
       <nav style={{marginBottom:"30px"}}>
         <ul class="menu">
-          <li ><a href="/">InfoBooks</a></li>
+          <li ><a href="/">InfoBooks <i class="fa fa-home"></i></a></li>
           {this.state.isLogged ? 
-            <div><li ><a  href="#">Libros</a>
+            <div><li><a  href="#">Libros <i class="fa fa-book"></i></a>
             <ul>
                 <li ><a  href="/books/new">Añadir libro</a></li>
+                <li ><a  href="/books/me/0">Mis libros</a></li>
+                <li ><a  href="/favourites/0">Mis favoritos</a></li>
                 <li ><a  href="/books/all/0">Cerca de mí</a></li>
                 <li ><a  href="#">Filtrar por</a>
                   <ul>
@@ -50,16 +52,14 @@ export default class Nav extends Component {
                 </li>
             </ul>
           </li>
-          <li ><a  href="#">Peticiones</a>
+          <li ><a  href="#">Peticiones <i class="fa fa-handshake-o" aria-hidden="true"></i></a>
             <ul>
                 <li ><a  href="/requests/me/0">Enviadas</a></li>
                 <li ><a  href="/requests/received/0">Recibidas</a></li>
             </ul>
           </li>
-          <li style={{float:"right"}}><a href="#" >Perfil</a>
+          <li style={{float:"right"}}><a href="#" >Perfil <i class="fa fa-user-circle"></i></a>
             <ul>
-                <li ><a  href="/books/me/0">Mis libros</a></li>
-                <li ><a  href="/favourites/0">Favoritos</a></li>
                 <li >{button1}</li>
                 <li >{button2}</li>
             </ul>
@@ -69,7 +69,7 @@ export default class Nav extends Component {
           <button> <i class="fa fa-search"></i></button></div></li>
           </div>
         :
-          <div><li style={{float:"left"}}><a  href="/books/all/0">Libros</a></li>
+          <div><li style={{float:"left"}}><a  href="/books/all/0">Libros <i class="fa fa-book"></i></a></li>
           <li style={{float:"right"}}>{button2}</li>
           <li style={{float:"right"}}>{button1}</li>
           <li style={{float:"right"}}><div class="search-box">

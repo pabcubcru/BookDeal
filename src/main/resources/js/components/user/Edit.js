@@ -124,7 +124,7 @@ export default class Form extends Component {
         <div class="form-group row">
             <label for="firstName" class="col-sm-3 col-form-label">Provincia<sup class='text-danger'>*</sup></label>
           <div class="col-sm-9">
-            <select class="form-control" id="selectProvince" onChange={(event) => this.setState({fieldProvince:event.target.value})}>
+            <select class="form-control" id="selectProvince" value={this.state.fieldProvince} onChange={(event) => this.setState({fieldProvince:event.target.value})}>
             {this.state.provinces.map((province) => {
               return (
                 <option value={province}>{province}</option>

@@ -39,7 +39,9 @@ export default class List extends Component {
         return (
             <div>
               {this.state.requests.length == 0 ?
-                <p><strong>¿No tienes todavía peticiones? <a href="/" class="btn btn-primary">Realiza una!</a></strong></p>
+                <div><p><strong>¿No tienes todavía peticiones? <a href="/books/all/0" class="btn btn-primary">Realiza una!</a></strong></p><br></br>
+                <br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br>
+                <br></br><br></br></div>
                 :
                 <center>
                   {this.state.pages.length > 1 ? 
