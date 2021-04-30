@@ -146,7 +146,6 @@ public class InfoBooksApplication {
         book.setDescription("Description test"); 
         book.setImage("https://imagessl1.casadellibro.com/a/l/t5/11/9788499926711.jpg");
         book.setStatus("COMO NUEVO"); 
-        book.setAction("VENTA"); 
 		book.setPrice(10.);
         book.setUsername("test001");
 		this.bookRepository.save(book);
@@ -155,7 +154,6 @@ public class InfoBooksApplication {
         book.setTitle("Title test 2");
         book.setImage("https://images-na.ssl-images-amazon.com/images/I/81sBQfVzziL.jpg");
         book.setStatus("COMO NUEVO"); 
-        book.setAction("INTERCAMBIO");
 		book.setPrice(null);
         book.setUsername("test002");
 		this.bookRepository.save(book);
@@ -284,16 +282,10 @@ public class InfoBooksApplication {
 				genre = genres[numRandomGenre1].toString() + "," + genres[numRandomGenre2].toString();
 			}
 			String status = "NUEVO";
-			int numRandomAction = (int) Math.floor(Math.random()*2);
-			String action = "INTERCAMBIO";
-			Double price = null;
-			if(numRandomAction == 1) {
-				action = "VENTA";
-				price = Double.parseDouble(String.valueOf(Math.floor(Math.random()*100)));
-			}
+			Double price = Double.parseDouble(String.valueOf(Math.floor(Math.random()*100)));
 			int numRandomUsername = (int) Math.floor(Math.random()*100);
 			String username = "username"+numRandomUsername;
-			Book book = new Book(title, originalTitle, isbn, publicationYear, publisher, genre, author, description, urlImage, status, action, price, username);
+			Book book = new Book(title, originalTitle, isbn, publicationYear, publisher, genre, author, description, urlImage, status, price, username);
 			return book;
 		} else {
 			return null;

@@ -46,8 +46,8 @@ public class BookValidatorTests {
         book.setDescription("Description Test");
         book.setImage("https://i.pinimg.com/originals/8d/23/06/8d2306b98839234e49ce96a8b76e20ae.jpg");
         book.setStatus("COMO NUEVO");
-        book.setAction("INTERCAMBIO");
         book.setUsername("test001");
+        book.setPrice(10.0);
 
         Validator validator = createValidator();
         Set<ConstraintViolation<Book>> constrains = validator.validate(book);
@@ -68,8 +68,8 @@ public class BookValidatorTests {
         book.setDescription("Description Test");
         book.setImage("https://i.pinimg.com/originals/8d/23/06/8d2306b98839234e49ce96a8b76e20ae.jpg");
         book.setStatus("COMO NUEVO");
-        book.setAction("INTERCAMBIO");
         book.setUsername("test001");
+        book.setPrice(10.0);
 
         Validator validator = createValidator();
         Set<ConstraintViolation<Book>> constrains = validator.validate(book);
@@ -90,34 +90,12 @@ public class BookValidatorTests {
         book.setDescription(""); //Descripción en blanco
         book.setImage("https://i.pinimg.com/originals/8d/23/06/8d2306b98839234e49ce96a8b76e20ae.jpg");
         book.setStatus(""); //Estado en blanco
-        book.setAction("INTERCAMBIO");
         book.setUsername("test001");
+        book.setPrice(10.0);
 
         Validator validator = createValidator();
         Set<ConstraintViolation<Book>> constrains = validator.validate(book);
         Assertions.assertThat(constrains.size()).isEqualTo(2);
-    }
-
-    @Test
-    void errorWhenActionBlank() throws Exception {
-        LocaleContextHolder.setLocale(Locale.ENGLISH);
-        Book book = new Book();
-
-        book.setTitle("Title test");
-        book.setIsbn("0-7645-2641-3");
-        book.setPublicationYear(2014);
-        book.setPublisher("Publisher Test");
-        book.setGenres("Comedia");
-        book.setAuthor("Author Test"); 
-        book.setDescription("Description test"); 
-        book.setImage("https://i.pinimg.com/originals/8d/23/06/8d2306b98839234e49ce96a8b76e20ae.jpg");
-        book.setStatus("COMO NUEVO"); 
-        book.setAction(""); //Action en blanco
-        book.setUsername("test001");
-
-        Validator validator = createValidator();
-        Set<ConstraintViolation<Book>> constrains = validator.validate(book);
-        Assertions.assertThat(constrains.size()).isEqualTo(1);
     }
 
     @Test
@@ -134,40 +112,40 @@ public class BookValidatorTests {
         book.setDescription("Description test"); 
         book.setImage("https://i.pinimg.com/originals/8d/23/06/8d2306b98839234e49ce96a8b76e20ae.jpg");
         book.setStatus("COMO NUEVO"); 
-        book.setAction("INTERCAMBIO");
         book.setUsername("test001");
+        book.setPrice(10.0);
 
         Validator validator = createValidator();
         Set<ConstraintViolation<Book>> constrains = validator.validate(book);
         Assertions.assertThat(constrains.size()).isEqualTo(1);
         ConstraintViolation<Book> violation = constrains.iterator().next();
         Assertions.assertThat(violation.getPropertyPath().toString()).isEqualTo("isbn");
-        Assertions.assertThat(violation.getMessage()).isEqualTo("El ISBN no es válido.");
+        Assertions.assertThat(violation.getMessage()).isEqualTo("El ISBN no es válido. Debe tener el siguiente formato: 0-123-45678-9 ó 012-3-456-78901-2.");
     }
 
     @Test
-    void errorWhenPublicationYearIsInFuture() throws Exception {
+    void errorWhenPublicationYearIsNegative() throws Exception {
         LocaleContextHolder.setLocale(Locale.ENGLISH);
         Book book = new Book();
 
         book.setTitle("Title test");
         book.setIsbn("0-7645-2641-3");
-        book.setPublicationYear(2030); //Año en futuro
+        book.setPublicationYear(-5); //Año en negativo
         book.setPublisher("Publisher Test");
         book.setGenres("Comedia");
         book.setAuthor("Author Test"); 
         book.setDescription("Description test"); 
         book.setImage("https://i.pinimg.com/originals/8d/23/06/8d2306b98839234e49ce96a8b76e20ae.jpg");
         book.setStatus("COMO NUEVO"); 
-        book.setAction("INTERCAMBIO");
         book.setUsername("test001");
+        book.setPrice(10.0);
 
         Validator validator = createValidator();
         Set<ConstraintViolation<Book>> constrains = validator.validate(book);
         Assertions.assertThat(constrains.size()).isEqualTo(1);
         ConstraintViolation<Book> violation = constrains.iterator().next();
         Assertions.assertThat(violation.getPropertyPath().toString()).isEqualTo("publicationYear");
-        Assertions.assertThat(violation.getMessage()).isEqualTo("El año de publicación debe ser anterior o igual al presente año.");
+        Assertions.assertThat(violation.getMessage()).isEqualTo("El año de publicación debe ser un número positivo.");
     }
 
     @Test
@@ -184,8 +162,8 @@ public class BookValidatorTests {
         book.setDescription("Description test"); 
         book.setImage("pini/originals/8d/23/06/8d2306b98839234e49ce96a8b76e20a"); //URL no válida
         book.setStatus("COMO NUEVO"); 
-        book.setAction("INTERCAMBIO");
         book.setUsername("test001");
+        book.setPrice(10.0);
 
         Validator validator = createValidator();
         Set<ConstraintViolation<Book>> constrains = validator.validate(book);

@@ -79,7 +79,6 @@ public class BookServiceTests {
         book.setDescription("Description test"); 
         book.setImage("https://i.pinimg.com/originals/8d/23/06/8d2306b98839234e49ce96a8b76e20ae.jpg");
         book.setStatus("COMO NUEVO"); 
-        book.setAction("VENTA"); 
 		book.setPrice(10.);
         book.setUsername("test003");
 		this.bookService.save(book);

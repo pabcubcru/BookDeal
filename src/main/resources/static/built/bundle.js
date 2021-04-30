@@ -36992,8 +36992,10 @@ var Form = /*#__PURE__*/function (_Component) {
       fieldAction: "INTERCAMBIO",
       fieldPrice: "",
       errorField: [],
+      errorMessages: [],
       genres: [],
-      fieldGen: []
+      fieldGen: [],
+      havePrice: false
     };
     return _this;
   }
@@ -37069,7 +37071,9 @@ var Form = /*#__PURE__*/function (_Component) {
             fieldTitle: event.target.value
           });
         }
-      }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+      }), this.state.errorField.indexOf("title") != -1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
+        "class": "text-danger"
+      }, this.state.errorMessages[this.state.errorField.indexOf("title")]) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         "class": "form-group row"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("label", {
         "for": "firstName",
@@ -37085,7 +37089,9 @@ var Form = /*#__PURE__*/function (_Component) {
             fieldOriginalTitle: event.target.value
           });
         }
-      }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+      }), this.state.errorField.indexOf("originalTitle") != -1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
+        "class": "text-danger"
+      }, this.state.errorMessages[this.state.errorField.indexOf("originalTitle")]) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         "class": "form-group row"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("label", {
         "for": "firstName",
@@ -37095,15 +37101,18 @@ var Form = /*#__PURE__*/function (_Component) {
       }, "*")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         "class": "col-sm-9"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("input", {
-        type: "email",
+        type: "text",
         "class": "form-control",
         value: this.state.fieldIsbn,
+        placeholder: "0-123-45678-9 \xF3 012-3-456-78901-2",
         onChange: function onChange(event) {
           return _this2.setState({
-            fieldIsbn: event.target.value
+            fieldIsbn: event.target.value.replace(" ", "-").replace("--", "-")
           });
         }
-      }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+      }), this.state.errorField.indexOf("isbn") != -1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
+        "class": "text-danger"
+      }, this.state.errorMessages[this.state.errorField.indexOf("isbn")]) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         "class": "form-group row"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("label", {
         "for": "firstName",
@@ -37115,14 +37124,15 @@ var Form = /*#__PURE__*/function (_Component) {
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("input", {
         type: "number",
         "class": "form-control",
-        max: "2021",
         value: this.state.fieldPublicationYear,
         onChange: function onChange(event) {
           return _this2.setState({
             fieldPublicationYear: event.target.value
           });
         }
-      }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+      }), this.state.errorField.indexOf("publicationYear") != -1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
+        "class": "text-danger"
+      }, this.state.errorMessages[this.state.errorField.indexOf("publicationYear")]) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         "class": "form-group row"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("label", {
         "for": "firstName",
@@ -37140,7 +37150,9 @@ var Form = /*#__PURE__*/function (_Component) {
             fieldPublisher: event.target.value
           });
         }
-      }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+      }), this.state.errorField.indexOf("publisher") != -1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
+        "class": "text-danger"
+      }, this.state.errorMessages[this.state.errorField.indexOf("publisher")]) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         "class": "form-group row"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("label", {
         "for": "firstName",
@@ -37161,7 +37173,9 @@ var Form = /*#__PURE__*/function (_Component) {
         return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("option", {
           value: genre
         }, genre.replaceAll("_", " "));
-      })))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+      })), this.state.errorField.indexOf("genres") != -1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
+        "class": "text-danger"
+      }, this.state.errorMessages[this.state.errorField.indexOf("genres")]) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         "class": "form-group row"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("label", {
         "for": "firstName",
@@ -37179,7 +37193,9 @@ var Form = /*#__PURE__*/function (_Component) {
             fieldAuthor: event.target.value
           });
         }
-      }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+      }), this.state.errorField.indexOf("author") != -1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
+        "class": "text-danger"
+      }, this.state.errorMessages[this.state.errorField.indexOf("author")]) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         "class": "form-group row"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("label", {
         "for": "firstName",
@@ -37197,7 +37213,9 @@ var Form = /*#__PURE__*/function (_Component) {
             fieldDescription: event.target.value
           });
         }
-      }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+      }), this.state.errorField.indexOf("description") != -1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
+        "class": "text-danger"
+      }, this.state.errorMessages[this.state.errorField.indexOf("description")]) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         "class": "form-group row"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("label", {
         "for": "firstName",
@@ -37214,9 +37232,10 @@ var Form = /*#__PURE__*/function (_Component) {
           return _this2.setState({
             fieldImage: event.target.value
           });
-        },
-        multiple: true
-      }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+        }
+      }), this.state.errorField.indexOf("image") != -1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
+        "class": "text-danger"
+      }, this.state.errorMessages[this.state.errorField.indexOf("image")]) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         "class": "form-group row"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("label", {
         "for": "firstName",
@@ -37240,40 +37259,22 @@ var Form = /*#__PURE__*/function (_Component) {
         value: "POCO USADO"
       }, "POCO USADO"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("option", {
         value: "NORMAL"
-      }, "NORMAL"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("option", {
+      }, "BUEN ESTADO"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("option", {
         value: "MUY USADO"
       }, "MUY USADO"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("option", {
         value: "DA\xD1ADO"
       }, "DA\xD1ADO"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("option", {
         value: "MUY DA\xD1ADO"
-      }, "MUY DA\xD1ADO")))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+      }, "MUY DA\xD1ADO")), this.state.errorField.indexOf("status") != -1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
+        "class": "text-danger"
+      }, this.state.errorMessages[this.state.errorField.indexOf("status")]) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         "class": "form-group row"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("label", {
         "for": "firstName",
         "class": "col-sm-3 col-form-label"
-      }, "\xBFQu\xE9 quiere hacer?", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("sup", {
+      }, "Precio", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("sup", {
         "class": "text-danger"
       }, "*")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
-        "class": "col-sm-9"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("select", {
-        "class": "form-control",
-        id: "selectAction",
-        value: this.state.fieldAction,
-        onChange: function onChange(event) {
-          return _this2.setState({
-            fieldAction: event.target.value
-          });
-        }
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("option", {
-        value: "INTERCAMBIO"
-      }, "INTERCAMBIO"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("option", {
-        value: "VENTA"
-      }, "VENTA")))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
-        "class": "form-group row"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("label", {
-        "for": "firstName",
-        "class": "col-sm-3 col-form-label"
-      }, "Precio"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         "class": "col-sm-9"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("input", {
         id: "price",
@@ -37285,11 +37286,9 @@ var Form = /*#__PURE__*/function (_Component) {
             fieldPrice: event.target.value
           });
         }
-      }))), this.state.errorField.map(function (itemerror) {
-        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
-          "class": "text-danger"
-        }, "*", itemerror);
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+      }), this.state.errorField.indexOf("price") != -1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
+        "class": "text-danger"
+      }, this.state.errorMessages[this.state.errorField.indexOf("price")]) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         "class": "form-group row"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         "class": "col-sm-6"
@@ -37305,8 +37304,7 @@ var Form = /*#__PURE__*/function (_Component) {
     key: "onClickSave",
     value: function () {
       var _onClickSave = _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_6___default.a.mark(function _callee2() {
-        var res, dataError, _dataError, error;
-
+        var res, errFields, errMess, error;
         return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_6___default.a.wrap(function _callee2$(_context2) {
           while (1) {
             switch (_context2.prev = _context2.next) {
@@ -37317,25 +37315,20 @@ var Form = /*#__PURE__*/function (_Component) {
               case 2:
                 res = _context2.sent;
 
-                if (this.state.fieldAction == "VENTA" && this.state.fieldPrice == "") {
-                  dataError = [];
-                  dataError.push("El precio es un campo requerido.");
-                  this.setState({
-                    errorField: dataError
-                  });
+                if (res.success) {
+                  window.location.replace("/books/me/0");
                 } else {
-                  if (res.success) {
-                    window.location.replace("/");
-                  } else if (res.status == 400) {
-                    _dataError = [];
-                    error = res.data.errors;
-                    error.map(function (itemerror) {
-                      _dataError.push(itemerror.defaultMessage);
-                    });
-                    this.setState({
-                      errorField: _dataError
-                    });
-                  }
+                  errFields = [];
+                  errMess = [];
+                  error = res.errors;
+                  error.map(function (itemerror) {
+                    errFields.push(itemerror.field);
+                    errMess.push(itemerror.defaultMessage);
+                  });
+                  this.setState({
+                    errorField: errFields,
+                    errorMessages: errMess
+                  });
                 }
 
               case 4:
@@ -37467,9 +37460,10 @@ var Form = /*#__PURE__*/function (_Component) {
       fieldAction: "",
       fieldPrice: "",
       errorField: [],
+      errorMessages: [],
       genres: [],
       fieldGen: [],
-      alreadyRequest: false
+      titleCopy: ""
     };
     return _this;
   }
@@ -37515,7 +37509,7 @@ var Form = /*#__PURE__*/function (_Component) {
                     fieldPrice: b.book.price,
                     fieldGen: genrs,
                     correctBook: "",
-                    alreadyRequest: b.alreadyRequest
+                    titleCopy: b.book.title
                   });
                 }
 
@@ -37551,7 +37545,7 @@ var Form = /*#__PURE__*/function (_Component) {
         style: {
           color: "#007bff"
         }
-      }, "Editar ", this.state.fieldTitle), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
+      }, "Editar ", this.state.titleCopy), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
         "class": "text-danger"
       }, "*Obligatorio"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         "class": "form-group row"
@@ -37571,7 +37565,9 @@ var Form = /*#__PURE__*/function (_Component) {
             fieldTitle: event.target.value
           });
         }
-      }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+      }), this.state.errorField.indexOf("title") != -1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
+        "class": "text-danger"
+      }, this.state.errorMessages[this.state.errorField.indexOf("title")]) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         "class": "form-group row"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("label", {
         "for": "firstName",
@@ -37587,7 +37583,9 @@ var Form = /*#__PURE__*/function (_Component) {
             fieldOriginalTitle: event.target.value
           });
         }
-      }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+      }), this.state.errorField.indexOf("originalTitle") != -1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
+        "class": "text-danger"
+      }, this.state.errorMessages[this.state.errorField.indexOf("originalTitle")]) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         "class": "form-group row"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("label", {
         "for": "firstName",
@@ -37597,15 +37595,18 @@ var Form = /*#__PURE__*/function (_Component) {
       }, "*")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         "class": "col-sm-9"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("input", {
-        type: "email",
+        type: "text",
         "class": "form-control",
         value: this.state.fieldIsbn,
+        placeholder: "0-123-45678-9 \xF3 012-3-456-78901-2",
         onChange: function onChange(event) {
           return _this2.setState({
-            fieldIsbn: event.target.value
+            fieldIsbn: event.target.value.replace(" ", "-").replace("--", "-")
           });
         }
-      }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+      }), this.state.errorField.indexOf("isbn") != -1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
+        "class": "text-danger"
+      }, this.state.errorMessages[this.state.errorField.indexOf("isbn")]) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         "class": "form-group row"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("label", {
         "for": "firstName",
@@ -37617,14 +37618,15 @@ var Form = /*#__PURE__*/function (_Component) {
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("input", {
         type: "number",
         "class": "form-control",
-        max: "2021",
         value: this.state.fieldPublicationYear,
         onChange: function onChange(event) {
           return _this2.setState({
             fieldPublicationYear: event.target.value
           });
         }
-      }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+      }), this.state.errorField.indexOf("publicationYear") != -1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
+        "class": "text-danger"
+      }, this.state.errorMessages[this.state.errorField.indexOf("publicationYear")]) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         "class": "form-group row"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("label", {
         "for": "firstName",
@@ -37642,7 +37644,9 @@ var Form = /*#__PURE__*/function (_Component) {
             fieldPublisher: event.target.value
           });
         }
-      }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+      }), this.state.errorField.indexOf("publisher") != -1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
+        "class": "text-danger"
+      }, this.state.errorMessages[this.state.errorField.indexOf("publisher")]) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         "class": "form-group row"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("label", {
         "for": "firstName",
@@ -37663,7 +37667,9 @@ var Form = /*#__PURE__*/function (_Component) {
         return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("option", {
           value: genre
         }, genre.replaceAll("_", " "));
-      })))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+      })), this.state.errorField.indexOf("genres") != -1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
+        "class": "text-danger"
+      }, this.state.errorMessages[this.state.errorField.indexOf("genres")]) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         "class": "form-group row"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("label", {
         "for": "firstName",
@@ -37681,7 +37687,9 @@ var Form = /*#__PURE__*/function (_Component) {
             fieldAuthor: event.target.value
           });
         }
-      }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+      }), this.state.errorField.indexOf("author") != -1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
+        "class": "text-danger"
+      }, this.state.errorMessages[this.state.errorField.indexOf("author")]) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         "class": "form-group row"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("label", {
         "for": "firstName",
@@ -37699,7 +37707,9 @@ var Form = /*#__PURE__*/function (_Component) {
             fieldDescription: event.target.value
           });
         }
-      }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+      }), this.state.errorField.indexOf("description") != -1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
+        "class": "text-danger"
+      }, this.state.errorMessages[this.state.errorField.indexOf("description")]) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         "class": "form-group row"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("label", {
         "for": "firstName",
@@ -37716,9 +37726,10 @@ var Form = /*#__PURE__*/function (_Component) {
           return _this2.setState({
             fieldImage: event.target.value
           });
-        },
-        multiple: true
-      }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+        }
+      }), this.state.errorField.indexOf("image") != -1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
+        "class": "text-danger"
+      }, this.state.errorMessages[this.state.errorField.indexOf("image")]) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         "class": "form-group row"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("label", {
         "for": "firstName",
@@ -37742,43 +37753,22 @@ var Form = /*#__PURE__*/function (_Component) {
         value: "POCO USADO"
       }, "POCO USADO"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("option", {
         value: "NORMAL"
-      }, "NORMAL"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("option", {
+      }, "BUEN ESTADO"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("option", {
         value: "MUY USADO"
       }, "MUY USADO"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("option", {
         value: "DA\xD1ADO"
       }, "DA\xD1ADO"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("option", {
         value: "MUY DA\xD1ADO"
-      }, "MUY DA\xD1ADO")))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+      }, "MUY DA\xD1ADO")), this.state.errorField.indexOf("status") != -1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
+        "class": "text-danger"
+      }, this.state.errorMessages[this.state.errorField.indexOf("status")]) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         "class": "form-group row"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("label", {
         "for": "firstName",
         "class": "col-sm-3 col-form-label"
-      }, "\xBFQu\xE9 quiere hacer?", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("sup", {
+      }, "Precio", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("sup", {
         "class": "text-danger"
       }, "*")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
-        "class": "col-sm-9"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("select", {
-        "class": "form-control",
-        id: "selectAction",
-        value: this.state.fieldAction,
-        onChange: function onChange(event) {
-          return _this2.setState({
-            fieldAction: event.target.value
-          });
-        },
-        disabled: this.state.alreadyRequest
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("option", {
-        value: "INTERCAMBIO"
-      }, "INTERCAMBIO"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("option", {
-        value: "VENTA"
-      }, "VENTA")), this.state.alreadyRequest ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
-        "class": "text-danger"
-      }, "*Tiene una petici\xF3n en proceso.") : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
-        "class": "form-group row"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("label", {
-        "for": "firstName",
-        "class": "col-sm-3 col-form-label"
-      }, "Precio"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         "class": "col-sm-9"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("input", {
         id: "price",
@@ -37790,15 +37780,9 @@ var Form = /*#__PURE__*/function (_Component) {
             fieldPrice: event.target.value
           });
         }
-      }))), this.state.errorField.map(function (itemerror) {
-        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
-          "class": "text-danger"
-        }, "*", itemerror);
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
-        style: {
-          color: "#099C01"
-        }
-      }, this.state.correctBook), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+      }), this.state.errorField.indexOf("price") != -1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
+        "class": "text-danger"
+      }, this.state.errorMessages[this.state.errorField.indexOf("price")]) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         "class": "form-group row"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         "class": "col-sm-6"
@@ -37814,8 +37798,7 @@ var Form = /*#__PURE__*/function (_Component) {
     key: "onClickSave",
     value: function () {
       var _onClickSave = _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_6___default.a.mark(function _callee2() {
-        var res, dataError, _dataError, error;
-
+        var res, errFields, errMess, error;
         return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_6___default.a.wrap(function _callee2$(_context2) {
           while (1) {
             switch (_context2.prev = _context2.next) {
@@ -37826,34 +37809,20 @@ var Form = /*#__PURE__*/function (_Component) {
               case 2:
                 res = _context2.sent;
 
-                if (this.state.fieldAction == "VENTA" && this.state.fieldPrice == null) {
-                  this.setState({
-                    correctBook: ""
-                  });
-                  dataError = [];
-                  dataError.push("El precio es un campo requerido.");
-                  this.setState({
-                    errorField: dataError
-                  });
+                if (res.success) {
+                  window.location.replace("/books/me/0");
                 } else {
-                  if (res.success) {
-                    this.setState({
-                      correctBook: "*Se ha actualizado correctamente.",
-                      errorField: []
-                    }); //window.location.replace("/")
-                  } else if (res.status == 400) {
-                    this.setState({
-                      correctBook: ""
-                    });
-                    _dataError = [];
-                    error = res.data.errors;
-                    error.map(function (itemerror) {
-                      _dataError.push(itemerror.defaultMessage);
-                    });
-                    this.setState({
-                      errorField: _dataError
-                    });
-                  }
+                  errFields = [];
+                  errMess = [];
+                  error = res.errors;
+                  error.map(function (itemerror) {
+                    errFields.push(itemerror.field);
+                    errMess.push(itemerror.defaultMessage);
+                  });
+                  this.setState({
+                    errorField: errFields,
+                    errorMessages: errMess
+                  });
                 }
 
               case 4:
@@ -38057,199 +38026,132 @@ var Get = /*#__PURE__*/function (_Component) {
     value: function render() {
       var _this2 = this;
 
-      return (
-        /*#__PURE__*/
-
-        /*<div style={{backgroundImage: "url(https://i.pinimg.com/originals/8d/23/06/8d2306b98839234e49ce96a8b76e20ae.jpg)", 
-        backgroundSize: "auto auto" ,  fontWeight: "bold", padding: "41px", marginBlock:"30px", margin:"0px 150px 0px 150px"}}>
-        <center><div>
-        <h1><strong>{this.state.book.title}</strong></h1>{this.state.book.originalTitle != "" ? <h3> ({this.state.book.originalTitle})</h3> : <p></p>}
-        <img src={this.state.book.image} 
-        style={{padding: '10px', width: '250px'}}></img></div>
-        <div>
-        <br clear="left"></br>
-        <h6><strong>Autor:</strong> {this.state.book.author}</h6>
-        <h6><strong>Editorial:</strong> {this.state.book.publisher}</h6>
-        <h6><strong>ISBN:</strong> {this.state.book.isbn}</h6>
-        <h6><strong>Publicado en:</strong> {this.state.book.publicationYear}</h6>
-        <h6><strong>Sinopsis: </strong>{this.state.book.description}</h6>
-        <h6><strong>Géneros:</strong> {this.state.genres.replaceAll("_", " ").replaceAll(",", ", ")}</h6>
-          {this.state.book.action == "VENTA" ?
-            <h6><strong>¿Qué quiere hacer?</strong> {this.state.book.action} por {this.state.book.price} €</h6>
-        :
-            <h6><strong>¿Qué quiere hacer?</strong> {this.state.book.action}</h6>} 
-            </div>
-        
-        <h6><strong>Estado: </strong>{this.state.book.status}</h6>
-          {this.state.username == this.state.book.username ? 
-            <center><br></br><hr></hr><a href={'/books/'+this.state.book.id+'/edit'} style={{margin:"10px"}} class="btn btn-primary">Editar</a>
-            {!this.state.hasRequestAccepted ? 
-                <a onClick={() => this.deleteBook(this.state.book.id)} style={{background:"red", color:"white"}} class="btn btn-primary">Eliminar</a>
-            :
-                <center><button style={{background:"red", color:"white"}} class="btn btn-primary" disabled>Eliminar</button>
-                <p class='text-danger'>*Tiene una petición ACEPTADA</p></center>
-            }</center>
-        :
-            <p></p>
-        }
-          {this.state.username != null && this.state.username != this.state.book.username ?
-            !this.state.isAdded ? 
-                <center><h6><strong>Publicado por:</strong> {this.state.book.username}</h6><br></br><hr></hr>
-                <a onClick={() => this.addFavouriteBook(this.state.book.id)} style={{color:"white", margin:"10px"}} class="btn btn-primary">Añadir a favoritos</a></center>
-            :
-                <center><h6><strong>Publicado por:</strong> {this.state.book.username}</h6><br></br><hr></hr>
-                <a onClick={() => {this.deleteFavouriteBook(this.state.book.id, this.state.book.title)}} style={{background:"red", color:"white"}} class="btn btn-primary">Eliminar de favoritos</a></center>
-        :                              
-            <p></p>
-        }   
-          {this.state.username != this.state.book.username && this.state.username != null ?
-            !this.state.alreadyRequest ?
-            <center>
-                {!this.state.hasRequestAccepted ?
-                    <a href={"/requests/"+this.state.book.id+"/add"} style={{color:"white", margin:"10px"}} class="btn btn-primary">Realizar petición</a>
-                :
-                    <center><button style={{color:"white", margin:"10px"}} class="btn btn-primary" disabled>Realizar petición</button>
-                    <p class='text-danger'>*Ya tiene una petición ACEPTADA</p></center>
-                }
-            </center>
-            :
-            <button style={{background:"#099C01",color:"white", margin:"10px"}} class="btn btn-primary" disabled>Petición realizada</button>
-        :
-            <p></p>
-        }
-        </center>
-        </div>
-        */
-        react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
-          "class": "cover"
-        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
-          "class": "book"
-        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("label", {
-          "for": "page-1",
-          "class": "book__page book__page--1"
-        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("img", {
-          src: this.state.book.image,
-          alt: ""
-        })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("label", {
-          "for": "page-2",
-          "class": "book__page book__page--4"
-        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("img", {
-          src: this.state.book.image,
-          alt: ""
-        })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("input", {
-          type: "radio",
-          name: "page",
-          id: "page-1"
-        }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("input", {
-          type: "radio",
-          name: "page",
-          id: "page-2"
-        }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("label", {
-          "class": "book__page book__page--2"
-        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
-          "class": "book__page-front"
-        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
-          "class": "page__content"
-        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("h1", {
-          "class": "page__content-book-title"
-        }, this.state.book.title), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("h2", {
-          "class": "page__content-author"
-        }, this.state.book.author), this.state.book.originalTitle != "" && this.state.book.originalTitle != this.state.book.title ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
-          "class": "page__content-credits"
-        }, "T\xEDtulo original", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("span", null, this.state.book.originalTitle)) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
-          "class": "page__content-credits"
-        }, "Editorial", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("span", null, this.state.book.publisher)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
-          "class": "page__content-credits"
-        }, "G\xE9neros", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("span", null, this.state.genres.replaceAll("_", " ").replaceAll(",", ", "))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
-          "class": "page__content-credits"
-        }, "A\xF1o de publicaci\xF3n", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("span", null, this.state.book.publicationYear)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
-          "class": "page__content-credits"
-        }, "ISBN", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("span", null, this.state.book.isbn)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
-          "class": "page__content-credits"
-        }, "\xBFQu\xE9 quiere hacer?", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("span", null, this.state.book.action == "VENTA" ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null, " ", this.state.book.action, " por ", this.state.book.price, " \u20AC") : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null, " ", this.state.book.action), " ")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
-          "class": "page__content-credits"
-        }, "Estado", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("span", null, this.state.book.status)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
-          "class": "page__content-copyright"
-        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null, "Publicado por ", this.state.book.username)))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
-          "class": "book__page-back"
-        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
-          "class": "page__content"
-        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("h1", {
-          "class": "page__content-title"
-        }, "Sinopsis"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
-          "class": "page__content-blockquote"
-        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
-          "class": "page__content-blockquote-text"
-        }, this.state.book.description)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
-          "class": "page__number"
-        }, "2")))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("center", null, this.state.username == this.state.book.username ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("center", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
-          href: '/books/' + this.state.book.id + '/edit',
-          style: {
-            margin: "10px"
-          },
-          "class": "btn btn-primary"
-        }, "Editar"), !this.state.hasRequestAccepted ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
-          onClick: function onClick() {
-            return _this2.deleteBook(_this2.state.book.id);
-          },
-          style: {
-            background: "red",
-            color: "white"
-          },
-          "class": "btn btn-primary"
-        }, "Eliminar") : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("center", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("button", {
-          style: {
-            background: "red",
-            color: "white"
-          },
-          "class": "btn btn-primary",
-          disabled: true
-        }, "Eliminar"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
-          "class": "text-danger"
-        }, "*Tiene una petici\xF3n ACEPTADA"))) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null), this.state.username != null && this.state.username != this.state.book.username ? !this.state.isAdded ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("center", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
-          onClick: function onClick() {
-            return _this2.addFavouriteBook(_this2.state.book.id);
-          },
-          style: {
-            color: "white",
-            margin: "10px"
-          },
-          "class": "btn btn-primary"
-        }, "A\xF1adir a favoritos")) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("center", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
-          onClick: function onClick() {
-            _this2.deleteFavouriteBook(_this2.state.book.id, _this2.state.book.title);
-          },
-          style: {
-            background: "red",
-            color: "white"
-          },
-          "class": "btn btn-primary"
-        }, "Eliminar de favoritos")) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null), this.state.username != this.state.book.username && this.state.username != null ? !this.state.alreadyRequest ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("center", null, !this.state.hasRequestAccepted ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
-          href: "/requests/" + this.state.book.id + "/add",
-          style: {
-            color: "white",
-            margin: "10px"
-          },
-          "class": "btn btn-primary"
-        }, "Realizar petici\xF3n") : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("center", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("button", {
-          style: {
-            color: "white",
-            margin: "10px"
-          },
-          "class": "btn btn-primary",
-          disabled: true
-        }, "Realizar petici\xF3n"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
-          "class": "text-danger"
-        }, "*Ya tiene una petici\xF3n ACEPTADA"))) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("button", {
-          style: {
-            background: "#099C01",
-            color: "white",
-            margin: "10px"
-          },
-          "class": "btn btn-primary",
-          disabled: true
-        }, "Petici\xF3n realizada") : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null)))
-      );
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+        "class": "cover"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+        "class": "book"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("label", {
+        "for": "page-1",
+        "class": "book__page book__page--1"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("img", {
+        src: this.state.book.image,
+        alt: ""
+      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("label", {
+        "for": "page-2",
+        "class": "book__page book__page--4"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("img", {
+        src: this.state.book.image,
+        alt: ""
+      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("input", {
+        type: "radio",
+        name: "page",
+        id: "page-1"
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("input", {
+        type: "radio",
+        name: "page",
+        id: "page-2"
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("label", {
+        "class": "book__page book__page--2"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+        "class": "book__page-front"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+        "class": "page__content"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("h1", {
+        "class": "page__content-book-title"
+      }, this.state.book.title), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("h2", {
+        "class": "page__content-author"
+      }, this.state.book.author), this.state.book.originalTitle != "" && this.state.book.originalTitle != this.state.book.title ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
+        "class": "page__content-credits"
+      }, "T\xEDtulo original", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("span", null, this.state.book.originalTitle)) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
+        "class": "page__content-credits"
+      }, "Editorial", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("span", null, this.state.book.publisher)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
+        "class": "page__content-credits"
+      }, "G\xE9neros", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("span", null, this.state.genres.replaceAll("_", " ").replaceAll(",", ", "))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
+        "class": "page__content-credits"
+      }, "A\xF1o de publicaci\xF3n", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("span", null, this.state.book.publicationYear)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
+        "class": "page__content-credits"
+      }, "ISBN", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("span", null, this.state.book.isbn)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
+        "class": "page__content-credits"
+      }, "\xBFQu\xE9 quiere hacer?", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("span", null, this.state.book.action == "VENTA" ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null, " ", this.state.book.action, " por ", this.state.book.price, " \u20AC") : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null, " ", this.state.book.action), " ")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
+        "class": "page__content-credits"
+      }, "Estado", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("span", null, this.state.book.status)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+        "class": "page__content-copyright"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null, "Publicado por ", this.state.book.username)))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+        "class": "book__page-back"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+        "class": "page__content"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("h1", {
+        "class": "page__content-title"
+      }, "Sinopsis"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+        "class": "page__content-blockquote"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
+        "class": "page__content-blockquote-text"
+      }, this.state.book.description)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+        "class": "page__number"
+      }, "2")))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("center", null, this.state.username == this.state.book.username ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("center", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("button", {
+        onClick: function onClick() {
+          return _this2.goToEdit(_this2.state.book.id);
+        },
+        style: {
+          margin: "10px"
+        },
+        "class": "btn btn-primary",
+        disabled: this.state.hasRequestAccepted == true
+      }, "Editar"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("button", {
+        onClick: function onClick() {
+          return _this2.deleteBook(_this2.state.book.id);
+        },
+        style: {
+          background: "red",
+          color: "white"
+        },
+        "class": "btn btn-primary",
+        disabled: this.state.hasRequestAccepted == true
+      }, "Eliminar"), this.state.hasRequestAccepted ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
+        "class": "text-danger"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("b", null, "*Tiene una petici\xF3n ACEPTADA")) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null)) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null), this.state.username != null && this.state.username != this.state.book.username ? !this.state.isAdded ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("center", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
+        onClick: function onClick() {
+          return _this2.addFavouriteBook(_this2.state.book.id);
+        },
+        style: {
+          color: "white",
+          margin: "10px"
+        },
+        "class": "btn btn-primary"
+      }, "A\xF1adir a favoritos")) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("center", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
+        onClick: function onClick() {
+          _this2.deleteFavouriteBook(_this2.state.book.id, _this2.state.book.title);
+        },
+        style: {
+          background: "red",
+          color: "white"
+        },
+        "class": "btn btn-primary"
+      }, "Eliminar de favoritos")) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null), this.state.username != this.state.book.username && this.state.username != null ? !this.state.alreadyRequest ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("center", null, !this.state.hasRequestAccepted ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
+        href: "/requests/" + this.state.book.id + "/add",
+        style: {
+          color: "white",
+          margin: "10px"
+        },
+        "class": "btn btn-primary"
+      }, "Realizar petici\xF3n") : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("center", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("button", {
+        style: {
+          color: "white",
+          margin: "10px"
+        },
+        "class": "btn btn-primary",
+        disabled: true
+      }, "Realizar petici\xF3n"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
+        "class": "text-danger"
+      }, "*Ya tiene una petici\xF3n ACEPTADA"))) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("button", {
+        style: {
+          background: "#099C01",
+          color: "white",
+          margin: "10px"
+        },
+        "class": "btn btn-primary",
+        disabled: true
+      }, "Petici\xF3n realizada") : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null)));
     }
   }, {
     key: "deleteBook",
@@ -38354,6 +38256,30 @@ var Get = /*#__PURE__*/function (_Component) {
       }
 
       return deleteFavouriteBook;
+    }()
+  }, {
+    key: "goToEdit",
+    value: function () {
+      var _goToEdit = _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_6___default.a.mark(function _callee5(id) {
+        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_6___default.a.wrap(function _callee5$(_context5) {
+          while (1) {
+            switch (_context5.prev = _context5.next) {
+              case 0:
+                window.location.replace('/books/' + id + '/edit');
+
+              case 1:
+              case "end":
+                return _context5.stop();
+            }
+          }
+        }, _callee5);
+      }));
+
+      function goToEdit(_x5) {
+        return _goToEdit.apply(this, arguments);
+      }
+
+      return goToEdit;
     }()
   }]);
 
@@ -39293,10 +39219,13 @@ var Form = /*#__PURE__*/function (_Component) {
       fieldComment: "",
       fieldIdBook2: "",
       fieldPay: "",
+      fieldAction: "",
       book: "",
       books: [],
       errorField: [],
-      noBooks: true
+      errorMessages: [],
+      noBooks: true,
+      sell: null
     };
     return _this;
   }
@@ -39323,15 +39252,10 @@ var Form = /*#__PURE__*/function (_Component) {
                 bk = _context.sent;
                 this.setState({
                   book: b.book,
+                  fieldIdBook2: id,
                   books: bk.books,
-                  fieldIdBook2: id
+                  fieldPay: b.book.price
                 });
-
-                if (b.book.action == "VENTA") {
-                  this.setState({
-                    fieldPay: b.book.price
-                  });
-                }
 
                 if (bk.books.length >= 1) {
                   this.setState({
@@ -39340,7 +39264,7 @@ var Form = /*#__PURE__*/function (_Component) {
                   });
                 }
 
-              case 10:
+              case 9:
               case "end":
                 return _context.stop();
             }
@@ -39372,9 +39296,38 @@ var Form = /*#__PURE__*/function (_Component) {
         style: {
           color: "#007bff"
         }
-      }, "Petici\xF3n de ", this.state.book.action == "INTERCAMBIO" ? "INTERCAMBIO" : "COMPRA (" + this.state.book.price + "€)", " para ", this.state.book.title), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
+      }, "Realizar petici\xF3n a ", this.state.book.title), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
         "class": "text-danger"
-      }, "*Obligatorio"), this.state.book.action == "INTERCAMBIO" ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+      }, "*Obligatorio"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+        "class": "form-group row"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("label", {
+        "for": "firstName",
+        "class": "col-sm-3 col-form-label"
+      }, "\xBFQu\xE9 quiere hacer?", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("sup", {
+        "class": "text-danger"
+      }, "*")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+        "class": "col-sm-9"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("select", {
+        "class": "form-control",
+        id: "selectAction",
+        value: this.state.fieldAction,
+        onChange: function onChange(event) {
+          return _this2.setState({
+            fieldAction: event.target.value,
+            sell: event.target.value == "" ? null : event.target.value == "COMPRA" ? true : false,
+            errorField: [],
+            errorMessages: []
+          });
+        }
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("option", {
+        value: ""
+      }, "Despliega para ver opciones"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("option", {
+        value: "COMPRA"
+      }, "COMPRA"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("option", {
+        value: "INTERCAMBIO"
+      }, "INTERCAMBIO")), this.state.errorField.indexOf("action") != -1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
+        "class": "text-danger"
+      }, this.state.errorMessages[this.state.errorField.indexOf("action")]) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null))), this.state.sell != null ? this.state.sell == false ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         "class": "form-group row"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("label", {
         "for": "firstName",
@@ -39392,12 +39345,26 @@ var Form = /*#__PURE__*/function (_Component) {
             fieldIdBook1: event.target.value
           });
         },
-        disabled: this.state.noBooks && this.state.book.action == "INTERCAMBIO"
+        disabled: this.state.noBooks
       }, this.state.books.map(function (book) {
         return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("option", {
           value: book.id
         }, book.title);
-      })))) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+      })), this.state.errorField.indexOf("idBook1") != -1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
+        "class": "text-danger"
+      }, this.state.errorMessages[this.state.errorField.indexOf("idBook1")]) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null), this.state.noBooks ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
+        "class": "text-danger"
+      }, "*No tiene libros para intercambiar. ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
+        href: "/books/new",
+        "class": "btn btn-primary"
+      }, "Sube uno ahora!"))) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null))) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+        "class": "form-group row"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("label", {
+        "for": "firstName",
+        "class": "col-sm-3 col-form-label"
+      }, "Precio original:"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+        "class": "col-sm-9"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null, this.state.book.price, "\u20AC"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         "class": "form-group row"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("label", {
         "for": "firstName",
@@ -39415,7 +39382,9 @@ var Form = /*#__PURE__*/function (_Component) {
             fieldPay: event.target.value
           });
         }
-      }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+      }), this.state.errorField.indexOf("pay") != -1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
+        "class": "text-danger"
+      }, this.state.errorMessages[this.state.errorField.indexOf("pay")]) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null)))) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         "class": "form-group row"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("label", {
         "for": "firstName",
@@ -39431,17 +39400,10 @@ var Form = /*#__PURE__*/function (_Component) {
             fieldComment: event.target.value
           });
         },
-        disabled: this.state.noBooks && this.state.book.action == "INTERCAMBIO"
-      }))), this.state.errorField.map(function (itemerror) {
-        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
-          "class": "text-danger"
-        }, "*", itemerror);
-      }), this.state.noBooks && this.state.book.action == "INTERCAMBIO" ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
+        disabled: this.state.noBooks && this.state.sell == false
+      }), this.state.errorField.indexOf("comment") != -1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
         "class": "text-danger"
-      }, "*No tiene libros para intercambiar. ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
-        href: "/books/new",
-        "class": "btn btn-primary"
-      }, "Sube uno ahora!")) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+      }, this.state.errorMessages[this.state.errorField.indexOf("comment")]) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         "class": "form-group row"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         "class": "col-sm-6"
@@ -39454,60 +39416,41 @@ var Form = /*#__PURE__*/function (_Component) {
           "float": "left"
         },
         type: "submit",
-        disabled: this.state.noBooks && this.state.book.action == "INTERCAMBIO"
+        disabled: this.state.noBooks && (this.state.sell == false || this.state.sell == null)
       }, "Enviar"))));
     }
   }, {
     key: "onClickSave",
     value: function () {
       var _onClickSave = _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_6___default.a.mark(function _callee2() {
-        var dataError, _dataError, res;
-
+        var res, errFields, errMess, error;
         return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_6___default.a.wrap(function _callee2$(_context2) {
           while (1) {
             switch (_context2.prev = _context2.next) {
               case 0:
-                if (!(this.state.book.action == "INTERCAMBIO" && this.state.fieldIdBook1 == "")) {
-                  _context2.next = 6;
-                  break;
-                }
-
-                dataError = [];
-                dataError.push("El libro a intercambiar es un campo requerido.");
-                this.setState({
-                  errorField: dataError
-                });
-                _context2.next = 16;
-                break;
-
-              case 6:
-                if (!(this.state.book.action == "VENTA" && this.state.fieldPay == "")) {
-                  _context2.next = 12;
-                  break;
-                }
-
-                _dataError = [];
-
-                _dataError.push("El precio que estaría dispuesto a pagar es un campo requerido.");
-
-                this.setState({
-                  errorField: _dataError
-                });
-                _context2.next = 16;
-                break;
-
-              case 12:
-                _context2.next = 14;
+                _context2.next = 2;
                 return _services_Request__WEBPACK_IMPORTED_MODULE_9__["default"].create(this.state);
 
-              case 14:
+              case 2:
                 res = _context2.sent;
 
                 if (res.success) {
                   window.location.replace("/books/" + this.state.book.id);
+                } else {
+                  errFields = [];
+                  errMess = [];
+                  error = res.errors;
+                  error.map(function (itemerror) {
+                    errFields.push(itemerror.field);
+                    errMess.push(itemerror.defaultMessage);
+                  });
+                  this.setState({
+                    errorField: errFields,
+                    errorMessages: errMess
+                  });
                 }
 
-              case 16:
+              case 4:
               case "end":
                 return _context2.stop();
             }
@@ -39704,13 +39647,12 @@ var List = /*#__PURE__*/function (_Component) {
           style: {
             backgroundImage: "url(https://i.pinimg.com/originals/8d/23/06/8d2306b98839234e49ce96a8b76e20ae.jpg)",
             backgroundSize: "auto auto",
-            padding: "30px",
+            padding: "15px",
             paddingTop: "20px",
-            marginBlock: "30px",
-            margin: "0px 20px 20px 0px",
+            marginBlock: "15px",
+            margin: "0px 12px 30px 0px",
             borderRadius: '5px',
-            width: request.action == "VENTA" ? "300px" : "380px",
-            height: '520px',
+            width: "32%",
             display: "inline-grid"
           }
         }, request.action == "INTERCAMBIO" ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("center", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("h4", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("strong", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("u", null, "INTERCAMBIO"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", null)))) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("center", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("h4", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("strong", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("u", null, "COMPRA POR ", request.pay, " \u20AC"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", null)))), request.action == "INTERCAMBIO" ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("center", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("a", {
@@ -39746,7 +39688,7 @@ var List = /*#__PURE__*/function (_Component) {
             margin: "0px 0px 0px 0px"
           },
           src: _this2.state.books2[i].image
-        }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("center", null, request.action == "VENTA" ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("strong", null, "Precio original: "), _this2.state.books2[i].price, " \u20AC") : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", null), request.comment != "" ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("strong", null, "Comentario adicional: "), request.comment) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", null), request.status != "ACEPTADA" ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("strong", null, "Petici\xF3n enviada a: "), request.username2) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("strong", null, "Estado: "), request.status)), request.status == "PENDIENTE" ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("center", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("a", {
+        }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("center", null, request.action == "COMPRA" ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("strong", null, "Precio original: "), _this2.state.books2[i].price, " \u20AC") : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", null), request.comment != "" ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("strong", null, "Comentario adicional: "), request.comment) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", null), request.status != "ACEPTADA" ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("strong", null, "Petici\xF3n enviada a: "), request.username2) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("strong", null, "Estado: "), request.status)), request.status == "PENDIENTE" ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("center", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("a", {
           onClick: function onClick() {
             return _this2.cancelRequest(request.id, _this2.state.actualPage);
           },
@@ -40010,13 +39952,12 @@ var List = /*#__PURE__*/function (_Component) {
           style: {
             backgroundImage: "url(https://i.pinimg.com/originals/8d/23/06/8d2306b98839234e49ce96a8b76e20ae.jpg)",
             backgroundSize: "auto auto",
-            padding: "30px",
+            padding: "15px",
             paddingTop: "20px",
-            marginBlock: "30px",
-            margin: "0px 20px 20px 0px",
+            marginBlock: "15px",
+            margin: "0px 12px 30px 0px",
             borderRadius: '5px',
-            width: request.action == "VENTA" ? "300px" : "380px",
-            height: '480px',
+            width: "32%",
             display: "inline-grid"
           }
         }, request.action == "INTERCAMBIO" ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("center", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("h4", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("strong", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("u", null, "INTERCAMBIO"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("br", null)))) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("center", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("h4", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("strong", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("u", null, "VENTA POR ", request.pay, " \u20AC"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("br", null)))), request.action == "INTERCAMBIO" ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("center", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("a", {
@@ -40054,7 +39995,7 @@ var List = /*#__PURE__*/function (_Component) {
           padding: '10px',
           margin: "0px 0px 0px 0px",
           width: '120px'
-        })))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("center", null, request.action == "VENTA" ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("strong", null, "Precio original: "), _this2.state.books2[i].price, " \u20AC") : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("p", null), request.comment != "" ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("strong", null, "Comentario adicional: "), request.comment) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("p", null), request.status != "ACEPTADA" ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("strong", null, "Petici\xF3n enviada por: "), request.username1) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("p", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("strong", null, "Estado: "), request.status)), request.status == "PENDIENTE" ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("center", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("a", {
+        })))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("center", null, request.action == "COMPRA" ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("strong", null, "Precio original: "), _this2.state.books2[i].price, " \u20AC") : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("p", null), request.comment != "" ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("strong", null, "Comentario adicional: "), request.comment) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("p", null), request.status != "ACEPTADA" ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("strong", null, "Petici\xF3n enviada por: "), request.username1) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("p", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("strong", null, "Estado: "), request.status)), request.status == "PENDIENTE" ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("center", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("a", {
           onClick: function onClick() {
             return _this2.acceptRequest(request.id, _this2.state.books2[i].title, _this2.state.actualPage);
           },
@@ -40213,7 +40154,6 @@ book.create = /*#__PURE__*/function () {
               description: state.fieldDescription,
               image: state.fieldImage,
               status: state.fieldStatus,
-              action: state.fieldAction,
               price: state.fieldPrice
             };
             urlPost = baseUrl + "/new";
@@ -40260,7 +40200,6 @@ book.edit = /*#__PURE__*/function () {
               description: state.fieldDescription,
               image: state.fieldImage,
               status: state.fieldStatus,
-              action: state.fieldAction,
               price: state.fieldPrice
             };
             urlPost = baseUrl + "/" + state.id + "/edit";
@@ -40537,7 +40476,7 @@ request.create = /*#__PURE__*/function () {
               idBook1: state.fieldIdBook1,
               idBook2: "",
               status: "",
-              action: "",
+              action: state.fieldAction,
               pay: state.fieldPay,
               comment: state.fieldComment
             };
