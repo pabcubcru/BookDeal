@@ -20,9 +20,7 @@ public interface UserRepository extends ElasticsearchRepository<User, String> {
 
     public Page<User> findByPostCode(String postCode, Pageable pageable);
 
-    public Page<User> findByCity(String city, Pageable pageable);
-
     public Page<User> findByProvince(String province, Pageable pageable);
 
-    public Page<User> findByPostCodeOrCityOrProvince(String postCode, String city, String province, Pageable pageable);
+    public Page<User> findByPostCodeOrProvince(String postCode, String province, Pageable pageable);
 }

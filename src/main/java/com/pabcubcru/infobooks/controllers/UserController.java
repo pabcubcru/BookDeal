@@ -1,5 +1,7 @@
 package com.pabcubcru.infobooks.controllers;
 import java.security.Principal;
+import java.time.LocalDate;
+import java.time.Period;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -13,6 +15,7 @@ import com.pabcubcru.infobooks.services.AuthoritiesService;
 import com.pabcubcru.infobooks.services.UserService;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -67,27 +70,63 @@ public class UserController {
 		return res;
 	}
 
-	@PostMapping(value="/register")
-	public Map<String, Object> register(@RequestBody @Valid User user){
-		Map<String, Object> res = new HashMap<>();
+	private BindingResult validateUser(User user, BindingResult result, Boolean newUser) {
+		if(newUser) {
+			if(!user.getEmail().isEmpty()) {
+				Boolean existEmail = this.userService.existUserWithSameEmail(user.getEmail());
+				if(existEmail){
+					result.rejectValue("email", "Este correo electrónico ya está registrado.", "Este correo electrónico ya está registrado.");
+				}
+			}
+			if(!user.getUsername().isEmpty()) {
+				Boolean existUsername = this.userService.existUserWithSameUsername(user.getUsername());
+				if(existUsername) {
+					result.rejectValue("username", "El nombre de usuario no está disponible.", "El nombre de usuario no está disponible.");
+				} else if(user.getUsername().length() < 6 || user.getUsername().length() > 18) {
+					result.rejectValue("username", "El nombre de usuario debe contener entre 6 y 18 carácteres.", "El nombre de usuario debe contener entre 6 y 18 carácteres.");
+				} 
+			}
 
-		if(!user.getEmail().isEmpty() && !user.getUsername().isEmpty() && !user.getPassword().isEmpty()){
-			Boolean existEmail = this.userService.existUserWithSameEmail(user.getEmail());
-			Boolean existUsername = this.userService.existUserWithSameUsername(user.getUsername());
-			if(existEmail){
-				res.put("message", "Este correo electrónico ya está registrado.");
-				res.put("success", false);
-			} else if(existUsername) {
-				res.put("message", "El nombre de usuario no está disponible.");
-				res.put("success", false);
-			}else if(user.getPassword().length() < 8 || user.getPassword().length()> 20){
-				res.put("message", "La contraseña debe contener entre 8 y 20 carácteres.");
-				res.put("success", false);
-			} else {
-				this.userService.save(user, true);
-				res.put("success", true);
+			if(!user.getAccept()) {
+				result.rejectValue("accept", "Debe aceptar las condiciones.", "Debe aceptar las condiciones.");
+			} 
+
+			if(user.getPassword().isEmpty()) {
+				result.rejectValue("password", "La contraseña es un campo requerido.", "La contraseña es un campo requerido.");
 			}
 		}
+
+		if(!user.getPassword().isEmpty()) {
+			if(user.getPassword().length() < 8 || user.getPassword().length()> 20){
+				result.rejectValue("password", "La contraseña debe contener entre 8 y 20 carácteres.", "La contraseña debe contener entre 8 y 20 carácteres.");
+			}
+			if(!user.getPassword().equals(user.getConfirmPassword())) {
+				result.rejectValue("confirmPassword", "Las contraseñas no coinciden.", "Las contraseñas no coinciden.");
+			}
+		}
+
+		if(user.getBirthDate() != null) {
+			if(Period.between(user.getBirthDate(), LocalDate.now()).getYears() < 18) {
+				result.rejectValue("birthDate", "Debe ser mayor de edad para registrarse.", "Debe ser mayor de 18 años.");
+			}
+		}
+
+		return result;
+	}
+
+	@PostMapping(value="/register")
+	public Map<String, Object> register(@RequestBody @Valid User user, BindingResult result){
+		Map<String, Object> res = new HashMap<>();
+
+		result = this.validateUser(user, result, true);
+		if(!result.hasErrors()) {
+			this.userService.save(user, true);
+			res.put("success", true);
+		} else {
+			res.put("errors", result.getAllErrors());
+			res.put("success", false);
+		}
+
 		return res;
 	}
 
@@ -119,26 +158,34 @@ public class UserController {
 	}
 
 	@PutMapping(value = "/user/{username}/edit")
-	public Map<String, Object> edit(@RequestBody @Valid User user, @PathVariable("username") String username) {
+	public Map<String, Object> edit(@RequestBody @Valid User user, BindingResult result, @PathVariable("username") String username) {
 		Map<String, Object> res = new HashMap<>();
+
+		User userOld = this.userService.findByUsername(username);
 
 		if(!user.getEmail().isEmpty()){
 			Boolean existEmail = this.userService.existUserWithSameEmail(user.getEmail());
-			User userOld = this.userService.findByUsername(username);
 			if(existEmail && !userOld.getEmail().equals(user.getEmail())) {
 				res.put("message", "Este correo electrónico ya está registrado.");
 				res.put("success", false);
-			} else {
-				user.setId(userOld.getId());
-				Boolean newPassword = true;
-				if (user.getPassword().isEmpty()) {
-					user.setPassword(userOld.getPassword());
-					newPassword = false;
-				}
-				this.userService.save(user, newPassword);
-				res.put("success", true);
 			}
 		}
+
+		result = this.validateUser(user, result, false);
+		if(!result.hasErrors()) {
+			user.setId(userOld.getId());
+			Boolean newPassword = true;
+			if (user.getPassword().isEmpty()) {
+				user.setPassword(userOld.getPassword());
+				newPassword = false;
+			}
+			this.userService.save(user, newPassword);
+			res.put("success", true);
+		} else {
+			res.put("errors", result.getAllErrors());
+			res.put("success", false);
+		}
+
 		return res;
 
 	}

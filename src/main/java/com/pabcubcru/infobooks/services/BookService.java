@@ -89,16 +89,12 @@ public class BookService {
             usersWithSameAddress = this.userRepository.findByPostCode(user.getPostCode(), Pageable.unpaged());
             usersWithSameAddress.getContent().stream().filter(x -> !x.getUsername().equals(user.getUsername())).forEach(x -> books.addAll(this.bookRepository.findByUsername(x.getUsername(), Pageable.unpaged()).getContent()));
             numBooks = books.size();
-        } else if(showMode.equals("city")) {
-            usersWithSameAddress = this.userRepository.findByCity(user.getCity(), Pageable.unpaged());
-            usersWithSameAddress.getContent().stream().filter(x -> !x.getUsername().equals(user.getUsername())).forEach(x -> books.addAll(this.bookRepository.findByUsername(x.getUsername(), Pageable.unpaged()).getContent()));
-            numBooks = books.size();
         } else if(showMode.equals("province")) {
             usersWithSameAddress = this.userRepository.findByProvince(user.getProvince(), Pageable.unpaged());
             usersWithSameAddress.getContent().stream().filter(x -> !x.getUsername().equals(user.getUsername())).forEach(x -> books.addAll(this.bookRepository.findByUsername(x.getUsername(), Pageable.unpaged()).getContent()));
             numBooks = books.size();
         } else {
-            usersWithSameAddress = this.userRepository.findByPostCodeOrCityOrProvince(user.getPostCode(), user.getCity(), user.getProvince(), Pageable.unpaged());
+            usersWithSameAddress = this.userRepository.findByPostCodeOrProvince(user.getPostCode(), user.getProvince(), Pageable.unpaged());
             usersWithSameAddress.getContent().stream().filter(x -> !x.getUsername().equals(user.getUsername())).forEach(x -> books.addAll(this.bookRepository.findByUsername(x.getUsername(), Pageable.unpaged()).getContent()));
             numBooks = books.size();
         }

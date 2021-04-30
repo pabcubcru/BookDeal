@@ -178,7 +178,6 @@ public class InfoBooksApplication {
         user.setPhone("+34654987321");
         user.setBirthDate(LocalDate.of(2020, 11, 23));
         user.setProvince("Sevilla");
-        user.setCity("Sevilla");
         user.setPostCode("41012");
         user.setUsername("pablo123");
         user.setPassword(new BCryptPasswordEncoder().encode("pablo123"));
@@ -194,7 +193,6 @@ public class InfoBooksApplication {
         user.setPhone("+34654987321");
         user.setBirthDate(LocalDate.of(2020, 11, 23));
         user.setProvince("Sevilla");
-        user.setCity("Sevilla");
         user.setPostCode("41012");
         user.setUsername("juan1234");
         user.setPassword(new BCryptPasswordEncoder().encode("juan1234"));
@@ -215,7 +213,6 @@ public class InfoBooksApplication {
 			user.setBirthDate(LocalDate.of(1997, 11, 23));
 			int numRandomProvince = (int) Math.floor(Math.random()*ProvinceEnum.values().length);
 			user.setProvince(provinces[numRandomProvince].toString());
-			user.setCity(provinces[numRandomProvince].toString());
 			user.setPostCode(""+(int)Math.floor(Math.random()*(50000-1000+1)+1000));
 			user.setUsername("username"+i);
 			user.setPassword(new BCryptPasswordEncoder().encode("password"+i));

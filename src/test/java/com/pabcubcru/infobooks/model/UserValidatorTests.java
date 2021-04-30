@@ -31,7 +31,7 @@ public class UserValidatorTests {
 
         Validator validator = createValidator();
         Set<ConstraintViolation<User>> constrains = validator.validate(user);
-        Assertions.assertThat(constrains.size()).isEqualTo(6); //Son 6 campos con @NotNull o @NotBlank
+        Assertions.assertThat(constrains.size()).isEqualTo(5); //Son 5 campos con @NotNull o @NotBlank
     }
 
     @Test
@@ -44,7 +44,6 @@ public class UserValidatorTests {
         user.setPhone("+34654987321");
         user.setBirthDate(LocalDate.of(2020, 11, 23));
         user.setProvince("Province");
-        user.setCity("City");
         user.setPostCode("41012");
         user.setUsername("username");
         user.setPassword(new BCryptPasswordEncoder().encode("password123"));
@@ -68,7 +67,6 @@ public class UserValidatorTests {
         user.setPhone("87321"); //No tiene 9 dígitos ni tiene un formato válido
         user.setBirthDate(LocalDate.of(2020, 11, 23));
         user.setProvince("Province");
-        user.setCity("City");
         user.setPostCode("41012");
         user.setUsername("username");
         user.setPassword(new BCryptPasswordEncoder().encode("password123"));
@@ -92,7 +90,6 @@ public class UserValidatorTests {
         user.setPhone("+34654987321");
         user.setBirthDate(LocalDate.of(2022, 11, 23)); //Fecha en futuro
         user.setProvince("Province");
-        user.setCity("City");
         user.setPostCode("41012");
         user.setUsername("username");
         user.setPassword(new BCryptPasswordEncoder().encode("password123"));
@@ -116,7 +113,6 @@ public class UserValidatorTests {
         user.setPhone("+34654987321");
         user.setBirthDate(LocalDate.of(2020, 11, 23));
         user.setProvince("Province");
-        user.setCity("City");
         user.setPostCode("0001"); //Código postal español no válido
         user.setUsername("username");
         user.setPassword(new BCryptPasswordEncoder().encode("password123"));

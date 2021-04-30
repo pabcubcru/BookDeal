@@ -45,7 +45,6 @@ export default class Nav extends Component {
                 <li ><a  href="#">Filtrar por</a>
                   <ul>
                     <li ><a  href="/books/all/0/postalCode">Mi cod. postal</a></li>
-                    <li ><a  href="/books/all/0/city">Mi ciudad</a></li>
                     <li ><a  href="/books/all/0/province">Mi provincia</a></li>
                   </ul>
                 </li>

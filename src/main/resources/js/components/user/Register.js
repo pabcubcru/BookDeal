@@ -19,6 +19,7 @@ export default class Form extends Component {
       fieldConfirmPassword:"",
       fieldCheckbok: false,
       errorField:[],
+      errorMessages:[],
       provinces:[]
     }
   }
@@ -42,6 +43,11 @@ export default class Form extends Component {
             <input type="text" class="form-control"
               value={this.state.fieldName} 
               onChange={(event)=>this.setState({fieldName:event.target.value})}/>
+              {this.state.errorField.indexOf("name") != -1 ? 
+                <p class='text-danger'>{this.state.errorMessages[this.state.errorField.indexOf("name")]}</p>
+              :
+                <p></p>
+              }
           </div>
         </div>
 
@@ -51,6 +57,11 @@ export default class Form extends Component {
             <input type="text" class="form-control" 
               value={this.state.fieldUsername} 
               onChange={(event)=>this.setState({fieldUsername:event.target.value})}/>
+              {this.state.errorField.indexOf("username") != -1 ? 
+                <p class='text-danger'>{this.state.errorMessages[this.state.errorField.indexOf("username")]}</p>
+              :
+                <p></p>
+              }
           </div>
         </div>
 
@@ -60,6 +71,11 @@ export default class Form extends Component {
             <input type="email" class="form-control" placeholder="email@email.com"  
               value={this.state.fieldEmail} 
               onChange={(event)=>this.setState({fieldEmail:event.target.value})}/>
+              {this.state.errorField.indexOf("email") != -1 ? 
+                <p class='text-danger'>{this.state.errorMessages[this.state.errorField.indexOf("email")]}</p>
+              :
+                <p></p>
+              }
           </div>
         </div>
 
@@ -69,15 +85,25 @@ export default class Form extends Component {
             <input type="date" class="form-control" placeholder="dd/MM/yyyy"  
               value={this.state.fieldBirthDate} 
               onChange={(event)=>this.setState({fieldBirthDate:event.target.value})}/>
+              {this.state.errorField.indexOf("birthDate") != -1 ? 
+                <p class='text-danger'>{this.state.errorMessages[this.state.errorField.indexOf("birthDate")]}</p>
+              :
+                <p></p>
+              }
           </div>
         </div>
 
 				<div class="form-group row">
             <label for="firstName" class="col-sm-3 col-form-label">Teléfono<sup class='text-danger'>*</sup></label>
           <div class="col-sm-9">
-            <input type="tel" class="form-control" placeholder="+34 123456789"  
+            <input type="tel" class="form-control" placeholder="+34123456789"  
               value={this.state.fieldPhone} 
-              onChange={(event)=>this.setState({fieldPhone:event.target.value})}/>
+              onChange={(event)=>this.setState({fieldPhone:event.target.value.replace(" ", "")})}/>
+              {this.state.errorField.indexOf("phone") != -1 ? 
+                <p class='text-danger'>{this.state.errorMessages[this.state.errorField.indexOf("phone")]}</p>
+              :
+                <p></p>
+              }
           </div>
         </div>
 
@@ -91,15 +117,11 @@ export default class Form extends Component {
               )
             })}
             </select>
-          </div>
-        </div>
-
-        <div class="form-group row">
-            <label for="firstName" class="col-sm-3 col-form-label">Ciudad<sup class='text-danger'>*</sup></label>
-          <div class="col-sm-9">
-            <input type="text" class="form-control" placeholder="Sevilla"  
-              value={this.state.fieldCity} 
-              onChange={(event)=>this.setState({fieldCity:event.target.value})}/>
+              {this.state.errorField.indexOf("province") != -1 ? 
+                <p class='text-danger'>{this.state.errorMessages[this.state.errorField.indexOf("province")]}</p>
+              :
+                <p></p>
+              }
           </div>
         </div>
 
@@ -109,6 +131,11 @@ export default class Form extends Component {
             <input type="text" class="form-control" placeholder="41012"  
               value={this.state.fieldPostCode} 
               onChange={(event)=>this.setState({fieldPostCode:event.target.value})}/>
+              {this.state.errorField.indexOf("postCode") != -1 ? 
+                <p class='text-danger'>{this.state.errorMessages[this.state.errorField.indexOf("postCode")]}</p>
+              :
+                <p></p>
+              }
           </div>
         </div>
 
@@ -118,6 +145,11 @@ export default class Form extends Component {
             <input type="password" class="form-control"
               value={this.state.fieldPassword} 
               onChange={(event)=>this.setState({fieldPassword: event.target.value})}/>
+              {this.state.errorField.indexOf("password") != -1 ? 
+                <p class='text-danger'>{this.state.errorMessages[this.state.errorField.indexOf("password")]}</p>
+              :
+                <p></p>
+              }
           </div>
         </div>
 
@@ -127,6 +159,11 @@ export default class Form extends Component {
             <input type="password" class="form-control"
               value={this.state.fieldConfirmPassword} 
               onChange={(event)=>this.setState({fieldConfirmPassword: event.target.value})}/>
+              {this.state.errorField.indexOf("confirmPassword") != -1 ? 
+                <p class='text-danger'>{this.state.errorMessages[this.state.errorField.indexOf("confirmPassword")]}</p>
+              :
+                <p></p>
+              }
           </div>
         </div>
 
@@ -136,17 +173,13 @@ export default class Form extends Component {
           <input value={this.state.fieldCheckbok} 
           onChange={(event)=>this.setState({fieldCheckbok: !this.state.fieldCheckbok})} 
           class="form-check-input" type="checkbox"/> Acepto los términos y condiciones<sup class='text-danger'>*</sup>
+              {this.state.errorField.indexOf("accept") != -1 ? 
+                <p class='text-danger'>{this.state.errorMessages[this.state.errorField.indexOf("accept")]}</p>
+              :
+                <p></p>
+              }
           </div>
         </div>
-
-
-        {
-          this.state.errorField.map((itemerror) => {
-            return(
-              <p class='text-danger'>*{itemerror}</p>
-            )
-          })
-        }
 
 				<div class="form-group row">
 					<div class="col-sm-6" >
@@ -163,35 +196,18 @@ export default class Form extends Component {
 
   async onClickSave() {
 		const res = await userService.create(this.state)
-
-    if(this.state.fieldPassword == "" && this.state.fieldConfirmPassword == ""){
-      const dataError = []
-			dataError.push("La contraseña es un campo requerido.");
-			this.setState({errorField:dataError});
-    } else if(this.state.fieldPassword != this.state.fieldConfirmPassword){
-      const dataError = []
-			dataError.push("Las contraseñas no coinciden.");
-			this.setState({errorField:dataError});
-    } else if(this.state.fieldCheckbok==false){
-      const dataError = []
-			dataError.push("Debe aceptar los términos y condiciones.");
-			this.setState({errorField:dataError});
-    } else {
       if (res.success) {
         window.location.replace("/")
-      } else if (res.status==400) {
-        const dataError = []
-        const error = res.data.errors
-        error.map((itemerror)=>{
-        dataError.push(itemerror.defaultMessage)
-        })
-        this.setState({errorField:dataError})
       } else {
-        const dataError = []
-        dataError.push(res.message);
-        this.setState({errorField:dataError});
+        const errFields = []
+        const errMess = []
+        const error = res.errors
+        error.map((itemerror)=>{
+        errFields.push(itemerror.field)
+        errMess.push(itemerror.defaultMessage)
+        })
+        this.setState({errorField:errFields, errorMessages:errMess})
       }
-    }
 	}
 }
 

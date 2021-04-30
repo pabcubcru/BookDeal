@@ -36859,8 +36859,6 @@ var Nav = /*#__PURE__*/function (_Component) {
       }, "Filtrar por"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("ul", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
         href: "/books/all/0/postalCode"
       }, "Mi cod. postal")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
-        href: "/books/all/0/city"
-      }, "Mi ciudad")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
         href: "/books/all/0/province"
       }, "Mi provincia")))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
         href: "#"
@@ -40800,8 +40798,9 @@ user.create = /*#__PURE__*/function () {
               username: state.fieldUsername,
               password: state.fieldPassword,
               province: state.fieldProvince,
-              city: state.fieldCity,
-              postCode: state.fieldPostCode
+              postCode: state.fieldPostCode,
+              accept: state.fieldCheckbok,
+              confirmPassword: state.fieldConfirmPassword
             };
             urlPost = baseUrl + "/register";
             _context.next = 4;
@@ -40845,7 +40844,9 @@ user.edit = /*#__PURE__*/function () {
               password: state.fieldPassword,
               province: state.fieldProvince,
               city: state.fieldCity,
-              postCode: state.fieldPostCode
+              postCode: state.fieldPostCode,
+              confirmPassword: state.fieldConfirmPassword,
+              accept: true
             };
             urlPost = baseUrl + "/user/" + state.fieldUsername + "/edit";
             _context2.next = 4;
@@ -41170,8 +41171,8 @@ var Form = /*#__PURE__*/function (_Component) {
       fieldPostCode: "",
       fieldPassword: "",
       fieldConfirmPassword: "",
-      errorFieldUser: [],
-      errorFieldPassword: [],
+      errorField: [],
+      errorMessages: [],
       messageCorrectUser: "",
       messageCorrectPassword: "",
       provinces: []
@@ -41276,9 +41277,10 @@ var Form = /*#__PURE__*/function (_Component) {
           return _this2.setState({
             fieldName: event.target.value
           });
-        },
-        required: true
-      }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+        }
+      }), this.state.errorField.indexOf("name") != -1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
+        "class": "text-danger"
+      }, this.state.errorMessages[this.state.errorField.indexOf("name")]) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         "class": "form-group row"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("label", {
         "for": "firstName",
@@ -41316,7 +41318,9 @@ var Form = /*#__PURE__*/function (_Component) {
             fieldEmail: event.target.value
           });
         }
-      }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+      }), this.state.errorField.indexOf("email") != -1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
+        "class": "text-danger"
+      }, this.state.errorMessages[this.state.errorField.indexOf("email")]) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         "class": "form-group row"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("label", {
         "for": "firstName",
@@ -41335,7 +41339,9 @@ var Form = /*#__PURE__*/function (_Component) {
             fieldBirthDate: event.target.value
           });
         }
-      }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+      }), this.state.errorField.indexOf("birthDate") != -1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
+        "class": "text-danger"
+      }, this.state.errorMessages[this.state.errorField.indexOf("birthDate")]) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         "class": "form-group row"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("label", {
         "for": "firstName",
@@ -41347,14 +41353,16 @@ var Form = /*#__PURE__*/function (_Component) {
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("input", {
         type: "tel",
         "class": "form-control",
-        placeholder: "+34 123456789",
+        placeholder: "+34123456789",
         value: this.state.fieldPhone,
         onChange: function onChange(event) {
           return _this2.setState({
-            fieldPhone: event.target.value
+            fieldPhone: event.target.value.replace(" ", "")
           });
         }
-      }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+      }), this.state.errorField.indexOf("phone") != -1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
+        "class": "text-danger"
+      }, this.state.errorMessages[this.state.errorField.indexOf("phone")]) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         "class": "form-group row"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("label", {
         "for": "firstName",
@@ -41365,7 +41373,6 @@ var Form = /*#__PURE__*/function (_Component) {
         "class": "col-sm-9"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("select", {
         "class": "form-control",
-        value: this.state.fieldProvince,
         id: "selectProvince",
         onChange: function onChange(event) {
           return _this2.setState({
@@ -41376,26 +41383,9 @@ var Form = /*#__PURE__*/function (_Component) {
         return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("option", {
           value: province
         }, province);
-      })))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
-        "class": "form-group row"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("label", {
-        "for": "firstName",
-        "class": "col-sm-3 col-form-label"
-      }, "Ciudad", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("sup", {
+      })), this.state.errorField.indexOf("province") != -1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
         "class": "text-danger"
-      }, "*")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
-        "class": "col-sm-9"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("input", {
-        type: "text",
-        "class": "form-control",
-        placeholder: "Sevilla",
-        value: this.state.fieldCity,
-        onChange: function onChange(event) {
-          return _this2.setState({
-            fieldCity: event.target.value
-          });
-        }
-      }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+      }, this.state.errorMessages[this.state.errorField.indexOf("province")]) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         "class": "form-group row"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("label", {
         "for": "firstName",
@@ -41414,11 +41404,9 @@ var Form = /*#__PURE__*/function (_Component) {
             fieldPostCode: event.target.value
           });
         }
-      }))), this.state.errorFieldUser.map(function (itemerror) {
-        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
-          "class": "text-danger"
-        }, "*", itemerror);
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
+      }), this.state.errorField.indexOf("postCode") != -1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
+        "class": "text-danger"
+      }, this.state.errorMessages[this.state.errorField.indexOf("postCode")]) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
         style: {
           color: "#099C01"
         }
@@ -41441,7 +41429,9 @@ var Form = /*#__PURE__*/function (_Component) {
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("label", {
         "for": "firstName",
         "class": "col-sm-3 col-form-label"
-      }, "Contrase\xF1a"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+      }, "Contrase\xF1a", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("sup", {
+        "class": "text-danger"
+      }, "*")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         "class": "col-sm-9"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("input", {
         type: "password",
@@ -41452,12 +41442,16 @@ var Form = /*#__PURE__*/function (_Component) {
             fieldPassword: event.target.value
           });
         }
-      }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+      }), this.state.errorField.indexOf("password") != -1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
+        "class": "text-danger"
+      }, this.state.errorMessages[this.state.errorField.indexOf("password")]) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         "class": "form-group row"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("label", {
         "for": "firstName",
         "class": "col-sm-3 col-form-label"
-      }, "Confirma contrase\xF1a"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+      }, "Confirma contrase\xF1a", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("sup", {
+        "class": "text-danger"
+      }, "*")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         "class": "col-sm-9"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("input", {
         type: "password",
@@ -41468,11 +41462,9 @@ var Form = /*#__PURE__*/function (_Component) {
             fieldConfirmPassword: event.target.value
           });
         }
-      }))), this.state.errorFieldPassword.map(function (itemerror) {
-        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
-          "class": "text-danger"
-        }, "*", itemerror);
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
+      }), this.state.errorField.indexOf("confirmPassword") != -1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
+        "class": "text-danger"
+      }, this.state.errorMessages[this.state.errorField.indexOf("confirmPassword")]) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
         style: {
           color: "#099C01"
         }
@@ -41492,8 +41484,7 @@ var Form = /*#__PURE__*/function (_Component) {
     key: "onClickSave",
     value: function () {
       var _onClickSave = _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_6___default.a.mark(function _callee2() {
-        var res, dataError, _dataError, _dataError2, error, _dataError3;
-
+        var res, errFields, errMess, error;
         return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_6___default.a.wrap(function _callee2$(_context2) {
           while (1) {
             switch (_context2.prev = _context2.next) {
@@ -41504,54 +41495,36 @@ var Form = /*#__PURE__*/function (_Component) {
               case 2:
                 res = _context2.sent;
 
-                if (this.state.fieldPassword != "" || this.state.fieldConfirmPassword != "") {
-                  if (this.state.fieldPassword.length < 8 || this.state.fieldPassword.length > 20) {
-                    dataError = [];
-                    dataError.push("La contraseña debe contener entre 8 y 20 carácteres.");
-                    this.setState({
-                      errorFieldPassword: dataError
-                    });
-                  } else if (this.state.fieldPassword != this.state.fieldConfirmPassword) {
-                    _dataError = [];
-
-                    _dataError.push("Las contraseñas no coinciden.");
-
-                    this.setState({
-                      errorFieldPassword: _dataError
-                    });
-                  } else if (res.success) {
+                if (res.success) {
+                  if (this.state.fieldPassword != "" && this.state.fieldConfirmPassword != "") {
                     this.setState({
                       messageCorrectPassword: "*La contraseña se ha cambiado con éxito.",
                       errorFieldPassword: [],
                       messageCorrectUser: "",
                       fieldPassword: "",
-                      fieldConfirmPassword: ""
+                      fieldConfirmPassword: "",
+                      errorField: [],
+                      errorMessages: []
+                    });
+                  } else {
+                    this.setState({
+                      messageCorrectUser: "*Los datos se han actualizado con éxito.",
+                      messageCorrectPassword: "",
+                      errorField: [],
+                      errorMessages: []
                     }); //window.location.replace("/profile")
                   }
-                } else if (res.success) {
-                  this.setState({
-                    messageCorrectUser: "*Los datos se han actualizado con éxito.",
-                    messageCorrectPassword: "",
-                    errorFieldUser: []
-                  }); //window.location.replace("/profile")
-                } else if (res.status == 400) {
-                  _dataError2 = [];
-                  error = res.data.errors;
-                  error.map(function (itemerror) {
-                    _dataError2.push(itemerror.defaultMessage);
-                  });
-                  this.setState({
-                    errorFieldUser: _dataError2,
-                    messageCorrectUser: ""
-                  });
                 } else {
-                  _dataError3 = [];
-
-                  _dataError3.push(res.message);
-
+                  errFields = [];
+                  errMess = [];
+                  error = res.errors;
+                  error.map(function (itemerror) {
+                    errFields.push(itemerror.field);
+                    errMess.push(itemerror.defaultMessage);
+                  });
                   this.setState({
-                    errorFieldUser: _dataError3,
-                    messageCorrectUser: ""
+                    errorField: errFields,
+                    errorMessages: errMess
                   });
                 }
 
@@ -41836,6 +41809,7 @@ var Form = /*#__PURE__*/function (_Component) {
       fieldConfirmPassword: "",
       fieldCheckbok: false,
       errorField: [],
+      errorMessages: [],
       provinces: []
     };
     return _this;
@@ -41912,7 +41886,9 @@ var Form = /*#__PURE__*/function (_Component) {
             fieldName: event.target.value
           });
         }
-      }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+      }), this.state.errorField.indexOf("name") != -1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
+        "class": "text-danger"
+      }, this.state.errorMessages[this.state.errorField.indexOf("name")]) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         "class": "form-group row"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("label", {
         "for": "firstName",
@@ -41930,7 +41906,9 @@ var Form = /*#__PURE__*/function (_Component) {
             fieldUsername: event.target.value
           });
         }
-      }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+      }), this.state.errorField.indexOf("username") != -1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
+        "class": "text-danger"
+      }, this.state.errorMessages[this.state.errorField.indexOf("username")]) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         "class": "form-group row"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("label", {
         "for": "firstName",
@@ -41949,7 +41927,9 @@ var Form = /*#__PURE__*/function (_Component) {
             fieldEmail: event.target.value
           });
         }
-      }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+      }), this.state.errorField.indexOf("email") != -1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
+        "class": "text-danger"
+      }, this.state.errorMessages[this.state.errorField.indexOf("email")]) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         "class": "form-group row"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("label", {
         "for": "firstName",
@@ -41968,7 +41948,9 @@ var Form = /*#__PURE__*/function (_Component) {
             fieldBirthDate: event.target.value
           });
         }
-      }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+      }), this.state.errorField.indexOf("birthDate") != -1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
+        "class": "text-danger"
+      }, this.state.errorMessages[this.state.errorField.indexOf("birthDate")]) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         "class": "form-group row"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("label", {
         "for": "firstName",
@@ -41980,14 +41962,16 @@ var Form = /*#__PURE__*/function (_Component) {
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("input", {
         type: "tel",
         "class": "form-control",
-        placeholder: "+34 123456789",
+        placeholder: "+34123456789",
         value: this.state.fieldPhone,
         onChange: function onChange(event) {
           return _this2.setState({
-            fieldPhone: event.target.value
+            fieldPhone: event.target.value.replace(" ", "")
           });
         }
-      }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+      }), this.state.errorField.indexOf("phone") != -1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
+        "class": "text-danger"
+      }, this.state.errorMessages[this.state.errorField.indexOf("phone")]) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         "class": "form-group row"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("label", {
         "for": "firstName",
@@ -42008,26 +41992,9 @@ var Form = /*#__PURE__*/function (_Component) {
         return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("option", {
           value: province
         }, province);
-      })))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
-        "class": "form-group row"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("label", {
-        "for": "firstName",
-        "class": "col-sm-3 col-form-label"
-      }, "Ciudad", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("sup", {
+      })), this.state.errorField.indexOf("province") != -1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
         "class": "text-danger"
-      }, "*")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
-        "class": "col-sm-9"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("input", {
-        type: "text",
-        "class": "form-control",
-        placeholder: "Sevilla",
-        value: this.state.fieldCity,
-        onChange: function onChange(event) {
-          return _this2.setState({
-            fieldCity: event.target.value
-          });
-        }
-      }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+      }, this.state.errorMessages[this.state.errorField.indexOf("province")]) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         "class": "form-group row"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("label", {
         "for": "firstName",
@@ -42046,7 +42013,9 @@ var Form = /*#__PURE__*/function (_Component) {
             fieldPostCode: event.target.value
           });
         }
-      }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+      }), this.state.errorField.indexOf("postCode") != -1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
+        "class": "text-danger"
+      }, this.state.errorMessages[this.state.errorField.indexOf("postCode")]) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         "class": "form-group row"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("label", {
         "for": "firstName",
@@ -42064,7 +42033,9 @@ var Form = /*#__PURE__*/function (_Component) {
             fieldPassword: event.target.value
           });
         }
-      }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+      }), this.state.errorField.indexOf("password") != -1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
+        "class": "text-danger"
+      }, this.state.errorMessages[this.state.errorField.indexOf("password")]) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         "class": "form-group row"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("label", {
         "for": "firstName",
@@ -42082,7 +42053,9 @@ var Form = /*#__PURE__*/function (_Component) {
             fieldConfirmPassword: event.target.value
           });
         }
-      }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+      }), this.state.errorField.indexOf("confirmPassword") != -1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
+        "class": "text-danger"
+      }, this.state.errorMessages[this.state.errorField.indexOf("confirmPassword")]) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         "class": "form-group row"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("label", {
         "for": "firstName",
@@ -42100,11 +42073,9 @@ var Form = /*#__PURE__*/function (_Component) {
         type: "checkbox"
       }), " Acepto los t\xE9rminos y condiciones", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("sup", {
         "class": "text-danger"
-      }, "*"))), this.state.errorField.map(function (itemerror) {
-        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
-          "class": "text-danger"
-        }, "*", itemerror);
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+      }, "*"), this.state.errorField.indexOf("accept") != -1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
+        "class": "text-danger"
+      }, this.state.errorMessages[this.state.errorField.indexOf("accept")]) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         "class": "form-group row"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         "class": "col-sm-6"
@@ -42122,8 +42093,7 @@ var Form = /*#__PURE__*/function (_Component) {
     key: "onClickSave",
     value: function () {
       var _onClickSave = _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_6___default.a.mark(function _callee2() {
-        var res, dataError, _dataError, _dataError2, _dataError3, error, _dataError4;
-
+        var res, errFields, errMess, error;
         return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_6___default.a.wrap(function _callee2$(_context2) {
           while (1) {
             switch (_context2.prev = _context2.next) {
@@ -42134,49 +42104,20 @@ var Form = /*#__PURE__*/function (_Component) {
               case 2:
                 res = _context2.sent;
 
-                if (this.state.fieldPassword == "" && this.state.fieldConfirmPassword == "") {
-                  dataError = [];
-                  dataError.push("La contraseña es un campo requerido.");
-                  this.setState({
-                    errorField: dataError
-                  });
-                } else if (this.state.fieldPassword != this.state.fieldConfirmPassword) {
-                  _dataError = [];
-
-                  _dataError.push("Las contraseñas no coinciden.");
-
-                  this.setState({
-                    errorField: _dataError
-                  });
-                } else if (this.state.fieldCheckbok == false) {
-                  _dataError2 = [];
-
-                  _dataError2.push("Debe aceptar los términos y condiciones.");
-
-                  this.setState({
-                    errorField: _dataError2
-                  });
+                if (res.success) {
+                  window.location.replace("/");
                 } else {
-                  if (res.success) {
-                    window.location.replace("/");
-                  } else if (res.status == 400) {
-                    _dataError3 = [];
-                    error = res.data.errors;
-                    error.map(function (itemerror) {
-                      _dataError3.push(itemerror.defaultMessage);
-                    });
-                    this.setState({
-                      errorField: _dataError3
-                    });
-                  } else {
-                    _dataError4 = [];
-
-                    _dataError4.push(res.message);
-
-                    this.setState({
-                      errorField: _dataError4
-                    });
-                  }
+                  errFields = [];
+                  errMess = [];
+                  error = res.errors;
+                  error.map(function (itemerror) {
+                    errFields.push(itemerror.field);
+                    errMess.push(itemerror.defaultMessage);
+                  });
+                  this.setState({
+                    errorField: errFields,
+                    errorMessages: errMess
+                  });
                 }
 
               case 4:
