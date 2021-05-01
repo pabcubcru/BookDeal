@@ -12,8 +12,9 @@ user.create = async(state) => {
         username: state.fieldUsername,
         password: state.fieldPassword,
         province: state.fieldProvince,
-        city: state.fieldCity,
-        postCode: state.fieldPostCode
+        postCode: state.fieldPostCode,
+        accept: state.fieldCheckbok,
+        confirmPassword: state.fieldConfirmPassword
     }
 
     const urlPost = baseUrl+"/register"
@@ -36,7 +37,9 @@ user.edit = async(state) => {
         password: state.fieldPassword,
         province: state.fieldProvince,
         city: state.fieldCity,
-        postCode: state.fieldPostCode
+        postCode: state.fieldPostCode,
+        confirmPassword: state.fieldConfirmPassword,
+        accept:true
     }
 
     const urlPost = baseUrl+"/user/"+state.fieldUsername+"/edit"

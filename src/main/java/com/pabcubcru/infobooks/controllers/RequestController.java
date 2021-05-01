@@ -8,6 +8,8 @@ import java.util.Map;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
+import javax.validation.Valid;
+
 import com.pabcubcru.infobooks.models.Book;
 import com.pabcubcru.infobooks.models.Request;
 import com.pabcubcru.infobooks.models.RequestStatus;
@@ -19,6 +21,7 @@ import com.pabcubcru.infobooks.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -50,43 +53,57 @@ public class RequestController {
     }
 
     @GetMapping(value = {"/{id}/add"})
-    public ModelAndView mainWithSecurity(@PathVariable("id") String id) {
+    public ModelAndView mainWithSecurity(@PathVariable("id") String id, Principal principal) {
         ModelAndView model = new ModelAndView();
         model.setViewName("Main");
+
         if(id != null) {
             Book book = this.bookService.findBookById(id);
+            Request req = this.requestService.findByUsername1AndIdBook2(principal.getName(), id);
+            if(req != null) {
+                model.setViewName("errors/Error403");
+            }
             if(book == null) {
                 model.setViewName("errors/Error404");
             }
+        } else {
+            model.setViewName("errors/Error404");
         }
         return model;
     }
 
     @PostMapping(value = "/{id}/new")
-    public Map<String, Object> addRequest(@RequestBody Request request, @PathVariable("id") String id, Principal principal) {
+    public Map<String, Object> addRequest(@RequestBody @Valid Request request, BindingResult result, @PathVariable("id") String id, Principal principal) {
         Map<String, Object> res = new HashMap<>();
 
-        try {
-            Request req = this.requestService.findByUsername1AndIdBook2(principal.getName(), id);
-            if(req == null) {
-                Book book = this.bookService.findBookById(id);
-                if(book.getAction().equals("INTERCAMBIO")) {
-                    request.setAction("INTERCAMBIO");
-                    request.setPay(null);
-                } else if(book.getAction().equals("VENTA")) {
-                    request.setAction("VENTA");
-                    request.setIdBook1("");
+        if(request.getAction().equals("COMPRA") && request.getPay() == null) {
+            result.rejectValue("pay", "El precio es un campo requerido.", "El precio es un campo requerido.");
+        }
+
+        if(!result.hasErrors()) {
+            try {
+                Request req = this.requestService.findByUsername1AndIdBook2(principal.getName(), id);
+                if(req == null) {
+                    Book book = this.bookService.findBookById(id);
+                    if(request.getAction().equals("INTERCAMBIO")) {
+                        request.setPay(null);
+                    } else if(request.getAction().equals("COMPRA")) {
+                        request.setIdBook1("");
+                    }
+                    request.setIdBook2(id);
+                    request.setStatus(RequestStatus.PENDIENTE.toString());
+                    request.setUsername1(principal.getName());
+                    request.setUsername2(book.getUsername());
+                    this.requestService.save(request);
+                    res.put("success", true);
+                } else {
+                    res.put("success", false);
                 }
-                request.setIdBook2(id);
-                request.setStatus(RequestStatus.PENDIENTE.toString());
-                request.setUsername1(principal.getName());
-                request.setUsername2(book.getUsername());
-                this.requestService.save(request);
-                res.put("success", true);
-            } else {
+            } catch (Exception e) {
                 res.put("success", false);
             }
-        } catch (Exception e) {
+        } else {
+            res.put("errors", result.getAllErrors());
             res.put("success", false);
         }
 

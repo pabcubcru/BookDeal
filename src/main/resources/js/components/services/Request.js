@@ -10,7 +10,7 @@ request.create = async(state) => {
         idBook1: state.fieldIdBook1,
         idBook2:"",
         status:"",
-        action:"",
+        action:state.fieldAction,
         pay: state.fieldPay,
         comment: state.fieldComment
     }

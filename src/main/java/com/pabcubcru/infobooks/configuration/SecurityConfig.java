@@ -24,8 +24,10 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 		.antMatchers("/home").permitAll()
 		.antMatchers("/resources/**").permitAll()
 		.antMatchers("/user/**").hasAnyAuthority("user")
+		.antMatchers("/books/new", "/books/me/*", "/books/all/{page}/{showMode}", 
+		"/books/{id}/edit", "/books/new", "/books/{id}/delete", "/books/list/me", "/books/list/me-change", 
+		"/books/genres", "/books/edit/{id}").authenticated()
 		.antMatchers("/books/list/all-me", "/books/{id}", "/books/get/{id}", "/books/all/{page}").permitAll()
-		.antMatchers("/books/**").authenticated()
 		.antMatchers("/favourites/**").authenticated()
 		.antMatchers("/requests/**").authenticated()
 		.antMatchers("/register", "/login", "/login-error").anonymous()

@@ -2408,7 +2408,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()(_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0___default.a);
 // Module
-___CSS_LOADER_EXPORT___.push([module.i, ".menu, .menu ul, .menu li, .menu a {\r\n  z-index: 5;\r\n  margin: 0;\r\n  padding: 0;\r\n  border: none;\r\n  outline: none;\r\n}\r\n\r\n.menu {\r\n  height: 70px;\r\n  width: 100%;\r\n  background-color: #26272b;\r\n  border-radius: 3px;\r\n  border-radius: 5px;\r\n}\r\n\r\n.menu li {\r\n  position: relative;\r\n  list-style: none;\r\n  float: left;\r\n  display: block;\r\n  height: 50px;\r\n}\r\n\r\n.menu a {\r\n  display: block;\r\n  padding: 0 30px;\r\n  margin: 20px 0;\r\n  line-height: 28px;\r\n  text-decoration: solid;\r\n  \r\n  font-family:\"Trebuchet MS\", Arial, Helvetica, sans-serif;\r\n  font-weight: bold;\r\n  font-size: 20px;\r\n  color: rgb(255, 255, 255);\r\n  \r\n}\r\n\r\n\r\n\r\n.menu li:hover > a {color: #007bff}\r\n\r\n.menu ul {\r\n  position: absolute;\r\n  top: 50px;\r\n  left: 20px;\r\n  \r\n  opacity: 0;\r\n  background: #26272b;\r\n  \r\n  border-radius: 0 0 10px 10px;\r\n  transition: opacity .20s ease .1s;\r\n}\r\n\r\n.menu li:hover > ul {opacity: 1;}\r\n\r\n.menu ul li {\r\n  height: 0;\r\n  overflow: hidden;\r\n  padding: 0;\r\n  \r\n  transition: height .25s ease .1s;\r\n}\r\n\r\n.menu li:hover > ul li {\r\n  height: 50px;\r\n  overflow: visible;\r\n  padding: 0;\r\n}\r\n\r\n.menu ul li a {\r\n  width: 180px;\r\n  padding: 10px 20px;\r\n  margin: 0;\r\n  border: none;\r\n  border-bottom: 1px solid #ffffff;\r\n  font-weight: normal;\r\n}\r\n.menu ul li:last-child a { border: none; }\r\n\r\n.search-box{\r\n  margin-top: 10px;\r\n  top: 50%;\r\n  left: 50%;\r\n  height:40px;\r\n  transform: translate(-50%, -50%);\r\n  position:relative;\r\n  display: flex;\r\n  background-color:#ffffff;\r\n  border-radius: 18px\r\n}\r\n\r\n.search-box button{\r\n  width: 40px;\r\n  height:40px ;\r\n  border-radius: 50%;\r\n  border:none;\r\n  color:#2C3A47;\r\n}\r\n\r\n.search-box input{\r\n  border:none;\r\n  outline:0px;\r\n  padding: 0px 0px;\r\n  background-color:transparent;\r\n  border-radius: 18px;\r\n  color:rgb(0, 0, 0);\r\n  font-size: 20px;\r\n  width: 0px;\r\n  box-sizing: border-box;\r\n  transition: .3s;\r\n}\r\n\r\n.search-box button:hover{\r\n   cursor: pointer;\r\n}\r\n\r\n.search-box:hover .text{\r\n  width:240px;\r\n  padding: 10px 20px;\r\n  \r\n}", "",{"version":3,"sources":["webpack://./src/main/resources/js/components/Nav.css"],"names":[],"mappings":"AAAA;EACE,UAAU;EACV,SAAS;EACT,UAAU;EACV,YAAY;EACZ,aAAa;AACf;;AAEA;EACE,YAAY;EACZ,WAAW;EACX,yBAAyB;EACzB,kBAAkB;EAClB,kBAAkB;AACpB;;AAEA;EACE,kBAAkB;EAClB,gBAAgB;EAChB,WAAW;EACX,cAAc;EACd,YAAY;AACd;;AAEA;EACE,cAAc;EACd,eAAe;EACf,cAAc;EACd,iBAAiB;EACjB,sBAAsB;;EAEtB,wDAAwD;EACxD,iBAAiB;EACjB,eAAe;EACf,yBAAyB;;AAE3B;;;;AAIA,oBAAoB,cAAc;;AAElC;EACE,kBAAkB;EAClB,SAAS;EACT,UAAU;;EAEV,UAAU;EACV,mBAAmB;;EAEnB,4BAA4B;EAC5B,iCAAiC;AACnC;;AAEA,qBAAqB,UAAU,CAAC;;AAEhC;EACE,SAAS;EACT,gBAAgB;EAChB,UAAU;;EAEV,gCAAgC;AAClC;;AAEA;EACE,YAAY;EACZ,iBAAiB;EACjB,UAAU;AACZ;;AAEA;EACE,YAAY;EACZ,kBAAkB;EAClB,SAAS;EACT,YAAY;EACZ,gCAAgC;EAChC,mBAAmB;AACrB;AACA,2BAA2B,YAAY,EAAE;;AAEzC;EACE,gBAAgB;EAChB,QAAQ;EACR,SAAS;EACT,WAAW;EACX,gCAAgC;EAChC,iBAAiB;EACjB,aAAa;EACb,wBAAwB;EACxB;AACF;;AAEA;EACE,WAAW;EACX,YAAY;EACZ,kBAAkB;EAClB,WAAW;EACX,aAAa;AACf;;AAEA;EACE,WAAW;EACX,WAAW;EACX,gBAAgB;EAChB,4BAA4B;EAC5B,mBAAmB;EACnB,kBAAkB;EAClB,eAAe;EACf,UAAU;EACV,sBAAsB;EACtB,eAAe;AACjB;;AAEA;GACG,eAAe;AAClB;;AAEA;EACE,WAAW;EACX,kBAAkB;;AAEpB","sourcesContent":[".menu, .menu ul, .menu li, .menu a {\r\n  z-index: 5;\r\n  margin: 0;\r\n  padding: 0;\r\n  border: none;\r\n  outline: none;\r\n}\r\n\r\n.menu {\r\n  height: 70px;\r\n  width: 100%;\r\n  background-color: #26272b;\r\n  border-radius: 3px;\r\n  border-radius: 5px;\r\n}\r\n\r\n.menu li {\r\n  position: relative;\r\n  list-style: none;\r\n  float: left;\r\n  display: block;\r\n  height: 50px;\r\n}\r\n\r\n.menu a {\r\n  display: block;\r\n  padding: 0 30px;\r\n  margin: 20px 0;\r\n  line-height: 28px;\r\n  text-decoration: solid;\r\n  \r\n  font-family:\"Trebuchet MS\", Arial, Helvetica, sans-serif;\r\n  font-weight: bold;\r\n  font-size: 20px;\r\n  color: rgb(255, 255, 255);\r\n  \r\n}\r\n\r\n\r\n\r\n.menu li:hover > a {color: #007bff}\r\n\r\n.menu ul {\r\n  position: absolute;\r\n  top: 50px;\r\n  left: 20px;\r\n  \r\n  opacity: 0;\r\n  background: #26272b;\r\n  \r\n  border-radius: 0 0 10px 10px;\r\n  transition: opacity .20s ease .1s;\r\n}\r\n\r\n.menu li:hover > ul {opacity: 1;}\r\n\r\n.menu ul li {\r\n  height: 0;\r\n  overflow: hidden;\r\n  padding: 0;\r\n  \r\n  transition: height .25s ease .1s;\r\n}\r\n\r\n.menu li:hover > ul li {\r\n  height: 50px;\r\n  overflow: visible;\r\n  padding: 0;\r\n}\r\n\r\n.menu ul li a {\r\n  width: 180px;\r\n  padding: 10px 20px;\r\n  margin: 0;\r\n  border: none;\r\n  border-bottom: 1px solid #ffffff;\r\n  font-weight: normal;\r\n}\r\n.menu ul li:last-child a { border: none; }\r\n\r\n.search-box{\r\n  margin-top: 10px;\r\n  top: 50%;\r\n  left: 50%;\r\n  height:40px;\r\n  transform: translate(-50%, -50%);\r\n  position:relative;\r\n  display: flex;\r\n  background-color:#ffffff;\r\n  border-radius: 18px\r\n}\r\n\r\n.search-box button{\r\n  width: 40px;\r\n  height:40px ;\r\n  border-radius: 50%;\r\n  border:none;\r\n  color:#2C3A47;\r\n}\r\n\r\n.search-box input{\r\n  border:none;\r\n  outline:0px;\r\n  padding: 0px 0px;\r\n  background-color:transparent;\r\n  border-radius: 18px;\r\n  color:rgb(0, 0, 0);\r\n  font-size: 20px;\r\n  width: 0px;\r\n  box-sizing: border-box;\r\n  transition: .3s;\r\n}\r\n\r\n.search-box button:hover{\r\n   cursor: pointer;\r\n}\r\n\r\n.search-box:hover .text{\r\n  width:240px;\r\n  padding: 10px 20px;\r\n  \r\n}"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.i, ".menu, .menu ul, .menu li, .menu a {\r\n  z-index: 5;\r\n  margin: 0;\r\n  padding: 0;\r\n  border: none;\r\n  outline: none;\r\n}\r\n\r\n.menu {\r\n  height: 70px;\r\n  width: 100%;\r\n  background-color: #26272b;\r\n  border-radius: 3px;\r\n  border-radius: 5px;\r\n}\r\n\r\n.menu li {\r\n  position: relative;\r\n  list-style: none;\r\n  float: left;\r\n  display: block;\r\n  height: 50px;\r\n}\r\n\r\n.menu a {\r\n  display: block;\r\n  padding: 0 30px;\r\n  margin: 20px 0;\r\n  line-height: 28px;\r\n  text-decoration: solid;\r\n  \r\n  font-family:\"Trebuchet MS\", Arial, Helvetica, sans-serif;\r\n  font-weight: bold;\r\n  font-size: 20px;\r\n  color: rgb(255, 255, 255);\r\n  \r\n}\r\n\r\n\r\n\r\n.menu li:hover > a {color: #007bff}\r\n\r\n.menu ul {\r\n  position: absolute;\r\n  top: 50px;\r\n  left: 20px;\r\n  \r\n  opacity: 0;\r\n  background: #26272b;\r\n  \r\n  border-radius: 0 0 10px 10px;\r\n  transition: opacity .20s ease .1s;\r\n}\r\n\r\n.menu li:hover > ul {opacity: 1;}\r\n\r\n.menu ul li {\r\n  height: 0;\r\n  overflow: hidden;\r\n  padding: 0;\r\n  \r\n  transition: height .25s ease .1s;\r\n}\r\n\r\n.menu li:hover > ul li {\r\n  height: 50px;\r\n  overflow: visible;\r\n  padding: 0;\r\n}\r\n\r\n.menu ul li a {\r\n  width: 180px;\r\n  padding: 10px 20px;\r\n  margin: 0;\r\n  border: none;\r\n  border-bottom: 1px solid #ffffff;\r\n  font-weight: normal;\r\n}\r\n.menu ul li:last-child a { border: none; }\r\n\r\n.search-box{\r\n  margin-top: 10px;\r\n  top: 50%;\r\n  left: 50%;\r\n  height:40px;\r\n  transform: translate(-50%, -50%);\r\n  position:relative;\r\n  display: flex;\r\n  background-color:#ffffff;\r\n  border-radius: 18px\r\n}\r\n\r\n.search-box button{\r\n  width: 40px;\r\n  height:40px ;\r\n  border-radius: 50%;\r\n  border:none;\r\n  color:#2C3A47;\r\n}\r\n\r\n.search-box input{\r\n  border:none;\r\n  outline:0px;\r\n  padding: 0px 0px;\r\n  background-color:transparent;\r\n  border-radius: 18px;\r\n  color:rgb(0, 0, 0);\r\n  font-size: 20px;\r\n  width: 0px;\r\n  box-sizing: border-box;\r\n  transition: .3s;\r\n}\r\n\r\n.search-box button:hover{\r\n   cursor: pointer;\r\n}\r\n\r\n.search-box:hover .text{\r\n  width:240px;\r\n  padding: 10px 20px;\r\n  \r\n}\r\n\r\n@media screen and (max-width:1200px) {\r\n  .desktop {\r\n     display: none; \r\n  }\r\n}\r\n\r\n@media screen and (min-width:1200px) {\r\n  .mobile{\r\n     display: none; \r\n  }\r\n}\r\n\r\n.search {\r\n  margin-top: 10px;\r\n  top: 50%;\r\n  left: 50%;\r\n  height:40px;\r\n  transform: translate(-50%, -50%);\r\n  position:relative;\r\n  display: flex;\r\n  background-color:#ffffff;\r\n  border-radius: 18px\r\n}\r\n\r\n.search button{\r\n  width: 40px;\r\n  height:40px ;\r\n  border-radius: 50%;\r\n  border:none;\r\n  color:#2C3A47;\r\n}\r\n\r\n.search input{\r\n  border:none;\r\n  outline:0px;\r\n  padding: 0px 0px;\r\n  background-color:transparent;\r\n  border-radius: 18px;\r\n  color:rgb(0, 0, 0);\r\n  font-size: 20px;\r\n  width: 0px;\r\n  box-sizing: border-box;\r\n  transition: .3s;\r\n}\r\n\r\n.search .text{\r\n  width:150px;\r\n  padding: 10px 20px;\r\n}", "",{"version":3,"sources":["webpack://./src/main/resources/js/components/Nav.css"],"names":[],"mappings":"AAAA;EACE,UAAU;EACV,SAAS;EACT,UAAU;EACV,YAAY;EACZ,aAAa;AACf;;AAEA;EACE,YAAY;EACZ,WAAW;EACX,yBAAyB;EACzB,kBAAkB;EAClB,kBAAkB;AACpB;;AAEA;EACE,kBAAkB;EAClB,gBAAgB;EAChB,WAAW;EACX,cAAc;EACd,YAAY;AACd;;AAEA;EACE,cAAc;EACd,eAAe;EACf,cAAc;EACd,iBAAiB;EACjB,sBAAsB;;EAEtB,wDAAwD;EACxD,iBAAiB;EACjB,eAAe;EACf,yBAAyB;;AAE3B;;;;AAIA,oBAAoB,cAAc;;AAElC;EACE,kBAAkB;EAClB,SAAS;EACT,UAAU;;EAEV,UAAU;EACV,mBAAmB;;EAEnB,4BAA4B;EAC5B,iCAAiC;AACnC;;AAEA,qBAAqB,UAAU,CAAC;;AAEhC;EACE,SAAS;EACT,gBAAgB;EAChB,UAAU;;EAEV,gCAAgC;AAClC;;AAEA;EACE,YAAY;EACZ,iBAAiB;EACjB,UAAU;AACZ;;AAEA;EACE,YAAY;EACZ,kBAAkB;EAClB,SAAS;EACT,YAAY;EACZ,gCAAgC;EAChC,mBAAmB;AACrB;AACA,2BAA2B,YAAY,EAAE;;AAEzC;EACE,gBAAgB;EAChB,QAAQ;EACR,SAAS;EACT,WAAW;EACX,gCAAgC;EAChC,iBAAiB;EACjB,aAAa;EACb,wBAAwB;EACxB;AACF;;AAEA;EACE,WAAW;EACX,YAAY;EACZ,kBAAkB;EAClB,WAAW;EACX,aAAa;AACf;;AAEA;EACE,WAAW;EACX,WAAW;EACX,gBAAgB;EAChB,4BAA4B;EAC5B,mBAAmB;EACnB,kBAAkB;EAClB,eAAe;EACf,UAAU;EACV,sBAAsB;EACtB,eAAe;AACjB;;AAEA;GACG,eAAe;AAClB;;AAEA;EACE,WAAW;EACX,kBAAkB;;AAEpB;;AAEA;EACE;KACG,aAAa;EAChB;AACF;;AAEA;EACE;KACG,aAAa;EAChB;AACF;;AAEA;EACE,gBAAgB;EAChB,QAAQ;EACR,SAAS;EACT,WAAW;EACX,gCAAgC;EAChC,iBAAiB;EACjB,aAAa;EACb,wBAAwB;EACxB;AACF;;AAEA;EACE,WAAW;EACX,YAAY;EACZ,kBAAkB;EAClB,WAAW;EACX,aAAa;AACf;;AAEA;EACE,WAAW;EACX,WAAW;EACX,gBAAgB;EAChB,4BAA4B;EAC5B,mBAAmB;EACnB,kBAAkB;EAClB,eAAe;EACf,UAAU;EACV,sBAAsB;EACtB,eAAe;AACjB;;AAEA;EACE,WAAW;EACX,kBAAkB;AACpB","sourcesContent":[".menu, .menu ul, .menu li, .menu a {\r\n  z-index: 5;\r\n  margin: 0;\r\n  padding: 0;\r\n  border: none;\r\n  outline: none;\r\n}\r\n\r\n.menu {\r\n  height: 70px;\r\n  width: 100%;\r\n  background-color: #26272b;\r\n  border-radius: 3px;\r\n  border-radius: 5px;\r\n}\r\n\r\n.menu li {\r\n  position: relative;\r\n  list-style: none;\r\n  float: left;\r\n  display: block;\r\n  height: 50px;\r\n}\r\n\r\n.menu a {\r\n  display: block;\r\n  padding: 0 30px;\r\n  margin: 20px 0;\r\n  line-height: 28px;\r\n  text-decoration: solid;\r\n  \r\n  font-family:\"Trebuchet MS\", Arial, Helvetica, sans-serif;\r\n  font-weight: bold;\r\n  font-size: 20px;\r\n  color: rgb(255, 255, 255);\r\n  \r\n}\r\n\r\n\r\n\r\n.menu li:hover > a {color: #007bff}\r\n\r\n.menu ul {\r\n  position: absolute;\r\n  top: 50px;\r\n  left: 20px;\r\n  \r\n  opacity: 0;\r\n  background: #26272b;\r\n  \r\n  border-radius: 0 0 10px 10px;\r\n  transition: opacity .20s ease .1s;\r\n}\r\n\r\n.menu li:hover > ul {opacity: 1;}\r\n\r\n.menu ul li {\r\n  height: 0;\r\n  overflow: hidden;\r\n  padding: 0;\r\n  \r\n  transition: height .25s ease .1s;\r\n}\r\n\r\n.menu li:hover > ul li {\r\n  height: 50px;\r\n  overflow: visible;\r\n  padding: 0;\r\n}\r\n\r\n.menu ul li a {\r\n  width: 180px;\r\n  padding: 10px 20px;\r\n  margin: 0;\r\n  border: none;\r\n  border-bottom: 1px solid #ffffff;\r\n  font-weight: normal;\r\n}\r\n.menu ul li:last-child a { border: none; }\r\n\r\n.search-box{\r\n  margin-top: 10px;\r\n  top: 50%;\r\n  left: 50%;\r\n  height:40px;\r\n  transform: translate(-50%, -50%);\r\n  position:relative;\r\n  display: flex;\r\n  background-color:#ffffff;\r\n  border-radius: 18px\r\n}\r\n\r\n.search-box button{\r\n  width: 40px;\r\n  height:40px ;\r\n  border-radius: 50%;\r\n  border:none;\r\n  color:#2C3A47;\r\n}\r\n\r\n.search-box input{\r\n  border:none;\r\n  outline:0px;\r\n  padding: 0px 0px;\r\n  background-color:transparent;\r\n  border-radius: 18px;\r\n  color:rgb(0, 0, 0);\r\n  font-size: 20px;\r\n  width: 0px;\r\n  box-sizing: border-box;\r\n  transition: .3s;\r\n}\r\n\r\n.search-box button:hover{\r\n   cursor: pointer;\r\n}\r\n\r\n.search-box:hover .text{\r\n  width:240px;\r\n  padding: 10px 20px;\r\n  \r\n}\r\n\r\n@media screen and (max-width:1200px) {\r\n  .desktop {\r\n     display: none; \r\n  }\r\n}\r\n\r\n@media screen and (min-width:1200px) {\r\n  .mobile{\r\n     display: none; \r\n  }\r\n}\r\n\r\n.search {\r\n  margin-top: 10px;\r\n  top: 50%;\r\n  left: 50%;\r\n  height:40px;\r\n  transform: translate(-50%, -50%);\r\n  position:relative;\r\n  display: flex;\r\n  background-color:#ffffff;\r\n  border-radius: 18px\r\n}\r\n\r\n.search button{\r\n  width: 40px;\r\n  height:40px ;\r\n  border-radius: 50%;\r\n  border:none;\r\n  color:#2C3A47;\r\n}\r\n\r\n.search input{\r\n  border:none;\r\n  outline:0px;\r\n  padding: 0px 0px;\r\n  background-color:transparent;\r\n  border-radius: 18px;\r\n  color:rgb(0, 0, 0);\r\n  font-size: 20px;\r\n  width: 0px;\r\n  box-sizing: border-box;\r\n  transition: .3s;\r\n}\r\n\r\n.search .text{\r\n  width:150px;\r\n  padding: 10px 20px;\r\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ __webpack_exports__["default"] = (___CSS_LOADER_EXPORT___);
 
@@ -36484,26 +36484,25 @@ var Home = /*#__PURE__*/function (_Component) {
     value: function render() {
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("center", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         style: {
-          backgroundImage: "url(https://i.pinimg.com/originals/8d/23/06/8d2306b98839234e49ce96a8b76e20ae.jpg)",
           borderRadius: '5px'
         }
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("img", {
-        width: "900px",
-        src: "https://cdn.shopify.com/s/files/1/0405/7065/0788/files/logo_welcome.svg_72f96623-3169-48db-b78e-27f4ebc1b6db.png?v=1615208283"
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("h1", {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("img", {
+        width: "300px",
+        height: "200px",
+        src: "https://uses0-my.sharepoint.com/personal/pabcubcru_alum_us_es/Documents/TFG/Logo3.png"
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("h1", {
         style: {
           fontFamily: "cursive",
           fontStyle: "italic"
         }
-      }, "a InfoBooks,"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("h2", {
-        style: {
-          fontFamily: "cursive",
-          fontStyle: "italic"
-        }
-      }, "tu web preferida de intercambio y compra venta de libros."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("a", {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("b", null, "Tu web preferida de intercambio y compra venta de libros.")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("a", {
         href: "/books/all/0",
-        "class": "btn btn-primary"
-      }, "Empezar a buscar libros"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("br", null)));
+        "class": "btn btn-primary",
+        style: {
+          backgroundImage: "url(https://i.pinimg.com/originals/8d/23/06/8d2306b98839234e49ce96a8b76e20ae.jpg)",
+          color: "black"
+        }
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("b", null, "Empezar a buscar libros")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("br", null)));
     }
   }]);
 
@@ -36824,11 +36823,16 @@ var Nav = /*#__PURE__*/function (_Component) {
         button1 = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
           "class": "nav-link ml-auto",
           href: "/login"
-        }, "Iniciar sesi\xF3n");
+        }, "Iniciar sesi\xF3n ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("i", {
+          "class": "fa fa-sign-in",
+          "aria-hidden": "true"
+        }));
         button2 = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
           "class": "nav-link",
           href: "/register"
-        }, "Registrarme");
+        }, "Registro ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("i", {
+          "class": "fa fa-user-plus"
+        }));
       } else {
         button1 = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
           "class": "nav-link",
@@ -36844,27 +36848,38 @@ var Nav = /*#__PURE__*/function (_Component) {
         style: {
           marginBottom: "30px"
         }
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+        "class": "desktop"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("ul", {
         "class": "menu"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
         href: "/"
-      }, "InfoBooks")), this.state.isLogged ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
+      }, "InfoBooks ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("i", {
+        "class": "fa fa-home"
+      }))), this.state.isLogged ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
         href: "#"
-      }, "Libros"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("ul", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
+      }, "Libros ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("i", {
+        "class": "fa fa-book"
+      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("ul", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
         href: "/books/new"
       }, "A\xF1adir libro")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
+        href: "/books/me/0"
+      }, "Mis libros")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
+        href: "/favourites/0"
+      }, "Mis favoritos")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
         href: "/books/all/0"
       }, "Cerca de m\xED")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
         href: "#"
       }, "Filtrar por"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("ul", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
         href: "/books/all/0/postalCode"
       }, "Mi cod. postal")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
-        href: "/books/all/0/city"
-      }, "Mi ciudad")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
         href: "/books/all/0/province"
       }, "Mi provincia")))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
         href: "#"
-      }, "Peticiones"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("ul", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
+      }, "Peticiones ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("i", {
+        "class": "fa fa-handshake-o",
+        "aria-hidden": "true"
+      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("ul", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
         href: "/requests/me/0"
       }, "Enviadas")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
         href: "/requests/received/0"
@@ -36874,11 +36889,9 @@ var Nav = /*#__PURE__*/function (_Component) {
         }
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
         href: "#"
-      }, "Perfil"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("ul", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
-        href: "/books/me/0"
-      }, "Mis libros")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
-        href: "/favourites/0"
-      }, "Favoritos")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("li", null, button1), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("li", null, button2))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("li", {
+      }, "Perfil ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("i", {
+        "class": "fa fa-user-circle"
+      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("ul", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("li", null, button1), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("li", null, button2))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("li", {
         style: {
           "float": "right"
         }
@@ -36896,7 +36909,9 @@ var Nav = /*#__PURE__*/function (_Component) {
         }
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
         href: "/books/all/0"
-      }, "Libros")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("li", {
+      }, "Libros ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("i", {
+        "class": "fa fa-book"
+      }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("li", {
         style: {
           "float": "right"
         }
@@ -36916,7 +36931,119 @@ var Nav = /*#__PURE__*/function (_Component) {
         placeholder: "T\xEDtulo, ISBN, ..."
       }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("button", null, " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("i", {
         "class": "fa fa-search"
-      })))))));
+      }))))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+        "class": "mobile"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("ul", {
+        "class": "menu"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
+        href: "/"
+      }, " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("i", {
+        "class": "fa fa-home"
+      }))), this.state.isLogged ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
+        href: "#"
+      }, " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("i", {
+        "class": "fa fa-book"
+      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("ul", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
+        href: "/books/new"
+      }, "A\xF1adir libro")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
+        href: "/books/me/0"
+      }, "Mis libros")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
+        href: "/favourites/0"
+      }, "Mis favoritos")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
+        href: "/books/all/0"
+      }, "Cerca de m\xED")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
+        href: "#"
+      }, "Filtrar por"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("ul", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
+        href: "/books/all/0/postalCode"
+      }, "Mi cod. postal")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
+        href: "/books/all/0/province"
+      }, "Mi provincia")))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
+        href: "#"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("i", {
+        "class": "fa fa-handshake-o",
+        "aria-hidden": "true"
+      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("ul", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
+        href: "/requests/me/0"
+      }, "Enviadas")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
+        href: "/requests/received/0"
+      }, "Recibidas")))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("li", {
+        style: {
+          "float": "right"
+        }
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
+        href: "#"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("i", {
+        "class": "fa fa-user-circle"
+      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("ul", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("li", null, button1), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("li", null, button2))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("li", {
+        style: {
+          "float": "right"
+        }
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
+        href: "#"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("i", {
+        "class": "fa fa-search"
+      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("ul", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("li", {
+        "class": "search-li",
+        style: {
+          backgroundColor: "transparent"
+        }
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+        "class": "search"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("input", {
+        "class": "text",
+        type: "text",
+        placeholder: "T\xEDtulo, ISBN, a\xF1o, ..."
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("button", null, " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("i", {
+        "class": "fa fa-search"
+      }))))))) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("li", {
+        style: {
+          "float": "left"
+        }
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
+        href: "/books/all/0"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("i", {
+        "class": "fa fa-book"
+      }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("li", {
+        style: {
+          "float": "right"
+        }
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
+        "class": "nav-link",
+        href: "/register"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("i", {
+        "class": "fa fa-user-plus"
+      }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("li", {
+        style: {
+          "float": "right"
+        }
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
+        "class": "nav-link ml-auto",
+        href: "/login"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("i", {
+        "class": "fa fa-sign-in",
+        "aria-hidden": "true"
+      }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("li", {
+        style: {
+          "float": "right"
+        }
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
+        href: "#"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("i", {
+        "class": "fa fa-search"
+      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("ul", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("li", {
+        "class": "search-li",
+        style: {
+          backgroundColor: "transparent"
+        }
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+        "class": "search"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("input", {
+        "class": "text",
+        type: "text",
+        placeholder: "T\xEDtulo, ISBN, a\xF1o, ..."
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("button", null, " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("i", {
+        "class": "fa fa-search"
+      }))))))))));
     }
   }]);
 
@@ -36994,8 +37121,10 @@ var Form = /*#__PURE__*/function (_Component) {
       fieldAction: "INTERCAMBIO",
       fieldPrice: "",
       errorField: [],
+      errorMessages: [],
       genres: [],
-      fieldGen: []
+      fieldGen: [],
+      havePrice: false
     };
     return _this;
   }
@@ -37071,7 +37200,9 @@ var Form = /*#__PURE__*/function (_Component) {
             fieldTitle: event.target.value
           });
         }
-      }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+      }), this.state.errorField.indexOf("title") != -1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
+        "class": "text-danger"
+      }, this.state.errorMessages[this.state.errorField.indexOf("title")]) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         "class": "form-group row"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("label", {
         "for": "firstName",
@@ -37087,7 +37218,9 @@ var Form = /*#__PURE__*/function (_Component) {
             fieldOriginalTitle: event.target.value
           });
         }
-      }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+      }), this.state.errorField.indexOf("originalTitle") != -1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
+        "class": "text-danger"
+      }, this.state.errorMessages[this.state.errorField.indexOf("originalTitle")]) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         "class": "form-group row"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("label", {
         "for": "firstName",
@@ -37097,15 +37230,18 @@ var Form = /*#__PURE__*/function (_Component) {
       }, "*")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         "class": "col-sm-9"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("input", {
-        type: "email",
+        type: "text",
         "class": "form-control",
         value: this.state.fieldIsbn,
+        placeholder: "0-123-45678-9 \xF3 012-3-456-78901-2",
         onChange: function onChange(event) {
           return _this2.setState({
-            fieldIsbn: event.target.value
+            fieldIsbn: event.target.value.replace(" ", "-").replace("--", "-")
           });
         }
-      }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+      }), this.state.errorField.indexOf("isbn") != -1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
+        "class": "text-danger"
+      }, this.state.errorMessages[this.state.errorField.indexOf("isbn")]) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         "class": "form-group row"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("label", {
         "for": "firstName",
@@ -37117,14 +37253,15 @@ var Form = /*#__PURE__*/function (_Component) {
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("input", {
         type: "number",
         "class": "form-control",
-        max: "2021",
         value: this.state.fieldPublicationYear,
         onChange: function onChange(event) {
           return _this2.setState({
             fieldPublicationYear: event.target.value
           });
         }
-      }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+      }), this.state.errorField.indexOf("publicationYear") != -1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
+        "class": "text-danger"
+      }, this.state.errorMessages[this.state.errorField.indexOf("publicationYear")]) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         "class": "form-group row"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("label", {
         "for": "firstName",
@@ -37142,7 +37279,9 @@ var Form = /*#__PURE__*/function (_Component) {
             fieldPublisher: event.target.value
           });
         }
-      }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+      }), this.state.errorField.indexOf("publisher") != -1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
+        "class": "text-danger"
+      }, this.state.errorMessages[this.state.errorField.indexOf("publisher")]) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         "class": "form-group row"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("label", {
         "for": "firstName",
@@ -37163,7 +37302,9 @@ var Form = /*#__PURE__*/function (_Component) {
         return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("option", {
           value: genre
         }, genre.replaceAll("_", " "));
-      })))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+      })), this.state.errorField.indexOf("genres") != -1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
+        "class": "text-danger"
+      }, this.state.errorMessages[this.state.errorField.indexOf("genres")]) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         "class": "form-group row"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("label", {
         "for": "firstName",
@@ -37181,7 +37322,9 @@ var Form = /*#__PURE__*/function (_Component) {
             fieldAuthor: event.target.value
           });
         }
-      }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+      }), this.state.errorField.indexOf("author") != -1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
+        "class": "text-danger"
+      }, this.state.errorMessages[this.state.errorField.indexOf("author")]) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         "class": "form-group row"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("label", {
         "for": "firstName",
@@ -37199,7 +37342,9 @@ var Form = /*#__PURE__*/function (_Component) {
             fieldDescription: event.target.value
           });
         }
-      }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+      }), this.state.errorField.indexOf("description") != -1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
+        "class": "text-danger"
+      }, this.state.errorMessages[this.state.errorField.indexOf("description")]) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         "class": "form-group row"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("label", {
         "for": "firstName",
@@ -37216,9 +37361,10 @@ var Form = /*#__PURE__*/function (_Component) {
           return _this2.setState({
             fieldImage: event.target.value
           });
-        },
-        multiple: true
-      }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+        }
+      }), this.state.errorField.indexOf("image") != -1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
+        "class": "text-danger"
+      }, this.state.errorMessages[this.state.errorField.indexOf("image")]) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         "class": "form-group row"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("label", {
         "for": "firstName",
@@ -37242,40 +37388,22 @@ var Form = /*#__PURE__*/function (_Component) {
         value: "POCO USADO"
       }, "POCO USADO"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("option", {
         value: "NORMAL"
-      }, "NORMAL"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("option", {
+      }, "BUEN ESTADO"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("option", {
         value: "MUY USADO"
       }, "MUY USADO"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("option", {
         value: "DA\xD1ADO"
       }, "DA\xD1ADO"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("option", {
         value: "MUY DA\xD1ADO"
-      }, "MUY DA\xD1ADO")))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+      }, "MUY DA\xD1ADO")), this.state.errorField.indexOf("status") != -1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
+        "class": "text-danger"
+      }, this.state.errorMessages[this.state.errorField.indexOf("status")]) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         "class": "form-group row"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("label", {
         "for": "firstName",
         "class": "col-sm-3 col-form-label"
-      }, "\xBFQu\xE9 quiere hacer?", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("sup", {
+      }, "Precio", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("sup", {
         "class": "text-danger"
       }, "*")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
-        "class": "col-sm-9"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("select", {
-        "class": "form-control",
-        id: "selectAction",
-        value: this.state.fieldAction,
-        onChange: function onChange(event) {
-          return _this2.setState({
-            fieldAction: event.target.value
-          });
-        }
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("option", {
-        value: "INTERCAMBIO"
-      }, "INTERCAMBIO"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("option", {
-        value: "VENTA"
-      }, "VENTA")))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
-        "class": "form-group row"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("label", {
-        "for": "firstName",
-        "class": "col-sm-3 col-form-label"
-      }, "Precio"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         "class": "col-sm-9"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("input", {
         id: "price",
@@ -37287,11 +37415,9 @@ var Form = /*#__PURE__*/function (_Component) {
             fieldPrice: event.target.value
           });
         }
-      }))), this.state.errorField.map(function (itemerror) {
-        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
-          "class": "text-danger"
-        }, "*", itemerror);
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+      }), this.state.errorField.indexOf("price") != -1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
+        "class": "text-danger"
+      }, this.state.errorMessages[this.state.errorField.indexOf("price")]) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         "class": "form-group row"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         "class": "col-sm-6"
@@ -37307,8 +37433,7 @@ var Form = /*#__PURE__*/function (_Component) {
     key: "onClickSave",
     value: function () {
       var _onClickSave = _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_6___default.a.mark(function _callee2() {
-        var res, dataError, _dataError, error;
-
+        var res, errFields, errMess, error;
         return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_6___default.a.wrap(function _callee2$(_context2) {
           while (1) {
             switch (_context2.prev = _context2.next) {
@@ -37319,25 +37444,20 @@ var Form = /*#__PURE__*/function (_Component) {
               case 2:
                 res = _context2.sent;
 
-                if (this.state.fieldAction == "VENTA" && this.state.fieldPrice == "") {
-                  dataError = [];
-                  dataError.push("El precio es un campo requerido.");
-                  this.setState({
-                    errorField: dataError
-                  });
+                if (res.success) {
+                  window.location.replace("/books/me/0");
                 } else {
-                  if (res.success) {
-                    window.location.replace("/");
-                  } else if (res.status == 400) {
-                    _dataError = [];
-                    error = res.data.errors;
-                    error.map(function (itemerror) {
-                      _dataError.push(itemerror.defaultMessage);
-                    });
-                    this.setState({
-                      errorField: _dataError
-                    });
-                  }
+                  errFields = [];
+                  errMess = [];
+                  error = res.errors;
+                  error.map(function (itemerror) {
+                    errFields.push(itemerror.field);
+                    errMess.push(itemerror.defaultMessage);
+                  });
+                  this.setState({
+                    errorField: errFields,
+                    errorMessages: errMess
+                  });
                 }
 
               case 4:
@@ -37469,9 +37589,10 @@ var Form = /*#__PURE__*/function (_Component) {
       fieldAction: "",
       fieldPrice: "",
       errorField: [],
+      errorMessages: [],
       genres: [],
       fieldGen: [],
-      alreadyRequest: false
+      titleCopy: ""
     };
     return _this;
   }
@@ -37517,7 +37638,7 @@ var Form = /*#__PURE__*/function (_Component) {
                     fieldPrice: b.book.price,
                     fieldGen: genrs,
                     correctBook: "",
-                    alreadyRequest: b.alreadyRequest
+                    titleCopy: b.book.title
                   });
                 }
 
@@ -37553,7 +37674,7 @@ var Form = /*#__PURE__*/function (_Component) {
         style: {
           color: "#007bff"
         }
-      }, "Editar ", this.state.fieldTitle), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
+      }, "Editar ", this.state.titleCopy), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
         "class": "text-danger"
       }, "*Obligatorio"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         "class": "form-group row"
@@ -37573,7 +37694,9 @@ var Form = /*#__PURE__*/function (_Component) {
             fieldTitle: event.target.value
           });
         }
-      }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+      }), this.state.errorField.indexOf("title") != -1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
+        "class": "text-danger"
+      }, this.state.errorMessages[this.state.errorField.indexOf("title")]) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         "class": "form-group row"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("label", {
         "for": "firstName",
@@ -37589,7 +37712,9 @@ var Form = /*#__PURE__*/function (_Component) {
             fieldOriginalTitle: event.target.value
           });
         }
-      }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+      }), this.state.errorField.indexOf("originalTitle") != -1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
+        "class": "text-danger"
+      }, this.state.errorMessages[this.state.errorField.indexOf("originalTitle")]) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         "class": "form-group row"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("label", {
         "for": "firstName",
@@ -37599,15 +37724,18 @@ var Form = /*#__PURE__*/function (_Component) {
       }, "*")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         "class": "col-sm-9"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("input", {
-        type: "email",
+        type: "text",
         "class": "form-control",
         value: this.state.fieldIsbn,
+        placeholder: "0-123-45678-9 \xF3 012-3-456-78901-2",
         onChange: function onChange(event) {
           return _this2.setState({
-            fieldIsbn: event.target.value
+            fieldIsbn: event.target.value.replace(" ", "-").replace("--", "-")
           });
         }
-      }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+      }), this.state.errorField.indexOf("isbn") != -1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
+        "class": "text-danger"
+      }, this.state.errorMessages[this.state.errorField.indexOf("isbn")]) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         "class": "form-group row"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("label", {
         "for": "firstName",
@@ -37619,14 +37747,15 @@ var Form = /*#__PURE__*/function (_Component) {
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("input", {
         type: "number",
         "class": "form-control",
-        max: "2021",
         value: this.state.fieldPublicationYear,
         onChange: function onChange(event) {
           return _this2.setState({
             fieldPublicationYear: event.target.value
           });
         }
-      }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+      }), this.state.errorField.indexOf("publicationYear") != -1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
+        "class": "text-danger"
+      }, this.state.errorMessages[this.state.errorField.indexOf("publicationYear")]) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         "class": "form-group row"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("label", {
         "for": "firstName",
@@ -37644,7 +37773,9 @@ var Form = /*#__PURE__*/function (_Component) {
             fieldPublisher: event.target.value
           });
         }
-      }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+      }), this.state.errorField.indexOf("publisher") != -1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
+        "class": "text-danger"
+      }, this.state.errorMessages[this.state.errorField.indexOf("publisher")]) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         "class": "form-group row"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("label", {
         "for": "firstName",
@@ -37665,7 +37796,9 @@ var Form = /*#__PURE__*/function (_Component) {
         return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("option", {
           value: genre
         }, genre.replaceAll("_", " "));
-      })))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+      })), this.state.errorField.indexOf("genres") != -1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
+        "class": "text-danger"
+      }, this.state.errorMessages[this.state.errorField.indexOf("genres")]) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         "class": "form-group row"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("label", {
         "for": "firstName",
@@ -37683,7 +37816,9 @@ var Form = /*#__PURE__*/function (_Component) {
             fieldAuthor: event.target.value
           });
         }
-      }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+      }), this.state.errorField.indexOf("author") != -1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
+        "class": "text-danger"
+      }, this.state.errorMessages[this.state.errorField.indexOf("author")]) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         "class": "form-group row"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("label", {
         "for": "firstName",
@@ -37701,7 +37836,9 @@ var Form = /*#__PURE__*/function (_Component) {
             fieldDescription: event.target.value
           });
         }
-      }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+      }), this.state.errorField.indexOf("description") != -1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
+        "class": "text-danger"
+      }, this.state.errorMessages[this.state.errorField.indexOf("description")]) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         "class": "form-group row"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("label", {
         "for": "firstName",
@@ -37718,9 +37855,10 @@ var Form = /*#__PURE__*/function (_Component) {
           return _this2.setState({
             fieldImage: event.target.value
           });
-        },
-        multiple: true
-      }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+        }
+      }), this.state.errorField.indexOf("image") != -1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
+        "class": "text-danger"
+      }, this.state.errorMessages[this.state.errorField.indexOf("image")]) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         "class": "form-group row"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("label", {
         "for": "firstName",
@@ -37744,43 +37882,22 @@ var Form = /*#__PURE__*/function (_Component) {
         value: "POCO USADO"
       }, "POCO USADO"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("option", {
         value: "NORMAL"
-      }, "NORMAL"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("option", {
+      }, "BUEN ESTADO"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("option", {
         value: "MUY USADO"
       }, "MUY USADO"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("option", {
         value: "DA\xD1ADO"
       }, "DA\xD1ADO"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("option", {
         value: "MUY DA\xD1ADO"
-      }, "MUY DA\xD1ADO")))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+      }, "MUY DA\xD1ADO")), this.state.errorField.indexOf("status") != -1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
+        "class": "text-danger"
+      }, this.state.errorMessages[this.state.errorField.indexOf("status")]) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         "class": "form-group row"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("label", {
         "for": "firstName",
         "class": "col-sm-3 col-form-label"
-      }, "\xBFQu\xE9 quiere hacer?", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("sup", {
+      }, "Precio", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("sup", {
         "class": "text-danger"
       }, "*")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
-        "class": "col-sm-9"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("select", {
-        "class": "form-control",
-        id: "selectAction",
-        value: this.state.fieldAction,
-        onChange: function onChange(event) {
-          return _this2.setState({
-            fieldAction: event.target.value
-          });
-        },
-        disabled: this.state.alreadyRequest
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("option", {
-        value: "INTERCAMBIO"
-      }, "INTERCAMBIO"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("option", {
-        value: "VENTA"
-      }, "VENTA")), this.state.alreadyRequest ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
-        "class": "text-danger"
-      }, "*Tiene una petici\xF3n en proceso.") : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
-        "class": "form-group row"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("label", {
-        "for": "firstName",
-        "class": "col-sm-3 col-form-label"
-      }, "Precio"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         "class": "col-sm-9"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("input", {
         id: "price",
@@ -37792,15 +37909,9 @@ var Form = /*#__PURE__*/function (_Component) {
             fieldPrice: event.target.value
           });
         }
-      }))), this.state.errorField.map(function (itemerror) {
-        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
-          "class": "text-danger"
-        }, "*", itemerror);
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
-        style: {
-          color: "#099C01"
-        }
-      }, this.state.correctBook), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+      }), this.state.errorField.indexOf("price") != -1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
+        "class": "text-danger"
+      }, this.state.errorMessages[this.state.errorField.indexOf("price")]) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         "class": "form-group row"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         "class": "col-sm-6"
@@ -37816,8 +37927,7 @@ var Form = /*#__PURE__*/function (_Component) {
     key: "onClickSave",
     value: function () {
       var _onClickSave = _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_6___default.a.mark(function _callee2() {
-        var res, dataError, _dataError, error;
-
+        var res, errFields, errMess, error;
         return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_6___default.a.wrap(function _callee2$(_context2) {
           while (1) {
             switch (_context2.prev = _context2.next) {
@@ -37828,34 +37938,20 @@ var Form = /*#__PURE__*/function (_Component) {
               case 2:
                 res = _context2.sent;
 
-                if (this.state.fieldAction == "VENTA" && this.state.fieldPrice == null) {
-                  this.setState({
-                    correctBook: ""
-                  });
-                  dataError = [];
-                  dataError.push("El precio es un campo requerido.");
-                  this.setState({
-                    errorField: dataError
-                  });
+                if (res.success) {
+                  window.location.replace("/books/me/0");
                 } else {
-                  if (res.success) {
-                    this.setState({
-                      correctBook: "*Se ha actualizado correctamente.",
-                      errorField: []
-                    }); //window.location.replace("/")
-                  } else if (res.status == 400) {
-                    this.setState({
-                      correctBook: ""
-                    });
-                    _dataError = [];
-                    error = res.data.errors;
-                    error.map(function (itemerror) {
-                      _dataError.push(itemerror.defaultMessage);
-                    });
-                    this.setState({
-                      errorField: _dataError
-                    });
-                  }
+                  errFields = [];
+                  errMess = [];
+                  error = res.errors;
+                  error.map(function (itemerror) {
+                    errFields.push(itemerror.field);
+                    errMess.push(itemerror.defaultMessage);
+                  });
+                  this.setState({
+                    errorField: errFields,
+                    errorMessages: errMess
+                  });
                 }
 
               case 4:
@@ -38059,199 +38155,149 @@ var Get = /*#__PURE__*/function (_Component) {
     value: function render() {
       var _this2 = this;
 
-      return (
-        /*#__PURE__*/
-
-        /*<div style={{backgroundImage: "url(https://i.pinimg.com/originals/8d/23/06/8d2306b98839234e49ce96a8b76e20ae.jpg)", 
-        backgroundSize: "auto auto" ,  fontWeight: "bold", padding: "41px", marginBlock:"30px", margin:"0px 150px 0px 150px"}}>
-        <center><div>
-        <h1><strong>{this.state.book.title}</strong></h1>{this.state.book.originalTitle != "" ? <h3> ({this.state.book.originalTitle})</h3> : <p></p>}
-        <img src={this.state.book.image} 
-        style={{padding: '10px', width: '250px'}}></img></div>
-        <div>
-        <br clear="left"></br>
-        <h6><strong>Autor:</strong> {this.state.book.author}</h6>
-        <h6><strong>Editorial:</strong> {this.state.book.publisher}</h6>
-        <h6><strong>ISBN:</strong> {this.state.book.isbn}</h6>
-        <h6><strong>Publicado en:</strong> {this.state.book.publicationYear}</h6>
-        <h6><strong>Sinopsis: </strong>{this.state.book.description}</h6>
-        <h6><strong>Géneros:</strong> {this.state.genres.replaceAll("_", " ").replaceAll(",", ", ")}</h6>
-          {this.state.book.action == "VENTA" ?
-            <h6><strong>¿Qué quiere hacer?</strong> {this.state.book.action} por {this.state.book.price} €</h6>
-        :
-            <h6><strong>¿Qué quiere hacer?</strong> {this.state.book.action}</h6>} 
-            </div>
-        
-        <h6><strong>Estado: </strong>{this.state.book.status}</h6>
-          {this.state.username == this.state.book.username ? 
-            <center><br></br><hr></hr><a href={'/books/'+this.state.book.id+'/edit'} style={{margin:"10px"}} class="btn btn-primary">Editar</a>
-            {!this.state.hasRequestAccepted ? 
-                <a onClick={() => this.deleteBook(this.state.book.id)} style={{background:"red", color:"white"}} class="btn btn-primary">Eliminar</a>
-            :
-                <center><button style={{background:"red", color:"white"}} class="btn btn-primary" disabled>Eliminar</button>
-                <p class='text-danger'>*Tiene una petición ACEPTADA</p></center>
-            }</center>
-        :
-            <p></p>
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+        "class": "cover"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+        "class": "book"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("label", {
+        "for": "page-1",
+        "class": "book__page book__page--1"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("img", {
+        src: this.state.book.image,
+        alt: ""
+      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("label", {
+        "for": "page-2",
+        "class": "book__page book__page--4"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("img", {
+        src: this.state.book.image,
+        alt: ""
+      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("input", {
+        type: "radio",
+        name: "page",
+        id: "page-1"
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("input", {
+        type: "radio",
+        name: "page",
+        id: "page-2"
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("label", {
+        "class": "book__page book__page--2"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+        "class": "book__page-front"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+        "class": "page__content"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("h1", {
+        "class": "page__content-book-title"
+      }, this.state.book.title), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("h2", {
+        "class": "page__content-author"
+      }, this.state.book.author), this.state.book.originalTitle != "" && this.state.book.originalTitle != this.state.book.title ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
+        "class": "page__content-credits"
+      }, "T\xEDtulo original", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("span", null, this.state.book.originalTitle)) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
+        "class": "page__content-credits"
+      }, "Editorial", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("span", null, this.state.book.publisher)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
+        "class": "page__content-credits"
+      }, "G\xE9neros", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("span", null, this.state.genres.replaceAll("_", " ").replaceAll(",", ", "))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
+        "class": "page__content-credits"
+      }, "A\xF1o de publicaci\xF3n", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("span", null, this.state.book.publicationYear)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
+        "class": "page__content-credits"
+      }, "ISBN", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("span", null, this.state.book.isbn)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
+        "class": "page__content-credits"
+      }, "\xBFQu\xE9 quiere hacer?", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("span", null, this.state.book.action == "VENTA" ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null, " ", this.state.book.action, " por ", this.state.book.price, " \u20AC") : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null, " ", this.state.book.action), " ")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
+        "class": "page__content-credits"
+      }, "Estado", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("span", null, this.state.book.status)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+        "class": "page__content-copyright"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null, "Publicado por ", this.state.book.username)))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+        "class": "book__page-back"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+        "class": "page__content"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("h1", {
+        "class": "page__content-title"
+      }, "Sinopsis"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+        "class": "page__content-blockquote"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
+        "class": "page__content-blockquote-text"
+      }, this.state.book.description)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+        "class": "page__number"
+      }, "2")))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("center", null, this.state.username == this.state.book.username ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("center", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("button", {
+        style: {
+          backgroundImage: "url(https://i.pinimg.com/originals/8d/23/06/8d2306b98839234e49ce96a8b76e20ae.jpg)",
+          margin: "10px",
+          color: "black"
+        },
+        onClick: function onClick() {
+          return _this2.goToEdit(_this2.state.book.id);
+        },
+        "class": "btn btn-primary",
+        disabled: this.state.hasRequestAccepted == true
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("b", null, "Editar")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("button", {
+        onClick: function onClick() {
+          return _this2.deleteBook(_this2.state.book.id);
+        },
+        style: {
+          color: "red",
+          backgroundImage: "url(https://i.pinimg.com/originals/8d/23/06/8d2306b98839234e49ce96a8b76e20ae.jpg)"
+        },
+        "class": "btn btn-primary",
+        disabled: this.state.hasRequestAccepted == true
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("b", null, "Eliminar")), this.state.hasRequestAccepted ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
+        "class": "text-danger"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("b", null, "Tiene una petici\xF3n ACEPTADA")) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null)) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null), this.state.username != null && this.state.username != this.state.book.username ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("center", null, !this.state.isAdded ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("center", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
+        "class": "btn btn-primary",
+        style: {
+          backgroundImage: "url(https://i.pinimg.com/originals/8d/23/06/8d2306b98839234e49ce96a8b76e20ae.jpg)"
+        },
+        onClick: function onClick() {
+          return _this2.addFavouriteBook(_this2.state.book.id);
         }
-          {this.state.username != null && this.state.username != this.state.book.username ?
-            !this.state.isAdded ? 
-                <center><h6><strong>Publicado por:</strong> {this.state.book.username}</h6><br></br><hr></hr>
-                <a onClick={() => this.addFavouriteBook(this.state.book.id)} style={{color:"white", margin:"10px"}} class="btn btn-primary">Añadir a favoritos</a></center>
-            :
-                <center><h6><strong>Publicado por:</strong> {this.state.book.username}</h6><br></br><hr></hr>
-                <a onClick={() => {this.deleteFavouriteBook(this.state.book.id, this.state.book.title)}} style={{background:"red", color:"white"}} class="btn btn-primary">Eliminar de favoritos</a></center>
-        :                              
-            <p></p>
-        }   
-          {this.state.username != this.state.book.username && this.state.username != null ?
-            !this.state.alreadyRequest ?
-            <center>
-                {!this.state.hasRequestAccepted ?
-                    <a href={"/requests/"+this.state.book.id+"/add"} style={{color:"white", margin:"10px"}} class="btn btn-primary">Realizar petición</a>
-                :
-                    <center><button style={{color:"white", margin:"10px"}} class="btn btn-primary" disabled>Realizar petición</button>
-                    <p class='text-danger'>*Ya tiene una petición ACEPTADA</p></center>
-                }
-            </center>
-            :
-            <button style={{background:"#099C01",color:"white", margin:"10px"}} class="btn btn-primary" disabled>Petición realizada</button>
-        :
-            <p></p>
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("img", {
+        style: {
+          height: "30px",
+          width: "30px"
+        },
+        src: "http://assets.stickpng.com/images/5a02bfca18e87004f1ca4395.png"
+      }), " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("b", null, "A\xF1adir a favoritos")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", null)) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("center", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
+        "class": "btn btn-primary",
+        style: {
+          backgroundImage: "url(https://i.pinimg.com/originals/8d/23/06/8d2306b98839234e49ce96a8b76e20ae.jpg)"
+        },
+        onClick: function onClick() {
+          return _this2.deleteFavouriteBook(_this2.state.book.id, _this2.state.book.title);
         }
-        </center>
-        </div>
-        */
-        react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
-          "class": "cover"
-        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
-          "class": "book"
-        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("label", {
-          "for": "page-1",
-          "class": "book__page book__page--1"
-        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("img", {
-          src: this.state.book.image,
-          alt: ""
-        })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("label", {
-          "for": "page-2",
-          "class": "book__page book__page--4"
-        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("img", {
-          src: this.state.book.image,
-          alt: ""
-        })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("input", {
-          type: "radio",
-          name: "page",
-          id: "page-1"
-        }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("input", {
-          type: "radio",
-          name: "page",
-          id: "page-2"
-        }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("label", {
-          "class": "book__page book__page--2"
-        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
-          "class": "book__page-front"
-        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
-          "class": "page__content"
-        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("h1", {
-          "class": "page__content-book-title"
-        }, this.state.book.title), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("h2", {
-          "class": "page__content-author"
-        }, this.state.book.author), this.state.book.originalTitle != "" && this.state.book.originalTitle != this.state.book.title ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
-          "class": "page__content-credits"
-        }, "T\xEDtulo original", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("span", null, this.state.book.originalTitle)) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
-          "class": "page__content-credits"
-        }, "Editorial", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("span", null, this.state.book.publisher)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
-          "class": "page__content-credits"
-        }, "G\xE9neros", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("span", null, this.state.genres.replaceAll("_", " ").replaceAll(",", ", "))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
-          "class": "page__content-credits"
-        }, "A\xF1o de publicaci\xF3n", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("span", null, this.state.book.publicationYear)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
-          "class": "page__content-credits"
-        }, "ISBN", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("span", null, this.state.book.isbn)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
-          "class": "page__content-credits"
-        }, "\xBFQu\xE9 quiere hacer?", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("span", null, this.state.book.action == "VENTA" ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null, " ", this.state.book.action, " por ", this.state.book.price, " \u20AC") : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null, " ", this.state.book.action), " ")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
-          "class": "page__content-credits"
-        }, "Estado", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("span", null, this.state.book.status)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
-          "class": "page__content-copyright"
-        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null, "Publicado por ", this.state.book.username)))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
-          "class": "book__page-back"
-        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
-          "class": "page__content"
-        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("h1", {
-          "class": "page__content-title"
-        }, "Sinopsis"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
-          "class": "page__content-blockquote"
-        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
-          "class": "page__content-blockquote-text"
-        }, this.state.book.description)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
-          "class": "page__number"
-        }, "2")))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("center", null, this.state.username == this.state.book.username ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("center", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
-          href: '/books/' + this.state.book.id + '/edit',
-          style: {
-            margin: "10px"
-          },
-          "class": "btn btn-primary"
-        }, "Editar"), !this.state.hasRequestAccepted ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
-          onClick: function onClick() {
-            return _this2.deleteBook(_this2.state.book.id);
-          },
-          style: {
-            background: "red",
-            color: "white"
-          },
-          "class": "btn btn-primary"
-        }, "Eliminar") : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("center", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("button", {
-          style: {
-            background: "red",
-            color: "white"
-          },
-          "class": "btn btn-primary",
-          disabled: true
-        }, "Eliminar"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
-          "class": "text-danger"
-        }, "*Tiene una petici\xF3n ACEPTADA"))) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null), this.state.username != null && this.state.username != this.state.book.username ? !this.state.isAdded ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("center", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
-          onClick: function onClick() {
-            return _this2.addFavouriteBook(_this2.state.book.id);
-          },
-          style: {
-            color: "white",
-            margin: "10px"
-          },
-          "class": "btn btn-primary"
-        }, "A\xF1adir a favoritos")) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("center", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
-          onClick: function onClick() {
-            _this2.deleteFavouriteBook(_this2.state.book.id, _this2.state.book.title);
-          },
-          style: {
-            background: "red",
-            color: "white"
-          },
-          "class": "btn btn-primary"
-        }, "Eliminar de favoritos")) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null), this.state.username != this.state.book.username && this.state.username != null ? !this.state.alreadyRequest ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("center", null, !this.state.hasRequestAccepted ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
-          href: "/requests/" + this.state.book.id + "/add",
-          style: {
-            color: "white",
-            margin: "10px"
-          },
-          "class": "btn btn-primary"
-        }, "Realizar petici\xF3n") : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("center", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("button", {
-          style: {
-            color: "white",
-            margin: "10px"
-          },
-          "class": "btn btn-primary",
-          disabled: true
-        }, "Realizar petici\xF3n"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
-          "class": "text-danger"
-        }, "*Ya tiene una petici\xF3n ACEPTADA"))) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("button", {
-          style: {
-            background: "#099C01",
-            color: "white",
-            margin: "10px"
-          },
-          "class": "btn btn-primary",
-          disabled: true
-        }, "Petici\xF3n realizada") : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null)))
-      );
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("img", {
+        style: {
+          height: "30px",
+          width: "30px"
+        },
+        src: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Coraz%C3%B3n.svg/1121px-Coraz%C3%B3n.svg.png"
+      }), " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("b", null, "Eliminar de favoritos")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", null))) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null), this.state.username != this.state.book.username && this.state.username != null ? !this.state.alreadyRequest ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("center", null, !this.state.hasRequestAccepted ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
+        href: "/requests/" + this.state.book.id + "/add",
+        style: {
+          color: "black",
+          marginTop: "20px",
+          backgroundImage: "url(https://i.pinimg.com/originals/8d/23/06/8d2306b98839234e49ce96a8b76e20ae.jpg)"
+        },
+        "class": "btn btn-primary"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("b", null, "Realizar petici\xF3n")) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("center", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("button", {
+        style: {
+          color: "black",
+          marginTop: "20px",
+          backgroundImage: "url(https://i.pinimg.com/originals/8d/23/06/8d2306b98839234e49ce96a8b76e20ae.jpg)"
+        },
+        "class": "btn btn-primary",
+        disabled: true
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("b", null, "Realizar petici\xF3n")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
+        style: {
+          color: "red"
+        }
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("b", null, "Ya tiene una petici\xF3n ACEPTADA")))) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("button", {
+        style: {
+          background: "#099C01",
+          color: "green",
+          margin: "20px",
+          backgroundImage: "url(https://i.pinimg.com/originals/8d/23/06/8d2306b98839234e49ce96a8b76e20ae.jpg)"
+        },
+        "class": "btn btn-primary",
+        disabled: true
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("b", null, "Petici\xF3n realizada")) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null)));
     }
   }, {
     key: "deleteBook",
@@ -38356,6 +38402,30 @@ var Get = /*#__PURE__*/function (_Component) {
       }
 
       return deleteFavouriteBook;
+    }()
+  }, {
+    key: "goToEdit",
+    value: function () {
+      var _goToEdit = _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_6___default.a.mark(function _callee5(id) {
+        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_6___default.a.wrap(function _callee5$(_context5) {
+          while (1) {
+            switch (_context5.prev = _context5.next) {
+              case 0:
+                window.location.replace('/books/' + id + '/edit');
+
+              case 1:
+              case "end":
+                return _context5.stop();
+            }
+          }
+        }, _callee5);
+      }));
+
+      function goToEdit(_x5) {
+        return _goToEdit.apply(this, arguments);
+      }
+
+      return goToEdit;
     }()
   }]);
 
@@ -38792,10 +38862,10 @@ var List = /*#__PURE__*/function (_Component) {
     value: function render() {
       var _this2 = this;
 
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", null, this.state.books.length == 0 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("b", null, "\xBFTodav\xEDa no has a\xF1adido ning\xFAn libro? ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", null, this.state.books.length == 0 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("b", null, "\xBFTodav\xEDa no has a\xF1adido ning\xFAn libro? ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
         "class": "btn btn-primary",
         href: "/books/new"
-      }, "A\xF1ade uno!"))) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("center", null, this.state.books.length != 0 && this.state.pages.length > 1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("center", null, this.state.actualPage != 0 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("span", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
+      }, "A\xF1ade uno!"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", null)) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("center", null, this.state.books.length != 0 && this.state.pages.length > 1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("center", null, this.state.actualPage != 0 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("span", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
         "class": "btn btn-primary",
         href: "/books/all/0"
       }, String("<<")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
@@ -39025,7 +39095,7 @@ var List = /*#__PURE__*/function (_Component) {
     value: function render() {
       var _this2 = this;
 
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("div", null, this.state.books.length == 0 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("b", null, "Actualmente no existen libros para mostrar cerca de usted.")) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("center", null, this.state.books.length != 0 && this.state.pages.length > 1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("center", null, this.state.actualPage != 0 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("span", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("a", {
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("div", null, this.state.books.length == 0 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("b", null, "Actualmente no existen libros para mostrar cerca de usted.")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("br", null)) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("center", null, this.state.books.length != 0 && this.state.pages.length > 1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("center", null, this.state.actualPage != 0 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("span", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("a", {
         "class": "btn btn-primary",
         href: "/books/all/0/" + this.state.showMode
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("b", null, String("<<"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("a", {
@@ -39295,10 +39365,13 @@ var Form = /*#__PURE__*/function (_Component) {
       fieldComment: "",
       fieldIdBook2: "",
       fieldPay: "",
+      fieldAction: "",
       book: "",
       books: [],
       errorField: [],
-      noBooks: true
+      errorMessages: [],
+      noBooks: true,
+      sell: null
     };
     return _this;
   }
@@ -39325,15 +39398,10 @@ var Form = /*#__PURE__*/function (_Component) {
                 bk = _context.sent;
                 this.setState({
                   book: b.book,
+                  fieldIdBook2: id,
                   books: bk.books,
-                  fieldIdBook2: id
+                  fieldPay: b.book.price
                 });
-
-                if (b.book.action == "VENTA") {
-                  this.setState({
-                    fieldPay: b.book.price
-                  });
-                }
 
                 if (bk.books.length >= 1) {
                   this.setState({
@@ -39342,7 +39410,7 @@ var Form = /*#__PURE__*/function (_Component) {
                   });
                 }
 
-              case 10:
+              case 9:
               case "end":
                 return _context.stop();
             }
@@ -39374,9 +39442,38 @@ var Form = /*#__PURE__*/function (_Component) {
         style: {
           color: "#007bff"
         }
-      }, "Petici\xF3n de ", this.state.book.action == "INTERCAMBIO" ? "INTERCAMBIO" : "COMPRA (" + this.state.book.price + "€)", " para ", this.state.book.title), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
+      }, "Realizar petici\xF3n a ", this.state.book.title), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
         "class": "text-danger"
-      }, "*Obligatorio"), this.state.book.action == "INTERCAMBIO" ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+      }, "*Obligatorio"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+        "class": "form-group row"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("label", {
+        "for": "firstName",
+        "class": "col-sm-3 col-form-label"
+      }, "\xBFQu\xE9 quiere hacer?", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("sup", {
+        "class": "text-danger"
+      }, "*")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+        "class": "col-sm-9"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("select", {
+        "class": "form-control",
+        id: "selectAction",
+        value: this.state.fieldAction,
+        onChange: function onChange(event) {
+          return _this2.setState({
+            fieldAction: event.target.value,
+            sell: event.target.value == "" ? null : event.target.value == "COMPRA" ? true : false,
+            errorField: [],
+            errorMessages: []
+          });
+        }
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("option", {
+        value: ""
+      }, "Despliega para ver opciones"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("option", {
+        value: "COMPRA"
+      }, "COMPRA"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("option", {
+        value: "INTERCAMBIO"
+      }, "INTERCAMBIO")), this.state.errorField.indexOf("action") != -1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
+        "class": "text-danger"
+      }, this.state.errorMessages[this.state.errorField.indexOf("action")]) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null))), this.state.sell != null ? this.state.sell == false ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         "class": "form-group row"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("label", {
         "for": "firstName",
@@ -39394,12 +39491,26 @@ var Form = /*#__PURE__*/function (_Component) {
             fieldIdBook1: event.target.value
           });
         },
-        disabled: this.state.noBooks && this.state.book.action == "INTERCAMBIO"
+        disabled: this.state.noBooks
       }, this.state.books.map(function (book) {
         return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("option", {
           value: book.id
         }, book.title);
-      })))) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+      })), this.state.errorField.indexOf("idBook1") != -1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
+        "class": "text-danger"
+      }, this.state.errorMessages[this.state.errorField.indexOf("idBook1")]) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null), this.state.noBooks ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
+        "class": "text-danger"
+      }, "*No tiene libros para intercambiar. ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
+        href: "/books/new",
+        "class": "btn btn-primary"
+      }, "\xA1A\xF1ade uno!"))) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null))) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+        "class": "form-group row"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("label", {
+        "for": "firstName",
+        "class": "col-sm-3 col-form-label"
+      }, "Precio original:"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+        "class": "col-sm-9"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null, this.state.book.price, "\u20AC"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         "class": "form-group row"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("label", {
         "for": "firstName",
@@ -39417,7 +39528,9 @@ var Form = /*#__PURE__*/function (_Component) {
             fieldPay: event.target.value
           });
         }
-      }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+      }), this.state.errorField.indexOf("pay") != -1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
+        "class": "text-danger"
+      }, this.state.errorMessages[this.state.errorField.indexOf("pay")]) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null)))) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         "class": "form-group row"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("label", {
         "for": "firstName",
@@ -39433,17 +39546,10 @@ var Form = /*#__PURE__*/function (_Component) {
             fieldComment: event.target.value
           });
         },
-        disabled: this.state.noBooks && this.state.book.action == "INTERCAMBIO"
-      }))), this.state.errorField.map(function (itemerror) {
-        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
-          "class": "text-danger"
-        }, "*", itemerror);
-      }), this.state.noBooks && this.state.book.action == "INTERCAMBIO" ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
+        disabled: this.state.noBooks && this.state.sell == false
+      }), this.state.errorField.indexOf("comment") != -1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
         "class": "text-danger"
-      }, "*No tiene libros para intercambiar. ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
-        href: "/books/new",
-        "class": "btn btn-primary"
-      }, "Sube uno ahora!")) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+      }, this.state.errorMessages[this.state.errorField.indexOf("comment")]) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         "class": "form-group row"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         "class": "col-sm-6"
@@ -39456,60 +39562,41 @@ var Form = /*#__PURE__*/function (_Component) {
           "float": "left"
         },
         type: "submit",
-        disabled: this.state.noBooks && this.state.book.action == "INTERCAMBIO"
+        disabled: this.state.noBooks && (this.state.sell == false || this.state.sell == null)
       }, "Enviar"))));
     }
   }, {
     key: "onClickSave",
     value: function () {
       var _onClickSave = _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_6___default.a.mark(function _callee2() {
-        var dataError, _dataError, res;
-
+        var res, errFields, errMess, error;
         return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_6___default.a.wrap(function _callee2$(_context2) {
           while (1) {
             switch (_context2.prev = _context2.next) {
               case 0:
-                if (!(this.state.book.action == "INTERCAMBIO" && this.state.fieldIdBook1 == "")) {
-                  _context2.next = 6;
-                  break;
-                }
-
-                dataError = [];
-                dataError.push("El libro a intercambiar es un campo requerido.");
-                this.setState({
-                  errorField: dataError
-                });
-                _context2.next = 16;
-                break;
-
-              case 6:
-                if (!(this.state.book.action == "VENTA" && this.state.fieldPay == "")) {
-                  _context2.next = 12;
-                  break;
-                }
-
-                _dataError = [];
-
-                _dataError.push("El precio que estaría dispuesto a pagar es un campo requerido.");
-
-                this.setState({
-                  errorField: _dataError
-                });
-                _context2.next = 16;
-                break;
-
-              case 12:
-                _context2.next = 14;
+                _context2.next = 2;
                 return _services_Request__WEBPACK_IMPORTED_MODULE_9__["default"].create(this.state);
 
-              case 14:
+              case 2:
                 res = _context2.sent;
 
                 if (res.success) {
                   window.location.replace("/books/" + this.state.book.id);
+                } else {
+                  errFields = [];
+                  errMess = [];
+                  error = res.errors;
+                  error.map(function (itemerror) {
+                    errFields.push(itemerror.field);
+                    errMess.push(itemerror.defaultMessage);
+                  });
+                  this.setState({
+                    errorField: errFields,
+                    errorMessages: errMess
+                  });
                 }
 
-              case 16:
+              case 4:
               case "end":
                 return _context2.stop();
             }
@@ -39683,10 +39770,10 @@ var List = /*#__PURE__*/function (_Component) {
     value: function render() {
       var _this2 = this;
 
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("div", null, this.state.requests.length == 0 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("strong", null, "\xBFNo tienes todav\xEDa peticiones? ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("a", {
-        href: "/",
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("div", null, this.state.requests.length == 0 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("strong", null, "\xBFNo tienes todav\xEDa peticiones? ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("a", {
+        href: "/books/all/0",
         "class": "btn btn-primary"
-      }, "Realiza una!"))) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("center", null, this.state.pages.length > 1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("center", null, this.state.actualPage != 0 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("a", {
+      }, "\xA1Realiza una!"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", null)) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("center", null, this.state.pages.length > 1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("center", null, this.state.actualPage != 0 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("a", {
         "class": "btn btn-primary",
         href: "/requests/me/" + parseInt(this.state.actualPage - 1)
       }, "Anterior") : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", null), this.state.pages.map(function (page) {
@@ -39706,13 +39793,12 @@ var List = /*#__PURE__*/function (_Component) {
           style: {
             backgroundImage: "url(https://i.pinimg.com/originals/8d/23/06/8d2306b98839234e49ce96a8b76e20ae.jpg)",
             backgroundSize: "auto auto",
-            padding: "30px",
+            padding: "15px",
             paddingTop: "20px",
-            marginBlock: "30px",
-            margin: "0px 20px 20px 0px",
+            marginBlock: "15px",
+            margin: "0px 12px 30px 0px",
             borderRadius: '5px',
-            width: request.action == "VENTA" ? "300px" : "380px",
-            height: '520px',
+            width: "32%",
             display: "inline-grid"
           }
         }, request.action == "INTERCAMBIO" ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("center", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("h4", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("strong", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("u", null, "INTERCAMBIO"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", null)))) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("center", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("h4", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("strong", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("u", null, "COMPRA POR ", request.pay, " \u20AC"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", null)))), request.action == "INTERCAMBIO" ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("center", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("a", {
@@ -39748,7 +39834,7 @@ var List = /*#__PURE__*/function (_Component) {
             margin: "0px 0px 0px 0px"
           },
           src: _this2.state.books2[i].image
-        }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("center", null, request.action == "VENTA" ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("strong", null, "Precio original: "), _this2.state.books2[i].price, " \u20AC") : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", null), request.comment != "" ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("strong", null, "Comentario adicional: "), request.comment) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", null), request.status != "ACEPTADA" ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("strong", null, "Petici\xF3n enviada a: "), request.username2) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("strong", null, "Estado: "), request.status)), request.status == "PENDIENTE" ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("center", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("a", {
+        }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("center", null, request.action == "COMPRA" ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("strong", null, "Precio original: "), _this2.state.books2[i].price, " \u20AC") : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", null), request.comment != "" ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("strong", null, "Comentario adicional: "), request.comment) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", null), request.status != "ACEPTADA" ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("strong", null, "Petici\xF3n enviada a: "), request.username2) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("strong", null, "Estado: "), request.status)), request.status == "PENDIENTE" ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("center", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("a", {
           onClick: function onClick() {
             return _this2.cancelRequest(request.id, _this2.state.actualPage);
           },
@@ -39989,10 +40075,10 @@ var List = /*#__PURE__*/function (_Component) {
     value: function render() {
       var _this2 = this;
 
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("div", null, this.state.requests.length == 0 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("strong", null, "\xBFNo has recibido peticiones todav\xEDa? ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("a", {
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("div", null, this.state.requests.length == 0 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("strong", null, "\xBFNo has recibido peticiones todav\xEDa? ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("a", {
         href: "/books/new",
         "class": "btn btn-primary"
-      }, "A\xF1ade un libro!"))) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("center", null, this.state.pages.length > 1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("center", null, this.state.actualPage != 0 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("a", {
+      }, "\xA1A\xF1ade un libro!"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("br", null)) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("center", null, this.state.pages.length > 1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("center", null, this.state.actualPage != 0 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("a", {
         "class": "btn btn-primary",
         href: "/requests/received/" + parseInt(this.state.actualPage - 1)
       }, "Anterior") : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("p", null), this.state.pages.map(function (page) {
@@ -40012,13 +40098,12 @@ var List = /*#__PURE__*/function (_Component) {
           style: {
             backgroundImage: "url(https://i.pinimg.com/originals/8d/23/06/8d2306b98839234e49ce96a8b76e20ae.jpg)",
             backgroundSize: "auto auto",
-            padding: "30px",
+            padding: "15px",
             paddingTop: "20px",
-            marginBlock: "30px",
-            margin: "0px 20px 20px 0px",
+            marginBlock: "15px",
+            margin: "0px 12px 30px 0px",
             borderRadius: '5px',
-            width: request.action == "VENTA" ? "300px" : "380px",
-            height: '480px',
+            width: "32%",
             display: "inline-grid"
           }
         }, request.action == "INTERCAMBIO" ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("center", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("h4", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("strong", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("u", null, "INTERCAMBIO"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("br", null)))) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("center", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("h4", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("strong", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("u", null, "VENTA POR ", request.pay, " \u20AC"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("br", null)))), request.action == "INTERCAMBIO" ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("center", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("a", {
@@ -40056,7 +40141,7 @@ var List = /*#__PURE__*/function (_Component) {
           padding: '10px',
           margin: "0px 0px 0px 0px",
           width: '120px'
-        })))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("center", null, request.action == "VENTA" ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("strong", null, "Precio original: "), _this2.state.books2[i].price, " \u20AC") : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("p", null), request.comment != "" ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("strong", null, "Comentario adicional: "), request.comment) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("p", null), request.status != "ACEPTADA" ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("strong", null, "Petici\xF3n enviada por: "), request.username1) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("p", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("strong", null, "Estado: "), request.status)), request.status == "PENDIENTE" ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("center", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("a", {
+        })))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("center", null, request.action == "COMPRA" ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("strong", null, "Precio original: "), _this2.state.books2[i].price, " \u20AC") : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("p", null), request.comment != "" ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("strong", null, "Comentario adicional: "), request.comment) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("p", null), request.status != "ACEPTADA" ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("strong", null, "Petici\xF3n enviada por: "), request.username1) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("p", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("strong", null, "Estado: "), request.status)), request.status == "PENDIENTE" ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("center", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("a", {
           onClick: function onClick() {
             return _this2.acceptRequest(request.id, _this2.state.books2[i].title, _this2.state.actualPage);
           },
@@ -40215,7 +40300,6 @@ book.create = /*#__PURE__*/function () {
               description: state.fieldDescription,
               image: state.fieldImage,
               status: state.fieldStatus,
-              action: state.fieldAction,
               price: state.fieldPrice
             };
             urlPost = baseUrl + "/new";
@@ -40262,7 +40346,6 @@ book.edit = /*#__PURE__*/function () {
               description: state.fieldDescription,
               image: state.fieldImage,
               status: state.fieldStatus,
-              action: state.fieldAction,
               price: state.fieldPrice
             };
             urlPost = baseUrl + "/" + state.id + "/edit";
@@ -40539,7 +40622,7 @@ request.create = /*#__PURE__*/function () {
               idBook1: state.fieldIdBook1,
               idBook2: "",
               status: "",
-              action: "",
+              action: state.fieldAction,
               pay: state.fieldPay,
               comment: state.fieldComment
             };
@@ -40800,8 +40883,9 @@ user.create = /*#__PURE__*/function () {
               username: state.fieldUsername,
               password: state.fieldPassword,
               province: state.fieldProvince,
-              city: state.fieldCity,
-              postCode: state.fieldPostCode
+              postCode: state.fieldPostCode,
+              accept: state.fieldCheckbok,
+              confirmPassword: state.fieldConfirmPassword
             };
             urlPost = baseUrl + "/register";
             _context.next = 4;
@@ -40845,7 +40929,9 @@ user.edit = /*#__PURE__*/function () {
               password: state.fieldPassword,
               province: state.fieldProvince,
               city: state.fieldCity,
-              postCode: state.fieldPostCode
+              postCode: state.fieldPostCode,
+              confirmPassword: state.fieldConfirmPassword,
+              accept: true
             };
             urlPost = baseUrl + "/user/" + state.fieldUsername + "/edit";
             _context2.next = 4;
@@ -41170,8 +41256,8 @@ var Form = /*#__PURE__*/function (_Component) {
       fieldPostCode: "",
       fieldPassword: "",
       fieldConfirmPassword: "",
-      errorFieldUser: [],
-      errorFieldPassword: [],
+      errorField: [],
+      errorMessages: [],
       messageCorrectUser: "",
       messageCorrectPassword: "",
       provinces: []
@@ -41276,9 +41362,10 @@ var Form = /*#__PURE__*/function (_Component) {
           return _this2.setState({
             fieldName: event.target.value
           });
-        },
-        required: true
-      }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+        }
+      }), this.state.errorField.indexOf("name") != -1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
+        "class": "text-danger"
+      }, this.state.errorMessages[this.state.errorField.indexOf("name")]) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         "class": "form-group row"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("label", {
         "for": "firstName",
@@ -41316,7 +41403,9 @@ var Form = /*#__PURE__*/function (_Component) {
             fieldEmail: event.target.value
           });
         }
-      }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+      }), this.state.errorField.indexOf("email") != -1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
+        "class": "text-danger"
+      }, this.state.errorMessages[this.state.errorField.indexOf("email")]) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         "class": "form-group row"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("label", {
         "for": "firstName",
@@ -41335,7 +41424,9 @@ var Form = /*#__PURE__*/function (_Component) {
             fieldBirthDate: event.target.value
           });
         }
-      }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+      }), this.state.errorField.indexOf("birthDate") != -1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
+        "class": "text-danger"
+      }, this.state.errorMessages[this.state.errorField.indexOf("birthDate")]) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         "class": "form-group row"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("label", {
         "for": "firstName",
@@ -41347,14 +41438,16 @@ var Form = /*#__PURE__*/function (_Component) {
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("input", {
         type: "tel",
         "class": "form-control",
-        placeholder: "+34 123456789",
+        placeholder: "+34123456789",
         value: this.state.fieldPhone,
         onChange: function onChange(event) {
           return _this2.setState({
-            fieldPhone: event.target.value
+            fieldPhone: event.target.value.replace(" ", "")
           });
         }
-      }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+      }), this.state.errorField.indexOf("phone") != -1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
+        "class": "text-danger"
+      }, this.state.errorMessages[this.state.errorField.indexOf("phone")]) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         "class": "form-group row"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("label", {
         "for": "firstName",
@@ -41365,8 +41458,8 @@ var Form = /*#__PURE__*/function (_Component) {
         "class": "col-sm-9"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("select", {
         "class": "form-control",
-        value: this.state.fieldProvince,
         id: "selectProvince",
+        value: this.state.fieldProvince,
         onChange: function onChange(event) {
           return _this2.setState({
             fieldProvince: event.target.value
@@ -41376,26 +41469,9 @@ var Form = /*#__PURE__*/function (_Component) {
         return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("option", {
           value: province
         }, province);
-      })))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
-        "class": "form-group row"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("label", {
-        "for": "firstName",
-        "class": "col-sm-3 col-form-label"
-      }, "Ciudad", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("sup", {
+      })), this.state.errorField.indexOf("province") != -1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
         "class": "text-danger"
-      }, "*")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
-        "class": "col-sm-9"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("input", {
-        type: "text",
-        "class": "form-control",
-        placeholder: "Sevilla",
-        value: this.state.fieldCity,
-        onChange: function onChange(event) {
-          return _this2.setState({
-            fieldCity: event.target.value
-          });
-        }
-      }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+      }, this.state.errorMessages[this.state.errorField.indexOf("province")]) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         "class": "form-group row"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("label", {
         "for": "firstName",
@@ -41414,11 +41490,9 @@ var Form = /*#__PURE__*/function (_Component) {
             fieldPostCode: event.target.value
           });
         }
-      }))), this.state.errorFieldUser.map(function (itemerror) {
-        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
-          "class": "text-danger"
-        }, "*", itemerror);
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
+      }), this.state.errorField.indexOf("postCode") != -1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
+        "class": "text-danger"
+      }, this.state.errorMessages[this.state.errorField.indexOf("postCode")]) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
         style: {
           color: "#099C01"
         }
@@ -41441,7 +41515,9 @@ var Form = /*#__PURE__*/function (_Component) {
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("label", {
         "for": "firstName",
         "class": "col-sm-3 col-form-label"
-      }, "Contrase\xF1a"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+      }, "Contrase\xF1a", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("sup", {
+        "class": "text-danger"
+      }, "*")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         "class": "col-sm-9"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("input", {
         type: "password",
@@ -41452,12 +41528,16 @@ var Form = /*#__PURE__*/function (_Component) {
             fieldPassword: event.target.value
           });
         }
-      }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+      }), this.state.errorField.indexOf("password") != -1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
+        "class": "text-danger"
+      }, this.state.errorMessages[this.state.errorField.indexOf("password")]) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         "class": "form-group row"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("label", {
         "for": "firstName",
         "class": "col-sm-3 col-form-label"
-      }, "Confirma contrase\xF1a"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+      }, "Confirma contrase\xF1a", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("sup", {
+        "class": "text-danger"
+      }, "*")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         "class": "col-sm-9"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("input", {
         type: "password",
@@ -41468,11 +41548,9 @@ var Form = /*#__PURE__*/function (_Component) {
             fieldConfirmPassword: event.target.value
           });
         }
-      }))), this.state.errorFieldPassword.map(function (itemerror) {
-        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
-          "class": "text-danger"
-        }, "*", itemerror);
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
+      }), this.state.errorField.indexOf("confirmPassword") != -1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
+        "class": "text-danger"
+      }, this.state.errorMessages[this.state.errorField.indexOf("confirmPassword")]) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
         style: {
           color: "#099C01"
         }
@@ -41492,8 +41570,7 @@ var Form = /*#__PURE__*/function (_Component) {
     key: "onClickSave",
     value: function () {
       var _onClickSave = _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_6___default.a.mark(function _callee2() {
-        var res, dataError, _dataError, _dataError2, error, _dataError3;
-
+        var res, errFields, errMess, error;
         return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_6___default.a.wrap(function _callee2$(_context2) {
           while (1) {
             switch (_context2.prev = _context2.next) {
@@ -41504,54 +41581,36 @@ var Form = /*#__PURE__*/function (_Component) {
               case 2:
                 res = _context2.sent;
 
-                if (this.state.fieldPassword != "" || this.state.fieldConfirmPassword != "") {
-                  if (this.state.fieldPassword.length < 8 || this.state.fieldPassword.length > 20) {
-                    dataError = [];
-                    dataError.push("La contraseña debe contener entre 8 y 20 carácteres.");
-                    this.setState({
-                      errorFieldPassword: dataError
-                    });
-                  } else if (this.state.fieldPassword != this.state.fieldConfirmPassword) {
-                    _dataError = [];
-
-                    _dataError.push("Las contraseñas no coinciden.");
-
-                    this.setState({
-                      errorFieldPassword: _dataError
-                    });
-                  } else if (res.success) {
+                if (res.success) {
+                  if (this.state.fieldPassword != "" && this.state.fieldConfirmPassword != "") {
                     this.setState({
                       messageCorrectPassword: "*La contraseña se ha cambiado con éxito.",
                       errorFieldPassword: [],
                       messageCorrectUser: "",
                       fieldPassword: "",
-                      fieldConfirmPassword: ""
+                      fieldConfirmPassword: "",
+                      errorField: [],
+                      errorMessages: []
+                    });
+                  } else {
+                    this.setState({
+                      messageCorrectUser: "*Los datos se han actualizado con éxito.",
+                      messageCorrectPassword: "",
+                      errorField: [],
+                      errorMessages: []
                     }); //window.location.replace("/profile")
                   }
-                } else if (res.success) {
-                  this.setState({
-                    messageCorrectUser: "*Los datos se han actualizado con éxito.",
-                    messageCorrectPassword: "",
-                    errorFieldUser: []
-                  }); //window.location.replace("/profile")
-                } else if (res.status == 400) {
-                  _dataError2 = [];
-                  error = res.data.errors;
-                  error.map(function (itemerror) {
-                    _dataError2.push(itemerror.defaultMessage);
-                  });
-                  this.setState({
-                    errorFieldUser: _dataError2,
-                    messageCorrectUser: ""
-                  });
                 } else {
-                  _dataError3 = [];
-
-                  _dataError3.push(res.message);
-
+                  errFields = [];
+                  errMess = [];
+                  error = res.errors;
+                  error.map(function (itemerror) {
+                    errFields.push(itemerror.field);
+                    errMess.push(itemerror.defaultMessage);
+                  });
                   this.setState({
-                    errorFieldUser: _dataError3,
-                    messageCorrectUser: ""
+                    errorField: errFields,
+                    errorMessages: errMess
                   });
                 }
 
@@ -41836,6 +41895,7 @@ var Form = /*#__PURE__*/function (_Component) {
       fieldConfirmPassword: "",
       fieldCheckbok: false,
       errorField: [],
+      errorMessages: [],
       provinces: []
     };
     return _this;
@@ -41912,7 +41972,9 @@ var Form = /*#__PURE__*/function (_Component) {
             fieldName: event.target.value
           });
         }
-      }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+      }), this.state.errorField.indexOf("name") != -1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
+        "class": "text-danger"
+      }, this.state.errorMessages[this.state.errorField.indexOf("name")]) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         "class": "form-group row"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("label", {
         "for": "firstName",
@@ -41930,7 +41992,9 @@ var Form = /*#__PURE__*/function (_Component) {
             fieldUsername: event.target.value
           });
         }
-      }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+      }), this.state.errorField.indexOf("username") != -1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
+        "class": "text-danger"
+      }, this.state.errorMessages[this.state.errorField.indexOf("username")]) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         "class": "form-group row"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("label", {
         "for": "firstName",
@@ -41949,7 +42013,9 @@ var Form = /*#__PURE__*/function (_Component) {
             fieldEmail: event.target.value
           });
         }
-      }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+      }), this.state.errorField.indexOf("email") != -1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
+        "class": "text-danger"
+      }, this.state.errorMessages[this.state.errorField.indexOf("email")]) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         "class": "form-group row"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("label", {
         "for": "firstName",
@@ -41968,7 +42034,9 @@ var Form = /*#__PURE__*/function (_Component) {
             fieldBirthDate: event.target.value
           });
         }
-      }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+      }), this.state.errorField.indexOf("birthDate") != -1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
+        "class": "text-danger"
+      }, this.state.errorMessages[this.state.errorField.indexOf("birthDate")]) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         "class": "form-group row"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("label", {
         "for": "firstName",
@@ -41980,14 +42048,16 @@ var Form = /*#__PURE__*/function (_Component) {
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("input", {
         type: "tel",
         "class": "form-control",
-        placeholder: "+34 123456789",
+        placeholder: "+34123456789",
         value: this.state.fieldPhone,
         onChange: function onChange(event) {
           return _this2.setState({
-            fieldPhone: event.target.value
+            fieldPhone: event.target.value.replace(" ", "")
           });
         }
-      }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+      }), this.state.errorField.indexOf("phone") != -1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
+        "class": "text-danger"
+      }, this.state.errorMessages[this.state.errorField.indexOf("phone")]) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         "class": "form-group row"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("label", {
         "for": "firstName",
@@ -42008,26 +42078,9 @@ var Form = /*#__PURE__*/function (_Component) {
         return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("option", {
           value: province
         }, province);
-      })))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
-        "class": "form-group row"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("label", {
-        "for": "firstName",
-        "class": "col-sm-3 col-form-label"
-      }, "Ciudad", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("sup", {
+      })), this.state.errorField.indexOf("province") != -1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
         "class": "text-danger"
-      }, "*")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
-        "class": "col-sm-9"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("input", {
-        type: "text",
-        "class": "form-control",
-        placeholder: "Sevilla",
-        value: this.state.fieldCity,
-        onChange: function onChange(event) {
-          return _this2.setState({
-            fieldCity: event.target.value
-          });
-        }
-      }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+      }, this.state.errorMessages[this.state.errorField.indexOf("province")]) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         "class": "form-group row"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("label", {
         "for": "firstName",
@@ -42046,7 +42099,9 @@ var Form = /*#__PURE__*/function (_Component) {
             fieldPostCode: event.target.value
           });
         }
-      }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+      }), this.state.errorField.indexOf("postCode") != -1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
+        "class": "text-danger"
+      }, this.state.errorMessages[this.state.errorField.indexOf("postCode")]) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         "class": "form-group row"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("label", {
         "for": "firstName",
@@ -42064,7 +42119,9 @@ var Form = /*#__PURE__*/function (_Component) {
             fieldPassword: event.target.value
           });
         }
-      }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+      }), this.state.errorField.indexOf("password") != -1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
+        "class": "text-danger"
+      }, this.state.errorMessages[this.state.errorField.indexOf("password")]) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         "class": "form-group row"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("label", {
         "for": "firstName",
@@ -42082,7 +42139,9 @@ var Form = /*#__PURE__*/function (_Component) {
             fieldConfirmPassword: event.target.value
           });
         }
-      }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+      }), this.state.errorField.indexOf("confirmPassword") != -1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
+        "class": "text-danger"
+      }, this.state.errorMessages[this.state.errorField.indexOf("confirmPassword")]) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         "class": "form-group row"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("label", {
         "for": "firstName",
@@ -42100,11 +42159,9 @@ var Form = /*#__PURE__*/function (_Component) {
         type: "checkbox"
       }), " Acepto los t\xE9rminos y condiciones", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("sup", {
         "class": "text-danger"
-      }, "*"))), this.state.errorField.map(function (itemerror) {
-        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
-          "class": "text-danger"
-        }, "*", itemerror);
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+      }, "*"), this.state.errorField.indexOf("accept") != -1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
+        "class": "text-danger"
+      }, this.state.errorMessages[this.state.errorField.indexOf("accept")]) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         "class": "form-group row"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         "class": "col-sm-6"
@@ -42122,8 +42179,7 @@ var Form = /*#__PURE__*/function (_Component) {
     key: "onClickSave",
     value: function () {
       var _onClickSave = _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_6___default.a.mark(function _callee2() {
-        var res, dataError, _dataError, _dataError2, _dataError3, error, _dataError4;
-
+        var res, errFields, errMess, error;
         return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_6___default.a.wrap(function _callee2$(_context2) {
           while (1) {
             switch (_context2.prev = _context2.next) {
@@ -42134,49 +42190,20 @@ var Form = /*#__PURE__*/function (_Component) {
               case 2:
                 res = _context2.sent;
 
-                if (this.state.fieldPassword == "" && this.state.fieldConfirmPassword == "") {
-                  dataError = [];
-                  dataError.push("La contraseña es un campo requerido.");
-                  this.setState({
-                    errorField: dataError
-                  });
-                } else if (this.state.fieldPassword != this.state.fieldConfirmPassword) {
-                  _dataError = [];
-
-                  _dataError.push("Las contraseñas no coinciden.");
-
-                  this.setState({
-                    errorField: _dataError
-                  });
-                } else if (this.state.fieldCheckbok == false) {
-                  _dataError2 = [];
-
-                  _dataError2.push("Debe aceptar los términos y condiciones.");
-
-                  this.setState({
-                    errorField: _dataError2
-                  });
+                if (res.success) {
+                  window.location.replace("/");
                 } else {
-                  if (res.success) {
-                    window.location.replace("/");
-                  } else if (res.status == 400) {
-                    _dataError3 = [];
-                    error = res.data.errors;
-                    error.map(function (itemerror) {
-                      _dataError3.push(itemerror.defaultMessage);
-                    });
-                    this.setState({
-                      errorField: _dataError3
-                    });
-                  } else {
-                    _dataError4 = [];
-
-                    _dataError4.push(res.message);
-
-                    this.setState({
-                      errorField: _dataError4
-                    });
-                  }
+                  errFields = [];
+                  errMess = [];
+                  error = res.errors;
+                  error.map(function (itemerror) {
+                    errFields.push(itemerror.field);
+                    errMess.push(itemerror.defaultMessage);
+                  });
+                  this.setState({
+                    errorField: errFields,
+                    errorMessages: errMess
+                  });
                 }
 
               case 4:
@@ -42316,10 +42343,10 @@ var List = /*#__PURE__*/function (_Component) {
     value: function render() {
       var _this2 = this;
 
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("div", null, this.state.books.length == 0 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("strong", null, "\xBFNo tienes todav\xEDa libros favoritos? ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("a", {
-        href: "/",
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("div", null, this.state.books.length == 0 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("strong", null, "\xBFNo tienes todav\xEDa libros favoritos? ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("a", {
+        href: "/books/all/0",
         "class": "btn btn-primary"
-      }, "A\xF1ade uno"))) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("center", null, this.state.pages.length > 1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("center", null, this.state.actualPage != 0 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("a", {
+      }, "\xA1A\xF1ade uno!"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", null)) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("center", null, this.state.pages.length > 1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("center", null, this.state.actualPage != 0 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("a", {
         "class": "btn btn-primary",
         href: "/favourites/" + parseInt(this.state.actualPage - 1)
       }, "Anterior") : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", null), this.state.pages.map(function (page) {

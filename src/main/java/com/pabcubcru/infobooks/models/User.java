@@ -8,6 +8,7 @@ import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Past;
 import javax.validation.constraints.Pattern;
 
+import org.springframework.data.annotation.Transient;
 import org.springframework.data.elasticsearch.annotations.DateFormat;
 import org.springframework.data.elasticsearch.annotations.Document;
 import org.springframework.data.elasticsearch.annotations.Field;
@@ -42,10 +43,6 @@ public class User extends BaseEntity {
 	@Field(type = FieldType.Text, name = "province")
 	private String province;
 
-	@NotBlank(message = "La ciudad es un campo requerido.")
-	@Field(type = FieldType.Text, name = "city")
-	private String city;
-
 	@Field(type = FieldType.Text, name = "postCode")
 	@Pattern(regexp = "0[1-9][0-9]{3}|[1-4][0-9]{4}|5[0-2][0-9]{3}", message = "El código postal no es válido.")
 	private String postCode;
@@ -59,5 +56,11 @@ public class User extends BaseEntity {
 
 	@Field(type = FieldType.Boolean, name = "enabled")
     private boolean enabled;
+
+	@Transient
+	private Boolean accept;
+
+	@Transient
+	private String confirmPassword;
 
 }

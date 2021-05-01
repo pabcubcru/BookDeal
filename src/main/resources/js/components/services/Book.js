@@ -15,7 +15,6 @@ book.create = async(state) => {
         description: state.fieldDescription,
         image: state.fieldImage,
         status: state.fieldStatus,
-        action: state.fieldAction,
         price: state.fieldPrice
     }
 
@@ -41,7 +40,6 @@ book.edit = async(state) => {
         description: state.fieldDescription,
         image: state.fieldImage,
         status: state.fieldStatus,
-        action: state.fieldAction,
         price: state.fieldPrice
     }
 

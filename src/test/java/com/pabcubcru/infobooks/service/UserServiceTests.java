@@ -21,7 +21,6 @@ public class UserServiceTests {
     public void shouldFindUserById() throws Exception {
         User user = this.userService.findUserById("userTest-pablo123");
         Assertions.assertThat(user.getUsername()).isEqualTo("pablo123");
-        Assertions.assertThat(user.getCity()).isEqualTo("Sevilla");
     }
 
     @Test

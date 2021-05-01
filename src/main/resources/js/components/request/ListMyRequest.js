@@ -39,7 +39,9 @@ export default class List extends Component {
         return (
             <div>
               {this.state.requests.length == 0 ?
-                <p><strong>¿No tienes todavía peticiones? <a href="/" class="btn btn-primary">Realiza una!</a></strong></p>
+                <div><p><strong>¿No tienes todavía peticiones? <a href="/books/all/0" class="btn btn-primary">¡Realiza una!</a></strong></p><br></br>
+                <br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br>
+                <br></br><br></br></div>
                 :
                 <center>
                   {this.state.pages.length > 1 ? 
@@ -56,7 +58,7 @@ export default class List extends Component {
                 {this.state.requests.map((request, i) => {
                     return(
                     <div style={{backgroundImage: "url(https://i.pinimg.com/originals/8d/23/06/8d2306b98839234e49ce96a8b76e20ae.jpg)", 
-                    backgroundSize: "auto auto", padding: "30px", paddingTop:"20px", marginBlock:"30px", margin:"0px 20px 20px 0px", borderRadius: '5px', width: request.action == "VENTA" ? "300px" : "380px", height: '520px', display:"inline-grid"}}>
+                    backgroundSize: "auto auto", padding: "15px", paddingTop:"20px", marginBlock:"15px", margin:"0px 12px 30px 0px", borderRadius: '5px', width: "32%", display:"inline-grid"}}>
 
                     {request.action == "INTERCAMBIO" ?
                       <center><h4><strong><u>INTERCAMBIO</u><br></br></strong></h4></center>
@@ -73,7 +75,7 @@ export default class List extends Component {
                     }
                     <center>
 
-                    {request.action == "VENTA" ?
+                    {request.action == "COMPRA" ?
                       <p><strong>Precio original: </strong>{this.state.books2[i].price} €</p>
                     :
                       <p></p>

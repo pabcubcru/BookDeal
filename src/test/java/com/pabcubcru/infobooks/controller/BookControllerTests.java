@@ -62,7 +62,6 @@ public class BookControllerTests {
         book.setDescription("Description Test");
         book.setImage("https://i.pinimg.com/originals/8d/23/06/8d2306b98839234e49ce96a8b76e20ae.jpg");
         book.setStatus("COMO NUEVO");
-        book.setAction("INTERCAMBIO");
         book.setUsername("test001");
 
         Book book2 = new Book();

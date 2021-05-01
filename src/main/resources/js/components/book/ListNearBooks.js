@@ -41,7 +41,9 @@ export default class List extends Component {
         return (
             <div >
                 {this.state.books.length == 0 ?
-                  <p><b>Actualmente no existen libros para mostrar cerca de usted.</b></p>
+                  <div><p><b>Actualmente no existen libros para mostrar cerca de usted.</b></p><br></br>
+                  <br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br>
+                  <br></br><br></br></div>
                 :
                   <center>
                   {this.state.books.length != 0 && this.state.pages.length > 1 ?

@@ -25,7 +25,9 @@ export default class List extends Component {
       return (
         <div >
             {this.state.books.length == 0 ?
-                  <p><b>¿Todavía no has añadido ningún libro? <a class="btn btn-primary" href="/books/new">Añade uno!</a></b></p>
+                  <div><p><b>¿Todavía no has añadido ningún libro? <a class="btn btn-primary" href="/books/new">Añade uno!</a></b></p><br></br>
+                  <br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br>
+                  <br></br><br></br></div>
                 :
                   <center>
                   {this.state.books.length != 0 && this.state.pages.length > 1 ?

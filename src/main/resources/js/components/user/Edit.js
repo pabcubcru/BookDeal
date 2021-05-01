@@ -17,8 +17,8 @@ export default class Form extends Component {
         fieldPostCode:"",
         fieldPassword: "",
         fieldConfirmPassword: "",
-        errorFieldUser:[],
-        errorFieldPassword:[],
+        errorField:[],
+        errorMessages:[],
         messageCorrectUser:"",
         messageCorrectPassword:"",
         provinces:[]
@@ -61,7 +61,12 @@ export default class Form extends Component {
           <div class="col-sm-9">
             <input type="text" class="form-control"
               value={this.state.fieldName} 
-              onChange={(event)=>this.setState({fieldName:event.target.value})} required/>
+              onChange={(event)=>this.setState({fieldName:event.target.value})}/>
+              {this.state.errorField.indexOf("name") != -1 ? 
+                <p class='text-danger'>{this.state.errorMessages[this.state.errorField.indexOf("name")]}</p>
+              :
+                <p></p>
+              }
           </div>
         </div>
 
@@ -80,6 +85,11 @@ export default class Form extends Component {
             <input type="email" class="form-control" placeholder="email@email.com"  
               value={this.state.fieldEmail} 
               onChange={(event)=>this.setState({fieldEmail:event.target.value})}/>
+              {this.state.errorField.indexOf("email") != -1 ? 
+                <p class='text-danger'>{this.state.errorMessages[this.state.errorField.indexOf("email")]}</p>
+              :
+                <p></p>
+              }
           </div>
         </div>
 
@@ -89,37 +99,43 @@ export default class Form extends Component {
             <input type="date" class="form-control" placeholder="dd/MM/yyyy"  
               value={this.state.fieldBirthDate} 
               onChange={(event)=>this.setState({fieldBirthDate:event.target.value})}/>
+              {this.state.errorField.indexOf("birthDate") != -1 ? 
+                <p class='text-danger'>{this.state.errorMessages[this.state.errorField.indexOf("birthDate")]}</p>
+              :
+                <p></p>
+              }
           </div>
         </div>
 
 				<div class="form-group row">
             <label for="firstName" class="col-sm-3 col-form-label">Teléfono<sup class='text-danger'>*</sup></label>
           <div class="col-sm-9">
-            <input type="tel" class="form-control" placeholder="+34 123456789"  
+            <input type="tel" class="form-control" placeholder="+34123456789"  
               value={this.state.fieldPhone} 
-              onChange={(event)=>this.setState({fieldPhone:event.target.value})}/>
+              onChange={(event)=>this.setState({fieldPhone:event.target.value.replace(" ", "")})}/>
+              {this.state.errorField.indexOf("phone") != -1 ? 
+                <p class='text-danger'>{this.state.errorMessages[this.state.errorField.indexOf("phone")]}</p>
+              :
+                <p></p>
+              }
           </div>
         </div>
 
         <div class="form-group row">
             <label for="firstName" class="col-sm-3 col-form-label">Provincia<sup class='text-danger'>*</sup></label>
           <div class="col-sm-9">
-            <select class="form-control" value={this.state.fieldProvince} id="selectProvince" onChange={(event) => this.setState({fieldProvince:event.target.value})}>
+            <select class="form-control" id="selectProvince" value={this.state.fieldProvince} onChange={(event) => this.setState({fieldProvince:event.target.value})}>
             {this.state.provinces.map((province) => {
               return (
-                <option value={province} >{province}</option>
+                <option value={province}>{province}</option>
               )
             })}
             </select>
-          </div>
-        </div>
-
-        <div class="form-group row">
-            <label for="firstName" class="col-sm-3 col-form-label">Ciudad<sup class='text-danger'>*</sup></label>
-          <div class="col-sm-9">
-            <input type="text" class="form-control" placeholder="Sevilla"  
-              value={this.state.fieldCity} 
-              onChange={(event)=>this.setState({fieldCity:event.target.value})}/>
+              {this.state.errorField.indexOf("province") != -1 ? 
+                <p class='text-danger'>{this.state.errorMessages[this.state.errorField.indexOf("province")]}</p>
+              :
+                <p></p>
+              }
           </div>
         </div>
 
@@ -129,15 +145,13 @@ export default class Form extends Component {
             <input type="text" class="form-control" placeholder="41012"  
               value={this.state.fieldPostCode} 
               onChange={(event)=>this.setState({fieldPostCode:event.target.value})}/>
+              {this.state.errorField.indexOf("postCode") != -1 ? 
+                <p class='text-danger'>{this.state.errorMessages[this.state.errorField.indexOf("postCode")]}</p>
+              :
+                <p></p>
+              }
           </div>
         </div>
-
-        {
-        this.state.errorFieldUser.map((itemerror) => {
-            return(
-              <p class='text-danger'>*{itemerror}</p>)
-            })
-        }
 
         {<p style={{color: "#099C01"}}>{this.state.messageCorrectUser}</p>}
 
@@ -151,29 +165,32 @@ export default class Form extends Component {
         <h1 style={{color: "#007bff"}}>Cambiar contraseña</h1>
         <br></br>
         <div class="form-group row">
-            <label for="firstName" class="col-sm-3 col-form-label">Contraseña</label>
+            <label for="firstName" class="col-sm-3 col-form-label">Contraseña<sup class='text-danger'>*</sup></label>
           <div class="col-sm-9">
-            <input type="password" class="form-control"  
+            <input type="password" class="form-control"
               value={this.state.fieldPassword} 
-              onChange={(event)=>this.setState({fieldPassword:event.target.value})}/>
+              onChange={(event)=>this.setState({fieldPassword: event.target.value})}/>
+              {this.state.errorField.indexOf("password") != -1 ? 
+                <p class='text-danger'>{this.state.errorMessages[this.state.errorField.indexOf("password")]}</p>
+              :
+                <p></p>
+              }
           </div>
         </div>
 
         <div class="form-group row">
-            <label for="firstName" class="col-sm-3 col-form-label">Confirma contraseña</label>
+            <label for="firstName" class="col-sm-3 col-form-label">Confirma contraseña<sup class='text-danger'>*</sup></label>
           <div class="col-sm-9">
             <input type="password" class="form-control"
               value={this.state.fieldConfirmPassword} 
-              onChange={(event)=>this.setState({fieldConfirmPassword:event.target.value})}/>
+              onChange={(event)=>this.setState({fieldConfirmPassword: event.target.value})}/>
+              {this.state.errorField.indexOf("confirmPassword") != -1 ? 
+                <p class='text-danger'>{this.state.errorMessages[this.state.errorField.indexOf("confirmPassword")]}</p>
+              :
+                <p></p>
+              }
           </div>
         </div>
-
-        {
-        this.state.errorFieldPassword.map((itemerror) => {
-            return(
-              <p class='text-danger'>*{itemerror}</p>)
-            })
-        }
 
         {<p style={{color: "#099C01"}}>{this.state.messageCorrectPassword}</p>}
 
@@ -191,34 +208,24 @@ export default class Form extends Component {
 
     async onClickSave() {
         const res = await userService.edit(this.state)
-        if(this.state.fieldPassword != "" || this.state.fieldConfirmPassword != ""){
-          if(this.state.fieldPassword.length < 8 || this.state.fieldPassword.length > 20) {
-            const dataError = []
-			      dataError.push("La contraseña debe contener entre 8 y 20 carácteres.");
-			      this.setState({errorFieldPassword:dataError});
-          } else if(this.state.fieldPassword != this.state.fieldConfirmPassword) {
-            const dataError = []
-            dataError.push("Las contraseñas no coinciden.");
-            this.setState({errorFieldPassword:dataError});
-          } else if(res.success) {
+        if (res.success) {
+          if(this.state.fieldPassword != "" && this.state.fieldConfirmPassword != ""){
             this.setState({messageCorrectPassword: "*La contraseña se ha cambiado con éxito.", 
-            errorFieldPassword:[], messageCorrectUser:"", fieldPassword:"", fieldConfirmPassword:""})
+            errorFieldPassword:[], messageCorrectUser:"", fieldPassword:"", fieldConfirmPassword:"", errorField:[], errorMessages:[]})
+          } else {
+            this.setState({messageCorrectUser: "*Los datos se han actualizado con éxito.", 
+            messageCorrectPassword:"", errorField:[], errorMessages:[]})
             //window.location.replace("/profile")
           }
-        } else if (res.success) {
-            this.setState({messageCorrectUser: "*Los datos se han actualizado con éxito.", 
-            messageCorrectPassword:"", errorFieldUser:[]})
-            //window.location.replace("/profile")
-        } else if (res.status==400) {
-            const dataError = []
-            const error = res.data.errors
-            error.map((itemerror)=>{
-            dataError.push(itemerror.defaultMessage)})
-            this.setState({errorFieldUser:dataError, messageCorrectUser:""})
         } else {
-            const dataError = []
-            dataError.push(res.message);
-            this.setState({errorFieldUser:dataError, messageCorrectUser:""});
+          const errFields = []
+          const errMess = []
+          const error = res.errors
+          error.map((itemerror)=>{
+          errFields.push(itemerror.field)
+          errMess.push(itemerror.defaultMessage)
+          })
+          this.setState({errorField:errFields, errorMessages:errMess})
         }
 	}
 }

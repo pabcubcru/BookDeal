@@ -1,6 +1,7 @@
 package com.pabcubcru.infobooks.controllers;
 
 import java.security.Principal;
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -24,6 +25,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -75,47 +77,73 @@ public class BookController {
     public ModelAndView mainWithUserSecurity(Principal principal, @PathVariable("id") String id) {
         ModelAndView model = new ModelAndView();
         model.setViewName("Main");
+
         if(id != null) {
             Book book = this.bookService.findBookById(id);
             if(book == null) {
                 model.setViewName("errors/Error404");
-            } else if(!book.getUsername().equals(principal.getName())) {
-                model.setViewName("errors/Error403");
+            } else {
+                Request requestAcceptedToBook1 = this.requestService.findFirstByIdBook1AndStatus(id, RequestStatus.ACEPTADA.toString());
+                Request requestAcceptedToBook2 = this.requestService.findFirstByIdBook2AndStatus(id, RequestStatus.ACEPTADA.toString());
+                if(requestAcceptedToBook1 != null || requestAcceptedToBook2 != null || !book.getUsername().equals(principal.getName())) {
+                    model.setViewName("errors/Error403");
+                }
             }
+        } else {
+            model.setViewName("errors/Error404");
         }
         
         return model;
     }
 
+    public BindingResult validateBook(Book book, BindingResult result) {
+
+        if(book.getPublicationYear() != null) {
+            if(book.getPublicationYear() > LocalDate.now().getYear()) {
+                result.rejectValue("publicationYear", "El año de publicación debe ser anterior o igual al presente año.", 
+                "El año de publicación debe ser anterior o igual al presente año.");
+            }
+        }
+
+        return result;
+    }
+
     @PostMapping(value = "/new")
-    public Map<String, Object> create(@RequestBody @Valid Book book, Principal principal) {
+    public Map<String, Object> create(@RequestBody @Valid Book book, BindingResult result, Principal principal) {
         Map<String, Object> res = new HashMap<>();
 
-        try{
-            if(book.getAction().equals("INTERCAMBIO")) {
-                book.setPrice(null);
+        result = this.validateBook(book, result);
+        if(!result.hasErrors()) {
+            try{
+                book.setUsername(principal.getName());
+                this.bookService.save(book);
+                res.put("success", true);
+            } catch(Exception e) {
+                res.put("success", false);
             }
-            book.setUsername(principal.getName());
-            this.bookService.save(book);
-            res.put("success", true);
-        } catch(Exception e) {
+        } else {
+            res.put("errors", result.getAllErrors());
             res.put("success", false);
         }
+        
         return res;
     }
 
     @PutMapping(value = "/{id}/edit")
-    public Map<String, Object> edit(@RequestBody @Valid Book book, Principal principal) {
+    public Map<String, Object> edit(@RequestBody @Valid Book book, BindingResult result, Principal principal) {
         Map<String, Object> res = new HashMap<>();
 
-        try{
-            if(book.getAction().equals("INTERCAMBIO")) {
-                book.setPrice(null);
+        result = this.validateBook(book, result);
+        if(!result.hasErrors()) {
+            try{
+                book.setUsername(principal.getName());
+                this.bookService.save(book);
+                res.put("success", true);
+            } catch(Exception e) {
+                res.put("success", false);
             }
-            book.setUsername(principal.getName());
-            this.bookService.save(book);
-            res.put("success", true);
-        } catch(Exception e) {
+        } else {
+            res.put("errors", result.getAllErrors());
             res.put("success", false);
         }
 
@@ -146,14 +174,11 @@ public class BookController {
 
         if(principal == null) {
             pageOfBooks = this.bookService.findAll(pageRequest);
-            numberOfPages = pageOfBooks.getTotalPages();
             res.put("books", pageOfBooks.getContent());
         } else {
             List<Book> books = new ArrayList<>();
             User user = this.userService.findByUsername(principal.getName());
-            Map<Integer, Page<Book>> map = this.bookService.findNearBooks(user, pageRequest, showMode);
-            pageOfBooks = map.values().stream().findFirst().orElse(null);
-            numberOfPages = map.keySet().stream().findFirst().get();
+            pageOfBooks = this.bookService.findNearBooks(user, pageRequest, showMode);
             for(Book b : pageOfBooks.getContent()) {
                 Request requestAcceptedToBook1 = this.requestService.findFirstByIdBook1AndStatus(b.getId(), RequestStatus.ACEPTADA.toString());
                 Request requestAcceptedToBook2 = this.requestService.findFirstByIdBook2AndStatus(b.getId(), RequestStatus.ACEPTADA.toString());
@@ -174,6 +199,7 @@ public class BookController {
             res.put("isAdded", isAdded);
         }
         
+        numberOfPages = pageOfBooks.getTotalPages();
         res.put("numTotalPages", numberOfPages);
         res.put("pages", new ArrayList<Integer>());
         if(numberOfPages > 0) {
@@ -208,7 +234,7 @@ public class BookController {
         Map<String, Object> res = new HashMap<>();
         List<Book> books = new ArrayList<>();
 
-        List<Book> booksForChange = this.bookService.findByUsernameAndAction(principal.getName(), "INTERCAMBIO");
+        List<Book> booksForChange = this.bookService.findByUsername(principal.getName());
 
         for(Book b : booksForChange) {
             Request requestAcceptedToBook1 = this.requestService.findFirstByIdBook1AndStatus(b.getId(), RequestStatus.ACEPTADA.toString());
@@ -236,13 +262,8 @@ public class BookController {
     public Map<String, Object> getBookById(@PathVariable("id") String id, Principal principal) {
         Map<String, Object> res = new HashMap<>();
         try {
+            Book book = this.bookService.findBookById(id);
             if(principal != null) {
-                Request request = this.requestService.findByUsername1AndIdBook2(principal.getName(), id);
-                if(request != null) {
-                    res.put("alreadyRequest", true);
-                } else {
-                    res.put("alreadyRequest", false);
-                }
                 Request requestAcceptedToBook1 = this.requestService.findFirstByIdBook1AndStatus(id, RequestStatus.ACEPTADA.toString());
                 Request requestAcceptedToBook2 = this.requestService.findFirstByIdBook2AndStatus(id, RequestStatus.ACEPTADA.toString());
                 if(requestAcceptedToBook1 != null || requestAcceptedToBook2 != null) {
@@ -250,15 +271,23 @@ public class BookController {
                 } else {
                     res.put("hasRequestAccepted", false);
                 }
+                
+                if(!book.getUsername().equals(principal.getName())) {
+                    if(this.userFavouriteBookService.findByUsernameAndBookId(principal.getName(), book.getId()) == null) {
+                        res.put("isAdded", false);
+                    } else {
+                        res.put("isAdded", true);
+                    }
+                    Request request = this.requestService.findByUsername1AndIdBook2(principal.getName(), id);
+                    if(request != null) {
+                        res.put("alreadyRequest", true);
+                    } else {
+                        res.put("alreadyRequest", false);
+                    }
+                }
             }
-            Book book = this.bookService.findBookById(id);
             res.put("book", book);
             res.put("success", true);
-            if(this.userFavouriteBookService.findByUsernameAndBookId(principal.getName(), book.getId()) == null) {
-                res.put("isAdded", false);
-            } else {
-                res.put("isAdded", true);
-            }
         } catch (Exception e) {
             res.put("success", false);
         }
@@ -272,13 +301,6 @@ public class BookController {
         try {
             Book book = this.bookService.findBookById(id);
             res.put("book", book);
-
-            Request request = this.requestService.findFirstByIdBook1OrIdBook2(id);
-            if(request != null) {
-                res.put("alreadyRequest", true);
-            } else {
-                res.put("alreadyRequest", false);
-            }
             res.put("success", true);
         } catch (Exception e) {
             res.put("success", false);
