@@ -1,12 +1,7 @@
 package com.pabcubcru.infobooks.services;
 
 import java.util.ArrayList;
-import java.util.Collections;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
-import java.util.stream.Collector;
-import java.util.stream.Collectors;
 
 import com.pabcubcru.infobooks.models.Book;
 import com.pabcubcru.infobooks.models.User;
@@ -15,8 +10,6 @@ import com.pabcubcru.infobooks.repository.UserRepository;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
-import org.springframework.data.domain.PageImpl;
-import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -78,38 +71,26 @@ public class BookService {
     }
 
     @Transactional
-    public Map<Integer, Page<Book>> findNearBooks(User user, Pageable pageable, String showMode) {
-        Map<Integer, Page<Book>> res = new HashMap<>();
-        Integer numBooks = 0;
+    public Page<Book> findNearBooks(User user, Pageable pageable, String showMode) {
 
-        Page<User> usersWithSameAddress = null;
-        List<Book> books = new ArrayList<>();
+        List<User> usersWithSameAddress = null;
+        List<String> usernames = new ArrayList<>();
 
         if(showMode.equals("postalCode")) {
-            usersWithSameAddress = this.userRepository.findByPostCode(user.getPostCode(), Pageable.unpaged());
-            usersWithSameAddress.getContent().stream().filter(x -> !x.getUsername().equals(user.getUsername())).forEach(x -> books.addAll(this.bookRepository.findByUsername(x.getUsername(), Pageable.unpaged()).getContent()));
-            numBooks = books.size();
+            usersWithSameAddress = this.userRepository.findByPostCode(user.getPostCode());
+            usersWithSameAddress.stream().filter(x -> !x.getUsername().equals(user.getUsername())).forEach(x -> usernames.add(x.getUsername()));
+
         } else if(showMode.equals("province")) {
-            usersWithSameAddress = this.userRepository.findByProvince(user.getProvince(), Pageable.unpaged());
-            usersWithSameAddress.getContent().stream().filter(x -> !x.getUsername().equals(user.getUsername())).forEach(x -> books.addAll(this.bookRepository.findByUsername(x.getUsername(), Pageable.unpaged()).getContent()));
-            numBooks = books.size();
+            usersWithSameAddress = this.userRepository.findByProvince(user.getProvince());
+            usersWithSameAddress.stream().filter(x -> !x.getUsername().equals(user.getUsername())).forEach(x -> usernames.add(x.getUsername()));
         } else {
-            usersWithSameAddress = this.userRepository.findByPostCodeOrProvince(user.getPostCode(), user.getProvince(), Pageable.unpaged());
-            usersWithSameAddress.getContent().stream().filter(x -> !x.getUsername().equals(user.getUsername())).forEach(x -> books.addAll(this.bookRepository.findByUsername(x.getUsername(), Pageable.unpaged()).getContent()));
-            numBooks = books.size();
+            usersWithSameAddress = this.userRepository.findByPostCodeOrProvince(user.getPostCode(), user.getProvince());
+            usersWithSameAddress.stream().filter(x -> !x.getUsername().equals(user.getUsername())).forEach(x -> usernames.add(x.getUsername()));
         }
 
-        List<Book> listBooks = new ArrayList<>();
+        Page<Book> books = this.bookRepository.findByUsernameIn(usernames, pageable);
 
-        if(numBooks > 0) {
-            for(int i = 21*pageable.getPageNumber(); i<21*pageable.getPageNumber()+21; i++) {
-                if(books.size()-1 >= i) {
-                    listBooks.add(books.get(i));
-                }
-            }
-        }
-        res.put((int) Math.floor((numBooks/21))+1, new PageImpl<>(listBooks, pageable, listBooks.size()));
-        return res;
+        return books;
     }
     
 }

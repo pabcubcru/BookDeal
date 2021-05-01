@@ -2408,7 +2408,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()(_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0___default.a);
 // Module
-___CSS_LOADER_EXPORT___.push([module.i, ".menu, .menu ul, .menu li, .menu a {\r\n  z-index: 5;\r\n  margin: 0;\r\n  padding: 0;\r\n  border: none;\r\n  outline: none;\r\n}\r\n\r\n.menu {\r\n  height: 70px;\r\n  width: 100%;\r\n  background-color: #26272b;\r\n  border-radius: 3px;\r\n  border-radius: 5px;\r\n}\r\n\r\n.menu li {\r\n  position: relative;\r\n  list-style: none;\r\n  float: left;\r\n  display: block;\r\n  height: 50px;\r\n}\r\n\r\n.menu a {\r\n  display: block;\r\n  padding: 0 30px;\r\n  margin: 20px 0;\r\n  line-height: 28px;\r\n  text-decoration: solid;\r\n  \r\n  font-family:\"Trebuchet MS\", Arial, Helvetica, sans-serif;\r\n  font-weight: bold;\r\n  font-size: 20px;\r\n  color: rgb(255, 255, 255);\r\n  \r\n}\r\n\r\n\r\n\r\n.menu li:hover > a {color: #007bff}\r\n\r\n.menu ul {\r\n  position: absolute;\r\n  top: 50px;\r\n  left: 20px;\r\n  \r\n  opacity: 0;\r\n  background: #26272b;\r\n  \r\n  border-radius: 0 0 10px 10px;\r\n  transition: opacity .20s ease .1s;\r\n}\r\n\r\n.menu li:hover > ul {opacity: 1;}\r\n\r\n.menu ul li {\r\n  height: 0;\r\n  overflow: hidden;\r\n  padding: 0;\r\n  \r\n  transition: height .25s ease .1s;\r\n}\r\n\r\n.menu li:hover > ul li {\r\n  height: 50px;\r\n  overflow: visible;\r\n  padding: 0;\r\n}\r\n\r\n.menu ul li a {\r\n  width: 180px;\r\n  padding: 10px 20px;\r\n  margin: 0;\r\n  border: none;\r\n  border-bottom: 1px solid #ffffff;\r\n  font-weight: normal;\r\n}\r\n.menu ul li:last-child a { border: none; }\r\n\r\n.search-box{\r\n  margin-top: 10px;\r\n  top: 50%;\r\n  left: 50%;\r\n  height:40px;\r\n  transform: translate(-50%, -50%);\r\n  position:relative;\r\n  display: flex;\r\n  background-color:#ffffff;\r\n  border-radius: 18px\r\n}\r\n\r\n.search-box button{\r\n  width: 40px;\r\n  height:40px ;\r\n  border-radius: 50%;\r\n  border:none;\r\n  color:#2C3A47;\r\n}\r\n\r\n.search-box input{\r\n  border:none;\r\n  outline:0px;\r\n  padding: 0px 0px;\r\n  background-color:transparent;\r\n  border-radius: 18px;\r\n  color:rgb(0, 0, 0);\r\n  font-size: 20px;\r\n  width: 0px;\r\n  box-sizing: border-box;\r\n  transition: .3s;\r\n}\r\n\r\n.search-box button:hover{\r\n   cursor: pointer;\r\n}\r\n\r\n.search-box:hover .text{\r\n  width:240px;\r\n  padding: 10px 20px;\r\n  \r\n}", "",{"version":3,"sources":["webpack://./src/main/resources/js/components/Nav.css"],"names":[],"mappings":"AAAA;EACE,UAAU;EACV,SAAS;EACT,UAAU;EACV,YAAY;EACZ,aAAa;AACf;;AAEA;EACE,YAAY;EACZ,WAAW;EACX,yBAAyB;EACzB,kBAAkB;EAClB,kBAAkB;AACpB;;AAEA;EACE,kBAAkB;EAClB,gBAAgB;EAChB,WAAW;EACX,cAAc;EACd,YAAY;AACd;;AAEA;EACE,cAAc;EACd,eAAe;EACf,cAAc;EACd,iBAAiB;EACjB,sBAAsB;;EAEtB,wDAAwD;EACxD,iBAAiB;EACjB,eAAe;EACf,yBAAyB;;AAE3B;;;;AAIA,oBAAoB,cAAc;;AAElC;EACE,kBAAkB;EAClB,SAAS;EACT,UAAU;;EAEV,UAAU;EACV,mBAAmB;;EAEnB,4BAA4B;EAC5B,iCAAiC;AACnC;;AAEA,qBAAqB,UAAU,CAAC;;AAEhC;EACE,SAAS;EACT,gBAAgB;EAChB,UAAU;;EAEV,gCAAgC;AAClC;;AAEA;EACE,YAAY;EACZ,iBAAiB;EACjB,UAAU;AACZ;;AAEA;EACE,YAAY;EACZ,kBAAkB;EAClB,SAAS;EACT,YAAY;EACZ,gCAAgC;EAChC,mBAAmB;AACrB;AACA,2BAA2B,YAAY,EAAE;;AAEzC;EACE,gBAAgB;EAChB,QAAQ;EACR,SAAS;EACT,WAAW;EACX,gCAAgC;EAChC,iBAAiB;EACjB,aAAa;EACb,wBAAwB;EACxB;AACF;;AAEA;EACE,WAAW;EACX,YAAY;EACZ,kBAAkB;EAClB,WAAW;EACX,aAAa;AACf;;AAEA;EACE,WAAW;EACX,WAAW;EACX,gBAAgB;EAChB,4BAA4B;EAC5B,mBAAmB;EACnB,kBAAkB;EAClB,eAAe;EACf,UAAU;EACV,sBAAsB;EACtB,eAAe;AACjB;;AAEA;GACG,eAAe;AAClB;;AAEA;EACE,WAAW;EACX,kBAAkB;;AAEpB","sourcesContent":[".menu, .menu ul, .menu li, .menu a {\r\n  z-index: 5;\r\n  margin: 0;\r\n  padding: 0;\r\n  border: none;\r\n  outline: none;\r\n}\r\n\r\n.menu {\r\n  height: 70px;\r\n  width: 100%;\r\n  background-color: #26272b;\r\n  border-radius: 3px;\r\n  border-radius: 5px;\r\n}\r\n\r\n.menu li {\r\n  position: relative;\r\n  list-style: none;\r\n  float: left;\r\n  display: block;\r\n  height: 50px;\r\n}\r\n\r\n.menu a {\r\n  display: block;\r\n  padding: 0 30px;\r\n  margin: 20px 0;\r\n  line-height: 28px;\r\n  text-decoration: solid;\r\n  \r\n  font-family:\"Trebuchet MS\", Arial, Helvetica, sans-serif;\r\n  font-weight: bold;\r\n  font-size: 20px;\r\n  color: rgb(255, 255, 255);\r\n  \r\n}\r\n\r\n\r\n\r\n.menu li:hover > a {color: #007bff}\r\n\r\n.menu ul {\r\n  position: absolute;\r\n  top: 50px;\r\n  left: 20px;\r\n  \r\n  opacity: 0;\r\n  background: #26272b;\r\n  \r\n  border-radius: 0 0 10px 10px;\r\n  transition: opacity .20s ease .1s;\r\n}\r\n\r\n.menu li:hover > ul {opacity: 1;}\r\n\r\n.menu ul li {\r\n  height: 0;\r\n  overflow: hidden;\r\n  padding: 0;\r\n  \r\n  transition: height .25s ease .1s;\r\n}\r\n\r\n.menu li:hover > ul li {\r\n  height: 50px;\r\n  overflow: visible;\r\n  padding: 0;\r\n}\r\n\r\n.menu ul li a {\r\n  width: 180px;\r\n  padding: 10px 20px;\r\n  margin: 0;\r\n  border: none;\r\n  border-bottom: 1px solid #ffffff;\r\n  font-weight: normal;\r\n}\r\n.menu ul li:last-child a { border: none; }\r\n\r\n.search-box{\r\n  margin-top: 10px;\r\n  top: 50%;\r\n  left: 50%;\r\n  height:40px;\r\n  transform: translate(-50%, -50%);\r\n  position:relative;\r\n  display: flex;\r\n  background-color:#ffffff;\r\n  border-radius: 18px\r\n}\r\n\r\n.search-box button{\r\n  width: 40px;\r\n  height:40px ;\r\n  border-radius: 50%;\r\n  border:none;\r\n  color:#2C3A47;\r\n}\r\n\r\n.search-box input{\r\n  border:none;\r\n  outline:0px;\r\n  padding: 0px 0px;\r\n  background-color:transparent;\r\n  border-radius: 18px;\r\n  color:rgb(0, 0, 0);\r\n  font-size: 20px;\r\n  width: 0px;\r\n  box-sizing: border-box;\r\n  transition: .3s;\r\n}\r\n\r\n.search-box button:hover{\r\n   cursor: pointer;\r\n}\r\n\r\n.search-box:hover .text{\r\n  width:240px;\r\n  padding: 10px 20px;\r\n  \r\n}"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.i, ".menu, .menu ul, .menu li, .menu a {\r\n  z-index: 5;\r\n  margin: 0;\r\n  padding: 0;\r\n  border: none;\r\n  outline: none;\r\n}\r\n\r\n.menu {\r\n  height: 70px;\r\n  width: 100%;\r\n  background-color: #26272b;\r\n  border-radius: 3px;\r\n  border-radius: 5px;\r\n}\r\n\r\n.menu li {\r\n  position: relative;\r\n  list-style: none;\r\n  float: left;\r\n  display: block;\r\n  height: 50px;\r\n}\r\n\r\n.menu a {\r\n  display: block;\r\n  padding: 0 30px;\r\n  margin: 20px 0;\r\n  line-height: 28px;\r\n  text-decoration: solid;\r\n  \r\n  font-family:\"Trebuchet MS\", Arial, Helvetica, sans-serif;\r\n  font-weight: bold;\r\n  font-size: 20px;\r\n  color: rgb(255, 255, 255);\r\n  \r\n}\r\n\r\n\r\n\r\n.menu li:hover > a {color: #007bff}\r\n\r\n.menu ul {\r\n  position: absolute;\r\n  top: 50px;\r\n  left: 20px;\r\n  \r\n  opacity: 0;\r\n  background: #26272b;\r\n  \r\n  border-radius: 0 0 10px 10px;\r\n  transition: opacity .20s ease .1s;\r\n}\r\n\r\n.menu li:hover > ul {opacity: 1;}\r\n\r\n.menu ul li {\r\n  height: 0;\r\n  overflow: hidden;\r\n  padding: 0;\r\n  \r\n  transition: height .25s ease .1s;\r\n}\r\n\r\n.menu li:hover > ul li {\r\n  height: 50px;\r\n  overflow: visible;\r\n  padding: 0;\r\n}\r\n\r\n.menu ul li a {\r\n  width: 180px;\r\n  padding: 10px 20px;\r\n  margin: 0;\r\n  border: none;\r\n  border-bottom: 1px solid #ffffff;\r\n  font-weight: normal;\r\n}\r\n.menu ul li:last-child a { border: none; }\r\n\r\n.search-box{\r\n  margin-top: 10px;\r\n  top: 50%;\r\n  left: 50%;\r\n  height:40px;\r\n  transform: translate(-50%, -50%);\r\n  position:relative;\r\n  display: flex;\r\n  background-color:#ffffff;\r\n  border-radius: 18px\r\n}\r\n\r\n.search-box button{\r\n  width: 40px;\r\n  height:40px ;\r\n  border-radius: 50%;\r\n  border:none;\r\n  color:#2C3A47;\r\n}\r\n\r\n.search-box input{\r\n  border:none;\r\n  outline:0px;\r\n  padding: 0px 0px;\r\n  background-color:transparent;\r\n  border-radius: 18px;\r\n  color:rgb(0, 0, 0);\r\n  font-size: 20px;\r\n  width: 0px;\r\n  box-sizing: border-box;\r\n  transition: .3s;\r\n}\r\n\r\n.search-box button:hover{\r\n   cursor: pointer;\r\n}\r\n\r\n.search-box:hover .text{\r\n  width:240px;\r\n  padding: 10px 20px;\r\n  \r\n}\r\n\r\n@media screen and (max-width:1200px) {\r\n  .desktop {\r\n     display: none; \r\n  }\r\n}\r\n\r\n@media screen and (min-width:1200px) {\r\n  .mobile{\r\n     display: none; \r\n  }\r\n}\r\n\r\n.search {\r\n  margin-top: 10px;\r\n  top: 50%;\r\n  left: 50%;\r\n  height:40px;\r\n  transform: translate(-50%, -50%);\r\n  position:relative;\r\n  display: flex;\r\n  background-color:#ffffff;\r\n  border-radius: 18px\r\n}\r\n\r\n.search button{\r\n  width: 40px;\r\n  height:40px ;\r\n  border-radius: 50%;\r\n  border:none;\r\n  color:#2C3A47;\r\n}\r\n\r\n.search input{\r\n  border:none;\r\n  outline:0px;\r\n  padding: 0px 0px;\r\n  background-color:transparent;\r\n  border-radius: 18px;\r\n  color:rgb(0, 0, 0);\r\n  font-size: 20px;\r\n  width: 0px;\r\n  box-sizing: border-box;\r\n  transition: .3s;\r\n}\r\n\r\n.search .text{\r\n  width:150px;\r\n  padding: 10px 20px;\r\n}", "",{"version":3,"sources":["webpack://./src/main/resources/js/components/Nav.css"],"names":[],"mappings":"AAAA;EACE,UAAU;EACV,SAAS;EACT,UAAU;EACV,YAAY;EACZ,aAAa;AACf;;AAEA;EACE,YAAY;EACZ,WAAW;EACX,yBAAyB;EACzB,kBAAkB;EAClB,kBAAkB;AACpB;;AAEA;EACE,kBAAkB;EAClB,gBAAgB;EAChB,WAAW;EACX,cAAc;EACd,YAAY;AACd;;AAEA;EACE,cAAc;EACd,eAAe;EACf,cAAc;EACd,iBAAiB;EACjB,sBAAsB;;EAEtB,wDAAwD;EACxD,iBAAiB;EACjB,eAAe;EACf,yBAAyB;;AAE3B;;;;AAIA,oBAAoB,cAAc;;AAElC;EACE,kBAAkB;EAClB,SAAS;EACT,UAAU;;EAEV,UAAU;EACV,mBAAmB;;EAEnB,4BAA4B;EAC5B,iCAAiC;AACnC;;AAEA,qBAAqB,UAAU,CAAC;;AAEhC;EACE,SAAS;EACT,gBAAgB;EAChB,UAAU;;EAEV,gCAAgC;AAClC;;AAEA;EACE,YAAY;EACZ,iBAAiB;EACjB,UAAU;AACZ;;AAEA;EACE,YAAY;EACZ,kBAAkB;EAClB,SAAS;EACT,YAAY;EACZ,gCAAgC;EAChC,mBAAmB;AACrB;AACA,2BAA2B,YAAY,EAAE;;AAEzC;EACE,gBAAgB;EAChB,QAAQ;EACR,SAAS;EACT,WAAW;EACX,gCAAgC;EAChC,iBAAiB;EACjB,aAAa;EACb,wBAAwB;EACxB;AACF;;AAEA;EACE,WAAW;EACX,YAAY;EACZ,kBAAkB;EAClB,WAAW;EACX,aAAa;AACf;;AAEA;EACE,WAAW;EACX,WAAW;EACX,gBAAgB;EAChB,4BAA4B;EAC5B,mBAAmB;EACnB,kBAAkB;EAClB,eAAe;EACf,UAAU;EACV,sBAAsB;EACtB,eAAe;AACjB;;AAEA;GACG,eAAe;AAClB;;AAEA;EACE,WAAW;EACX,kBAAkB;;AAEpB;;AAEA;EACE;KACG,aAAa;EAChB;AACF;;AAEA;EACE;KACG,aAAa;EAChB;AACF;;AAEA;EACE,gBAAgB;EAChB,QAAQ;EACR,SAAS;EACT,WAAW;EACX,gCAAgC;EAChC,iBAAiB;EACjB,aAAa;EACb,wBAAwB;EACxB;AACF;;AAEA;EACE,WAAW;EACX,YAAY;EACZ,kBAAkB;EAClB,WAAW;EACX,aAAa;AACf;;AAEA;EACE,WAAW;EACX,WAAW;EACX,gBAAgB;EAChB,4BAA4B;EAC5B,mBAAmB;EACnB,kBAAkB;EAClB,eAAe;EACf,UAAU;EACV,sBAAsB;EACtB,eAAe;AACjB;;AAEA;EACE,WAAW;EACX,kBAAkB;AACpB","sourcesContent":[".menu, .menu ul, .menu li, .menu a {\r\n  z-index: 5;\r\n  margin: 0;\r\n  padding: 0;\r\n  border: none;\r\n  outline: none;\r\n}\r\n\r\n.menu {\r\n  height: 70px;\r\n  width: 100%;\r\n  background-color: #26272b;\r\n  border-radius: 3px;\r\n  border-radius: 5px;\r\n}\r\n\r\n.menu li {\r\n  position: relative;\r\n  list-style: none;\r\n  float: left;\r\n  display: block;\r\n  height: 50px;\r\n}\r\n\r\n.menu a {\r\n  display: block;\r\n  padding: 0 30px;\r\n  margin: 20px 0;\r\n  line-height: 28px;\r\n  text-decoration: solid;\r\n  \r\n  font-family:\"Trebuchet MS\", Arial, Helvetica, sans-serif;\r\n  font-weight: bold;\r\n  font-size: 20px;\r\n  color: rgb(255, 255, 255);\r\n  \r\n}\r\n\r\n\r\n\r\n.menu li:hover > a {color: #007bff}\r\n\r\n.menu ul {\r\n  position: absolute;\r\n  top: 50px;\r\n  left: 20px;\r\n  \r\n  opacity: 0;\r\n  background: #26272b;\r\n  \r\n  border-radius: 0 0 10px 10px;\r\n  transition: opacity .20s ease .1s;\r\n}\r\n\r\n.menu li:hover > ul {opacity: 1;}\r\n\r\n.menu ul li {\r\n  height: 0;\r\n  overflow: hidden;\r\n  padding: 0;\r\n  \r\n  transition: height .25s ease .1s;\r\n}\r\n\r\n.menu li:hover > ul li {\r\n  height: 50px;\r\n  overflow: visible;\r\n  padding: 0;\r\n}\r\n\r\n.menu ul li a {\r\n  width: 180px;\r\n  padding: 10px 20px;\r\n  margin: 0;\r\n  border: none;\r\n  border-bottom: 1px solid #ffffff;\r\n  font-weight: normal;\r\n}\r\n.menu ul li:last-child a { border: none; }\r\n\r\n.search-box{\r\n  margin-top: 10px;\r\n  top: 50%;\r\n  left: 50%;\r\n  height:40px;\r\n  transform: translate(-50%, -50%);\r\n  position:relative;\r\n  display: flex;\r\n  background-color:#ffffff;\r\n  border-radius: 18px\r\n}\r\n\r\n.search-box button{\r\n  width: 40px;\r\n  height:40px ;\r\n  border-radius: 50%;\r\n  border:none;\r\n  color:#2C3A47;\r\n}\r\n\r\n.search-box input{\r\n  border:none;\r\n  outline:0px;\r\n  padding: 0px 0px;\r\n  background-color:transparent;\r\n  border-radius: 18px;\r\n  color:rgb(0, 0, 0);\r\n  font-size: 20px;\r\n  width: 0px;\r\n  box-sizing: border-box;\r\n  transition: .3s;\r\n}\r\n\r\n.search-box button:hover{\r\n   cursor: pointer;\r\n}\r\n\r\n.search-box:hover .text{\r\n  width:240px;\r\n  padding: 10px 20px;\r\n  \r\n}\r\n\r\n@media screen and (max-width:1200px) {\r\n  .desktop {\r\n     display: none; \r\n  }\r\n}\r\n\r\n@media screen and (min-width:1200px) {\r\n  .mobile{\r\n     display: none; \r\n  }\r\n}\r\n\r\n.search {\r\n  margin-top: 10px;\r\n  top: 50%;\r\n  left: 50%;\r\n  height:40px;\r\n  transform: translate(-50%, -50%);\r\n  position:relative;\r\n  display: flex;\r\n  background-color:#ffffff;\r\n  border-radius: 18px\r\n}\r\n\r\n.search button{\r\n  width: 40px;\r\n  height:40px ;\r\n  border-radius: 50%;\r\n  border:none;\r\n  color:#2C3A47;\r\n}\r\n\r\n.search input{\r\n  border:none;\r\n  outline:0px;\r\n  padding: 0px 0px;\r\n  background-color:transparent;\r\n  border-radius: 18px;\r\n  color:rgb(0, 0, 0);\r\n  font-size: 20px;\r\n  width: 0px;\r\n  box-sizing: border-box;\r\n  transition: .3s;\r\n}\r\n\r\n.search .text{\r\n  width:150px;\r\n  padding: 10px 20px;\r\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ __webpack_exports__["default"] = (___CSS_LOADER_EXPORT___);
 
@@ -36484,26 +36484,25 @@ var Home = /*#__PURE__*/function (_Component) {
     value: function render() {
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("center", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         style: {
-          backgroundImage: "url(https://i.pinimg.com/originals/8d/23/06/8d2306b98839234e49ce96a8b76e20ae.jpg)",
           borderRadius: '5px'
         }
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("img", {
-        width: "900px",
-        src: "https://cdn.shopify.com/s/files/1/0405/7065/0788/files/logo_welcome.svg_72f96623-3169-48db-b78e-27f4ebc1b6db.png?v=1615208283"
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("h1", {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("img", {
+        width: "300px",
+        height: "200px",
+        src: "https://uses0-my.sharepoint.com/personal/pabcubcru_alum_us_es/Documents/TFG/Logo3.png"
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("h1", {
         style: {
           fontFamily: "cursive",
           fontStyle: "italic"
         }
-      }, "a InfoBooks,"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("h2", {
-        style: {
-          fontFamily: "cursive",
-          fontStyle: "italic"
-        }
-      }, "tu web preferida de intercambio y compra venta de libros."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("a", {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("b", null, "Tu web preferida de intercambio y compra venta de libros.")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("a", {
         href: "/books/all/0",
-        "class": "btn btn-primary"
-      }, "Empezar a buscar libros"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("br", null)));
+        "class": "btn btn-primary",
+        style: {
+          backgroundImage: "url(https://i.pinimg.com/originals/8d/23/06/8d2306b98839234e49ce96a8b76e20ae.jpg)",
+          color: "black"
+        }
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("b", null, "Empezar a buscar libros")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("br", null)));
     }
   }]);
 
@@ -36824,11 +36823,16 @@ var Nav = /*#__PURE__*/function (_Component) {
         button1 = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
           "class": "nav-link ml-auto",
           href: "/login"
-        }, "Iniciar sesi\xF3n");
+        }, "Iniciar sesi\xF3n ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("i", {
+          "class": "fa fa-sign-in",
+          "aria-hidden": "true"
+        }));
         button2 = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
           "class": "nav-link",
           href: "/register"
-        }, "Registrarme");
+        }, "Registro ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("i", {
+          "class": "fa fa-user-plus"
+        }));
       } else {
         button1 = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
           "class": "nav-link",
@@ -36844,6 +36848,8 @@ var Nav = /*#__PURE__*/function (_Component) {
         style: {
           marginBottom: "30px"
         }
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+        "class": "desktop"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("ul", {
         "class": "menu"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
@@ -36925,7 +36931,119 @@ var Nav = /*#__PURE__*/function (_Component) {
         placeholder: "T\xEDtulo, ISBN, ..."
       }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("button", null, " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("i", {
         "class": "fa fa-search"
-      })))))));
+      }))))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+        "class": "mobile"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("ul", {
+        "class": "menu"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
+        href: "/"
+      }, " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("i", {
+        "class": "fa fa-home"
+      }))), this.state.isLogged ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
+        href: "#"
+      }, " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("i", {
+        "class": "fa fa-book"
+      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("ul", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
+        href: "/books/new"
+      }, "A\xF1adir libro")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
+        href: "/books/me/0"
+      }, "Mis libros")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
+        href: "/favourites/0"
+      }, "Mis favoritos")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
+        href: "/books/all/0"
+      }, "Cerca de m\xED")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
+        href: "#"
+      }, "Filtrar por"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("ul", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
+        href: "/books/all/0/postalCode"
+      }, "Mi cod. postal")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
+        href: "/books/all/0/province"
+      }, "Mi provincia")))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
+        href: "#"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("i", {
+        "class": "fa fa-handshake-o",
+        "aria-hidden": "true"
+      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("ul", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
+        href: "/requests/me/0"
+      }, "Enviadas")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
+        href: "/requests/received/0"
+      }, "Recibidas")))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("li", {
+        style: {
+          "float": "right"
+        }
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
+        href: "#"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("i", {
+        "class": "fa fa-user-circle"
+      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("ul", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("li", null, button1), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("li", null, button2))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("li", {
+        style: {
+          "float": "right"
+        }
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
+        href: "#"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("i", {
+        "class": "fa fa-search"
+      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("ul", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("li", {
+        "class": "search-li",
+        style: {
+          backgroundColor: "transparent"
+        }
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+        "class": "search"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("input", {
+        "class": "text",
+        type: "text",
+        placeholder: "T\xEDtulo, ISBN, a\xF1o, ..."
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("button", null, " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("i", {
+        "class": "fa fa-search"
+      }))))))) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("li", {
+        style: {
+          "float": "left"
+        }
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
+        href: "/books/all/0"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("i", {
+        "class": "fa fa-book"
+      }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("li", {
+        style: {
+          "float": "right"
+        }
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
+        "class": "nav-link",
+        href: "/register"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("i", {
+        "class": "fa fa-user-plus"
+      }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("li", {
+        style: {
+          "float": "right"
+        }
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
+        "class": "nav-link ml-auto",
+        href: "/login"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("i", {
+        "class": "fa fa-sign-in",
+        "aria-hidden": "true"
+      }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("li", {
+        style: {
+          "float": "right"
+        }
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
+        href: "#"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("i", {
+        "class": "fa fa-search"
+      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("ul", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("li", {
+        "class": "search-li",
+        style: {
+          backgroundColor: "transparent"
+        }
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+        "class": "search"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("input", {
+        "class": "text",
+        type: "text",
+        placeholder: "T\xEDtulo, ISBN, a\xF1o, ..."
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("button", null, " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("i", {
+        "class": "fa fa-search"
+      }))))))))));
     }
   }]);
 
@@ -38100,69 +38218,86 @@ var Get = /*#__PURE__*/function (_Component) {
       }, this.state.book.description)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         "class": "page__number"
       }, "2")))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("center", null, this.state.username == this.state.book.username ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("center", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("button", {
+        style: {
+          backgroundImage: "url(https://i.pinimg.com/originals/8d/23/06/8d2306b98839234e49ce96a8b76e20ae.jpg)",
+          margin: "10px",
+          color: "black"
+        },
         onClick: function onClick() {
           return _this2.goToEdit(_this2.state.book.id);
         },
-        style: {
-          margin: "10px"
-        },
         "class": "btn btn-primary",
         disabled: this.state.hasRequestAccepted == true
-      }, "Editar"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("button", {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("b", null, "Editar")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("button", {
         onClick: function onClick() {
           return _this2.deleteBook(_this2.state.book.id);
         },
         style: {
-          background: "red",
-          color: "white"
+          color: "red",
+          backgroundImage: "url(https://i.pinimg.com/originals/8d/23/06/8d2306b98839234e49ce96a8b76e20ae.jpg)"
         },
         "class": "btn btn-primary",
         disabled: this.state.hasRequestAccepted == true
-      }, "Eliminar"), this.state.hasRequestAccepted ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("b", null, "Eliminar")), this.state.hasRequestAccepted ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
         "class": "text-danger"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("b", null, "*Tiene una petici\xF3n ACEPTADA")) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null)) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null), this.state.username != null && this.state.username != this.state.book.username ? !this.state.isAdded ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("center", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("b", null, "Tiene una petici\xF3n ACEPTADA")) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null)) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null), this.state.username != null && this.state.username != this.state.book.username ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("center", null, !this.state.isAdded ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("center", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
+        "class": "btn btn-primary",
+        style: {
+          backgroundImage: "url(https://i.pinimg.com/originals/8d/23/06/8d2306b98839234e49ce96a8b76e20ae.jpg)"
+        },
         onClick: function onClick() {
           return _this2.addFavouriteBook(_this2.state.book.id);
-        },
+        }
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("img", {
         style: {
-          color: "white",
-          margin: "10px"
+          height: "30px",
+          width: "30px"
         },
-        "class": "btn btn-primary"
-      }, "A\xF1adir a favoritos")) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("center", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
+        src: "http://assets.stickpng.com/images/5a02bfca18e87004f1ca4395.png"
+      }), " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("b", null, "A\xF1adir a favoritos")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", null)) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("center", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
+        "class": "btn btn-primary",
+        style: {
+          backgroundImage: "url(https://i.pinimg.com/originals/8d/23/06/8d2306b98839234e49ce96a8b76e20ae.jpg)"
+        },
         onClick: function onClick() {
-          _this2.deleteFavouriteBook(_this2.state.book.id, _this2.state.book.title);
-        },
+          return _this2.deleteFavouriteBook(_this2.state.book.id, _this2.state.book.title);
+        }
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("img", {
         style: {
-          background: "red",
-          color: "white"
+          height: "30px",
+          width: "30px"
         },
-        "class": "btn btn-primary"
-      }, "Eliminar de favoritos")) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null), this.state.username != this.state.book.username && this.state.username != null ? !this.state.alreadyRequest ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("center", null, !this.state.hasRequestAccepted ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
+        src: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Coraz%C3%B3n.svg/1121px-Coraz%C3%B3n.svg.png"
+      }), " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("b", null, "Eliminar de favoritos")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", null))) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null), this.state.username != this.state.book.username && this.state.username != null ? !this.state.alreadyRequest ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("center", null, !this.state.hasRequestAccepted ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
         href: "/requests/" + this.state.book.id + "/add",
         style: {
-          color: "white",
-          margin: "10px"
+          color: "black",
+          marginTop: "20px",
+          backgroundImage: "url(https://i.pinimg.com/originals/8d/23/06/8d2306b98839234e49ce96a8b76e20ae.jpg)"
         },
         "class": "btn btn-primary"
-      }, "Realizar petici\xF3n") : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("center", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("button", {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("b", null, "Realizar petici\xF3n")) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("center", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("button", {
         style: {
-          color: "white",
-          margin: "10px"
+          color: "black",
+          marginTop: "20px",
+          backgroundImage: "url(https://i.pinimg.com/originals/8d/23/06/8d2306b98839234e49ce96a8b76e20ae.jpg)"
         },
         "class": "btn btn-primary",
         disabled: true
-      }, "Realizar petici\xF3n"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
-        "class": "text-danger"
-      }, "*Ya tiene una petici\xF3n ACEPTADA"))) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("button", {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("b", null, "Realizar petici\xF3n")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
+        style: {
+          color: "red"
+        }
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("b", null, "Ya tiene una petici\xF3n ACEPTADA")))) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("button", {
         style: {
           background: "#099C01",
-          color: "white",
-          margin: "10px"
+          color: "green",
+          margin: "20px",
+          backgroundImage: "url(https://i.pinimg.com/originals/8d/23/06/8d2306b98839234e49ce96a8b76e20ae.jpg)"
         },
         "class": "btn btn-primary",
         disabled: true
-      }, "Petici\xF3n realizada") : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null)));
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("b", null, "Petici\xF3n realizada")) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null)));
     }
   }, {
     key: "deleteBook",
@@ -38960,7 +39095,7 @@ var List = /*#__PURE__*/function (_Component) {
     value: function render() {
       var _this2 = this;
 
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("div", null, this.state.books.length == 0 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("b", null, "Actualmente no existen libros para mostrar cerca de usted.")) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("center", null, this.state.books.length != 0 && this.state.pages.length > 1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("center", null, this.state.actualPage != 0 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("span", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("a", {
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("div", null, this.state.books.length == 0 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("b", null, "Actualmente no existen libros para mostrar cerca de usted.")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("br", null)) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("center", null, this.state.books.length != 0 && this.state.pages.length > 1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("center", null, this.state.actualPage != 0 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("span", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("a", {
         "class": "btn btn-primary",
         href: "/books/all/0/" + this.state.showMode
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("b", null, String("<<"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("a", {
@@ -39368,7 +39503,7 @@ var Form = /*#__PURE__*/function (_Component) {
       }, "*No tiene libros para intercambiar. ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
         href: "/books/new",
         "class": "btn btn-primary"
-      }, "Sube uno ahora!"))) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null))) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+      }, "\xA1A\xF1ade uno!"))) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null))) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         "class": "form-group row"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("label", {
         "for": "firstName",
@@ -39638,7 +39773,7 @@ var List = /*#__PURE__*/function (_Component) {
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("div", null, this.state.requests.length == 0 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("strong", null, "\xBFNo tienes todav\xEDa peticiones? ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("a", {
         href: "/books/all/0",
         "class": "btn btn-primary"
-      }, "Realiza una!"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", null)) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("center", null, this.state.pages.length > 1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("center", null, this.state.actualPage != 0 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("a", {
+      }, "\xA1Realiza una!"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", null)) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("center", null, this.state.pages.length > 1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("center", null, this.state.actualPage != 0 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("a", {
         "class": "btn btn-primary",
         href: "/requests/me/" + parseInt(this.state.actualPage - 1)
       }, "Anterior") : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", null), this.state.pages.map(function (page) {
@@ -42208,10 +42343,10 @@ var List = /*#__PURE__*/function (_Component) {
     value: function render() {
       var _this2 = this;
 
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("div", null, this.state.books.length == 0 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("strong", null, "\xBFNo tienes todav\xEDa libros favoritos? ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("a", {
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("div", null, this.state.books.length == 0 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("strong", null, "\xBFNo tienes todav\xEDa libros favoritos? ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("a", {
         href: "/books/all/0",
         "class": "btn btn-primary"
-      }, "\xA1A\xF1ade uno!"))) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("center", null, this.state.pages.length > 1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("center", null, this.state.actualPage != 0 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("a", {
+      }, "\xA1A\xF1ade uno!"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", null)) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("center", null, this.state.pages.length > 1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("center", null, this.state.actualPage != 0 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("a", {
         "class": "btn btn-primary",
         href: "/favourites/" + parseInt(this.state.actualPage - 1)
       }, "Anterior") : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", null), this.state.pages.map(function (page) {

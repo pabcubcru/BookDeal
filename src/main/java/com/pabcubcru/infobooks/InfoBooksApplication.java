@@ -174,7 +174,7 @@ public class InfoBooksApplication {
         user.setName("Pablo");
         user.setEmail("pablo@us.es"); 
         user.setPhone("+34654987321");
-        user.setBirthDate(LocalDate.of(2020, 11, 23));
+        user.setBirthDate(LocalDate.of(1998, 11, 23));
         user.setProvince("Sevilla");
         user.setPostCode("41012");
         user.setUsername("pablo123");
@@ -189,7 +189,7 @@ public class InfoBooksApplication {
         user.setName("Juan");
         user.setEmail("juan@us.es"); 
         user.setPhone("+34654987321");
-        user.setBirthDate(LocalDate.of(2020, 11, 23));
+        user.setBirthDate(LocalDate.of(1998, 11, 23));
         user.setProvince("Sevilla");
         user.setPostCode("41012");
         user.setUsername("juan1234");
