@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import bookService from "../services/Book";
 import userService from "../services/User";
 import userFavouriteBook from "../services/UserFavouriteBook";
+import searchService from "../services/Search";
 import "./Pagination.css";
 import "../ListBooks.css";
 
@@ -16,12 +17,12 @@ export default class List extends Component {
       isAdded:false,
       pages:[],
       actualPage:0,
-      numTotalPages:0,
-      nearBooks: true
+      query:""
     }
   }
     
   async componentDidMount() {
+    const query = this.props.match.params.query;
     const page = this.props.match.params.page;
     if(page) {
       this.setState({actualPage:parseInt(page)})
@@ -29,37 +30,29 @@ export default class List extends Component {
       page = 0
     }
 
-    const res = await bookService.listAllExceptMine(page)
+    const res = await searchService.searchBook(query, page)
     
     const username = await userService.getUsername()
 
-    this.setState({books:res.books, username:username.username, isAdded:res.isAdded, pages:res.pages, numTotalPages:parseInt(res.numTotalPages), nearBooks:res.nearBooks})
+    this.setState({books:res.books, username:username.username, query:query, isAdded:res.isAdded, pages:res.pages, numTotalPages:parseInt(res.numTotalPages)})
   }
 
     render() {
         return (
             <div >
-                {this.state.books.length == 0 || this.state.nearBooks == false ?
-                  <div>
-                  <p><b>Actualmente no existen libros para mostrar{this.state.username != null ? ' cerca de usted' : ''}.</b></p>
-                  {this.state.username != null ?
-                  <h2 style={{float:"left", color: "#007bff"}}>Algunas recomendaciones</h2>
-                :
-                    <p></p>
-                  }
-                  <br></br>
-                  </div>
+              {this.state.books.length == 0 ?
+                  <p><b>No se encontraron coincidencias para '{this.state.query}'</b></p>
                 :
                   <center>
                   {this.state.books.length != 0 && this.state.pages.length > 1 ?
-                  <center>{this.state.actualPage != 0 ? <span><a class="btn btn-primary" href={"/books/all/0"}><b>{String("<<")}</b></a><a style={{margin:"5px"}} class="btn btn-primary" href={"/books/all/"+parseInt(this.state.actualPage-1)}><b>{String("<")}</b></a></span> : <p></p>}
+                  <center>{this.state.actualPage != 0 ? <span><a class="btn btn-primary" href={"/search/0/"+this.state.query}><b>{String("<<")}</b></a><a style={{margin:"5px"}} class="btn btn-primary" href={"/search/"+parseInt(this.state.actualPage-1)+"/"+this.state.query}><b>{String("<")}</b></a></span> : <p></p>}
                   {this.state.pages.map((page) => {
                     return(
                       
-                      <a style={{color:this.state.actualPage == page ? "white" : "black", backgroundColor:this.state.actualPage == page ? "#007bff" : ""}} class="pag" href={"/books/all/"+page}>{page}</a>
+                      <a style={{color:this.state.actualPage == page ? "white" : "black", backgroundColor:this.state.actualPage == page ? "#007bff" : ""}} class="pag" href={"/search/"+page+"/"+this.state.query}>{page}</a>
                     )
                   })}
-                  {this.state.actualPage != this.state.numTotalPages-1 ? <span><a style={{margin:"5px"}} class="btn btn-primary" href={"/books/all/"+parseInt(this.state.actualPage+1)}><b>{String(">")}</b></a><a class="btn btn-primary" href={"/books/all/"+parseInt(this.state.numTotalPages-1)}><b>{String(">>")}</b></a></span> : <p></p>}
+                  {this.state.actualPage != this.state.numTotalPages-1 ? <span><a style={{margin:"5px"}} class="btn btn-primary" href={"/search/"+parseInt(this.state.actualPage+1)+"/"+this.state.query}><b>{String(">")}</b></a><a class="btn btn-primary" href={"/search/"+parseInt(this.state.numTotalPages-1)+"/"+this.state.query}><b>{String(">>")}</b></a></span> : <p></p>}
                   </center>
                 :
                   <p></p>
@@ -83,9 +76,9 @@ export default class List extends Component {
                               {book.title} 
                               {this.state.username != null ?
                             this.state.isAdded[i] == false ? 
-                              <a onClick={() => this.addFavouriteBook(book.id, this.state.actualPage)} style={{float:"right"}}><img style={{height:"25px", width:"25px"}} src="http://assets.stickpng.com/images/5a02bfca18e87004f1ca4395.png"></img></a>
+                              <a onClick={() => this.addFavouriteBook(book.id, this.state.query)} style={{float:"right"}}><img style={{height:"25px", width:"25px"}} src="http://assets.stickpng.com/images/5a02bfca18e87004f1ca4395.png"></img></a>
                             :                              
-                            <a onClick={() => {this.deleteFavouriteBook(book.id, book.title, this.state.actualPage)}} style={{float:"right"}}><img style={{height:"25px", width:"25px"}} src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Coraz%C3%B3n.svg/1121px-Coraz%C3%B3n.svg.png"></img></a>
+                            <a onClick={() => {this.deleteFavouriteBook(book.id, book.title, this.state.query)}} style={{float:"right"}}><img style={{height:"25px", width:"25px"}} src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Coraz%C3%B3n.svg/1121px-Coraz%C3%B3n.svg.png"></img></a>
                           :
                             <p></p>
                           }
@@ -98,22 +91,20 @@ export default class List extends Component {
                               <span>{book.action} por {book.price} €</span>
                             :
                               book.action}
-                            </div>
-                            
-                            
+                            </div>                           
                           </div>
                         </div>
                       </main>)
                 })}
                 {this.state.books.length != 0 && this.state.pages.length > 1 ?
-                  <center>{this.state.actualPage != 0 ? <span><a class="btn btn-primary" href={"/books/all/0"}><b>{String("<<")}</b></a><a class="btn btn-primary" style={{margin:"5px"}} href={"/books/all/"+parseInt(this.state.actualPage-1)}><b>{String("<")}</b></a></span> : <p></p>}
+                  <center>{this.state.actualPage != 0 ? <span><a class="btn btn-primary" href={"/search/0/"+this.state.query}>{String("<<")}</a><a class="btn btn-primary" style={{margin:"5px"}} href={"/search/"+parseInt(this.state.actualPage-1)+"/"+this.state.query}>{String("<")}</a></span> : <p></p>}
                   {this.state.pages.map((page) => {
                     return(
                       
-                      <a style={{color:this.state.actualPage == page ? "white" : "black", backgroundColor:this.state.actualPage == page ? "#007bff" : ""}} class="pag" href={"/books/all/"+page}>{page}</a>
+                      <a style={{color:this.state.actualPage == page ? "white" : "black", backgroundColor:this.state.actualPage == page ? "#007bff" : ""}} class="pag" href={"/search/"+page+"/"+this.state.query}>{page}</a>
                     )
                   })}
-                  {this.state.actualPage != this.state.numTotalPages-1 ? <span><a style={{margin:"5px"}} class="btn btn-primary" href={"/books/all/"+parseInt(this.state.actualPage+1)}><b>{String(">")}</b></a><a class="btn btn-primary" href={"/books/all/"+parseInt(this.state.numTotalPages-1)}><b>{String(">>")}</b></a></span> : <p></p>}
+                  {this.state.actualPage != this.state.numTotalPages-1 ? <span><a style={{margin:"5px"}} class="btn btn-primary" href={"/search/"+parseInt(this.state.actualPage+1)+"/"+this.state.query}>{String(">")}</a><a class="btn btn-primary" href={"/search/"+parseInt(this.state.numTotalPages-1)+"/"+this.state.query}>{String(">>")}</a></span> : <p></p>}
                   <br></br><br></br></center>
                 :
                   <p></p>
@@ -122,17 +113,17 @@ export default class List extends Component {
           );
     }
 
-    async addFavouriteBook(id, actualPage) {
+    async addFavouriteBook(id, query, page) {
       const res = await userFavouriteBook.addFavouriteBook(id)
-      window.location.replace("/books/all/"+actualPage)
+      window.location.replace("/search/"+page+"/"+query)
       
     }
 
-    async deleteFavouriteBook(id, title, actualPage) {
+    async deleteFavouriteBook(id, title, query, page) {
       const conf = confirm("¿Está seguro de que quiere eliminar "+title+" de favoritos?")
       if(conf) {
         const res = await userFavouriteBook.deleteFavouriteBook(id)
-        window.location.replace("/books/all/"+actualPage)
+        window.location.replace("/search/"+page+"/"+query)
       }
     }
 }

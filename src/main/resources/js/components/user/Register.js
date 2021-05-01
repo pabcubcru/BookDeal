@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import userService from "../services/User"
+import userService from "../services/User";
+import bookService from "../services/Book";
 import { Link } from "react-router-dom";
 
 export default class Form extends Component {
@@ -13,21 +14,27 @@ export default class Form extends Component {
       fieldBirthDate:"",
       fieldUsername: "",
       fieldCity:"",
-      fieldProvince:"Álava",
+      fieldProvince:"",
       fieldPostCode:"",
+      fieldGenres:"",
       fieldPassword: "",
       fieldConfirmPassword:"",
       fieldCheckbok: false,
       errorField:[],
       errorMessages:[],
-      provinces:[]
+      provinces:[],
+      genres:[],
+      fieldGen:[]
     }
   }
 
   async componentDidMount() {
     const p = await userService.getProvinces()
-    const res = p.provinces
-    this.setState({provinces:res})
+    const provinces = p.provinces
+
+    const genres = await bookService.getGenres()
+    const gen = genres.genres
+    this.setState({provinces:provinces, genres:gen})
   }
 
   render() {
@@ -111,6 +118,7 @@ export default class Form extends Component {
             <label for="firstName" class="col-sm-3 col-form-label">Provincia<sup class='text-danger'>*</sup></label>
           <div class="col-sm-9">
             <select class="form-control" id="selectProvince" onChange={(event) => this.setState({fieldProvince:event.target.value})}>
+            <option value="">Despliega para ver las opciones</option>
             {this.state.provinces.map((province) => {
               return (
                 <option value={province}>{province}</option>
@@ -133,6 +141,24 @@ export default class Form extends Component {
               onChange={(event)=>this.setState({fieldPostCode:event.target.value})}/>
               {this.state.errorField.indexOf("postCode") != -1 ? 
                 <p class='text-danger'>{this.state.errorMessages[this.state.errorField.indexOf("postCode")]}</p>
+              :
+                <p></p>
+              }
+          </div>
+        </div>
+
+        <div class="form-group row">
+            <label for="firstName" class="col-sm-3 col-form-label">Seleccione sus géneros preferidos<sup class='text-danger'>*</sup></label>
+          <div class="col-sm-9">
+          <select class="form-control chosen-select" id="selectGenres" value={this.state.fieldGen} onClick={(event) => this.editGenres(event.target.value)} multiple>
+            {this.state.genres.map((genre) => {
+              return (
+                <option value={genre}>{genre.replaceAll("_", " ")}</option>
+              )
+            })}
+            </select>
+            {this.state.errorField.indexOf("genres") != -1 ? 
+                <p class='text-danger'>{this.state.errorMessages[this.state.errorField.indexOf("genres")]}</p>
               :
                 <p></p>
               }
@@ -209,5 +235,16 @@ export default class Form extends Component {
         this.setState({errorField:errFields, errorMessages:errMess})
       }
 	}
+
+  async editGenres(element) {
+    const gen = this.state.fieldGen
+    if(!gen.includes(element)) {
+      gen.push(element)
+    } else {
+      gen.splice(gen.indexOf(element), 1)
+    }
+    this.setState({fieldGen:gen})
+    this.setState({fieldGenres:gen.join(",")})
+  }
 }
 

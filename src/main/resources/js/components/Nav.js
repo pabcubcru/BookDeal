@@ -10,7 +10,8 @@ export default class Nav extends Component {
     super();
     this.state = {
       isLogged: false,
-      isAdmin: false
+      isAdmin: false,
+      query:""
     }
   }
 
@@ -44,11 +45,13 @@ export default class Nav extends Component {
                 <li ><a  href="/books/new">Añadir libro</a></li>
                 <li ><a  href="/books/me/0">Mis libros</a></li>
                 <li ><a  href="/favourites/0">Mis favoritos</a></li>
+                <li ><a  href="/books/recommend/0">Recomendaciones</a></li>
                 <li ><a  href="/books/all/0">Cerca de mí</a></li>
                 <li ><a  href="#">Filtrar por</a>
                   <ul>
                     <li ><a  href="/books/all/0/postalCode">Mi cod. postal</a></li>
                     <li ><a  href="/books/all/0/province">Mi provincia</a></li>
+                    <li ><a  href="/books/all/0/genres">Mis géneros</a></li>
                   </ul>
                 </li>
             </ul>
@@ -66,16 +69,16 @@ export default class Nav extends Component {
             </ul>
           </li>
           <li style={{float:"right"}}><div class="search-box">
-            <input class="text" type="text" placeholder="Título, ISBN, año, ..."/>
-          <button> <i class="fa fa-search"></i></button></div></li>
+            <input class="text" type="text" placeholder="Título, ISBN, autor, ..." onChange={(event) => this.setState({query:event.target.value})}/>
+          <button type="button" onClick={() => this.search(this.state.query)} disabled={this.state.query.trim() == ''}> <i class="fa fa-search"></i></button></div></li>
           </div>
         :
           <div><li style={{float:"left"}}><a  href="/books/all/0">Libros <i class="fa fa-book"></i></a></li>
           <li style={{float:"right"}}>{button2}</li>
           <li style={{float:"right"}}>{button1}</li>
           <li style={{float:"right"}}><div class="search-box">
-            <input class="text" type="text" placeholder="Título, ISBN, ..."/>
-          <button> <i class="fa fa-search"></i></button></div></li>
+            <input class="text" type="text" placeholder="Título, ISBN, autor, ..." onChange={(event) => this.setState({query:event.target.value})}/>
+          <button type="button" onClick={() => this.search(this.state.query)} disabled={this.state.query.trim() == ''}> <i class="fa fa-search"></i></button></div></li>
           </div>
         }  
           
@@ -91,11 +94,13 @@ export default class Nav extends Component {
                 <li ><a  href="/books/new">Añadir libro</a></li>
                 <li ><a  href="/books/me/0">Mis libros</a></li>
                 <li ><a  href="/favourites/0">Mis favoritos</a></li>
+                <li ><a  href="/books/recommend/0">Recomendaciones</a></li>
                 <li ><a  href="/books/all/0">Cerca de mí</a></li>
                 <li ><a  href="#">Filtrar por</a>
                   <ul>
                     <li ><a  href="/books/all/0/postalCode">Mi cod. postal</a></li>
                     <li ><a  href="/books/all/0/province">Mi provincia</a></li>
+                    <li ><a  href="/books/all/0/genres">Mis géneros</a></li>
                   </ul>
                 </li>
             </ul>
@@ -146,5 +151,8 @@ export default class Nav extends Component {
       </nav>
     )
   }
-}
 
+  async search(query) {
+    window.location.replace("/search/0/"+query)
+  }
+}

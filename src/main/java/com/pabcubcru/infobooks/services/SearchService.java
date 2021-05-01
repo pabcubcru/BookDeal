@@ -1,0 +1,150 @@
+package com.pabcubcru.infobooks.services;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.stream.Collectors;
+
+import com.pabcubcru.infobooks.models.Book;
+import com.pabcubcru.infobooks.models.User;
+import com.pabcubcru.infobooks.models.UserFavouriteBook;
+import com.pabcubcru.infobooks.repository.BookRepository;
+import com.pabcubcru.infobooks.repository.UserFavouriteBookRepository;
+
+import org.elasticsearch.common.unit.Fuzziness;
+import org.elasticsearch.index.query.BoolQueryBuilder;
+import org.elasticsearch.index.query.MultiMatchQueryBuilder;
+import org.elasticsearch.index.query.Operator;
+import org.elasticsearch.index.query.QueryBuilders;
+import org.elasticsearch.index.query.functionscore.FunctionScoreQueryBuilder;
+import org.elasticsearch.index.query.functionscore.ScoreFunctionBuilders;
+import org.elasticsearch.common.lucene.search.function.FunctionScoreQuery;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageImpl;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.elasticsearch.core.ElasticsearchRestTemplate;
+import org.springframework.data.elasticsearch.core.SearchHits;
+import org.springframework.data.elasticsearch.core.mapping.IndexCoordinates;
+import org.springframework.data.elasticsearch.core.query.NativeSearchQuery;
+import org.springframework.data.elasticsearch.core.query.NativeSearchQueryBuilder;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
+@Service
+public class SearchService {
+
+    @Autowired
+    private ElasticsearchRestTemplate elasticsearchTemplate;
+
+    private BookRepository bookRepository;
+
+    private UserFavouriteBookRepository userFavouriteBookRepository;
+
+    @Autowired
+    public SearchService(ElasticsearchRestTemplate elasticsearchTemplate, BookRepository bookRepository, UserFavouriteBookRepository userFavouriteBookRepository) {
+        this.elasticsearchTemplate = elasticsearchTemplate;
+        this.bookRepository = bookRepository;
+        this.userFavouriteBookRepository = userFavouriteBookRepository;
+    }
+
+    @Transactional(readOnly = true)
+    public Map<Integer, List<Book>> searchBook(String query, Pageable pageable) {
+        Map<Integer, List<Book>> map = new HashMap<>();
+
+        NativeSearchQuery searchQuery = new NativeSearchQueryBuilder()
+        .withQuery(QueryBuilders.multiMatchQuery(query)
+        .field("title")
+        .field("description")
+        .field("originalTitle")
+        .field("isbn")
+        .field("publisher")
+        .field("genres")
+        .field("author")
+        .field("status")
+        .field("action")
+        //.field("price")
+        //.field("publicationYear")
+        .operator(Operator.OR)
+        .type(MultiMatchQueryBuilder.Type.BEST_FIELDS)
+        .fuzziness(Fuzziness.ONE)
+        .prefixLength(2))
+        .withPageable(pageable)
+        .build();
+
+        SearchHits<Book> books = elasticsearchTemplate.search(searchQuery, Book.class, IndexCoordinates.of("books"));
+
+        List<Book> res = books.stream().map(x -> x.getContent()).collect(Collectors.toList());
+
+        Integer numPages = (int) Math.ceil(books.getTotalHits() / pageable.getPageSize())+1;
+
+        map.put(numPages, res);
+        return map;
+    }
+
+    @Transactional(readOnly = true)
+    public Map<Integer, List<Book>> recommendBooks(User user, Pageable pageable) {
+        Map<Integer, List<Book>> res = new HashMap<>();
+
+        List<Book> booksOfUser = this.bookRepository.findByUsername(user.getUsername());
+        List<UserFavouriteBook> favouritesBooksOfUser = this.userFavouriteBookRepository.findByUsername(user.getUsername(), Pageable.unpaged()).getContent();
+
+        List<Book> favouritesBooks = favouritesBooksOfUser.stream().map(x -> this.bookRepository.findById(x.getBookId()).get()).collect(Collectors.toList());
+        booksOfUser.addAll(favouritesBooks);
+
+        List<FunctionScoreQueryBuilder.FilterFunctionBuilder> filterFunctionBuilders = new ArrayList<>();
+        
+        if(!booksOfUser.isEmpty()) {
+            for(Book b : booksOfUser) {
+                filterFunctionBuilders.add(new FunctionScoreQueryBuilder.FilterFunctionBuilder(QueryBuilders.matchQuery("publisher", b.getPublisher()),
+                    ScoreFunctionBuilders.weightFactorFunction(12)));
+                filterFunctionBuilders.add(new FunctionScoreQueryBuilder.FilterFunctionBuilder(QueryBuilders.matchQuery("author", b.getAuthor()),
+                    ScoreFunctionBuilders.weightFactorFunction(10)));
+                for(String genre : b.getGenres().split(",")) {
+                    filterFunctionBuilders.add(new FunctionScoreQueryBuilder.FilterFunctionBuilder(QueryBuilders.matchQuery("genres", genre),
+                        ScoreFunctionBuilders.weightFactorFunction(10)));
+                }
+            }
+        }
+
+        filterFunctionBuilders.add(new FunctionScoreQueryBuilder.FilterFunctionBuilder(QueryBuilders.matchQuery("genres", user.getGenres()),
+            ScoreFunctionBuilders.weightFactorFunction(2)));
+
+        FunctionScoreQueryBuilder.FilterFunctionBuilder[] builders = new FunctionScoreQueryBuilder.FilterFunctionBuilder[filterFunctionBuilders.size()];
+        filterFunctionBuilders.toArray(builders);
+        FunctionScoreQueryBuilder functionScoreQueryBuilder = QueryBuilders.functionScoreQuery(builders)
+                .scoreMode(FunctionScoreQuery.ScoreMode.SUM)
+                .setMinScore(2);
+
+        BoolQueryBuilder boolQueryBuilder = new BoolQueryBuilder();
+        for(Book book : favouritesBooks) {
+            boolQueryBuilder.mustNot(QueryBuilders.termQuery("id",book.getId()));
+        }
+        
+
+        NativeSearchQueryBuilder builder = new NativeSearchQueryBuilder();
+        builder.withQuery(functionScoreQueryBuilder);
+        builder.withFilter(boolQueryBuilder);
+        builder.withPageable(pageable);
+        NativeSearchQuery searchQuery = builder.build();
+
+        SearchHits<Book> searchHits = elasticsearchTemplate.search(searchQuery, Book.class);
+
+        if(searchHits.getTotalHits()<=0){
+            res.put(0, new ArrayList<>());
+            return res;
+        }
+
+        List<Book> searchBookList = searchHits.stream().map(x -> x.getContent()).collect(Collectors.toList());
+        Integer numPages = (int) Math.ceil(searchHits.getTotalHits() / pageable.getPageSize());
+
+        res.put(numPages, searchBookList);
+
+        return res;
+
+    }
+    
+}

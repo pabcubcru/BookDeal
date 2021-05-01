@@ -113,5 +113,14 @@ book.delete = async(id) => {
 
     return res;
 }
+
+book.recommendBooks = async(page) => {
+    const urlGet = baseUrl+"/recommend?page="+page
+    const res = await axios.get(urlGet)
+    .then(response => {return response.data})
+    .catch(error => {return error.response})
+
+    return res;
+}
    
 export default book

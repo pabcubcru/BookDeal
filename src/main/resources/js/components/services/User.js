@@ -13,6 +13,7 @@ user.create = async(state) => {
         password: state.fieldPassword,
         province: state.fieldProvince,
         postCode: state.fieldPostCode,
+        genres: state.fieldGenres,
         accept: state.fieldCheckbok,
         confirmPassword: state.fieldConfirmPassword
     }
@@ -38,6 +39,7 @@ user.edit = async(state) => {
         province: state.fieldProvince,
         city: state.fieldCity,
         postCode: state.fieldPostCode,
+        genres: state.fieldGenres,
         confirmPassword: state.fieldConfirmPassword,
         accept:true
     }

@@ -178,6 +178,7 @@ public class InfoBooksApplication {
         user.setProvince("Sevilla");
         user.setPostCode("41012");
         user.setUsername("pablo123");
+		user.setGenres("Cómica,Policíaca");
         user.setPassword(new BCryptPasswordEncoder().encode("pablo123"));
         user.setEnabled(true);
 		this.userRepository.save(user);
@@ -193,6 +194,7 @@ public class InfoBooksApplication {
         user.setProvince("Sevilla");
         user.setPostCode("41012");
         user.setUsername("juan1234");
+		user.setGenres("Aventuras");
         user.setPassword(new BCryptPasswordEncoder().encode("juan1234"));
         user.setEnabled(true);
 		this.userRepository.save(user);
@@ -215,6 +217,14 @@ public class InfoBooksApplication {
 			user.setUsername("username"+i);
 			user.setPassword(new BCryptPasswordEncoder().encode("password"+i));
 			user.setEnabled(true);
+			GenreEnum[] genres = GenreEnum.values();
+			int numRandomGenre1 = (int) Math.floor(Math.random()*GenreEnum.values().length);
+			int numRandomGenre2 = (int) Math.floor(Math.random()*GenreEnum.values().length);
+			String genre = genres[numRandomGenre1].toString();
+			if(numRandomGenre1 != numRandomGenre2) {
+				genre = genres[numRandomGenre1].toString() + "," + genres[numRandomGenre2].toString();
+			}
+			user.setGenres(genre);
 			this.userRepository.save(user);
 			this.buildAuthoritiesForTests(user.getUsername());
 		}
