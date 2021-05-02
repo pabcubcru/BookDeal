@@ -211,7 +211,8 @@ public class InfoBooksApplication {
 			user.setEmail("user"+i+"@us.es"); 
 			user.setPhone("+34654987321");
 			user.setBirthDate(LocalDate.of(1997, 11, 23));
-			int numRandomProvince = (int) Math.floor(Math.random()*ProvinceEnum.values().length);
+			int numRandomProvince = (int) Math.floor(Math.random()*ProvinceEnum.values().length)-1;
+			numRandomProvince = numRandomProvince < 0 ? 0 : numRandomProvince;
 			user.setProvince(provinces[numRandomProvince].toString());
 			user.setPostCode(""+(int)Math.floor(Math.random()*(50000-1000+1)+1000));
 			user.setUsername("username"+i);
@@ -285,8 +286,10 @@ public class InfoBooksApplication {
 			String publisher = s[5];
 			String description = s[6];
 			String urlImage = s[7];
-			int numRandomGenre1 = (int) Math.floor(Math.random()*GenreEnum.values().length);
-			int numRandomGenre2 = (int) Math.floor(Math.random()*GenreEnum.values().length);
+			int numRandomGenre1 = (int) Math.floor(Math.random()*GenreEnum.values().length)-1;
+			numRandomGenre1 = numRandomGenre1 < 0 ? 0 : numRandomGenre1;
+			int numRandomGenre2 = (int) Math.floor(Math.random()*GenreEnum.values().length)-1;
+			numRandomGenre2 = numRandomGenre2 < 0 ? 0 : numRandomGenre2;
 			String genre = genres[numRandomGenre1].toString();
 			if(numRandomGenre1 != numRandomGenre2) {
 				genre = genres[numRandomGenre1].toString() + "," + genres[numRandomGenre2].toString();

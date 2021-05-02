@@ -330,11 +330,23 @@ public class BookController {
         PageRequest pageRequest = PageRequest.of(page, 21);
         User user = this.userService.findByUsername(principal.getName());
         Map<Integer, List<Book>> map = this.searchService.recommendBooks(user, pageRequest);
+
+        List<Book> books = map.values().stream().findFirst().orElse(new ArrayList<>());
         
-        res.put("books", map.values().stream().findFirst().orElse(new ArrayList<>()));
+        res.put("books", books);
 
         Integer numberOfPages = map.keySet().stream().findFirst().orElse(0);
         res.put("numTotalPages", numberOfPages);
+
+        List<Boolean> isAdded = new ArrayList<>();
+        for(Book book : books) {
+            if(this.userFavouriteBookService.findByUsernameAndBookId(principal.getName(), book.getId()) == null) {
+                isAdded.add(false);
+            } else {
+                isAdded.add(true);
+            }
+        }
+        res.put("isAdded", isAdded);
         
         if(numberOfPages > 0) {
             List<Integer> pages = IntStream.rangeClosed(page-5 <= 0 ? 0 : page-5, page+5 >= numberOfPages-1 ? numberOfPages-1 : page+5).boxed().collect(Collectors.toList());

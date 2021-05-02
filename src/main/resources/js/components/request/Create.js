@@ -80,7 +80,7 @@ export default class Form extends Component {
                         <p></p>
                       }
                       {this.state.noBooks ?
-                        <div><br></br><p class='text-danger'>*No tiene libros para intercambiar. <a href="/books/new" class="btn btn-primary">¡Añade uno!</a></p></div>
+                        <div><p class='text-danger'>*No tiene libros para intercambiar. <a href="/books/new" class="btn btn-primary">¡Añade uno!</a></p></div>
                       :
                         <p></p>
                       }

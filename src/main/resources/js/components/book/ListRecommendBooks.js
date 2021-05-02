@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import bookService from "../services/Book";
+import userFavouriteBook from "../services/UserFavouriteBook";
 import "../ListBooks.css";
 
 export default class List extends Component {
@@ -10,7 +11,8 @@ export default class List extends Component {
       books: [],
       pages:[],
       actualPage:0,
-      numTotalPages:0
+      numTotalPages:0,
+      isAdded:[]
     }
   }
     
@@ -18,14 +20,14 @@ export default class List extends Component {
     const page = this.props.match.params.page;
     const res = await bookService.recommendBooks(page)
 
-    this.setState({books:res.books, pages:res.pages, actualPage:parseInt(page), numTotalPages:parseInt(res.numTotalPages)})
+    this.setState({books:res.books, pages:res.pages, actualPage:parseInt(page), numTotalPages:parseInt(res.numTotalPages), isAdded:res.isAdded})
   }
 
     render() {
       return (
         <div >
             {this.state.books.length == 0 ?
-                  <div><p><b>No se encuentra ningún libro para recomendarle. Añada más géneros a su perfil. <a class="btn btn-primary" href="/profile">Ir a perfil</a></b></p><br></br>
+                  <div><p><b>No se encuentra ningún libro para recomendarle. Añada más géneros preferidos a su perfil. O añada libros a favoritos.<a class="btn btn-primary" href="/profile">Ir a perfil</a></b></p><br></br>
                   <br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br>
                   <br></br><br></br></div>
                 :
@@ -44,7 +46,7 @@ export default class List extends Component {
                   <p></p>
                 }<br></br></center>
                 }
-              {this.state.books.map((book) => {
+              {this.state.books.map((book, i) => {
                 return(
                   <main class="mainBooks">
                     <div class="book-card">
@@ -60,10 +62,15 @@ export default class List extends Component {
                       <div>
                         <div class="book-card__title">
                           {book.title} 
+                          {this.state.isAdded[i] == false ? 
+                              <a onClick={() => this.addFavouriteBook(book.id, this.state.actualPage)} style={{float:"right"}}><img style={{height:"25px", width:"25px"}} src="http://assets.stickpng.com/images/5a02bfca18e87004f1ca4395.png"></img></a>
+                            :                              
+                            <a onClick={() => {this.deleteFavouriteBook(book.id, book.title, this.state.actualPage)}} style={{float:"right"}}><img style={{height:"25px", width:"25px"}} src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Coraz%C3%B3n.svg/1121px-Coraz%C3%B3n.svg.png"></img></a>
+                            }
                         </div>
                         <div class="book-card__author">
                           {book.author}
-                        </div>
+                            </div>
                         <div class="book-card__author">
                         {book.action == "VENTA" ?
                           <span>{book.action} por {book.price} €</span>
@@ -90,5 +97,19 @@ export default class List extends Component {
                 }
         </div>
       );
+    }
+
+    async addFavouriteBook(id, actualPage) {
+      const res = await userFavouriteBook.addFavouriteBook(id)
+      window.location.replace("/books/recommend/"+actualPage)
+      
+    }
+
+    async deleteFavouriteBook(id, title, actualPage) {
+      const conf = confirm("¿Está seguro de que quiere eliminar "+title+" de favoritos?")
+      if(conf) {
+        const res = await userFavouriteBook.deleteFavouriteBook(id)
+        window.location.replace("/books/recommend/"+actualPage)
+      }
     }
 }

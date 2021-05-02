@@ -43,11 +43,11 @@ export default class List extends Component {
                   <div>
                   <p><b>Actualmente no existen libros para mostrar{this.state.username != null ? ' cerca de usted' : ''}.</b></p>
                   {this.state.username != null ?
-                  <h2 style={{float:"left", color: "#007bff"}}>Algunas recomendaciones</h2>
+                  <h1 style={{float:"left", color: "#007bff"}}><b>Algunas recomendaciones</b></h1>
                 :
                     <p></p>
                   }
-                  <br></br>
+                  <br></br><br></br><br></br>
                   </div>
                 :
                   <center>

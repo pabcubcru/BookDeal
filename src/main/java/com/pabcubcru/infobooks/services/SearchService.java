@@ -22,8 +22,6 @@ import org.elasticsearch.index.query.functionscore.FunctionScoreQueryBuilder;
 import org.elasticsearch.index.query.functionscore.ScoreFunctionBuilders;
 import org.elasticsearch.common.lucene.search.function.FunctionScoreQuery;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.elasticsearch.core.ElasticsearchRestTemplate;
@@ -111,35 +109,41 @@ public class SearchService {
         }
 
         filterFunctionBuilders.add(new FunctionScoreQueryBuilder.FilterFunctionBuilder(QueryBuilders.matchQuery("genres", user.getGenres()),
-            ScoreFunctionBuilders.weightFactorFunction(2)));
+            ScoreFunctionBuilders.weightFactorFunction(8)));
 
         FunctionScoreQueryBuilder.FilterFunctionBuilder[] builders = new FunctionScoreQueryBuilder.FilterFunctionBuilder[filterFunctionBuilders.size()];
         filterFunctionBuilders.toArray(builders);
         FunctionScoreQueryBuilder functionScoreQueryBuilder = QueryBuilders.functionScoreQuery(builders)
-                .scoreMode(FunctionScoreQuery.ScoreMode.SUM)
-                .setMinScore(2);
+                .scoreMode(FunctionScoreQuery.ScoreMode.MAX)
+                .setMinScore(8);
 
         BoolQueryBuilder boolQueryBuilder = new BoolQueryBuilder();
-        for(Book book : favouritesBooks) {
-            boolQueryBuilder.mustNot(QueryBuilders.termQuery("id",book.getId()));
+        for(Book book : booksOfUser) {
+            boolQueryBuilder.should(QueryBuilders.matchQuery("id",book.getId()));
         }
-        
 
+        BoolQueryBuilder queryFilter = new BoolQueryBuilder();
+        queryFilter.mustNot(boolQueryBuilder);
+        
         NativeSearchQueryBuilder builder = new NativeSearchQueryBuilder();
         builder.withQuery(functionScoreQueryBuilder);
-        builder.withFilter(boolQueryBuilder);
+        builder.withFilter(queryFilter);
         builder.withPageable(pageable);
         NativeSearchQuery searchQuery = builder.build();
 
         SearchHits<Book> searchHits = elasticsearchTemplate.search(searchQuery, Book.class);
 
         if(searchHits.getTotalHits()<=0){
-            res.put(0, new ArrayList<>());
+            List<Book> bk = this.bookRepository.findByGenresLike(user.getGenres(), PageRequest.of(0, 21)).getContent();
+            if(bk.isEmpty()) {
+                bk = this.bookRepository.findByUsernameNot(user.getUsername(), PageRequest.of(0, 21)).getContent();
+            }
+            res.put(1, bk);
             return res;
         }
 
         List<Book> searchBookList = searchHits.stream().map(x -> x.getContent()).collect(Collectors.toList());
-        Integer numPages = (int) Math.ceil(searchHits.getTotalHits() / pageable.getPageSize());
+        Integer numPages = (int) Math.ceil(searchHits.getTotalHits() / pageable.getPageSize())+1;
 
         res.put(numPages, searchBookList);
 

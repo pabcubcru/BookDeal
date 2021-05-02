@@ -48,7 +48,7 @@ public class User extends BaseEntity {
 	private String postCode;
 
 	@Field(type = FieldType.Text, name = "genres")
-	@NotBlank(message = "Tiene que seleccionar al menos un género.")
+	@NotBlank(message = "Debe seleccionar al menos un género.")
 	private String genres;
 
 	@Field(type = FieldType.Text, name = "username")

@@ -197,7 +197,7 @@ export default class Form extends Component {
         <div class="form-group row">
             <label for="firstName" class="col-sm-3 col-form-label">Contraseña<sup class='text-danger'>*</sup></label>
           <div class="col-sm-9">
-            <input type="password" class="form-control"
+            <input type="password" class="form-control" placeholder="Debe contener entre 8 y 20 carácteres"
               value={this.state.fieldPassword} 
               onChange={(event)=>this.setState({fieldPassword: event.target.value})}/>
               {this.state.errorField.indexOf("password") != -1 ? 
@@ -211,7 +211,7 @@ export default class Form extends Component {
         <div class="form-group row">
             <label for="firstName" class="col-sm-3 col-form-label">Confirma contraseña<sup class='text-danger'>*</sup></label>
           <div class="col-sm-9">
-            <input type="password" class="form-control"
+            <input type="password" class="form-control" placeholder="Debe contener entre 8 y 20 carácteres"
               value={this.state.fieldConfirmPassword} 
               onChange={(event)=>this.setState({fieldConfirmPassword: event.target.value})}/>
               {this.state.errorField.indexOf("confirmPassword") != -1 ? 
@@ -227,7 +227,8 @@ export default class Form extends Component {
 
         <div class="form-group row">
             <div class="col-sm-6" >
-        <button onClick={()=>this.onClickSave()} class="btn btn-primary" type="submit">Cambiar</button>
+        <button onClick={()=>this.onClickSave()} class="btn btn-primary" type="submit" disabled={this.state.fieldPassword.length < 8 || this.state.fieldPassword.length > 20
+        || this.state.fieldConfirmPassword.length < 8 || this.state.fieldConfirmPassword.length > 20}>Cambiar</button>
             </div>
         </div>
 

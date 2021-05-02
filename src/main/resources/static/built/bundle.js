@@ -2408,7 +2408,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()(_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0___default.a);
 // Module
-___CSS_LOADER_EXPORT___.push([module.i, ".menu, .menu ul, .menu li, .menu a {\r\n  z-index: 5;\r\n  margin: 0;\r\n  padding: 0;\r\n  border: none;\r\n  outline: none;\r\n}\r\n\r\n.menu {\r\n  height: 70px;\r\n  width: 100%;\r\n  background-color: #26272b;\r\n  border-radius: 3px;\r\n  border-radius: 5px;\r\n}\r\n\r\n.menu li {\r\n  position: relative;\r\n  list-style: none;\r\n  float: left;\r\n  display: block;\r\n  height: 50px;\r\n}\r\n\r\n.menu a {\r\n  display: block;\r\n  padding: 0 30px;\r\n  margin: 20px 0;\r\n  line-height: 28px;\r\n  text-decoration: solid;\r\n  \r\n  font-family:\"Trebuchet MS\", Arial, Helvetica, sans-serif;\r\n  font-weight: bold;\r\n  font-size: 20px;\r\n  color: rgb(255, 255, 255);\r\n  \r\n}\r\n\r\n\r\n\r\n.menu li:hover > a {color: #007bff}\r\n\r\n.menu ul {\r\n  position: absolute;\r\n  top: 50px;\r\n  left: 20px;\r\n  \r\n  opacity: 0;\r\n  background: #26272b;\r\n  \r\n  border-radius: 0 0 10px 10px;\r\n  transition: opacity .20s ease .1s;\r\n}\r\n\r\n.menu li:hover > ul {opacity: 1;}\r\n\r\n.menu ul li {\r\n  height: 0;\r\n  overflow: hidden;\r\n  padding: 0;\r\n  \r\n  transition: height .25s ease .1s;\r\n}\r\n\r\n.menu li:hover > ul li {\r\n  height: 50px;\r\n  overflow: visible;\r\n  padding: 0;\r\n}\r\n\r\n.menu ul li a {\r\n  width: 180px;\r\n  padding: 10px 20px;\r\n  margin: 0;\r\n  border: none;\r\n  border-bottom: 1px solid #ffffff;\r\n  font-weight: normal;\r\n}\r\n.menu ul li:last-child a { border: none; }\r\n\r\n.search-box{\r\n  margin-top: 10px;\r\n  top: 50%;\r\n  left: 50%;\r\n  height:40px;\r\n  transform: translate(-50%, -50%);\r\n  position:relative;\r\n  display: flex;\r\n  background-color:#ffffff;\r\n  border-radius: 18px\r\n}\r\n\r\n.search-box button{\r\n  width: 40px;\r\n  height:40px ;\r\n  border-radius: 50%;\r\n  border:none;\r\n  color:#2C3A47;\r\n}\r\n\r\n.search-box input{\r\n  border:none;\r\n  outline:0px;\r\n  padding: 0px 0px;\r\n  background-color:transparent;\r\n  border-radius: 18px;\r\n  color:rgb(0, 0, 0);\r\n  font-size: 20px;\r\n  width: 0px;\r\n  box-sizing: border-box;\r\n  transition: .3s;\r\n}\r\n\r\n.search-box button:hover{\r\n   cursor: pointer;\r\n}\r\n\r\n.search-box:hover .text{\r\n  width:240px;\r\n  padding: 10px 20px;\r\n  \r\n}\r\n\r\n@media screen and (max-width:1200px) {\r\n  .desktop {\r\n     display: none; \r\n  }\r\n}\r\n\r\n@media screen and (min-width:1200px) {\r\n  .mobile{\r\n     display: none; \r\n  }\r\n}\r\n\r\n.search {\r\n  margin-top: 10px;\r\n  top: 50%;\r\n  left: 50%;\r\n  height:40px;\r\n  transform: translate(-50%, -50%);\r\n  position:relative;\r\n  display: flex;\r\n  background-color:#ffffff;\r\n  border-radius: 18px\r\n}\r\n\r\n.search button{\r\n  width: 40px;\r\n  height:40px ;\r\n  border-radius: 50%;\r\n  border:none;\r\n  color:#2C3A47;\r\n}\r\n\r\n.search input{\r\n  border:none;\r\n  outline:0px;\r\n  padding: 0px 0px;\r\n  background-color:transparent;\r\n  border-radius: 18px;\r\n  color:rgb(0, 0, 0);\r\n  font-size: 20px;\r\n  width: 0px;\r\n  box-sizing: border-box;\r\n  transition: .3s;\r\n}\r\n\r\n.search .text{\r\n  width:150px;\r\n  padding: 10px 20px;\r\n}", "",{"version":3,"sources":["webpack://./src/main/resources/js/components/Nav.css"],"names":[],"mappings":"AAAA;EACE,UAAU;EACV,SAAS;EACT,UAAU;EACV,YAAY;EACZ,aAAa;AACf;;AAEA;EACE,YAAY;EACZ,WAAW;EACX,yBAAyB;EACzB,kBAAkB;EAClB,kBAAkB;AACpB;;AAEA;EACE,kBAAkB;EAClB,gBAAgB;EAChB,WAAW;EACX,cAAc;EACd,YAAY;AACd;;AAEA;EACE,cAAc;EACd,eAAe;EACf,cAAc;EACd,iBAAiB;EACjB,sBAAsB;;EAEtB,wDAAwD;EACxD,iBAAiB;EACjB,eAAe;EACf,yBAAyB;;AAE3B;;;;AAIA,oBAAoB,cAAc;;AAElC;EACE,kBAAkB;EAClB,SAAS;EACT,UAAU;;EAEV,UAAU;EACV,mBAAmB;;EAEnB,4BAA4B;EAC5B,iCAAiC;AACnC;;AAEA,qBAAqB,UAAU,CAAC;;AAEhC;EACE,SAAS;EACT,gBAAgB;EAChB,UAAU;;EAEV,gCAAgC;AAClC;;AAEA;EACE,YAAY;EACZ,iBAAiB;EACjB,UAAU;AACZ;;AAEA;EACE,YAAY;EACZ,kBAAkB;EAClB,SAAS;EACT,YAAY;EACZ,gCAAgC;EAChC,mBAAmB;AACrB;AACA,2BAA2B,YAAY,EAAE;;AAEzC;EACE,gBAAgB;EAChB,QAAQ;EACR,SAAS;EACT,WAAW;EACX,gCAAgC;EAChC,iBAAiB;EACjB,aAAa;EACb,wBAAwB;EACxB;AACF;;AAEA;EACE,WAAW;EACX,YAAY;EACZ,kBAAkB;EAClB,WAAW;EACX,aAAa;AACf;;AAEA;EACE,WAAW;EACX,WAAW;EACX,gBAAgB;EAChB,4BAA4B;EAC5B,mBAAmB;EACnB,kBAAkB;EAClB,eAAe;EACf,UAAU;EACV,sBAAsB;EACtB,eAAe;AACjB;;AAEA;GACG,eAAe;AAClB;;AAEA;EACE,WAAW;EACX,kBAAkB;;AAEpB;;AAEA;EACE;KACG,aAAa;EAChB;AACF;;AAEA;EACE;KACG,aAAa;EAChB;AACF;;AAEA;EACE,gBAAgB;EAChB,QAAQ;EACR,SAAS;EACT,WAAW;EACX,gCAAgC;EAChC,iBAAiB;EACjB,aAAa;EACb,wBAAwB;EACxB;AACF;;AAEA;EACE,WAAW;EACX,YAAY;EACZ,kBAAkB;EAClB,WAAW;EACX,aAAa;AACf;;AAEA;EACE,WAAW;EACX,WAAW;EACX,gBAAgB;EAChB,4BAA4B;EAC5B,mBAAmB;EACnB,kBAAkB;EAClB,eAAe;EACf,UAAU;EACV,sBAAsB;EACtB,eAAe;AACjB;;AAEA;EACE,WAAW;EACX,kBAAkB;AACpB","sourcesContent":[".menu, .menu ul, .menu li, .menu a {\r\n  z-index: 5;\r\n  margin: 0;\r\n  padding: 0;\r\n  border: none;\r\n  outline: none;\r\n}\r\n\r\n.menu {\r\n  height: 70px;\r\n  width: 100%;\r\n  background-color: #26272b;\r\n  border-radius: 3px;\r\n  border-radius: 5px;\r\n}\r\n\r\n.menu li {\r\n  position: relative;\r\n  list-style: none;\r\n  float: left;\r\n  display: block;\r\n  height: 50px;\r\n}\r\n\r\n.menu a {\r\n  display: block;\r\n  padding: 0 30px;\r\n  margin: 20px 0;\r\n  line-height: 28px;\r\n  text-decoration: solid;\r\n  \r\n  font-family:\"Trebuchet MS\", Arial, Helvetica, sans-serif;\r\n  font-weight: bold;\r\n  font-size: 20px;\r\n  color: rgb(255, 255, 255);\r\n  \r\n}\r\n\r\n\r\n\r\n.menu li:hover > a {color: #007bff}\r\n\r\n.menu ul {\r\n  position: absolute;\r\n  top: 50px;\r\n  left: 20px;\r\n  \r\n  opacity: 0;\r\n  background: #26272b;\r\n  \r\n  border-radius: 0 0 10px 10px;\r\n  transition: opacity .20s ease .1s;\r\n}\r\n\r\n.menu li:hover > ul {opacity: 1;}\r\n\r\n.menu ul li {\r\n  height: 0;\r\n  overflow: hidden;\r\n  padding: 0;\r\n  \r\n  transition: height .25s ease .1s;\r\n}\r\n\r\n.menu li:hover > ul li {\r\n  height: 50px;\r\n  overflow: visible;\r\n  padding: 0;\r\n}\r\n\r\n.menu ul li a {\r\n  width: 180px;\r\n  padding: 10px 20px;\r\n  margin: 0;\r\n  border: none;\r\n  border-bottom: 1px solid #ffffff;\r\n  font-weight: normal;\r\n}\r\n.menu ul li:last-child a { border: none; }\r\n\r\n.search-box{\r\n  margin-top: 10px;\r\n  top: 50%;\r\n  left: 50%;\r\n  height:40px;\r\n  transform: translate(-50%, -50%);\r\n  position:relative;\r\n  display: flex;\r\n  background-color:#ffffff;\r\n  border-radius: 18px\r\n}\r\n\r\n.search-box button{\r\n  width: 40px;\r\n  height:40px ;\r\n  border-radius: 50%;\r\n  border:none;\r\n  color:#2C3A47;\r\n}\r\n\r\n.search-box input{\r\n  border:none;\r\n  outline:0px;\r\n  padding: 0px 0px;\r\n  background-color:transparent;\r\n  border-radius: 18px;\r\n  color:rgb(0, 0, 0);\r\n  font-size: 20px;\r\n  width: 0px;\r\n  box-sizing: border-box;\r\n  transition: .3s;\r\n}\r\n\r\n.search-box button:hover{\r\n   cursor: pointer;\r\n}\r\n\r\n.search-box:hover .text{\r\n  width:240px;\r\n  padding: 10px 20px;\r\n  \r\n}\r\n\r\n@media screen and (max-width:1200px) {\r\n  .desktop {\r\n     display: none; \r\n  }\r\n}\r\n\r\n@media screen and (min-width:1200px) {\r\n  .mobile{\r\n     display: none; \r\n  }\r\n}\r\n\r\n.search {\r\n  margin-top: 10px;\r\n  top: 50%;\r\n  left: 50%;\r\n  height:40px;\r\n  transform: translate(-50%, -50%);\r\n  position:relative;\r\n  display: flex;\r\n  background-color:#ffffff;\r\n  border-radius: 18px\r\n}\r\n\r\n.search button{\r\n  width: 40px;\r\n  height:40px ;\r\n  border-radius: 50%;\r\n  border:none;\r\n  color:#2C3A47;\r\n}\r\n\r\n.search input{\r\n  border:none;\r\n  outline:0px;\r\n  padding: 0px 0px;\r\n  background-color:transparent;\r\n  border-radius: 18px;\r\n  color:rgb(0, 0, 0);\r\n  font-size: 20px;\r\n  width: 0px;\r\n  box-sizing: border-box;\r\n  transition: .3s;\r\n}\r\n\r\n.search .text{\r\n  width:150px;\r\n  padding: 10px 20px;\r\n}"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.i, ".menu, .menu ul, .menu li, .menu a {\r\n  z-index: 5;\r\n  margin: 0;\r\n  padding: 0;\r\n  border: none;\r\n  outline: none;\r\n}\r\n\r\n.menu {\r\n  height: 70px;\r\n  width: 100%;\r\n  background-color: #26272b;\r\n  border-radius: 3px;\r\n  border-radius: 5px;\r\n}\r\n\r\n.menu li {\r\n  position: relative;\r\n  list-style: none;\r\n  float: left;\r\n  display: block;\r\n  height: 50px;\r\n}\r\n\r\n.menu a {\r\n  display: block;\r\n  padding: 0 30px;\r\n  margin: 20px 0;\r\n  line-height: 28px;\r\n  text-decoration: solid;\r\n  \r\n  font-family:\"Trebuchet MS\", Arial, Helvetica, sans-serif;\r\n  font-weight: bold;\r\n  font-size: 18px;\r\n  color: rgb(255, 255, 255);\r\n  \r\n}\r\n\r\n\r\n\r\n.menu li:hover > a {color: #007bff}\r\n\r\n.menu ul {\r\n  position: absolute;\r\n  top: 50px;\r\n  left: 20px;\r\n  \r\n  opacity: 0;\r\n  background: #26272b;\r\n  \r\n  border-radius: 0 0 10px 10px;\r\n  transition: opacity .20s ease .1s;\r\n}\r\n\r\n.menu li:hover > ul {opacity: 1;}\r\n\r\n.menu ul li {\r\n  height: 0;\r\n  overflow: hidden;\r\n  padding: 0;\r\n  \r\n  transition: height .25s ease .1s;\r\n}\r\n\r\n.menu li:hover > ul li {\r\n  height: 50px;\r\n  overflow: visible;\r\n  padding: 0;\r\n}\r\n\r\n.menu ul li a {\r\n  width: 180px;\r\n  padding: 10px 20px;\r\n  margin: 0;\r\n  border: none;\r\n  border-bottom: 1px solid #ffffff;\r\n  font-weight: normal;\r\n}\r\n.menu ul li:last-child a { border: none; }\r\n\r\n.search-box{\r\n  margin-top: 10px;\r\n  top: 50%;\r\n  left: 50%;\r\n  height:40px;\r\n  transform: translate(-50%, -50%);\r\n  position:relative;\r\n  display: flex;\r\n  background-color:#ffffff;\r\n  border-radius: 18px\r\n}\r\n\r\n.search-box button{\r\n  width: 40px;\r\n  height:40px ;\r\n  border-radius: 50%;\r\n  border:none;\r\n  color:#2C3A47;\r\n}\r\n\r\n.search-box input{\r\n  border:none;\r\n  outline:0px;\r\n  padding: 0px 0px;\r\n  background-color:transparent;\r\n  border-radius: 18px;\r\n  color:rgb(0, 0, 0);\r\n  font-size: 20px;\r\n  width: 0px;\r\n  box-sizing: border-box;\r\n  transition: .3s;\r\n}\r\n\r\n.search-box button:hover{\r\n   cursor: pointer;\r\n}\r\n\r\n.search-box:hover .text{\r\n  width:240px;\r\n  padding: 10px 20px;\r\n  \r\n}\r\n\r\n@media screen and (max-width:1200px) {\r\n  .desktop {\r\n     display: none; \r\n  }\r\n}\r\n\r\n@media screen and (min-width:1200px) {\r\n  .mobile{\r\n     display: none; \r\n  }\r\n}\r\n\r\n.search {\r\n  margin-top: 10px;\r\n  top: 50%;\r\n  left: 50%;\r\n  height:40px;\r\n  transform: translate(-50%, -50%);\r\n  position:relative;\r\n  display: flex;\r\n  background-color:#ffffff;\r\n  border-radius: 18px\r\n}\r\n\r\n.search button{\r\n  width: 40px;\r\n  height:40px ;\r\n  border-radius: 50%;\r\n  border:none;\r\n  color:#2C3A47;\r\n}\r\n\r\n.search input{\r\n  border:none;\r\n  outline:0px;\r\n  padding: 0px 0px;\r\n  background-color:transparent;\r\n  border-radius: 18px;\r\n  color:rgb(0, 0, 0);\r\n  font-size: 20px;\r\n  width: 0px;\r\n  box-sizing: border-box;\r\n  transition: .3s;\r\n}\r\n\r\n.search .text{\r\n  width:150px;\r\n  padding: 10px 20px;\r\n}", "",{"version":3,"sources":["webpack://./src/main/resources/js/components/Nav.css"],"names":[],"mappings":"AAAA;EACE,UAAU;EACV,SAAS;EACT,UAAU;EACV,YAAY;EACZ,aAAa;AACf;;AAEA;EACE,YAAY;EACZ,WAAW;EACX,yBAAyB;EACzB,kBAAkB;EAClB,kBAAkB;AACpB;;AAEA;EACE,kBAAkB;EAClB,gBAAgB;EAChB,WAAW;EACX,cAAc;EACd,YAAY;AACd;;AAEA;EACE,cAAc;EACd,eAAe;EACf,cAAc;EACd,iBAAiB;EACjB,sBAAsB;;EAEtB,wDAAwD;EACxD,iBAAiB;EACjB,eAAe;EACf,yBAAyB;;AAE3B;;;;AAIA,oBAAoB,cAAc;;AAElC;EACE,kBAAkB;EAClB,SAAS;EACT,UAAU;;EAEV,UAAU;EACV,mBAAmB;;EAEnB,4BAA4B;EAC5B,iCAAiC;AACnC;;AAEA,qBAAqB,UAAU,CAAC;;AAEhC;EACE,SAAS;EACT,gBAAgB;EAChB,UAAU;;EAEV,gCAAgC;AAClC;;AAEA;EACE,YAAY;EACZ,iBAAiB;EACjB,UAAU;AACZ;;AAEA;EACE,YAAY;EACZ,kBAAkB;EAClB,SAAS;EACT,YAAY;EACZ,gCAAgC;EAChC,mBAAmB;AACrB;AACA,2BAA2B,YAAY,EAAE;;AAEzC;EACE,gBAAgB;EAChB,QAAQ;EACR,SAAS;EACT,WAAW;EACX,gCAAgC;EAChC,iBAAiB;EACjB,aAAa;EACb,wBAAwB;EACxB;AACF;;AAEA;EACE,WAAW;EACX,YAAY;EACZ,kBAAkB;EAClB,WAAW;EACX,aAAa;AACf;;AAEA;EACE,WAAW;EACX,WAAW;EACX,gBAAgB;EAChB,4BAA4B;EAC5B,mBAAmB;EACnB,kBAAkB;EAClB,eAAe;EACf,UAAU;EACV,sBAAsB;EACtB,eAAe;AACjB;;AAEA;GACG,eAAe;AAClB;;AAEA;EACE,WAAW;EACX,kBAAkB;;AAEpB;;AAEA;EACE;KACG,aAAa;EAChB;AACF;;AAEA;EACE;KACG,aAAa;EAChB;AACF;;AAEA;EACE,gBAAgB;EAChB,QAAQ;EACR,SAAS;EACT,WAAW;EACX,gCAAgC;EAChC,iBAAiB;EACjB,aAAa;EACb,wBAAwB;EACxB;AACF;;AAEA;EACE,WAAW;EACX,YAAY;EACZ,kBAAkB;EAClB,WAAW;EACX,aAAa;AACf;;AAEA;EACE,WAAW;EACX,WAAW;EACX,gBAAgB;EAChB,4BAA4B;EAC5B,mBAAmB;EACnB,kBAAkB;EAClB,eAAe;EACf,UAAU;EACV,sBAAsB;EACtB,eAAe;AACjB;;AAEA;EACE,WAAW;EACX,kBAAkB;AACpB","sourcesContent":[".menu, .menu ul, .menu li, .menu a {\r\n  z-index: 5;\r\n  margin: 0;\r\n  padding: 0;\r\n  border: none;\r\n  outline: none;\r\n}\r\n\r\n.menu {\r\n  height: 70px;\r\n  width: 100%;\r\n  background-color: #26272b;\r\n  border-radius: 3px;\r\n  border-radius: 5px;\r\n}\r\n\r\n.menu li {\r\n  position: relative;\r\n  list-style: none;\r\n  float: left;\r\n  display: block;\r\n  height: 50px;\r\n}\r\n\r\n.menu a {\r\n  display: block;\r\n  padding: 0 30px;\r\n  margin: 20px 0;\r\n  line-height: 28px;\r\n  text-decoration: solid;\r\n  \r\n  font-family:\"Trebuchet MS\", Arial, Helvetica, sans-serif;\r\n  font-weight: bold;\r\n  font-size: 18px;\r\n  color: rgb(255, 255, 255);\r\n  \r\n}\r\n\r\n\r\n\r\n.menu li:hover > a {color: #007bff}\r\n\r\n.menu ul {\r\n  position: absolute;\r\n  top: 50px;\r\n  left: 20px;\r\n  \r\n  opacity: 0;\r\n  background: #26272b;\r\n  \r\n  border-radius: 0 0 10px 10px;\r\n  transition: opacity .20s ease .1s;\r\n}\r\n\r\n.menu li:hover > ul {opacity: 1;}\r\n\r\n.menu ul li {\r\n  height: 0;\r\n  overflow: hidden;\r\n  padding: 0;\r\n  \r\n  transition: height .25s ease .1s;\r\n}\r\n\r\n.menu li:hover > ul li {\r\n  height: 50px;\r\n  overflow: visible;\r\n  padding: 0;\r\n}\r\n\r\n.menu ul li a {\r\n  width: 180px;\r\n  padding: 10px 20px;\r\n  margin: 0;\r\n  border: none;\r\n  border-bottom: 1px solid #ffffff;\r\n  font-weight: normal;\r\n}\r\n.menu ul li:last-child a { border: none; }\r\n\r\n.search-box{\r\n  margin-top: 10px;\r\n  top: 50%;\r\n  left: 50%;\r\n  height:40px;\r\n  transform: translate(-50%, -50%);\r\n  position:relative;\r\n  display: flex;\r\n  background-color:#ffffff;\r\n  border-radius: 18px\r\n}\r\n\r\n.search-box button{\r\n  width: 40px;\r\n  height:40px ;\r\n  border-radius: 50%;\r\n  border:none;\r\n  color:#2C3A47;\r\n}\r\n\r\n.search-box input{\r\n  border:none;\r\n  outline:0px;\r\n  padding: 0px 0px;\r\n  background-color:transparent;\r\n  border-radius: 18px;\r\n  color:rgb(0, 0, 0);\r\n  font-size: 20px;\r\n  width: 0px;\r\n  box-sizing: border-box;\r\n  transition: .3s;\r\n}\r\n\r\n.search-box button:hover{\r\n   cursor: pointer;\r\n}\r\n\r\n.search-box:hover .text{\r\n  width:240px;\r\n  padding: 10px 20px;\r\n  \r\n}\r\n\r\n@media screen and (max-width:1200px) {\r\n  .desktop {\r\n     display: none; \r\n  }\r\n}\r\n\r\n@media screen and (min-width:1200px) {\r\n  .mobile{\r\n     display: none; \r\n  }\r\n}\r\n\r\n.search {\r\n  margin-top: 10px;\r\n  top: 50%;\r\n  left: 50%;\r\n  height:40px;\r\n  transform: translate(-50%, -50%);\r\n  position:relative;\r\n  display: flex;\r\n  background-color:#ffffff;\r\n  border-radius: 18px\r\n}\r\n\r\n.search button{\r\n  width: 40px;\r\n  height:40px ;\r\n  border-radius: 50%;\r\n  border:none;\r\n  color:#2C3A47;\r\n}\r\n\r\n.search input{\r\n  border:none;\r\n  outline:0px;\r\n  padding: 0px 0px;\r\n  background-color:transparent;\r\n  border-radius: 18px;\r\n  color:rgb(0, 0, 0);\r\n  font-size: 20px;\r\n  width: 0px;\r\n  box-sizing: border-box;\r\n  transition: .3s;\r\n}\r\n\r\n.search .text{\r\n  width:150px;\r\n  padding: 10px 20px;\r\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ __webpack_exports__["default"] = (___CSS_LOADER_EXPORT___);
 
@@ -36488,11 +36488,11 @@ var Home = /*#__PURE__*/function (_Component) {
           backgroundImage: "url(https://i.pinimg.com/originals/8d/23/06/8d2306b98839234e49ce96a8b76e20ae.jpg)",
           backgroundSize: "cover"
         }
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("img", {
-        width: "300px",
-        height: "200px",
-        src: "https://westeurope1-mediap.svc.ms/transform/thumbnail?provider=spo&inputFormat=png&cs=fFNQTw&docid=https%3A%2F%2Fuses0-my.sharepoint.com%3A443%2F_api%2Fv2.0%2Fdrives%2Fb!CN2_VP_HrEOzJespx9kDC8xGJ-S624RBsIAILHmSeVEEVv79aZeDQYIx6hF1M-kS%2Fitems%2F01EFGPKYTZHUC3X3FUOZFKVAH2UTCBJWEK%3Fversion%3DPublished&encodeFailures=1&ctag=%22c%3A%7BBB053D79-B4EC-4A76-AA80-FAA4C414D88A%7D%2C2%22&srcWidth=&srcHeight=&width=118&height=84&action=Access"
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("h1", {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("img", {
+        width: "400px",
+        height: "400px",
+        src: "https://i.ibb.co/KN8gvG1/logo-size-removebg-preview.png"
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("h1", {
         style: {
           fontFamily: "cursive",
           fontStyle: "italic"
@@ -38637,12 +38637,12 @@ var List = /*#__PURE__*/function (_Component) {
     value: function render() {
       var _this2 = this;
 
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("div", null, this.state.books.length == 0 || this.state.nearBooks == false ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("b", null, "Actualmente no existen libros para mostrar", this.state.username != null ? ' cerca de usted' : '', ".")), this.state.username != null ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("h2", {
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("div", null, this.state.books.length == 0 || this.state.nearBooks == false ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("b", null, "Actualmente no existen libros para mostrar", this.state.username != null ? ' cerca de usted' : '', ".")), this.state.username != null ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("h1", {
         style: {
           "float": "left",
           color: "#007bff"
         }
-      }, "Algunas recomendaciones") : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("p", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("br", null)) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("center", null, this.state.books.length != 0 && this.state.pages.length > 1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("center", null, this.state.actualPage != 0 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("span", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("a", {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("b", null, "Algunas recomendaciones")) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("p", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("br", null)) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("center", null, this.state.books.length != 0 && this.state.pages.length > 1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("center", null, this.state.actualPage != 0 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("span", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("a", {
         "class": "btn btn-primary",
         href: "/books/all/0"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("b", null, String("<<"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("a", {
@@ -39383,7 +39383,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_7__);
 /* harmony import */ var _services_Book__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../services/Book */ "./src/main/resources/js/components/services/Book.js");
-/* harmony import */ var _ListBooks_css__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../ListBooks.css */ "./src/main/resources/js/components/ListBooks.css");
+/* harmony import */ var _services_UserFavouriteBook__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../services/UserFavouriteBook */ "./src/main/resources/js/components/services/UserFavouriteBook.js");
+/* harmony import */ var _ListBooks_css__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../ListBooks.css */ "./src/main/resources/js/components/ListBooks.css");
 
 
 
@@ -39395,6 +39396,7 @@ __webpack_require__.r(__webpack_exports__);
 function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_5___default()(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_5___default()(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_4___default()(this, result); }; }
 
 function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+
 
 
 
@@ -39415,7 +39417,8 @@ var List = /*#__PURE__*/function (_Component) {
       books: [],
       pages: [],
       actualPage: 0,
-      numTotalPages: 0
+      numTotalPages: 0,
+      isAdded: []
     };
     return _this;
   }
@@ -39439,7 +39442,8 @@ var List = /*#__PURE__*/function (_Component) {
                   books: res.books,
                   pages: res.pages,
                   actualPage: parseInt(page),
-                  numTotalPages: parseInt(res.numTotalPages)
+                  numTotalPages: parseInt(res.numTotalPages),
+                  isAdded: res.isAdded
                 });
 
               case 5:
@@ -39461,7 +39465,7 @@ var List = /*#__PURE__*/function (_Component) {
     value: function render() {
       var _this2 = this;
 
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", null, this.state.books.length == 0 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("b", null, "No se encuentra ning\xFAn libro para recomendarle. A\xF1ada m\xE1s g\xE9neros a su perfil. ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", null, this.state.books.length == 0 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("b", null, "No se encuentra ning\xFAn libro para recomendarle. A\xF1ada m\xE1s g\xE9neros preferidos a su perfil. O a\xF1ada libros a favoritos.", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
         "class": "btn btn-primary",
         href: "/profile"
       }, "Ir a perfil"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", null)) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("center", null, this.state.books.length != 0 && this.state.pages.length > 1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("center", null, this.state.actualPage != 0 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("span", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
@@ -39491,7 +39495,7 @@ var List = /*#__PURE__*/function (_Component) {
       }, String(">")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
         "class": "btn btn-primary",
         href: "/books/recommend/" + parseInt(this.state.numTotalPages - 1)
-      }, String(">>"))) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null)) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", null)), this.state.books.map(function (book) {
+      }, String(">>"))) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null)) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", null)), this.state.books.map(function (book, i) {
         return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("main", {
           "class": "mainBooks"
         }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
@@ -39516,7 +39520,33 @@ var List = /*#__PURE__*/function (_Component) {
           "class": "book-card__book-side"
         }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
           "class": "book-card__title"
-        }, book.title), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+        }, book.title, _this2.state.isAdded[i] == false ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
+          onClick: function onClick() {
+            return _this2.addFavouriteBook(book.id, _this2.state.actualPage);
+          },
+          style: {
+            "float": "right"
+          }
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("img", {
+          style: {
+            height: "25px",
+            width: "25px"
+          },
+          src: "http://assets.stickpng.com/images/5a02bfca18e87004f1ca4395.png"
+        })) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
+          onClick: function onClick() {
+            _this2.deleteFavouriteBook(book.id, book.title, _this2.state.actualPage);
+          },
+          style: {
+            "float": "right"
+          }
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("img", {
+          style: {
+            height: "25px",
+            width: "25px"
+          },
+          src: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Coraz%C3%B3n.svg/1121px-Coraz%C3%B3n.svg.png"
+        }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
           "class": "book-card__author"
         }, book.author), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
           "class": "book-card__author"
@@ -39550,6 +39580,73 @@ var List = /*#__PURE__*/function (_Component) {
         href: "/books/recommend/" + parseInt(this.state.numTotalPages - 1)
       }, String(">>"))) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", null)) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null));
     }
+  }, {
+    key: "addFavouriteBook",
+    value: function () {
+      var _addFavouriteBook = _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_6___default.a.mark(function _callee2(id, actualPage) {
+        var res;
+        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_6___default.a.wrap(function _callee2$(_context2) {
+          while (1) {
+            switch (_context2.prev = _context2.next) {
+              case 0:
+                _context2.next = 2;
+                return _services_UserFavouriteBook__WEBPACK_IMPORTED_MODULE_9__["default"].addFavouriteBook(id);
+
+              case 2:
+                res = _context2.sent;
+                window.location.replace("/books/recommend/" + actualPage);
+
+              case 4:
+              case "end":
+                return _context2.stop();
+            }
+          }
+        }, _callee2);
+      }));
+
+      function addFavouriteBook(_x, _x2) {
+        return _addFavouriteBook.apply(this, arguments);
+      }
+
+      return addFavouriteBook;
+    }()
+  }, {
+    key: "deleteFavouriteBook",
+    value: function () {
+      var _deleteFavouriteBook = _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_6___default.a.mark(function _callee3(id, title, actualPage) {
+        var conf, res;
+        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_6___default.a.wrap(function _callee3$(_context3) {
+          while (1) {
+            switch (_context3.prev = _context3.next) {
+              case 0:
+                conf = confirm("¿Está seguro de que quiere eliminar " + title + " de favoritos?");
+
+                if (!conf) {
+                  _context3.next = 6;
+                  break;
+                }
+
+                _context3.next = 4;
+                return _services_UserFavouriteBook__WEBPACK_IMPORTED_MODULE_9__["default"].deleteFavouriteBook(id);
+
+              case 4:
+                res = _context3.sent;
+                window.location.replace("/books/recommend/" + actualPage);
+
+              case 6:
+              case "end":
+                return _context3.stop();
+            }
+          }
+        }, _callee3);
+      }));
+
+      function deleteFavouriteBook(_x3, _x4, _x5) {
+        return _deleteFavouriteBook.apply(this, arguments);
+      }
+
+      return deleteFavouriteBook;
+    }()
   }]);
 
   return List;
@@ -40099,7 +40196,7 @@ var Form = /*#__PURE__*/function (_Component) {
         }, book.title);
       })), this.state.errorField.indexOf("idBook1") != -1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
         "class": "text-danger"
-      }, this.state.errorMessages[this.state.errorField.indexOf("idBook1")]) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null), this.state.noBooks ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
+      }, this.state.errorMessages[this.state.errorField.indexOf("idBook1")]) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null), this.state.noBooks ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
         "class": "text-danger"
       }, "*No tiene libros para intercambiar. ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
         href: "/books/new",
@@ -42254,6 +42351,7 @@ var Form = /*#__PURE__*/function (_Component) {
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("input", {
         type: "password",
         "class": "form-control",
+        placeholder: "Debe contener entre 8 y 20 car\xE1cteres",
         value: this.state.fieldPassword,
         onChange: function onChange(event) {
           return _this2.setState({
@@ -42274,6 +42372,7 @@ var Form = /*#__PURE__*/function (_Component) {
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("input", {
         type: "password",
         "class": "form-control",
+        placeholder: "Debe contener entre 8 y 20 car\xE1cteres",
         value: this.state.fieldConfirmPassword,
         onChange: function onChange(event) {
           return _this2.setState({
@@ -42295,7 +42394,8 @@ var Form = /*#__PURE__*/function (_Component) {
           return _this2.onClickSave();
         },
         "class": "btn btn-primary",
-        type: "submit"
+        type: "submit",
+        disabled: this.state.fieldPassword.length < 8 || this.state.fieldPassword.length > 20 || this.state.fieldConfirmPassword.length < 8 || this.state.fieldConfirmPassword.length > 20
       }, "Cambiar"))));
     }
   }, {
