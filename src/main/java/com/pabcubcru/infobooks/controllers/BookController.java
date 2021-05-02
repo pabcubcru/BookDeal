@@ -57,10 +57,20 @@ public class BookController {
     @Autowired
     private SearchService searchService;
 
-    @GetMapping(value = {"/new", "/me/{page}", "/all/{page}/{showMode}", "/all/{page}", "recommend/{page}"})
+    @GetMapping(value = {"/new", "/me/{page}", "/all/{page}", "recommend/{page}"})
 	public ModelAndView main() {
 		ModelAndView model = new ModelAndView();
 		model.setViewName("Main");
+		return model;
+	}
+
+    @GetMapping(value = "/all/{page}/{showMode}")
+    public ModelAndView mainForShowMode(@PathVariable("showMode") String showMode) {
+		ModelAndView model = new ModelAndView();
+		model.setViewName("Main");
+        if(!showMode.equals("postCode") && !showMode.equals("province") && !showMode.equals("genres")) {
+            model.setViewName("errors/Error404");
+        }
 		return model;
 	}
 
@@ -186,6 +196,15 @@ public class BookController {
             User user = this.userService.findByUsername(principal.getName());
             pageOfBooks = this.bookService.findNearBooks(user, pageRequest, showMode);
             res.put("nearBooks", true);
+            if(showMode.equals("province")) {
+                res.put("title", "Libros en su provincia");
+            } else if(showMode.equals("postCode")) {
+                res.put("title", "Libros en su código postal");
+            } else if(showMode.equals("genres")) {
+                res.put("title", "Libros por sus géneros preferidos");
+            } else {
+                res.put("title", "Libros cercanos a usted");
+            }
             numberOfPages = pageOfBooks.getTotalPages();
             if(pageOfBooks.getNumberOfElements() <= 0) {
                 Map<Integer, List<Book>> map = this.searchService.recommendBooks(user, PageRequest.of(0, 21));

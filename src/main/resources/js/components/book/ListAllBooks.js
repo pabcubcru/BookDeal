@@ -17,7 +17,8 @@ export default class List extends Component {
       pages:[],
       actualPage:0,
       numTotalPages:0,
-      nearBooks: true
+      nearBooks: true,
+      title:""
     }
   }
     
@@ -33,17 +34,23 @@ export default class List extends Component {
     
     const username = await userService.getUsername()
 
-    this.setState({books:res.books, username:username.username, isAdded:res.isAdded, pages:res.pages, numTotalPages:parseInt(res.numTotalPages), nearBooks:res.nearBooks})
+    this.setState({books:res.books, username:username.username, isAdded:res.isAdded, pages:res.pages, numTotalPages:parseInt(res.numTotalPages), nearBooks:res.nearBooks, title:res.title})
   }
 
     render() {
         return (
             <div >
+                {this.state.username != null ? 
+                    <div><h1 style={{float:"left", color: "black"}}><b>{this.state.title}</b></h1><br></br><br></br></div>
+                  :
+                    <div><h1 style={{float:"left", color: "black"}}><b>Todos los libros</b></h1><br></br><br></br></div>
+                  }
                 {this.state.books.length == 0 || this.state.nearBooks == false ?
                   <div>
+                  <br></br>
                   <p><b>Actualmente no existen libros para mostrar{this.state.username != null ? ' cerca de usted' : ''}.</b></p>
                   {this.state.username != null ?
-                  <h1 style={{float:"left", color: "#007bff"}}><b>Algunas recomendaciones</b></h1>
+                  <h2 style={{float:"left", color: "black"}}><b>Algunas recomendaciones</b></h2>
                 :
                     <p></p>
                   }
@@ -51,6 +58,7 @@ export default class List extends Component {
                   </div>
                 :
                   <center>
+                  
                   {this.state.books.length != 0 && this.state.pages.length > 1 ?
                   <center>{this.state.actualPage != 0 ? <span><a class="btn btn-primary" href={"/books/all/0"}><b>{String("<<")}</b></a><a style={{margin:"5px"}} class="btn btn-primary" href={"/books/all/"+parseInt(this.state.actualPage-1)}><b>{String("<")}</b></a></span> : <p></p>}
                   {this.state.pages.map((page) => {

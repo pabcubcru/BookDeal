@@ -49,7 +49,7 @@ export default class Nav extends Component {
                 <li ><a  href="/books/all/0">Cerca de mí</a></li>
                 <li ><a  href="#">Filtrar por</a>
                   <ul>
-                    <li ><a  href="/books/all/0/postalCode">Mi cod. postal</a></li>
+                    <li ><a  href="/books/all/0/postCode">Mi cod. postal</a></li>
                     <li ><a  href="/books/all/0/province">Mi provincia</a></li>
                     <li ><a  href="/books/all/0/genres">Mis géneros</a></li>
                   </ul>
@@ -98,7 +98,7 @@ export default class Nav extends Component {
                 <li ><a  href="/books/all/0">Cerca de mí</a></li>
                 <li ><a  href="#">Filtrar por</a>
                   <ul>
-                    <li ><a  href="/books/all/0/postalCode">Mi cod. postal</a></li>
+                    <li ><a  href="/books/all/0/postCode">Mi cod. postal</a></li>
                     <li ><a  href="/books/all/0/province">Mi provincia</a></li>
                     <li ><a  href="/books/all/0/genres">Mis géneros</a></li>
                   </ul>

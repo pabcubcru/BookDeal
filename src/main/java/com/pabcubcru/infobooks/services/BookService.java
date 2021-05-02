@@ -76,7 +76,7 @@ public class BookService {
         List<User> usersWithSameAddress = null;
         List<String> usernames = new ArrayList<>();
 
-        if(showMode.equals("postalCode")) {
+        if(showMode.equals("postCode")) {
             usersWithSameAddress = this.userRepository.findByPostCode(user.getPostCode());
             usersWithSameAddress.stream().filter(x -> !x.getUsername().equals(user.getUsername())).forEach(x -> usernames.add(x.getUsername()));
         } else if(showMode.equals("province")) {

@@ -27,14 +27,16 @@ export default class List extends Component {
     render() {
         return (
             <div>
+              <h1 style={{float:"left", color: "black"}}><b>Mis libros favoritos</b></h1><br></br><br></br>
               {this.state.books.length == 0 ?
-                <div><p><strong>¿No tienes todavía libros favoritos? <a href="/books/all/0" class="btn btn-primary">¡Añade uno!</a></strong></p><br></br>
+                <div><br></br><p><strong>¿No tienes todavía libros favoritos? <a href="/books/all/0" class="btn btn-primary">¡Añade uno!</a></strong></p><br></br>
                 <br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br>
-                <br></br><br></br></div>
+                <br></br></div>
                 :
                 <center>
+                  
                   {this.state.pages.length > 1 ? 
-                    <center>{this.state.actualPage != 0 ? <a class="btn btn-primary" href={"/favourites/"+parseInt(this.state.actualPage-1)}>Anterior</a> : <p></p>}
+                    <center><br></br>{this.state.actualPage != 0 ? <a class="btn btn-primary" href={"/favourites/"+parseInt(this.state.actualPage-1)}>Anterior</a> : <p></p>}
                     {this.state.pages.map((page) => {
                     return(
                       <a style={{color:this.state.actualPage == page ? "white" : "black", backgroundColor:this.state.actualPage == page ? "#007bff" : ""}} class="pag" href={"/favourites/"+page}>{page}</a>

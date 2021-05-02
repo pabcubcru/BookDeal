@@ -141,7 +141,7 @@ public class InfoBooksApplication {
         book.setIsbn("0-7645-2641-3");
         book.setPublicationYear(2014);
         book.setPublisher("Publisher Test");
-        book.setGenres("Comedia");
+        book.setGenres("Autoayuda");
         book.setAuthor("Author Test"); 
         book.setDescription("Description test"); 
         book.setImage("https://imagessl1.casadellibro.com/a/l/t5/11/9788499926711.jpg");
@@ -178,7 +178,7 @@ public class InfoBooksApplication {
         user.setProvince("Sevilla");
         user.setPostCode("41012");
         user.setUsername("pablo123");
-		user.setGenres("Cómica,Policíaca");
+		user.setGenres("Autoayuda,Esoterismo,Ciencia");
         user.setPassword(new BCryptPasswordEncoder().encode("pablo123"));
         user.setEnabled(true);
 		this.userRepository.save(user);
@@ -194,7 +194,7 @@ public class InfoBooksApplication {
         user.setProvince("Sevilla");
         user.setPostCode("41012");
         user.setUsername("juan1234");
-		user.setGenres("Aventuras");
+		user.setGenres("Religión,Gastronomía,Cocina");
         user.setPassword(new BCryptPasswordEncoder().encode("juan1234"));
         user.setEnabled(true);
 		this.userRepository.save(user);
@@ -219,12 +219,10 @@ public class InfoBooksApplication {
 			user.setPassword(new BCryptPasswordEncoder().encode("password"+i));
 			user.setEnabled(true);
 			GenreEnum[] genres = GenreEnum.values();
-			int numRandomGenre1 = (int) Math.floor(Math.random()*GenreEnum.values().length);
-			int numRandomGenre2 = (int) Math.floor(Math.random()*GenreEnum.values().length);
-			String genre = genres[numRandomGenre1].toString();
-			if(numRandomGenre1 != numRandomGenre2) {
-				genre = genres[numRandomGenre1].toString() + "," + genres[numRandomGenre2].toString();
-			}
+			int numRandomGenre1 = (int) Math.floor(Math.random()*(GenreEnum.values().length/3));
+			int numRandomGenre2 = (int) Math.floor(Math.random()*(GenreEnum.values().length*2/3));
+			int numRandomGenre3 = (int) Math.floor(Math.random()*(GenreEnum.values().length/3)) + (GenreEnum.values().length*2/3);
+			String genre = genres[numRandomGenre1].toString() + "," + genres[numRandomGenre2].toString() + "," + genres[numRandomGenre3].toString();
 			user.setGenres(genre);
 			this.userRepository.save(user);
 			this.buildAuthoritiesForTests(user.getUsername());

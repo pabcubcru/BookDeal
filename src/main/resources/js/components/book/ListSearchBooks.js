@@ -17,7 +17,8 @@ export default class List extends Component {
       isAdded:false,
       pages:[],
       actualPage:0,
-      query:""
+      query:"",
+      searchResult:true
     }
   }
     
@@ -34,18 +35,28 @@ export default class List extends Component {
     
     const username = await userService.getUsername()
 
-    this.setState({books:res.books, username:username.username, query:query, isAdded:res.isAdded, pages:res.pages, numTotalPages:parseInt(res.numTotalPages)})
+    this.setState({books:res.books, username:username.username, query:query, isAdded:res.isAdded, pages:res.pages, numTotalPages:parseInt(res.numTotalPages), searchResult:res.searchResult})
   }
 
     render() {
         return (
             <div >
-              {this.state.books.length == 0 ?
+              <h1 style={{float:"left", color: "black"}}><b>Resultados para '{this.state.query}'</b></h1><br></br><br></br><br></br>
+              {this.state.books.length == 0 || this.state.searchResult == false ?
+                <div>
                   <p><b>No se encontraron coincidencias para '{this.state.query}'</b></p>
+                  {this.state.books.length > 0 ? 
+                    <h2 style={{float:"left", color: "black"}}><b>Algunas recomendaciones</b></h2>
+                  :
+                    <p></p>
+                  }
+                  <br></br><br></br><br></br>
+                  </div>
                 :
                   <center>
+                  
                   {this.state.books.length != 0 && this.state.pages.length > 1 ?
-                  <center>{this.state.actualPage != 0 ? <span><a class="btn btn-primary" href={"/search/0/"+this.state.query}><b>{String("<<")}</b></a><a style={{margin:"5px"}} class="btn btn-primary" href={"/search/"+parseInt(this.state.actualPage-1)+"/"+this.state.query}><b>{String("<")}</b></a></span> : <p></p>}
+                  <center><br></br>{this.state.actualPage != 0 ? <span><a class="btn btn-primary" href={"/search/0/"+this.state.query}><b>{String("<<")}</b></a><a style={{margin:"5px"}} class="btn btn-primary" href={"/search/"+parseInt(this.state.actualPage-1)+"/"+this.state.query}><b>{String("<")}</b></a></span> : <p></p>}
                   {this.state.pages.map((page) => {
                     return(
                       

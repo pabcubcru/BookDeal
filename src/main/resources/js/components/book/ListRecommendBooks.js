@@ -26,12 +26,16 @@ export default class List extends Component {
     render() {
       return (
         <div >
+          <h1 style={{float:"left", color: "black"}}><b>Libros recomendados para usted</b></h1><br></br><br></br><br></br>
             {this.state.books.length == 0 ?
                   <div><p><b>No se encuentra ningún libro para recomendarle. Añada más géneros preferidos a su perfil. O añada libros a favoritos.<a class="btn btn-primary" href="/profile">Ir a perfil</a></b></p><br></br>
                   <br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br>
                   <br></br><br></br></div>
                 :
                   <center>
+                  <p style={{textAlign:"justify"}}><b>Estos resultados se muestran según sus gustos, es decir, según sus libros subidos, sus libros favoritos y sus géneros preferidos. 
+                    Mientras más libros y géneros preferidos añada, los resultados serán mas precisos.</b></p>
+
                   {this.state.books.length != 0 && this.state.pages.length > 1 ?
                   <center>{this.state.actualPage != 0 ? <span><a class="btn btn-primary" href={"/books/recommend/0"}>{String("<<")}</a><a style={{margin:"5px"}} class="btn btn-primary" href={"/books/recommend/"+parseInt(this.state.actualPage-1)}>{String("<")}</a></span> : <p></p>}
                   {this.state.pages.map((page) => {

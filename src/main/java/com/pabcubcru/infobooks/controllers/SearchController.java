@@ -49,9 +49,15 @@ public class SearchController {
         Map<String, Object> res = new HashMap<>();
         PageRequest pageRequest = PageRequest.of(page, 21);
 
-        Map<Integer, List<Book>> map = this.searchService.searchBook(query, pageRequest);
+        String username = principal != null ? principal.getName() : null;
+
+        Map<Integer, List<Book>> map = this.searchService.searchBook(query, pageRequest, username);
         List<Book> pageOfBooks = map.values().stream().findFirst().orElse(new ArrayList<>());
         Integer numberOfPages = map.keySet().stream().findFirst().orElse(0);
+        res.put("searchResult", true);
+        if(numberOfPages == 0) {
+            res.put("searchResult", false);
+        }
         List<Book> books = new ArrayList<>();
         for(Book b : pageOfBooks) {
             Request requestAcceptedToBook1 = this.requestService.findFirstByIdBook1AndStatus(b.getId(), RequestStatus.ACEPTADA.toString());

@@ -151,6 +151,6 @@ public class UserValidatorTests {
         Assertions.assertThat(constrains.size()).isEqualTo(1);
         ConstraintViolation<User> violation = constrains.iterator().next();
         Assertions.assertThat(violation.getPropertyPath().toString()).isEqualTo("genres");
-        Assertions.assertThat(violation.getMessage()).isEqualTo("Debe seleccionar al menos un género.");
+        Assertions.assertThat(violation.getMessage()).isEqualTo("Los géneros es un campo requerido.");
     }
 }

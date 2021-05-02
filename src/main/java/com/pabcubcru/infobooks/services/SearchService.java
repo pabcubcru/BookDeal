@@ -12,6 +12,7 @@ import com.pabcubcru.infobooks.models.User;
 import com.pabcubcru.infobooks.models.UserFavouriteBook;
 import com.pabcubcru.infobooks.repository.BookRepository;
 import com.pabcubcru.infobooks.repository.UserFavouriteBookRepository;
+import com.pabcubcru.infobooks.repository.UserRepository;
 
 import org.elasticsearch.common.unit.Fuzziness;
 import org.elasticsearch.index.query.BoolQueryBuilder;
@@ -42,15 +43,19 @@ public class SearchService {
 
     private UserFavouriteBookRepository userFavouriteBookRepository;
 
+    private UserRepository userRepository;
+
     @Autowired
-    public SearchService(ElasticsearchRestTemplate elasticsearchTemplate, BookRepository bookRepository, UserFavouriteBookRepository userFavouriteBookRepository) {
+    public SearchService(ElasticsearchRestTemplate elasticsearchTemplate, BookRepository bookRepository, UserFavouriteBookRepository userFavouriteBookRepository,
+    UserRepository userRepository) {
         this.elasticsearchTemplate = elasticsearchTemplate;
         this.bookRepository = bookRepository;
         this.userFavouriteBookRepository = userFavouriteBookRepository;
+        this.userRepository = userRepository;
     }
 
     @Transactional(readOnly = true)
-    public Map<Integer, List<Book>> searchBook(String query, Pageable pageable) {
+    public Map<Integer, List<Book>> searchBook(String query, Pageable pageable, String username) {
         Map<Integer, List<Book>> map = new HashMap<>();
 
         NativeSearchQuery searchQuery = new NativeSearchQueryBuilder()
@@ -74,10 +79,22 @@ public class SearchService {
         .build();
 
         SearchHits<Book> books = elasticsearchTemplate.search(searchQuery, Book.class, IndexCoordinates.of("books"));
+        List<Book> res = new ArrayList<>();
+        Integer numPages = 0;
 
-        List<Book> res = books.stream().map(x -> x.getContent()).collect(Collectors.toList());
+        if(books.getTotalHits() > 0) {
+            res = books.stream().map(x -> x.getContent()).collect(Collectors.toList());
 
-        Integer numPages = (int) Math.ceil(books.getTotalHits() / pageable.getPageSize())+1;
+            numPages = (int) Math.ceil(books.getTotalHits() / pageable.getPageSize())+1;
+        } else if(username != null) {
+            User user = this.userRepository.findByUsername(username);
+            res = this.recommendBooks(user, PageRequest.of(0, 21)).values().stream().findFirst().orElse(new ArrayList<>());
+            if(res.isEmpty()) {
+                res = this.bookRepository.findByUsernameNot(user.getUsername(), PageRequest.of(0, 21)).getContent();
+            }
+        } else {
+            res = this.bookRepository.findAll(PageRequest.of(0, 21)).getContent();
+        }      
 
         map.put(numPages, res);
         return map;
@@ -117,13 +134,17 @@ public class SearchService {
                 .scoreMode(FunctionScoreQuery.ScoreMode.MAX)
                 .setMinScore(8);
 
-        BoolQueryBuilder boolQueryBuilder = new BoolQueryBuilder();
-        for(Book book : booksOfUser) {
-            boolQueryBuilder.should(QueryBuilders.matchQuery("id",book.getId()));
-        }
-
         BoolQueryBuilder queryFilter = new BoolQueryBuilder();
-        queryFilter.mustNot(boolQueryBuilder);
+        
+        for(Book book : booksOfUser) {
+            BoolQueryBuilder boolQueryBuilder1 = new BoolQueryBuilder();
+            boolQueryBuilder1.mustNot(QueryBuilders.matchQuery("id",book.getId()));
+            queryFilter.must(boolQueryBuilder1);
+        }
+        BoolQueryBuilder boolQueryBuilder2 = new BoolQueryBuilder();
+        boolQueryBuilder2.mustNot(QueryBuilders.matchQuery("username",user.getUsername()));
+
+        queryFilter.must(boolQueryBuilder2);
         
         NativeSearchQueryBuilder builder = new NativeSearchQueryBuilder();
         builder.withQuery(functionScoreQueryBuilder);
@@ -143,7 +164,7 @@ public class SearchService {
         }
 
         List<Book> searchBookList = searchHits.stream().map(x -> x.getContent()).collect(Collectors.toList());
-        Integer numPages = (int) Math.ceil(searchHits.getTotalHits() / pageable.getPageSize())+1;
+        Integer numPages = (int) Math.ceil(searchHits.getTotalHits() / pageable.getPageSize());
 
         res.put(numPages, searchBookList);
 

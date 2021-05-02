@@ -24,21 +24,23 @@ export default class List extends Component {
     render() {
       return (
         <div >
+          <h1 style={{float:"left", color: "black"}}><b>Mis libros</b></h1><br></br>
             {this.state.books.length == 0 ?
-                  <div><p><b>¿Todavía no has añadido ningún libro? <a class="btn btn-primary" href="/books/new">Añade uno!</a></b></p><br></br>
+                  <div><br></br><br></br><p><b>¿Todavía no has añadido ningún libro? <a class="btn btn-primary" href="/books/new">Añade uno!</a></b></p><br></br>
                   <br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br>
-                  <br></br><br></br></div>
+                  <br></br></div>
                 :
                   <center>
+                  
                   {this.state.books.length != 0 && this.state.pages.length > 1 ?
-                  <center>{this.state.actualPage != 0 ? <span><a class="btn btn-primary" href={"/books/all/0"}>{String("<<")}</a><a style={{margin:"5px"}} class="btn btn-primary" href={"/books/all/"+parseInt(this.state.actualPage-1)}>{String("<")}</a></span> : <p></p>}
+                  <center><br></br><br></br>{this.state.actualPage != 0 ? <span><a class="btn btn-primary" href={"/books/me/0"}>{String("<<")}</a><a style={{margin:"5px"}} class="btn btn-primary" href={"/books/me/"+parseInt(this.state.actualPage-1)}>{String("<")}</a></span> : <p></p>}
                   {this.state.pages.map((page) => {
                     return(
                       
-                      <a style={{color:this.state.actualPage == page ? "white" : "black", backgroundColor:this.state.actualPage == page ? "#007bff" : ""}} class="pag" href={"/books/all/"+page}>{page}</a>
+                      <a style={{color:this.state.actualPage == page ? "white" : "black", backgroundColor:this.state.actualPage == page ? "#007bff" : ""}} class="pag" href={"/books/me/"+page}>{page}</a>
                     )
                   })}
-                  {this.state.actualPage != this.state.numTotalPages-1 ? <span><a style={{margin:"5px"}} class="btn btn-primary" href={"/books/all/"+parseInt(this.state.actualPage+1)}>{String(">")}</a><a class="btn btn-primary" href={"/books/all/"+parseInt(this.state.numTotalPages-1)}>{String(">>")}</a></span> : <p></p>}
+                  {this.state.actualPage != this.state.numTotalPages-1 ? <span><a style={{margin:"5px"}} class="btn btn-primary" href={"/books/me/"+parseInt(this.state.actualPage+1)}>{String(">")}</a><a class="btn btn-primary" href={"/books/me/"+parseInt(this.state.numTotalPages-1)}>{String(">>")}</a></span> : <p></p>}
                   </center>
                 :
                   <p></p>
@@ -76,14 +78,14 @@ export default class List extends Component {
                   </main>)
             })}
             {this.state.books.length != 0 && this.state.pages.length > 1 ?
-                  <center>{this.state.actualPage != 0 ? <span><a class="btn btn-primary" href={"/books/all/0"}>{String("<<")}</a><a class="btn btn-primary" style={{margin:"5px"}} href={"/books/all/"+parseInt(this.state.actualPage-1)}>{String("<")}</a></span> : <p></p>}
+                  <center>{this.state.actualPage != 0 ? <span><a class="btn btn-primary" href={"/books/me/0"}>{String("<<")}</a><a class="btn btn-primary" style={{margin:"5px"}} href={"/books/me/"+parseInt(this.state.actualPage-1)}>{String("<")}</a></span> : <p></p>}
                   {this.state.pages.map((page) => {
                     return(
                       
-                      <a style={{color:this.state.actualPage == page ? "white" : "black", backgroundColor:this.state.actualPage == page ? "#007bff" : ""}} class="pag" href={"/books/all/"+page}>{page}</a>
+                      <a style={{color:this.state.actualPage == page ? "white" : "black", backgroundColor:this.state.actualPage == page ? "#007bff" : ""}} class="pag" href={"/books/me/"+page}>{page}</a>
                     )
                   })}
-                  {this.state.actualPage != this.state.numTotalPages-1 ? <span><a style={{margin:"5px"}} class="btn btn-primary" href={"/books/all/"+parseInt(this.state.actualPage+1)}>{String(">")}</a><a class="btn btn-primary" href={"/books/all/"+parseInt(this.state.numTotalPages-1)}>{String(">>")}</a></span> : <p></p>}
+                  {this.state.actualPage != this.state.numTotalPages-1 ? <span><a style={{margin:"5px"}} class="btn btn-primary" href={"/books/me/"+parseInt(this.state.actualPage+1)}>{String(">")}</a><a class="btn btn-primary" href={"/books/me/"+parseInt(this.state.numTotalPages-1)}>{String(">>")}</a></span> : <p></p>}
                   <br></br><br></br></center>
                 :
                   <p></p>
