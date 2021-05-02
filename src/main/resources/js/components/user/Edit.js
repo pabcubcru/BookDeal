@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import userService from "../services/User"
+import userService from "../services/User";
+import bookService from "../services/Book";
 
 export default class Form extends Component {
 
@@ -17,11 +18,14 @@ export default class Form extends Component {
         fieldPostCode:"",
         fieldPassword: "",
         fieldConfirmPassword: "",
+        fieldGenres:"",
         errorField:[],
         errorMessages:[],
         messageCorrectUser:"",
         messageCorrectPassword:"",
-        provinces:[]
+        provinces:[],
+        genres:[],
+        fieldGen:[]
     }
   }
 
@@ -31,6 +35,10 @@ export default class Form extends Component {
     const res = await userService.getUser(username)
     const p = await userService.getProvinces()
     const prov = p.provinces
+
+    const genres = await bookService.getGenres()
+    const gen = genres.genres
+    const genrs = res.user.genres.split(",")
     if(res.success){
         this.setState({
             id: res.user.id,
@@ -42,7 +50,10 @@ export default class Form extends Component {
             fieldProvince: res.user.province,
             fieldCity: res.user.city,
             fieldPostCode: res.user.postCode,
-            provinces:prov
+            fieldGenres: res.user.genres,
+            provinces:prov,
+            genres:gen,
+            fieldGen:genrs
         })
     } /*else {
         window.location.replace("/error")
@@ -125,6 +136,7 @@ export default class Form extends Component {
             <label for="firstName" class="col-sm-3 col-form-label">Provincia<sup class='text-danger'>*</sup></label>
           <div class="col-sm-9">
             <select class="form-control" id="selectProvince" value={this.state.fieldProvince} onChange={(event) => this.setState({fieldProvince:event.target.value})}>
+            <option value="">Despliega para ver las opciones</option>
             {this.state.provinces.map((province) => {
               return (
                 <option value={province}>{province}</option>
@@ -153,6 +165,24 @@ export default class Form extends Component {
           </div>
         </div>
 
+        <div class="form-group row">
+            <label for="firstName" class="col-sm-3 col-form-label">Seleccione sus géneros preferidos (3 mínimo)<sup class='text-danger'>*</sup></label>
+          <div class="col-sm-9">
+          <select class="form-control chosen-select" id="selectGenres" value={this.state.fieldGen} onClick={(event) => this.editGenres(event.target.value)} multiple>
+            {this.state.genres.map((genre) => {
+              return (
+                <option value={genre}>{genre.replaceAll("_", " ")}</option>
+              )
+            })}
+            </select>
+            {this.state.errorField.indexOf("genres") != -1 ? 
+                <p class='text-danger'>{this.state.errorMessages[this.state.errorField.indexOf("genres")]}</p>
+              :
+                <p></p>
+              }
+          </div>
+        </div>
+
         {<p style={{color: "#099C01"}}>{this.state.messageCorrectUser}</p>}
 
         <div class="form-group row">
@@ -167,7 +197,7 @@ export default class Form extends Component {
         <div class="form-group row">
             <label for="firstName" class="col-sm-3 col-form-label">Contraseña<sup class='text-danger'>*</sup></label>
           <div class="col-sm-9">
-            <input type="password" class="form-control"
+            <input type="password" class="form-control" placeholder="Debe contener entre 8 y 20 carácteres"
               value={this.state.fieldPassword} 
               onChange={(event)=>this.setState({fieldPassword: event.target.value})}/>
               {this.state.errorField.indexOf("password") != -1 ? 
@@ -181,7 +211,7 @@ export default class Form extends Component {
         <div class="form-group row">
             <label for="firstName" class="col-sm-3 col-form-label">Confirma contraseña<sup class='text-danger'>*</sup></label>
           <div class="col-sm-9">
-            <input type="password" class="form-control"
+            <input type="password" class="form-control" placeholder="Debe contener entre 8 y 20 carácteres"
               value={this.state.fieldConfirmPassword} 
               onChange={(event)=>this.setState({fieldConfirmPassword: event.target.value})}/>
               {this.state.errorField.indexOf("confirmPassword") != -1 ? 
@@ -197,7 +227,8 @@ export default class Form extends Component {
 
         <div class="form-group row">
             <div class="col-sm-6" >
-        <button onClick={()=>this.onClickSave()} class="btn btn-primary" type="submit">Cambiar</button>
+        <button onClick={()=>this.onClickSave()} class="btn btn-primary" type="submit" disabled={this.state.fieldPassword.length < 8 || this.state.fieldPassword.length > 20
+        || this.state.fieldConfirmPassword.length < 8 || this.state.fieldConfirmPassword.length > 20}>Cambiar</button>
             </div>
         </div>
 
@@ -228,5 +259,16 @@ export default class Form extends Component {
           this.setState({errorField:errFields, errorMessages:errMess})
         }
 	}
+
+  async editGenres(element) {
+    const gen = this.state.fieldGen
+    if(!gen.includes(element)) {
+      gen.push(element)
+    } else {
+      gen.splice(gen.indexOf(element), 1)
+    }
+    this.setState({fieldGen:gen})
+    this.setState({fieldGenres:gen.join(",")})
+  }
 }
 

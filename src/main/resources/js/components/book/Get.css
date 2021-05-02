@@ -26,7 +26,7 @@
 
 .book {
   width: 100%;
-  height: 100%;
+  height: 800px;
   display: flex;
   perspective: 1200px;
 
@@ -50,18 +50,16 @@
   overflow: hidden;
 }
 .book__page--1 img {
-  height: 100%;
+  height: 800px;
   width: 100%;
-  height: auto;
 }
 .book__page--4 {
   cursor: pointer;
   overflow: hidden;
 }
 .book__page--4 img {
-  height: 100%;
+  height: 800px;
   width: 100%;
-  height: auto;
 }
 .book__page--2 {
   position: absolute;
@@ -86,7 +84,7 @@
 .book__page-back img {
   width: 100%;
   max-width: 100%;
-  height: auto;
+  height: 800px;
 }
 .book__page .page__content {
   padding: var(--baseline);

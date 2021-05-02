@@ -17,7 +17,9 @@ export default class List extends Component {
       pages:[],
       actualPage:0,
       numTotalPages:0,
-      showMode:""
+      showMode:"",
+      title:"",
+      nearBooks:true
     }
   }
     
@@ -34,16 +36,16 @@ export default class List extends Component {
     
     const username = await userService.getUsername()
 
-    this.setState({books:res.books, username:username.username, isAdded:res.isAdded, pages:res.pages, numTotalPages:parseInt(res.numTotalPages), showMode:showMode})
+    this.setState({books:res.books, nearBooks:res.nearBooks, username:username.username, isAdded:res.isAdded, pages:res.pages, numTotalPages:parseInt(res.numTotalPages), showMode:showMode, title:res.title})
   }
 
     render() {
         return (
             <div >
-                {this.state.books.length == 0 ?
-                  <div><p><b>Actualmente no existen libros para mostrar cerca de usted.</b></p><br></br>
-                  <br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br>
-                  <br></br><br></br></div>
+              <h1 style={{float:"left", color: "black"}}><b>{this.state.title}</b></h1><br></br><br></br><br></br>
+                {this.state.books.length == 0 || this.state.nearBooks == false ?
+                  <div><p><b>No se encontraron resultados.</b></p>
+                  <h2 style={{float:"left", color: "black"}}><b>Algunas recomendaciones</b></h2><br></br><br></br></div>
                 :
                   <center>
                   {this.state.books.length != 0 && this.state.pages.length > 1 ?

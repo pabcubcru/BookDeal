@@ -141,7 +141,7 @@ public class InfoBooksApplication {
         book.setIsbn("0-7645-2641-3");
         book.setPublicationYear(2014);
         book.setPublisher("Publisher Test");
-        book.setGenres("Comedia");
+        book.setGenres("Autoayuda");
         book.setAuthor("Author Test"); 
         book.setDescription("Description test"); 
         book.setImage("https://imagessl1.casadellibro.com/a/l/t5/11/9788499926711.jpg");
@@ -178,6 +178,7 @@ public class InfoBooksApplication {
         user.setProvince("Sevilla");
         user.setPostCode("41012");
         user.setUsername("pablo123");
+		user.setGenres("Autoayuda,Esoterismo,Ciencia");
         user.setPassword(new BCryptPasswordEncoder().encode("pablo123"));
         user.setEnabled(true);
 		this.userRepository.save(user);
@@ -193,6 +194,7 @@ public class InfoBooksApplication {
         user.setProvince("Sevilla");
         user.setPostCode("41012");
         user.setUsername("juan1234");
+		user.setGenres("Religión,Gastronomía,Cocina");
         user.setPassword(new BCryptPasswordEncoder().encode("juan1234"));
         user.setEnabled(true);
 		this.userRepository.save(user);
@@ -209,12 +211,19 @@ public class InfoBooksApplication {
 			user.setEmail("user"+i+"@us.es"); 
 			user.setPhone("+34654987321");
 			user.setBirthDate(LocalDate.of(1997, 11, 23));
-			int numRandomProvince = (int) Math.floor(Math.random()*ProvinceEnum.values().length);
+			int numRandomProvince = (int) Math.floor(Math.random()*ProvinceEnum.values().length)-1;
+			numRandomProvince = numRandomProvince < 0 ? 0 : numRandomProvince;
 			user.setProvince(provinces[numRandomProvince].toString());
 			user.setPostCode(""+(int)Math.floor(Math.random()*(50000-1000+1)+1000));
 			user.setUsername("username"+i);
 			user.setPassword(new BCryptPasswordEncoder().encode("password"+i));
 			user.setEnabled(true);
+			GenreEnum[] genres = GenreEnum.values();
+			int numRandomGenre1 = (int) Math.floor(Math.random()*(GenreEnum.values().length/3));
+			int numRandomGenre2 = (int) Math.floor(Math.random()*(GenreEnum.values().length*2/3));
+			int numRandomGenre3 = (int) Math.floor(Math.random()*(GenreEnum.values().length/3)) + (GenreEnum.values().length*2/3);
+			String genre = genres[numRandomGenre1].toString() + "," + genres[numRandomGenre2].toString() + "," + genres[numRandomGenre3].toString();
+			user.setGenres(genre);
 			this.userRepository.save(user);
 			this.buildAuthoritiesForTests(user.getUsername());
 		}
@@ -275,8 +284,10 @@ public class InfoBooksApplication {
 			String publisher = s[5];
 			String description = s[6];
 			String urlImage = s[7];
-			int numRandomGenre1 = (int) Math.floor(Math.random()*GenreEnum.values().length);
-			int numRandomGenre2 = (int) Math.floor(Math.random()*GenreEnum.values().length);
+			int numRandomGenre1 = (int) Math.floor(Math.random()*GenreEnum.values().length)-1;
+			numRandomGenre1 = numRandomGenre1 < 0 ? 0 : numRandomGenre1;
+			int numRandomGenre2 = (int) Math.floor(Math.random()*GenreEnum.values().length)-1;
+			numRandomGenre2 = numRandomGenre2 < 0 ? 0 : numRandomGenre2;
 			String genre = genres[numRandomGenre1].toString();
 			if(numRandomGenre1 != numRandomGenre2) {
 				genre = genres[numRandomGenre1].toString() + "," + genres[numRandomGenre2].toString();

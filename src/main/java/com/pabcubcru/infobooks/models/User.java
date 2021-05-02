@@ -39,13 +39,17 @@ public class User extends BaseEntity {
 	@Past(message = "La fecha de nacimiento debe ser anterior a la fecha actual.")
 	private LocalDate birthDate;
 
-	@NotNull(message = "La provincia es un campo requerido.")
+	@NotBlank(message = "La provincia es un campo requerido.")
 	@Field(type = FieldType.Text, name = "province")
 	private String province;
 
 	@Field(type = FieldType.Text, name = "postCode")
 	@Pattern(regexp = "0[1-9][0-9]{3}|[1-4][0-9]{4}|5[0-2][0-9]{3}", message = "El código postal no es válido.")
 	private String postCode;
+
+	@Field(type = FieldType.Text, name = "genres")
+	@NotBlank(message = "Los géneros es un campo requerido.")
+	private String genres;
 
 	@Field(type = FieldType.Text, name = "username")
 	@NotBlank(message = "El nombre de usuario es un campo requerido.")

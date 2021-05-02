@@ -70,6 +70,17 @@ public class UserController {
 		return res;
 	}
 
+	public Integer countCharacters(String cadena, String character) {
+		int posicion, contador = 0;
+        
+        posicion = cadena.indexOf(character);
+        while (posicion != -1) {
+            contador++;         
+            posicion = cadena.indexOf(character, posicion + 1);
+        }
+        return contador;
+	}
+
 	private BindingResult validateUser(User user, BindingResult result, Boolean newUser) {
 		if(newUser) {
 			if(!user.getEmail().isEmpty()) {
@@ -94,6 +105,10 @@ public class UserController {
 			if(user.getPassword().isEmpty()) {
 				result.rejectValue("password", "La contraseña es un campo requerido.", "La contraseña es un campo requerido.");
 			}
+		}
+
+		if(this.countCharacters(user.getGenres(), ",") <= 1) {
+			result.rejectValue("genres", "Debe seleccionar al menos 3 géneros.", "Debe seleccionar al menos 3 géneros.");
 		}
 
 		if(!user.getPassword().isEmpty()) {

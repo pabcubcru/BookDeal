@@ -11,6 +11,6 @@ import lombok.Setter;
 public abstract class BaseEntity {
     
     @Id
-    @Field(type = FieldType.Text, name = "id")
+    @Field(type = FieldType.Keyword, name = "id")
 	private String id;
 }

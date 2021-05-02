@@ -26,4 +26,6 @@ public interface BookRepository extends ElasticsearchRepository<Book, String> {
     public Long countByUsername(String username);
 
     public Page<Book> findByUsernameIn(List<String> usernames, Pageable pageable);
+
+    public Page<Book> findByGenresLike(String genre, Pageable pageable);
 }

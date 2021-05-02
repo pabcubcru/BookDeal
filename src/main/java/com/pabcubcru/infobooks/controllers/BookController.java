@@ -18,6 +18,7 @@ import com.pabcubcru.infobooks.models.RequestStatus;
 import com.pabcubcru.infobooks.models.User;
 import com.pabcubcru.infobooks.services.BookService;
 import com.pabcubcru.infobooks.services.RequestService;
+import com.pabcubcru.infobooks.services.SearchService;
 import com.pabcubcru.infobooks.services.UserFavouriteBookService;
 import com.pabcubcru.infobooks.services.UserService;
 
@@ -53,10 +54,23 @@ public class BookController {
     @Autowired
     private UserService userService;
 
-    @GetMapping(value = {"/new", "/me/{page}", "/all/{page}/{showMode}", "/all/{page}"})
+    @Autowired
+    private SearchService searchService;
+
+    @GetMapping(value = {"/new", "/me/{page}", "/all/{page}", "recommend/{page}"})
 	public ModelAndView main() {
 		ModelAndView model = new ModelAndView();
 		model.setViewName("Main");
+		return model;
+	}
+
+    @GetMapping(value = "/all/{page}/{showMode}")
+    public ModelAndView mainForShowMode(@PathVariable("showMode") String showMode) {
+		ModelAndView model = new ModelAndView();
+		model.setViewName("Main");
+        if(!showMode.equals("postCode") && !showMode.equals("province") && !showMode.equals("genres")) {
+            model.setViewName("errors/Error404");
+        }
 		return model;
 	}
 
@@ -174,12 +188,33 @@ public class BookController {
 
         if(principal == null) {
             pageOfBooks = this.bookService.findAll(pageRequest);
+            numberOfPages = pageOfBooks.getTotalPages();
             res.put("books", pageOfBooks.getContent());
         } else {
             List<Book> books = new ArrayList<>();
+            List<Book> findBooks = new ArrayList<>();
             User user = this.userService.findByUsername(principal.getName());
             pageOfBooks = this.bookService.findNearBooks(user, pageRequest, showMode);
-            for(Book b : pageOfBooks.getContent()) {
+            res.put("nearBooks", true);
+            if(showMode.equals("province")) {
+                res.put("title", "Libros en su provincia");
+            } else if(showMode.equals("postCode")) {
+                res.put("title", "Libros en su código postal");
+            } else if(showMode.equals("genres")) {
+                res.put("title", "Libros por sus géneros preferidos");
+            } else {
+                res.put("title", "Libros cercanos a usted");
+            }
+            numberOfPages = pageOfBooks.getTotalPages();
+            if(pageOfBooks.getNumberOfElements() <= 0) {
+                Map<Integer, List<Book>> map = this.searchService.recommendBooks(user, PageRequest.of(0, 21));
+                findBooks = map.values().stream().findFirst().orElse(new ArrayList<>());
+                res.put("nearBooks", false);
+                numberOfPages = 0;
+            } else {
+                findBooks = pageOfBooks.getContent();
+            }
+            for(Book b : findBooks) {
                 Request requestAcceptedToBook1 = this.requestService.findFirstByIdBook1AndStatus(b.getId(), RequestStatus.ACEPTADA.toString());
                 Request requestAcceptedToBook2 = this.requestService.findFirstByIdBook2AndStatus(b.getId(), RequestStatus.ACEPTADA.toString());
                 if(requestAcceptedToBook1 == null && requestAcceptedToBook2 == null) {
@@ -198,12 +233,11 @@ public class BookController {
             res.put("page", page);
             res.put("isAdded", isAdded);
         }
-        
-        numberOfPages = pageOfBooks.getTotalPages();
+
         res.put("numTotalPages", numberOfPages);
         res.put("pages", new ArrayList<Integer>());
         if(numberOfPages > 0) {
-            List<Integer> pages = IntStream.rangeClosed(page-10 <= 0 ? 0 : page-10, page+10 >= numberOfPages-1 ? numberOfPages-1 : page+10).boxed().collect(Collectors.toList());
+            List<Integer> pages = IntStream.rangeClosed(page-5 <= 0 ? 0 : page-5, page+5 >= numberOfPages-1 ? numberOfPages-1 : page+5).boxed().collect(Collectors.toList());
             res.put("pages", pages);
         }
 
@@ -222,7 +256,7 @@ public class BookController {
         res.put("numTotalPages", numberOfPages);
         res.put("pages", new ArrayList<Integer>());
         if(numberOfPages > 0) {
-            List<Integer> pages = IntStream.rangeClosed(page-10 <= 0 ? 0 : page-10, page+10 >= numberOfPages-1 ? numberOfPages-1 : page+10).boxed().collect(Collectors.toList());
+            List<Integer> pages = IntStream.rangeClosed(page-5 <= 0 ? 0 : page-5, page+5 >= numberOfPages-1 ? numberOfPages-1 : page+5).boxed().collect(Collectors.toList());
             res.put("pages", pages);
         }
 
@@ -308,5 +342,40 @@ public class BookController {
 
         return res;
     }
+
+    @GetMapping(value="/recommend")
+    public Map<String, Object> findRecommendatedBooks(Principal principal, @RequestParam(name = "page", defaultValue = "0") Integer page){
+        Map<String, Object> res = new HashMap<>();
+        PageRequest pageRequest = PageRequest.of(page, 21);
+        User user = this.userService.findByUsername(principal.getName());
+        Map<Integer, List<Book>> map = this.searchService.recommendBooks(user, pageRequest);
+
+        List<Book> books = map.values().stream().findFirst().orElse(new ArrayList<>());
+        
+        res.put("books", books);
+
+        Integer numberOfPages = map.keySet().stream().findFirst().orElse(0);
+        res.put("numTotalPages", numberOfPages);
+
+        List<Boolean> isAdded = new ArrayList<>();
+        for(Book book : books) {
+            if(this.userFavouriteBookService.findByUsernameAndBookId(principal.getName(), book.getId()) == null) {
+                isAdded.add(false);
+            } else {
+                isAdded.add(true);
+            }
+        }
+        res.put("isAdded", isAdded);
+        
+        if(numberOfPages > 0) {
+            List<Integer> pages = IntStream.rangeClosed(page-5 <= 0 ? 0 : page-5, page+5 >= numberOfPages-1 ? numberOfPages-1 : page+5).boxed().collect(Collectors.toList());
+            res.put("pages", pages);
+        } else {
+            res.put("pages", new ArrayList<Integer>());
+        }
+
+        return res;
+    }
+
     
 }
