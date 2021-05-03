@@ -1,8 +1,10 @@
 const baseUrl = "http://localhost:8080/books"
 import axios from "axios";
+import FormData from 'form-data'
 const book = {}
 
 book.create = async(state) => {
+    
 
     const datapost = {
         title: state.fieldTitle,
@@ -13,7 +15,6 @@ book.create = async(state) => {
         genres: state.fieldGenres,
         author: state.fieldAuthor,
         description: state.fieldDescription,
-        image: state.fieldImage,
         status: state.fieldStatus,
         price: state.fieldPrice
     }
@@ -23,6 +24,25 @@ book.create = async(state) => {
     .then(response => {return response.data;})
     .catch(error => {return error.response;})
 
+    if(res.success == true) {
+        const idBook = res.idBook
+        let data = new FormData();
+
+        let files = []
+
+        files.push(state.fieldImage[0])
+        files.push(state.fieldImage[1])
+        alert(JSON.stringify(state.fieldImage))
+        alert(JSON.stringify(files))
+        data.append('files', state.fieldImage[0]);
+        data.append('idBook', idBook);
+
+        const urlPost1 = baseUrl+"/new/image"
+        const res1 = await axios.post(urlPost1, data)
+        .then(response => {return response.data;})
+        .catch(error => {return error.response;})
+    }
+    
     return res;
 }
 

@@ -58,8 +58,8 @@ public class Book extends BaseEntity {
     @Length(max = 1750, message="La descripción no debe ser tan extensa.")
     private String description;
 
-    @NotBlank(message = "La imagen es un campo requerido.")
-    @URL(message = "La URL de la imagen no es válida.")
+    //@NotBlank(message = "La imagen es un campo requerido.")
+    //@URL(message = "La URL de la imagen no es válida.")
     @Field(type = FieldType.Text, name = "image")
     private String image;
 

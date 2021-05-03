@@ -14,7 +14,7 @@ export default class Form extends Component {
       fieldGenres:"",
       fieldAuthor:"",
       fieldDescription:"",
-      fieldImage: "",
+      fieldImage: [],
       fieldStatus: "NUEVO",
       fieldAction:"INTERCAMBIO",
       fieldPrice: "",
@@ -156,11 +156,10 @@ export default class Form extends Component {
         </div>
 
         <div class="form-group row">
-            <label for="firstName" class="col-sm-3 col-form-label"> URL de imagen<sup class='text-danger'>*</sup></label>
+            <label for="firstName" class="col-sm-3 col-form-label">Selecciona las imágenes<sup class='text-danger'>*</sup></label>
           <div class="col-sm-9">
-            <input type="url" class="form-control"
-              value={this.state.fieldImage} 
-              onChange={(event)=>this.setState({fieldImage: event.target.value})}/>
+            <input type="file" class="form-control" 
+              onChange={(event)=>this.setState({fieldImage: event.target.files})} multiple/>
               {this.state.errorField.indexOf("image") != -1 ? 
                 <p class='text-danger'>{this.state.errorMessages[this.state.errorField.indexOf("image")]}</p>
               :

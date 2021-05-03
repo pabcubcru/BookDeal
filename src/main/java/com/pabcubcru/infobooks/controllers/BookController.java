@@ -1,5 +1,9 @@
 package com.pabcubcru.infobooks.controllers;
 
+import java.io.File;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.security.Principal;
 import java.time.LocalDate;
 import java.util.ArrayList;
@@ -29,13 +33,17 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestAttribute;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RequestPart;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
 
 @RestController
@@ -122,6 +130,29 @@ public class BookController {
         return result;
     }
 
+    @PostMapping(value = "/new/image", consumes = {"multipart/form-data"})
+    public void saveImages(@RequestParam("files") MultipartFile f, @RequestParam("idBook") String id) {
+        Book book = this.bookService.findBookById(id);
+        if(f != null) {
+            String image = "";
+            Path directorio = Paths.get("src\\main\\resources\\images");
+            String ruta = directorio.toFile().getAbsolutePath();
+
+            try {
+                //for(MultipartFile f : files) {0-7645-2641-3
+                    byte[] bytes = f.getBytes();
+                    Path rutaCompleta = Paths.get(ruta + "//" + f.getOriginalFilename());
+                    Files.write(rutaCompleta, bytes);
+                    image += f.getOriginalFilename();
+                //}
+            } catch (Exception e) {
+                //TODO: handle exception
+            }
+            book.setImage(image);
+            this.bookService.save(book);
+        }
+    }
+
     @PostMapping(value = "/new")
     public Map<String, Object> create(@RequestBody @Valid Book book, BindingResult result, Principal principal) {
         Map<String, Object> res = new HashMap<>();
@@ -131,6 +162,7 @@ public class BookController {
             try{
                 book.setUsername(principal.getName());
                 this.bookService.save(book);
+                res.put("idBook", book.getId());
                 res.put("success", true);
             } catch(Exception e) {
                 res.put("success", false);
