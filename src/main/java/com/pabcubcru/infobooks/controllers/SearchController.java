@@ -9,8 +9,10 @@ import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
 import com.pabcubcru.infobooks.models.Book;
+import com.pabcubcru.infobooks.models.Image;
 import com.pabcubcru.infobooks.models.Request;
 import com.pabcubcru.infobooks.models.RequestStatus;
+import com.pabcubcru.infobooks.services.BookService;
 import com.pabcubcru.infobooks.services.RequestService;
 import com.pabcubcru.infobooks.services.SearchService;
 import com.pabcubcru.infobooks.services.UserFavouriteBookService;
@@ -37,6 +39,9 @@ public class SearchController {
     @Autowired
     private UserFavouriteBookService userFavouriteBookService;
 
+    @Autowired
+    private BookService bookService;
+
     @GetMapping(value = {"/{page}/{query}", "/*"})
     public ModelAndView main() {
         ModelAndView model = new ModelAndView();
@@ -48,6 +53,7 @@ public class SearchController {
     public Map<String, Object> searchBooks(@PathVariable("query") String query, Principal principal, @RequestParam("page") Integer page) {
         Map<String, Object> res = new HashMap<>();
         PageRequest pageRequest = PageRequest.of(page, 21);
+        List<List<String>> allBookImages = new ArrayList<>();
 
         String username = principal != null ? principal.getName() : null;
 
@@ -78,6 +84,16 @@ public class SearchController {
             res.put("isAdded", isAdded);
             res.put("page", page);
         }
+
+        for(Book b : books) {
+            List<String> urlImages = new ArrayList<>();
+            List<Image> images = this.bookService.findImagesByIdBook(b.getId());
+            for(Image image : images) {
+                urlImages.add(image.getUrlImage());
+            }
+            allBookImages.add(urlImages);
+        }
+        res.put("urlImages", allBookImages);
 
         res.put("books", books);
 

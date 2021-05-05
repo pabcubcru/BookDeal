@@ -10,7 +10,8 @@ export default class List extends Component {
       books: [],
       pages:[],
       actualPage:0,
-      numTotalPages:0
+      numTotalPages:0,
+      images: []
     }
   }
     
@@ -18,7 +19,8 @@ export default class List extends Component {
     const page = this.props.match.params.page;
     const res = await bookService.listMyBooks(page)
 
-    this.setState({books:res.books, pages:res.pages, actualPage:parseInt(page), numTotalPages:parseInt(res.numTotalPages)})
+    this.setState({books:res.books, pages:res.pages, actualPage:parseInt(page), numTotalPages:parseInt(res.numTotalPages),
+    images: res.urlImages})
   }
 
     render() {
@@ -46,14 +48,14 @@ export default class List extends Component {
                   <p></p>
                 }<br></br></center>
                 }
-              {this.state.books.map((book) => {
+              {this.state.books.map((book, i) => {
                 return(
                   <main class="mainBooks">
                     <div class="book-card">
                       <div class="book-card__cover">
                         <div class="book-card__book">
                           <div class="book-card__book-front">
-                            <a style={{zIndex:"-10"}}  href={"/books/"+book.id}><img class="book-card__img" src={book.image} /></a>
+                            <a style={{zIndex:"-10"}}  href={"/books/"+book.id}><img class="book-card__img" src={this.state.images[i]} /></a>
                           </div>
                           <div class="book-card__book-back"></div>
                           <div class="book-card__book-side"></div>

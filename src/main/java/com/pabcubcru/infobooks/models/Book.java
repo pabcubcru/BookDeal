@@ -7,7 +7,7 @@ import javax.validation.constraints.Pattern;
 import javax.validation.constraints.PositiveOrZero;
 
 import org.hibernate.validator.constraints.Length;
-import org.hibernate.validator.constraints.URL;
+import org.springframework.data.annotation.Transient;
 import org.springframework.data.elasticsearch.annotations.Document;
 import org.springframework.data.elasticsearch.annotations.Field;
 import org.springframework.data.elasticsearch.annotations.FieldType;
@@ -58,11 +58,6 @@ public class Book extends BaseEntity {
     @Length(max = 1750, message="La descripción no debe ser tan extensa.")
     private String description;
 
-    //@NotBlank(message = "La imagen es un campo requerido.")
-    //@URL(message = "La URL de la imagen no es válida.")
-    @Field(type = FieldType.Text, name = "image")
-    private String image;
-
     @NotBlank(message = "El estado es un campo requerido.")
     @Field(type = FieldType.Keyword, name = "status")
     private String status;
@@ -75,6 +70,9 @@ public class Book extends BaseEntity {
     @Field(type = FieldType.Keyword, name = "username")
     private String username;
 
+    @Transient
+    private String image;
+
     public Book(@NotBlank(message = "El título es un campo requerido.") String title, String originalTitle,
             @NotBlank(message = "El ISBN es un campo requerido.") @Pattern(regexp = "^(?:ISBN(?:-1[03])?:? )?(?=[0-9X]{10}$|(?=(?:[0-9]+[- ]){3})[- 0-9X]{13}$|97[89][0-9]{10}$|(?=(?:[0-9]+[- ]){4})[- 0-9]{17}$)(?:97[89][- ]?)?[0-9]{1,5}[- ]?[0-9]+[- ]?[0-9]+[- ]?[0-9X]$", message = "El ISBN no es válido.") String isbn,
             @NotNull(message = "El año de publicación es un campo requerido.") @Max(value = 2021, message = "El año de publicación debe ser anterior o igual al presente año.") Integer publicationYear,
@@ -82,7 +80,7 @@ public class Book extends BaseEntity {
             @NotBlank(message = "Los géneros es un campo requerido.") String genres,
             @NotBlank(message = "El autor es un campo requerido.") String author,
             @NotBlank(message = "La descripción es un campo requerido.") String description,
-            @NotBlank(message = "La imagen es un campo requerido.") String image,
+            String image,
             @NotBlank(message = "El estado es un campo requerido.") String status,
             Double price, String username) {
         this.title = title;

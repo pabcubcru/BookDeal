@@ -11,12 +11,14 @@ import javax.annotation.PostConstruct;
 import com.pabcubcru.infobooks.models.Authorities;
 import com.pabcubcru.infobooks.models.Book;
 import com.pabcubcru.infobooks.models.GenreEnum;
+import com.pabcubcru.infobooks.models.Image;
 import com.pabcubcru.infobooks.models.ProvinceEnum;
 import com.pabcubcru.infobooks.models.Request;
 import com.pabcubcru.infobooks.models.User;
 import com.pabcubcru.infobooks.models.UserFavouriteBook;
 import com.pabcubcru.infobooks.repository.AuthoritiesRepository;
 import com.pabcubcru.infobooks.repository.BookRepository;
+import com.pabcubcru.infobooks.repository.ImageRepository;
 import com.pabcubcru.infobooks.repository.RequestRepository;
 import com.pabcubcru.infobooks.repository.UserFavouriteBookRepository;
 import com.pabcubcru.infobooks.repository.UserRepository;
@@ -51,6 +53,9 @@ public class InfoBooksApplication {
 	@Autowired
 	private AuthoritiesRepository authoritiesRepository;
 
+	@Autowired
+	private ImageRepository imageRepository;
+
 	public static void main(String[] args) {
 		SpringApplication.run(InfoBooksApplication.class, args);
 	}
@@ -60,6 +65,7 @@ public class InfoBooksApplication {
 		userFavouriteBookRepository.deleteAll();
 		bookRepository.deleteAll();
 		userRepository.deleteAll();
+		imageRepository.deleteAll();
 	}
 
 	public void buildUserFavouriteBookIndexForTests() {
@@ -133,6 +139,16 @@ public class InfoBooksApplication {
 		this.requestRepository.save(request);
 	}
 
+	public void buildBookIndexImages(String idBook, String urlImage, Integer id) {
+		Image image = new Image();
+		image.setUrlImage(urlImage);
+		image.setIdBook(idBook);
+		image.setFileName("image-"+id+"-"+idBook);
+		image.setUrlDelete("");
+
+		this.imageRepository.save(image);
+	}
+
 	public void buildBookIndexForTests() {
 		Book book = new Book();
 
@@ -144,18 +160,18 @@ public class InfoBooksApplication {
         book.setGenres("Autoayuda");
         book.setAuthor("Author Test"); 
         book.setDescription("Description test"); 
-        book.setImage("https://imagessl1.casadellibro.com/a/l/t5/11/9788499926711.jpg");
         book.setStatus("COMO NUEVO"); 
 		book.setPrice(10.);
         book.setUsername("test001");
+		this.buildBookIndexImages(book.getId(), "https://imagessl1.casadellibro.com/a/l/t5/11/9788499926711.jpg", 1);
 		this.bookRepository.save(book);
 
 		book.setId("book-002");
         book.setTitle("Title test 2");
-        book.setImage("https://images-na.ssl-images-amazon.com/images/I/81sBQfVzziL.jpg");
         book.setStatus("COMO NUEVO"); 
 		book.setPrice(null);
         book.setUsername("test002");
+		this.buildBookIndexImages(book.getId(), "https://images-na.ssl-images-amazon.com/images/I/81sBQfVzziL.jpg", 2);
 		this.bookRepository.save(book);
 	}
 
@@ -230,13 +246,21 @@ public class InfoBooksApplication {
 		log.info("================= Added 100 users. =================");
 	}
 
+	public void buildImagesForBook(List<Book> books) {
+		for(int i=0; i<books.size(); i++) {
+			Book b = books.get(i);
+			this.buildBookIndexImages(b.getId(), b.getImage(), i);
+		}
+	}
+
 	@PostConstruct
 	public void buildBookIndex() {
 		this.deleteIndex();
 		this.buildIndexUsersForBooks();
 		elasticSearchOperations.indexOps(Book.class).refresh();
 		List<Book> books = prepareDataset();
-		bookRepository.saveAll(books);
+		this.bookRepository.saveAll(books);
+		this.buildImagesForBook(books);
 		log.info("================= Added " + books.size() + " books. =================");
 		this.buildUserIndexForTests();
 		this.buildBookIndexForTests();

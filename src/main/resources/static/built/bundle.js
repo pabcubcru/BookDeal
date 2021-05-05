@@ -2434,7 +2434,7 @@ __webpack_require__.r(__webpack_exports__);
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()(_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0___default.a);
 ___CSS_LOADER_EXPORT___.push([module.i, "@import url(https://fonts.googleapis.com/css?family=Cormorant+Garamond:300,400,600|Tulpen+One&display=swap);"]);
 // Module
-___CSS_LOADER_EXPORT___.push([module.i, ":root {\r\n  /* colors */\r\n  --body-bg: #FAFAFA;\r\n  --page-bg: #F5F5F5;\r\n  --dark-text: #2A2935;\r\n  /* spacing */\r\n  /* this is what defines the global scale */\r\n  --baseline: 12px;\r\n  /* fonts */\r\n  --book-title: \"Tulpen One\", sans-serif;\r\n  --title: \"Cormorant Garamond\", serif;\r\n  --body: \"Cormorant Garamond\", serif;\r\n  --base-size: var(--baseline) * 1.2;\r\n}\r\n\r\n* {\r\n  box-sizing: border-box;\r\n}\r\n\r\n.cover {\r\n  width: 100%;\r\n  height: 200%;\r\n  box-shadow: 0 0 100px rgba(0, 0, 0, 0.3);\r\n}\r\n\r\n.book {\r\n  width: 100%;\r\n  height: 800px;\r\n  display: flex;\r\n  perspective: 1200px;\r\n\r\n}\r\n.book__page {\r\n  position: relative;\r\n  width: 50%;\r\n  height: 100%;\r\n  display: grid;\r\n  transform: rotateY(0deg);\r\n  transition: transform 0.9s cubic-bezier(0.645, 0.045, 0.355, 1);\r\n  transform-origin: 0% 0%;\r\n  border-radius: 5px;\r\n  background-image: url(https://i.pinimg.com/originals/8d/23/06/8d2306b98839234e49ce96a8b76e20ae.jpg);\r\n}\r\n.book__page:nth-of-type(1) {\r\n  background-image: url(https://i.pinimg.com/originals/8d/23/06/8d2306b98839234e49ce96a8b76e20ae.jpg);\r\n}\r\n.book__page--1 {\r\n  cursor: pointer;\r\n  overflow: hidden;\r\n}\r\n.book__page--1 img {\r\n  height: 800px;\r\n  width: 100%;\r\n}\r\n.book__page--4 {\r\n  cursor: pointer;\r\n  overflow: hidden;\r\n}\r\n.book__page--4 img {\r\n  height: 800px;\r\n  width: 100%;\r\n}\r\n.book__page--2 {\r\n  position: absolute;\r\n  right: 0;\r\n  pointer-events: none;\r\n  transform-style: preserve-3d;\r\n  background-image: url(https://i.pinimg.com/originals/8d/23/06/8d2306b98839234e49ce96a8b76e20ae.jpg);\r\n}\r\n.book__page-front {\r\n  position: absolute;\r\n  width: 100%;\r\n  height: 100%;\r\n  transform: rotateY(0deg) translateZ(1px);\r\n}\r\n.book__page-back {\r\n  position: absolute;\r\n  width: 100%;\r\n  height: 100%;\r\n  padding: 0 calc(var(--baseline) * 1.8);\r\n  transform: rotateY(180deg) translateZ(1px);\r\n}\r\n.book__page-back img {\r\n  width: 100%;\r\n  max-width: 100%;\r\n  height: 800px;\r\n}\r\n.book__page .page__content {\r\n  padding: var(--baseline);\r\n  height: 100%;\r\n  position: relative;\r\n  text-align: center;\r\n}\r\n.book__page .page__content-book-title {\r\n  font-family: var(--book-title);\r\n  font-size: calc(var(--base-size) * 3);\r\n  font-weight: bold;\r\n  text-transform: uppercase;\r\n  letter-spacing: 3px;\r\n  color: var(--dark-text);\r\n  margin-top: calc(var(--baseline) * 3);\r\n  margin-bottom: calc(var(--baseline) * 2);\r\n}\r\n.book__page .page__content-author {\r\n  font-family: var(--title);\r\n  font-size: calc(var(--base-size) * 1.2);\r\n  font-weight: 100;\r\n  text-transform: uppercase;\r\n  color: var(--dark-text);\r\n  border-top: 1px solid var(--dark-text);\r\n  border-bottom: 1px solid var(--dark-text);\r\n  display: inline-block;\r\n  padding: calc(var(--baseline) / 2) calc(var(--baseline) / 5);\r\n  margin-bottom: calc(var(--baseline) *3);\r\n}\r\n.book__page .page__content-credits {\r\n  font-family: var(--title);\r\n  text-transform: uppercase;\r\n  font-size: calc(var(--base-size) * 0.8);\r\n  margin-bottom: calc(var(--baseline) * 1.5);\r\n  letter-spacing: 1px;\r\n  font-weight: bold;\r\n}\r\n.book__page .page__content-credits span {\r\n  display: block;\r\n  font-size: calc(var(--base-size) * 1.2);\r\n  letter-spacing: 0;\r\n}\r\n.book__page .page__content-copyright {\r\n  position: absolute;\r\n  width: calc(100% - (var(--baseline) * 2));\r\n  bottom: calc(var(--baseline) * 2);\r\n  font-family: var(--title);\r\n  font-size: calc(var(--base-size) * 0.8);\r\n  text-transform: uppercase;\r\n  font-weight: bold;\r\n}\r\n.book__page .page__content-title {\r\n  font-family: var(--title);\r\n  font-size: calc(var(--base-size) * 2);\r\n  text-transform: uppercase;\r\n  letter-spacing: 1px;\r\n  margin-top: calc(var(--baseline) * 2);\r\n  margin-bottom: calc(var(--baseline)*1.5);\r\n}\r\n.book__page .page__content-table {\r\n  width: 100%;\r\n  margin-top: calc(var(--baseline) * 2);\r\n}\r\n.book__page .page__content-table td {\r\n  font-family: var(--title);\r\n  font-size: calc(var(--base-size) * 1);\r\n  padding-bottom: calc(var(--baseline) * 1.5);\r\n  text-transform: uppercase;\r\n}\r\n.book__page .page__content-blockquote {\r\n  margin-bottom: calc(var(--baseline) * 2);\r\n}\r\n.book__page .page__content-blockquote-text {\r\n  font-family: var(--title);\r\n  font-size: calc(var(--base-size) * 1.2);\r\n  font-style: italic;\r\n  text-align: justify;\r\n  font-weight: bold;\r\n}\r\n.book__page .page__content-blockquote-reference {\r\n  font-family: var(--title);\r\n  font-size: calc(var(--base-size) * 0.7);\r\n  margin-top: calc(var(--baseline) * 0.3);\r\n  float: right;\r\n  text-transform: uppercase;\r\n}\r\n.book__page .page__content-text {\r\n  font-family: var(--title);\r\n  font-size: calc(var(--base-size));\r\n  text-align: justify;\r\n  text-indent: var(--baseline);\r\n}\r\n.book__page .page__number {\r\n  position: absolute;\r\n  bottom: var(--baseline);\r\n  width: calc(100% - (var(--baseline) * 2));\r\n  font-family: var(--title);\r\n  font-size: calc(var(--base-size));\r\n  text-align: center;\r\n}\r\n.book input[type=radio] {\r\n  display: none;\r\n}\r\n.book input[type=radio]:checked + .book__page {\r\n  transition: transform 0.9s cubic-bezier(0.645, 0.045, 0.355, 1);\r\n  transform: rotateY(-180deg);\r\n}", "",{"version":3,"sources":["webpack://./src/main/resources/js/components/book/Get.css"],"names":[],"mappings":"AACA;EACE,WAAW;EACX,kBAAkB;EAClB,kBAAkB;EAClB,oBAAoB;EACpB,YAAY;EACZ,0CAA0C;EAC1C,gBAAgB;EAChB,UAAU;EACV,sCAAsC;EACtC,oCAAoC;EACpC,mCAAmC;EACnC,kCAAkC;AACpC;;AAEA;EACE,sBAAsB;AACxB;;AAEA;EACE,WAAW;EACX,YAAY;EACZ,wCAAwC;AAC1C;;AAEA;EACE,WAAW;EACX,aAAa;EACb,aAAa;EACb,mBAAmB;;AAErB;AACA;EACE,kBAAkB;EAClB,UAAU;EACV,YAAY;EACZ,aAAa;EACb,wBAAwB;EACxB,+DAA+D;EAC/D,uBAAuB;EACvB,kBAAkB;EAClB,mGAAmG;AACrG;AACA;EACE,mGAAmG;AACrG;AACA;EACE,eAAe;EACf,gBAAgB;AAClB;AACA;EACE,aAAa;EACb,WAAW;AACb;AACA;EACE,eAAe;EACf,gBAAgB;AAClB;AACA;EACE,aAAa;EACb,WAAW;AACb;AACA;EACE,kBAAkB;EAClB,QAAQ;EACR,oBAAoB;EACpB,4BAA4B;EAC5B,mGAAmG;AACrG;AACA;EACE,kBAAkB;EAClB,WAAW;EACX,YAAY;EACZ,wCAAwC;AAC1C;AACA;EACE,kBAAkB;EAClB,WAAW;EACX,YAAY;EACZ,sCAAsC;EACtC,0CAA0C;AAC5C;AACA;EACE,WAAW;EACX,eAAe;EACf,aAAa;AACf;AACA;EACE,wBAAwB;EACxB,YAAY;EACZ,kBAAkB;EAClB,kBAAkB;AACpB;AACA;EACE,8BAA8B;EAC9B,qCAAqC;EACrC,iBAAiB;EACjB,yBAAyB;EACzB,mBAAmB;EACnB,uBAAuB;EACvB,qCAAqC;EACrC,wCAAwC;AAC1C;AACA;EACE,yBAAyB;EACzB,uCAAuC;EACvC,gBAAgB;EAChB,yBAAyB;EACzB,uBAAuB;EACvB,sCAAsC;EACtC,yCAAyC;EACzC,qBAAqB;EACrB,4DAA4D;EAC5D,uCAAuC;AACzC;AACA;EACE,yBAAyB;EACzB,yBAAyB;EACzB,uCAAuC;EACvC,0CAA0C;EAC1C,mBAAmB;EACnB,iBAAiB;AACnB;AACA;EACE,cAAc;EACd,uCAAuC;EACvC,iBAAiB;AACnB;AACA;EACE,kBAAkB;EAClB,yCAAyC;EACzC,iCAAiC;EACjC,yBAAyB;EACzB,uCAAuC;EACvC,yBAAyB;EACzB,iBAAiB;AACnB;AACA;EACE,yBAAyB;EACzB,qCAAqC;EACrC,yBAAyB;EACzB,mBAAmB;EACnB,qCAAqC;EACrC,wCAAwC;AAC1C;AACA;EACE,WAAW;EACX,qCAAqC;AACvC;AACA;EACE,yBAAyB;EACzB,qCAAqC;EACrC,2CAA2C;EAC3C,yBAAyB;AAC3B;AACA;EACE,wCAAwC;AAC1C;AACA;EACE,yBAAyB;EACzB,uCAAuC;EACvC,kBAAkB;EAClB,mBAAmB;EACnB,iBAAiB;AACnB;AACA;EACE,yBAAyB;EACzB,uCAAuC;EACvC,uCAAuC;EACvC,YAAY;EACZ,yBAAyB;AAC3B;AACA;EACE,yBAAyB;EACzB,iCAAiC;EACjC,mBAAmB;EACnB,4BAA4B;AAC9B;AACA;EACE,kBAAkB;EAClB,uBAAuB;EACvB,yCAAyC;EACzC,yBAAyB;EACzB,iCAAiC;EACjC,kBAAkB;AACpB;AACA;EACE,aAAa;AACf;AACA;EACE,+DAA+D;EAC/D,2BAA2B;AAC7B","sourcesContent":["@import url(\"https://fonts.googleapis.com/css?family=Cormorant+Garamond:300,400,600|Tulpen+One&display=swap\");\r\n:root {\r\n  /* colors */\r\n  --body-bg: #FAFAFA;\r\n  --page-bg: #F5F5F5;\r\n  --dark-text: #2A2935;\r\n  /* spacing */\r\n  /* this is what defines the global scale */\r\n  --baseline: 12px;\r\n  /* fonts */\r\n  --book-title: \"Tulpen One\", sans-serif;\r\n  --title: \"Cormorant Garamond\", serif;\r\n  --body: \"Cormorant Garamond\", serif;\r\n  --base-size: var(--baseline) * 1.2;\r\n}\r\n\r\n* {\r\n  box-sizing: border-box;\r\n}\r\n\r\n.cover {\r\n  width: 100%;\r\n  height: 200%;\r\n  box-shadow: 0 0 100px rgba(0, 0, 0, 0.3);\r\n}\r\n\r\n.book {\r\n  width: 100%;\r\n  height: 800px;\r\n  display: flex;\r\n  perspective: 1200px;\r\n\r\n}\r\n.book__page {\r\n  position: relative;\r\n  width: 50%;\r\n  height: 100%;\r\n  display: grid;\r\n  transform: rotateY(0deg);\r\n  transition: transform 0.9s cubic-bezier(0.645, 0.045, 0.355, 1);\r\n  transform-origin: 0% 0%;\r\n  border-radius: 5px;\r\n  background-image: url(https://i.pinimg.com/originals/8d/23/06/8d2306b98839234e49ce96a8b76e20ae.jpg);\r\n}\r\n.book__page:nth-of-type(1) {\r\n  background-image: url(https://i.pinimg.com/originals/8d/23/06/8d2306b98839234e49ce96a8b76e20ae.jpg);\r\n}\r\n.book__page--1 {\r\n  cursor: pointer;\r\n  overflow: hidden;\r\n}\r\n.book__page--1 img {\r\n  height: 800px;\r\n  width: 100%;\r\n}\r\n.book__page--4 {\r\n  cursor: pointer;\r\n  overflow: hidden;\r\n}\r\n.book__page--4 img {\r\n  height: 800px;\r\n  width: 100%;\r\n}\r\n.book__page--2 {\r\n  position: absolute;\r\n  right: 0;\r\n  pointer-events: none;\r\n  transform-style: preserve-3d;\r\n  background-image: url(https://i.pinimg.com/originals/8d/23/06/8d2306b98839234e49ce96a8b76e20ae.jpg);\r\n}\r\n.book__page-front {\r\n  position: absolute;\r\n  width: 100%;\r\n  height: 100%;\r\n  transform: rotateY(0deg) translateZ(1px);\r\n}\r\n.book__page-back {\r\n  position: absolute;\r\n  width: 100%;\r\n  height: 100%;\r\n  padding: 0 calc(var(--baseline) * 1.8);\r\n  transform: rotateY(180deg) translateZ(1px);\r\n}\r\n.book__page-back img {\r\n  width: 100%;\r\n  max-width: 100%;\r\n  height: 800px;\r\n}\r\n.book__page .page__content {\r\n  padding: var(--baseline);\r\n  height: 100%;\r\n  position: relative;\r\n  text-align: center;\r\n}\r\n.book__page .page__content-book-title {\r\n  font-family: var(--book-title);\r\n  font-size: calc(var(--base-size) * 3);\r\n  font-weight: bold;\r\n  text-transform: uppercase;\r\n  letter-spacing: 3px;\r\n  color: var(--dark-text);\r\n  margin-top: calc(var(--baseline) * 3);\r\n  margin-bottom: calc(var(--baseline) * 2);\r\n}\r\n.book__page .page__content-author {\r\n  font-family: var(--title);\r\n  font-size: calc(var(--base-size) * 1.2);\r\n  font-weight: 100;\r\n  text-transform: uppercase;\r\n  color: var(--dark-text);\r\n  border-top: 1px solid var(--dark-text);\r\n  border-bottom: 1px solid var(--dark-text);\r\n  display: inline-block;\r\n  padding: calc(var(--baseline) / 2) calc(var(--baseline) / 5);\r\n  margin-bottom: calc(var(--baseline) *3);\r\n}\r\n.book__page .page__content-credits {\r\n  font-family: var(--title);\r\n  text-transform: uppercase;\r\n  font-size: calc(var(--base-size) * 0.8);\r\n  margin-bottom: calc(var(--baseline) * 1.5);\r\n  letter-spacing: 1px;\r\n  font-weight: bold;\r\n}\r\n.book__page .page__content-credits span {\r\n  display: block;\r\n  font-size: calc(var(--base-size) * 1.2);\r\n  letter-spacing: 0;\r\n}\r\n.book__page .page__content-copyright {\r\n  position: absolute;\r\n  width: calc(100% - (var(--baseline) * 2));\r\n  bottom: calc(var(--baseline) * 2);\r\n  font-family: var(--title);\r\n  font-size: calc(var(--base-size) * 0.8);\r\n  text-transform: uppercase;\r\n  font-weight: bold;\r\n}\r\n.book__page .page__content-title {\r\n  font-family: var(--title);\r\n  font-size: calc(var(--base-size) * 2);\r\n  text-transform: uppercase;\r\n  letter-spacing: 1px;\r\n  margin-top: calc(var(--baseline) * 2);\r\n  margin-bottom: calc(var(--baseline)*1.5);\r\n}\r\n.book__page .page__content-table {\r\n  width: 100%;\r\n  margin-top: calc(var(--baseline) * 2);\r\n}\r\n.book__page .page__content-table td {\r\n  font-family: var(--title);\r\n  font-size: calc(var(--base-size) * 1);\r\n  padding-bottom: calc(var(--baseline) * 1.5);\r\n  text-transform: uppercase;\r\n}\r\n.book__page .page__content-blockquote {\r\n  margin-bottom: calc(var(--baseline) * 2);\r\n}\r\n.book__page .page__content-blockquote-text {\r\n  font-family: var(--title);\r\n  font-size: calc(var(--base-size) * 1.2);\r\n  font-style: italic;\r\n  text-align: justify;\r\n  font-weight: bold;\r\n}\r\n.book__page .page__content-blockquote-reference {\r\n  font-family: var(--title);\r\n  font-size: calc(var(--base-size) * 0.7);\r\n  margin-top: calc(var(--baseline) * 0.3);\r\n  float: right;\r\n  text-transform: uppercase;\r\n}\r\n.book__page .page__content-text {\r\n  font-family: var(--title);\r\n  font-size: calc(var(--base-size));\r\n  text-align: justify;\r\n  text-indent: var(--baseline);\r\n}\r\n.book__page .page__number {\r\n  position: absolute;\r\n  bottom: var(--baseline);\r\n  width: calc(100% - (var(--baseline) * 2));\r\n  font-family: var(--title);\r\n  font-size: calc(var(--base-size));\r\n  text-align: center;\r\n}\r\n.book input[type=radio] {\r\n  display: none;\r\n}\r\n.book input[type=radio]:checked + .book__page {\r\n  transition: transform 0.9s cubic-bezier(0.645, 0.045, 0.355, 1);\r\n  transform: rotateY(-180deg);\r\n}"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.i, ":root {\r\n  /* colors */\r\n  --body-bg: #FAFAFA;\r\n  --page-bg: #F5F5F5;\r\n  --dark-text: #2A2935;\r\n  /* spacing */\r\n  /* this is what defines the global scale */\r\n  --baseline: 12px;\r\n  /* fonts */\r\n  --book-title: \"Tulpen One\", sans-serif;\r\n  --title: \"Cormorant Garamond\", serif;\r\n  --body: \"Cormorant Garamond\", serif;\r\n  --base-size: var(--baseline) * 1.2;\r\n}\r\n\r\n* {\r\n  box-sizing: border-box;\r\n}\r\n\r\n.cover {\r\n  width: 100%;\r\n  height: 200%;\r\n  box-shadow: 0 0 100px rgba(0, 0, 0, 0.3);\r\n}\r\n\r\n.book {\r\n  width: 100%;\r\n  height: 800px;\r\n  display: flex;\r\n  perspective: 1200px;\r\n\r\n}\r\n.book__page {\r\n  position: relative;\r\n  width: 50%;\r\n  height: 100%;\r\n  display: grid;\r\n  transform: rotateY(0deg);\r\n  transition: transform 0.9s cubic-bezier(0.645, 0.045, 0.355, 1);\r\n  transform-origin: 0% 0%;\r\n  border-radius: 5px;\r\n  background-image: url(https://i.pinimg.com/originals/8d/23/06/8d2306b98839234e49ce96a8b76e20ae.jpg);\r\n}\r\n.book__page:nth-of-type(1) {\r\n  background-image: url(https://i.pinimg.com/originals/8d/23/06/8d2306b98839234e49ce96a8b76e20ae.jpg);\r\n}\r\n.book__page--1 {\r\n  cursor: pointer;\r\n  overflow: hidden;\r\n}\r\n.book__page--1 img {\r\n  height: 800px;\r\n  width: 100%;\r\n}\r\n.book__page--4 {\r\n  cursor: pointer;\r\n  overflow: hidden;\r\n}\r\n.book__page--4 img {\r\n  height: 800px;\r\n  width: 100%;\r\n}\r\n.book__page--2 {\r\n  position: absolute;\r\n  right: 0;\r\n  pointer-events: none;\r\n  transform-style: preserve-3d;\r\n  background-image: url(https://i.pinimg.com/originals/8d/23/06/8d2306b98839234e49ce96a8b76e20ae.jpg);\r\n}\r\n.book__page-front {\r\n  position: absolute;\r\n  width: 100%;\r\n  height: 100%;\r\n  transform: rotateY(0deg) translateZ(1px);\r\n}\r\n.book__page-back {\r\n  position: absolute;\r\n  width: 100%;\r\n  height: 100%;\r\n  padding: 0 calc(var(--baseline) * 1.8);\r\n  transform: rotateY(180deg) translateZ(1px);\r\n}\r\n.book__page-back img {\r\n  width: 100%;\r\n  max-width: 100%;\r\n  height: 800px;\r\n}\r\n.book__page .page__content {\r\n  padding: var(--baseline);\r\n  height: 100%;\r\n  position: relative;\r\n  text-align: center;\r\n}\r\n.book__page .page__content-book-title {\r\n  font-family: var(--book-title);\r\n  font-size: calc(var(--base-size) * 3);\r\n  font-weight: bold;\r\n  text-transform: uppercase;\r\n  letter-spacing: 3px;\r\n  color: var(--dark-text);\r\n  margin-top: calc(var(--baseline) * 3);\r\n  margin-bottom: calc(var(--baseline) * 2);\r\n}\r\n.book__page .page__content-author {\r\n  font-family: var(--title);\r\n  font-size: calc(var(--base-size) * 1.2);\r\n  font-weight: 100;\r\n  text-transform: uppercase;\r\n  color: var(--dark-text);\r\n  border-top: 1px solid var(--dark-text);\r\n  border-bottom: 1px solid var(--dark-text);\r\n  display: inline-block;\r\n  padding: calc(var(--baseline) / 2) calc(var(--baseline) / 5);\r\n  margin-bottom: calc(var(--baseline) *3);\r\n}\r\n.book__page .page__content-credits {\r\n  font-family: var(--title);\r\n  text-transform: uppercase;\r\n  font-size: calc(var(--base-size) * 0.8);\r\n  margin-bottom: calc(var(--baseline) * 1.5);\r\n  letter-spacing: 1px;\r\n  font-weight: bold;\r\n}\r\n.book__page .page__content-credits span {\r\n  display: block;\r\n  font-size: calc(var(--base-size) * 1.2);\r\n  letter-spacing: 0;\r\n}\r\n.book__page .page__content-copyright {\r\n  position: absolute;\r\n  width: calc(100% - (var(--baseline) * 2));\r\n  bottom: calc(var(--baseline) * 2);\r\n  font-family: var(--title);\r\n  font-size: calc(var(--base-size) * 0.8);\r\n  text-transform: uppercase;\r\n  font-weight: bold;\r\n}\r\n.book__page .page__content-title {\r\n  font-family: var(--title);\r\n  font-size: calc(var(--base-size) * 2);\r\n  text-transform: uppercase;\r\n  letter-spacing: 1px;\r\n  margin-top: calc(var(--baseline) * 2);\r\n  margin-bottom: calc(var(--baseline)*1.5);\r\n}\r\n.book__page .page__content-table {\r\n  width: 100%;\r\n  margin-top: calc(var(--baseline) * 2);\r\n}\r\n.book__page .page__content-table td {\r\n  font-family: var(--title);\r\n  font-size: calc(var(--base-size) * 1);\r\n  padding-bottom: calc(var(--baseline) * 1.5);\r\n  text-transform: uppercase;\r\n}\r\n.book__page .page__content-blockquote {\r\n  margin-bottom: calc(var(--baseline) * 2);\r\n}\r\n.book__page .page__content-blockquote-text {\r\n  font-family: var(--title);\r\n  font-size: calc(var(--base-size) * 1.2);\r\n  font-style: italic;\r\n  text-align: justify;\r\n  font-weight: bold;\r\n}\r\n.book__page .page__content-blockquote-reference {\r\n  font-family: var(--title);\r\n  font-size: calc(var(--base-size) * 0.7);\r\n  margin-top: calc(var(--baseline) * 0.3);\r\n  float: right;\r\n  text-transform: uppercase;\r\n}\r\n.book__page .page__content-text {\r\n  font-family: var(--title);\r\n  font-size: calc(var(--base-size));\r\n  text-align: justify;\r\n  text-indent: var(--baseline);\r\n}\r\n.book__page .page__number {\r\n  position: absolute;\r\n  bottom: var(--baseline);\r\n  width: calc(100% - (var(--baseline) * 2));\r\n  font-family: var(--title);\r\n  font-size: calc(var(--base-size));\r\n  text-align: center;\r\n}\r\n.book input[type=radio] {\r\n  display: none;\r\n}\r\n.book input[type=radio]:checked + .book__page {\r\n  transition: transform 0.9s cubic-bezier(0.645, 0.045, 0.355, 1);\r\n  transform: rotateY(-180deg);\r\n}\r\n\r\n.galeria {\r\n\twidth: 90%;\r\n\tmargin: auto;\r\n\tlist-style: none;\r\n\tpadding: 20px;\r\n\tbox-sizing: border-box;\r\n\t\r\n\tdisplay: inline;\r\n\tflex-wrap: wrap;\r\n\tjustify-content: space-around;\r\n}\r\n\r\n.galeria li {\r\n\tmargin: 5px;\r\n  display: inline-block;\r\n}\r\n\r\n.galeria img {\r\n\twidth: auto;\r\n\theight: 100px;\r\n}\r\n\r\n/*Estilos del modal*/\r\n\r\n.modal {\r\n\tdisplay: none;\r\n}\r\n\r\n.modal:target {\r\n\t\r\n\tdisplay: block;\r\n\tposition: fixed;\r\n\tbackground: rgba(0,0,0,0.8);\r\n\ttop: 0;\r\n\tleft: 0;\r\n\twidth: 100%;\r\n\theight: 100%;\r\n}\r\n\r\n.modal h3 {\r\n\tcolor: #fff;\r\n\tfont-size: 30px;\r\n\ttext-align: center;\r\n\tmargin: 15px 0;\r\n}\r\n\r\n.imagen {\r\n\twidth: 100%;\r\n\theight: 50%;\r\n\t\r\n\tdisplay: flex;\r\n\tjustify-content: center;\r\n\talign-items: center;\r\n}\r\n\r\n.imagen a {\r\n\tcolor: #fff;\r\n\tfont-size: 40px;\r\n\ttext-decoration: none;\r\n\tmargin: 0 10px;\r\n}\r\n\r\n.imagen a:nth-child(2) {\r\n\tmargin: 0;\r\n\theight: 100%;\r\n\tflex-shrink: 2;\r\n}\r\n\r\n.imagen img {\r\n\twidth: auto;\r\n\theight: 100%;\r\n\tmax-width: 100%;\r\n\tborder: 7px solid #fff;\r\n\tbox-sizing: border-box;\r\n}\r\n\r\n.cerrar {\r\n\tdisplay: block;\r\n\tbackground: #fff;\r\n\twidth: 30px;\r\n\theight: 30px;\r\n\tmargin: 15px auto;\r\n\ttext-align: center;\r\n\ttext-decoration: none;\r\n\tfont-size: 25px;\r\n\tcolor: #000;\r\n\tpadding: 5px;\r\n\tborder-radius: 50%;\r\n\tline-height: 25px;\r\n}", "",{"version":3,"sources":["webpack://./src/main/resources/js/components/book/Get.css"],"names":[],"mappings":"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","sourcesContent":["@import url(\"https://fonts.googleapis.com/css?family=Cormorant+Garamond:300,400,600|Tulpen+One&display=swap\");\r\n:root {\r\n  /* colors */\r\n  --body-bg: #FAFAFA;\r\n  --page-bg: #F5F5F5;\r\n  --dark-text: #2A2935;\r\n  /* spacing */\r\n  /* this is what defines the global scale */\r\n  --baseline: 12px;\r\n  /* fonts */\r\n  --book-title: \"Tulpen One\", sans-serif;\r\n  --title: \"Cormorant Garamond\", serif;\r\n  --body: \"Cormorant Garamond\", serif;\r\n  --base-size: var(--baseline) * 1.2;\r\n}\r\n\r\n* {\r\n  box-sizing: border-box;\r\n}\r\n\r\n.cover {\r\n  width: 100%;\r\n  height: 200%;\r\n  box-shadow: 0 0 100px rgba(0, 0, 0, 0.3);\r\n}\r\n\r\n.book {\r\n  width: 100%;\r\n  height: 800px;\r\n  display: flex;\r\n  perspective: 1200px;\r\n\r\n}\r\n.book__page {\r\n  position: relative;\r\n  width: 50%;\r\n  height: 100%;\r\n  display: grid;\r\n  transform: rotateY(0deg);\r\n  transition: transform 0.9s cubic-bezier(0.645, 0.045, 0.355, 1);\r\n  transform-origin: 0% 0%;\r\n  border-radius: 5px;\r\n  background-image: url(https://i.pinimg.com/originals/8d/23/06/8d2306b98839234e49ce96a8b76e20ae.jpg);\r\n}\r\n.book__page:nth-of-type(1) {\r\n  background-image: url(https://i.pinimg.com/originals/8d/23/06/8d2306b98839234e49ce96a8b76e20ae.jpg);\r\n}\r\n.book__page--1 {\r\n  cursor: pointer;\r\n  overflow: hidden;\r\n}\r\n.book__page--1 img {\r\n  height: 800px;\r\n  width: 100%;\r\n}\r\n.book__page--4 {\r\n  cursor: pointer;\r\n  overflow: hidden;\r\n}\r\n.book__page--4 img {\r\n  height: 800px;\r\n  width: 100%;\r\n}\r\n.book__page--2 {\r\n  position: absolute;\r\n  right: 0;\r\n  pointer-events: none;\r\n  transform-style: preserve-3d;\r\n  background-image: url(https://i.pinimg.com/originals/8d/23/06/8d2306b98839234e49ce96a8b76e20ae.jpg);\r\n}\r\n.book__page-front {\r\n  position: absolute;\r\n  width: 100%;\r\n  height: 100%;\r\n  transform: rotateY(0deg) translateZ(1px);\r\n}\r\n.book__page-back {\r\n  position: absolute;\r\n  width: 100%;\r\n  height: 100%;\r\n  padding: 0 calc(var(--baseline) * 1.8);\r\n  transform: rotateY(180deg) translateZ(1px);\r\n}\r\n.book__page-back img {\r\n  width: 100%;\r\n  max-width: 100%;\r\n  height: 800px;\r\n}\r\n.book__page .page__content {\r\n  padding: var(--baseline);\r\n  height: 100%;\r\n  position: relative;\r\n  text-align: center;\r\n}\r\n.book__page .page__content-book-title {\r\n  font-family: var(--book-title);\r\n  font-size: calc(var(--base-size) * 3);\r\n  font-weight: bold;\r\n  text-transform: uppercase;\r\n  letter-spacing: 3px;\r\n  color: var(--dark-text);\r\n  margin-top: calc(var(--baseline) * 3);\r\n  margin-bottom: calc(var(--baseline) * 2);\r\n}\r\n.book__page .page__content-author {\r\n  font-family: var(--title);\r\n  font-size: calc(var(--base-size) * 1.2);\r\n  font-weight: 100;\r\n  text-transform: uppercase;\r\n  color: var(--dark-text);\r\n  border-top: 1px solid var(--dark-text);\r\n  border-bottom: 1px solid var(--dark-text);\r\n  display: inline-block;\r\n  padding: calc(var(--baseline) / 2) calc(var(--baseline) / 5);\r\n  margin-bottom: calc(var(--baseline) *3);\r\n}\r\n.book__page .page__content-credits {\r\n  font-family: var(--title);\r\n  text-transform: uppercase;\r\n  font-size: calc(var(--base-size) * 0.8);\r\n  margin-bottom: calc(var(--baseline) * 1.5);\r\n  letter-spacing: 1px;\r\n  font-weight: bold;\r\n}\r\n.book__page .page__content-credits span {\r\n  display: block;\r\n  font-size: calc(var(--base-size) * 1.2);\r\n  letter-spacing: 0;\r\n}\r\n.book__page .page__content-copyright {\r\n  position: absolute;\r\n  width: calc(100% - (var(--baseline) * 2));\r\n  bottom: calc(var(--baseline) * 2);\r\n  font-family: var(--title);\r\n  font-size: calc(var(--base-size) * 0.8);\r\n  text-transform: uppercase;\r\n  font-weight: bold;\r\n}\r\n.book__page .page__content-title {\r\n  font-family: var(--title);\r\n  font-size: calc(var(--base-size) * 2);\r\n  text-transform: uppercase;\r\n  letter-spacing: 1px;\r\n  margin-top: calc(var(--baseline) * 2);\r\n  margin-bottom: calc(var(--baseline)*1.5);\r\n}\r\n.book__page .page__content-table {\r\n  width: 100%;\r\n  margin-top: calc(var(--baseline) * 2);\r\n}\r\n.book__page .page__content-table td {\r\n  font-family: var(--title);\r\n  font-size: calc(var(--base-size) * 1);\r\n  padding-bottom: calc(var(--baseline) * 1.5);\r\n  text-transform: uppercase;\r\n}\r\n.book__page .page__content-blockquote {\r\n  margin-bottom: calc(var(--baseline) * 2);\r\n}\r\n.book__page .page__content-blockquote-text {\r\n  font-family: var(--title);\r\n  font-size: calc(var(--base-size) * 1.2);\r\n  font-style: italic;\r\n  text-align: justify;\r\n  font-weight: bold;\r\n}\r\n.book__page .page__content-blockquote-reference {\r\n  font-family: var(--title);\r\n  font-size: calc(var(--base-size) * 0.7);\r\n  margin-top: calc(var(--baseline) * 0.3);\r\n  float: right;\r\n  text-transform: uppercase;\r\n}\r\n.book__page .page__content-text {\r\n  font-family: var(--title);\r\n  font-size: calc(var(--base-size));\r\n  text-align: justify;\r\n  text-indent: var(--baseline);\r\n}\r\n.book__page .page__number {\r\n  position: absolute;\r\n  bottom: var(--baseline);\r\n  width: calc(100% - (var(--baseline) * 2));\r\n  font-family: var(--title);\r\n  font-size: calc(var(--base-size));\r\n  text-align: center;\r\n}\r\n.book input[type=radio] {\r\n  display: none;\r\n}\r\n.book input[type=radio]:checked + .book__page {\r\n  transition: transform 0.9s cubic-bezier(0.645, 0.045, 0.355, 1);\r\n  transform: rotateY(-180deg);\r\n}\r\n\r\n.galeria {\r\n\twidth: 90%;\r\n\tmargin: auto;\r\n\tlist-style: none;\r\n\tpadding: 20px;\r\n\tbox-sizing: border-box;\r\n\t\r\n\tdisplay: inline;\r\n\tflex-wrap: wrap;\r\n\tjustify-content: space-around;\r\n}\r\n\r\n.galeria li {\r\n\tmargin: 5px;\r\n  display: inline-block;\r\n}\r\n\r\n.galeria img {\r\n\twidth: auto;\r\n\theight: 100px;\r\n}\r\n\r\n/*Estilos del modal*/\r\n\r\n.modal {\r\n\tdisplay: none;\r\n}\r\n\r\n.modal:target {\r\n\t\r\n\tdisplay: block;\r\n\tposition: fixed;\r\n\tbackground: rgba(0,0,0,0.8);\r\n\ttop: 0;\r\n\tleft: 0;\r\n\twidth: 100%;\r\n\theight: 100%;\r\n}\r\n\r\n.modal h3 {\r\n\tcolor: #fff;\r\n\tfont-size: 30px;\r\n\ttext-align: center;\r\n\tmargin: 15px 0;\r\n}\r\n\r\n.imagen {\r\n\twidth: 100%;\r\n\theight: 50%;\r\n\t\r\n\tdisplay: flex;\r\n\tjustify-content: center;\r\n\talign-items: center;\r\n}\r\n\r\n.imagen a {\r\n\tcolor: #fff;\r\n\tfont-size: 40px;\r\n\ttext-decoration: none;\r\n\tmargin: 0 10px;\r\n}\r\n\r\n.imagen a:nth-child(2) {\r\n\tmargin: 0;\r\n\theight: 100%;\r\n\tflex-shrink: 2;\r\n}\r\n\r\n.imagen img {\r\n\twidth: auto;\r\n\theight: 100%;\r\n\tmax-width: 100%;\r\n\tborder: 7px solid #fff;\r\n\tbox-sizing: border-box;\r\n}\r\n\r\n.cerrar {\r\n\tdisplay: block;\r\n\tbackground: #fff;\r\n\twidth: 30px;\r\n\theight: 30px;\r\n\tmargin: 15px auto;\r\n\ttext-align: center;\r\n\ttext-decoration: none;\r\n\tfont-size: 25px;\r\n\tcolor: #000;\r\n\tpadding: 5px;\r\n\tborder-radius: 50%;\r\n\tline-height: 25px;\r\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ __webpack_exports__["default"] = (___CSS_LOADER_EXPORT___);
 
@@ -38182,7 +38182,9 @@ var Get = /*#__PURE__*/function (_Component) {
       genres: "",
       isAdded: "",
       alreadyRequest: "",
-      hasRequestAccepted: ""
+      hasRequestAccepted: "",
+      images: [],
+      urlImages: []
     };
     return _this;
   }
@@ -38213,7 +38215,9 @@ var Get = /*#__PURE__*/function (_Component) {
                   genres: b.book.genres,
                   isAdded: b.isAdded,
                   alreadyRequest: b.alreadyRequest,
-                  hasRequestAccepted: b.hasRequestAccepted
+                  hasRequestAccepted: b.hasRequestAccepted,
+                  images: b.images,
+                  urlImages: b.urlImages
                 });
 
               case 8:
@@ -38243,14 +38247,12 @@ var Get = /*#__PURE__*/function (_Component) {
         "for": "page-1",
         "class": "book__page book__page--1"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("img", {
-        src: this.state.book.image,
-        alt: ""
+        src: this.state.urlImages[0]
       })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("label", {
         "for": "page-2",
         "class": "book__page book__page--4"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("img", {
-        src: this.state.book.image,
-        alt: ""
+        src: this.state.urlImages[1] == null ? this.state.urlImages[0] : this.state.urlImages[1]
       })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("input", {
         type: "radio",
         name: "page",
@@ -38297,7 +38299,35 @@ var Get = /*#__PURE__*/function (_Component) {
         "class": "page__content-blockquote-text"
       }, this.state.book.description)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         "class": "page__number"
-      }, "2")))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("center", null, this.state.username == this.state.book.username ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("center", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("button", {
+      }, "2")))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("center", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("h2", null, "Todas las im\xE1genes"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+        style: {
+          backgroundImage: "https://i.pinimg.com/originals/8d/23/06/8d2306b98839234e49ce96a8b76e20ae.jpg"
+        }
+      }, this.state.images.map(function (image, i) {
+        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("ul", {
+          "class": "galeria"
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
+          href: String("#img" + i)
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("img", {
+          src: image.urlImage
+        })))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+          "class": "modal",
+          id: String("img" + i)
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("h3", null, image.fileName), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+          "class": "imagen"
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
+          href: i <= 0 ? '#img' + String(_this2.state.images.length - 1) : '#img' + String(i - 1)
+        }, String("<")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
+          href: "#img" + i
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("img", {
+          src: image.urlImage
+        })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
+          href: i >= _this2.state.images.length - 1 ? '#img0' : '#img' + String(i + 1)
+        }, String(">"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
+          "class": "cerrar",
+          href: ""
+        }, "x")));
+      }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("hr", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("center", null, this.state.username == this.state.book.username ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("center", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("button", {
         style: {
           backgroundImage: "url(https://i.pinimg.com/originals/8d/23/06/8d2306b98839234e49ce96a8b76e20ae.jpg)",
           margin: "10px",
@@ -38310,7 +38340,7 @@ var Get = /*#__PURE__*/function (_Component) {
         disabled: this.state.hasRequestAccepted == true
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("b", null, "Editar")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("button", {
         onClick: function onClick() {
-          return _this2.deleteBook(_this2.state.book.id);
+          return _this2.deleteBook(_this2.state.book.id, _this2.state.images);
         },
         style: {
           color: "red",
@@ -38382,7 +38412,7 @@ var Get = /*#__PURE__*/function (_Component) {
   }, {
     key: "deleteBook",
     value: function () {
-      var _deleteBook = _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_6___default.a.mark(function _callee2(id) {
+      var _deleteBook = _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_6___default.a.mark(function _callee2(id, images) {
         var conf, res;
         return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_6___default.a.wrap(function _callee2$(_context2) {
           while (1) {
@@ -38396,7 +38426,7 @@ var Get = /*#__PURE__*/function (_Component) {
                 }
 
                 _context2.next = 4;
-                return _services_Book__WEBPACK_IMPORTED_MODULE_8__["default"]["delete"](id);
+                return _services_Book__WEBPACK_IMPORTED_MODULE_8__["default"]["delete"](id, images);
 
               case 4:
                 res = _context2.sent;
@@ -38410,7 +38440,7 @@ var Get = /*#__PURE__*/function (_Component) {
         }, _callee2);
       }));
 
-      function deleteBook(_x) {
+      function deleteBook(_x, _x2) {
         return _deleteBook.apply(this, arguments);
       }
 
@@ -38440,7 +38470,7 @@ var Get = /*#__PURE__*/function (_Component) {
         }, _callee3);
       }));
 
-      function addFavouriteBook(_x2) {
+      function addFavouriteBook(_x3) {
         return _addFavouriteBook.apply(this, arguments);
       }
 
@@ -38477,7 +38507,7 @@ var Get = /*#__PURE__*/function (_Component) {
         }, _callee4);
       }));
 
-      function deleteFavouriteBook(_x3, _x4) {
+      function deleteFavouriteBook(_x4, _x5) {
         return _deleteFavouriteBook.apply(this, arguments);
       }
 
@@ -38501,7 +38531,7 @@ var Get = /*#__PURE__*/function (_Component) {
         }, _callee5);
       }));
 
-      function goToEdit(_x5) {
+      function goToEdit(_x6) {
         return _goToEdit.apply(this, arguments);
       }
 
@@ -38589,7 +38619,7 @@ var List = /*#__PURE__*/function (_Component) {
       books: [],
       isAdded: [],
       username: ""
-    }, _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2___default()(_this$state, "isAdded", false), _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2___default()(_this$state, "pages", []), _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2___default()(_this$state, "actualPage", 0), _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2___default()(_this$state, "numTotalPages", 0), _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2___default()(_this$state, "nearBooks", true), _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2___default()(_this$state, "title", ""), _this$state);
+    }, _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2___default()(_this$state, "isAdded", false), _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2___default()(_this$state, "pages", []), _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2___default()(_this$state, "actualPage", 0), _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2___default()(_this$state, "numTotalPages", 0), _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2___default()(_this$state, "nearBooks", true), _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2___default()(_this$state, "title", ""), _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2___default()(_this$state, "images", []), _this$state);
     return _this;
   }
 
@@ -38629,7 +38659,8 @@ var List = /*#__PURE__*/function (_Component) {
                   pages: res.pages,
                   numTotalPages: parseInt(res.numTotalPages),
                   nearBooks: res.nearBooks,
-                  title: res.title
+                  title: res.title,
+                  images: res.urlImages
                 });
 
               case 9:
@@ -38711,7 +38742,8 @@ var List = /*#__PURE__*/function (_Component) {
           href: "/books/" + book.id
         }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("img", {
           "class": "book-card__img",
-          src: book.image
+          src: _this2.state.images[i][0],
+          alt: ""
         }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("div", {
           "class": "book-card__book-back"
         }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("div", {
@@ -38913,7 +38945,8 @@ var List = /*#__PURE__*/function (_Component) {
       books: [],
       pages: [],
       actualPage: 0,
-      numTotalPages: 0
+      numTotalPages: 0,
+      images: []
     };
     return _this;
   }
@@ -38937,7 +38970,8 @@ var List = /*#__PURE__*/function (_Component) {
                   books: res.books,
                   pages: res.pages,
                   actualPage: parseInt(page),
-                  numTotalPages: parseInt(res.numTotalPages)
+                  numTotalPages: parseInt(res.numTotalPages),
+                  images: res.urlImages
                 });
 
               case 5:
@@ -38994,7 +39028,7 @@ var List = /*#__PURE__*/function (_Component) {
       }, String(">")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
         "class": "btn btn-primary",
         href: "/books/me/" + parseInt(this.state.numTotalPages - 1)
-      }, String(">>"))) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null)) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", null)), this.state.books.map(function (book) {
+      }, String(">>"))) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null)) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", null)), this.state.books.map(function (book, i) {
         return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("main", {
           "class": "mainBooks"
         }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
@@ -39012,7 +39046,7 @@ var List = /*#__PURE__*/function (_Component) {
           href: "/books/" + book.id
         }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("img", {
           "class": "book-card__img",
-          src: book.image
+          src: _this2.state.images[i]
         }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
           "class": "book-card__book-back"
         }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
@@ -39135,7 +39169,7 @@ var List = /*#__PURE__*/function (_Component) {
       books: [],
       isAdded: [],
       username: ""
-    }, _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2___default()(_this$state, "isAdded", false), _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2___default()(_this$state, "pages", []), _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2___default()(_this$state, "actualPage", 0), _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2___default()(_this$state, "numTotalPages", 0), _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2___default()(_this$state, "showMode", ""), _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2___default()(_this$state, "title", ""), _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2___default()(_this$state, "nearBooks", true), _this$state);
+    }, _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2___default()(_this$state, "isAdded", false), _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2___default()(_this$state, "pages", []), _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2___default()(_this$state, "actualPage", 0), _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2___default()(_this$state, "numTotalPages", 0), _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2___default()(_this$state, "showMode", ""), _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2___default()(_this$state, "title", ""), _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2___default()(_this$state, "nearBooks", true), _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2___default()(_this$state, "images", []), _this$state);
     return _this;
   }
 
@@ -39177,7 +39211,8 @@ var List = /*#__PURE__*/function (_Component) {
                   pages: res.pages,
                   numTotalPages: parseInt(res.numTotalPages),
                   showMode: showMode,
-                  title: res.title
+                  title: res.title,
+                  images: res.urlImages
                 });
 
               case 10:
@@ -39254,7 +39289,7 @@ var List = /*#__PURE__*/function (_Component) {
           href: "/books/" + book.id
         }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("img", {
           "class": "book-card__img",
-          src: book.image
+          src: _this2.state.images[i]
         }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("div", {
           "class": "book-card__book-back"
         }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("div", {
@@ -39459,7 +39494,8 @@ var List = /*#__PURE__*/function (_Component) {
       pages: [],
       actualPage: 0,
       numTotalPages: 0,
-      isAdded: []
+      isAdded: [],
+      images: []
     };
     return _this;
   }
@@ -39484,7 +39520,8 @@ var List = /*#__PURE__*/function (_Component) {
                   pages: res.pages,
                   actualPage: parseInt(page),
                   numTotalPages: parseInt(res.numTotalPages),
-                  isAdded: res.isAdded
+                  isAdded: res.isAdded,
+                  images: res.urlImages
                 });
 
               case 5:
@@ -39563,7 +39600,7 @@ var List = /*#__PURE__*/function (_Component) {
           href: "/books/" + book.id
         }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("img", {
           "class": "book-card__img",
-          src: book.image
+          src: _this2.state.images[i]
         }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
           "class": "book-card__book-back"
         }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
@@ -39781,7 +39818,7 @@ var List = /*#__PURE__*/function (_Component) {
       books: [],
       isAdded: [],
       username: ""
-    }, _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2___default()(_this$state, "isAdded", false), _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2___default()(_this$state, "pages", []), _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2___default()(_this$state, "actualPage", 0), _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2___default()(_this$state, "query", ""), _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2___default()(_this$state, "searchResult", true), _this$state);
+    }, _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2___default()(_this$state, "isAdded", false), _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2___default()(_this$state, "pages", []), _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2___default()(_this$state, "actualPage", 0), _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2___default()(_this$state, "query", ""), _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2___default()(_this$state, "searchResult", true), _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2___default()(_this$state, "images", []), _this$state);
     return _this;
   }
 
@@ -39822,7 +39859,8 @@ var List = /*#__PURE__*/function (_Component) {
                   isAdded: res.isAdded,
                   pages: res.pages,
                   numTotalPages: parseInt(res.numTotalPages),
-                  searchResult: res.searchResult
+                  searchResult: res.searchResult,
+                  images: res.urlImages
                 });
 
               case 10:
@@ -39899,7 +39937,7 @@ var List = /*#__PURE__*/function (_Component) {
           href: "/books/" + book.id
         }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("img", {
           "class": "book-card__img",
-          src: book.image
+          src: _this2.state.images[i]
         }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("div", {
           "class": "book-card__book-back"
         }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("div", {
@@ -40442,7 +40480,9 @@ var List = /*#__PURE__*/function (_Component) {
       books2: [],
       users: [],
       pages: [],
-      actualPage: 0
+      actualPage: 0,
+      urlsBooks1: [],
+      urlsBooks2: []
     };
     return _this;
   }
@@ -40477,7 +40517,9 @@ var List = /*#__PURE__*/function (_Component) {
                   books2: res.books2,
                   users: res.users,
                   pages: res.pages,
-                  numTotalPages: parseInt(res.numTotalPages)
+                  numTotalPages: parseInt(res.numTotalPages),
+                  urlsBooks1: res.urlsBooks1,
+                  urlsBooks2: res.urlsBooks2
                 });
 
               case 6:
@@ -40577,7 +40619,7 @@ var List = /*#__PURE__*/function (_Component) {
             padding: '10px',
             margin: "0px 0px 0px 0px"
           },
-          src: _this2.state.books1[i].image
+          src: _this2.state.urlsBooks1[i]
         }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("strong", null, "\u21C4  ")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("a", {
           href: "/books/" + _this2.state.books2[i].id
         }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("img", {
@@ -40587,7 +40629,7 @@ var List = /*#__PURE__*/function (_Component) {
             padding: '10px',
             margin: "0px 0px 0px 0px"
           },
-          src: _this2.state.books2[i].image
+          src: _this2.state.urlsBooks2[i]
         })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", null)) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("center", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("a", {
           href: "/books/" + _this2.state.books2[i].id
         }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("img", {
@@ -40597,7 +40639,7 @@ var List = /*#__PURE__*/function (_Component) {
             padding: '10px',
             margin: "0px 0px 0px 0px"
           },
-          src: _this2.state.books2[i].image
+          src: _this2.state.urlsBooks2[i]
         }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("center", null, request.action == "COMPRA" ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("strong", null, "Precio original: "), _this2.state.books2[i].price, " \u20AC") : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", null), request.comment != "" ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("strong", null, "Comentario adicional: "), request.comment) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", null), request.status != "ACEPTADA" ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("strong", null, "Petici\xF3n enviada a: "), request.username2) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("strong", null, "Estado: "), request.status)), request.status == "PENDIENTE" ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("center", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("a", {
           onClick: function onClick() {
             return _this2.cancelRequest(request.id, _this2.state.actualPage);
@@ -40782,7 +40824,9 @@ var List = /*#__PURE__*/function (_Component) {
       books2: [],
       users: [],
       pages: [],
-      actualPage: 0
+      actualPage: 0,
+      urlsBooks1: [],
+      urlsBooks2: []
     };
     return _this;
   }
@@ -40817,7 +40861,9 @@ var List = /*#__PURE__*/function (_Component) {
                   books2: res.books2,
                   users: res.users,
                   pages: res.pages,
-                  numTotalPages: parseInt(res.numTotalPages)
+                  numTotalPages: parseInt(res.numTotalPages),
+                  urlsBooks1: res.urlsBooks1,
+                  urlsBooks2: res.urlsBooks2
                 });
 
               case 6:
@@ -40887,7 +40933,7 @@ var List = /*#__PURE__*/function (_Component) {
             padding: '10px',
             margin: "0px 0px 0px 0px"
           },
-          src: _this2.state.books2[i].image
+          src: _this2.state.urlsBooks2[i]
         }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("strong", null, "\u21C4  ")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("a", {
           href: "/books/" + _this2.state.books1[i].id
         }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("img", {
@@ -40897,7 +40943,7 @@ var List = /*#__PURE__*/function (_Component) {
             padding: '10px',
             margin: "0px 0px 0px 0px"
           },
-          src: _this2.state.books1[i].image
+          src: _this2.state.urlsBooks1[i]
         })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("br", null)) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("center", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("a", {
           href: "/books/" + _this2.state.books2[i].id
         }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("img", _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0___default()({
@@ -40905,7 +40951,7 @@ var List = /*#__PURE__*/function (_Component) {
             height: "100px",
             width: "100px"
           },
-          src: _this2.state.books2[i].image
+          src: _this2.state.urlsBooks2[i]
         }, "style", {
           padding: '10px',
           margin: "0px 0px 0px 0px",
@@ -41056,7 +41102,7 @@ var book = {};
 
 book.create = /*#__PURE__*/function () {
   var _ref = _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.mark(function _callee(state) {
-    var datapost, urlPost, res, idBook, data, files, urlPost1, res1;
+    var datapost, urlPost, res, idBook, i, form, urlPost1, resUploadImage, datapostImage, urlPostImage, postUploadImage;
     return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.wrap(function _callee$(_context) {
       while (1) {
         switch (_context.prev = _context.next) {
@@ -41085,34 +41131,63 @@ book.create = /*#__PURE__*/function () {
             res = _context.sent;
 
             if (!(res.success == true)) {
-              _context.next = 19;
+              _context.next = 24;
               break;
             }
 
             idBook = res.idBook;
-            data = new form_data__WEBPACK_IMPORTED_MODULE_3___default.a();
-            files = [];
-            files.push(state.fieldImage[0]);
-            files.push(state.fieldImage[1]);
-            alert(JSON.stringify(state.fieldImage));
-            alert(JSON.stringify(files));
-            data.append('files', state.fieldImage[0]);
-            data.append('idBook', idBook);
-            urlPost1 = baseUrl + "/new/image";
-            _context.next = 18;
-            return axios__WEBPACK_IMPORTED_MODULE_2___default.a.post(urlPost1, data).then(function (response) {
+            i = 0;
+
+          case 8:
+            if (!(i < state.fieldImage.length)) {
+              _context.next = 24;
+              break;
+            }
+
+            form = new form_data__WEBPACK_IMPORTED_MODULE_3___default.a();
+            form.append("image", state.fieldImage[i]);
+            urlPost1 = "https://api.imgbb.com/1/upload?key=672fcb9727d542f1303d834e6b2a5caa";
+            _context.next = 14;
+            return axios__WEBPACK_IMPORTED_MODULE_2___default.a.post(urlPost1, form).then(function (response) {
               return response.data;
             })["catch"](function (error) {
               return error.response;
             });
 
-          case 18:
-            res1 = _context.sent;
+          case 14:
+            resUploadImage = _context.sent;
 
-          case 19:
-            return _context.abrupt("return", res);
+            if (!(resUploadImage.success == true)) {
+              _context.next = 21;
+              break;
+            }
+
+            datapostImage = {
+              idBook: idBook,
+              fileName: resUploadImage.data.image.filename,
+              urlImage: resUploadImage.data.url,
+              urlDelete: resUploadImage.data.delete_url
+            };
+            urlPostImage = baseUrl + "/images/upload";
+            _context.next = 20;
+            return axios__WEBPACK_IMPORTED_MODULE_2___default.a.post(urlPostImage, datapostImage).then(function (response) {
+              return response.data;
+            })["catch"](function (error) {
+              return error.response;
+            });
 
           case 20:
+            postUploadImage = _context.sent;
+
+          case 21:
+            i++;
+            _context.next = 8;
+            break;
+
+          case 24:
+            return _context.abrupt("return", res);
+
+          case 25:
           case "end":
             return _context.stop();
         }
@@ -41351,8 +41426,8 @@ book.getGenres = /*#__PURE__*/_babel_runtime_helpers_asyncToGenerator__WEBPACK_I
 }));
 
 book["delete"] = /*#__PURE__*/function () {
-  var _ref9 = _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.mark(function _callee9(id) {
-    var urlDelete, res;
+  var _ref9 = _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.mark(function _callee9(id, images) {
+    var urlDelete, res, i, urlDeleteImage, resDeleteImage;
     return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.wrap(function _callee9$(_context9) {
       while (1) {
         switch (_context9.prev = _context9.next) {
@@ -41367,9 +41442,34 @@ book["delete"] = /*#__PURE__*/function () {
 
           case 3:
             res = _context9.sent;
-            return _context9.abrupt("return", res);
+            i = 0;
 
           case 5:
+            if (!(i < images.length)) {
+              _context9.next = 13;
+              break;
+            }
+
+            urlDeleteImage = images[i].urlDelete;
+            _context9.next = 9;
+            return axios__WEBPACK_IMPORTED_MODULE_2___default.a.get(urlDeleteImage).then(function (response) {
+              return response.data;
+            })["catch"](function (error) {
+              return error.response;
+            });
+
+          case 9:
+            resDeleteImage = _context9.sent;
+
+          case 10:
+            i++;
+            _context9.next = 5;
+            break;
+
+          case 13:
+            return _context9.abrupt("return", res);
+
+          case 14:
           case "end":
             return _context9.stop();
         }
@@ -41377,7 +41477,7 @@ book["delete"] = /*#__PURE__*/function () {
     }, _callee9);
   }));
 
-  return function (_x8) {
+  return function (_x8, _x9) {
     return _ref9.apply(this, arguments);
   };
 }();
@@ -41409,7 +41509,7 @@ book.recommendBooks = /*#__PURE__*/function () {
     }, _callee10);
   }));
 
-  return function (_x9) {
+  return function (_x10) {
     return _ref10.apply(this, arguments);
   };
 }();
@@ -43335,7 +43435,8 @@ var List = /*#__PURE__*/function (_Component) {
     _this.state = {
       books: [],
       pages: [],
-      actualPage: 0
+      actualPage: 0,
+      images: []
     };
     return _this;
   }
@@ -43366,7 +43467,8 @@ var List = /*#__PURE__*/function (_Component) {
                 res = _context.sent;
                 this.setState({
                   books: res.books,
-                  pages: res.pages
+                  pages: res.pages,
+                  images: res.urlImages
                 });
 
               case 6:
@@ -43411,7 +43513,7 @@ var List = /*#__PURE__*/function (_Component) {
       }), this.state.actualPage != this.state.pages.length - 1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("a", {
         "class": "btn btn-primary",
         href: "/favourites/" + parseInt(this.state.actualPage + 1)
-      }, "Siguiente") : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", null)) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", null)), this.state.books.map(function (book) {
+      }, "Siguiente") : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", null)) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", null)), this.state.books.map(function (book, i) {
         return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("main", {
           "class": "mainBooks"
         }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("div", {
@@ -43426,7 +43528,7 @@ var List = /*#__PURE__*/function (_Component) {
           href: "/books/" + book.id
         }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("img", {
           "class": "book-card__img",
-          src: book.image
+          src: _this2.state.images[i]
         }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("div", {
           "class": "book-card__book-back"
         }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("div", {

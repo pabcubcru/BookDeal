@@ -12,7 +12,9 @@ export default class List extends Component {
       books2:[],
       users:[],
       pages:[],
-      actualPage:0
+      actualPage:0,
+      urlsBooks1: [],
+      urlsBooks2: []
     }
   }
     
@@ -26,7 +28,8 @@ export default class List extends Component {
 
     const res = await requestService.listMyRequests(page)
 
-    this.setState({requests:res.requests, books1:res.books1, books2:res.books2, users:res.users, pages:res.pages, numTotalPages:parseInt(res.numTotalPages)})
+    this.setState({requests:res.requests, books1:res.books1, books2:res.books2, users:res.users, pages:res.pages, numTotalPages:parseInt(res.numTotalPages),
+    urlsBooks1: res.urlsBooks1, urlsBooks2: res.urlsBooks2})
 
   }
 
@@ -69,10 +72,10 @@ export default class List extends Component {
                     }
 
                     {request.action == "INTERCAMBIO" ?
-                      <center><a style={{color:"black"}} href={"/books/"+this.state.books1[i].id}><img style={{height:"200px", width:"140px", padding: '10px', margin:"0px 0px 0px 0px"}} src={this.state.books1[i].image} ></img><strong>
-                        ⇄  </strong></a><a href={"/books/"+this.state.books2[i].id}><img style={{height:"200px", width:"140px", padding: '10px', margin:"0px 0px 0px 0px"}} src={this.state.books2[i].image} ></img></a><br></br></center>
+                      <center><a style={{color:"black"}} href={"/books/"+this.state.books1[i].id}><img style={{height:"200px", width:"140px", padding: '10px', margin:"0px 0px 0px 0px"}} src={this.state.urlsBooks1[i]} ></img><strong>
+                        ⇄  </strong></a><a href={"/books/"+this.state.books2[i].id}><img style={{height:"200px", width:"140px", padding: '10px', margin:"0px 0px 0px 0px"}} src={this.state.urlsBooks2[i]} ></img></a><br></br></center>
                     :
-                    <center><a href={"/books/"+this.state.books2[i].id}><img style={{height:"200px", width:"140px", padding: '10px', margin:"0px 0px 0px 0px"}} src={this.state.books2[i].image} ></img></a>
+                    <center><a href={"/books/"+this.state.books2[i].id}><img style={{height:"200px", width:"140px", padding: '10px', margin:"0px 0px 0px 0px"}} src={this.state.urlsBooks2[i]} ></img></a>
                     </center>
                     }
                     <center>

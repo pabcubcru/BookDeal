@@ -9,7 +9,8 @@ export default class List extends Component {
     this.state = {
       books: [],
       pages:[],
-      actualPage:0
+      actualPage:0,
+      images: []
     }
   }
     
@@ -21,7 +22,7 @@ export default class List extends Component {
       page = 0
     }
     const res = await userFavouriteBook.findAllFavouritesBooks(page)
-    this.setState({books:res.books, pages:res.pages})
+    this.setState({books:res.books, pages:res.pages, images: res.urlImages})
   }
 
     render() {
@@ -46,14 +47,14 @@ export default class List extends Component {
                   :
                   <p></p>
                   }<br></br></center>}
-                {this.state.books.map((book) => {
+                {this.state.books.map((book, i) => {
                     return(
                       <main class="mainBooks">
                         <div class="book-card">
                           <div class="book-card__cover">
                             <div class="book-card__book">
                               <div class="book-card__book-front">
-                                <a href={"/books/"+book.id}><img class="book-card__img" src={book.image} /></a>
+                                <a href={"/books/"+book.id}><img class="book-card__img" src={this.state.images[i]} /></a>
                               </div>
                               <div class="book-card__book-back"></div>
                               <div class="book-card__book-side"></div>

@@ -1,9 +1,5 @@
 package com.pabcubcru.infobooks.controllers;
 
-import java.io.File;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
 import java.security.Principal;
 import java.time.LocalDate;
 import java.util.ArrayList;
@@ -17,6 +13,7 @@ import javax.validation.Valid;
 
 import com.pabcubcru.infobooks.models.Book;
 import com.pabcubcru.infobooks.models.GenreEnum;
+import com.pabcubcru.infobooks.models.Image;
 import com.pabcubcru.infobooks.models.Request;
 import com.pabcubcru.infobooks.models.RequestStatus;
 import com.pabcubcru.infobooks.models.User;
@@ -33,17 +30,13 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
-import org.springframework.web.bind.annotation.RequestAttribute;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RequestPart;
 import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
 
 @RestController
@@ -95,6 +88,19 @@ public class BookController {
 		return model;
 	}
 
+    public List<List<String>> getUrlsImagesFromBooks(List<Book> books) {
+        List<List<String>> allBookImages = new ArrayList<>();
+        for(Book b : books) {
+            List<String> urlImages = new ArrayList<>();
+            List<Image> images = this.bookService.findImagesByIdBook(b.getId());
+            for(Image image : images) {
+                urlImages.add(image.getUrlImage());
+            }
+            allBookImages.add(urlImages);
+        }
+        return allBookImages;
+    }
+
     @GetMapping(value = {"/{id}/edit"})
     public ModelAndView mainWithUserSecurity(Principal principal, @PathVariable("id") String id) {
         ModelAndView model = new ModelAndView();
@@ -126,30 +132,15 @@ public class BookController {
                 "El año de publicación debe ser anterior o igual al presente año.");
             }
         }
-
         return result;
     }
 
-    @PostMapping(value = "/new/image", consumes = {"multipart/form-data"})
-    public void saveImages(@RequestParam("files") MultipartFile f, @RequestParam("idBook") String id) {
-        Book book = this.bookService.findBookById(id);
-        if(f != null) {
-            String image = "";
-            Path directorio = Paths.get("src\\main\\resources\\images");
-            String ruta = directorio.toFile().getAbsolutePath();
-
-            try {
-                //for(MultipartFile f : files) {0-7645-2641-3
-                    byte[] bytes = f.getBytes();
-                    Path rutaCompleta = Paths.get(ruta + "//" + f.getOriginalFilename());
-                    Files.write(rutaCompleta, bytes);
-                    image += f.getOriginalFilename();
-                //}
-            } catch (Exception e) {
-                //TODO: handle exception
-            }
-            book.setImage(image);
-            this.bookService.save(book);
+    @PostMapping(value = "/images/upload")
+    public void saveImages(@RequestBody Image image) {
+        try {
+            this.bookService.saveImage(image);
+        } catch (Exception e) {
+            //TODO: handle exception
         }
     }
 
@@ -171,7 +162,6 @@ public class BookController {
             res.put("errors", result.getAllErrors());
             res.put("success", false);
         }
-        
         return res;
     }
 
@@ -192,7 +182,6 @@ public class BookController {
             res.put("errors", result.getAllErrors());
             res.put("success", false);
         }
-
         return res;
     }
 
@@ -205,6 +194,8 @@ public class BookController {
             if(requestAcceptedToBook1 == null && requestAcceptedToBook2 == null) {
                 List<Request> requests = this.requestService.findByIdBook1OrIdBook2(id, id);
                 this.requestService.deleteAll(requests);
+                List<Image> images = this.bookService.findImagesByIdBook(id);
+                this.bookService.deleteAllImages(images);
                 this.bookService.deleteBookById(id);
             }
         }
@@ -266,6 +257,9 @@ public class BookController {
             res.put("isAdded", isAdded);
         }
 
+        List<List<String>> allBookImages = this.getUrlsImagesFromBooks(pageOfBooks.getContent());
+
+        res.put("urlImages", allBookImages);
         res.put("numTotalPages", numberOfPages);
         res.put("pages", new ArrayList<Integer>());
         if(numberOfPages > 0) {
@@ -284,6 +278,9 @@ public class BookController {
         
         res.put("books", pageOfBooks.getContent());
 
+        List<List<String>> allBookImages = this.getUrlsImagesFromBooks(pageOfBooks.getContent());
+
+        res.put("urlImages", allBookImages);
         Integer numberOfPages = pageOfBooks.getTotalPages();
         res.put("numTotalPages", numberOfPages);
         res.put("pages", new ArrayList<Integer>());
@@ -352,6 +349,10 @@ public class BookController {
                     }
                 }
             }
+            List<Image> images = this.bookService.findImagesByIdBook(book.getId());
+            List<String> urlImages = images.stream().map(x -> x.getUrlImage()).collect(Collectors.toList());
+            res.put("urlImages", urlImages);
+            res.put("images", images);
             res.put("book", book);
             res.put("success", true);
         } catch (Exception e) {
@@ -385,6 +386,9 @@ public class BookController {
         List<Book> books = map.values().stream().findFirst().orElse(new ArrayList<>());
         
         res.put("books", books);
+
+        List<List<String>> allBookImages = this.getUrlsImagesFromBooks(books);
+        res.put("urlImages", allBookImages);
 
         Integer numberOfPages = map.keySet().stream().findFirst().orElse(0);
         res.put("numTotalPages", numberOfPages);

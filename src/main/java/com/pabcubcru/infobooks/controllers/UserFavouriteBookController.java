@@ -8,6 +8,8 @@ import java.util.Map;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
+import com.pabcubcru.infobooks.models.Book;
+import com.pabcubcru.infobooks.models.Image;
 import com.pabcubcru.infobooks.models.UserFavouriteBook;
 import com.pabcubcru.infobooks.services.BookService;
 import com.pabcubcru.infobooks.services.UserFavouriteBookService;
@@ -40,6 +42,19 @@ public class UserFavouriteBookController {
         return model;
     }
 
+    public List<List<String>> getUrlsImagesFromBooks(List<Book> books) {
+        List<List<String>> allBookImages = new ArrayList<>();
+        for(Book b : books) {
+            List<String> urlImages = new ArrayList<>();
+            List<Image> images = this.bookService.findImagesByIdBook(b.getId());
+            for(Image image : images) {
+                urlImages.add(image.getUrlImage());
+            }
+            allBookImages.add(urlImages);
+        }
+        return allBookImages;
+    }
+
     @GetMapping(value = "/all")
     public Map<String, Object> findAllByUsername(Principal principal, @RequestParam(name = "page", defaultValue = "0") Integer page) {
         Map<String, Object> res = new HashMap<>();
@@ -49,8 +64,13 @@ public class UserFavouriteBookController {
         Page<UserFavouriteBook> pageOfBooks = this.userFavouriteBookService.findAllByUsername(principal.getName(), pageRequest);
         List<UserFavouriteBook> ufbooks = pageOfBooks.getContent();
         ufbooks.stream().forEach(x -> idBooks.add(x.getBookId()));
+
+        List<Book> books = this.bookService.findByIds(idBooks);
         
-        res.put("books", this.bookService.findByIds(idBooks));
+        res.put("books", books);
+
+        List<List<String>> allBookImages = this.getUrlsImagesFromBooks(books);
+        res.put("urlImages", allBookImages);
 
         Integer numberOfPages = pageOfBooks.getTotalPages();
         res.put("pages", new ArrayList<Integer>());

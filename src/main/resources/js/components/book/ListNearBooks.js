@@ -19,7 +19,8 @@ export default class List extends Component {
       numTotalPages:0,
       showMode:"",
       title:"",
-      nearBooks:true
+      nearBooks:true,
+      images: []
     }
   }
     
@@ -36,7 +37,8 @@ export default class List extends Component {
     
     const username = await userService.getUsername()
 
-    this.setState({books:res.books, nearBooks:res.nearBooks, username:username.username, isAdded:res.isAdded, pages:res.pages, numTotalPages:parseInt(res.numTotalPages), showMode:showMode, title:res.title})
+    this.setState({books:res.books, nearBooks:res.nearBooks, username:username.username, isAdded:res.isAdded, pages:res.pages, numTotalPages:parseInt(res.numTotalPages), 
+      showMode:showMode, title:res.title, images: res.urlImages})
   }
 
     render() {
@@ -69,7 +71,7 @@ export default class List extends Component {
                           <div class="book-card__cover">
                             <div class="book-card__book">
                               <div class="book-card__book-front">
-                                <a style={{zIndex:"-10"}}  href={"/books/"+book.id}><img class="book-card__img" src={book.image} /></a>
+                                <a style={{zIndex:"-10"}}  href={"/books/"+book.id}><img class="book-card__img" src={this.state.images[i]} /></a>
                               </div>
                               <div class="book-card__book-back"></div>
                               <div class="book-card__book-side"></div>

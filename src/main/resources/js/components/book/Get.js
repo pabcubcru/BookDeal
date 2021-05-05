@@ -14,7 +14,9 @@ export default class Get extends Component {
             genres:"",
             isAdded:"",
             alreadyRequest:"",
-            hasRequestAccepted:""
+            hasRequestAccepted:"",
+            images:[],
+            urlImages: []
         }
     }
 
@@ -24,21 +26,21 @@ export default class Get extends Component {
 
         const username = await userService.getUsername()
                           
-        this.setState({book:b.book, username:username.username, genres:b.book.genres, isAdded:b.isAdded, alreadyRequest:b.alreadyRequest, hasRequestAccepted:b.hasRequestAccepted})
+        this.setState({book:b.book, username:username.username, genres:b.book.genres, isAdded:b.isAdded, alreadyRequest:b.alreadyRequest, 
+          hasRequestAccepted:b.hasRequestAccepted, images: b.images, urlImages: b.urlImages})
     }
 
     render() {
         return(
-            
 <div>
 <div class="cover">
   <div class="book">
     <label for="page-1" class="book__page book__page--1">
-      <img src={this.state.book.image} alt=""/>
+      <img src={this.state.urlImages[0]}/>
     </label>
 
     <label for="page-2" class="book__page book__page--4">
-      <img src={this.state.book.image} alt=""/>
+      <img src={this.state.urlImages[1] == null ? this.state.urlImages[0] : this.state.urlImages[1]}/>
     </label>
 
     <input type="radio" name="page" id="page-1" />
@@ -108,62 +110,86 @@ export default class Get extends Component {
       </div>
     </label></div>
     </div>
+    <center>
+    <br></br>
+    <h2>Todas las imágenes</h2>
+    <div style={{backgroundImage:"https://i.pinimg.com/originals/8d/23/06/8d2306b98839234e49ce96a8b76e20ae.jpg"}}>
+    {this.state.images.map((image, i) => {
+      return(
+        <div>
+        <ul class="galeria">
+      <li><a href={String("#img"+i)}><img src={image.urlImage}/></a></li>
+    </ul>
+    <div class="modal" id={String("img"+i)}>
+      <h3>{image.fileName}</h3>
+      <div class="imagen">
+        <a href={i <= 0 ? '#img'+String(this.state.images.length-1) : '#img'+String(i-1)}>{String("<")}</a>
+        <a href={"#img"+i}><img src={image.urlImage}/></a>
+        <a href={i >= this.state.images.length-1 ? '#img0' : '#img'+String(i+1)}>{String(">")}</a>
+      </div>
+      <a class="cerrar" href="">x</a>
+    </div>
+    </div>
+      )
+    })}  
+    </div></center>
+    <hr></hr>
     <center>{this.state.username == this.state.book.username ? 
-                <center><br></br><button style={{backgroundImage:"url(https://i.pinimg.com/originals/8d/23/06/8d2306b98839234e49ce96a8b76e20ae.jpg)", margin:"10px", color:"black"}} 
-                onClick={() => this.goToEdit(this.state.book.id)} class="btn btn-primary" disabled={this.state.hasRequestAccepted == true}><b>Editar</b></button>
-                <button onClick={() => this.deleteBook(this.state.book.id)} style={{color:"red", 
-                backgroundImage:"url(https://i.pinimg.com/originals/8d/23/06/8d2306b98839234e49ce96a8b76e20ae.jpg)"}} class="btn btn-primary" 
-                disabled={this.state.hasRequestAccepted == true}><b>Eliminar</b></button>
-                {this.state.hasRequestAccepted ? 
-                    <p class='text-danger'><b>Tiene una petición ACEPTADA</b></p>
-                :
-                    <p></p>
-                }</center>
-            :
-                <p></p>
-            }
+      <center><br></br><button style={{backgroundImage:"url(https://i.pinimg.com/originals/8d/23/06/8d2306b98839234e49ce96a8b76e20ae.jpg)", margin:"10px", color:"black"}} 
+      onClick={() => this.goToEdit(this.state.book.id)} class="btn btn-primary" disabled={this.state.hasRequestAccepted == true}><b>Editar</b></button>
+      <button onClick={() => this.deleteBook(this.state.book.id, this.state.images)} style={{color:"red", 
+      backgroundImage:"url(https://i.pinimg.com/originals/8d/23/06/8d2306b98839234e49ce96a8b76e20ae.jpg)"}} class="btn btn-primary" 
+      disabled={this.state.hasRequestAccepted == true}><b>Eliminar</b></button>
+      {this.state.hasRequestAccepted ? 
+          <p class='text-danger'><b>Tiene una petición ACEPTADA</b></p>
+      :
+          <p></p>
+      }</center>
+  :
+      <p></p>
+  }
 
-            {this.state.username != null && this.state.username != this.state.book.username ?
-                <center>
-                {!this.state.isAdded ? 
-                <center><a class="btn btn-primary" style={{backgroundImage:"url(https://i.pinimg.com/originals/8d/23/06/8d2306b98839234e49ce96a8b76e20ae.jpg)"}} 
-                onClick={() => this.addFavouriteBook(this.state.book.id)}><img style={{height:"30px", width:"30px"}} 
-                src="http://assets.stickpng.com/images/5a02bfca18e87004f1ca4395.png"></img> <b>Añadir a favoritos</b></a><br></br></center>
-                :                              
-                <center><a class="btn btn-primary" style={{backgroundImage:"url(https://i.pinimg.com/originals/8d/23/06/8d2306b98839234e49ce96a8b76e20ae.jpg)"}} 
-                onClick={() => this.deleteFavouriteBook(this.state.book.id, this.state.book.title)}><img style={{height:"30px", width:"30px"}} 
-                src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Coraz%C3%B3n.svg/1121px-Coraz%C3%B3n.svg.png"></img> <b>Eliminar de favoritos</b></a><br></br></center>}
-                </center>
-            :                              
-                <p></p>
-            }   
+  {this.state.username != null && this.state.username != this.state.book.username ?
+      <center>
+      {!this.state.isAdded ? 
+      <center><a class="btn btn-primary" style={{backgroundImage:"url(https://i.pinimg.com/originals/8d/23/06/8d2306b98839234e49ce96a8b76e20ae.jpg)"}} 
+      onClick={() => this.addFavouriteBook(this.state.book.id)}><img style={{height:"30px", width:"30px"}} 
+      src="http://assets.stickpng.com/images/5a02bfca18e87004f1ca4395.png"></img> <b>Añadir a favoritos</b></a><br></br></center>
+      :                              
+      <center><a class="btn btn-primary" style={{backgroundImage:"url(https://i.pinimg.com/originals/8d/23/06/8d2306b98839234e49ce96a8b76e20ae.jpg)"}} 
+      onClick={() => this.deleteFavouriteBook(this.state.book.id, this.state.book.title)}><img style={{height:"30px", width:"30px"}} 
+      src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Coraz%C3%B3n.svg/1121px-Coraz%C3%B3n.svg.png"></img> <b>Eliminar de favoritos</b></a><br></br></center>}
+      </center>
+  :                              
+      <p></p>
+  }   
 
-            {this.state.username != this.state.book.username && this.state.username != null ?
-                !this.state.alreadyRequest ?
-                <center>
-                    {!this.state.hasRequestAccepted ?
-                        <a href={"/requests/"+this.state.book.id+"/add"} style={{color:"black", marginTop:"20px", backgroundImage:"url(https://i.pinimg.com/originals/8d/23/06/8d2306b98839234e49ce96a8b76e20ae.jpg)"}} 
-                         class="btn btn-primary"><b>Realizar petición</b></a>
-                    :
-                        <center><button style={{color:"black", marginTop:"20px", backgroundImage:"url(https://i.pinimg.com/originals/8d/23/06/8d2306b98839234e49ce96a8b76e20ae.jpg)"}} 
-                        class="btn btn-primary" disabled><b>Realizar petición</b></button>
-                        <p style={{color:"red"}}><b>Ya tiene una petición ACEPTADA</b></p></center>
-                    }
-                </center>
-                :
-                <button style={{background:"#099C01",color:"green", margin:"20px", backgroundImage:"url(https://i.pinimg.com/originals/8d/23/06/8d2306b98839234e49ce96a8b76e20ae.jpg)"}} 
-                class="btn btn-primary" disabled><b>Petición realizada</b></button>
-            :
-                <p></p>
-            }</center>
+  {this.state.username != this.state.book.username && this.state.username != null ?
+      !this.state.alreadyRequest ?
+      <center>
+          {!this.state.hasRequestAccepted ?
+              <a href={"/requests/"+this.state.book.id+"/add"} style={{color:"black", marginTop:"20px", backgroundImage:"url(https://i.pinimg.com/originals/8d/23/06/8d2306b98839234e49ce96a8b76e20ae.jpg)"}} 
+                class="btn btn-primary"><b>Realizar petición</b></a>
+          :
+              <center><button style={{color:"black", marginTop:"20px", backgroundImage:"url(https://i.pinimg.com/originals/8d/23/06/8d2306b98839234e49ce96a8b76e20ae.jpg)"}} 
+              class="btn btn-primary" disabled><b>Realizar petición</b></button>
+              <p style={{color:"red"}}><b>Ya tiene una petición ACEPTADA</b></p></center>
+          }
+      </center>
+      :
+      <button style={{background:"#099C01",color:"green", margin:"20px", backgroundImage:"url(https://i.pinimg.com/originals/8d/23/06/8d2306b98839234e49ce96a8b76e20ae.jpg)"}} 
+      class="btn btn-primary" disabled><b>Petición realizada</b></button>
+  :
+      <p></p>
+  }</center>
     </div>
     )
     }
 
-    async deleteBook(id) {
+    async deleteBook(id, images) {
         const conf = confirm("¿Está seguro de que quiere eliminarlo? Esta acción no es reversible.")
         if(conf) {
-          const res = await bookService.delete(id)
+          const res = await bookService.delete(id, images)
           window.location.replace("/books/me/0")
         }
       }
