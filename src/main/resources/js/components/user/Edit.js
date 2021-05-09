@@ -241,10 +241,10 @@ export default class Form extends Component {
         const res = await userService.edit(this.state)
         if (res.success) {
           if(this.state.fieldPassword != "" && this.state.fieldConfirmPassword != ""){
-            this.setState({messageCorrectPassword: "*La contraseña se ha cambiado con éxito.", 
+            this.setState({messageCorrectPassword: "La contraseña se ha cambiado con éxito.", 
             errorFieldPassword:[], messageCorrectUser:"", fieldPassword:"", fieldConfirmPassword:"", errorField:[], errorMessages:[]})
           } else {
-            this.setState({messageCorrectUser: "*Los datos se han actualizado con éxito.", 
+            this.setState({messageCorrectUser: "Los datos se han actualizado con éxito.", 
             messageCorrectPassword:"", errorField:[], errorMessages:[]})
             //window.location.replace("/profile")
           }

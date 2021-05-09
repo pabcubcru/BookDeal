@@ -82,7 +82,7 @@ export default class List extends Component {
                           <div class="book-card__cover">
                             <div class="book-card__book">
                               <div class="book-card__book-front">
-                                <a style={{zIndex:"-10"}}  href={"/books/"+book.id}><img class="book-card__img" src={this.state.images[i][0]} alt=""/></a>
+                                <a style={{zIndex:"-10"}}  href={"/books/"+book.id}><img class="book-card__img" src={this.state.images[i]} alt=""/></a>
                               </div>
                               <div class="book-card__book-back"></div>
                               <div class="book-card__book-side"></div>

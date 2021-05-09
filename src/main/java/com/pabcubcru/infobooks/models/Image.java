@@ -19,8 +19,5 @@ public class Image extends BaseEntity {
 
     @Field(type = FieldType.Text, name = "urlImage")
     private String urlImage;
-
-    @Field(type = FieldType.Text, name = "urlDelete")
-    private String urlDelete;
     
 }

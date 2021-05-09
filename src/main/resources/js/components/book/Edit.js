@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import bookService from "../services/Book";
+import "./Images.css";
 
 export default class Form extends Component {
 
@@ -23,7 +24,10 @@ export default class Form extends Component {
       errorMessages:[],
       genres:[],
       fieldGen:[],
-      titleCopy:""
+      titleCopy:"",
+      images:[],
+      image:"",
+      messageSave:""
     }
   }
 
@@ -47,13 +51,14 @@ export default class Form extends Component {
         fieldGenres: b.book.genres,
         fieldAuthor: b.book.author,
         fieldDescription: b.book.description,
-        fieldImage: b.book.image,
+        fieldImage: String(b.images.length),
         fieldStatus: b.book.status,
         fieldAction: b.book.action,
         fieldPrice: b.book.price,
         fieldGen: genrs,
         correctBook:"",
-        titleCopy:b.book.title
+        titleCopy:b.book.title,
+        images: b.images,
       })
     }
   }
@@ -182,11 +187,10 @@ export default class Form extends Component {
         </div>
 
         <div class="form-group row">
-            <label for="firstName" class="col-sm-3 col-form-label"> URL de imagen<sup class='text-danger'>*</sup></label>
+          <label for="firstName" class="col-sm-3 col-form-label">Seleccione las imágenes<sup class='text-danger'>*</sup></label>
           <div class="col-sm-9">
-            <input type="url" class="form-control"
-              value={this.state.fieldImage} 
-              onChange={(event)=>this.setState({fieldImage: event.target.value})}/>
+            <input type="file" 
+              onChange={(event)=>this.setState({fieldImage: event.target.files, image: String(event.target.files.length + this.state.images.length)})} multiple/>
               {this.state.errorField.indexOf("image") != -1 ? 
                 <p class='text-danger'>{this.state.errorMessages[this.state.errorField.indexOf("image")]}</p>
               :
@@ -228,6 +232,49 @@ export default class Form extends Component {
         </div>
       </div>
 
+      <center>
+      <h4>Todas las imágenes</h4>
+      <div class="allImages">
+      {this.state.images.map((image, i) => {
+        return(
+        <div>
+          <ul class="galeria">
+            <li><a href={String("#img"+i)}><img src={image.urlImage}/></a></li><br></br>
+            <li><button class="btn btn-primary" onClick={() => this.onClickDeleteImage(image, this.state.id)} disabled={this.state.images.length <= 1} 
+              style={{backgroundImage:"url(https://i.pinimg.com/originals/8d/23/06/8d2306b98839234e49ce96a8b76e20ae.jpg)"}}>
+                <i style={{color:"red"}} class="fa fa-trash"></i></button></li>
+                {this.state.images.length <= 1 ?
+                <center><p style={{color:"red"}}>Debe tener al menos una imagen.</p></center>
+              :
+                <p></p>
+              }
+          </ul>
+          <div class="modal" id={String("img"+i)}>
+            <h3>{image.fileName}</h3>
+            <div class="imagen">
+              <a href={i <= 0 ? '#img'+String(this.state.images.length-1) : '#img'+String(i-1)}>{String("<")}</a>
+              <a href={"#img"+i}><img src={image.urlImage}/></a>
+              <a href={i >= this.state.images.length-1 ? '#img0' : '#img'+String(i+1)}>{String(">")}</a>
+            </div>
+            <div class="imagen-buttons">
+              <a class="cerrar" href="">X</a>
+              <center><button class="cerrar" onClick={() => this.onClickDeleteImage(image, this.state.id)} disabled={this.state.images.length <= 1} >
+                <i style={{color:"red", marginBottom:"1px"}} class="fa fa-trash"></i></button></center>
+            </div>
+              {this.state.images.length <= 1 ?
+                <center><p style={{color:"red"}}>Debe tener al menos una imagen.</p></center>
+              :
+                <p></p>
+              }
+          </div>
+        </div>
+        )
+      })}  
+      </div></center>
+      <hr></hr>
+
+      <p style={{color:"green"}}>{this.state.messageSave}</p>
+
 				<div class="form-group row">
 					<div class="col-sm-6" >
 		      	<button onClick={()=>this.onClickSave()} class="btn btn-primary" type="submit">Actualizar</button>
@@ -239,11 +286,13 @@ export default class Form extends Component {
   }
 
   async onClickSave() {
+    this.setState({messageSave: "Guardando..."})
 		const res = await bookService.edit(this.state)
 
       if (res.success) {
         window.location.replace("/books/me/0")
       } else {
+        this.setState({messageSave: ""})
         const errFields = []
         const errMess = []
         const error = res.errors
@@ -253,6 +302,14 @@ export default class Form extends Component {
         })
         this.setState({errorField:errFields, errorMessages:errMess})
       }
+  }
+
+  async onClickDeleteImage(image, id) {
+    const conf = confirm("¿Está seguro de que quiere eliminar la imagen '"+image.fileName+"'? Esta acción no es reversible. Los datos modificados en el formulario se perderán.")
+    if(conf) {
+      const res = await bookService.deleteImage(image)
+      window.location.replace("/books/"+id+"/edit")
+    }
   }
 
   async editGenres(element) {

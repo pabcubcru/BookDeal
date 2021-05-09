@@ -15,7 +15,8 @@ book.create = async(state) => {
         author: state.fieldAuthor,
         description: state.fieldDescription,
         status: state.fieldStatus,
-        price: state.fieldPrice
+        price: state.fieldPrice,
+        image: state.hasImages
     }
 
     const urlPost = baseUrl+"/new"
@@ -40,8 +41,7 @@ book.create = async(state) => {
                 const datapostImage = {
                     idBook: idBook,
                     fileName: resUploadImage.data.image.filename,
-                    urlImage: resUploadImage.data.url,
-                    urlDelete: resUploadImage.data.delete_url
+                    urlImage: resUploadImage.data.url
                 }
 
                 const urlPostImage = baseUrl+"/images/upload"
@@ -66,7 +66,7 @@ book.edit = async(state) => {
         genres: state.fieldGenres,
         author: state.fieldAuthor,
         description: state.fieldDescription,
-        image: state.fieldImage,
+        image: state.image,
         status: state.fieldStatus,
         price: state.fieldPrice
     }
@@ -76,7 +76,44 @@ book.edit = async(state) => {
     .then(response => {return response.data;})
     .catch(error => {return error.response;})
 
+    if(res.success == true) {
+        const idBook = state.id
+
+        for(let i=0; i<state.fieldImage.length; i++) {
+
+            var form = new FormData();
+            form.append("image", state.fieldImage[i])
+
+            const urlPost1 = "https://api.imgbb.com/1/upload?key=672fcb9727d542f1303d834e6b2a5caa"
+            const resUploadImage = await axios.post(urlPost1, form)
+            .then(response => {return response.data;})
+            .catch(error => {return error.response;})
+
+            if(resUploadImage.success == true) {
+                const datapostImage = {
+                    idBook: idBook,
+                    fileName: resUploadImage.data.image.filename,
+                    urlImage: resUploadImage.data.url
+                }
+
+                const urlPostImage = baseUrl+"/images/upload"
+                const postUploadImage = await axios.post(urlPostImage, datapostImage)
+                .then(response => {return response.data;})
+                .catch(error => {return error.response;})
+            }            
+        } 
+    }
+
     return res;
+}
+
+book.deleteImage = async(image) => {
+
+    const urlDeleteEntityImage = baseUrl+"/images/"+image.id+"/delete"
+    const deleteImageEntity = await axios.get(urlDeleteEntityImage)
+    .then(response => {return response.data})
+    .catch(error => {return error.response})
+
 }
 
 book.getBook = async(id) => {

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import bookService from "../services/Book";
+import "./Create.css";
 
 export default class Form extends Component {
 
@@ -22,7 +23,9 @@ export default class Form extends Component {
       errorMessages:[],
       genres:[],
       fieldGen:[],
-      havePrice:false
+      havePrice:false,
+      hasImages:"",
+      messageSave:""
     }
   }
 
@@ -156,10 +159,11 @@ export default class Form extends Component {
         </div>
 
         <div class="form-group row">
-            <label for="firstName" class="col-sm-3 col-form-label">Selecciona las imágenes<sup class='text-danger'>*</sup></label>
+            <label for="firstName" class="col-sm-3 col-form-label">Seleccione las imágenes<sup class='text-danger'>*</sup> <dfn data-info="Para una mejor visualización, 
+            se recomienda que la primera y/o segunda imagen sea en formato vertical."><i class="fa fa-info-circle"></i></dfn></label>
           <div class="col-sm-9">
-            <input type="file" class="form-control" 
-              onChange={(event)=>this.setState({fieldImage: event.target.files})} multiple/>
+            <input type="file"
+              onChange={(event)=>this.setState({fieldImage: event.target.files, hasImages: String(event.target.files.length)})} multiple/>
               {this.state.errorField.indexOf("image") != -1 ? 
                 <p class='text-danger'>{this.state.errorMessages[this.state.errorField.indexOf("image")]}</p>
               :
@@ -200,6 +204,8 @@ export default class Form extends Component {
             }
         </div>
       </div>
+
+        <p style={{color:"green"}}>{this.state.messageSave}</p>
                                 
 				<div class="form-group row">
 					<div class="col-sm-6" >
@@ -212,11 +218,12 @@ export default class Form extends Component {
   }
 
   async onClickSave() {
+    this.setState({messageSave: "Guardando..."})
 		const res = await bookService.create(this.state)
-
       if (res.success) {
         window.location.replace("/books/me/0")
       } else {
+        this.setState({messageSave: ""})
         const errFields = []
         const errMess = []
         const error = res.errors

@@ -141,10 +141,10 @@ public class InfoBooksApplication {
 
 	public void buildBookIndexImages(String idBook, String urlImage, Integer id) {
 		Image image = new Image();
+		image.setId("image-"+id+"-"+idBook);
 		image.setUrlImage(urlImage);
 		image.setIdBook(idBook);
 		image.setFileName("image-"+id+"-"+idBook);
-		image.setUrlDelete("");
 
 		this.imageRepository.save(image);
 	}

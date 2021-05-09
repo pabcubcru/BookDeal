@@ -106,6 +106,11 @@ public class BookService {
     }
 
     @Transactional
+    public Image findFirstImageByIdBook(String idBook) {
+        return this.imageRepository.findFirstByIdBook(idBook);
+    }
+
+    @Transactional
     public void saveImage(Image image) {
         this.imageRepository.save(image);
     }
@@ -118,6 +123,11 @@ public class BookService {
     @Transactional
     public void deleteAllImages(List<Image> images) {
         this.imageRepository.deleteAll(images);
+    }
+
+    @Transactional
+    public void deleteImageById(String id) {
+        this.imageRepository.deleteById(id);
     }
     
 }

@@ -28,7 +28,7 @@ export default class List extends Component {
         <div >
           <h1 style={{float:"left", color: "black"}}><b>Mis libros</b></h1><br></br>
             {this.state.books.length == 0 ?
-                  <div><br></br><br></br><p><b>¿Todavía no has añadido ningún libro? <a class="btn btn-primary" href="/books/new">Añade uno!</a></b></p><br></br>
+                  <div><br></br><br></br><p><b>¿Todavía no has añadido ningún libro? <a class="btn btn-primary" href="/books/new">¡Añade uno!</a></b></p><br></br>
                   <br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br>
                   <br></br></div>
                 :

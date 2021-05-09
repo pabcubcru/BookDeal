@@ -44,14 +44,14 @@ export default class List extends Component {
     render() {
         return (
             <div >
-              <h1 style={{float:"left", color: "black"}}><b>{this.state.title}</b></h1><br></br><br></br><br></br>
+              <h1 style={{float:"left", color: "black"}}><b>{this.state.title}</b></h1><br></br><br></br>
                 {this.state.books.length == 0 || this.state.nearBooks == false ?
-                  <div><p><b>No se encontraron resultados.</b></p>
+                  <div><br></br><p><b>No se encontraron resultados.</b></p>
                   <h2 style={{float:"left", color: "black"}}><b>Algunas recomendaciones</b></h2><br></br><br></br></div>
                 :
                   <center>
                   {this.state.books.length != 0 && this.state.pages.length > 1 ?
-                  <center>{this.state.actualPage != 0 ? <span><a class="btn btn-primary" href={"/books/all/0/"+this.state.showMode}><b>{String("<<")}</b></a><a style={{margin:"5px"}} class="btn btn-primary" href={"/books/all/"+parseInt(this.state.actualPage-1)+"/"+this.state.showMode}><b>{String("<")}</b></a></span> : <p></p>}
+                  <center><br></br>{this.state.actualPage != 0 ? <span><a class="btn btn-primary" href={"/books/all/0/"+this.state.showMode}><b>{String("<<")}</b></a><a style={{margin:"5px"}} class="btn btn-primary" href={"/books/all/"+parseInt(this.state.actualPage-1)+"/"+this.state.showMode}><b>{String("<")}</b></a></span> : <p></p>}
                   {this.state.pages.map((page) => {
                     return(
                       

@@ -3,6 +3,7 @@ import bookService from "../services/Book";
 import userService from "../services/User";
 import userFavouriteBook from "../services/UserFavouriteBook";
 import "./Get.css";
+import "./Images.css";
 
 export default class Get extends Component {
 
@@ -16,7 +17,8 @@ export default class Get extends Component {
             alreadyRequest:"",
             hasRequestAccepted:"",
             images:[],
-            urlImages: []
+            urlImages: [],
+            hasMoreImages: ""
         }
     }
 
@@ -27,7 +29,7 @@ export default class Get extends Component {
         const username = await userService.getUsername()
                           
         this.setState({book:b.book, username:username.username, genres:b.book.genres, isAdded:b.isAdded, alreadyRequest:b.alreadyRequest, 
-          hasRequestAccepted:b.hasRequestAccepted, images: b.images, urlImages: b.urlImages})
+          hasRequestAccepted:b.hasRequestAccepted, images: b.images, urlImages: b.urlImages, hasMoreImages: b.hasMoreImages})
     }
 
     render() {
@@ -68,6 +70,7 @@ export default class Get extends Component {
           <p class="page__content-credits">
             Géneros
             <span>{this.state.genres.replaceAll("_", " ").replaceAll(",", ", ")}</span>
+            
           </p>
 
           <p class="page__content-credits">
@@ -95,6 +98,7 @@ export default class Get extends Component {
 
           <div class="page__content-copyright">
             <p>Publicado por {this.state.book.username}</p>
+            <i class="fa fa-arrow-circle-right fa-2x" style={{float: "right"}}></i><p style={{float:"right"}}>Ver descripción .</p>
           </div>
         </div>
       </div>
@@ -110,30 +114,32 @@ export default class Get extends Component {
       </div>
     </label></div>
     </div>
-    <center>
-    <br></br>
-    <h2>Todas las imágenes</h2>
-    <div style={{backgroundImage:"https://i.pinimg.com/originals/8d/23/06/8d2306b98839234e49ce96a8b76e20ae.jpg"}}>
-    {this.state.images.map((image, i) => {
-      return(
-        <div>
-        <ul class="galeria">
-      <li><a href={String("#img"+i)}><img src={image.urlImage}/></a></li>
-    </ul>
-    <div class="modal" id={String("img"+i)}>
-      <h3>{image.fileName}</h3>
-      <div class="imagen">
-        <a href={i <= 0 ? '#img'+String(this.state.images.length-1) : '#img'+String(i-1)}>{String("<")}</a>
-        <a href={"#img"+i}><img src={image.urlImage}/></a>
-        <a href={i >= this.state.images.length-1 ? '#img0' : '#img'+String(i+1)}>{String(">")}</a>
+      <center>
+      <br></br>
+      <br></br>
+      <h2><b>Todas las imágenes</b></h2>
+      <div class="allImages">
+      {this.state.images.map((image, i) => {
+        return(
+        <center>
+          <ul class="galeria">
+            <li><a href={String("#img"+i)}><img src={image.urlImage}/></a></li>
+          </ul>
+          <div class="modal" id={String("img"+i)}>
+            <br></br><br></br><br></br>
+            <div class="imagen">
+              <a href={i <= 0 ? '#img'+String(this.state.images.length-1) : '#img'+String(i-1)}>{String("<")}</a>
+              <a href={"#img"+i}><img src={image.urlImage}/></a>
+              <a href={i >= this.state.images.length-1 ? '#img0' : '#img'+String(i+1)}>{String(">")}</a>
+            </div>
+            <a class="cerrar" href="">x</a>
+          </div>
+        </center>
+        )
+      })}  
       </div>
-      <a class="cerrar" href="">x</a>
-    </div>
-    </div>
-      )
-    })}  
-    </div></center>
-    <hr></hr>
+      <hr></hr></center>
+  
     <center>{this.state.username == this.state.book.username ? 
       <center><br></br><button style={{backgroundImage:"url(https://i.pinimg.com/originals/8d/23/06/8d2306b98839234e49ce96a8b76e20ae.jpg)", margin:"10px", color:"black"}} 
       onClick={() => this.goToEdit(this.state.book.id)} class="btn btn-primary" disabled={this.state.hasRequestAccepted == true}><b>Editar</b></button>
