@@ -12,7 +12,8 @@ export default class List extends Component {
       pages:[],
       actualPage:0,
       numTotalPages:0,
-      isAdded:[]
+      isAdded:[],
+      images: []
     }
   }
     
@@ -20,7 +21,8 @@ export default class List extends Component {
     const page = this.props.match.params.page;
     const res = await bookService.recommendBooks(page)
 
-    this.setState({books:res.books, pages:res.pages, actualPage:parseInt(page), numTotalPages:parseInt(res.numTotalPages), isAdded:res.isAdded})
+    this.setState({books:res.books, pages:res.pages, actualPage:parseInt(page), numTotalPages:parseInt(res.numTotalPages), isAdded:res.isAdded,
+    images: res.urlImages})
   }
 
     render() {
@@ -57,7 +59,7 @@ export default class List extends Component {
                       <div class="book-card__cover">
                         <div class="book-card__book">
                           <div class="book-card__book-front">
-                            <a style={{zIndex:"-10"}}  href={"/books/"+book.id}><img class="book-card__img" src={book.image} /></a>
+                            <a style={{zIndex:"-10"}}  href={"/books/"+book.id}><img class="book-card__img" src={this.state.images[i]} /></a>
                           </div>
                           <div class="book-card__book-back"></div>
                           <div class="book-card__book-side"></div>

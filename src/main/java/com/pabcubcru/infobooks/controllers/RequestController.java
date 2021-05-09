@@ -11,6 +11,7 @@ import java.util.stream.IntStream;
 import javax.validation.Valid;
 
 import com.pabcubcru.infobooks.models.Book;
+import com.pabcubcru.infobooks.models.Image;
 import com.pabcubcru.infobooks.models.Request;
 import com.pabcubcru.infobooks.models.RequestStatus;
 import com.pabcubcru.infobooks.models.User;
@@ -106,8 +107,20 @@ public class RequestController {
             res.put("errors", result.getAllErrors());
             res.put("success", false);
         }
-
         return res;
+    }
+
+    public List<List<String>> getUrlsImagesFromBooks(List<Book> books) {
+        List<List<String>> allBookImages = new ArrayList<>();
+        for(Book b : books) {
+            List<String> urlImages = new ArrayList<>();
+            List<Image> images = this.bookService.findImagesByIdBook(b.getId());
+            for(Image image : images) {
+                urlImages.add(image.getUrlImage());
+            }
+            allBookImages.add(urlImages);
+        }
+        return allBookImages;
     }
 
     @GetMapping("/my-requests")
@@ -138,6 +151,12 @@ public class RequestController {
         res.put("books1", books1);
         res.put("books2", books2);
         res.put("users", users);
+
+        List<List<String>> allBookImages = this.getUrlsImagesFromBooks(books1);
+        res.put("urlsBooks1", allBookImages);
+
+        allBookImages = this.getUrlsImagesFromBooks(books2);
+        res.put("urlsBooks2", allBookImages);
 
         Integer numberOfPages = pageOfRequests.getTotalPages();
         res.put("numTotalPages", numberOfPages);
@@ -178,6 +197,12 @@ public class RequestController {
         res.put("books1", books1);
         res.put("books2", books2);
         res.put("users", users);
+
+        List<List<String>> allBookImages = this.getUrlsImagesFromBooks(books1);
+        res.put("urlsBooks1", allBookImages);
+
+        allBookImages = this.getUrlsImagesFromBooks(books2);
+        res.put("urlsBooks2", allBookImages);
 
         Integer numberOfPages = pageOfRequests.getTotalPages();
         res.put("numTotalPages", numberOfPages);

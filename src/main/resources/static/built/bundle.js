@@ -2415,6 +2415,31 @@ ___CSS_LOADER_EXPORT___.push([module.i, ".menu, .menu ul, .menu li, .menu a {\r\
 
 /***/ }),
 
+/***/ "./node_modules/css-loader/dist/cjs.js!./src/main/resources/js/components/book/Create.css":
+/*!************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js!./src/main/resources/js/components/book/Create.css ***!
+  \************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../../../../node_modules/css-loader/dist/runtime/cssWithMappingToString.js */ "./node_modules/css-loader/dist/runtime/cssWithMappingToString.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);
+// Imports
+
+
+var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()(_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0___default.a);
+// Module
+___CSS_LOADER_EXPORT___.push([module.i, "a.dfn-hover {\r\n\tcolor: #333;\r\n\ttext-decoration: none;\r\n}\r\n\r\n/** Code for hover info **/\r\n\r\ndfn {\r\n  background: #e9e9e9;\r\n  border-bottom: dashed 1px rgba(0,0,0,0.8);\r\n  padding: 0 0.4em;\r\n  cursor: help;\r\n  font-style: normal;\r\n  position: relative;\r\n  \r\n}\r\ndfn::after {\r\n  content: attr(data-info);\r\n  display: inline;\r\n  position: absolute;\r\n  top: 22px; left: 0;\r\n  opacity: 0;\r\n  width: 230px;\r\n  font-size: 13px;\r\n  font-weight: 700;\r\n  line-height: 1.5em;\r\n  padding: 0.5em 0.8em;\r\n  background: rgba(0,0,0,0.8);\r\n  color: #fff;\r\n  pointer-events: none; /* This prevents the box from apearing when hovered. */\r\n  transition: opacity 250ms, top 250ms;\r\n}\r\ndfn::before {\r\n  content: '';\r\n  display: block;\r\n  position: absolute;\r\n  top: 12px; left: 20px;\r\n  opacity: 0;\r\n  width: 0; height: 0;\r\n  border: solid transparent 5px;\r\n  border-bottom-color: rgba(0,0,0,0.8);\r\n  transition: opacity 250ms, top 250ms;\r\n}\r\ndfn:hover {z-index: 2;} /* Keeps the info boxes on top of other elements */\r\ndfn:hover::after,\r\ndfn:hover::before {opacity: 1;}\r\ndfn:hover::after {top: 30px;}\r\ndfn:hover::before {top: 20px;}", "",{"version":3,"sources":["webpack://./src/main/resources/js/components/book/Create.css"],"names":[],"mappings":"AAAA;CACC,WAAW;CACX,qBAAqB;AACtB;;AAEA,0BAA0B;;AAE1B;EACE,mBAAmB;EACnB,yCAAyC;EACzC,gBAAgB;EAChB,YAAY;EACZ,kBAAkB;EAClB,kBAAkB;;AAEpB;AACA;EACE,wBAAwB;EACxB,eAAe;EACf,kBAAkB;EAClB,SAAS,EAAE,OAAO;EAClB,UAAU;EACV,YAAY;EACZ,eAAe;EACf,gBAAgB;EAChB,kBAAkB;EAClB,oBAAoB;EACpB,2BAA2B;EAC3B,WAAW;EACX,oBAAoB,EAAE,sDAAsD;EAC5E,oCAAoC;AACtC;AACA;EACE,WAAW;EACX,cAAc;EACd,kBAAkB;EAClB,SAAS,EAAE,UAAU;EACrB,UAAU;EACV,QAAQ,EAAE,SAAS;EACnB,6BAA6B;EAC7B,oCAAoC;EACpC,oCAAoC;AACtC;AACA,WAAW,UAAU,CAAC,EAAE,kDAAkD;AAC1E;mBACmB,UAAU,CAAC;AAC9B,kBAAkB,SAAS,CAAC;AAC5B,mBAAmB,SAAS,CAAC","sourcesContent":["a.dfn-hover {\r\n\tcolor: #333;\r\n\ttext-decoration: none;\r\n}\r\n\r\n/** Code for hover info **/\r\n\r\ndfn {\r\n  background: #e9e9e9;\r\n  border-bottom: dashed 1px rgba(0,0,0,0.8);\r\n  padding: 0 0.4em;\r\n  cursor: help;\r\n  font-style: normal;\r\n  position: relative;\r\n  \r\n}\r\ndfn::after {\r\n  content: attr(data-info);\r\n  display: inline;\r\n  position: absolute;\r\n  top: 22px; left: 0;\r\n  opacity: 0;\r\n  width: 230px;\r\n  font-size: 13px;\r\n  font-weight: 700;\r\n  line-height: 1.5em;\r\n  padding: 0.5em 0.8em;\r\n  background: rgba(0,0,0,0.8);\r\n  color: #fff;\r\n  pointer-events: none; /* This prevents the box from apearing when hovered. */\r\n  transition: opacity 250ms, top 250ms;\r\n}\r\ndfn::before {\r\n  content: '';\r\n  display: block;\r\n  position: absolute;\r\n  top: 12px; left: 20px;\r\n  opacity: 0;\r\n  width: 0; height: 0;\r\n  border: solid transparent 5px;\r\n  border-bottom-color: rgba(0,0,0,0.8);\r\n  transition: opacity 250ms, top 250ms;\r\n}\r\ndfn:hover {z-index: 2;} /* Keeps the info boxes on top of other elements */\r\ndfn:hover::after,\r\ndfn:hover::before {opacity: 1;}\r\ndfn:hover::after {top: 30px;}\r\ndfn:hover::before {top: 20px;}"],"sourceRoot":""}]);
+// Exports
+/* harmony default export */ __webpack_exports__["default"] = (___CSS_LOADER_EXPORT___);
+
+
+/***/ }),
+
 /***/ "./node_modules/css-loader/dist/cjs.js!./src/main/resources/js/components/book/Get.css":
 /*!*********************************************************************************************!*\
   !*** ./node_modules/css-loader/dist/cjs.js!./src/main/resources/js/components/book/Get.css ***!
@@ -2434,7 +2459,32 @@ __webpack_require__.r(__webpack_exports__);
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()(_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0___default.a);
 ___CSS_LOADER_EXPORT___.push([module.i, "@import url(https://fonts.googleapis.com/css?family=Cormorant+Garamond:300,400,600|Tulpen+One&display=swap);"]);
 // Module
-___CSS_LOADER_EXPORT___.push([module.i, ":root {\r\n  /* colors */\r\n  --body-bg: #FAFAFA;\r\n  --page-bg: #F5F5F5;\r\n  --dark-text: #2A2935;\r\n  /* spacing */\r\n  /* this is what defines the global scale */\r\n  --baseline: 12px;\r\n  /* fonts */\r\n  --book-title: \"Tulpen One\", sans-serif;\r\n  --title: \"Cormorant Garamond\", serif;\r\n  --body: \"Cormorant Garamond\", serif;\r\n  --base-size: var(--baseline) * 1.2;\r\n}\r\n\r\n* {\r\n  box-sizing: border-box;\r\n}\r\n\r\n.cover {\r\n  width: 100%;\r\n  height: 200%;\r\n  box-shadow: 0 0 100px rgba(0, 0, 0, 0.3);\r\n}\r\n\r\n.book {\r\n  width: 100%;\r\n  height: 800px;\r\n  display: flex;\r\n  perspective: 1200px;\r\n\r\n}\r\n.book__page {\r\n  position: relative;\r\n  width: 50%;\r\n  height: 100%;\r\n  display: grid;\r\n  transform: rotateY(0deg);\r\n  transition: transform 0.9s cubic-bezier(0.645, 0.045, 0.355, 1);\r\n  transform-origin: 0% 0%;\r\n  border-radius: 5px;\r\n  background-image: url(https://i.pinimg.com/originals/8d/23/06/8d2306b98839234e49ce96a8b76e20ae.jpg);\r\n}\r\n.book__page:nth-of-type(1) {\r\n  background-image: url(https://i.pinimg.com/originals/8d/23/06/8d2306b98839234e49ce96a8b76e20ae.jpg);\r\n}\r\n.book__page--1 {\r\n  cursor: pointer;\r\n  overflow: hidden;\r\n}\r\n.book__page--1 img {\r\n  height: 800px;\r\n  width: 100%;\r\n}\r\n.book__page--4 {\r\n  cursor: pointer;\r\n  overflow: hidden;\r\n}\r\n.book__page--4 img {\r\n  height: 800px;\r\n  width: 100%;\r\n}\r\n.book__page--2 {\r\n  position: absolute;\r\n  right: 0;\r\n  pointer-events: none;\r\n  transform-style: preserve-3d;\r\n  background-image: url(https://i.pinimg.com/originals/8d/23/06/8d2306b98839234e49ce96a8b76e20ae.jpg);\r\n}\r\n.book__page-front {\r\n  position: absolute;\r\n  width: 100%;\r\n  height: 100%;\r\n  transform: rotateY(0deg) translateZ(1px);\r\n}\r\n.book__page-back {\r\n  position: absolute;\r\n  width: 100%;\r\n  height: 100%;\r\n  padding: 0 calc(var(--baseline) * 1.8);\r\n  transform: rotateY(180deg) translateZ(1px);\r\n}\r\n.book__page-back img {\r\n  width: 100%;\r\n  max-width: 100%;\r\n  height: 800px;\r\n}\r\n.book__page .page__content {\r\n  padding: var(--baseline);\r\n  height: 100%;\r\n  position: relative;\r\n  text-align: center;\r\n}\r\n.book__page .page__content-book-title {\r\n  font-family: var(--book-title);\r\n  font-size: calc(var(--base-size) * 3);\r\n  font-weight: bold;\r\n  text-transform: uppercase;\r\n  letter-spacing: 3px;\r\n  color: var(--dark-text);\r\n  margin-top: calc(var(--baseline) * 3);\r\n  margin-bottom: calc(var(--baseline) * 2);\r\n}\r\n.book__page .page__content-author {\r\n  font-family: var(--title);\r\n  font-size: calc(var(--base-size) * 1.2);\r\n  font-weight: 100;\r\n  text-transform: uppercase;\r\n  color: var(--dark-text);\r\n  border-top: 1px solid var(--dark-text);\r\n  border-bottom: 1px solid var(--dark-text);\r\n  display: inline-block;\r\n  padding: calc(var(--baseline) / 2) calc(var(--baseline) / 5);\r\n  margin-bottom: calc(var(--baseline) *3);\r\n}\r\n.book__page .page__content-credits {\r\n  font-family: var(--title);\r\n  text-transform: uppercase;\r\n  font-size: calc(var(--base-size) * 0.8);\r\n  margin-bottom: calc(var(--baseline) * 1.5);\r\n  letter-spacing: 1px;\r\n  font-weight: bold;\r\n}\r\n.book__page .page__content-credits span {\r\n  display: block;\r\n  font-size: calc(var(--base-size) * 1.2);\r\n  letter-spacing: 0;\r\n}\r\n.book__page .page__content-copyright {\r\n  position: absolute;\r\n  width: calc(100% - (var(--baseline) * 2));\r\n  bottom: calc(var(--baseline) * 2);\r\n  font-family: var(--title);\r\n  font-size: calc(var(--base-size) * 0.8);\r\n  text-transform: uppercase;\r\n  font-weight: bold;\r\n}\r\n.book__page .page__content-title {\r\n  font-family: var(--title);\r\n  font-size: calc(var(--base-size) * 2);\r\n  text-transform: uppercase;\r\n  letter-spacing: 1px;\r\n  margin-top: calc(var(--baseline) * 2);\r\n  margin-bottom: calc(var(--baseline)*1.5);\r\n}\r\n.book__page .page__content-table {\r\n  width: 100%;\r\n  margin-top: calc(var(--baseline) * 2);\r\n}\r\n.book__page .page__content-table td {\r\n  font-family: var(--title);\r\n  font-size: calc(var(--base-size) * 1);\r\n  padding-bottom: calc(var(--baseline) * 1.5);\r\n  text-transform: uppercase;\r\n}\r\n.book__page .page__content-blockquote {\r\n  margin-bottom: calc(var(--baseline) * 2);\r\n}\r\n.book__page .page__content-blockquote-text {\r\n  font-family: var(--title);\r\n  font-size: calc(var(--base-size) * 1.2);\r\n  font-style: italic;\r\n  text-align: justify;\r\n  font-weight: bold;\r\n}\r\n.book__page .page__content-blockquote-reference {\r\n  font-family: var(--title);\r\n  font-size: calc(var(--base-size) * 0.7);\r\n  margin-top: calc(var(--baseline) * 0.3);\r\n  float: right;\r\n  text-transform: uppercase;\r\n}\r\n.book__page .page__content-text {\r\n  font-family: var(--title);\r\n  font-size: calc(var(--base-size));\r\n  text-align: justify;\r\n  text-indent: var(--baseline);\r\n}\r\n.book__page .page__number {\r\n  position: absolute;\r\n  bottom: var(--baseline);\r\n  width: calc(100% - (var(--baseline) * 2));\r\n  font-family: var(--title);\r\n  font-size: calc(var(--base-size));\r\n  text-align: center;\r\n}\r\n.book input[type=radio] {\r\n  display: none;\r\n}\r\n.book input[type=radio]:checked + .book__page {\r\n  transition: transform 0.9s cubic-bezier(0.645, 0.045, 0.355, 1);\r\n  transform: rotateY(-180deg);\r\n}", "",{"version":3,"sources":["webpack://./src/main/resources/js/components/book/Get.css"],"names":[],"mappings":"AACA;EACE,WAAW;EACX,kBAAkB;EAClB,kBAAkB;EAClB,oBAAoB;EACpB,YAAY;EACZ,0CAA0C;EAC1C,gBAAgB;EAChB,UAAU;EACV,sCAAsC;EACtC,oCAAoC;EACpC,mCAAmC;EACnC,kCAAkC;AACpC;;AAEA;EACE,sBAAsB;AACxB;;AAEA;EACE,WAAW;EACX,YAAY;EACZ,wCAAwC;AAC1C;;AAEA;EACE,WAAW;EACX,aAAa;EACb,aAAa;EACb,mBAAmB;;AAErB;AACA;EACE,kBAAkB;EAClB,UAAU;EACV,YAAY;EACZ,aAAa;EACb,wBAAwB;EACxB,+DAA+D;EAC/D,uBAAuB;EACvB,kBAAkB;EAClB,mGAAmG;AACrG;AACA;EACE,mGAAmG;AACrG;AACA;EACE,eAAe;EACf,gBAAgB;AAClB;AACA;EACE,aAAa;EACb,WAAW;AACb;AACA;EACE,eAAe;EACf,gBAAgB;AAClB;AACA;EACE,aAAa;EACb,WAAW;AACb;AACA;EACE,kBAAkB;EAClB,QAAQ;EACR,oBAAoB;EACpB,4BAA4B;EAC5B,mGAAmG;AACrG;AACA;EACE,kBAAkB;EAClB,WAAW;EACX,YAAY;EACZ,wCAAwC;AAC1C;AACA;EACE,kBAAkB;EAClB,WAAW;EACX,YAAY;EACZ,sCAAsC;EACtC,0CAA0C;AAC5C;AACA;EACE,WAAW;EACX,eAAe;EACf,aAAa;AACf;AACA;EACE,wBAAwB;EACxB,YAAY;EACZ,kBAAkB;EAClB,kBAAkB;AACpB;AACA;EACE,8BAA8B;EAC9B,qCAAqC;EACrC,iBAAiB;EACjB,yBAAyB;EACzB,mBAAmB;EACnB,uBAAuB;EACvB,qCAAqC;EACrC,wCAAwC;AAC1C;AACA;EACE,yBAAyB;EACzB,uCAAuC;EACvC,gBAAgB;EAChB,yBAAyB;EACzB,uBAAuB;EACvB,sCAAsC;EACtC,yCAAyC;EACzC,qBAAqB;EACrB,4DAA4D;EAC5D,uCAAuC;AACzC;AACA;EACE,yBAAyB;EACzB,yBAAyB;EACzB,uCAAuC;EACvC,0CAA0C;EAC1C,mBAAmB;EACnB,iBAAiB;AACnB;AACA;EACE,cAAc;EACd,uCAAuC;EACvC,iBAAiB;AACnB;AACA;EACE,kBAAkB;EAClB,yCAAyC;EACzC,iCAAiC;EACjC,yBAAyB;EACzB,uCAAuC;EACvC,yBAAyB;EACzB,iBAAiB;AACnB;AACA;EACE,yBAAyB;EACzB,qCAAqC;EACrC,yBAAyB;EACzB,mBAAmB;EACnB,qCAAqC;EACrC,wCAAwC;AAC1C;AACA;EACE,WAAW;EACX,qCAAqC;AACvC;AACA;EACE,yBAAyB;EACzB,qCAAqC;EACrC,2CAA2C;EAC3C,yBAAyB;AAC3B;AACA;EACE,wCAAwC;AAC1C;AACA;EACE,yBAAyB;EACzB,uCAAuC;EACvC,kBAAkB;EAClB,mBAAmB;EACnB,iBAAiB;AACnB;AACA;EACE,yBAAyB;EACzB,uCAAuC;EACvC,uCAAuC;EACvC,YAAY;EACZ,yBAAyB;AAC3B;AACA;EACE,yBAAyB;EACzB,iCAAiC;EACjC,mBAAmB;EACnB,4BAA4B;AAC9B;AACA;EACE,kBAAkB;EAClB,uBAAuB;EACvB,yCAAyC;EACzC,yBAAyB;EACzB,iCAAiC;EACjC,kBAAkB;AACpB;AACA;EACE,aAAa;AACf;AACA;EACE,+DAA+D;EAC/D,2BAA2B;AAC7B","sourcesContent":["@import url(\"https://fonts.googleapis.com/css?family=Cormorant+Garamond:300,400,600|Tulpen+One&display=swap\");\r\n:root {\r\n  /* colors */\r\n  --body-bg: #FAFAFA;\r\n  --page-bg: #F5F5F5;\r\n  --dark-text: #2A2935;\r\n  /* spacing */\r\n  /* this is what defines the global scale */\r\n  --baseline: 12px;\r\n  /* fonts */\r\n  --book-title: \"Tulpen One\", sans-serif;\r\n  --title: \"Cormorant Garamond\", serif;\r\n  --body: \"Cormorant Garamond\", serif;\r\n  --base-size: var(--baseline) * 1.2;\r\n}\r\n\r\n* {\r\n  box-sizing: border-box;\r\n}\r\n\r\n.cover {\r\n  width: 100%;\r\n  height: 200%;\r\n  box-shadow: 0 0 100px rgba(0, 0, 0, 0.3);\r\n}\r\n\r\n.book {\r\n  width: 100%;\r\n  height: 800px;\r\n  display: flex;\r\n  perspective: 1200px;\r\n\r\n}\r\n.book__page {\r\n  position: relative;\r\n  width: 50%;\r\n  height: 100%;\r\n  display: grid;\r\n  transform: rotateY(0deg);\r\n  transition: transform 0.9s cubic-bezier(0.645, 0.045, 0.355, 1);\r\n  transform-origin: 0% 0%;\r\n  border-radius: 5px;\r\n  background-image: url(https://i.pinimg.com/originals/8d/23/06/8d2306b98839234e49ce96a8b76e20ae.jpg);\r\n}\r\n.book__page:nth-of-type(1) {\r\n  background-image: url(https://i.pinimg.com/originals/8d/23/06/8d2306b98839234e49ce96a8b76e20ae.jpg);\r\n}\r\n.book__page--1 {\r\n  cursor: pointer;\r\n  overflow: hidden;\r\n}\r\n.book__page--1 img {\r\n  height: 800px;\r\n  width: 100%;\r\n}\r\n.book__page--4 {\r\n  cursor: pointer;\r\n  overflow: hidden;\r\n}\r\n.book__page--4 img {\r\n  height: 800px;\r\n  width: 100%;\r\n}\r\n.book__page--2 {\r\n  position: absolute;\r\n  right: 0;\r\n  pointer-events: none;\r\n  transform-style: preserve-3d;\r\n  background-image: url(https://i.pinimg.com/originals/8d/23/06/8d2306b98839234e49ce96a8b76e20ae.jpg);\r\n}\r\n.book__page-front {\r\n  position: absolute;\r\n  width: 100%;\r\n  height: 100%;\r\n  transform: rotateY(0deg) translateZ(1px);\r\n}\r\n.book__page-back {\r\n  position: absolute;\r\n  width: 100%;\r\n  height: 100%;\r\n  padding: 0 calc(var(--baseline) * 1.8);\r\n  transform: rotateY(180deg) translateZ(1px);\r\n}\r\n.book__page-back img {\r\n  width: 100%;\r\n  max-width: 100%;\r\n  height: 800px;\r\n}\r\n.book__page .page__content {\r\n  padding: var(--baseline);\r\n  height: 100%;\r\n  position: relative;\r\n  text-align: center;\r\n}\r\n.book__page .page__content-book-title {\r\n  font-family: var(--book-title);\r\n  font-size: calc(var(--base-size) * 3);\r\n  font-weight: bold;\r\n  text-transform: uppercase;\r\n  letter-spacing: 3px;\r\n  color: var(--dark-text);\r\n  margin-top: calc(var(--baseline) * 3);\r\n  margin-bottom: calc(var(--baseline) * 2);\r\n}\r\n.book__page .page__content-author {\r\n  font-family: var(--title);\r\n  font-size: calc(var(--base-size) * 1.2);\r\n  font-weight: 100;\r\n  text-transform: uppercase;\r\n  color: var(--dark-text);\r\n  border-top: 1px solid var(--dark-text);\r\n  border-bottom: 1px solid var(--dark-text);\r\n  display: inline-block;\r\n  padding: calc(var(--baseline) / 2) calc(var(--baseline) / 5);\r\n  margin-bottom: calc(var(--baseline) *3);\r\n}\r\n.book__page .page__content-credits {\r\n  font-family: var(--title);\r\n  text-transform: uppercase;\r\n  font-size: calc(var(--base-size) * 0.8);\r\n  margin-bottom: calc(var(--baseline) * 1.5);\r\n  letter-spacing: 1px;\r\n  font-weight: bold;\r\n}\r\n.book__page .page__content-credits span {\r\n  display: block;\r\n  font-size: calc(var(--base-size) * 1.2);\r\n  letter-spacing: 0;\r\n}\r\n.book__page .page__content-copyright {\r\n  position: absolute;\r\n  width: calc(100% - (var(--baseline) * 2));\r\n  bottom: calc(var(--baseline) * 2);\r\n  font-family: var(--title);\r\n  font-size: calc(var(--base-size) * 0.8);\r\n  text-transform: uppercase;\r\n  font-weight: bold;\r\n}\r\n.book__page .page__content-title {\r\n  font-family: var(--title);\r\n  font-size: calc(var(--base-size) * 2);\r\n  text-transform: uppercase;\r\n  letter-spacing: 1px;\r\n  margin-top: calc(var(--baseline) * 2);\r\n  margin-bottom: calc(var(--baseline)*1.5);\r\n}\r\n.book__page .page__content-table {\r\n  width: 100%;\r\n  margin-top: calc(var(--baseline) * 2);\r\n}\r\n.book__page .page__content-table td {\r\n  font-family: var(--title);\r\n  font-size: calc(var(--base-size) * 1);\r\n  padding-bottom: calc(var(--baseline) * 1.5);\r\n  text-transform: uppercase;\r\n}\r\n.book__page .page__content-blockquote {\r\n  margin-bottom: calc(var(--baseline) * 2);\r\n}\r\n.book__page .page__content-blockquote-text {\r\n  font-family: var(--title);\r\n  font-size: calc(var(--base-size) * 1.2);\r\n  font-style: italic;\r\n  text-align: justify;\r\n  font-weight: bold;\r\n}\r\n.book__page .page__content-blockquote-reference {\r\n  font-family: var(--title);\r\n  font-size: calc(var(--base-size) * 0.7);\r\n  margin-top: calc(var(--baseline) * 0.3);\r\n  float: right;\r\n  text-transform: uppercase;\r\n}\r\n.book__page .page__content-text {\r\n  font-family: var(--title);\r\n  font-size: calc(var(--base-size));\r\n  text-align: justify;\r\n  text-indent: var(--baseline);\r\n}\r\n.book__page .page__number {\r\n  position: absolute;\r\n  bottom: var(--baseline);\r\n  width: calc(100% - (var(--baseline) * 2));\r\n  font-family: var(--title);\r\n  font-size: calc(var(--base-size));\r\n  text-align: center;\r\n}\r\n.book input[type=radio] {\r\n  display: none;\r\n}\r\n.book input[type=radio]:checked + .book__page {\r\n  transition: transform 0.9s cubic-bezier(0.645, 0.045, 0.355, 1);\r\n  transform: rotateY(-180deg);\r\n}"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.i, ":root {\r\n  /* colors */\r\n  --body-bg: #FAFAFA;\r\n  --page-bg: #F5F5F5;\r\n  --dark-text: #2A2935;\r\n  /* spacing */\r\n  /* this is what defines the global scale */\r\n  --baseline: 12px;\r\n  /* fonts */\r\n  --book-title: \"Tulpen One\", sans-serif;\r\n  --title: \"Cormorant Garamond\", serif;\r\n  --body: \"Cormorant Garamond\", serif;\r\n  --base-size: var(--baseline) * 1.2;\r\n}\r\n\r\n* {\r\n  box-sizing: border-box;\r\n}\r\n\r\n.cover {\r\n  width: 100%;\r\n  height: 200%;\r\n  box-shadow: 0 0 100px rgba(0, 0, 0, 0.3);\r\n}\r\n\r\n.book {\r\n  width: 100%;\r\n  height: 800px;\r\n  display: flex;\r\n  perspective: 1200px;\r\n\r\n}\r\n.book__page {\r\n  position: relative;\r\n  width: 50%;\r\n  height: 100%;\r\n  display: grid;\r\n  transform: rotateY(0deg);\r\n  transition: transform 0.9s cubic-bezier(0.645, 0.045, 0.355, 1);\r\n  transform-origin: 0% 0%;\r\n  border-radius: 5px;\r\n  background-image: url(https://i.pinimg.com/originals/8d/23/06/8d2306b98839234e49ce96a8b76e20ae.jpg);\r\n}\r\n.book__page:nth-of-type(1) {\r\n  background-image: url(https://i.pinimg.com/originals/8d/23/06/8d2306b98839234e49ce96a8b76e20ae.jpg);\r\n}\r\n.book__page--1 {\r\n  cursor: pointer;\r\n  overflow: hidden;\r\n}\r\n.book__page--1 img {\r\n  height: 800px;\r\n  width: 100%;\r\n}\r\n.book__page--4 {\r\n  cursor: pointer;\r\n  overflow: hidden;\r\n}\r\n.book__page--4 img {\r\n  height: 800px;\r\n  width: 100%;\r\n}\r\n.book__page--2 {\r\n  position: absolute;\r\n  right: 0;\r\n  pointer-events: none;\r\n  transform-style: preserve-3d;\r\n  background-image: url(https://i.pinimg.com/originals/8d/23/06/8d2306b98839234e49ce96a8b76e20ae.jpg);\r\n}\r\n.book__page-front {\r\n  position: absolute;\r\n  width: 100%;\r\n  height: 100%;\r\n  transform: rotateY(0deg) translateZ(1px);\r\n}\r\n.book__page-back {\r\n  position: absolute;\r\n  width: 100%;\r\n  height: 100%;\r\n  padding: 0 calc(var(--baseline) * 1.8);\r\n  transform: rotateY(180deg) translateZ(1px);\r\n}\r\n.book__page-back img {\r\n  width: 100%;\r\n  max-width: 100%;\r\n  height: 800px;\r\n}\r\n.book__page .page__content {\r\n  padding: var(--baseline);\r\n  height: 100%;\r\n  position: relative;\r\n  text-align: center;\r\n}\r\n.book__page .page__content-book-title {\r\n  font-family: var(--book-title);\r\n  font-size: calc(var(--base-size) * 3);\r\n  font-weight: bold;\r\n  text-transform: uppercase;\r\n  letter-spacing: 3px;\r\n  color: var(--dark-text);\r\n  margin-top: calc(var(--baseline) * 3);\r\n  margin-bottom: calc(var(--baseline) * 2);\r\n}\r\n.book__page .page__content-author {\r\n  font-family: var(--title);\r\n  font-size: calc(var(--base-size) * 1.2);\r\n  font-weight: 100;\r\n  text-transform: uppercase;\r\n  color: var(--dark-text);\r\n  border-top: 1px solid var(--dark-text);\r\n  border-bottom: 1px solid var(--dark-text);\r\n  display: inline-block;\r\n  padding: calc(var(--baseline) / 2) calc(var(--baseline) / 5);\r\n  margin-bottom: calc(var(--baseline) *3);\r\n}\r\n.book__page .page__content-credits {\r\n  font-family: var(--title);\r\n  text-transform: uppercase;\r\n  font-size: calc(var(--base-size) * 0.8);\r\n  margin-bottom: calc(var(--baseline) * 1.5);\r\n  letter-spacing: 1px;\r\n  font-weight: bold;\r\n}\r\n.book__page .page__content-credits span {\r\n  display: block;\r\n  font-size: calc(var(--base-size) * 1.2);\r\n  letter-spacing: 0;\r\n}\r\n.book__page .page__content-copyright {\r\n  position: absolute;\r\n  width: calc(100% - (var(--baseline) * 2));\r\n  bottom: calc(var(--baseline) * 2);\r\n  font-family: var(--title);\r\n  font-size: calc(var(--base-size) * 0.8);\r\n  text-transform: uppercase;\r\n  font-weight: bold;\r\n}\r\n.book__page .page__content-title {\r\n  font-family: var(--title);\r\n  font-size: calc(var(--base-size) * 2);\r\n  text-transform: uppercase;\r\n  letter-spacing: 1px;\r\n  margin-top: calc(var(--baseline) * 2);\r\n  margin-bottom: calc(var(--baseline)*1.5);\r\n}\r\n.book__page .page__content-table {\r\n  width: 100%;\r\n  margin-top: calc(var(--baseline) * 2);\r\n}\r\n.book__page .page__content-table td {\r\n  font-family: var(--title);\r\n  font-size: calc(var(--base-size) * 1);\r\n  padding-bottom: calc(var(--baseline) * 1.5);\r\n  text-transform: uppercase;\r\n}\r\n.book__page .page__content-blockquote {\r\n  margin-bottom: calc(var(--baseline) * 2);\r\n}\r\n.book__page .page__content-blockquote-text {\r\n  font-family: var(--title);\r\n  font-size: calc(var(--base-size) * 1.2);\r\n  font-style: italic;\r\n  text-align: justify;\r\n  font-weight: bold;\r\n}\r\n.book__page .page__content-blockquote-reference {\r\n  font-family: var(--title);\r\n  font-size: calc(var(--base-size) * 0.7);\r\n  margin-top: calc(var(--baseline) * 0.3);\r\n  float: right;\r\n  text-transform: uppercase;\r\n}\r\n.book__page .page__content-text {\r\n  font-family: var(--title);\r\n  font-size: calc(var(--base-size));\r\n  text-align: justify;\r\n  text-indent: var(--baseline);\r\n}\r\n.book__page .page__number {\r\n  position: absolute;\r\n  bottom: var(--baseline);\r\n  width: calc(100% - (var(--baseline) * 2));\r\n  font-family: var(--title);\r\n  font-size: calc(var(--base-size));\r\n  text-align: center;\r\n}\r\n.book input[type=radio] {\r\n  display: none;\r\n}\r\n.book input[type=radio]:checked + .book__page {\r\n  transition: transform 0.9s cubic-bezier(0.645, 0.045, 0.355, 1);\r\n  transform: rotateY(-180deg);\r\n}\r\n\r\n", "",{"version":3,"sources":["webpack://./src/main/resources/js/components/book/Get.css"],"names":[],"mappings":"AACA;EACE,WAAW;EACX,kBAAkB;EAClB,kBAAkB;EAClB,oBAAoB;EACpB,YAAY;EACZ,0CAA0C;EAC1C,gBAAgB;EAChB,UAAU;EACV,sCAAsC;EACtC,oCAAoC;EACpC,mCAAmC;EACnC,kCAAkC;AACpC;;AAEA;EACE,sBAAsB;AACxB;;AAEA;EACE,WAAW;EACX,YAAY;EACZ,wCAAwC;AAC1C;;AAEA;EACE,WAAW;EACX,aAAa;EACb,aAAa;EACb,mBAAmB;;AAErB;AACA;EACE,kBAAkB;EAClB,UAAU;EACV,YAAY;EACZ,aAAa;EACb,wBAAwB;EACxB,+DAA+D;EAC/D,uBAAuB;EACvB,kBAAkB;EAClB,mGAAmG;AACrG;AACA;EACE,mGAAmG;AACrG;AACA;EACE,eAAe;EACf,gBAAgB;AAClB;AACA;EACE,aAAa;EACb,WAAW;AACb;AACA;EACE,eAAe;EACf,gBAAgB;AAClB;AACA;EACE,aAAa;EACb,WAAW;AACb;AACA;EACE,kBAAkB;EAClB,QAAQ;EACR,oBAAoB;EACpB,4BAA4B;EAC5B,mGAAmG;AACrG;AACA;EACE,kBAAkB;EAClB,WAAW;EACX,YAAY;EACZ,wCAAwC;AAC1C;AACA;EACE,kBAAkB;EAClB,WAAW;EACX,YAAY;EACZ,sCAAsC;EACtC,0CAA0C;AAC5C;AACA;EACE,WAAW;EACX,eAAe;EACf,aAAa;AACf;AACA;EACE,wBAAwB;EACxB,YAAY;EACZ,kBAAkB;EAClB,kBAAkB;AACpB;AACA;EACE,8BAA8B;EAC9B,qCAAqC;EACrC,iBAAiB;EACjB,yBAAyB;EACzB,mBAAmB;EACnB,uBAAuB;EACvB,qCAAqC;EACrC,wCAAwC;AAC1C;AACA;EACE,yBAAyB;EACzB,uCAAuC;EACvC,gBAAgB;EAChB,yBAAyB;EACzB,uBAAuB;EACvB,sCAAsC;EACtC,yCAAyC;EACzC,qBAAqB;EACrB,4DAA4D;EAC5D,uCAAuC;AACzC;AACA;EACE,yBAAyB;EACzB,yBAAyB;EACzB,uCAAuC;EACvC,0CAA0C;EAC1C,mBAAmB;EACnB,iBAAiB;AACnB;AACA;EACE,cAAc;EACd,uCAAuC;EACvC,iBAAiB;AACnB;AACA;EACE,kBAAkB;EAClB,yCAAyC;EACzC,iCAAiC;EACjC,yBAAyB;EACzB,uCAAuC;EACvC,yBAAyB;EACzB,iBAAiB;AACnB;AACA;EACE,yBAAyB;EACzB,qCAAqC;EACrC,yBAAyB;EACzB,mBAAmB;EACnB,qCAAqC;EACrC,wCAAwC;AAC1C;AACA;EACE,WAAW;EACX,qCAAqC;AACvC;AACA;EACE,yBAAyB;EACzB,qCAAqC;EACrC,2CAA2C;EAC3C,yBAAyB;AAC3B;AACA;EACE,wCAAwC;AAC1C;AACA;EACE,yBAAyB;EACzB,uCAAuC;EACvC,kBAAkB;EAClB,mBAAmB;EACnB,iBAAiB;AACnB;AACA;EACE,yBAAyB;EACzB,uCAAuC;EACvC,uCAAuC;EACvC,YAAY;EACZ,yBAAyB;AAC3B;AACA;EACE,yBAAyB;EACzB,iCAAiC;EACjC,mBAAmB;EACnB,4BAA4B;AAC9B;AACA;EACE,kBAAkB;EAClB,uBAAuB;EACvB,yCAAyC;EACzC,yBAAyB;EACzB,iCAAiC;EACjC,kBAAkB;AACpB;AACA;EACE,aAAa;AACf;AACA;EACE,+DAA+D;EAC/D,2BAA2B;AAC7B","sourcesContent":["@import url(\"https://fonts.googleapis.com/css?family=Cormorant+Garamond:300,400,600|Tulpen+One&display=swap\");\r\n:root {\r\n  /* colors */\r\n  --body-bg: #FAFAFA;\r\n  --page-bg: #F5F5F5;\r\n  --dark-text: #2A2935;\r\n  /* spacing */\r\n  /* this is what defines the global scale */\r\n  --baseline: 12px;\r\n  /* fonts */\r\n  --book-title: \"Tulpen One\", sans-serif;\r\n  --title: \"Cormorant Garamond\", serif;\r\n  --body: \"Cormorant Garamond\", serif;\r\n  --base-size: var(--baseline) * 1.2;\r\n}\r\n\r\n* {\r\n  box-sizing: border-box;\r\n}\r\n\r\n.cover {\r\n  width: 100%;\r\n  height: 200%;\r\n  box-shadow: 0 0 100px rgba(0, 0, 0, 0.3);\r\n}\r\n\r\n.book {\r\n  width: 100%;\r\n  height: 800px;\r\n  display: flex;\r\n  perspective: 1200px;\r\n\r\n}\r\n.book__page {\r\n  position: relative;\r\n  width: 50%;\r\n  height: 100%;\r\n  display: grid;\r\n  transform: rotateY(0deg);\r\n  transition: transform 0.9s cubic-bezier(0.645, 0.045, 0.355, 1);\r\n  transform-origin: 0% 0%;\r\n  border-radius: 5px;\r\n  background-image: url(https://i.pinimg.com/originals/8d/23/06/8d2306b98839234e49ce96a8b76e20ae.jpg);\r\n}\r\n.book__page:nth-of-type(1) {\r\n  background-image: url(https://i.pinimg.com/originals/8d/23/06/8d2306b98839234e49ce96a8b76e20ae.jpg);\r\n}\r\n.book__page--1 {\r\n  cursor: pointer;\r\n  overflow: hidden;\r\n}\r\n.book__page--1 img {\r\n  height: 800px;\r\n  width: 100%;\r\n}\r\n.book__page--4 {\r\n  cursor: pointer;\r\n  overflow: hidden;\r\n}\r\n.book__page--4 img {\r\n  height: 800px;\r\n  width: 100%;\r\n}\r\n.book__page--2 {\r\n  position: absolute;\r\n  right: 0;\r\n  pointer-events: none;\r\n  transform-style: preserve-3d;\r\n  background-image: url(https://i.pinimg.com/originals/8d/23/06/8d2306b98839234e49ce96a8b76e20ae.jpg);\r\n}\r\n.book__page-front {\r\n  position: absolute;\r\n  width: 100%;\r\n  height: 100%;\r\n  transform: rotateY(0deg) translateZ(1px);\r\n}\r\n.book__page-back {\r\n  position: absolute;\r\n  width: 100%;\r\n  height: 100%;\r\n  padding: 0 calc(var(--baseline) * 1.8);\r\n  transform: rotateY(180deg) translateZ(1px);\r\n}\r\n.book__page-back img {\r\n  width: 100%;\r\n  max-width: 100%;\r\n  height: 800px;\r\n}\r\n.book__page .page__content {\r\n  padding: var(--baseline);\r\n  height: 100%;\r\n  position: relative;\r\n  text-align: center;\r\n}\r\n.book__page .page__content-book-title {\r\n  font-family: var(--book-title);\r\n  font-size: calc(var(--base-size) * 3);\r\n  font-weight: bold;\r\n  text-transform: uppercase;\r\n  letter-spacing: 3px;\r\n  color: var(--dark-text);\r\n  margin-top: calc(var(--baseline) * 3);\r\n  margin-bottom: calc(var(--baseline) * 2);\r\n}\r\n.book__page .page__content-author {\r\n  font-family: var(--title);\r\n  font-size: calc(var(--base-size) * 1.2);\r\n  font-weight: 100;\r\n  text-transform: uppercase;\r\n  color: var(--dark-text);\r\n  border-top: 1px solid var(--dark-text);\r\n  border-bottom: 1px solid var(--dark-text);\r\n  display: inline-block;\r\n  padding: calc(var(--baseline) / 2) calc(var(--baseline) / 5);\r\n  margin-bottom: calc(var(--baseline) *3);\r\n}\r\n.book__page .page__content-credits {\r\n  font-family: var(--title);\r\n  text-transform: uppercase;\r\n  font-size: calc(var(--base-size) * 0.8);\r\n  margin-bottom: calc(var(--baseline) * 1.5);\r\n  letter-spacing: 1px;\r\n  font-weight: bold;\r\n}\r\n.book__page .page__content-credits span {\r\n  display: block;\r\n  font-size: calc(var(--base-size) * 1.2);\r\n  letter-spacing: 0;\r\n}\r\n.book__page .page__content-copyright {\r\n  position: absolute;\r\n  width: calc(100% - (var(--baseline) * 2));\r\n  bottom: calc(var(--baseline) * 2);\r\n  font-family: var(--title);\r\n  font-size: calc(var(--base-size) * 0.8);\r\n  text-transform: uppercase;\r\n  font-weight: bold;\r\n}\r\n.book__page .page__content-title {\r\n  font-family: var(--title);\r\n  font-size: calc(var(--base-size) * 2);\r\n  text-transform: uppercase;\r\n  letter-spacing: 1px;\r\n  margin-top: calc(var(--baseline) * 2);\r\n  margin-bottom: calc(var(--baseline)*1.5);\r\n}\r\n.book__page .page__content-table {\r\n  width: 100%;\r\n  margin-top: calc(var(--baseline) * 2);\r\n}\r\n.book__page .page__content-table td {\r\n  font-family: var(--title);\r\n  font-size: calc(var(--base-size) * 1);\r\n  padding-bottom: calc(var(--baseline) * 1.5);\r\n  text-transform: uppercase;\r\n}\r\n.book__page .page__content-blockquote {\r\n  margin-bottom: calc(var(--baseline) * 2);\r\n}\r\n.book__page .page__content-blockquote-text {\r\n  font-family: var(--title);\r\n  font-size: calc(var(--base-size) * 1.2);\r\n  font-style: italic;\r\n  text-align: justify;\r\n  font-weight: bold;\r\n}\r\n.book__page .page__content-blockquote-reference {\r\n  font-family: var(--title);\r\n  font-size: calc(var(--base-size) * 0.7);\r\n  margin-top: calc(var(--baseline) * 0.3);\r\n  float: right;\r\n  text-transform: uppercase;\r\n}\r\n.book__page .page__content-text {\r\n  font-family: var(--title);\r\n  font-size: calc(var(--base-size));\r\n  text-align: justify;\r\n  text-indent: var(--baseline);\r\n}\r\n.book__page .page__number {\r\n  position: absolute;\r\n  bottom: var(--baseline);\r\n  width: calc(100% - (var(--baseline) * 2));\r\n  font-family: var(--title);\r\n  font-size: calc(var(--base-size));\r\n  text-align: center;\r\n}\r\n.book input[type=radio] {\r\n  display: none;\r\n}\r\n.book input[type=radio]:checked + .book__page {\r\n  transition: transform 0.9s cubic-bezier(0.645, 0.045, 0.355, 1);\r\n  transform: rotateY(-180deg);\r\n}\r\n\r\n"],"sourceRoot":""}]);
+// Exports
+/* harmony default export */ __webpack_exports__["default"] = (___CSS_LOADER_EXPORT___);
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/cjs.js!./src/main/resources/js/components/book/Images.css":
+/*!************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js!./src/main/resources/js/components/book/Images.css ***!
+  \************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../../../../node_modules/css-loader/dist/runtime/cssWithMappingToString.js */ "./node_modules/css-loader/dist/runtime/cssWithMappingToString.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);
+// Imports
+
+
+var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()(_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0___default.a);
+// Module
+___CSS_LOADER_EXPORT___.push([module.i, ".galeria {\r\n\tmargin: 0px;\r\n\tlist-style: none;\r\n\tpadding: 0px;\r\n\tbox-sizing: border-box;\r\n\t\r\n\tdisplay: inline;\r\n\tflex-wrap: wrap;\r\n\tjustify-content: space-around;\r\n}\r\n\r\n.galeria li {\r\n\tmargin: 5px;\r\n  display: inline-block;\r\n}\r\n\r\n.galeria img {\r\n\twidth: auto;\r\n\theight: 100px;\r\n}\r\n\r\n/*Estilos del modal*/\r\n\r\n.modal {\r\n\tdisplay: none;\r\n}\r\n\r\n.modal:target {\r\n\t\r\n\tdisplay: block;\r\n\tposition: fixed;\r\n\tbackground: rgba(0,0,0,0.8);\r\n\ttop: 0;\r\n\tleft: 0;\r\n\twidth: 100%;\r\n\theight: 100%;\r\n}\r\n\r\n.modal h3 {\r\n\tcolor: #fff;\r\n\tfont-size: 30px;\r\n\ttext-align: center;\r\n\tmargin: 15px 0;\r\n}\r\n\r\n.imagen {\r\n\twidth: 100%;\r\n\theight: 50%;\r\n\t\r\n\tdisplay: flex;\r\n\tjustify-content: center;\r\n\talign-items: center;\r\n}\r\n\r\n.imagen a {\r\n\tcolor: #fff;\r\n\tfont-size: 40px;\r\n\ttext-decoration: none;\r\n\tmargin: 0 10px;\r\n}\r\n\r\n.imagen a:nth-child(2) {\r\n\tmargin: 0;\r\n\theight: 100%;\r\n\tflex-shrink: 2;\r\n}\r\n\r\n.imagen img {\r\n\twidth: auto;\r\n\theight: 100%;\r\n\tmax-width: 100%;\r\n\tborder: 7px solid #fff;\r\n\tbox-sizing: border-box;\r\n}\r\n\r\n.cerrar {\r\n\tdisplay: flow-root;\r\n\tbackground: #fff;\r\n\twidth: 40px;\r\n\theight: 40px;\r\n\tmargin: 15px;\r\n\ttext-align: center;\r\n\ttext-decoration: none;\r\n\tfont-size: 25px;\r\n\tcolor: #000;\r\n\tborder-radius: 50%;\r\n}\r\n\r\n.allImages {\r\n  display: inline-flex;\r\n  flex-flow: wrap;\r\n  justify-content: center;\r\n}\r\n\r\n.imagen-buttons {\r\n\tdisplay: inline-flex;\r\n}", "",{"version":3,"sources":["webpack://./src/main/resources/js/components/book/Images.css"],"names":[],"mappings":"AAAA;CACC,WAAW;CACX,gBAAgB;CAChB,YAAY;CACZ,sBAAsB;;CAEtB,eAAe;CACf,eAAe;CACf,6BAA6B;AAC9B;;AAEA;CACC,WAAW;EACV,qBAAqB;AACvB;;AAEA;CACC,WAAW;CACX,aAAa;AACd;;AAEA,oBAAoB;;AAEpB;CACC,aAAa;AACd;;AAEA;;CAEC,cAAc;CACd,eAAe;CACf,2BAA2B;CAC3B,MAAM;CACN,OAAO;CACP,WAAW;CACX,YAAY;AACb;;AAEA;CACC,WAAW;CACX,eAAe;CACf,kBAAkB;CAClB,cAAc;AACf;;AAEA;CACC,WAAW;CACX,WAAW;;CAEX,aAAa;CACb,uBAAuB;CACvB,mBAAmB;AACpB;;AAEA;CACC,WAAW;CACX,eAAe;CACf,qBAAqB;CACrB,cAAc;AACf;;AAEA;CACC,SAAS;CACT,YAAY;CACZ,cAAc;AACf;;AAEA;CACC,WAAW;CACX,YAAY;CACZ,eAAe;CACf,sBAAsB;CACtB,sBAAsB;AACvB;;AAEA;CACC,kBAAkB;CAClB,gBAAgB;CAChB,WAAW;CACX,YAAY;CACZ,YAAY;CACZ,kBAAkB;CAClB,qBAAqB;CACrB,eAAe;CACf,WAAW;CACX,kBAAkB;AACnB;;AAEA;EACE,oBAAoB;EACpB,eAAe;EACf,uBAAuB;AACzB;;AAEA;CACC,oBAAoB;AACrB","sourcesContent":[".galeria {\r\n\tmargin: 0px;\r\n\tlist-style: none;\r\n\tpadding: 0px;\r\n\tbox-sizing: border-box;\r\n\t\r\n\tdisplay: inline;\r\n\tflex-wrap: wrap;\r\n\tjustify-content: space-around;\r\n}\r\n\r\n.galeria li {\r\n\tmargin: 5px;\r\n  display: inline-block;\r\n}\r\n\r\n.galeria img {\r\n\twidth: auto;\r\n\theight: 100px;\r\n}\r\n\r\n/*Estilos del modal*/\r\n\r\n.modal {\r\n\tdisplay: none;\r\n}\r\n\r\n.modal:target {\r\n\t\r\n\tdisplay: block;\r\n\tposition: fixed;\r\n\tbackground: rgba(0,0,0,0.8);\r\n\ttop: 0;\r\n\tleft: 0;\r\n\twidth: 100%;\r\n\theight: 100%;\r\n}\r\n\r\n.modal h3 {\r\n\tcolor: #fff;\r\n\tfont-size: 30px;\r\n\ttext-align: center;\r\n\tmargin: 15px 0;\r\n}\r\n\r\n.imagen {\r\n\twidth: 100%;\r\n\theight: 50%;\r\n\t\r\n\tdisplay: flex;\r\n\tjustify-content: center;\r\n\talign-items: center;\r\n}\r\n\r\n.imagen a {\r\n\tcolor: #fff;\r\n\tfont-size: 40px;\r\n\ttext-decoration: none;\r\n\tmargin: 0 10px;\r\n}\r\n\r\n.imagen a:nth-child(2) {\r\n\tmargin: 0;\r\n\theight: 100%;\r\n\tflex-shrink: 2;\r\n}\r\n\r\n.imagen img {\r\n\twidth: auto;\r\n\theight: 100%;\r\n\tmax-width: 100%;\r\n\tborder: 7px solid #fff;\r\n\tbox-sizing: border-box;\r\n}\r\n\r\n.cerrar {\r\n\tdisplay: flow-root;\r\n\tbackground: #fff;\r\n\twidth: 40px;\r\n\theight: 40px;\r\n\tmargin: 15px;\r\n\ttext-align: center;\r\n\ttext-decoration: none;\r\n\tfont-size: 25px;\r\n\tcolor: #000;\r\n\tborder-radius: 50%;\r\n}\r\n\r\n.allImages {\r\n  display: inline-flex;\r\n  flex-flow: wrap;\r\n  justify-content: center;\r\n}\r\n\r\n.imagen-buttons {\r\n\tdisplay: inline-flex;\r\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ __webpack_exports__["default"] = (___CSS_LOADER_EXPORT___);
 
@@ -2583,6 +2633,19 @@ module.exports = function cssWithMappingToString(item) {
 
   return [content].join("\n");
 };
+
+/***/ }),
+
+/***/ "./node_modules/form-data/lib/browser.js":
+/*!***********************************************!*\
+  !*** ./node_modules/form-data/lib/browser.js ***!
+  \***********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+/* eslint-env browser */
+module.exports = typeof self == 'object' ? self.FormData : window.FormData;
+
 
 /***/ }),
 
@@ -37121,6 +37184,28 @@ var Nav = /*#__PURE__*/function (_Component) {
 
 /***/ }),
 
+/***/ "./src/main/resources/js/components/book/Create.css":
+/*!**********************************************************!*\
+  !*** ./src/main/resources/js/components/book/Create.css ***!
+  \**********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../../../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_css_loader_dist_cjs_js_Create_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !../../../../../../node_modules/css-loader/dist/cjs.js!./Create.css */ "./node_modules/css-loader/dist/cjs.js!./src/main/resources/js/components/book/Create.css");
+
+
+var options = {};
+options.insert = "head";
+options.singleton = false;
+var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_Create_css__WEBPACK_IMPORTED_MODULE_1__["default"], options);
+/* harmony default export */ __webpack_exports__["default"] = (_node_modules_css_loader_dist_cjs_js_Create_css__WEBPACK_IMPORTED_MODULE_1__["default"].locals || {});
+
+/***/ }),
+
 /***/ "./src/main/resources/js/components/book/Create.js":
 /*!*********************************************************!*\
   !*** ./src/main/resources/js/components/book/Create.js ***!
@@ -37148,6 +37233,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_7__);
 /* harmony import */ var _services_Book__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../services/Book */ "./src/main/resources/js/components/services/Book.js");
+/* harmony import */ var _Create_css__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./Create.css */ "./src/main/resources/js/components/book/Create.css");
 
 
 
@@ -37159,6 +37245,7 @@ __webpack_require__.r(__webpack_exports__);
 function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_5___default()(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_5___default()(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_4___default()(this, result); }; }
 
 function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+
 
 
 
@@ -37183,7 +37270,7 @@ var Form = /*#__PURE__*/function (_Component) {
       fieldGenres: "",
       fieldAuthor: "",
       fieldDescription: "",
-      fieldImage: "",
+      fieldImage: [],
       fieldStatus: "NUEVO",
       fieldAction: "INTERCAMBIO",
       fieldPrice: "",
@@ -37191,7 +37278,9 @@ var Form = /*#__PURE__*/function (_Component) {
       errorMessages: [],
       genres: [],
       fieldGen: [],
-      havePrice: false
+      havePrice: false,
+      hasImages: "",
+      messageSave: ""
     };
     return _this;
   }
@@ -37416,19 +37505,23 @@ var Form = /*#__PURE__*/function (_Component) {
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("label", {
         "for": "firstName",
         "class": "col-sm-3 col-form-label"
-      }, " URL de imagen", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("sup", {
+      }, "Seleccione las im\xE1genes", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("sup", {
         "class": "text-danger"
-      }, "*")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+      }, "*"), " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("dfn", {
+        "data-info": "Para una mejor visualizaci\xF3n, \r se recomienda que la primera y/o segunda imagen sea en formato vertical."
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("i", {
+        "class": "fa fa-info-circle"
+      }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         "class": "col-sm-9"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("input", {
-        type: "url",
-        "class": "form-control",
-        value: this.state.fieldImage,
+        type: "file",
         onChange: function onChange(event) {
           return _this2.setState({
-            fieldImage: event.target.value
+            fieldImage: event.target.files,
+            hasImages: String(event.target.files.length)
           });
-        }
+        },
+        multiple: true
       }), this.state.errorField.indexOf("image") != -1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
         "class": "text-danger"
       }, this.state.errorMessages[this.state.errorField.indexOf("image")]) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
@@ -37484,7 +37577,11 @@ var Form = /*#__PURE__*/function (_Component) {
         }
       }), this.state.errorField.indexOf("price") != -1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
         "class": "text-danger"
-      }, this.state.errorMessages[this.state.errorField.indexOf("price")]) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+      }, this.state.errorMessages[this.state.errorField.indexOf("price")]) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
+        style: {
+          color: "green"
+        }
+      }, this.state.messageSave), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         "class": "form-group row"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         "class": "col-sm-6"
@@ -37505,15 +37602,21 @@ var Form = /*#__PURE__*/function (_Component) {
           while (1) {
             switch (_context2.prev = _context2.next) {
               case 0:
-                _context2.next = 2;
+                this.setState({
+                  messageSave: "Guardando..."
+                });
+                _context2.next = 3;
                 return _services_Book__WEBPACK_IMPORTED_MODULE_8__["default"].create(this.state);
 
-              case 2:
+              case 3:
                 res = _context2.sent;
 
                 if (res.success) {
                   window.location.replace("/books/me/0");
                 } else {
+                  this.setState({
+                    messageSave: ""
+                  });
                   errFields = [];
                   errMess = [];
                   error = res.errors;
@@ -37527,7 +37630,7 @@ var Form = /*#__PURE__*/function (_Component) {
                   });
                 }
 
-              case 4:
+              case 5:
               case "end":
                 return _context2.stop();
             }
@@ -37615,6 +37718,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_7__);
 /* harmony import */ var _services_Book__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../services/Book */ "./src/main/resources/js/components/services/Book.js");
+/* harmony import */ var _Images_css__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./Images.css */ "./src/main/resources/js/components/book/Images.css");
 
 
 
@@ -37626,6 +37730,7 @@ __webpack_require__.r(__webpack_exports__);
 function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_5___default()(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_5___default()(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_4___default()(this, result); }; }
 
 function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+
 
 
 
@@ -37659,7 +37764,10 @@ var Form = /*#__PURE__*/function (_Component) {
       errorMessages: [],
       genres: [],
       fieldGen: [],
-      titleCopy: ""
+      titleCopy: "",
+      images: [],
+      image: "",
+      messageSave: ""
     };
     return _this;
   }
@@ -37699,13 +37807,14 @@ var Form = /*#__PURE__*/function (_Component) {
                     fieldGenres: b.book.genres,
                     fieldAuthor: b.book.author,
                     fieldDescription: b.book.description,
-                    fieldImage: b.book.image,
+                    fieldImage: String(b.images.length),
                     fieldStatus: b.book.status,
                     fieldAction: b.book.action,
                     fieldPrice: b.book.price,
                     fieldGen: genrs,
                     correctBook: "",
-                    titleCopy: b.book.title
+                    titleCopy: b.book.title,
+                    images: b.images
                   });
                 }
 
@@ -37910,19 +38019,19 @@ var Form = /*#__PURE__*/function (_Component) {
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("label", {
         "for": "firstName",
         "class": "col-sm-3 col-form-label"
-      }, " URL de imagen", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("sup", {
+      }, "Seleccione las im\xE1genes", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("sup", {
         "class": "text-danger"
       }, "*")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         "class": "col-sm-9"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("input", {
-        type: "url",
-        "class": "form-control",
-        value: this.state.fieldImage,
+        type: "file",
         onChange: function onChange(event) {
           return _this2.setState({
-            fieldImage: event.target.value
+            fieldImage: event.target.files,
+            image: String(event.target.files.length + _this2.state.images.length)
           });
-        }
+        },
+        multiple: true
       }), this.state.errorField.indexOf("image") != -1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
         "class": "text-danger"
       }, this.state.errorMessages[this.state.errorField.indexOf("image")]) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
@@ -37978,7 +38087,73 @@ var Form = /*#__PURE__*/function (_Component) {
         }
       }), this.state.errorField.indexOf("price") != -1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
         "class": "text-danger"
-      }, this.state.errorMessages[this.state.errorField.indexOf("price")]) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+      }, this.state.errorMessages[this.state.errorField.indexOf("price")]) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("center", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("h4", null, "Todas las im\xE1genes"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+        "class": "allImages"
+      }, this.state.images.map(function (image, i) {
+        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("ul", {
+          "class": "galeria"
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
+          href: String("#img" + i)
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("img", {
+          src: image.urlImage
+        }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("button", {
+          "class": "btn btn-primary",
+          onClick: function onClick() {
+            return _this2.onClickDeleteImage(image, _this2.state.id);
+          },
+          disabled: _this2.state.images.length <= 1,
+          style: {
+            backgroundImage: "url(https://i.pinimg.com/originals/8d/23/06/8d2306b98839234e49ce96a8b76e20ae.jpg)"
+          }
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("i", {
+          style: {
+            color: "red"
+          },
+          "class": "fa fa-trash"
+        }))), _this2.state.images.length <= 1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("center", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
+          style: {
+            color: "red"
+          }
+        }, "Debe tener al menos una imagen.")) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+          "class": "modal",
+          id: String("img" + i)
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("h3", null, image.fileName), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+          "class": "imagen"
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
+          href: i <= 0 ? '#img' + String(_this2.state.images.length - 1) : '#img' + String(i - 1)
+        }, String("<")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
+          href: "#img" + i
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("img", {
+          src: image.urlImage
+        })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
+          href: i >= _this2.state.images.length - 1 ? '#img0' : '#img' + String(i + 1)
+        }, String(">"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+          "class": "imagen-buttons"
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
+          "class": "cerrar",
+          href: ""
+        }, "X"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("center", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("button", {
+          "class": "cerrar",
+          onClick: function onClick() {
+            return _this2.onClickDeleteImage(image, _this2.state.id);
+          },
+          disabled: _this2.state.images.length <= 1
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("i", {
+          style: {
+            color: "red",
+            marginBottom: "1px"
+          },
+          "class": "fa fa-trash"
+        })))), _this2.state.images.length <= 1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("center", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
+          style: {
+            color: "red"
+          }
+        }, "Debe tener al menos una imagen.")) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null)));
+      }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("hr", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
+        style: {
+          color: "green"
+        }
+      }, this.state.messageSave), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         "class": "form-group row"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         "class": "col-sm-6"
@@ -37999,15 +38174,21 @@ var Form = /*#__PURE__*/function (_Component) {
           while (1) {
             switch (_context2.prev = _context2.next) {
               case 0:
-                _context2.next = 2;
+                this.setState({
+                  messageSave: "Guardando..."
+                });
+                _context2.next = 3;
                 return _services_Book__WEBPACK_IMPORTED_MODULE_8__["default"].edit(this.state);
 
-              case 2:
+              case 3:
                 res = _context2.sent;
 
                 if (res.success) {
                   window.location.replace("/books/me/0");
                 } else {
+                  this.setState({
+                    messageSave: ""
+                  });
                   errFields = [];
                   errMess = [];
                   error = res.errors;
@@ -38021,7 +38202,7 @@ var Form = /*#__PURE__*/function (_Component) {
                   });
                 }
 
-              case 4:
+              case 5:
               case "end":
                 return _context2.stop();
             }
@@ -38036,13 +38217,50 @@ var Form = /*#__PURE__*/function (_Component) {
       return onClickSave;
     }()
   }, {
-    key: "editGenres",
+    key: "onClickDeleteImage",
     value: function () {
-      var _editGenres = _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_6___default.a.mark(function _callee3(element) {
-        var gen;
+      var _onClickDeleteImage = _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_6___default.a.mark(function _callee3(image, id) {
+        var conf, res;
         return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_6___default.a.wrap(function _callee3$(_context3) {
           while (1) {
             switch (_context3.prev = _context3.next) {
+              case 0:
+                conf = confirm("¿Está seguro de que quiere eliminar la imagen '" + image.fileName + "'? Esta acción no es reversible. Los datos modificados en el formulario se perderán.");
+
+                if (!conf) {
+                  _context3.next = 6;
+                  break;
+                }
+
+                _context3.next = 4;
+                return _services_Book__WEBPACK_IMPORTED_MODULE_8__["default"].deleteImage(image);
+
+              case 4:
+                res = _context3.sent;
+                window.location.replace("/books/" + id + "/edit");
+
+              case 6:
+              case "end":
+                return _context3.stop();
+            }
+          }
+        }, _callee3);
+      }));
+
+      function onClickDeleteImage(_x, _x2) {
+        return _onClickDeleteImage.apply(this, arguments);
+      }
+
+      return onClickDeleteImage;
+    }()
+  }, {
+    key: "editGenres",
+    value: function () {
+      var _editGenres = _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_6___default.a.mark(function _callee4(element) {
+        var gen;
+        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_6___default.a.wrap(function _callee4$(_context4) {
+          while (1) {
+            switch (_context4.prev = _context4.next) {
               case 0:
                 gen = this.state.fieldGen;
 
@@ -38061,13 +38279,13 @@ var Form = /*#__PURE__*/function (_Component) {
 
               case 4:
               case "end":
-                return _context3.stop();
+                return _context4.stop();
             }
           }
-        }, _callee3, this);
+        }, _callee4, this);
       }));
 
-      function editGenres(_x) {
+      function editGenres(_x3) {
         return _editGenres.apply(this, arguments);
       }
 
@@ -38134,6 +38352,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _services_User__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../services/User */ "./src/main/resources/js/components/services/User.js");
 /* harmony import */ var _services_UserFavouriteBook__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../services/UserFavouriteBook */ "./src/main/resources/js/components/services/UserFavouriteBook.js");
 /* harmony import */ var _Get_css__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./Get.css */ "./src/main/resources/js/components/book/Get.css");
+/* harmony import */ var _Images_css__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./Images.css */ "./src/main/resources/js/components/book/Images.css");
 
 
 
@@ -38145,6 +38364,7 @@ __webpack_require__.r(__webpack_exports__);
 function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_5___default()(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_5___default()(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_4___default()(this, result); }; }
 
 function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+
 
 
 
@@ -38169,7 +38389,10 @@ var Get = /*#__PURE__*/function (_Component) {
       genres: "",
       isAdded: "",
       alreadyRequest: "",
-      hasRequestAccepted: ""
+      hasRequestAccepted: "",
+      images: [],
+      urlImages: [],
+      hasMoreImages: ""
     };
     return _this;
   }
@@ -38200,7 +38423,10 @@ var Get = /*#__PURE__*/function (_Component) {
                   genres: b.book.genres,
                   isAdded: b.isAdded,
                   alreadyRequest: b.alreadyRequest,
-                  hasRequestAccepted: b.hasRequestAccepted
+                  hasRequestAccepted: b.hasRequestAccepted,
+                  images: b.images,
+                  urlImages: b.urlImages,
+                  hasMoreImages: b.hasMoreImages
                 });
 
               case 8:
@@ -38230,14 +38456,12 @@ var Get = /*#__PURE__*/function (_Component) {
         "for": "page-1",
         "class": "book__page book__page--1"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("img", {
-        src: this.state.book.image,
-        alt: ""
+        src: this.state.urlImages[0]
       })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("label", {
         "for": "page-2",
         "class": "book__page book__page--4"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("img", {
-        src: this.state.book.image,
-        alt: ""
+        src: this.state.urlImages[1] == null ? this.state.urlImages[0] : this.state.urlImages[1]
       })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("input", {
         type: "radio",
         name: "page",
@@ -38272,7 +38496,16 @@ var Get = /*#__PURE__*/function (_Component) {
         "class": "page__content-credits"
       }, "Estado", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("span", null, this.state.book.status)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         "class": "page__content-copyright"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null, "Publicado por ", this.state.book.username)))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null, "Publicado por ", this.state.book.username), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("i", {
+        "class": "fa fa-arrow-circle-right fa-2x",
+        style: {
+          "float": "right"
+        }
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
+        style: {
+          "float": "right"
+        }
+      }, "Ver descripci\xF3n .")))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         "class": "book__page-back"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         "class": "page__content"
@@ -38284,7 +38517,33 @@ var Get = /*#__PURE__*/function (_Component) {
         "class": "page__content-blockquote-text"
       }, this.state.book.description)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         "class": "page__number"
-      }, "2")))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("center", null, this.state.username == this.state.book.username ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("center", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("button", {
+      }, "2")))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("center", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("h2", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("b", null, "Todas las im\xE1genes")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+        "class": "allImages"
+      }, this.state.images.map(function (image, i) {
+        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("center", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("ul", {
+          "class": "galeria"
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
+          href: String("#img" + i)
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("img", {
+          src: image.urlImage
+        })))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+          "class": "modal",
+          id: String("img" + i)
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+          "class": "imagen"
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
+          href: i <= 0 ? '#img' + String(_this2.state.images.length - 1) : '#img' + String(i - 1)
+        }, String("<")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
+          href: "#img" + i
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("img", {
+          src: image.urlImage
+        })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
+          href: i >= _this2.state.images.length - 1 ? '#img0' : '#img' + String(i + 1)
+        }, String(">"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
+          "class": "cerrar",
+          href: ""
+        }, "x")));
+      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("hr", null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("center", null, this.state.username == this.state.book.username ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("center", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("button", {
         style: {
           backgroundImage: "url(https://i.pinimg.com/originals/8d/23/06/8d2306b98839234e49ce96a8b76e20ae.jpg)",
           margin: "10px",
@@ -38297,7 +38556,7 @@ var Get = /*#__PURE__*/function (_Component) {
         disabled: this.state.hasRequestAccepted == true
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("b", null, "Editar")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("button", {
         onClick: function onClick() {
-          return _this2.deleteBook(_this2.state.book.id);
+          return _this2.deleteBook(_this2.state.book.id, _this2.state.images);
         },
         style: {
           color: "red",
@@ -38369,7 +38628,7 @@ var Get = /*#__PURE__*/function (_Component) {
   }, {
     key: "deleteBook",
     value: function () {
-      var _deleteBook = _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_6___default.a.mark(function _callee2(id) {
+      var _deleteBook = _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_6___default.a.mark(function _callee2(id, images) {
         var conf, res;
         return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_6___default.a.wrap(function _callee2$(_context2) {
           while (1) {
@@ -38383,7 +38642,7 @@ var Get = /*#__PURE__*/function (_Component) {
                 }
 
                 _context2.next = 4;
-                return _services_Book__WEBPACK_IMPORTED_MODULE_8__["default"]["delete"](id);
+                return _services_Book__WEBPACK_IMPORTED_MODULE_8__["default"]["delete"](id, images);
 
               case 4:
                 res = _context2.sent;
@@ -38397,7 +38656,7 @@ var Get = /*#__PURE__*/function (_Component) {
         }, _callee2);
       }));
 
-      function deleteBook(_x) {
+      function deleteBook(_x, _x2) {
         return _deleteBook.apply(this, arguments);
       }
 
@@ -38427,7 +38686,7 @@ var Get = /*#__PURE__*/function (_Component) {
         }, _callee3);
       }));
 
-      function addFavouriteBook(_x2) {
+      function addFavouriteBook(_x3) {
         return _addFavouriteBook.apply(this, arguments);
       }
 
@@ -38464,7 +38723,7 @@ var Get = /*#__PURE__*/function (_Component) {
         }, _callee4);
       }));
 
-      function deleteFavouriteBook(_x3, _x4) {
+      function deleteFavouriteBook(_x4, _x5) {
         return _deleteFavouriteBook.apply(this, arguments);
       }
 
@@ -38488,7 +38747,7 @@ var Get = /*#__PURE__*/function (_Component) {
         }, _callee5);
       }));
 
-      function goToEdit(_x5) {
+      function goToEdit(_x6) {
         return _goToEdit.apply(this, arguments);
       }
 
@@ -38500,6 +38759,28 @@ var Get = /*#__PURE__*/function (_Component) {
 }(react__WEBPACK_IMPORTED_MODULE_7__["Component"]);
 
 
+
+/***/ }),
+
+/***/ "./src/main/resources/js/components/book/Images.css":
+/*!**********************************************************!*\
+  !*** ./src/main/resources/js/components/book/Images.css ***!
+  \**********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../../../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_css_loader_dist_cjs_js_Images_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !../../../../../../node_modules/css-loader/dist/cjs.js!./Images.css */ "./node_modules/css-loader/dist/cjs.js!./src/main/resources/js/components/book/Images.css");
+
+
+var options = {};
+options.insert = "head";
+options.singleton = false;
+var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_Images_css__WEBPACK_IMPORTED_MODULE_1__["default"], options);
+/* harmony default export */ __webpack_exports__["default"] = (_node_modules_css_loader_dist_cjs_js_Images_css__WEBPACK_IMPORTED_MODULE_1__["default"].locals || {});
 
 /***/ }),
 
@@ -38576,7 +38857,7 @@ var List = /*#__PURE__*/function (_Component) {
       books: [],
       isAdded: [],
       username: ""
-    }, _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2___default()(_this$state, "isAdded", false), _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2___default()(_this$state, "pages", []), _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2___default()(_this$state, "actualPage", 0), _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2___default()(_this$state, "numTotalPages", 0), _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2___default()(_this$state, "nearBooks", true), _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2___default()(_this$state, "title", ""), _this$state);
+    }, _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2___default()(_this$state, "isAdded", false), _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2___default()(_this$state, "pages", []), _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2___default()(_this$state, "actualPage", 0), _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2___default()(_this$state, "numTotalPages", 0), _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2___default()(_this$state, "nearBooks", true), _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2___default()(_this$state, "title", ""), _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2___default()(_this$state, "images", []), _this$state);
     return _this;
   }
 
@@ -38616,7 +38897,8 @@ var List = /*#__PURE__*/function (_Component) {
                   pages: res.pages,
                   numTotalPages: parseInt(res.numTotalPages),
                   nearBooks: res.nearBooks,
-                  title: res.title
+                  title: res.title,
+                  images: res.urlImages
                 });
 
               case 9:
@@ -38698,7 +38980,8 @@ var List = /*#__PURE__*/function (_Component) {
           href: "/books/" + book.id
         }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("img", {
           "class": "book-card__img",
-          src: book.image
+          src: _this2.state.images[i],
+          alt: ""
         }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("div", {
           "class": "book-card__book-back"
         }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("div", {
@@ -38900,7 +39183,8 @@ var List = /*#__PURE__*/function (_Component) {
       books: [],
       pages: [],
       actualPage: 0,
-      numTotalPages: 0
+      numTotalPages: 0,
+      images: []
     };
     return _this;
   }
@@ -38924,7 +39208,8 @@ var List = /*#__PURE__*/function (_Component) {
                   books: res.books,
                   pages: res.pages,
                   actualPage: parseInt(page),
-                  numTotalPages: parseInt(res.numTotalPages)
+                  numTotalPages: parseInt(res.numTotalPages),
+                  images: res.urlImages
                 });
 
               case 5:
@@ -38954,7 +39239,7 @@ var List = /*#__PURE__*/function (_Component) {
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("b", null, "Mis libros")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", null), this.state.books.length == 0 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("b", null, "\xBFTodav\xEDa no has a\xF1adido ning\xFAn libro? ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
         "class": "btn btn-primary",
         href: "/books/new"
-      }, "A\xF1ade uno!"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", null)) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("center", null, this.state.books.length != 0 && this.state.pages.length > 1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("center", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", null), this.state.actualPage != 0 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("span", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
+      }, "\xA1A\xF1ade uno!"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", null)) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("center", null, this.state.books.length != 0 && this.state.pages.length > 1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("center", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", null), this.state.actualPage != 0 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("span", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
         "class": "btn btn-primary",
         href: "/books/me/0"
       }, String("<<")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
@@ -38981,7 +39266,7 @@ var List = /*#__PURE__*/function (_Component) {
       }, String(">")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
         "class": "btn btn-primary",
         href: "/books/me/" + parseInt(this.state.numTotalPages - 1)
-      }, String(">>"))) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null)) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", null)), this.state.books.map(function (book) {
+      }, String(">>"))) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null)) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", null)), this.state.books.map(function (book, i) {
         return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("main", {
           "class": "mainBooks"
         }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
@@ -38999,7 +39284,7 @@ var List = /*#__PURE__*/function (_Component) {
           href: "/books/" + book.id
         }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("img", {
           "class": "book-card__img",
-          src: book.image
+          src: _this2.state.images[i]
         }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
           "class": "book-card__book-back"
         }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
@@ -39122,7 +39407,7 @@ var List = /*#__PURE__*/function (_Component) {
       books: [],
       isAdded: [],
       username: ""
-    }, _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2___default()(_this$state, "isAdded", false), _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2___default()(_this$state, "pages", []), _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2___default()(_this$state, "actualPage", 0), _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2___default()(_this$state, "numTotalPages", 0), _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2___default()(_this$state, "showMode", ""), _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2___default()(_this$state, "title", ""), _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2___default()(_this$state, "nearBooks", true), _this$state);
+    }, _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2___default()(_this$state, "isAdded", false), _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2___default()(_this$state, "pages", []), _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2___default()(_this$state, "actualPage", 0), _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2___default()(_this$state, "numTotalPages", 0), _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2___default()(_this$state, "showMode", ""), _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2___default()(_this$state, "title", ""), _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2___default()(_this$state, "nearBooks", true), _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2___default()(_this$state, "images", []), _this$state);
     return _this;
   }
 
@@ -39164,7 +39449,8 @@ var List = /*#__PURE__*/function (_Component) {
                   pages: res.pages,
                   numTotalPages: parseInt(res.numTotalPages),
                   showMode: showMode,
-                  title: res.title
+                  title: res.title,
+                  images: res.urlImages
                 });
 
               case 10:
@@ -39191,12 +39477,12 @@ var List = /*#__PURE__*/function (_Component) {
           "float": "left",
           color: "black"
         }
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("b", null, this.state.title)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("br", null), this.state.books.length == 0 || this.state.nearBooks == false ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("b", null, "No se encontraron resultados.")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("h2", {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("b", null, this.state.title)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("br", null), this.state.books.length == 0 || this.state.nearBooks == false ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("b", null, "No se encontraron resultados.")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("h2", {
         style: {
           "float": "left",
           color: "black"
         }
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("b", null, "Algunas recomendaciones")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("br", null)) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("center", null, this.state.books.length != 0 && this.state.pages.length > 1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("center", null, this.state.actualPage != 0 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("span", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("a", {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("b", null, "Algunas recomendaciones")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("br", null)) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("center", null, this.state.books.length != 0 && this.state.pages.length > 1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("center", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("br", null), this.state.actualPage != 0 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("span", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("a", {
         "class": "btn btn-primary",
         href: "/books/all/0/" + this.state.showMode
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("b", null, String("<<"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("a", {
@@ -39241,7 +39527,7 @@ var List = /*#__PURE__*/function (_Component) {
           href: "/books/" + book.id
         }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("img", {
           "class": "book-card__img",
-          src: book.image
+          src: _this2.state.images[i]
         }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("div", {
           "class": "book-card__book-back"
         }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("div", {
@@ -39446,7 +39732,8 @@ var List = /*#__PURE__*/function (_Component) {
       pages: [],
       actualPage: 0,
       numTotalPages: 0,
-      isAdded: []
+      isAdded: [],
+      images: []
     };
     return _this;
   }
@@ -39471,7 +39758,8 @@ var List = /*#__PURE__*/function (_Component) {
                   pages: res.pages,
                   actualPage: parseInt(page),
                   numTotalPages: parseInt(res.numTotalPages),
-                  isAdded: res.isAdded
+                  isAdded: res.isAdded,
+                  images: res.urlImages
                 });
 
               case 5:
@@ -39550,7 +39838,7 @@ var List = /*#__PURE__*/function (_Component) {
           href: "/books/" + book.id
         }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("img", {
           "class": "book-card__img",
-          src: book.image
+          src: _this2.state.images[i]
         }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
           "class": "book-card__book-back"
         }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
@@ -39768,7 +40056,7 @@ var List = /*#__PURE__*/function (_Component) {
       books: [],
       isAdded: [],
       username: ""
-    }, _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2___default()(_this$state, "isAdded", false), _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2___default()(_this$state, "pages", []), _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2___default()(_this$state, "actualPage", 0), _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2___default()(_this$state, "query", ""), _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2___default()(_this$state, "searchResult", true), _this$state);
+    }, _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2___default()(_this$state, "isAdded", false), _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2___default()(_this$state, "pages", []), _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2___default()(_this$state, "actualPage", 0), _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2___default()(_this$state, "query", ""), _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2___default()(_this$state, "searchResult", true), _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2___default()(_this$state, "images", []), _this$state);
     return _this;
   }
 
@@ -39809,7 +40097,8 @@ var List = /*#__PURE__*/function (_Component) {
                   isAdded: res.isAdded,
                   pages: res.pages,
                   numTotalPages: parseInt(res.numTotalPages),
-                  searchResult: res.searchResult
+                  searchResult: res.searchResult,
+                  images: res.urlImages
                 });
 
               case 10:
@@ -39886,7 +40175,7 @@ var List = /*#__PURE__*/function (_Component) {
           href: "/books/" + book.id
         }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("img", {
           "class": "book-card__img",
-          src: book.image
+          src: _this2.state.images[i]
         }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("div", {
           "class": "book-card__book-back"
         }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("div", {
@@ -40429,7 +40718,9 @@ var List = /*#__PURE__*/function (_Component) {
       books2: [],
       users: [],
       pages: [],
-      actualPage: 0
+      actualPage: 0,
+      urlsBooks1: [],
+      urlsBooks2: []
     };
     return _this;
   }
@@ -40464,7 +40755,9 @@ var List = /*#__PURE__*/function (_Component) {
                   books2: res.books2,
                   users: res.users,
                   pages: res.pages,
-                  numTotalPages: parseInt(res.numTotalPages)
+                  numTotalPages: parseInt(res.numTotalPages),
+                  urlsBooks1: res.urlsBooks1,
+                  urlsBooks2: res.urlsBooks2
                 });
 
               case 6:
@@ -40564,7 +40857,7 @@ var List = /*#__PURE__*/function (_Component) {
             padding: '10px',
             margin: "0px 0px 0px 0px"
           },
-          src: _this2.state.books1[i].image
+          src: _this2.state.urlsBooks1[i]
         }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("strong", null, "\u21C4  ")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("a", {
           href: "/books/" + _this2.state.books2[i].id
         }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("img", {
@@ -40574,7 +40867,7 @@ var List = /*#__PURE__*/function (_Component) {
             padding: '10px',
             margin: "0px 0px 0px 0px"
           },
-          src: _this2.state.books2[i].image
+          src: _this2.state.urlsBooks2[i]
         })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", null)) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("center", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("a", {
           href: "/books/" + _this2.state.books2[i].id
         }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("img", {
@@ -40584,7 +40877,7 @@ var List = /*#__PURE__*/function (_Component) {
             padding: '10px',
             margin: "0px 0px 0px 0px"
           },
-          src: _this2.state.books2[i].image
+          src: _this2.state.urlsBooks2[i]
         }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("center", null, request.action == "COMPRA" ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("strong", null, "Precio original: "), _this2.state.books2[i].price, " \u20AC") : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", null), request.comment != "" ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("strong", null, "Comentario adicional: "), request.comment) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", null), request.status != "ACEPTADA" ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("strong", null, "Petici\xF3n enviada a: "), request.username2) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("strong", null, "Estado: "), request.status)), request.status == "PENDIENTE" ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("center", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("a", {
           onClick: function onClick() {
             return _this2.cancelRequest(request.id, _this2.state.actualPage);
@@ -40769,7 +41062,9 @@ var List = /*#__PURE__*/function (_Component) {
       books2: [],
       users: [],
       pages: [],
-      actualPage: 0
+      actualPage: 0,
+      urlsBooks1: [],
+      urlsBooks2: []
     };
     return _this;
   }
@@ -40804,7 +41099,9 @@ var List = /*#__PURE__*/function (_Component) {
                   books2: res.books2,
                   users: res.users,
                   pages: res.pages,
-                  numTotalPages: parseInt(res.numTotalPages)
+                  numTotalPages: parseInt(res.numTotalPages),
+                  urlsBooks1: res.urlsBooks1,
+                  urlsBooks2: res.urlsBooks2
                 });
 
               case 6:
@@ -40874,7 +41171,7 @@ var List = /*#__PURE__*/function (_Component) {
             padding: '10px',
             margin: "0px 0px 0px 0px"
           },
-          src: _this2.state.books2[i].image
+          src: _this2.state.urlsBooks2[i]
         }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("strong", null, "\u21C4  ")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("a", {
           href: "/books/" + _this2.state.books1[i].id
         }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("img", {
@@ -40884,7 +41181,7 @@ var List = /*#__PURE__*/function (_Component) {
             padding: '10px',
             margin: "0px 0px 0px 0px"
           },
-          src: _this2.state.books1[i].image
+          src: _this2.state.urlsBooks1[i]
         })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("br", null)) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("center", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("a", {
           href: "/books/" + _this2.state.books2[i].id
         }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("img", _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0___default()({
@@ -40892,7 +41189,7 @@ var List = /*#__PURE__*/function (_Component) {
             height: "100px",
             width: "100px"
           },
-          src: _this2.state.books2[i].image
+          src: _this2.state.urlsBooks2[i]
         }, "style", {
           padding: '10px',
           margin: "0px 0px 0px 0px",
@@ -41032,15 +41329,18 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var form_data__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! form-data */ "./node_modules/form-data/lib/browser.js");
+/* harmony import */ var form_data__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(form_data__WEBPACK_IMPORTED_MODULE_3__);
 
 
 var baseUrl = "http://localhost:8080/books";
+
 
 var book = {};
 
 book.create = /*#__PURE__*/function () {
   var _ref = _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.mark(function _callee(state) {
-    var datapost, urlPost, res;
+    var datapost, urlPost, res, idBook, i, form, urlPost1, resUploadImage, datapostImage, urlPostImage, postUploadImage;
     return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.wrap(function _callee$(_context) {
       while (1) {
         switch (_context.prev = _context.next) {
@@ -41054,9 +41354,9 @@ book.create = /*#__PURE__*/function () {
               genres: state.fieldGenres,
               author: state.fieldAuthor,
               description: state.fieldDescription,
-              image: state.fieldImage,
               status: state.fieldStatus,
-              price: state.fieldPrice
+              price: state.fieldPrice,
+              image: state.hasImages
             };
             urlPost = baseUrl + "/new";
             _context.next = 4;
@@ -41068,9 +41368,64 @@ book.create = /*#__PURE__*/function () {
 
           case 4:
             res = _context.sent;
+
+            if (!(res.success == true)) {
+              _context.next = 24;
+              break;
+            }
+
+            idBook = res.idBook;
+            i = 0;
+
+          case 8:
+            if (!(i < state.fieldImage.length)) {
+              _context.next = 24;
+              break;
+            }
+
+            form = new form_data__WEBPACK_IMPORTED_MODULE_3___default.a();
+            form.append("image", state.fieldImage[i]);
+            urlPost1 = "https://api.imgbb.com/1/upload?key=672fcb9727d542f1303d834e6b2a5caa";
+            _context.next = 14;
+            return axios__WEBPACK_IMPORTED_MODULE_2___default.a.post(urlPost1, form).then(function (response) {
+              return response.data;
+            })["catch"](function (error) {
+              return error.response;
+            });
+
+          case 14:
+            resUploadImage = _context.sent;
+
+            if (!(resUploadImage.success == true)) {
+              _context.next = 21;
+              break;
+            }
+
+            datapostImage = {
+              idBook: idBook,
+              fileName: resUploadImage.data.image.filename,
+              urlImage: resUploadImage.data.url
+            };
+            urlPostImage = baseUrl + "/images/upload";
+            _context.next = 20;
+            return axios__WEBPACK_IMPORTED_MODULE_2___default.a.post(urlPostImage, datapostImage).then(function (response) {
+              return response.data;
+            })["catch"](function (error) {
+              return error.response;
+            });
+
+          case 20:
+            postUploadImage = _context.sent;
+
+          case 21:
+            i++;
+            _context.next = 8;
+            break;
+
+          case 24:
             return _context.abrupt("return", res);
 
-          case 6:
+          case 25:
           case "end":
             return _context.stop();
         }
@@ -41085,7 +41440,7 @@ book.create = /*#__PURE__*/function () {
 
 book.edit = /*#__PURE__*/function () {
   var _ref2 = _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.mark(function _callee2(state) {
-    var datapost, urlPost, res;
+    var datapost, urlPost, res, idBook, i, form, urlPost1, resUploadImage, datapostImage, urlPostImage, postUploadImage;
     return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.wrap(function _callee2$(_context2) {
       while (1) {
         switch (_context2.prev = _context2.next) {
@@ -41100,7 +41455,7 @@ book.edit = /*#__PURE__*/function () {
               genres: state.fieldGenres,
               author: state.fieldAuthor,
               description: state.fieldDescription,
-              image: state.fieldImage,
+              image: state.image,
               status: state.fieldStatus,
               price: state.fieldPrice
             };
@@ -41114,9 +41469,64 @@ book.edit = /*#__PURE__*/function () {
 
           case 4:
             res = _context2.sent;
+
+            if (!(res.success == true)) {
+              _context2.next = 24;
+              break;
+            }
+
+            idBook = state.id;
+            i = 0;
+
+          case 8:
+            if (!(i < state.fieldImage.length)) {
+              _context2.next = 24;
+              break;
+            }
+
+            form = new form_data__WEBPACK_IMPORTED_MODULE_3___default.a();
+            form.append("image", state.fieldImage[i]);
+            urlPost1 = "https://api.imgbb.com/1/upload?key=672fcb9727d542f1303d834e6b2a5caa";
+            _context2.next = 14;
+            return axios__WEBPACK_IMPORTED_MODULE_2___default.a.post(urlPost1, form).then(function (response) {
+              return response.data;
+            })["catch"](function (error) {
+              return error.response;
+            });
+
+          case 14:
+            resUploadImage = _context2.sent;
+
+            if (!(resUploadImage.success == true)) {
+              _context2.next = 21;
+              break;
+            }
+
+            datapostImage = {
+              idBook: idBook,
+              fileName: resUploadImage.data.image.filename,
+              urlImage: resUploadImage.data.url
+            };
+            urlPostImage = baseUrl + "/images/upload";
+            _context2.next = 20;
+            return axios__WEBPACK_IMPORTED_MODULE_2___default.a.post(urlPostImage, datapostImage).then(function (response) {
+              return response.data;
+            })["catch"](function (error) {
+              return error.response;
+            });
+
+          case 20:
+            postUploadImage = _context2.sent;
+
+          case 21:
+            i++;
+            _context2.next = 8;
+            break;
+
+          case 24:
             return _context2.abrupt("return", res);
 
-          case 6:
+          case 25:
           case "end":
             return _context2.stop();
         }
@@ -41129,26 +41539,25 @@ book.edit = /*#__PURE__*/function () {
   };
 }();
 
-book.getBook = /*#__PURE__*/function () {
-  var _ref3 = _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.mark(function _callee3(id) {
-    var urlGet, res;
+book.deleteImage = /*#__PURE__*/function () {
+  var _ref3 = _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.mark(function _callee3(image) {
+    var urlDeleteEntityImage, deleteImageEntity;
     return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.wrap(function _callee3$(_context3) {
       while (1) {
         switch (_context3.prev = _context3.next) {
           case 0:
-            urlGet = baseUrl + "/get/" + id;
+            urlDeleteEntityImage = baseUrl + "/images/" + image.id + "/delete";
             _context3.next = 3;
-            return axios__WEBPACK_IMPORTED_MODULE_2___default.a.get(urlGet).then(function (response) {
+            return axios__WEBPACK_IMPORTED_MODULE_2___default.a.get(urlDeleteEntityImage).then(function (response) {
               return response.data;
             })["catch"](function (error) {
               return error.response;
             });
 
           case 3:
-            res = _context3.sent;
-            return _context3.abrupt("return", res);
+            deleteImageEntity = _context3.sent;
 
-          case 5:
+          case 4:
           case "end":
             return _context3.stop();
         }
@@ -41161,14 +41570,14 @@ book.getBook = /*#__PURE__*/function () {
   };
 }();
 
-book.getBookToEdit = /*#__PURE__*/function () {
+book.getBook = /*#__PURE__*/function () {
   var _ref4 = _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.mark(function _callee4(id) {
     var urlGet, res;
     return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.wrap(function _callee4$(_context4) {
       while (1) {
         switch (_context4.prev = _context4.next) {
           case 0:
-            urlGet = baseUrl + "/edit/" + id;
+            urlGet = baseUrl + "/get/" + id;
             _context4.next = 3;
             return axios__WEBPACK_IMPORTED_MODULE_2___default.a.get(urlGet).then(function (response) {
               return response.data;
@@ -41193,14 +41602,14 @@ book.getBookToEdit = /*#__PURE__*/function () {
   };
 }();
 
-book.listAllExceptMine = /*#__PURE__*/function () {
-  var _ref5 = _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.mark(function _callee5(page, showMode) {
+book.getBookToEdit = /*#__PURE__*/function () {
+  var _ref5 = _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.mark(function _callee5(id) {
     var urlGet, res;
     return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.wrap(function _callee5$(_context5) {
       while (1) {
         switch (_context5.prev = _context5.next) {
           case 0:
-            urlGet = baseUrl + "/list/all-me?page=" + page + "&showMode=" + showMode;
+            urlGet = baseUrl + "/edit/" + id;
             _context5.next = 3;
             return axios__WEBPACK_IMPORTED_MODULE_2___default.a.get(urlGet).then(function (response) {
               return response.data;
@@ -41220,19 +41629,19 @@ book.listAllExceptMine = /*#__PURE__*/function () {
     }, _callee5);
   }));
 
-  return function (_x5, _x6) {
+  return function (_x5) {
     return _ref5.apply(this, arguments);
   };
 }();
 
-book.listMyBooks = /*#__PURE__*/function () {
-  var _ref6 = _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.mark(function _callee6(page) {
+book.listAllExceptMine = /*#__PURE__*/function () {
+  var _ref6 = _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.mark(function _callee6(page, showMode) {
     var urlGet, res;
     return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.wrap(function _callee6$(_context6) {
       while (1) {
         switch (_context6.prev = _context6.next) {
           case 0:
-            urlGet = baseUrl + "/list/me?page=" + page;
+            urlGet = baseUrl + "/list/all-me?page=" + page + "&showMode=" + showMode;
             _context6.next = 3;
             return axios__WEBPACK_IMPORTED_MODULE_2___default.a.get(urlGet).then(function (response) {
               return response.data;
@@ -41252,43 +41661,50 @@ book.listMyBooks = /*#__PURE__*/function () {
     }, _callee6);
   }));
 
-  return function (_x7) {
+  return function (_x6, _x7) {
     return _ref6.apply(this, arguments);
   };
 }();
 
-book.listMyBooksForChange = /*#__PURE__*/_babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.mark(function _callee7() {
-  var urlGet, res;
-  return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.wrap(function _callee7$(_context7) {
-    while (1) {
-      switch (_context7.prev = _context7.next) {
-        case 0:
-          urlGet = baseUrl + "/list/me-change";
-          _context7.next = 3;
-          return axios__WEBPACK_IMPORTED_MODULE_2___default.a.get(urlGet).then(function (response) {
-            return response.data;
-          })["catch"](function (error) {
-            return error.response;
-          });
+book.listMyBooks = /*#__PURE__*/function () {
+  var _ref7 = _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.mark(function _callee7(page) {
+    var urlGet, res;
+    return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.wrap(function _callee7$(_context7) {
+      while (1) {
+        switch (_context7.prev = _context7.next) {
+          case 0:
+            urlGet = baseUrl + "/list/me?page=" + page;
+            _context7.next = 3;
+            return axios__WEBPACK_IMPORTED_MODULE_2___default.a.get(urlGet).then(function (response) {
+              return response.data;
+            })["catch"](function (error) {
+              return error.response;
+            });
 
-        case 3:
-          res = _context7.sent;
-          return _context7.abrupt("return", res);
+          case 3:
+            res = _context7.sent;
+            return _context7.abrupt("return", res);
 
-        case 5:
-        case "end":
-          return _context7.stop();
+          case 5:
+          case "end":
+            return _context7.stop();
+        }
       }
-    }
-  }, _callee7);
-}));
-book.getGenres = /*#__PURE__*/_babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.mark(function _callee8() {
+    }, _callee7);
+  }));
+
+  return function (_x8) {
+    return _ref7.apply(this, arguments);
+  };
+}();
+
+book.listMyBooksForChange = /*#__PURE__*/_babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.mark(function _callee8() {
   var urlGet, res;
   return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.wrap(function _callee8$(_context8) {
     while (1) {
       switch (_context8.prev = _context8.next) {
         case 0:
-          urlGet = baseUrl + "/genres";
+          urlGet = baseUrl + "/list/me-change";
           _context8.next = 3;
           return axios__WEBPACK_IMPORTED_MODULE_2___default.a.get(urlGet).then(function (response) {
             return response.data;
@@ -41307,16 +41723,41 @@ book.getGenres = /*#__PURE__*/_babel_runtime_helpers_asyncToGenerator__WEBPACK_I
     }
   }, _callee8);
 }));
+book.getGenres = /*#__PURE__*/_babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.mark(function _callee9() {
+  var urlGet, res;
+  return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.wrap(function _callee9$(_context9) {
+    while (1) {
+      switch (_context9.prev = _context9.next) {
+        case 0:
+          urlGet = baseUrl + "/genres";
+          _context9.next = 3;
+          return axios__WEBPACK_IMPORTED_MODULE_2___default.a.get(urlGet).then(function (response) {
+            return response.data;
+          })["catch"](function (error) {
+            return error.response;
+          });
+
+        case 3:
+          res = _context9.sent;
+          return _context9.abrupt("return", res);
+
+        case 5:
+        case "end":
+          return _context9.stop();
+      }
+    }
+  }, _callee9);
+}));
 
 book["delete"] = /*#__PURE__*/function () {
-  var _ref9 = _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.mark(function _callee9(id) {
-    var urlDelete, res;
-    return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.wrap(function _callee9$(_context9) {
+  var _ref10 = _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.mark(function _callee10(id, images) {
+    var urlDelete, res, i, urlDeleteImage, resDeleteImage;
+    return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.wrap(function _callee10$(_context10) {
       while (1) {
-        switch (_context9.prev = _context9.next) {
+        switch (_context10.prev = _context10.next) {
           case 0:
             urlDelete = baseUrl + "/" + id + "/delete";
-            _context9.next = 3;
+            _context10.next = 3;
             return axios__WEBPACK_IMPORTED_MODULE_2___default.a["delete"](urlDelete).then(function (response) {
               return response.data;
             })["catch"](function (error) {
@@ -41324,42 +41765,35 @@ book["delete"] = /*#__PURE__*/function () {
             });
 
           case 3:
-            res = _context9.sent;
-            return _context9.abrupt("return", res);
+            res = _context10.sent;
+            i = 0;
 
           case 5:
-          case "end":
-            return _context9.stop();
-        }
-      }
-    }, _callee9);
-  }));
+            if (!(i < images.length)) {
+              _context10.next = 13;
+              break;
+            }
 
-  return function (_x8) {
-    return _ref9.apply(this, arguments);
-  };
-}();
-
-book.recommendBooks = /*#__PURE__*/function () {
-  var _ref10 = _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.mark(function _callee10(page) {
-    var urlGet, res;
-    return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.wrap(function _callee10$(_context10) {
-      while (1) {
-        switch (_context10.prev = _context10.next) {
-          case 0:
-            urlGet = baseUrl + "/recommend?page=" + page;
-            _context10.next = 3;
-            return axios__WEBPACK_IMPORTED_MODULE_2___default.a.get(urlGet).then(function (response) {
+            urlDeleteImage = images[i].urlDelete;
+            _context10.next = 9;
+            return axios__WEBPACK_IMPORTED_MODULE_2___default.a.get(urlDeleteImage).then(function (response) {
               return response.data;
             })["catch"](function (error) {
               return error.response;
             });
 
-          case 3:
-            res = _context10.sent;
+          case 9:
+            resDeleteImage = _context10.sent;
+
+          case 10:
+            i++;
+            _context10.next = 5;
+            break;
+
+          case 13:
             return _context10.abrupt("return", res);
 
-          case 5:
+          case 14:
           case "end":
             return _context10.stop();
         }
@@ -41367,8 +41801,40 @@ book.recommendBooks = /*#__PURE__*/function () {
     }, _callee10);
   }));
 
-  return function (_x9) {
+  return function (_x9, _x10) {
     return _ref10.apply(this, arguments);
+  };
+}();
+
+book.recommendBooks = /*#__PURE__*/function () {
+  var _ref11 = _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.mark(function _callee11(page) {
+    var urlGet, res;
+    return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.wrap(function _callee11$(_context11) {
+      while (1) {
+        switch (_context11.prev = _context11.next) {
+          case 0:
+            urlGet = baseUrl + "/recommend?page=" + page;
+            _context11.next = 3;
+            return axios__WEBPACK_IMPORTED_MODULE_2___default.a.get(urlGet).then(function (response) {
+              return response.data;
+            })["catch"](function (error) {
+              return error.response;
+            });
+
+          case 3:
+            res = _context11.sent;
+            return _context11.abrupt("return", res);
+
+          case 5:
+          case "end":
+            return _context11.stop();
+        }
+      }
+    }, _callee11);
+  }));
+
+  return function (_x11) {
+    return _ref11.apply(this, arguments);
   };
 }();
 
@@ -42474,7 +42940,7 @@ var Form = /*#__PURE__*/function (_Component) {
                 if (res.success) {
                   if (this.state.fieldPassword != "" && this.state.fieldConfirmPassword != "") {
                     this.setState({
-                      messageCorrectPassword: "*La contraseña se ha cambiado con éxito.",
+                      messageCorrectPassword: "La contraseña se ha cambiado con éxito.",
                       errorFieldPassword: [],
                       messageCorrectUser: "",
                       fieldPassword: "",
@@ -42484,7 +42950,7 @@ var Form = /*#__PURE__*/function (_Component) {
                     });
                   } else {
                     this.setState({
-                      messageCorrectUser: "*Los datos se han actualizado con éxito.",
+                      messageCorrectUser: "Los datos se han actualizado con éxito.",
                       messageCorrectPassword: "",
                       errorField: [],
                       errorMessages: []
@@ -43293,7 +43759,8 @@ var List = /*#__PURE__*/function (_Component) {
     _this.state = {
       books: [],
       pages: [],
-      actualPage: 0
+      actualPage: 0,
+      images: []
     };
     return _this;
   }
@@ -43324,7 +43791,8 @@ var List = /*#__PURE__*/function (_Component) {
                 res = _context.sent;
                 this.setState({
                   books: res.books,
-                  pages: res.pages
+                  pages: res.pages,
+                  images: res.urlImages
                 });
 
               case 6:
@@ -43369,7 +43837,7 @@ var List = /*#__PURE__*/function (_Component) {
       }), this.state.actualPage != this.state.pages.length - 1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("a", {
         "class": "btn btn-primary",
         href: "/favourites/" + parseInt(this.state.actualPage + 1)
-      }, "Siguiente") : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", null)) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", null)), this.state.books.map(function (book) {
+      }, "Siguiente") : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", null)) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", null)), this.state.books.map(function (book, i) {
         return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("main", {
           "class": "mainBooks"
         }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("div", {
@@ -43384,7 +43852,7 @@ var List = /*#__PURE__*/function (_Component) {
           href: "/books/" + book.id
         }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("img", {
           "class": "book-card__img",
-          src: book.image
+          src: _this2.state.images[i]
         }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("div", {
           "class": "book-card__book-back"
         }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("div", {

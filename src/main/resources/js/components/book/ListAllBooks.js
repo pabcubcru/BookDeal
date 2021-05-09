@@ -18,7 +18,8 @@ export default class List extends Component {
       actualPage:0,
       numTotalPages:0,
       nearBooks: true,
-      title:""
+      title:"",
+      images: []
     }
   }
     
@@ -34,24 +35,25 @@ export default class List extends Component {
     
     const username = await userService.getUsername()
 
-    this.setState({books:res.books, username:username.username, isAdded:res.isAdded, pages:res.pages, numTotalPages:parseInt(res.numTotalPages), nearBooks:res.nearBooks, title:res.title})
+    this.setState({books:res.books, username:username.username, isAdded:res.isAdded, pages:res.pages, numTotalPages:parseInt(res.numTotalPages), 
+      nearBooks:res.nearBooks, title:res.title, images: res.urlImages})
   }
 
     render() {
         return (
             <div >
                 {this.state.username != null ? 
-                    <div><h1 style={{float:"left", color: "black"}}><b>{this.state.title}</b></h1><br></br><br></br></div>
-                  :
-                    <div><h1 style={{float:"left", color: "black"}}><b>Todos los libros</b></h1><br></br><br></br></div>
+                  <div><h1 style={{float:"left", color: "black"}}><b>{this.state.title}</b></h1><br></br><br></br></div>
+                :
+                  <div><h1 style={{float:"left", color: "black"}}><b>Todos los libros</b></h1><br></br><br></br></div>
                   }
                 {this.state.books.length == 0 || this.state.nearBooks == false ?
                   <div>
                   <br></br>
                   <p><b>Actualmente no existen libros para mostrar{this.state.username != null ? ' cerca de usted' : ''}.</b></p>
                   {this.state.username != null ?
-                  <h2 style={{float:"left", color: "black"}}><b>Algunas recomendaciones</b></h2>
-                :
+                    <h2 style={{float:"left", color: "black"}}><b>Algunas recomendaciones</b></h2>
+                  :
                     <p></p>
                   }
                   <br></br><br></br><br></br>
@@ -80,7 +82,7 @@ export default class List extends Component {
                           <div class="book-card__cover">
                             <div class="book-card__book">
                               <div class="book-card__book-front">
-                                <a style={{zIndex:"-10"}}  href={"/books/"+book.id}><img class="book-card__img" src={book.image} /></a>
+                                <a style={{zIndex:"-10"}}  href={"/books/"+book.id}><img class="book-card__img" src={this.state.images[i]} alt=""/></a>
                               </div>
                               <div class="book-card__book-back"></div>
                               <div class="book-card__book-side"></div>

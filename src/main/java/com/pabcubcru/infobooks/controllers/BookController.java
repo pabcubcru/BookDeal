@@ -13,6 +13,7 @@ import javax.validation.Valid;
 
 import com.pabcubcru.infobooks.models.Book;
 import com.pabcubcru.infobooks.models.GenreEnum;
+import com.pabcubcru.infobooks.models.Image;
 import com.pabcubcru.infobooks.models.Request;
 import com.pabcubcru.infobooks.models.RequestStatus;
 import com.pabcubcru.infobooks.models.User;
@@ -87,6 +88,15 @@ public class BookController {
 		return model;
 	}
 
+    public List<String> getFirstUrlImagesFromBooks(List<Book> books) {
+        List<String> allBookImages = new ArrayList<>();
+        for(Book b : books) {
+            Image image = this.bookService.findFirstImageByIdBook(b.getId());
+            allBookImages.add(image.getUrlImage());
+        }
+        return allBookImages;
+    }
+
     @GetMapping(value = {"/{id}/edit"})
     public ModelAndView mainWithUserSecurity(Principal principal, @PathVariable("id") String id) {
         ModelAndView model = new ModelAndView();
@@ -110,7 +120,7 @@ public class BookController {
         return model;
     }
 
-    public BindingResult validateBook(Book book, BindingResult result) {
+    public BindingResult validateBook(Book book, BindingResult result, Boolean isNew) {
 
         if(book.getPublicationYear() != null) {
             if(book.getPublicationYear() > LocalDate.now().getYear()) {
@@ -119,18 +129,36 @@ public class BookController {
             }
         }
 
+        if(!book.getImage().isEmpty()) {
+            if(Integer.parseInt(book.getImage()) <= 0 && isNew) {
+                result.rejectValue("image", "Debe seleccionar al menos una imagen.", "Debe seleccionar al menos una imagen.");
+            } else if(Integer.parseInt(book.getImage()) > 10) {
+                result.rejectValue("image", "No puede añadir más de 10 imágenes.", "No puede añadir más de 10 imágenes.");
+            }
+        }
+
         return result;
+    }
+
+    @PostMapping(value = "/images/upload")
+    public void saveImages(@RequestBody Image image) {
+        try {
+            this.bookService.saveImage(image);
+        } catch (Exception e) {
+            //TODO: handle exception
+        }
     }
 
     @PostMapping(value = "/new")
     public Map<String, Object> create(@RequestBody @Valid Book book, BindingResult result, Principal principal) {
         Map<String, Object> res = new HashMap<>();
 
-        result = this.validateBook(book, result);
+        result = this.validateBook(book, result, true);
         if(!result.hasErrors()) {
             try{
                 book.setUsername(principal.getName());
                 this.bookService.save(book);
+                res.put("idBook", book.getId());
                 res.put("success", true);
             } catch(Exception e) {
                 res.put("success", false);
@@ -139,7 +167,6 @@ public class BookController {
             res.put("errors", result.getAllErrors());
             res.put("success", false);
         }
-        
         return res;
     }
 
@@ -147,7 +174,7 @@ public class BookController {
     public Map<String, Object> edit(@RequestBody @Valid Book book, BindingResult result, Principal principal) {
         Map<String, Object> res = new HashMap<>();
 
-        result = this.validateBook(book, result);
+        result = this.validateBook(book, result, false);
         if(!result.hasErrors()) {
             try{
                 book.setUsername(principal.getName());
@@ -160,7 +187,6 @@ public class BookController {
             res.put("errors", result.getAllErrors());
             res.put("success", false);
         }
-
         return res;
     }
 
@@ -173,6 +199,8 @@ public class BookController {
             if(requestAcceptedToBook1 == null && requestAcceptedToBook2 == null) {
                 List<Request> requests = this.requestService.findByIdBook1OrIdBook2(id, id);
                 this.requestService.deleteAll(requests);
+                List<Image> images = this.bookService.findImagesByIdBook(id);
+                this.bookService.deleteAllImages(images);
                 this.bookService.deleteBookById(id);
             }
         }
@@ -185,13 +213,14 @@ public class BookController {
         Page<Book> pageOfBooks = null;
         PageRequest pageRequest = PageRequest.of(page, 21);
         Integer numberOfPages = 0;
+        List<Book> books = new ArrayList<>();
 
         if(principal == null) {
             pageOfBooks = this.bookService.findAll(pageRequest);
             numberOfPages = pageOfBooks.getTotalPages();
-            res.put("books", pageOfBooks.getContent());
+            books = pageOfBooks.getContent();
+            res.put("books", books);
         } else {
-            List<Book> books = new ArrayList<>();
             List<Book> findBooks = new ArrayList<>();
             User user = this.userService.findByUsername(principal.getName());
             pageOfBooks = this.bookService.findNearBooks(user, pageRequest, showMode);
@@ -234,6 +263,9 @@ public class BookController {
             res.put("isAdded", isAdded);
         }
 
+        List<String> allBookImages = this.getFirstUrlImagesFromBooks(books);
+
+        res.put("urlImages", allBookImages);
         res.put("numTotalPages", numberOfPages);
         res.put("pages", new ArrayList<Integer>());
         if(numberOfPages > 0) {
@@ -252,6 +284,9 @@ public class BookController {
         
         res.put("books", pageOfBooks.getContent());
 
+        List<String> allBookImages = this.getFirstUrlImagesFromBooks(pageOfBooks.getContent());
+
+        res.put("urlImages", allBookImages);
         Integer numberOfPages = pageOfBooks.getTotalPages();
         res.put("numTotalPages", numberOfPages);
         res.put("pages", new ArrayList<Integer>());
@@ -259,7 +294,6 @@ public class BookController {
             List<Integer> pages = IntStream.rangeClosed(page-5 <= 0 ? 0 : page-5, page+5 >= numberOfPages-1 ? numberOfPages-1 : page+5).boxed().collect(Collectors.toList());
             res.put("pages", pages);
         }
-
         return res;
     }
 
@@ -320,6 +354,10 @@ public class BookController {
                     }
                 }
             }
+            List<Image> images = this.bookService.findImagesByIdBook(book.getId());
+            List<String> urlImages = images.stream().map(x -> x.getUrlImage()).collect(Collectors.toList());
+            res.put("urlImages", urlImages);
+            res.put("images", images);
             res.put("book", book);
             res.put("success", true);
         } catch (Exception e) {
@@ -335,6 +373,8 @@ public class BookController {
         try {
             Book book = this.bookService.findBookById(id);
             res.put("book", book);
+            List<Image> images = this.bookService.findImagesByIdBook(book.getId());
+            res.put("images", images);
             res.put("success", true);
         } catch (Exception e) {
             res.put("success", false);
@@ -353,6 +393,9 @@ public class BookController {
         List<Book> books = map.values().stream().findFirst().orElse(new ArrayList<>());
         
         res.put("books", books);
+
+        List<String> allBookImages = this.getFirstUrlImagesFromBooks(books);
+        res.put("urlImages", allBookImages);
 
         Integer numberOfPages = map.keySet().stream().findFirst().orElse(0);
         res.put("numTotalPages", numberOfPages);
@@ -375,6 +418,15 @@ public class BookController {
         }
 
         return res;
+    }
+
+    @GetMapping(value = "/images/{id}/delete")
+    public void deleteImage(@PathVariable("id") String id) {
+        try {
+            this.bookService.deleteImageById(id);
+        } catch (Exception e) {
+            //TODO: handle exception
+        }
     }
 
     

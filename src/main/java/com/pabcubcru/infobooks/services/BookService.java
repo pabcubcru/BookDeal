@@ -4,8 +4,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.pabcubcru.infobooks.models.Book;
+import com.pabcubcru.infobooks.models.Image;
 import com.pabcubcru.infobooks.models.User;
 import com.pabcubcru.infobooks.repository.BookRepository;
+import com.pabcubcru.infobooks.repository.ImageRepository;
 import com.pabcubcru.infobooks.repository.UserRepository;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,10 +23,14 @@ public class BookService {
 
     private UserRepository userRepository;
 
+    private ImageRepository imageRepository;
+
     @Autowired
-    public BookService(BookRepository bookRepository, UserRepository userRepository) {
+    public BookService(BookRepository bookRepository, UserRepository userRepository, 
+    ImageRepository imageRepository) {
         this.bookRepository = bookRepository;
         this.userRepository = userRepository;
+        this.imageRepository = imageRepository;
     }
 
     @Transactional
@@ -92,6 +98,36 @@ public class BookService {
         Page<Book> books = this.bookRepository.findByUsernameIn(usernames, pageable);
 
         return books;
+    }
+
+    @Transactional
+    public List<Image> findImagesByIdBook(String idBook) {
+        return this.imageRepository.findByIdBook(idBook);
+    }
+
+    @Transactional
+    public Image findFirstImageByIdBook(String idBook) {
+        return this.imageRepository.findFirstByIdBook(idBook);
+    }
+
+    @Transactional
+    public void saveImage(Image image) {
+        this.imageRepository.save(image);
+    }
+
+    @Transactional
+    public void deleteImage(Image image) {
+        this.imageRepository.delete(image);
+    }
+
+    @Transactional
+    public void deleteAllImages(List<Image> images) {
+        this.imageRepository.deleteAll(images);
+    }
+
+    @Transactional
+    public void deleteImageById(String id) {
+        this.imageRepository.deleteById(id);
     }
     
 }
