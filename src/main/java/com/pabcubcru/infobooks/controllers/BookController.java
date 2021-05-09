@@ -129,7 +129,7 @@ public class BookController {
             }
         }
 
-        if(!book.getImage().isBlank()) {
+        if(!book.getImage().isEmpty()) {
             if(Integer.parseInt(book.getImage()) <= 0 && isNew) {
                 result.rejectValue("image", "Debe seleccionar al menos una imagen.", "Debe seleccionar al menos una imagen.");
             } else if(Integer.parseInt(book.getImage()) > 10) {
