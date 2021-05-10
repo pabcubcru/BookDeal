@@ -30,7 +30,7 @@ export default class List extends Component {
         <div >
           <h1 style={{float:"left", color: "black"}}><b>Libros recomendados para usted</b></h1><br></br><br></br><br></br>
             {this.state.books.length == 0 ?
-                  <div><p><b>No se encuentra ningún libro para recomendarle. Añada más géneros preferidos a su perfil. O añada libros a favoritos.<a class="btn btn-primary" href="/profile">Ir a perfil</a></b></p><br></br>
+                  <div><p><b>No se encuentra ningún libro para recomendarle. Añada más géneros preferidos a su perfil. O añada libros a favoritos. <a class="btn btn-primary" href="/profile">Ir a perfil</a></b></p><br></br>
                   <br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br>
                   <br></br><br></br></div>
                 :
@@ -78,10 +78,7 @@ export default class List extends Component {
                           {book.author}
                             </div>
                         <div class="book-card__author">
-                        {book.action == "VENTA" ?
-                          <span>{book.action} por {book.price} €</span>
-                        :
-                          book.action}
+                          <span>{book.price} €</span>
                         </div>
                                                
                       </div>

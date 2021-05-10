@@ -170,3 +170,11 @@
   width:150px;
   padding: 10px 20px;
 }
+
+/** Code for hover info **/
+
+dfn {
+  width: max-content;
+  height: max-content;
+  margin-top: 8px;
+}

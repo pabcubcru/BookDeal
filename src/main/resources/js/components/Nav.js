@@ -34,6 +34,11 @@ export default class Nav extends Component {
       button2 = <a  class="nav-link " href="/logout">Cerrar sesión</a>;
     }
 
+    const info = "Se pueden realizar diferentes tipos de búsquedas: ------------------------------------------------------ "+
+    "1) Escriba las palabras clave separadas por un espacio. ------------------------------------------------ "+
+    "2) Escriba sólo un número sin espacios, para buscar por año o precio del libro, o por código postal del usuario propietario. "+
+    "------------------------------------------ 3) Puedes buscar por un rango de años, separandolos por un guión y sin espacios (YYYY-YYYY)."
+
     return (
       <nav style={{marginBottom:"30px"}}>
         <div class="desktop">
@@ -51,7 +56,7 @@ export default class Nav extends Component {
                   <ul>
                     <li ><a  href="/books/all/0/postCode">Mi cod. postal</a></li>
                     <li ><a  href="/books/all/0/province">Mi provincia</a></li>
-                    <li ><a  href="/books/all/0/genres">Mis géneros</a></li>
+                    <li ><a  href="/books/all/0/genres">Mis géneros preferidos</a></li>
                   </ul>
                 </li>
             </ul>
@@ -70,6 +75,7 @@ export default class Nav extends Component {
           </li>
           <li style={{float:"right"}}><div class="search-box">
             <input class="text" type="text" placeholder="Título, ISBN, autor, ..." onChange={(event) => this.setState({query:event.target.value})}/>
+            <dfn data-info={info}><i style={{top: "50%"}} class="fa fa-info-circle"></i></dfn>
           <button type="button" onClick={() => this.search(this.state.query)} disabled={this.state.query.trim() == ''}> <i class="fa fa-search"></i></button></div></li>
           </div>
         :
@@ -78,6 +84,7 @@ export default class Nav extends Component {
           <li style={{float:"right"}}>{button1}</li>
           <li style={{float:"right"}}><div class="search-box">
             <input class="text" type="text" placeholder="Título, ISBN, autor, ..." onChange={(event) => this.setState({query:event.target.value})}/>
+            <dfn data-info={info}><i style={{top: "50%"}} class="fa fa-info-circle"></i></dfn>
           <button type="button" onClick={() => this.search(this.state.query)} disabled={this.state.query.trim() == ''}> <i class="fa fa-search"></i></button></div></li>
           </div>
         }  
@@ -122,6 +129,7 @@ export default class Nav extends Component {
               <li class="search-li" style={{backgroundColor:"transparent"}}>
                 <div class="search">
                 <input class="text" type="text" placeholder="Título, ISBN, año, ..."/>
+                <dfn data-info={info}><i style={{top: "50%"}} class="fa fa-info-circle"></i></dfn>
                 <button> <i class="fa fa-search"></i></button>
                 </div>
               </li>
@@ -137,6 +145,7 @@ export default class Nav extends Component {
               <li class="search-li" style={{backgroundColor:"transparent"}}>
                 <div class="search">
                 <input class="text" type="text" placeholder="Título, ISBN, año, ..."/>
+                <dfn data-info={info}><i style={{top: "50%"}} class="fa fa-info-circle"></i></dfn>
                 <button> <i class="fa fa-search"></i></button>
                 </div>
               </li>

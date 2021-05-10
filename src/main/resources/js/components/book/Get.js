@@ -84,11 +84,8 @@ export default class Get extends Component {
           </p>
 
           <p class="page__content-credits">
-            ¿Qué quiere hacer?
-            <span>{this.state.book.action == "VENTA" ?
-                <p> {this.state.book.action} por {this.state.book.price} €</p>
-            :
-                <p> {this.state.book.action}</p>} </span>
+            Precio
+            <span>{this.state.book.price} €</span>
           </p>
 
           <p class="page__content-credits">
