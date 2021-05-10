@@ -60,7 +60,7 @@ public class BookControllerTests {
         book.setGenres("Comedia,Aventuras");
         book.setAuthor("Author Test");
         book.setDescription("Description Test");
-        book.setImage("https://i.pinimg.com/originals/8d/23/06/8d2306b98839234e49ce96a8b76e20ae.jpg");
+        book.setImage("https://i.ibb.co/YRy9kHC/paper.jpg");
         book.setStatus("COMO NUEVO");
         book.setUsername("test001");
 
@@ -140,7 +140,7 @@ public class BookControllerTests {
         this.mockMvc.perform(MockMvcRequestBuilders.put("/books/{id}/edit", ID_BOOK_1).with(SecurityMockMvcRequestPostProcessors.csrf())
         .param("id", ID_BOOK_1).param("title", "Title").param("isbn", "0-7645-2641-3").param("originalTitle", "")
         .param("publicationYear", "2015").param("publisher", "Publisher").param("genres", "Comedia,Aventuras")
-        .param("author", "Author").param("description", "Description").param("image", "https://i.pinimg.com/originals/8d/23/06/8d2306b98839234e49ce96a8b76e20ae.jpg")
+        .param("author", "Author").param("description", "Description").param("image", "https://i.ibb.co/YRy9kHC/paper.jpg")
         .param("status", "POCO USADO").param("action", "INTERCAMBIO").param("price", "").param("username", ""))
         .andExpect(MockMvcResultMatchers.status().isOk());
     }*/
@@ -151,7 +151,7 @@ public class BookControllerTests {
         this.mockMvc.perform(MockMvcRequestBuilders.post("/books/new").with(SecurityMockMvcRequestPostProcessors.csrf())
         .param("title", "Title").param("isbn", "0-7645-2641-3").param("originalTitle", "")
         .param("publicationYear", "2015").param("publisher", "Publisher").param("genres", "Comedia,Aventuras")
-        .param("author", "Author").param("description", "Description").param("image", "https://i.pinimg.com/originals/8d/23/06/8d2306b98839234e49ce96a8b76e20ae.jpg")
+        .param("author", "Author").param("description", "Description").param("image", "https://i.ibb.co/YRy9kHC/paper.jpg")
         .param("status", "POCO USADO").param("action", "INTERCAMBIO").param("price", ""))
         .andExpect(MockMvcResultMatchers.status().isOk());
     }*/
@@ -162,7 +162,7 @@ public class BookControllerTests {
         this.mockMvc.perform(MockMvcRequestBuilders.post("/books/new").with(SecurityMockMvcRequestPostProcessors.csrf())
         .param("title", "Title").param("isbn", "0-7645-2641-3")
         .param("publicationYear", "2015").param("publisher", "Publisher").param("genres", "Comedia,Aventuras")
-        .param("author", "Author").param("description", "Description").param("image", "https://i.pinimg.com/originals/8d/23/06/8d2306b98839234e49ce96a8b76e20ae.jpg")
+        .param("author", "Author").param("description", "Description").param("image", "https://i.ibb.co/YRy9kHC/paper.jpg")
         .param("status", "POCO USADO").param("action", ""))
         .andExpect(MockMvcResultMatchers.status().is4xxClientError());
     }

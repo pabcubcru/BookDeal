@@ -62,7 +62,7 @@ export default class List extends Component {
                           </div>
                           <div>
                             <div class="book-card__title">
-                              {book.title} <a onClick={() => {this.deleteFavouriteBook(book.id, book.title, this.state.actualPage)}} style={{float:"right"}}><img style={{height:"25px", width:"25px"}} src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Coraz%C3%B3n.svg/1121px-Coraz%C3%B3n.svg.png"></img></a>
+                              {book.title} <a onClick={() => {this.deleteFavouriteBook(book.id, book.title, this.state.actualPage)}} style={{float:"right"}}><img style={{height:"25px", width:"25px"}} src="https://i.ibb.co/xXKJXKS/Favorito.png"></img></a>
                             </div>
                             <div class="book-card__author">
                               {book.author}

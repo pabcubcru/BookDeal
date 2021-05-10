@@ -141,10 +141,10 @@ export default class Get extends Component {
       <hr></hr></center>
   
     <center>{this.state.username == this.state.book.username ? 
-      <center><br></br><button style={{backgroundImage:"url(https://i.pinimg.com/originals/8d/23/06/8d2306b98839234e49ce96a8b76e20ae.jpg)", margin:"10px", color:"black"}} 
+      <center><br></br><button style={{backgroundImage:"url(https://i.ibb.co/YRy9kHC/paper.jpg)", margin:"10px", color:"black"}} 
       onClick={() => this.goToEdit(this.state.book.id)} class="btn btn-primary" disabled={this.state.hasRequestAccepted == true}><b>Editar</b></button>
       <button onClick={() => this.deleteBook(this.state.book.id, this.state.images)} style={{color:"red", 
-      backgroundImage:"url(https://i.pinimg.com/originals/8d/23/06/8d2306b98839234e49ce96a8b76e20ae.jpg)"}} class="btn btn-primary" 
+      backgroundImage:"url(https://i.ibb.co/YRy9kHC/paper.jpg)"}} class="btn btn-primary" 
       disabled={this.state.hasRequestAccepted == true}><b>Eliminar</b></button>
       {this.state.hasRequestAccepted ? 
           <p class='text-danger'><b>Tiene una petición ACEPTADA</b></p>
@@ -158,13 +158,13 @@ export default class Get extends Component {
   {this.state.username != null && this.state.username != this.state.book.username ?
       <center>
       {!this.state.isAdded ? 
-      <center><a class="btn btn-primary" style={{backgroundImage:"url(https://i.pinimg.com/originals/8d/23/06/8d2306b98839234e49ce96a8b76e20ae.jpg)"}} 
+      <center><a class="btn btn-primary" style={{backgroundImage:"url(https://i.ibb.co/YRy9kHC/paper.jpg)"}} 
       onClick={() => this.addFavouriteBook(this.state.book.id)}><img style={{height:"30px", width:"30px"}} 
-      src="http://assets.stickpng.com/images/5a02bfca18e87004f1ca4395.png"></img> <b>Añadir a favoritos</b></a><br></br></center>
+      src="https://i.ibb.co/WktpFGx/No-Favorito.png"></img> <b>Añadir a favoritos</b></a><br></br></center>
       :                              
-      <center><a class="btn btn-primary" style={{backgroundImage:"url(https://i.pinimg.com/originals/8d/23/06/8d2306b98839234e49ce96a8b76e20ae.jpg)"}} 
+      <center><a class="btn btn-primary" style={{backgroundImage:"url(https://i.ibb.co/YRy9kHC/paper.jpg)"}} 
       onClick={() => this.deleteFavouriteBook(this.state.book.id, this.state.book.title)}><img style={{height:"30px", width:"30px"}} 
-      src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Coraz%C3%B3n.svg/1121px-Coraz%C3%B3n.svg.png"></img> <b>Eliminar de favoritos</b></a><br></br></center>}
+      src="https://i.ibb.co/xXKJXKS/Favorito.png"></img> <b>Eliminar de favoritos</b></a><br></br></center>}
       </center>
   :                              
       <p></p>
@@ -174,16 +174,16 @@ export default class Get extends Component {
       !this.state.alreadyRequest ?
       <center>
           {!this.state.hasRequestAccepted ?
-              <a href={"/requests/"+this.state.book.id+"/add"} style={{color:"black", marginTop:"20px", backgroundImage:"url(https://i.pinimg.com/originals/8d/23/06/8d2306b98839234e49ce96a8b76e20ae.jpg)"}} 
+              <a href={"/requests/"+this.state.book.id+"/add"} style={{color:"black", marginTop:"20px", backgroundImage:"url(https://i.ibb.co/YRy9kHC/paper.jpg)"}} 
                 class="btn btn-primary"><b>Realizar petición</b></a>
           :
-              <center><button style={{color:"black", marginTop:"20px", backgroundImage:"url(https://i.pinimg.com/originals/8d/23/06/8d2306b98839234e49ce96a8b76e20ae.jpg)"}} 
+              <center><button style={{color:"black", marginTop:"20px", backgroundImage:"url(https://i.ibb.co/YRy9kHC/paper.jpg)"}} 
               class="btn btn-primary" disabled><b>Realizar petición</b></button>
               <p style={{color:"red"}}><b>Ya tiene una petición ACEPTADA</b></p></center>
           }
       </center>
       :
-      <button style={{background:"#099C01",color:"green", margin:"20px", backgroundImage:"url(https://i.pinimg.com/originals/8d/23/06/8d2306b98839234e49ce96a8b76e20ae.jpg)"}} 
+      <button style={{background:"#099C01",color:"green", margin:"20px", backgroundImage:"url(https://i.ibb.co/YRy9kHC/paper.jpg)"}} 
       class="btn btn-primary" disabled><b>Petición realizada</b></button>
   :
       <p></p>

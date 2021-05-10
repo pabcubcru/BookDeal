@@ -77,7 +77,7 @@ public class BookServiceTests {
         book.setGenres("Comedia");
         book.setAuthor("Author Test"); 
         book.setDescription("Description test"); 
-        book.setImage("https://i.pinimg.com/originals/8d/23/06/8d2306b98839234e49ce96a8b76e20ae.jpg");
+        book.setImage("https://i.ibb.co/YRy9kHC/paper.jpg");
         book.setStatus("COMO NUEVO"); 
 		book.setPrice(10.);
         book.setUsername("test003");

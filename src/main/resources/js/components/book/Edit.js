@@ -66,7 +66,7 @@ export default class Form extends Component {
   render() {
     return (
       
-      <div style={{backgroundImage: "url(https://i.pinimg.com/originals/8d/23/06/8d2306b98839234e49ce96a8b76e20ae.jpg)", 
+      <div style={{backgroundImage: "url(https://i.ibb.co/YRy9kHC/paper.jpg)", 
       backgroundSize: "cover" , padding: "50px", fontWeight: "bold", borderRadius: '5px', marginLeft: "-100"}}>
         <h1 style={{color: "#007bff"}}>Editar {this.state.titleCopy}</h1>
         <p class='text-danger'>*Obligatorio</p>
@@ -241,7 +241,7 @@ export default class Form extends Component {
           <ul class="galeria">
             <li><a href={String("#img"+i)}><img src={image.urlImage}/></a></li><br></br>
             <li><button class="btn btn-primary" onClick={() => this.onClickDeleteImage(image, this.state.id)} disabled={this.state.images.length <= 1} 
-              style={{backgroundImage:"url(https://i.pinimg.com/originals/8d/23/06/8d2306b98839234e49ce96a8b76e20ae.jpg)"}}>
+              style={{backgroundImage:"url(https://i.ibb.co/YRy9kHC/paper.jpg)"}}>
                 <i style={{color:"red"}} class="fa fa-trash"></i></button></li>
                 {this.state.images.length <= 1 ?
                 <center><p style={{color:"red"}}>Debe tener al menos una imagen.</p></center>

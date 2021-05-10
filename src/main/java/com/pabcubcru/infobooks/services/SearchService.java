@@ -67,7 +67,6 @@ public class SearchService {
         .field("genres")
         .field("author")
         .field("status")
-        .field("action")
         //.field("price")
         //.field("publicationYear")
         .operator(Operator.OR)
