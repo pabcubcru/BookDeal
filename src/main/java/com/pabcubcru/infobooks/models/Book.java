@@ -50,6 +50,7 @@ public class Book extends BaseEntity {
     private String genres;
 
     @NotBlank(message = "El autor es un campo requerido.")
+    @Length(max = 80, message="El título original no debe superar los 80 carácteres.")
     @Field(type = FieldType.Keyword, name = "author")
     private String author;
 

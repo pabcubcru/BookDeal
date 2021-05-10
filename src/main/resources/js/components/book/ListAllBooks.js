@@ -62,7 +62,7 @@ export default class List extends Component {
                   <center>
                   
                   {this.state.books.length != 0 && this.state.pages.length > 1 ?
-                  <center>{this.state.actualPage != 0 ? <span><a class="btn btn-primary" href={"/books/all/0"}><b>{String("<<")}</b></a><a style={{margin:"5px"}} class="btn btn-primary" href={"/books/all/"+parseInt(this.state.actualPage-1)}><b>{String("<")}</b></a></span> : <p></p>}
+                  <center>{this.state.actualPage != 0 ? <span><br></br><a class="btn btn-primary" href={"/books/all/0"}><b>{String("<<")}</b></a><a style={{margin:"5px"}} class="btn btn-primary" href={"/books/all/"+parseInt(this.state.actualPage-1)}><b>{String("<")}</b></a></span> : <p></p>}
                   {this.state.pages.map((page) => {
                     return(
                       
@@ -93,9 +93,9 @@ export default class List extends Component {
                               {book.title} 
                               {this.state.username != null ?
                             this.state.isAdded[i] == false ? 
-                              <a onClick={() => this.addFavouriteBook(book.id, this.state.actualPage)} style={{float:"right"}}><img style={{height:"25px", width:"25px"}} src="http://assets.stickpng.com/images/5a02bfca18e87004f1ca4395.png"></img></a>
+                              <a onClick={() => this.addFavouriteBook(book.id, this.state.actualPage)} style={{float:"right"}}><img style={{height:"25px", width:"25px"}} src="https://i.ibb.co/WktpFGx/No-Favorito.png"></img></a>
                             :                              
-                            <a onClick={() => {this.deleteFavouriteBook(book.id, book.title, this.state.actualPage)}} style={{float:"right"}}><img style={{height:"25px", width:"25px"}} src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Coraz%C3%B3n.svg/1121px-Coraz%C3%B3n.svg.png"></img></a>
+                            <a onClick={() => {this.deleteFavouriteBook(book.id, book.title, this.state.actualPage)}} style={{float:"right"}}><img style={{height:"25px", width:"25px"}} src="https://i.ibb.co/xXKJXKS/Favorito.png"></img></a>
                           :
                             <p></p>
                           }

@@ -44,7 +44,7 @@ public class BookValidatorTests {
         book.setGenres("Comedia,Aventuras");
         book.setAuthor("Author Test");
         book.setDescription("Description Test");
-        book.setImage("https://i.pinimg.com/originals/8d/23/06/8d2306b98839234e49ce96a8b76e20ae.jpg");
+        book.setImage("https://i.ibb.co/YRy9kHC/paper.jpg");
         book.setStatus("COMO NUEVO");
         book.setUsername("test001");
         book.setPrice(10.0);
@@ -66,7 +66,7 @@ public class BookValidatorTests {
         book.setGenres(""); //Géneros en blanco
         book.setAuthor(""); //Autor en blanco
         book.setDescription("Description Test");
-        book.setImage("https://i.pinimg.com/originals/8d/23/06/8d2306b98839234e49ce96a8b76e20ae.jpg");
+        book.setImage("https://i.ibb.co/YRy9kHC/paper.jpg");
         book.setStatus("COMO NUEVO");
         book.setUsername("test001");
         book.setPrice(10.0);
@@ -88,7 +88,7 @@ public class BookValidatorTests {
         book.setGenres("Comedia");
         book.setAuthor("Author Test"); 
         book.setDescription(""); //Descripción en blanco
-        book.setImage("https://i.pinimg.com/originals/8d/23/06/8d2306b98839234e49ce96a8b76e20ae.jpg");
+        book.setImage("https://i.ibb.co/YRy9kHC/paper.jpg");
         book.setStatus(""); //Estado en blanco
         book.setUsername("test001");
         book.setPrice(10.0);
@@ -110,7 +110,7 @@ public class BookValidatorTests {
         book.setGenres("Comedia");
         book.setAuthor("Author Test"); 
         book.setDescription("Description test"); 
-        book.setImage("https://i.pinimg.com/originals/8d/23/06/8d2306b98839234e49ce96a8b76e20ae.jpg");
+        book.setImage("https://i.ibb.co/YRy9kHC/paper.jpg");
         book.setStatus("COMO NUEVO"); 
         book.setUsername("test001");
         book.setPrice(10.0);
@@ -135,7 +135,7 @@ public class BookValidatorTests {
         book.setGenres("Comedia");
         book.setAuthor("Author Test"); 
         book.setDescription("Description test"); 
-        book.setImage("https://i.pinimg.com/originals/8d/23/06/8d2306b98839234e49ce96a8b76e20ae.jpg");
+        book.setImage("https://i.ibb.co/YRy9kHC/paper.jpg");
         book.setStatus("COMO NUEVO"); 
         book.setUsername("test001");
         book.setPrice(10.0);

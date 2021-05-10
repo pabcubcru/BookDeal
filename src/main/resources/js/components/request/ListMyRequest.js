@@ -62,7 +62,7 @@ export default class List extends Component {
                   }<br></br></center>}
                 {this.state.requests.map((request, i) => {
                     return(
-                    <div style={{backgroundImage: "url(https://i.pinimg.com/originals/8d/23/06/8d2306b98839234e49ce96a8b76e20ae.jpg)", 
+                    <div style={{backgroundImage: "url(https://i.ibb.co/YRy9kHC/paper.jpg)", 
                     backgroundSize: "auto auto", padding: "15px", paddingTop:"20px", marginBlock:"15px", margin:"0px 12px 30px 0px", borderRadius: '5px', width: "32%", display:"inline-grid"}}>
 
                     {request.action == "INTERCAMBIO" ?
