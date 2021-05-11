@@ -121,7 +121,7 @@ export default class Form extends Component {
             <option value="">Despliega para ver las opciones</option>
             {this.state.provinces.map((province) => {
               return (
-                <option value={province}>{province}</option>
+                <option value={province}>{province.replaceAll("_", " ")}</option>
               )
             })}
             </select>

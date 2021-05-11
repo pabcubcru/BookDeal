@@ -36920,7 +36920,7 @@ var Nav = /*#__PURE__*/function (_Component) {
         }, "Cerrar sesi\xF3n");
       }
 
-      var info = "Se pueden realizar diferentes tipos de búsquedas: ------------------------------------------------------ " + "1) Escriba las palabras clave separadas por un espacio. ------------------------------------------------ " + "2) Escriba sólo un número sin espacios, para buscar por año o precio del libro, o por código postal del usuario propietario. " + "------------------------------------------ 3) Puedes buscar por un rango de años, separandolos por un guión y sin espacios (YYYY-YYYY).";
+      var info = "BÚSQUEDA DE LIBROS: ======================= " + "1) POR SUS ATRIBUTOS: ................ " + "1.1) Por palabras clave separadas por un espacio ................................ " + "1.2) Por año o precio, escribiendo sólo un número sin espacios ........ " + "1.3) Por un rango de años, separandolos por un guión y sin espacios (YYYY-YYYY). ======================= 2) POR SUS PROPIETARIOS: .......... " + "2.1) Por nombre de usuario .......... 2.2) Por código postal,  válido y sin espacios ..................................... " + "2.3) Por provincia válida (puede consultarlas en el registro o su perfil).";
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("nav", {
         style: {
           marginBottom: "30px"
@@ -42827,7 +42827,7 @@ var Form = /*#__PURE__*/function (_Component) {
       }, "Despliega para ver las opciones"), this.state.provinces.map(function (province) {
         return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("option", {
           value: province
-        }, province);
+        }, province.replaceAll("_", " "));
       })), this.state.errorField.indexOf("province") != -1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
         "class": "text-danger"
       }, this.state.errorMessages[this.state.errorField.indexOf("province")]) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
@@ -43514,7 +43514,7 @@ var Form = /*#__PURE__*/function (_Component) {
       }, "Despliega para ver las opciones"), this.state.provinces.map(function (province) {
         return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("option", {
           value: province
-        }, province);
+        }, province.replaceAll("_", " "));
       })), this.state.errorField.indexOf("province") != -1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
         "class": "text-danger"
       }, this.state.errorMessages[this.state.errorField.indexOf("province")]) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {

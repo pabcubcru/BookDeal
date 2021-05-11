@@ -19,6 +19,8 @@ public interface UserRepository extends ElasticsearchRepository<User, String> {
 
     public List<User> findByPostCode(String postCode);
 
+    public List<User> findByProvinceLike(String provinceString);
+
     public List<User> findByProvince(String provinceString);
 
     public List<User> findByPostCodeOrProvince(String postCode, String province);

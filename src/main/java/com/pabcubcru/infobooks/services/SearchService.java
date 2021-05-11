@@ -1,12 +1,14 @@
 package com.pabcubcru.infobooks.services;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
 import com.pabcubcru.infobooks.models.Book;
+import com.pabcubcru.infobooks.models.ProvinceEnum;
 import com.pabcubcru.infobooks.models.User;
 import com.pabcubcru.infobooks.models.UserFavouriteBook;
 import com.pabcubcru.infobooks.repository.BookRepository;
@@ -24,6 +26,7 @@ import org.elasticsearch.search.sort.SortBuilders;
 import org.elasticsearch.search.sort.SortOrder;
 import org.elasticsearch.common.lucene.search.function.FunctionScoreQuery;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.elasticsearch.core.ElasticsearchRestTemplate;
@@ -87,8 +90,19 @@ public class SearchService {
 
         NativeSearchQueryBuilder searchQuery = new NativeSearchQueryBuilder();
 
-        if(this.isNumeric(query)) {
-            searchQuery.withQuery(QueryBuilders.multiMatchQuery(Double.parseDouble(query))
+        List<Book> books = new ArrayList<>();
+        Boolean isSearchToBook = true;
+        Page<Book> pageBooks = null;
+
+        String regexPostCode = "0[1-9][0-9]{3}|[1-4][0-9]{4}|5[0-2][0-9]{3}";
+
+        List<String> provinces = Arrays.asList(ProvinceEnum.values()).stream().map(x -> x.toString().toLowerCase().replace("_", " ")
+        .replace("á", "a").replace("é", "e").replace("í", "i").replace("ó", "o").replace("ú", "u")).collect(Collectors.toList());
+
+        String q = query.toLowerCase().replace("á", "a").replace("é", "e").replace("í", "i").replace("ó", "o").replace("ú", "u");
+
+        if(this.isNumeric(query) && !query.matches(regexPostCode)) {
+            searchQuery.withQuery(QueryBuilders.multiMatchQuery(Integer.parseInt(query))
             .field("price")
             .field("publicationYear")
             .operator(Operator.OR)
@@ -96,8 +110,23 @@ public class SearchService {
         } else if(query.contains("-") && this.isCorrectRange(query)) {
             String[] splitQuery = query.split("-");
             searchQuery.withQuery(QueryBuilders.matchAllQuery())
-            .withFilter(QueryBuilders.rangeQuery("publicationYear").gte(Integer.parseInt(splitQuery[0])).lte(splitQuery[1]))
+            .withFilter(QueryBuilders.rangeQuery("publicationYear").gte(Integer.parseInt(splitQuery[0])).lte(Integer.parseInt(splitQuery[1])))
             .withSort(SortBuilders.fieldSort("publicationYear").order(SortOrder.ASC));
+        } else if(query.matches(regexPostCode)) {
+            List<String> usernames = this.userRepository.findByPostCode(query).stream().map(x -> x.getUsername()).collect(Collectors.toList());
+            pageBooks = this.bookRepository.findByUsernameIn(usernames, pageable);
+            books = pageBooks.getContent();
+            isSearchToBook = false;
+        } else if(provinces.stream().anyMatch(x -> x.equals(q))) {
+            NativeSearchQueryBuilder provinceQuery = new NativeSearchQueryBuilder();
+            searchQuery.withQuery(QueryBuilders.matchQuery("province", query));
+            NativeSearchQuery provinceQueryNative = provinceQuery.build();
+            SearchHits<User> users = elasticsearchTemplate.search(provinceQueryNative, User.class, IndexCoordinates.of("users"));
+            List<User> usuarios = users.stream().map(x -> x.getContent()).collect(Collectors.toList());
+            List<String> usernames = usuarios.stream().map(x -> x.getUsername()).collect(Collectors.toList());
+            pageBooks = this.bookRepository.findByUsernameIn(usernames, pageable);
+            books = pageBooks.getContent();
+            isSearchToBook = false;
         } else {
             searchQuery.withQuery(QueryBuilders.multiMatchQuery(query)
             .field("title")
@@ -108,6 +137,7 @@ public class SearchService {
             .field("genres")
             .field("author")
             .field("status")
+            .field("username")
             .operator(Operator.OR)
             .type(MultiMatchQueryBuilder.Type.BEST_FIELDS)
             .fuzziness(Fuzziness.ONE)
@@ -116,15 +146,20 @@ public class SearchService {
 
         searchQuery.withPageable(pageable);
         NativeSearchQuery queryPrincipal = searchQuery.build();
+        SearchHits<Book> hits = elasticsearchTemplate.search(queryPrincipal, Book.class, IndexCoordinates.of("books"));
 
-        SearchHits<Book> books = elasticsearchTemplate.search(queryPrincipal, Book.class, IndexCoordinates.of("books"));
+        if(isSearchToBook) {
+            books = hits.stream().map(x -> x.getContent()).collect(Collectors.toList());
+        }
+
         List<Book> res = new ArrayList<>();
         Integer numPages = 0;
 
-        if(books.getTotalHits() > 0) {
-            res = books.stream().map(x -> x.getContent()).collect(Collectors.toList());
+        if(books.size() > 0) {
+            res = books;
+            Integer totalBooks = isSearchToBook ? (int) hits.getTotalHits() : (int) pageBooks.getNumberOfElements();
 
-            numPages = (int) Math.ceil(books.getTotalHits() / pageable.getPageSize())+1;
+            numPages = (int) Math.ceil(totalBooks / pageable.getPageSize())+1;
         } else if(username != null) {
             User user = this.userRepository.findByUsername(username);
             res = this.recommendBooks(user, PageRequest.of(0, 21)).values().stream().findFirst().orElse(new ArrayList<>());

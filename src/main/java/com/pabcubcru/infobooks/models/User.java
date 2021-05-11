@@ -40,7 +40,7 @@ public class User extends BaseEntity {
 	private LocalDate birthDate;
 
 	@NotBlank(message = "La provincia es un campo requerido.")
-	@Field(type = FieldType.Text, name = "province")
+	@Field(type = FieldType.Keyword, name = "province")
 	private String province;
 
 	@Field(type = FieldType.Text, name = "postCode")

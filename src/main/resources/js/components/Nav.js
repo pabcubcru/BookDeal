@@ -34,10 +34,13 @@ export default class Nav extends Component {
       button2 = <a  class="nav-link " href="/logout">Cerrar sesión</a>;
     }
 
-    const info = "Se pueden realizar diferentes tipos de búsquedas: ------------------------------------------------------ "+
-    "1) Escriba las palabras clave separadas por un espacio. ------------------------------------------------ "+
-    "2) Escriba sólo un número sin espacios, para buscar por año o precio del libro, o por código postal del usuario propietario. "+
-    "------------------------------------------ 3) Puedes buscar por un rango de años, separandolos por un guión y sin espacios (YYYY-YYYY)."
+    const info = "BÚSQUEDA DE LIBROS: ======================= "+
+    "1) POR SUS ATRIBUTOS: ................ "+
+    "1.1) Por palabras clave separadas por un espacio ................................ "+
+    "1.2) Por año o precio, escribiendo sólo un número sin espacios ........ "+
+    "1.3) Por un rango de años, separandolos por un guión y sin espacios (YYYY-YYYY). ======================= 2) POR SUS PROPIETARIOS: .......... "+
+    "2.1) Por nombre de usuario .......... 2.2) Por código postal,  válido y sin espacios ..................................... "+
+    "2.3) Por provincia válida (puede consultarlas en el registro o su perfil)."
 
     return (
       <nav style={{marginBottom:"30px"}}>
