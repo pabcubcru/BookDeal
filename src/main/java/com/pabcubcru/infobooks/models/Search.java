@@ -1,19 +1,30 @@
 package com.pabcubcru.infobooks.models;
 
+import org.springframework.data.elasticsearch.annotations.Document;
+import org.springframework.data.elasticsearch.annotations.Field;
+import org.springframework.data.elasticsearch.annotations.FieldType;
+
 import lombok.Getter;
 import lombok.Setter;
 
-@Getter @Setter
-public class Search {
+@Document(indexName = "searches")
+@Getter
+@Setter
+public class Search extends BaseEntity {
 
+    @Field(type = FieldType.Text, name = "text")
     private String text;
 
-    private Integer startYear;
+    @Field(type = FieldType.Integer, name = "number1")
+    private Integer number1;
 
-    private Integer finishYear;
+    @Field(type = FieldType.Integer, name = "number2")
+    private Integer number2;
 
-    private Integer postalCode;
-
+    @Field(type = FieldType.Keyword, name = "type")
     private String type;
-    
+
+    @Field(type = FieldType.Keyword, name = "username")
+    private String username;
+
 }

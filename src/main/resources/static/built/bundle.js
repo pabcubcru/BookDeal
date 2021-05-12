@@ -2358,7 +2358,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()(_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0___default.a);
 // Module
-___CSS_LOADER_EXPORT___.push([module.i, ".site-footer\r\n{\r\n  position: relative;\r\n  background-color:#26272b;\r\n  padding:20px 0 20px;\r\n  font-size:15px;\r\n  line-height:24px;\r\n  color:#737373;\r\n  border-radius: 5px;\r\n}\r\n.site-footer hr\r\n{\r\n  border-top-color:#bbb;\r\n  opacity:0.5\r\n}\r\n.site-footer hr.small\r\n{\r\n  margin:20px 0\r\n}\r\n.site-footer h6\r\n{\r\n  color:#fff;\r\n  font-size:16px;\r\n  text-transform:uppercase;\r\n  margin-top:5px;\r\n  letter-spacing:2px\r\n}\r\n.site-footer a\r\n{\r\n  color:#737373;\r\n}\r\n.site-footer a:hover\r\n{\r\n  color:#3366cc;\r\n  text-decoration:none;\r\n}\r\n.footer-links\r\n{\r\n  padding-left:0;\r\n  list-style:none\r\n}\r\n.footer-links li\r\n{\r\n  display:block\r\n}\r\n.footer-links a\r\n{\r\n  color:#737373\r\n}\r\n.footer-links a:active,.footer-links a:focus,.footer-links a:hover\r\n{\r\n  color:#3366cc;\r\n  text-decoration:none;\r\n}\r\n.footer-links.inline li\r\n{\r\n  display:inline-block\r\n}\r\n.site-footer .social-icons\r\n{\r\n  text-align:right\r\n}\r\n.site-footer .social-icons a\r\n{\r\n  width:40px;\r\n  height:40px;\r\n  line-height:40px;\r\n  margin-left:6px;\r\n  margin-right:0;\r\n  border-radius:100%;\r\n  background-color:#33353d\r\n}\r\n.copyright-text\r\n{\r\n  margin:0\r\n}\r\n@media (max-width:991px)\r\n{\r\n  .site-footer [class^=col-]\r\n  {\r\n    margin-bottom:30px\r\n  }\r\n}\r\n@media (max-width:767px)\r\n{\r\n  .site-footer\r\n  {\r\n    padding-bottom:0\r\n  }\r\n  .site-footer .copyright-text,.site-footer .social-icons\r\n  {\r\n    text-align:center\r\n  }\r\n}\r\n.social-icons\r\n{\r\n  padding-left:0;\r\n  margin-bottom:0;\r\n  list-style:none\r\n}\r\n.social-icons li\r\n{\r\n  display:inline-block;\r\n  margin-bottom:4px\r\n}\r\n.social-icons li.title\r\n{\r\n  margin-right:15px;\r\n  text-transform:uppercase;\r\n  color:#96a2b2;\r\n  font-weight:700;\r\n  font-size:13px\r\n}\r\n.social-icons a{\r\n  background-color:#eceeef;\r\n  color:#818a91;\r\n  font-size:16px;\r\n  display:inline-block;\r\n  line-height:44px;\r\n  width:44px;\r\n  height:44px;\r\n  text-align:center;\r\n  margin-right:8px;\r\n  border-radius:100%;\r\n  -webkit-transition:all .2s linear;\r\n  -o-transition:all .2s linear;\r\n  transition:all .2s linear\r\n}\r\n.social-icons a:active,.social-icons a:focus,.social-icons a:hover\r\n{\r\n  color:#fff;\r\n  background-color:#29aafe\r\n}\r\n.social-icons.size-sm a\r\n{\r\n  line-height:34px;\r\n  height:34px;\r\n  width:34px;\r\n  font-size:14px\r\n}\r\n.social-icons a.facebook:hover\r\n{\r\n  background-color:#3b5998\r\n}\r\n.social-icons a.twitter:hover\r\n{\r\n  background-color:#00aced\r\n}\r\n.social-icons a.linkedin:hover\r\n{\r\n  background-color:#007bb6\r\n}\r\n.social-icons a.dribbble:hover\r\n{\r\n  background-color:#ea4c89\r\n}\r\n@media (max-width:767px)\r\n{\r\n  .social-icons li.title\r\n  {\r\n    display:block;\r\n    margin-right:0;\r\n    font-weight:600\r\n  }\r\n}", "",{"version":3,"sources":["webpack://./src/main/resources/js/components/Footer.css"],"names":[],"mappings":"AAAA;;EAEE,kBAAkB;EAClB,wBAAwB;EACxB,mBAAmB;EACnB,cAAc;EACd,gBAAgB;EAChB,aAAa;EACb,kBAAkB;AACpB;AACA;;EAEE,qBAAqB;EACrB;AACF;AACA;;EAEE;AACF;AACA;;EAEE,UAAU;EACV,cAAc;EACd,wBAAwB;EACxB,cAAc;EACd;AACF;AACA;;EAEE,aAAa;AACf;AACA;;EAEE,aAAa;EACb,oBAAoB;AACtB;AACA;;EAEE,cAAc;EACd;AACF;AACA;;EAEE;AACF;AACA;;EAEE;AACF;AACA;;EAEE,aAAa;EACb,oBAAoB;AACtB;AACA;;EAEE;AACF;AACA;;EAEE;AACF;AACA;;EAEE,UAAU;EACV,WAAW;EACX,gBAAgB;EAChB,eAAe;EACf,cAAc;EACd,kBAAkB;EAClB;AACF;AACA;;EAEE;AACF;AACA;;EAEE;;IAEE;EACF;AACF;AACA;;EAEE;;IAEE;EACF;EACA;;IAEE;EACF;AACF;AACA;;EAEE,cAAc;EACd,eAAe;EACf;AACF;AACA;;EAEE,oBAAoB;EACpB;AACF;AACA;;EAEE,iBAAiB;EACjB,wBAAwB;EACxB,aAAa;EACb,eAAe;EACf;AACF;AACA;EACE,wBAAwB;EACxB,aAAa;EACb,cAAc;EACd,oBAAoB;EACpB,gBAAgB;EAChB,UAAU;EACV,WAAW;EACX,iBAAiB;EACjB,gBAAgB;EAChB,kBAAkB;EAClB,iCAAiC;EACjC,4BAA4B;EAC5B;AACF;AACA;;EAEE,UAAU;EACV;AACF;AACA;;EAEE,gBAAgB;EAChB,WAAW;EACX,UAAU;EACV;AACF;AACA;;EAEE;AACF;AACA;;EAEE;AACF;AACA;;EAEE;AACF;AACA;;EAEE;AACF;AACA;;EAEE;;IAEE,aAAa;IACb,cAAc;IACd;EACF;AACF","sourcesContent":[".site-footer\r\n{\r\n  position: relative;\r\n  background-color:#26272b;\r\n  padding:20px 0 20px;\r\n  font-size:15px;\r\n  line-height:24px;\r\n  color:#737373;\r\n  border-radius: 5px;\r\n}\r\n.site-footer hr\r\n{\r\n  border-top-color:#bbb;\r\n  opacity:0.5\r\n}\r\n.site-footer hr.small\r\n{\r\n  margin:20px 0\r\n}\r\n.site-footer h6\r\n{\r\n  color:#fff;\r\n  font-size:16px;\r\n  text-transform:uppercase;\r\n  margin-top:5px;\r\n  letter-spacing:2px\r\n}\r\n.site-footer a\r\n{\r\n  color:#737373;\r\n}\r\n.site-footer a:hover\r\n{\r\n  color:#3366cc;\r\n  text-decoration:none;\r\n}\r\n.footer-links\r\n{\r\n  padding-left:0;\r\n  list-style:none\r\n}\r\n.footer-links li\r\n{\r\n  display:block\r\n}\r\n.footer-links a\r\n{\r\n  color:#737373\r\n}\r\n.footer-links a:active,.footer-links a:focus,.footer-links a:hover\r\n{\r\n  color:#3366cc;\r\n  text-decoration:none;\r\n}\r\n.footer-links.inline li\r\n{\r\n  display:inline-block\r\n}\r\n.site-footer .social-icons\r\n{\r\n  text-align:right\r\n}\r\n.site-footer .social-icons a\r\n{\r\n  width:40px;\r\n  height:40px;\r\n  line-height:40px;\r\n  margin-left:6px;\r\n  margin-right:0;\r\n  border-radius:100%;\r\n  background-color:#33353d\r\n}\r\n.copyright-text\r\n{\r\n  margin:0\r\n}\r\n@media (max-width:991px)\r\n{\r\n  .site-footer [class^=col-]\r\n  {\r\n    margin-bottom:30px\r\n  }\r\n}\r\n@media (max-width:767px)\r\n{\r\n  .site-footer\r\n  {\r\n    padding-bottom:0\r\n  }\r\n  .site-footer .copyright-text,.site-footer .social-icons\r\n  {\r\n    text-align:center\r\n  }\r\n}\r\n.social-icons\r\n{\r\n  padding-left:0;\r\n  margin-bottom:0;\r\n  list-style:none\r\n}\r\n.social-icons li\r\n{\r\n  display:inline-block;\r\n  margin-bottom:4px\r\n}\r\n.social-icons li.title\r\n{\r\n  margin-right:15px;\r\n  text-transform:uppercase;\r\n  color:#96a2b2;\r\n  font-weight:700;\r\n  font-size:13px\r\n}\r\n.social-icons a{\r\n  background-color:#eceeef;\r\n  color:#818a91;\r\n  font-size:16px;\r\n  display:inline-block;\r\n  line-height:44px;\r\n  width:44px;\r\n  height:44px;\r\n  text-align:center;\r\n  margin-right:8px;\r\n  border-radius:100%;\r\n  -webkit-transition:all .2s linear;\r\n  -o-transition:all .2s linear;\r\n  transition:all .2s linear\r\n}\r\n.social-icons a:active,.social-icons a:focus,.social-icons a:hover\r\n{\r\n  color:#fff;\r\n  background-color:#29aafe\r\n}\r\n.social-icons.size-sm a\r\n{\r\n  line-height:34px;\r\n  height:34px;\r\n  width:34px;\r\n  font-size:14px\r\n}\r\n.social-icons a.facebook:hover\r\n{\r\n  background-color:#3b5998\r\n}\r\n.social-icons a.twitter:hover\r\n{\r\n  background-color:#00aced\r\n}\r\n.social-icons a.linkedin:hover\r\n{\r\n  background-color:#007bb6\r\n}\r\n.social-icons a.dribbble:hover\r\n{\r\n  background-color:#ea4c89\r\n}\r\n@media (max-width:767px)\r\n{\r\n  .social-icons li.title\r\n  {\r\n    display:block;\r\n    margin-right:0;\r\n    font-weight:600\r\n  }\r\n}"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.i, ".site-footer {\r\n  position: relative;\r\n  background-color: #26272b;\r\n  padding: 20px 0 20px;\r\n  font-size: 15px;\r\n  line-height: 24px;\r\n  color: #737373;\r\n  border-radius: 5px;\r\n}\r\n.site-footer hr {\r\n  border-top-color: #bbb;\r\n  opacity: 0.5;\r\n}\r\n.site-footer hr.small {\r\n  margin: 20px 0;\r\n}\r\n.site-footer h6 {\r\n  color: #fff;\r\n  font-size: 16px;\r\n  text-transform: uppercase;\r\n  margin-top: 5px;\r\n  letter-spacing: 2px;\r\n}\r\n.site-footer a {\r\n  color: #737373;\r\n}\r\n.site-footer a:hover {\r\n  color: #3366cc;\r\n  text-decoration: none;\r\n}\r\n.footer-links {\r\n  padding-left: 0;\r\n  list-style: none;\r\n}\r\n.footer-links li {\r\n  display: block;\r\n}\r\n.footer-links a {\r\n  color: #737373;\r\n}\r\n.footer-links a:active,\r\n.footer-links a:focus,\r\n.footer-links a:hover {\r\n  color: #3366cc;\r\n  text-decoration: none;\r\n}\r\n.footer-links.inline li {\r\n  display: inline-block;\r\n}\r\n.site-footer .social-icons {\r\n  text-align: right;\r\n}\r\n.site-footer .social-icons a {\r\n  width: 40px;\r\n  height: 40px;\r\n  line-height: 40px;\r\n  margin-left: 6px;\r\n  margin-right: 0;\r\n  border-radius: 100%;\r\n  background-color: #33353d;\r\n}\r\n.copyright-text {\r\n  margin: 0;\r\n}\r\n@media (max-width: 991px) {\r\n  .site-footer [class^=\"col-\"] {\r\n    margin-bottom: 30px;\r\n  }\r\n}\r\n@media (max-width: 767px) {\r\n  .site-footer {\r\n    padding-bottom: 0;\r\n  }\r\n  .site-footer .copyright-text,\r\n  .site-footer .social-icons {\r\n    text-align: center;\r\n  }\r\n}\r\n.social-icons {\r\n  padding-left: 0;\r\n  margin-bottom: 0;\r\n  list-style: none;\r\n}\r\n.social-icons li {\r\n  display: inline-block;\r\n  margin-bottom: 4px;\r\n}\r\n.social-icons li.title {\r\n  margin-right: 15px;\r\n  text-transform: uppercase;\r\n  color: #96a2b2;\r\n  font-weight: 700;\r\n  font-size: 13px;\r\n}\r\n.social-icons a {\r\n  background-color: #eceeef;\r\n  color: #818a91;\r\n  font-size: 16px;\r\n  display: inline-block;\r\n  line-height: 44px;\r\n  width: 44px;\r\n  height: 44px;\r\n  text-align: center;\r\n  margin-right: 8px;\r\n  border-radius: 100%;\r\n  -webkit-transition: all 0.2s linear;\r\n  -o-transition: all 0.2s linear;\r\n  transition: all 0.2s linear;\r\n}\r\n.social-icons a:active,\r\n.social-icons a:focus,\r\n.social-icons a:hover {\r\n  color: #fff;\r\n  background-color: #29aafe;\r\n}\r\n.social-icons.size-sm a {\r\n  line-height: 34px;\r\n  height: 34px;\r\n  width: 34px;\r\n  font-size: 14px;\r\n}\r\n.social-icons a.facebook:hover {\r\n  background-color: #3b5998;\r\n}\r\n.social-icons a.twitter:hover {\r\n  background-color: #00aced;\r\n}\r\n.social-icons a.linkedin:hover {\r\n  background-color: #007bb6;\r\n}\r\n.social-icons a.dribbble:hover {\r\n  background-color: #ea4c89;\r\n}\r\n@media (max-width: 767px) {\r\n  .social-icons li.title {\r\n    display: block;\r\n    margin-right: 0;\r\n    font-weight: 600;\r\n  }\r\n}\r\n", "",{"version":3,"sources":["webpack://./src/main/resources/js/components/Footer.css"],"names":[],"mappings":"AAAA;EACE,kBAAkB;EAClB,yBAAyB;EACzB,oBAAoB;EACpB,eAAe;EACf,iBAAiB;EACjB,cAAc;EACd,kBAAkB;AACpB;AACA;EACE,sBAAsB;EACtB,YAAY;AACd;AACA;EACE,cAAc;AAChB;AACA;EACE,WAAW;EACX,eAAe;EACf,yBAAyB;EACzB,eAAe;EACf,mBAAmB;AACrB;AACA;EACE,cAAc;AAChB;AACA;EACE,cAAc;EACd,qBAAqB;AACvB;AACA;EACE,eAAe;EACf,gBAAgB;AAClB;AACA;EACE,cAAc;AAChB;AACA;EACE,cAAc;AAChB;AACA;;;EAGE,cAAc;EACd,qBAAqB;AACvB;AACA;EACE,qBAAqB;AACvB;AACA;EACE,iBAAiB;AACnB;AACA;EACE,WAAW;EACX,YAAY;EACZ,iBAAiB;EACjB,gBAAgB;EAChB,eAAe;EACf,mBAAmB;EACnB,yBAAyB;AAC3B;AACA;EACE,SAAS;AACX;AACA;EACE;IACE,mBAAmB;EACrB;AACF;AACA;EACE;IACE,iBAAiB;EACnB;EACA;;IAEE,kBAAkB;EACpB;AACF;AACA;EACE,eAAe;EACf,gBAAgB;EAChB,gBAAgB;AAClB;AACA;EACE,qBAAqB;EACrB,kBAAkB;AACpB;AACA;EACE,kBAAkB;EAClB,yBAAyB;EACzB,cAAc;EACd,gBAAgB;EAChB,eAAe;AACjB;AACA;EACE,yBAAyB;EACzB,cAAc;EACd,eAAe;EACf,qBAAqB;EACrB,iBAAiB;EACjB,WAAW;EACX,YAAY;EACZ,kBAAkB;EAClB,iBAAiB;EACjB,mBAAmB;EACnB,mCAAmC;EACnC,8BAA8B;EAC9B,2BAA2B;AAC7B;AACA;;;EAGE,WAAW;EACX,yBAAyB;AAC3B;AACA;EACE,iBAAiB;EACjB,YAAY;EACZ,WAAW;EACX,eAAe;AACjB;AACA;EACE,yBAAyB;AAC3B;AACA;EACE,yBAAyB;AAC3B;AACA;EACE,yBAAyB;AAC3B;AACA;EACE,yBAAyB;AAC3B;AACA;EACE;IACE,cAAc;IACd,eAAe;IACf,gBAAgB;EAClB;AACF","sourcesContent":[".site-footer {\r\n  position: relative;\r\n  background-color: #26272b;\r\n  padding: 20px 0 20px;\r\n  font-size: 15px;\r\n  line-height: 24px;\r\n  color: #737373;\r\n  border-radius: 5px;\r\n}\r\n.site-footer hr {\r\n  border-top-color: #bbb;\r\n  opacity: 0.5;\r\n}\r\n.site-footer hr.small {\r\n  margin: 20px 0;\r\n}\r\n.site-footer h6 {\r\n  color: #fff;\r\n  font-size: 16px;\r\n  text-transform: uppercase;\r\n  margin-top: 5px;\r\n  letter-spacing: 2px;\r\n}\r\n.site-footer a {\r\n  color: #737373;\r\n}\r\n.site-footer a:hover {\r\n  color: #3366cc;\r\n  text-decoration: none;\r\n}\r\n.footer-links {\r\n  padding-left: 0;\r\n  list-style: none;\r\n}\r\n.footer-links li {\r\n  display: block;\r\n}\r\n.footer-links a {\r\n  color: #737373;\r\n}\r\n.footer-links a:active,\r\n.footer-links a:focus,\r\n.footer-links a:hover {\r\n  color: #3366cc;\r\n  text-decoration: none;\r\n}\r\n.footer-links.inline li {\r\n  display: inline-block;\r\n}\r\n.site-footer .social-icons {\r\n  text-align: right;\r\n}\r\n.site-footer .social-icons a {\r\n  width: 40px;\r\n  height: 40px;\r\n  line-height: 40px;\r\n  margin-left: 6px;\r\n  margin-right: 0;\r\n  border-radius: 100%;\r\n  background-color: #33353d;\r\n}\r\n.copyright-text {\r\n  margin: 0;\r\n}\r\n@media (max-width: 991px) {\r\n  .site-footer [class^=\"col-\"] {\r\n    margin-bottom: 30px;\r\n  }\r\n}\r\n@media (max-width: 767px) {\r\n  .site-footer {\r\n    padding-bottom: 0;\r\n  }\r\n  .site-footer .copyright-text,\r\n  .site-footer .social-icons {\r\n    text-align: center;\r\n  }\r\n}\r\n.social-icons {\r\n  padding-left: 0;\r\n  margin-bottom: 0;\r\n  list-style: none;\r\n}\r\n.social-icons li {\r\n  display: inline-block;\r\n  margin-bottom: 4px;\r\n}\r\n.social-icons li.title {\r\n  margin-right: 15px;\r\n  text-transform: uppercase;\r\n  color: #96a2b2;\r\n  font-weight: 700;\r\n  font-size: 13px;\r\n}\r\n.social-icons a {\r\n  background-color: #eceeef;\r\n  color: #818a91;\r\n  font-size: 16px;\r\n  display: inline-block;\r\n  line-height: 44px;\r\n  width: 44px;\r\n  height: 44px;\r\n  text-align: center;\r\n  margin-right: 8px;\r\n  border-radius: 100%;\r\n  -webkit-transition: all 0.2s linear;\r\n  -o-transition: all 0.2s linear;\r\n  transition: all 0.2s linear;\r\n}\r\n.social-icons a:active,\r\n.social-icons a:focus,\r\n.social-icons a:hover {\r\n  color: #fff;\r\n  background-color: #29aafe;\r\n}\r\n.social-icons.size-sm a {\r\n  line-height: 34px;\r\n  height: 34px;\r\n  width: 34px;\r\n  font-size: 14px;\r\n}\r\n.social-icons a.facebook:hover {\r\n  background-color: #3b5998;\r\n}\r\n.social-icons a.twitter:hover {\r\n  background-color: #00aced;\r\n}\r\n.social-icons a.linkedin:hover {\r\n  background-color: #007bb6;\r\n}\r\n.social-icons a.dribbble:hover {\r\n  background-color: #ea4c89;\r\n}\r\n@media (max-width: 767px) {\r\n  .social-icons li.title {\r\n    display: block;\r\n    margin-right: 0;\r\n    font-weight: 600;\r\n  }\r\n}\r\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ __webpack_exports__["default"] = (___CSS_LOADER_EXPORT___);
 
@@ -2383,7 +2383,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()(_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0___default.a);
 // Module
-___CSS_LOADER_EXPORT___.push([module.i, "  .mainBooks {\r\n    display: inline-table;\r\n    margin: 20px;\r\n  }\r\n\r\n  .book-card {\r\n    width: 313px;\r\n    padding: 16px;\r\n    border-radius: 5px;\r\n    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);\r\n    background-image: url(https://i.ibb.co/YRy9kHC/paper.jpg);\r\n    background-size: auto;\r\n  }\r\n  .book-card .book-card__cover {\r\n    position: relative;\r\n    width: 200px;\r\n    height: 300px;\r\n    margin: 0 auto 8px auto;\r\n    perspective: 1000px;\r\n  }\r\n  .book-card .book-card__book {\r\n    height: 100%;\r\n    transform-style: preserve-3d;\r\n    transition: all 250ms ease;\r\n  }\r\n  .book-card .book-card__book-front {\r\n    position: absolute;\r\n    height: 100%;\r\n  }\r\n  .book-card .book-card__book-back {\r\n    position: absolute;\r\n    top: 0;\r\n    height: 100%;\r\n    width: 100%;\r\n    transform: translateZ(-40px);\r\n  }\r\n  .book-card .book-card__book-side {\r\n    position: absolute;\r\n    top: 5px;\r\n    bottom: 2px;\r\n    right: -29px;\r\n    width: 40px;\r\n    background-size: 5px;\r\n    background-color: #e1e1e1;\r\n    background-image: linear-gradient(to right, #ccc 35%, #e1e1e1 35%);\r\n    opacity: 0;\r\n    transform: rotate3d(0, 1, 0, 90deg);\r\n  }\r\n  .book-card .book-card__img {\r\n    width: 100%;\r\n    height: 100%;\r\n    background-color: #e1e1e1;\r\n    border-radius: 5px;\r\n  }\r\n  .book-card .book-card__title {\r\n    font-size: 1.5em;\r\n    margin-bottom: 8px;\r\n  }\r\n  .book-card .book-card__author {\r\n    color: #424242;\r\n    font-size: 1em;\r\n    font-weight: bold;\r\n  }\r\n  .book-card:hover .book-card__book {\r\n    transform: rotate3d(0, -1, 0, 30deg) translate(-15px, -30px);\r\n  }\r\n  .book-card:hover .book-card__book-back {\r\n    box-shadow: 5px 10px 15px rgba(0, 0, 0, 0.35);\r\n  }\r\n  .book-card:hover .book-card__book-side {\r\n    opacity: 1;\r\n  } ", "",{"version":3,"sources":["webpack://./src/main/resources/js/components/ListBooks.css"],"names":[],"mappings":"EAAE;IACE,qBAAqB;IACrB,YAAY;EACd;;EAEA;IACE,YAAY;IACZ,aAAa;IACb,kBAAkB;IAClB,wEAAwE;IACxE,yDAAyD;IACzD,qBAAqB;EACvB;EACA;IACE,kBAAkB;IAClB,YAAY;IACZ,aAAa;IACb,uBAAuB;IACvB,mBAAmB;EACrB;EACA;IACE,YAAY;IACZ,4BAA4B;IAC5B,0BAA0B;EAC5B;EACA;IACE,kBAAkB;IAClB,YAAY;EACd;EACA;IACE,kBAAkB;IAClB,MAAM;IACN,YAAY;IACZ,WAAW;IACX,4BAA4B;EAC9B;EACA;IACE,kBAAkB;IAClB,QAAQ;IACR,WAAW;IACX,YAAY;IACZ,WAAW;IACX,oBAAoB;IACpB,yBAAyB;IACzB,kEAAkE;IAClE,UAAU;IACV,mCAAmC;EACrC;EACA;IACE,WAAW;IACX,YAAY;IACZ,yBAAyB;IACzB,kBAAkB;EACpB;EACA;IACE,gBAAgB;IAChB,kBAAkB;EACpB;EACA;IACE,cAAc;IACd,cAAc;IACd,iBAAiB;EACnB;EACA;IACE,4DAA4D;EAC9D;EACA;IACE,6CAA6C;EAC/C;EACA;IACE,UAAU;EACZ","sourcesContent":["  .mainBooks {\r\n    display: inline-table;\r\n    margin: 20px;\r\n  }\r\n\r\n  .book-card {\r\n    width: 313px;\r\n    padding: 16px;\r\n    border-radius: 5px;\r\n    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);\r\n    background-image: url(https://i.ibb.co/YRy9kHC/paper.jpg);\r\n    background-size: auto;\r\n  }\r\n  .book-card .book-card__cover {\r\n    position: relative;\r\n    width: 200px;\r\n    height: 300px;\r\n    margin: 0 auto 8px auto;\r\n    perspective: 1000px;\r\n  }\r\n  .book-card .book-card__book {\r\n    height: 100%;\r\n    transform-style: preserve-3d;\r\n    transition: all 250ms ease;\r\n  }\r\n  .book-card .book-card__book-front {\r\n    position: absolute;\r\n    height: 100%;\r\n  }\r\n  .book-card .book-card__book-back {\r\n    position: absolute;\r\n    top: 0;\r\n    height: 100%;\r\n    width: 100%;\r\n    transform: translateZ(-40px);\r\n  }\r\n  .book-card .book-card__book-side {\r\n    position: absolute;\r\n    top: 5px;\r\n    bottom: 2px;\r\n    right: -29px;\r\n    width: 40px;\r\n    background-size: 5px;\r\n    background-color: #e1e1e1;\r\n    background-image: linear-gradient(to right, #ccc 35%, #e1e1e1 35%);\r\n    opacity: 0;\r\n    transform: rotate3d(0, 1, 0, 90deg);\r\n  }\r\n  .book-card .book-card__img {\r\n    width: 100%;\r\n    height: 100%;\r\n    background-color: #e1e1e1;\r\n    border-radius: 5px;\r\n  }\r\n  .book-card .book-card__title {\r\n    font-size: 1.5em;\r\n    margin-bottom: 8px;\r\n  }\r\n  .book-card .book-card__author {\r\n    color: #424242;\r\n    font-size: 1em;\r\n    font-weight: bold;\r\n  }\r\n  .book-card:hover .book-card__book {\r\n    transform: rotate3d(0, -1, 0, 30deg) translate(-15px, -30px);\r\n  }\r\n  .book-card:hover .book-card__book-back {\r\n    box-shadow: 5px 10px 15px rgba(0, 0, 0, 0.35);\r\n  }\r\n  .book-card:hover .book-card__book-side {\r\n    opacity: 1;\r\n  } "],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.i, ".mainBooks {\r\n  display: inline-table;\r\n  margin: 20px;\r\n}\r\n\r\n.book-card {\r\n  width: 313px;\r\n  padding: 16px;\r\n  border-radius: 5px;\r\n  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);\r\n  background-image: url(https://i.ibb.co/YRy9kHC/paper.jpg);\r\n  background-size: auto;\r\n}\r\n.book-card .book-card__cover {\r\n  position: relative;\r\n  width: 200px;\r\n  height: 300px;\r\n  margin: 0 auto 8px auto;\r\n  perspective: 1000px;\r\n}\r\n.book-card .book-card__book {\r\n  height: 100%;\r\n  transform-style: preserve-3d;\r\n  transition: all 250ms ease;\r\n}\r\n.book-card .book-card__book-front {\r\n  position: absolute;\r\n  height: 100%;\r\n}\r\n.book-card .book-card__book-back {\r\n  position: absolute;\r\n  top: 0;\r\n  height: 100%;\r\n  width: 100%;\r\n  transform: translateZ(-40px);\r\n}\r\n.book-card .book-card__book-side {\r\n  position: absolute;\r\n  top: 5px;\r\n  bottom: 2px;\r\n  right: -29px;\r\n  width: 40px;\r\n  background-size: 5px;\r\n  background-color: #e1e1e1;\r\n  background-image: linear-gradient(to right, #ccc 35%, #e1e1e1 35%);\r\n  opacity: 0;\r\n  transform: rotate3d(0, 1, 0, 90deg);\r\n}\r\n.book-card .book-card__img {\r\n  width: 100%;\r\n  height: 100%;\r\n  background-color: #e1e1e1;\r\n  border-radius: 5px;\r\n}\r\n.book-card .book-card__title {\r\n  font-size: 1.5em;\r\n  margin-bottom: 8px;\r\n}\r\n.book-card .book-card__author {\r\n  color: #424242;\r\n  font-size: 1em;\r\n  font-weight: bold;\r\n}\r\n.book-card:hover .book-card__book {\r\n  transform: rotate3d(0, -1, 0, 30deg) translate(-15px, -30px);\r\n}\r\n.book-card:hover .book-card__book-back {\r\n  box-shadow: 5px 10px 15px rgba(0, 0, 0, 0.35);\r\n}\r\n.book-card:hover .book-card__book-side {\r\n  opacity: 1;\r\n}\r\n", "",{"version":3,"sources":["webpack://./src/main/resources/js/components/ListBooks.css"],"names":[],"mappings":"AAAA;EACE,qBAAqB;EACrB,YAAY;AACd;;AAEA;EACE,YAAY;EACZ,aAAa;EACb,kBAAkB;EAClB,wEAAwE;EACxE,yDAAyD;EACzD,qBAAqB;AACvB;AACA;EACE,kBAAkB;EAClB,YAAY;EACZ,aAAa;EACb,uBAAuB;EACvB,mBAAmB;AACrB;AACA;EACE,YAAY;EACZ,4BAA4B;EAC5B,0BAA0B;AAC5B;AACA;EACE,kBAAkB;EAClB,YAAY;AACd;AACA;EACE,kBAAkB;EAClB,MAAM;EACN,YAAY;EACZ,WAAW;EACX,4BAA4B;AAC9B;AACA;EACE,kBAAkB;EAClB,QAAQ;EACR,WAAW;EACX,YAAY;EACZ,WAAW;EACX,oBAAoB;EACpB,yBAAyB;EACzB,kEAAkE;EAClE,UAAU;EACV,mCAAmC;AACrC;AACA;EACE,WAAW;EACX,YAAY;EACZ,yBAAyB;EACzB,kBAAkB;AACpB;AACA;EACE,gBAAgB;EAChB,kBAAkB;AACpB;AACA;EACE,cAAc;EACd,cAAc;EACd,iBAAiB;AACnB;AACA;EACE,4DAA4D;AAC9D;AACA;EACE,6CAA6C;AAC/C;AACA;EACE,UAAU;AACZ","sourcesContent":[".mainBooks {\r\n  display: inline-table;\r\n  margin: 20px;\r\n}\r\n\r\n.book-card {\r\n  width: 313px;\r\n  padding: 16px;\r\n  border-radius: 5px;\r\n  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);\r\n  background-image: url(https://i.ibb.co/YRy9kHC/paper.jpg);\r\n  background-size: auto;\r\n}\r\n.book-card .book-card__cover {\r\n  position: relative;\r\n  width: 200px;\r\n  height: 300px;\r\n  margin: 0 auto 8px auto;\r\n  perspective: 1000px;\r\n}\r\n.book-card .book-card__book {\r\n  height: 100%;\r\n  transform-style: preserve-3d;\r\n  transition: all 250ms ease;\r\n}\r\n.book-card .book-card__book-front {\r\n  position: absolute;\r\n  height: 100%;\r\n}\r\n.book-card .book-card__book-back {\r\n  position: absolute;\r\n  top: 0;\r\n  height: 100%;\r\n  width: 100%;\r\n  transform: translateZ(-40px);\r\n}\r\n.book-card .book-card__book-side {\r\n  position: absolute;\r\n  top: 5px;\r\n  bottom: 2px;\r\n  right: -29px;\r\n  width: 40px;\r\n  background-size: 5px;\r\n  background-color: #e1e1e1;\r\n  background-image: linear-gradient(to right, #ccc 35%, #e1e1e1 35%);\r\n  opacity: 0;\r\n  transform: rotate3d(0, 1, 0, 90deg);\r\n}\r\n.book-card .book-card__img {\r\n  width: 100%;\r\n  height: 100%;\r\n  background-color: #e1e1e1;\r\n  border-radius: 5px;\r\n}\r\n.book-card .book-card__title {\r\n  font-size: 1.5em;\r\n  margin-bottom: 8px;\r\n}\r\n.book-card .book-card__author {\r\n  color: #424242;\r\n  font-size: 1em;\r\n  font-weight: bold;\r\n}\r\n.book-card:hover .book-card__book {\r\n  transform: rotate3d(0, -1, 0, 30deg) translate(-15px, -30px);\r\n}\r\n.book-card:hover .book-card__book-back {\r\n  box-shadow: 5px 10px 15px rgba(0, 0, 0, 0.35);\r\n}\r\n.book-card:hover .book-card__book-side {\r\n  opacity: 1;\r\n}\r\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ __webpack_exports__["default"] = (___CSS_LOADER_EXPORT___);
 
@@ -2408,7 +2408,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()(_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0___default.a);
 // Module
-___CSS_LOADER_EXPORT___.push([module.i, ".menu, .menu ul, .menu li, .menu a {\r\n  z-index: 5;\r\n  margin: 0;\r\n  padding: 0;\r\n  border: none;\r\n  outline: none;\r\n}\r\n\r\n.menu {\r\n  height: 70px;\r\n  width: 100%;\r\n  background-color: #26272b;\r\n  border-radius: 3px;\r\n  border-radius: 5px;\r\n}\r\n\r\n.menu li {\r\n  position: relative;\r\n  list-style: none;\r\n  float: left;\r\n  display: block;\r\n  height: 50px;\r\n}\r\n\r\n.menu a {\r\n  display: block;\r\n  padding: 0 30px;\r\n  margin: 20px 0;\r\n  line-height: 28px;\r\n  text-decoration: solid;\r\n  \r\n  font-family:\"Trebuchet MS\", Arial, Helvetica, sans-serif;\r\n  font-weight: bold;\r\n  font-size: 18px;\r\n  color: rgb(255, 255, 255);\r\n  \r\n}\r\n\r\n\r\n\r\n.menu li:hover > a {color: #007bff}\r\n\r\n.menu ul {\r\n  position: absolute;\r\n  top: 50px;\r\n  left: 20px;\r\n  \r\n  opacity: 0;\r\n  background: #26272b;\r\n  \r\n  border-radius: 0 0 10px 10px;\r\n  transition: opacity .20s ease .1s;\r\n}\r\n\r\n.menu li:hover > ul {opacity: 1;}\r\n\r\n.menu ul li {\r\n  height: 0;\r\n  overflow: hidden;\r\n  padding: 0;\r\n  \r\n  transition: height .25s ease .1s;\r\n}\r\n\r\n.menu li:hover > ul li {\r\n  height: 50px;\r\n  overflow: visible;\r\n  padding: 0;\r\n}\r\n\r\n.menu ul li a {\r\n  width: 180px;\r\n  padding: 10px 20px;\r\n  margin: 0;\r\n  border: none;\r\n  border-bottom: 1px solid #ffffff;\r\n  font-weight: normal;\r\n}\r\n.menu ul li:last-child a { border: none; }\r\n\r\n@media screen and (max-width:995px) {\r\n  .desktop {\r\n     display: none; \r\n  }\r\n}\r\n\r\n@media screen and (min-width:994px) {\r\n  .mobile{\r\n     display: none; \r\n  }\r\n}\r\n", "",{"version":3,"sources":["webpack://./src/main/resources/js/components/Nav.css"],"names":[],"mappings":"AAAA;EACE,UAAU;EACV,SAAS;EACT,UAAU;EACV,YAAY;EACZ,aAAa;AACf;;AAEA;EACE,YAAY;EACZ,WAAW;EACX,yBAAyB;EACzB,kBAAkB;EAClB,kBAAkB;AACpB;;AAEA;EACE,kBAAkB;EAClB,gBAAgB;EAChB,WAAW;EACX,cAAc;EACd,YAAY;AACd;;AAEA;EACE,cAAc;EACd,eAAe;EACf,cAAc;EACd,iBAAiB;EACjB,sBAAsB;;EAEtB,wDAAwD;EACxD,iBAAiB;EACjB,eAAe;EACf,yBAAyB;;AAE3B;;;;AAIA,oBAAoB,cAAc;;AAElC;EACE,kBAAkB;EAClB,SAAS;EACT,UAAU;;EAEV,UAAU;EACV,mBAAmB;;EAEnB,4BAA4B;EAC5B,iCAAiC;AACnC;;AAEA,qBAAqB,UAAU,CAAC;;AAEhC;EACE,SAAS;EACT,gBAAgB;EAChB,UAAU;;EAEV,gCAAgC;AAClC;;AAEA;EACE,YAAY;EACZ,iBAAiB;EACjB,UAAU;AACZ;;AAEA;EACE,YAAY;EACZ,kBAAkB;EAClB,SAAS;EACT,YAAY;EACZ,gCAAgC;EAChC,mBAAmB;AACrB;AACA,2BAA2B,YAAY,EAAE;;AAEzC;EACE;KACG,aAAa;EAChB;AACF;;AAEA;EACE;KACG,aAAa;EAChB;AACF","sourcesContent":[".menu, .menu ul, .menu li, .menu a {\r\n  z-index: 5;\r\n  margin: 0;\r\n  padding: 0;\r\n  border: none;\r\n  outline: none;\r\n}\r\n\r\n.menu {\r\n  height: 70px;\r\n  width: 100%;\r\n  background-color: #26272b;\r\n  border-radius: 3px;\r\n  border-radius: 5px;\r\n}\r\n\r\n.menu li {\r\n  position: relative;\r\n  list-style: none;\r\n  float: left;\r\n  display: block;\r\n  height: 50px;\r\n}\r\n\r\n.menu a {\r\n  display: block;\r\n  padding: 0 30px;\r\n  margin: 20px 0;\r\n  line-height: 28px;\r\n  text-decoration: solid;\r\n  \r\n  font-family:\"Trebuchet MS\", Arial, Helvetica, sans-serif;\r\n  font-weight: bold;\r\n  font-size: 18px;\r\n  color: rgb(255, 255, 255);\r\n  \r\n}\r\n\r\n\r\n\r\n.menu li:hover > a {color: #007bff}\r\n\r\n.menu ul {\r\n  position: absolute;\r\n  top: 50px;\r\n  left: 20px;\r\n  \r\n  opacity: 0;\r\n  background: #26272b;\r\n  \r\n  border-radius: 0 0 10px 10px;\r\n  transition: opacity .20s ease .1s;\r\n}\r\n\r\n.menu li:hover > ul {opacity: 1;}\r\n\r\n.menu ul li {\r\n  height: 0;\r\n  overflow: hidden;\r\n  padding: 0;\r\n  \r\n  transition: height .25s ease .1s;\r\n}\r\n\r\n.menu li:hover > ul li {\r\n  height: 50px;\r\n  overflow: visible;\r\n  padding: 0;\r\n}\r\n\r\n.menu ul li a {\r\n  width: 180px;\r\n  padding: 10px 20px;\r\n  margin: 0;\r\n  border: none;\r\n  border-bottom: 1px solid #ffffff;\r\n  font-weight: normal;\r\n}\r\n.menu ul li:last-child a { border: none; }\r\n\r\n@media screen and (max-width:995px) {\r\n  .desktop {\r\n     display: none; \r\n  }\r\n}\r\n\r\n@media screen and (min-width:994px) {\r\n  .mobile{\r\n     display: none; \r\n  }\r\n}\r\n"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.i, ".menu,\r\n.menu ul,\r\n.menu li,\r\n.menu a {\r\n  z-index: 5;\r\n  margin: 0;\r\n  padding: 0;\r\n  border: none;\r\n  outline: none;\r\n}\r\n\r\n.menu {\r\n  height: 70px;\r\n  width: 100%;\r\n  background-color: #26272b;\r\n  border-radius: 3px;\r\n  border-radius: 5px;\r\n}\r\n\r\n.menu li {\r\n  position: relative;\r\n  list-style: none;\r\n  float: left;\r\n  display: block;\r\n  height: 50px;\r\n}\r\n\r\n.menu a {\r\n  display: block;\r\n  padding: 0 30px;\r\n  margin: 20px 0;\r\n  line-height: 28px;\r\n  text-decoration: solid;\r\n\r\n  font-family: \"Trebuchet MS\", Arial, Helvetica, sans-serif;\r\n  font-weight: bold;\r\n  font-size: 18px;\r\n  color: rgb(255, 255, 255);\r\n}\r\n\r\n.menu li:hover > a {\r\n  color: #007bff;\r\n}\r\n\r\n.menu ul {\r\n  position: absolute;\r\n  top: 50px;\r\n  left: 20px;\r\n\r\n  opacity: 0;\r\n  background: #26272b;\r\n\r\n  border-radius: 0 0 10px 10px;\r\n  transition: opacity 0.2s ease 0.1s;\r\n}\r\n\r\n.menu li:hover > ul {\r\n  opacity: 1;\r\n}\r\n\r\n.menu ul li {\r\n  height: 0;\r\n  overflow: hidden;\r\n  padding: 0;\r\n\r\n  transition: height 0.25s ease 0.1s;\r\n}\r\n\r\n.menu li:hover > ul li {\r\n  height: 50px;\r\n  overflow: visible;\r\n  padding: 0;\r\n}\r\n\r\n.menu ul li a {\r\n  width: 180px;\r\n  padding: 10px 20px;\r\n  margin: 0;\r\n  border: none;\r\n  border-bottom: 1px solid #ffffff;\r\n  font-weight: normal;\r\n}\r\n.menu ul li:last-child a {\r\n  border: none;\r\n}\r\n\r\n@media screen and (max-width: 995px) {\r\n  .desktop {\r\n    display: none;\r\n  }\r\n}\r\n\r\n@media screen and (min-width: 994px) {\r\n  .mobile {\r\n    display: none;\r\n  }\r\n}\r\n", "",{"version":3,"sources":["webpack://./src/main/resources/js/components/Nav.css"],"names":[],"mappings":"AAAA;;;;EAIE,UAAU;EACV,SAAS;EACT,UAAU;EACV,YAAY;EACZ,aAAa;AACf;;AAEA;EACE,YAAY;EACZ,WAAW;EACX,yBAAyB;EACzB,kBAAkB;EAClB,kBAAkB;AACpB;;AAEA;EACE,kBAAkB;EAClB,gBAAgB;EAChB,WAAW;EACX,cAAc;EACd,YAAY;AACd;;AAEA;EACE,cAAc;EACd,eAAe;EACf,cAAc;EACd,iBAAiB;EACjB,sBAAsB;;EAEtB,yDAAyD;EACzD,iBAAiB;EACjB,eAAe;EACf,yBAAyB;AAC3B;;AAEA;EACE,cAAc;AAChB;;AAEA;EACE,kBAAkB;EAClB,SAAS;EACT,UAAU;;EAEV,UAAU;EACV,mBAAmB;;EAEnB,4BAA4B;EAC5B,kCAAkC;AACpC;;AAEA;EACE,UAAU;AACZ;;AAEA;EACE,SAAS;EACT,gBAAgB;EAChB,UAAU;;EAEV,kCAAkC;AACpC;;AAEA;EACE,YAAY;EACZ,iBAAiB;EACjB,UAAU;AACZ;;AAEA;EACE,YAAY;EACZ,kBAAkB;EAClB,SAAS;EACT,YAAY;EACZ,gCAAgC;EAChC,mBAAmB;AACrB;AACA;EACE,YAAY;AACd;;AAEA;EACE;IACE,aAAa;EACf;AACF;;AAEA;EACE;IACE,aAAa;EACf;AACF","sourcesContent":[".menu,\r\n.menu ul,\r\n.menu li,\r\n.menu a {\r\n  z-index: 5;\r\n  margin: 0;\r\n  padding: 0;\r\n  border: none;\r\n  outline: none;\r\n}\r\n\r\n.menu {\r\n  height: 70px;\r\n  width: 100%;\r\n  background-color: #26272b;\r\n  border-radius: 3px;\r\n  border-radius: 5px;\r\n}\r\n\r\n.menu li {\r\n  position: relative;\r\n  list-style: none;\r\n  float: left;\r\n  display: block;\r\n  height: 50px;\r\n}\r\n\r\n.menu a {\r\n  display: block;\r\n  padding: 0 30px;\r\n  margin: 20px 0;\r\n  line-height: 28px;\r\n  text-decoration: solid;\r\n\r\n  font-family: \"Trebuchet MS\", Arial, Helvetica, sans-serif;\r\n  font-weight: bold;\r\n  font-size: 18px;\r\n  color: rgb(255, 255, 255);\r\n}\r\n\r\n.menu li:hover > a {\r\n  color: #007bff;\r\n}\r\n\r\n.menu ul {\r\n  position: absolute;\r\n  top: 50px;\r\n  left: 20px;\r\n\r\n  opacity: 0;\r\n  background: #26272b;\r\n\r\n  border-radius: 0 0 10px 10px;\r\n  transition: opacity 0.2s ease 0.1s;\r\n}\r\n\r\n.menu li:hover > ul {\r\n  opacity: 1;\r\n}\r\n\r\n.menu ul li {\r\n  height: 0;\r\n  overflow: hidden;\r\n  padding: 0;\r\n\r\n  transition: height 0.25s ease 0.1s;\r\n}\r\n\r\n.menu li:hover > ul li {\r\n  height: 50px;\r\n  overflow: visible;\r\n  padding: 0;\r\n}\r\n\r\n.menu ul li a {\r\n  width: 180px;\r\n  padding: 10px 20px;\r\n  margin: 0;\r\n  border: none;\r\n  border-bottom: 1px solid #ffffff;\r\n  font-weight: normal;\r\n}\r\n.menu ul li:last-child a {\r\n  border: none;\r\n}\r\n\r\n@media screen and (max-width: 995px) {\r\n  .desktop {\r\n    display: none;\r\n  }\r\n}\r\n\r\n@media screen and (min-width: 994px) {\r\n  .mobile {\r\n    display: none;\r\n  }\r\n}\r\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ __webpack_exports__["default"] = (___CSS_LOADER_EXPORT___);
 
@@ -2433,7 +2433,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()(_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0___default.a);
 // Module
-___CSS_LOADER_EXPORT___.push([module.i, "a.dfn-hover {\r\n\tcolor: #333;\r\n\ttext-decoration: none;\r\n}\r\n\r\n/** Code for hover info **/\r\n\r\ndfn {\r\n  background: #ffffff;\r\n  border-radius: 100%;\r\n  padding: 0 0.4em;\r\n  cursor: help;\r\n  font-style: normal;\r\n  position: relative;\r\n  \r\n}\r\ndfn::after {\r\n  content: attr(data-info);\r\n  display: inline;\r\n  position: absolute;\r\n  top: 22px; left: 0;\r\n  opacity: 0;\r\n  width: 230px;\r\n  font-size: 13px;\r\n  font-weight: 700;\r\n  line-height: 1.5em;\r\n  padding: 0.5em 0.8em;\r\n  background: rgba(0,0,0,0.8);\r\n  color: #fff;\r\n  pointer-events: none; /* This prevents the box from apearing when hovered. */\r\n  transition: opacity 250ms, top 250ms;\r\n}\r\ndfn::before {\r\n  content: '';\r\n  display: block;\r\n  position: absolute;\r\n  top: 12px; left: 20px;\r\n  opacity: 0;\r\n  width: 0; height: 0;\r\n  border: solid transparent 5px;\r\n  border-bottom-color: rgba(0,0,0,0.8);\r\n  transition: opacity 250ms, top 250ms;\r\n}\r\ndfn:hover {z-index: 2;} /* Keeps the info boxes on top of other elements */\r\ndfn:hover::after,\r\ndfn:hover::before {opacity: 1;}\r\ndfn:hover::after {top: 30px;}\r\ndfn:hover::before {top: 20px;}", "",{"version":3,"sources":["webpack://./src/main/resources/js/components/book/Create.css"],"names":[],"mappings":"AAAA;CACC,WAAW;CACX,qBAAqB;AACtB;;AAEA,0BAA0B;;AAE1B;EACE,mBAAmB;EACnB,mBAAmB;EACnB,gBAAgB;EAChB,YAAY;EACZ,kBAAkB;EAClB,kBAAkB;;AAEpB;AACA;EACE,wBAAwB;EACxB,eAAe;EACf,kBAAkB;EAClB,SAAS,EAAE,OAAO;EAClB,UAAU;EACV,YAAY;EACZ,eAAe;EACf,gBAAgB;EAChB,kBAAkB;EAClB,oBAAoB;EACpB,2BAA2B;EAC3B,WAAW;EACX,oBAAoB,EAAE,sDAAsD;EAC5E,oCAAoC;AACtC;AACA;EACE,WAAW;EACX,cAAc;EACd,kBAAkB;EAClB,SAAS,EAAE,UAAU;EACrB,UAAU;EACV,QAAQ,EAAE,SAAS;EACnB,6BAA6B;EAC7B,oCAAoC;EACpC,oCAAoC;AACtC;AACA,WAAW,UAAU,CAAC,EAAE,kDAAkD;AAC1E;mBACmB,UAAU,CAAC;AAC9B,kBAAkB,SAAS,CAAC;AAC5B,mBAAmB,SAAS,CAAC","sourcesContent":["a.dfn-hover {\r\n\tcolor: #333;\r\n\ttext-decoration: none;\r\n}\r\n\r\n/** Code for hover info **/\r\n\r\ndfn {\r\n  background: #ffffff;\r\n  border-radius: 100%;\r\n  padding: 0 0.4em;\r\n  cursor: help;\r\n  font-style: normal;\r\n  position: relative;\r\n  \r\n}\r\ndfn::after {\r\n  content: attr(data-info);\r\n  display: inline;\r\n  position: absolute;\r\n  top: 22px; left: 0;\r\n  opacity: 0;\r\n  width: 230px;\r\n  font-size: 13px;\r\n  font-weight: 700;\r\n  line-height: 1.5em;\r\n  padding: 0.5em 0.8em;\r\n  background: rgba(0,0,0,0.8);\r\n  color: #fff;\r\n  pointer-events: none; /* This prevents the box from apearing when hovered. */\r\n  transition: opacity 250ms, top 250ms;\r\n}\r\ndfn::before {\r\n  content: '';\r\n  display: block;\r\n  position: absolute;\r\n  top: 12px; left: 20px;\r\n  opacity: 0;\r\n  width: 0; height: 0;\r\n  border: solid transparent 5px;\r\n  border-bottom-color: rgba(0,0,0,0.8);\r\n  transition: opacity 250ms, top 250ms;\r\n}\r\ndfn:hover {z-index: 2;} /* Keeps the info boxes on top of other elements */\r\ndfn:hover::after,\r\ndfn:hover::before {opacity: 1;}\r\ndfn:hover::after {top: 30px;}\r\ndfn:hover::before {top: 20px;}"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.i, "a.dfn-hover {\r\n  color: #333;\r\n  text-decoration: none;\r\n}\r\n\r\n/** Code for hover info **/\r\n\r\ndfn {\r\n  background: #ffffff;\r\n  border-radius: 100%;\r\n  padding: 0 0.4em;\r\n  cursor: help;\r\n  font-style: normal;\r\n  position: relative;\r\n}\r\ndfn::after {\r\n  content: attr(data-info);\r\n  display: inline;\r\n  position: absolute;\r\n  top: 22px;\r\n  left: 0;\r\n  opacity: 0;\r\n  width: 230px;\r\n  font-size: 13px;\r\n  font-weight: 700;\r\n  line-height: 1.5em;\r\n  padding: 0.5em 0.8em;\r\n  background: rgba(0, 0, 0, 0.8);\r\n  color: #fff;\r\n  pointer-events: none; /* This prevents the box from apearing when hovered. */\r\n  transition: opacity 250ms, top 250ms;\r\n}\r\ndfn::before {\r\n  content: \"\";\r\n  display: block;\r\n  position: absolute;\r\n  top: 12px;\r\n  left: 20px;\r\n  opacity: 0;\r\n  width: 0;\r\n  height: 0;\r\n  border: solid transparent 5px;\r\n  border-bottom-color: rgba(0, 0, 0, 0.8);\r\n  transition: opacity 250ms, top 250ms;\r\n}\r\ndfn:hover {\r\n  z-index: 2;\r\n} /* Keeps the info boxes on top of other elements */\r\ndfn:hover::after,\r\ndfn:hover::before {\r\n  opacity: 1;\r\n}\r\ndfn:hover::after {\r\n  top: 30px;\r\n}\r\ndfn:hover::before {\r\n  top: 20px;\r\n}\r\n", "",{"version":3,"sources":["webpack://./src/main/resources/js/components/book/Create.css"],"names":[],"mappings":"AAAA;EACE,WAAW;EACX,qBAAqB;AACvB;;AAEA,0BAA0B;;AAE1B;EACE,mBAAmB;EACnB,mBAAmB;EACnB,gBAAgB;EAChB,YAAY;EACZ,kBAAkB;EAClB,kBAAkB;AACpB;AACA;EACE,wBAAwB;EACxB,eAAe;EACf,kBAAkB;EAClB,SAAS;EACT,OAAO;EACP,UAAU;EACV,YAAY;EACZ,eAAe;EACf,gBAAgB;EAChB,kBAAkB;EAClB,oBAAoB;EACpB,8BAA8B;EAC9B,WAAW;EACX,oBAAoB,EAAE,sDAAsD;EAC5E,oCAAoC;AACtC;AACA;EACE,WAAW;EACX,cAAc;EACd,kBAAkB;EAClB,SAAS;EACT,UAAU;EACV,UAAU;EACV,QAAQ;EACR,SAAS;EACT,6BAA6B;EAC7B,uCAAuC;EACvC,oCAAoC;AACtC;AACA;EACE,UAAU;AACZ,EAAE,kDAAkD;AACpD;;EAEE,UAAU;AACZ;AACA;EACE,SAAS;AACX;AACA;EACE,SAAS;AACX","sourcesContent":["a.dfn-hover {\r\n  color: #333;\r\n  text-decoration: none;\r\n}\r\n\r\n/** Code for hover info **/\r\n\r\ndfn {\r\n  background: #ffffff;\r\n  border-radius: 100%;\r\n  padding: 0 0.4em;\r\n  cursor: help;\r\n  font-style: normal;\r\n  position: relative;\r\n}\r\ndfn::after {\r\n  content: attr(data-info);\r\n  display: inline;\r\n  position: absolute;\r\n  top: 22px;\r\n  left: 0;\r\n  opacity: 0;\r\n  width: 230px;\r\n  font-size: 13px;\r\n  font-weight: 700;\r\n  line-height: 1.5em;\r\n  padding: 0.5em 0.8em;\r\n  background: rgba(0, 0, 0, 0.8);\r\n  color: #fff;\r\n  pointer-events: none; /* This prevents the box from apearing when hovered. */\r\n  transition: opacity 250ms, top 250ms;\r\n}\r\ndfn::before {\r\n  content: \"\";\r\n  display: block;\r\n  position: absolute;\r\n  top: 12px;\r\n  left: 20px;\r\n  opacity: 0;\r\n  width: 0;\r\n  height: 0;\r\n  border: solid transparent 5px;\r\n  border-bottom-color: rgba(0, 0, 0, 0.8);\r\n  transition: opacity 250ms, top 250ms;\r\n}\r\ndfn:hover {\r\n  z-index: 2;\r\n} /* Keeps the info boxes on top of other elements */\r\ndfn:hover::after,\r\ndfn:hover::before {\r\n  opacity: 1;\r\n}\r\ndfn:hover::after {\r\n  top: 30px;\r\n}\r\ndfn:hover::before {\r\n  top: 20px;\r\n}\r\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ __webpack_exports__["default"] = (___CSS_LOADER_EXPORT___);
 
@@ -2459,7 +2459,7 @@ __webpack_require__.r(__webpack_exports__);
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()(_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0___default.a);
 ___CSS_LOADER_EXPORT___.push([module.i, "@import url(https://fonts.googleapis.com/css?family=Cormorant+Garamond:300,400,600|Tulpen+One&display=swap);"]);
 // Module
-___CSS_LOADER_EXPORT___.push([module.i, ":root {\r\n  /* colors */\r\n  --body-bg: #FAFAFA;\r\n  --page-bg: #F5F5F5;\r\n  --dark-text: #2A2935;\r\n  /* spacing */\r\n  /* this is what defines the global scale */\r\n  --baseline: 12px;\r\n  /* fonts */\r\n  --book-title: \"Tulpen One\", sans-serif;\r\n  --title: \"Cormorant Garamond\", serif;\r\n  --body: \"Cormorant Garamond\", serif;\r\n  --base-size: var(--baseline) * 1.2;\r\n}\r\n\r\n* {\r\n  box-sizing: border-box;\r\n}\r\n\r\n.cover {\r\n  width: 100%;\r\n  height: 200%;\r\n  box-shadow: 0 0 100px rgba(0, 0, 0, 0.3);\r\n}\r\n\r\n.book {\r\n  width: 100%;\r\n  height: 800px;\r\n  display: flex;\r\n  perspective: 1200px;\r\n\r\n}\r\n.book__page {\r\n  position: relative;\r\n  width: 50%;\r\n  height: 100%;\r\n  display: grid;\r\n  transform: rotateY(0deg);\r\n  transition: transform 0.9s cubic-bezier(0.645, 0.045, 0.355, 1);\r\n  transform-origin: 0% 0%;\r\n  border-radius: 5px;\r\n  background-image: url(https://i.ibb.co/YRy9kHC/paper.jpg);\r\n}\r\n.book__page:nth-of-type(1) {\r\n  background-image: url(https://i.ibb.co/YRy9kHC/paper.jpg);\r\n}\r\n.book__page--1 {\r\n  cursor: pointer;\r\n  overflow: hidden;\r\n}\r\n.book__page--1 img {\r\n  height: 800px;\r\n  width: 100%;\r\n}\r\n.book__page--4 {\r\n  cursor: pointer;\r\n  overflow: hidden;\r\n}\r\n.book__page--4 img {\r\n  height: 800px;\r\n  width: 100%;\r\n}\r\n.book__page--2 {\r\n  position: absolute;\r\n  right: 0;\r\n  pointer-events: none;\r\n  transform-style: preserve-3d;\r\n  background-image: url(https://i.ibb.co/YRy9kHC/paper.jpg);\r\n}\r\n.book__page-front {\r\n  position: absolute;\r\n  width: 100%;\r\n  height: 100%;\r\n  transform: rotateY(0deg) translateZ(1px);\r\n}\r\n.book__page-back {\r\n  position: absolute;\r\n  width: 100%;\r\n  height: 100%;\r\n  padding: 0 calc(var(--baseline) * 1.8);\r\n  transform: rotateY(180deg) translateZ(1px);\r\n}\r\n.book__page-back img {\r\n  width: 100%;\r\n  max-width: 100%;\r\n  height: 800px;\r\n}\r\n.book__page .page__content {\r\n  padding: var(--baseline);\r\n  height: 100%;\r\n  position: relative;\r\n  text-align: center;\r\n}\r\n.book__page .page__content-book-title {\r\n  font-family: var(--book-title);\r\n  font-size: calc(var(--base-size) * 3);\r\n  font-weight: bold;\r\n  text-transform: uppercase;\r\n  letter-spacing: 3px;\r\n  color: var(--dark-text);\r\n  margin-top: calc(var(--baseline) * 3);\r\n  margin-bottom: calc(var(--baseline) * 2);\r\n}\r\n.book__page .page__content-author {\r\n  font-family: var(--title);\r\n  font-size: calc(var(--base-size) * 1.2);\r\n  font-weight: 100;\r\n  text-transform: uppercase;\r\n  color: var(--dark-text);\r\n  border-top: 1px solid var(--dark-text);\r\n  border-bottom: 1px solid var(--dark-text);\r\n  display: inline-block;\r\n  padding: calc(var(--baseline) / 2) calc(var(--baseline) / 5);\r\n  margin-bottom: calc(var(--baseline) *3);\r\n}\r\n.book__page .page__content-credits {\r\n  font-family: var(--title);\r\n  text-transform: uppercase;\r\n  font-size: calc(var(--base-size) * 0.8);\r\n  margin-bottom: calc(var(--baseline) * 1.5);\r\n  letter-spacing: 1px;\r\n  font-weight: bold;\r\n}\r\n.book__page .page__content-credits span {\r\n  display: block;\r\n  font-size: calc(var(--base-size) * 1.2);\r\n  letter-spacing: 0;\r\n}\r\n.book__page .page__content-copyright {\r\n  position: absolute;\r\n  width: calc(100% - (var(--baseline) * 2));\r\n  bottom: calc(var(--baseline) * 2);\r\n  font-family: var(--title);\r\n  font-size: calc(var(--base-size) * 0.8);\r\n  text-transform: uppercase;\r\n  font-weight: bold;\r\n}\r\n.book__page .page__content-title {\r\n  font-family: var(--title);\r\n  font-size: calc(var(--base-size) * 2);\r\n  text-transform: uppercase;\r\n  letter-spacing: 1px;\r\n  margin-top: calc(var(--baseline) * 2);\r\n  margin-bottom: calc(var(--baseline)*1.5);\r\n}\r\n.book__page .page__content-table {\r\n  width: 100%;\r\n  margin-top: calc(var(--baseline) * 2);\r\n}\r\n.book__page .page__content-table td {\r\n  font-family: var(--title);\r\n  font-size: calc(var(--base-size) * 1);\r\n  padding-bottom: calc(var(--baseline) * 1.5);\r\n  text-transform: uppercase;\r\n}\r\n.book__page .page__content-blockquote {\r\n  margin-bottom: calc(var(--baseline) * 2);\r\n}\r\n.book__page .page__content-blockquote-text {\r\n  font-family: var(--title);\r\n  font-size: calc(var(--base-size) * 1.2);\r\n  font-style: italic;\r\n  text-align: justify;\r\n  font-weight: bold;\r\n}\r\n.book__page .page__content-blockquote-reference {\r\n  font-family: var(--title);\r\n  font-size: calc(var(--base-size) * 0.7);\r\n  margin-top: calc(var(--baseline) * 0.3);\r\n  float: right;\r\n  text-transform: uppercase;\r\n}\r\n.book__page .page__content-text {\r\n  font-family: var(--title);\r\n  font-size: calc(var(--base-size));\r\n  text-align: justify;\r\n  text-indent: var(--baseline);\r\n}\r\n.book__page .page__number {\r\n  position: absolute;\r\n  bottom: var(--baseline);\r\n  width: calc(100% - (var(--baseline) * 2));\r\n  font-family: var(--title);\r\n  font-size: calc(var(--base-size));\r\n  text-align: center;\r\n}\r\n.book input[type=radio] {\r\n  display: none;\r\n}\r\n.book input[type=radio]:checked + .book__page {\r\n  transition: transform 0.9s cubic-bezier(0.645, 0.045, 0.355, 1);\r\n  transform: rotateY(-180deg);\r\n}\r\n\r\n", "",{"version":3,"sources":["webpack://./src/main/resources/js/components/book/Get.css"],"names":[],"mappings":"AACA;EACE,WAAW;EACX,kBAAkB;EAClB,kBAAkB;EAClB,oBAAoB;EACpB,YAAY;EACZ,0CAA0C;EAC1C,gBAAgB;EAChB,UAAU;EACV,sCAAsC;EACtC,oCAAoC;EACpC,mCAAmC;EACnC,kCAAkC;AACpC;;AAEA;EACE,sBAAsB;AACxB;;AAEA;EACE,WAAW;EACX,YAAY;EACZ,wCAAwC;AAC1C;;AAEA;EACE,WAAW;EACX,aAAa;EACb,aAAa;EACb,mBAAmB;;AAErB;AACA;EACE,kBAAkB;EAClB,UAAU;EACV,YAAY;EACZ,aAAa;EACb,wBAAwB;EACxB,+DAA+D;EAC/D,uBAAuB;EACvB,kBAAkB;EAClB,yDAAyD;AAC3D;AACA;EACE,yDAAyD;AAC3D;AACA;EACE,eAAe;EACf,gBAAgB;AAClB;AACA;EACE,aAAa;EACb,WAAW;AACb;AACA;EACE,eAAe;EACf,gBAAgB;AAClB;AACA;EACE,aAAa;EACb,WAAW;AACb;AACA;EACE,kBAAkB;EAClB,QAAQ;EACR,oBAAoB;EACpB,4BAA4B;EAC5B,yDAAyD;AAC3D;AACA;EACE,kBAAkB;EAClB,WAAW;EACX,YAAY;EACZ,wCAAwC;AAC1C;AACA;EACE,kBAAkB;EAClB,WAAW;EACX,YAAY;EACZ,sCAAsC;EACtC,0CAA0C;AAC5C;AACA;EACE,WAAW;EACX,eAAe;EACf,aAAa;AACf;AACA;EACE,wBAAwB;EACxB,YAAY;EACZ,kBAAkB;EAClB,kBAAkB;AACpB;AACA;EACE,8BAA8B;EAC9B,qCAAqC;EACrC,iBAAiB;EACjB,yBAAyB;EACzB,mBAAmB;EACnB,uBAAuB;EACvB,qCAAqC;EACrC,wCAAwC;AAC1C;AACA;EACE,yBAAyB;EACzB,uCAAuC;EACvC,gBAAgB;EAChB,yBAAyB;EACzB,uBAAuB;EACvB,sCAAsC;EACtC,yCAAyC;EACzC,qBAAqB;EACrB,4DAA4D;EAC5D,uCAAuC;AACzC;AACA;EACE,yBAAyB;EACzB,yBAAyB;EACzB,uCAAuC;EACvC,0CAA0C;EAC1C,mBAAmB;EACnB,iBAAiB;AACnB;AACA;EACE,cAAc;EACd,uCAAuC;EACvC,iBAAiB;AACnB;AACA;EACE,kBAAkB;EAClB,yCAAyC;EACzC,iCAAiC;EACjC,yBAAyB;EACzB,uCAAuC;EACvC,yBAAyB;EACzB,iBAAiB;AACnB;AACA;EACE,yBAAyB;EACzB,qCAAqC;EACrC,yBAAyB;EACzB,mBAAmB;EACnB,qCAAqC;EACrC,wCAAwC;AAC1C;AACA;EACE,WAAW;EACX,qCAAqC;AACvC;AACA;EACE,yBAAyB;EACzB,qCAAqC;EACrC,2CAA2C;EAC3C,yBAAyB;AAC3B;AACA;EACE,wCAAwC;AAC1C;AACA;EACE,yBAAyB;EACzB,uCAAuC;EACvC,kBAAkB;EAClB,mBAAmB;EACnB,iBAAiB;AACnB;AACA;EACE,yBAAyB;EACzB,uCAAuC;EACvC,uCAAuC;EACvC,YAAY;EACZ,yBAAyB;AAC3B;AACA;EACE,yBAAyB;EACzB,iCAAiC;EACjC,mBAAmB;EACnB,4BAA4B;AAC9B;AACA;EACE,kBAAkB;EAClB,uBAAuB;EACvB,yCAAyC;EACzC,yBAAyB;EACzB,iCAAiC;EACjC,kBAAkB;AACpB;AACA;EACE,aAAa;AACf;AACA;EACE,+DAA+D;EAC/D,2BAA2B;AAC7B","sourcesContent":["@import url(\"https://fonts.googleapis.com/css?family=Cormorant+Garamond:300,400,600|Tulpen+One&display=swap\");\r\n:root {\r\n  /* colors */\r\n  --body-bg: #FAFAFA;\r\n  --page-bg: #F5F5F5;\r\n  --dark-text: #2A2935;\r\n  /* spacing */\r\n  /* this is what defines the global scale */\r\n  --baseline: 12px;\r\n  /* fonts */\r\n  --book-title: \"Tulpen One\", sans-serif;\r\n  --title: \"Cormorant Garamond\", serif;\r\n  --body: \"Cormorant Garamond\", serif;\r\n  --base-size: var(--baseline) * 1.2;\r\n}\r\n\r\n* {\r\n  box-sizing: border-box;\r\n}\r\n\r\n.cover {\r\n  width: 100%;\r\n  height: 200%;\r\n  box-shadow: 0 0 100px rgba(0, 0, 0, 0.3);\r\n}\r\n\r\n.book {\r\n  width: 100%;\r\n  height: 800px;\r\n  display: flex;\r\n  perspective: 1200px;\r\n\r\n}\r\n.book__page {\r\n  position: relative;\r\n  width: 50%;\r\n  height: 100%;\r\n  display: grid;\r\n  transform: rotateY(0deg);\r\n  transition: transform 0.9s cubic-bezier(0.645, 0.045, 0.355, 1);\r\n  transform-origin: 0% 0%;\r\n  border-radius: 5px;\r\n  background-image: url(https://i.ibb.co/YRy9kHC/paper.jpg);\r\n}\r\n.book__page:nth-of-type(1) {\r\n  background-image: url(https://i.ibb.co/YRy9kHC/paper.jpg);\r\n}\r\n.book__page--1 {\r\n  cursor: pointer;\r\n  overflow: hidden;\r\n}\r\n.book__page--1 img {\r\n  height: 800px;\r\n  width: 100%;\r\n}\r\n.book__page--4 {\r\n  cursor: pointer;\r\n  overflow: hidden;\r\n}\r\n.book__page--4 img {\r\n  height: 800px;\r\n  width: 100%;\r\n}\r\n.book__page--2 {\r\n  position: absolute;\r\n  right: 0;\r\n  pointer-events: none;\r\n  transform-style: preserve-3d;\r\n  background-image: url(https://i.ibb.co/YRy9kHC/paper.jpg);\r\n}\r\n.book__page-front {\r\n  position: absolute;\r\n  width: 100%;\r\n  height: 100%;\r\n  transform: rotateY(0deg) translateZ(1px);\r\n}\r\n.book__page-back {\r\n  position: absolute;\r\n  width: 100%;\r\n  height: 100%;\r\n  padding: 0 calc(var(--baseline) * 1.8);\r\n  transform: rotateY(180deg) translateZ(1px);\r\n}\r\n.book__page-back img {\r\n  width: 100%;\r\n  max-width: 100%;\r\n  height: 800px;\r\n}\r\n.book__page .page__content {\r\n  padding: var(--baseline);\r\n  height: 100%;\r\n  position: relative;\r\n  text-align: center;\r\n}\r\n.book__page .page__content-book-title {\r\n  font-family: var(--book-title);\r\n  font-size: calc(var(--base-size) * 3);\r\n  font-weight: bold;\r\n  text-transform: uppercase;\r\n  letter-spacing: 3px;\r\n  color: var(--dark-text);\r\n  margin-top: calc(var(--baseline) * 3);\r\n  margin-bottom: calc(var(--baseline) * 2);\r\n}\r\n.book__page .page__content-author {\r\n  font-family: var(--title);\r\n  font-size: calc(var(--base-size) * 1.2);\r\n  font-weight: 100;\r\n  text-transform: uppercase;\r\n  color: var(--dark-text);\r\n  border-top: 1px solid var(--dark-text);\r\n  border-bottom: 1px solid var(--dark-text);\r\n  display: inline-block;\r\n  padding: calc(var(--baseline) / 2) calc(var(--baseline) / 5);\r\n  margin-bottom: calc(var(--baseline) *3);\r\n}\r\n.book__page .page__content-credits {\r\n  font-family: var(--title);\r\n  text-transform: uppercase;\r\n  font-size: calc(var(--base-size) * 0.8);\r\n  margin-bottom: calc(var(--baseline) * 1.5);\r\n  letter-spacing: 1px;\r\n  font-weight: bold;\r\n}\r\n.book__page .page__content-credits span {\r\n  display: block;\r\n  font-size: calc(var(--base-size) * 1.2);\r\n  letter-spacing: 0;\r\n}\r\n.book__page .page__content-copyright {\r\n  position: absolute;\r\n  width: calc(100% - (var(--baseline) * 2));\r\n  bottom: calc(var(--baseline) * 2);\r\n  font-family: var(--title);\r\n  font-size: calc(var(--base-size) * 0.8);\r\n  text-transform: uppercase;\r\n  font-weight: bold;\r\n}\r\n.book__page .page__content-title {\r\n  font-family: var(--title);\r\n  font-size: calc(var(--base-size) * 2);\r\n  text-transform: uppercase;\r\n  letter-spacing: 1px;\r\n  margin-top: calc(var(--baseline) * 2);\r\n  margin-bottom: calc(var(--baseline)*1.5);\r\n}\r\n.book__page .page__content-table {\r\n  width: 100%;\r\n  margin-top: calc(var(--baseline) * 2);\r\n}\r\n.book__page .page__content-table td {\r\n  font-family: var(--title);\r\n  font-size: calc(var(--base-size) * 1);\r\n  padding-bottom: calc(var(--baseline) * 1.5);\r\n  text-transform: uppercase;\r\n}\r\n.book__page .page__content-blockquote {\r\n  margin-bottom: calc(var(--baseline) * 2);\r\n}\r\n.book__page .page__content-blockquote-text {\r\n  font-family: var(--title);\r\n  font-size: calc(var(--base-size) * 1.2);\r\n  font-style: italic;\r\n  text-align: justify;\r\n  font-weight: bold;\r\n}\r\n.book__page .page__content-blockquote-reference {\r\n  font-family: var(--title);\r\n  font-size: calc(var(--base-size) * 0.7);\r\n  margin-top: calc(var(--baseline) * 0.3);\r\n  float: right;\r\n  text-transform: uppercase;\r\n}\r\n.book__page .page__content-text {\r\n  font-family: var(--title);\r\n  font-size: calc(var(--base-size));\r\n  text-align: justify;\r\n  text-indent: var(--baseline);\r\n}\r\n.book__page .page__number {\r\n  position: absolute;\r\n  bottom: var(--baseline);\r\n  width: calc(100% - (var(--baseline) * 2));\r\n  font-family: var(--title);\r\n  font-size: calc(var(--base-size));\r\n  text-align: center;\r\n}\r\n.book input[type=radio] {\r\n  display: none;\r\n}\r\n.book input[type=radio]:checked + .book__page {\r\n  transition: transform 0.9s cubic-bezier(0.645, 0.045, 0.355, 1);\r\n  transform: rotateY(-180deg);\r\n}\r\n\r\n"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.i, ":root {\r\n  /* colors */\r\n  --body-bg: #fafafa;\r\n  --page-bg: #f5f5f5;\r\n  --dark-text: #2a2935;\r\n  /* spacing */\r\n  /* this is what defines the global scale */\r\n  --baseline: 12px;\r\n  /* fonts */\r\n  --book-title: \"Tulpen One\", sans-serif;\r\n  --title: \"Cormorant Garamond\", serif;\r\n  --body: \"Cormorant Garamond\", serif;\r\n  --base-size: var(--baseline) * 1.2;\r\n}\r\n\r\n* {\r\n  box-sizing: border-box;\r\n}\r\n\r\n.cover {\r\n  width: 100%;\r\n  height: 200%;\r\n  box-shadow: 0 0 100px rgba(0, 0, 0, 0.3);\r\n}\r\n\r\n.book {\r\n  width: 100%;\r\n  height: 800px;\r\n  display: flex;\r\n  perspective: 1200px;\r\n}\r\n.book__page {\r\n  position: relative;\r\n  width: 50%;\r\n  height: 100%;\r\n  display: grid;\r\n  transform: rotateY(0deg);\r\n  transition: transform 0.9s cubic-bezier(0.645, 0.045, 0.355, 1);\r\n  transform-origin: 0% 0%;\r\n  border-radius: 5px;\r\n  background-image: url(https://i.ibb.co/YRy9kHC/paper.jpg);\r\n}\r\n.book__page:nth-of-type(1) {\r\n  background-image: url(https://i.ibb.co/YRy9kHC/paper.jpg);\r\n}\r\n.book__page--1 {\r\n  cursor: pointer;\r\n  overflow: hidden;\r\n}\r\n.book__page--1 img {\r\n  height: 800px;\r\n  width: 100%;\r\n}\r\n.book__page--4 {\r\n  cursor: pointer;\r\n  overflow: hidden;\r\n}\r\n.book__page--4 img {\r\n  height: 800px;\r\n  width: 100%;\r\n}\r\n.book__page--2 {\r\n  position: absolute;\r\n  right: 0;\r\n  pointer-events: none;\r\n  transform-style: preserve-3d;\r\n  background-image: url(https://i.ibb.co/YRy9kHC/paper.jpg);\r\n}\r\n.book__page-front {\r\n  position: absolute;\r\n  width: 100%;\r\n  height: 100%;\r\n  transform: rotateY(0deg) translateZ(1px);\r\n}\r\n.book__page-back {\r\n  position: absolute;\r\n  width: 100%;\r\n  height: 100%;\r\n  padding: 0 calc(var(--baseline) * 1.8);\r\n  transform: rotateY(180deg) translateZ(1px);\r\n}\r\n.book__page-back img {\r\n  width: 100%;\r\n  max-width: 100%;\r\n  height: 800px;\r\n}\r\n.book__page .page__content {\r\n  padding: var(--baseline);\r\n  height: 100%;\r\n  position: relative;\r\n  text-align: center;\r\n}\r\n.book__page .page__content-book-title {\r\n  font-family: var(--book-title);\r\n  font-size: calc(var(--base-size) * 3);\r\n  font-weight: bold;\r\n  text-transform: uppercase;\r\n  letter-spacing: 3px;\r\n  color: var(--dark-text);\r\n  margin-top: calc(var(--baseline) * 3);\r\n  margin-bottom: calc(var(--baseline) * 2);\r\n}\r\n.book__page .page__content-author {\r\n  font-family: var(--title);\r\n  font-size: calc(var(--base-size) * 1.2);\r\n  font-weight: 100;\r\n  text-transform: uppercase;\r\n  color: var(--dark-text);\r\n  border-top: 1px solid var(--dark-text);\r\n  border-bottom: 1px solid var(--dark-text);\r\n  display: inline-block;\r\n  padding: calc(var(--baseline) / 2) calc(var(--baseline) / 5);\r\n  margin-bottom: calc(var(--baseline) * 3);\r\n}\r\n.book__page .page__content-credits {\r\n  font-family: var(--title);\r\n  text-transform: uppercase;\r\n  font-size: calc(var(--base-size) * 0.8);\r\n  margin-bottom: calc(var(--baseline) * 1.5);\r\n  letter-spacing: 1px;\r\n  font-weight: bold;\r\n}\r\n.book__page .page__content-credits span {\r\n  display: block;\r\n  font-size: calc(var(--base-size) * 1.2);\r\n  letter-spacing: 0;\r\n}\r\n.book__page .page__content-copyright {\r\n  position: absolute;\r\n  width: calc(100% - (var(--baseline) * 2));\r\n  bottom: calc(var(--baseline) * 2);\r\n  font-family: var(--title);\r\n  font-size: calc(var(--base-size) * 0.8);\r\n  text-transform: uppercase;\r\n  font-weight: bold;\r\n}\r\n.book__page .page__content-title {\r\n  font-family: var(--title);\r\n  font-size: calc(var(--base-size) * 2);\r\n  text-transform: uppercase;\r\n  letter-spacing: 1px;\r\n  margin-top: calc(var(--baseline) * 2);\r\n  margin-bottom: calc(var(--baseline) * 1.5);\r\n}\r\n.book__page .page__content-table {\r\n  width: 100%;\r\n  margin-top: calc(var(--baseline) * 2);\r\n}\r\n.book__page .page__content-table td {\r\n  font-family: var(--title);\r\n  font-size: calc(var(--base-size) * 1);\r\n  padding-bottom: calc(var(--baseline) * 1.5);\r\n  text-transform: uppercase;\r\n}\r\n.book__page .page__content-blockquote {\r\n  margin-bottom: calc(var(--baseline) * 2);\r\n}\r\n.book__page .page__content-blockquote-text {\r\n  font-family: var(--title);\r\n  font-size: calc(var(--base-size) * 1.2);\r\n  font-style: italic;\r\n  text-align: justify;\r\n  font-weight: bold;\r\n}\r\n.book__page .page__content-blockquote-reference {\r\n  font-family: var(--title);\r\n  font-size: calc(var(--base-size) * 0.7);\r\n  margin-top: calc(var(--baseline) * 0.3);\r\n  float: right;\r\n  text-transform: uppercase;\r\n}\r\n.book__page .page__content-text {\r\n  font-family: var(--title);\r\n  font-size: calc(var(--base-size));\r\n  text-align: justify;\r\n  text-indent: var(--baseline);\r\n}\r\n.book__page .page__number {\r\n  position: absolute;\r\n  bottom: var(--baseline);\r\n  width: calc(100% - (var(--baseline) * 2));\r\n  font-family: var(--title);\r\n  font-size: calc(var(--base-size));\r\n  text-align: center;\r\n}\r\n.book input[type=\"radio\"] {\r\n  display: none;\r\n}\r\n.book input[type=\"radio\"]:checked + .book__page {\r\n  transition: transform 0.9s cubic-bezier(0.645, 0.045, 0.355, 1);\r\n  transform: rotateY(-180deg);\r\n}\r\n", "",{"version":3,"sources":["webpack://./src/main/resources/js/components/book/Get.css"],"names":[],"mappings":"AACA;EACE,WAAW;EACX,kBAAkB;EAClB,kBAAkB;EAClB,oBAAoB;EACpB,YAAY;EACZ,0CAA0C;EAC1C,gBAAgB;EAChB,UAAU;EACV,sCAAsC;EACtC,oCAAoC;EACpC,mCAAmC;EACnC,kCAAkC;AACpC;;AAEA;EACE,sBAAsB;AACxB;;AAEA;EACE,WAAW;EACX,YAAY;EACZ,wCAAwC;AAC1C;;AAEA;EACE,WAAW;EACX,aAAa;EACb,aAAa;EACb,mBAAmB;AACrB;AACA;EACE,kBAAkB;EAClB,UAAU;EACV,YAAY;EACZ,aAAa;EACb,wBAAwB;EACxB,+DAA+D;EAC/D,uBAAuB;EACvB,kBAAkB;EAClB,yDAAyD;AAC3D;AACA;EACE,yDAAyD;AAC3D;AACA;EACE,eAAe;EACf,gBAAgB;AAClB;AACA;EACE,aAAa;EACb,WAAW;AACb;AACA;EACE,eAAe;EACf,gBAAgB;AAClB;AACA;EACE,aAAa;EACb,WAAW;AACb;AACA;EACE,kBAAkB;EAClB,QAAQ;EACR,oBAAoB;EACpB,4BAA4B;EAC5B,yDAAyD;AAC3D;AACA;EACE,kBAAkB;EAClB,WAAW;EACX,YAAY;EACZ,wCAAwC;AAC1C;AACA;EACE,kBAAkB;EAClB,WAAW;EACX,YAAY;EACZ,sCAAsC;EACtC,0CAA0C;AAC5C;AACA;EACE,WAAW;EACX,eAAe;EACf,aAAa;AACf;AACA;EACE,wBAAwB;EACxB,YAAY;EACZ,kBAAkB;EAClB,kBAAkB;AACpB;AACA;EACE,8BAA8B;EAC9B,qCAAqC;EACrC,iBAAiB;EACjB,yBAAyB;EACzB,mBAAmB;EACnB,uBAAuB;EACvB,qCAAqC;EACrC,wCAAwC;AAC1C;AACA;EACE,yBAAyB;EACzB,uCAAuC;EACvC,gBAAgB;EAChB,yBAAyB;EACzB,uBAAuB;EACvB,sCAAsC;EACtC,yCAAyC;EACzC,qBAAqB;EACrB,4DAA4D;EAC5D,wCAAwC;AAC1C;AACA;EACE,yBAAyB;EACzB,yBAAyB;EACzB,uCAAuC;EACvC,0CAA0C;EAC1C,mBAAmB;EACnB,iBAAiB;AACnB;AACA;EACE,cAAc;EACd,uCAAuC;EACvC,iBAAiB;AACnB;AACA;EACE,kBAAkB;EAClB,yCAAyC;EACzC,iCAAiC;EACjC,yBAAyB;EACzB,uCAAuC;EACvC,yBAAyB;EACzB,iBAAiB;AACnB;AACA;EACE,yBAAyB;EACzB,qCAAqC;EACrC,yBAAyB;EACzB,mBAAmB;EACnB,qCAAqC;EACrC,0CAA0C;AAC5C;AACA;EACE,WAAW;EACX,qCAAqC;AACvC;AACA;EACE,yBAAyB;EACzB,qCAAqC;EACrC,2CAA2C;EAC3C,yBAAyB;AAC3B;AACA;EACE,wCAAwC;AAC1C;AACA;EACE,yBAAyB;EACzB,uCAAuC;EACvC,kBAAkB;EAClB,mBAAmB;EACnB,iBAAiB;AACnB;AACA;EACE,yBAAyB;EACzB,uCAAuC;EACvC,uCAAuC;EACvC,YAAY;EACZ,yBAAyB;AAC3B;AACA;EACE,yBAAyB;EACzB,iCAAiC;EACjC,mBAAmB;EACnB,4BAA4B;AAC9B;AACA;EACE,kBAAkB;EAClB,uBAAuB;EACvB,yCAAyC;EACzC,yBAAyB;EACzB,iCAAiC;EACjC,kBAAkB;AACpB;AACA;EACE,aAAa;AACf;AACA;EACE,+DAA+D;EAC/D,2BAA2B;AAC7B","sourcesContent":["@import url(\"https://fonts.googleapis.com/css?family=Cormorant+Garamond:300,400,600|Tulpen+One&display=swap\");\r\n:root {\r\n  /* colors */\r\n  --body-bg: #fafafa;\r\n  --page-bg: #f5f5f5;\r\n  --dark-text: #2a2935;\r\n  /* spacing */\r\n  /* this is what defines the global scale */\r\n  --baseline: 12px;\r\n  /* fonts */\r\n  --book-title: \"Tulpen One\", sans-serif;\r\n  --title: \"Cormorant Garamond\", serif;\r\n  --body: \"Cormorant Garamond\", serif;\r\n  --base-size: var(--baseline) * 1.2;\r\n}\r\n\r\n* {\r\n  box-sizing: border-box;\r\n}\r\n\r\n.cover {\r\n  width: 100%;\r\n  height: 200%;\r\n  box-shadow: 0 0 100px rgba(0, 0, 0, 0.3);\r\n}\r\n\r\n.book {\r\n  width: 100%;\r\n  height: 800px;\r\n  display: flex;\r\n  perspective: 1200px;\r\n}\r\n.book__page {\r\n  position: relative;\r\n  width: 50%;\r\n  height: 100%;\r\n  display: grid;\r\n  transform: rotateY(0deg);\r\n  transition: transform 0.9s cubic-bezier(0.645, 0.045, 0.355, 1);\r\n  transform-origin: 0% 0%;\r\n  border-radius: 5px;\r\n  background-image: url(https://i.ibb.co/YRy9kHC/paper.jpg);\r\n}\r\n.book__page:nth-of-type(1) {\r\n  background-image: url(https://i.ibb.co/YRy9kHC/paper.jpg);\r\n}\r\n.book__page--1 {\r\n  cursor: pointer;\r\n  overflow: hidden;\r\n}\r\n.book__page--1 img {\r\n  height: 800px;\r\n  width: 100%;\r\n}\r\n.book__page--4 {\r\n  cursor: pointer;\r\n  overflow: hidden;\r\n}\r\n.book__page--4 img {\r\n  height: 800px;\r\n  width: 100%;\r\n}\r\n.book__page--2 {\r\n  position: absolute;\r\n  right: 0;\r\n  pointer-events: none;\r\n  transform-style: preserve-3d;\r\n  background-image: url(https://i.ibb.co/YRy9kHC/paper.jpg);\r\n}\r\n.book__page-front {\r\n  position: absolute;\r\n  width: 100%;\r\n  height: 100%;\r\n  transform: rotateY(0deg) translateZ(1px);\r\n}\r\n.book__page-back {\r\n  position: absolute;\r\n  width: 100%;\r\n  height: 100%;\r\n  padding: 0 calc(var(--baseline) * 1.8);\r\n  transform: rotateY(180deg) translateZ(1px);\r\n}\r\n.book__page-back img {\r\n  width: 100%;\r\n  max-width: 100%;\r\n  height: 800px;\r\n}\r\n.book__page .page__content {\r\n  padding: var(--baseline);\r\n  height: 100%;\r\n  position: relative;\r\n  text-align: center;\r\n}\r\n.book__page .page__content-book-title {\r\n  font-family: var(--book-title);\r\n  font-size: calc(var(--base-size) * 3);\r\n  font-weight: bold;\r\n  text-transform: uppercase;\r\n  letter-spacing: 3px;\r\n  color: var(--dark-text);\r\n  margin-top: calc(var(--baseline) * 3);\r\n  margin-bottom: calc(var(--baseline) * 2);\r\n}\r\n.book__page .page__content-author {\r\n  font-family: var(--title);\r\n  font-size: calc(var(--base-size) * 1.2);\r\n  font-weight: 100;\r\n  text-transform: uppercase;\r\n  color: var(--dark-text);\r\n  border-top: 1px solid var(--dark-text);\r\n  border-bottom: 1px solid var(--dark-text);\r\n  display: inline-block;\r\n  padding: calc(var(--baseline) / 2) calc(var(--baseline) / 5);\r\n  margin-bottom: calc(var(--baseline) * 3);\r\n}\r\n.book__page .page__content-credits {\r\n  font-family: var(--title);\r\n  text-transform: uppercase;\r\n  font-size: calc(var(--base-size) * 0.8);\r\n  margin-bottom: calc(var(--baseline) * 1.5);\r\n  letter-spacing: 1px;\r\n  font-weight: bold;\r\n}\r\n.book__page .page__content-credits span {\r\n  display: block;\r\n  font-size: calc(var(--base-size) * 1.2);\r\n  letter-spacing: 0;\r\n}\r\n.book__page .page__content-copyright {\r\n  position: absolute;\r\n  width: calc(100% - (var(--baseline) * 2));\r\n  bottom: calc(var(--baseline) * 2);\r\n  font-family: var(--title);\r\n  font-size: calc(var(--base-size) * 0.8);\r\n  text-transform: uppercase;\r\n  font-weight: bold;\r\n}\r\n.book__page .page__content-title {\r\n  font-family: var(--title);\r\n  font-size: calc(var(--base-size) * 2);\r\n  text-transform: uppercase;\r\n  letter-spacing: 1px;\r\n  margin-top: calc(var(--baseline) * 2);\r\n  margin-bottom: calc(var(--baseline) * 1.5);\r\n}\r\n.book__page .page__content-table {\r\n  width: 100%;\r\n  margin-top: calc(var(--baseline) * 2);\r\n}\r\n.book__page .page__content-table td {\r\n  font-family: var(--title);\r\n  font-size: calc(var(--base-size) * 1);\r\n  padding-bottom: calc(var(--baseline) * 1.5);\r\n  text-transform: uppercase;\r\n}\r\n.book__page .page__content-blockquote {\r\n  margin-bottom: calc(var(--baseline) * 2);\r\n}\r\n.book__page .page__content-blockquote-text {\r\n  font-family: var(--title);\r\n  font-size: calc(var(--base-size) * 1.2);\r\n  font-style: italic;\r\n  text-align: justify;\r\n  font-weight: bold;\r\n}\r\n.book__page .page__content-blockquote-reference {\r\n  font-family: var(--title);\r\n  font-size: calc(var(--base-size) * 0.7);\r\n  margin-top: calc(var(--baseline) * 0.3);\r\n  float: right;\r\n  text-transform: uppercase;\r\n}\r\n.book__page .page__content-text {\r\n  font-family: var(--title);\r\n  font-size: calc(var(--base-size));\r\n  text-align: justify;\r\n  text-indent: var(--baseline);\r\n}\r\n.book__page .page__number {\r\n  position: absolute;\r\n  bottom: var(--baseline);\r\n  width: calc(100% - (var(--baseline) * 2));\r\n  font-family: var(--title);\r\n  font-size: calc(var(--base-size));\r\n  text-align: center;\r\n}\r\n.book input[type=\"radio\"] {\r\n  display: none;\r\n}\r\n.book input[type=\"radio\"]:checked + .book__page {\r\n  transition: transform 0.9s cubic-bezier(0.645, 0.045, 0.355, 1);\r\n  transform: rotateY(-180deg);\r\n}\r\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ __webpack_exports__["default"] = (___CSS_LOADER_EXPORT___);
 
@@ -2484,7 +2484,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()(_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0___default.a);
 // Module
-___CSS_LOADER_EXPORT___.push([module.i, ".galeria {\r\n\tmargin: 0px;\r\n\tlist-style: none;\r\n\tpadding: 0px;\r\n\tbox-sizing: border-box;\r\n\t\r\n\tdisplay: inline;\r\n\tflex-wrap: wrap;\r\n\tjustify-content: space-around;\r\n}\r\n\r\n.galeria li {\r\n\tmargin: 5px;\r\n  display: inline-block;\r\n}\r\n\r\n.galeria img {\r\n\twidth: auto;\r\n\theight: 100px;\r\n}\r\n\r\n/*Estilos del modal*/\r\n\r\n.modal {\r\n\tdisplay: none;\r\n}\r\n\r\n.modal:target {\r\n\t\r\n\tdisplay: block;\r\n\tposition: fixed;\r\n\tbackground: rgba(0,0,0,0.8);\r\n\ttop: 0;\r\n\tleft: 0;\r\n\twidth: 100%;\r\n\theight: 100%;\r\n}\r\n\r\n.modal h3 {\r\n\tcolor: #fff;\r\n\tfont-size: 30px;\r\n\ttext-align: center;\r\n\tmargin: 15px 0;\r\n}\r\n\r\n.imagen {\r\n\twidth: 100%;\r\n\theight: 50%;\r\n\t\r\n\tdisplay: flex;\r\n\tjustify-content: center;\r\n\talign-items: center;\r\n}\r\n\r\n.imagen a {\r\n\tcolor: #fff;\r\n\tfont-size: 40px;\r\n\ttext-decoration: none;\r\n\tmargin: 0 10px;\r\n}\r\n\r\n.imagen a:nth-child(2) {\r\n\tmargin: 0;\r\n\theight: 100%;\r\n\tflex-shrink: 2;\r\n}\r\n\r\n.imagen img {\r\n\twidth: auto;\r\n\theight: 100%;\r\n\tmax-width: 100%;\r\n\tborder: 7px solid #fff;\r\n\tbox-sizing: border-box;\r\n}\r\n\r\n.cerrar {\r\n\tdisplay: flow-root;\r\n\tbackground: #fff;\r\n\twidth: 40px;\r\n\theight: 40px;\r\n\tmargin: 15px;\r\n\ttext-align: center;\r\n\ttext-decoration: none;\r\n\tfont-size: 25px;\r\n\tcolor: #000;\r\n\tborder-radius: 50%;\r\n}\r\n\r\n.allImages {\r\n  display: inline-flex;\r\n  flex-flow: wrap;\r\n  justify-content: center;\r\n}\r\n\r\n.imagen-buttons {\r\n\tdisplay: inline-flex;\r\n}", "",{"version":3,"sources":["webpack://./src/main/resources/js/components/book/Images.css"],"names":[],"mappings":"AAAA;CACC,WAAW;CACX,gBAAgB;CAChB,YAAY;CACZ,sBAAsB;;CAEtB,eAAe;CACf,eAAe;CACf,6BAA6B;AAC9B;;AAEA;CACC,WAAW;EACV,qBAAqB;AACvB;;AAEA;CACC,WAAW;CACX,aAAa;AACd;;AAEA,oBAAoB;;AAEpB;CACC,aAAa;AACd;;AAEA;;CAEC,cAAc;CACd,eAAe;CACf,2BAA2B;CAC3B,MAAM;CACN,OAAO;CACP,WAAW;CACX,YAAY;AACb;;AAEA;CACC,WAAW;CACX,eAAe;CACf,kBAAkB;CAClB,cAAc;AACf;;AAEA;CACC,WAAW;CACX,WAAW;;CAEX,aAAa;CACb,uBAAuB;CACvB,mBAAmB;AACpB;;AAEA;CACC,WAAW;CACX,eAAe;CACf,qBAAqB;CACrB,cAAc;AACf;;AAEA;CACC,SAAS;CACT,YAAY;CACZ,cAAc;AACf;;AAEA;CACC,WAAW;CACX,YAAY;CACZ,eAAe;CACf,sBAAsB;CACtB,sBAAsB;AACvB;;AAEA;CACC,kBAAkB;CAClB,gBAAgB;CAChB,WAAW;CACX,YAAY;CACZ,YAAY;CACZ,kBAAkB;CAClB,qBAAqB;CACrB,eAAe;CACf,WAAW;CACX,kBAAkB;AACnB;;AAEA;EACE,oBAAoB;EACpB,eAAe;EACf,uBAAuB;AACzB;;AAEA;CACC,oBAAoB;AACrB","sourcesContent":[".galeria {\r\n\tmargin: 0px;\r\n\tlist-style: none;\r\n\tpadding: 0px;\r\n\tbox-sizing: border-box;\r\n\t\r\n\tdisplay: inline;\r\n\tflex-wrap: wrap;\r\n\tjustify-content: space-around;\r\n}\r\n\r\n.galeria li {\r\n\tmargin: 5px;\r\n  display: inline-block;\r\n}\r\n\r\n.galeria img {\r\n\twidth: auto;\r\n\theight: 100px;\r\n}\r\n\r\n/*Estilos del modal*/\r\n\r\n.modal {\r\n\tdisplay: none;\r\n}\r\n\r\n.modal:target {\r\n\t\r\n\tdisplay: block;\r\n\tposition: fixed;\r\n\tbackground: rgba(0,0,0,0.8);\r\n\ttop: 0;\r\n\tleft: 0;\r\n\twidth: 100%;\r\n\theight: 100%;\r\n}\r\n\r\n.modal h3 {\r\n\tcolor: #fff;\r\n\tfont-size: 30px;\r\n\ttext-align: center;\r\n\tmargin: 15px 0;\r\n}\r\n\r\n.imagen {\r\n\twidth: 100%;\r\n\theight: 50%;\r\n\t\r\n\tdisplay: flex;\r\n\tjustify-content: center;\r\n\talign-items: center;\r\n}\r\n\r\n.imagen a {\r\n\tcolor: #fff;\r\n\tfont-size: 40px;\r\n\ttext-decoration: none;\r\n\tmargin: 0 10px;\r\n}\r\n\r\n.imagen a:nth-child(2) {\r\n\tmargin: 0;\r\n\theight: 100%;\r\n\tflex-shrink: 2;\r\n}\r\n\r\n.imagen img {\r\n\twidth: auto;\r\n\theight: 100%;\r\n\tmax-width: 100%;\r\n\tborder: 7px solid #fff;\r\n\tbox-sizing: border-box;\r\n}\r\n\r\n.cerrar {\r\n\tdisplay: flow-root;\r\n\tbackground: #fff;\r\n\twidth: 40px;\r\n\theight: 40px;\r\n\tmargin: 15px;\r\n\ttext-align: center;\r\n\ttext-decoration: none;\r\n\tfont-size: 25px;\r\n\tcolor: #000;\r\n\tborder-radius: 50%;\r\n}\r\n\r\n.allImages {\r\n  display: inline-flex;\r\n  flex-flow: wrap;\r\n  justify-content: center;\r\n}\r\n\r\n.imagen-buttons {\r\n\tdisplay: inline-flex;\r\n}"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.i, ".galeria {\r\n  margin: 0px;\r\n  list-style: none;\r\n  padding: 0px;\r\n  box-sizing: border-box;\r\n\r\n  display: inline;\r\n  flex-wrap: wrap;\r\n  justify-content: space-around;\r\n}\r\n\r\n.galeria li {\r\n  margin: 5px;\r\n  display: inline-block;\r\n}\r\n\r\n.galeria img {\r\n  width: auto;\r\n  height: 100px;\r\n}\r\n\r\n/*Estilos del modal*/\r\n\r\n.modal {\r\n  display: none;\r\n}\r\n\r\n.modal:target {\r\n  display: block;\r\n  position: fixed;\r\n  background: rgba(0, 0, 0, 0.8);\r\n  top: 0;\r\n  left: 0;\r\n  width: 100%;\r\n  height: 100%;\r\n}\r\n\r\n.modal h3 {\r\n  color: #fff;\r\n  font-size: 30px;\r\n  text-align: center;\r\n  margin: 15px 0;\r\n}\r\n\r\n.imagen {\r\n  width: 100%;\r\n  height: 50%;\r\n\r\n  display: flex;\r\n  justify-content: center;\r\n  align-items: center;\r\n}\r\n\r\n.imagen a {\r\n  color: #fff;\r\n  font-size: 40px;\r\n  text-decoration: none;\r\n  margin: 0 10px;\r\n}\r\n\r\n.imagen a:nth-child(2) {\r\n  margin: 0;\r\n  height: 100%;\r\n  flex-shrink: 2;\r\n}\r\n\r\n.imagen img {\r\n  width: auto;\r\n  height: 100%;\r\n  max-width: 100%;\r\n  border: 7px solid #fff;\r\n  box-sizing: border-box;\r\n}\r\n\r\n.cerrar {\r\n  display: flow-root;\r\n  background: #fff;\r\n  width: 40px;\r\n  height: 40px;\r\n  margin: 15px;\r\n  text-align: center;\r\n  text-decoration: none;\r\n  font-size: 25px;\r\n  color: #000;\r\n  border-radius: 50%;\r\n}\r\n\r\n.allImages {\r\n  display: inline-flex;\r\n  flex-flow: wrap;\r\n  justify-content: center;\r\n}\r\n\r\n.imagen-buttons {\r\n  display: inline-flex;\r\n}\r\n", "",{"version":3,"sources":["webpack://./src/main/resources/js/components/book/Images.css"],"names":[],"mappings":"AAAA;EACE,WAAW;EACX,gBAAgB;EAChB,YAAY;EACZ,sBAAsB;;EAEtB,eAAe;EACf,eAAe;EACf,6BAA6B;AAC/B;;AAEA;EACE,WAAW;EACX,qBAAqB;AACvB;;AAEA;EACE,WAAW;EACX,aAAa;AACf;;AAEA,oBAAoB;;AAEpB;EACE,aAAa;AACf;;AAEA;EACE,cAAc;EACd,eAAe;EACf,8BAA8B;EAC9B,MAAM;EACN,OAAO;EACP,WAAW;EACX,YAAY;AACd;;AAEA;EACE,WAAW;EACX,eAAe;EACf,kBAAkB;EAClB,cAAc;AAChB;;AAEA;EACE,WAAW;EACX,WAAW;;EAEX,aAAa;EACb,uBAAuB;EACvB,mBAAmB;AACrB;;AAEA;EACE,WAAW;EACX,eAAe;EACf,qBAAqB;EACrB,cAAc;AAChB;;AAEA;EACE,SAAS;EACT,YAAY;EACZ,cAAc;AAChB;;AAEA;EACE,WAAW;EACX,YAAY;EACZ,eAAe;EACf,sBAAsB;EACtB,sBAAsB;AACxB;;AAEA;EACE,kBAAkB;EAClB,gBAAgB;EAChB,WAAW;EACX,YAAY;EACZ,YAAY;EACZ,kBAAkB;EAClB,qBAAqB;EACrB,eAAe;EACf,WAAW;EACX,kBAAkB;AACpB;;AAEA;EACE,oBAAoB;EACpB,eAAe;EACf,uBAAuB;AACzB;;AAEA;EACE,oBAAoB;AACtB","sourcesContent":[".galeria {\r\n  margin: 0px;\r\n  list-style: none;\r\n  padding: 0px;\r\n  box-sizing: border-box;\r\n\r\n  display: inline;\r\n  flex-wrap: wrap;\r\n  justify-content: space-around;\r\n}\r\n\r\n.galeria li {\r\n  margin: 5px;\r\n  display: inline-block;\r\n}\r\n\r\n.galeria img {\r\n  width: auto;\r\n  height: 100px;\r\n}\r\n\r\n/*Estilos del modal*/\r\n\r\n.modal {\r\n  display: none;\r\n}\r\n\r\n.modal:target {\r\n  display: block;\r\n  position: fixed;\r\n  background: rgba(0, 0, 0, 0.8);\r\n  top: 0;\r\n  left: 0;\r\n  width: 100%;\r\n  height: 100%;\r\n}\r\n\r\n.modal h3 {\r\n  color: #fff;\r\n  font-size: 30px;\r\n  text-align: center;\r\n  margin: 15px 0;\r\n}\r\n\r\n.imagen {\r\n  width: 100%;\r\n  height: 50%;\r\n\r\n  display: flex;\r\n  justify-content: center;\r\n  align-items: center;\r\n}\r\n\r\n.imagen a {\r\n  color: #fff;\r\n  font-size: 40px;\r\n  text-decoration: none;\r\n  margin: 0 10px;\r\n}\r\n\r\n.imagen a:nth-child(2) {\r\n  margin: 0;\r\n  height: 100%;\r\n  flex-shrink: 2;\r\n}\r\n\r\n.imagen img {\r\n  width: auto;\r\n  height: 100%;\r\n  max-width: 100%;\r\n  border: 7px solid #fff;\r\n  box-sizing: border-box;\r\n}\r\n\r\n.cerrar {\r\n  display: flow-root;\r\n  background: #fff;\r\n  width: 40px;\r\n  height: 40px;\r\n  margin: 15px;\r\n  text-align: center;\r\n  text-decoration: none;\r\n  font-size: 25px;\r\n  color: #000;\r\n  border-radius: 50%;\r\n}\r\n\r\n.allImages {\r\n  display: inline-flex;\r\n  flex-flow: wrap;\r\n  justify-content: center;\r\n}\r\n\r\n.imagen-buttons {\r\n  display: inline-flex;\r\n}\r\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ __webpack_exports__["default"] = (___CSS_LOADER_EXPORT___);
 
@@ -2509,7 +2509,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()(_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0___default.a);
 // Module
-___CSS_LOADER_EXPORT___.push([module.i, "\r\n  a.pag {\r\n    width:32px;\r\n    height:32px;\r\n    display:inline-block;\r\n    position:relative;\r\n    text-align:center;\r\n    line-height:32px;\r\n    text-decoration:none;\r\n    color:#000000;\r\n    transition:.3s all;\r\n    font-weight: bold;\r\n  }", "",{"version":3,"sources":["webpack://./src/main/resources/js/components/book/Pagination.css"],"names":[],"mappings":";EACE;IACE,UAAU;IACV,WAAW;IACX,oBAAoB;IACpB,iBAAiB;IACjB,iBAAiB;IACjB,gBAAgB;IAChB,oBAAoB;IACpB,aAAa;IACb,kBAAkB;IAClB,iBAAiB;EACnB","sourcesContent":["\r\n  a.pag {\r\n    width:32px;\r\n    height:32px;\r\n    display:inline-block;\r\n    position:relative;\r\n    text-align:center;\r\n    line-height:32px;\r\n    text-decoration:none;\r\n    color:#000000;\r\n    transition:.3s all;\r\n    font-weight: bold;\r\n  }"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.i, "a.pag {\r\n  width: 32px;\r\n  height: 32px;\r\n  display: inline-block;\r\n  position: relative;\r\n  text-align: center;\r\n  line-height: 32px;\r\n  text-decoration: none;\r\n  color: #000000;\r\n  transition: 0.3s all;\r\n  font-weight: bold;\r\n}\r\n", "",{"version":3,"sources":["webpack://./src/main/resources/js/components/book/Pagination.css"],"names":[],"mappings":"AAAA;EACE,WAAW;EACX,YAAY;EACZ,qBAAqB;EACrB,kBAAkB;EAClB,kBAAkB;EAClB,iBAAiB;EACjB,qBAAqB;EACrB,cAAc;EACd,oBAAoB;EACpB,iBAAiB;AACnB","sourcesContent":["a.pag {\r\n  width: 32px;\r\n  height: 32px;\r\n  display: inline-block;\r\n  position: relative;\r\n  text-align: center;\r\n  line-height: 32px;\r\n  text-decoration: none;\r\n  color: #000000;\r\n  transition: 0.3s all;\r\n  font-weight: bold;\r\n}\r\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ __webpack_exports__["default"] = (___CSS_LOADER_EXPORT___);
 
@@ -2534,7 +2534,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()(_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0___default.a);
 // Module
-___CSS_LOADER_EXPORT___.push([module.i, ".search-input {\r\n    display: flex;\r\n}\r\n\r\n.range-years {\r\n    display: contents;\r\n}", "",{"version":3,"sources":["webpack://./src/main/resources/js/components/book/Search.css"],"names":[],"mappings":"AAAA;IACI,aAAa;AACjB;;AAEA;IACI,iBAAiB;AACrB","sourcesContent":[".search-input {\r\n    display: flex;\r\n}\r\n\r\n.range-years {\r\n    display: contents;\r\n}"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.i, ".search-input {\r\n  display: flex;\r\n}\r\n\r\n.range-years {\r\n  display: contents;\r\n}\r\n", "",{"version":3,"sources":["webpack://./src/main/resources/js/components/book/Search.css"],"names":[],"mappings":"AAAA;EACE,aAAa;AACf;;AAEA;EACE,iBAAiB;AACnB","sourcesContent":[".search-input {\r\n  display: flex;\r\n}\r\n\r\n.range-years {\r\n  display: contents;\r\n}\r\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ __webpack_exports__["default"] = (___CSS_LOADER_EXPORT___);
 
@@ -36572,7 +36572,7 @@ var Home = /*#__PURE__*/function (_Component) {
     value: function render() {
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("center", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         style: {
-          borderRadius: '5px',
+          borderRadius: "5px",
           backgroundImage: "url(https://i.ibb.co/YRy9kHC/paper.jpg)",
           backgroundSize: "cover"
         }
@@ -36773,7 +36773,7 @@ var Main = /*#__PURE__*/function (_Component) {
         exact: true,
         component: _request_ListReceivedRequest__WEBPACK_IMPORTED_MODULE_23__["default"]
       }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_26__["Route"], {
-        path: "/search/:page/:query",
+        path: "/search/:type/:page/:query",
         exact: true,
         component: _book_ListSearchBooks__WEBPACK_IMPORTED_MODULE_24__["default"]
       }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_26__["Route"], {
@@ -36920,8 +36920,6 @@ var Nav = /*#__PURE__*/function (_Component) {
   }, {
     key: "render",
     value: function render() {
-      var _this2 = this;
-
       var button1;
       var button2;
 
@@ -36950,63 +36948,6 @@ var Nav = /*#__PURE__*/function (_Component) {
         }, "Cerrar sesi\xF3n");
       }
 
-      var search = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("li", {
-        style: {
-          "float": "right"
-        }
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
-        "class": "search-box"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("select", {
-        "class": "form-control",
-        id: "selectStatus",
-        value: this.state.selectSearch,
-        onChange: function onChange(event) {
-          return _this2.setState({
-            selectSearch: event.target.value
-          });
-        }
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("option", {
-        value: ""
-      }, "Buscar por"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("option", {
-        value: "book"
-      }, "Datos del libro"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("option", {
-        value: "publicationYear"
-      }, "A\xF1o de publicaci\xF3n"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("option", {
-        value: "rangeYears"
-      }, "A\xF1o de publicaci\xF3n"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("option", {
-        value: "postalCode"
-      }, "C\xF3digo postal"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("option", {
-        value: "province"
-      }, "Provincia"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("option", {
-        value: ""
-      }, "DA\xD1ADO"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("option", {
-        value: "MUY DA\xD1ADO"
-      }, "MUY DA\xD1ADO")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("input", {
-        "class": "text",
-        type: "text",
-        placeholder: "T\xEDtulo, ISBN, autor, ...",
-        onChange: function onChange(event) {
-          return _this2.setState({
-            query: event.target.value
-          });
-        }
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("dfn", {
-        "data-info": info
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("i", {
-        style: {
-          top: "50%"
-        },
-        "class": "fa fa-info-circle"
-      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("button", {
-        type: "button",
-        onClick: function onClick() {
-          return _this2.search(_this2.state.query);
-        },
-        disabled: this.state.query.trim() == ''
-      }, " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("i", {
-        "class": "fa fa-search"
-      }))));
-      var info = "BÚSQUEDA DE LIBROS: ======================= " + "1) POR SUS ATRIBUTOS: ................ " + "1.1) Por palabras clave separadas por un espacio ................................ " + "1.2) Por año o precio, escribiendo sólo un número sin espacios ........ " + "1.3) Por un rango de años, separandolos por un guión y sin espacios (YYYY-YYYY). ======================= 2) POR SUS PROPIETARIOS: .......... " + "2.1) Por nombre de usuario .......... 2.2) Por código postal,  válido y sin espacios ..................................... " + "2.3) Por provincia válida (puede consultarlas en el registro o su perfil).";
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("nav", {
         style: {
           marginBottom: "30px"
@@ -37041,9 +36982,9 @@ var Nav = /*#__PURE__*/function (_Component) {
         href: "/books/all/0/province"
       }, "Mi provincia")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
         href: "/books/all/0/genres"
-      }, "Mis g\xE9neros preferidos")))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
+      }, "Mis g\xE9neros pref.")))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
         href: "#"
-      }, "Peticiones ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("i", {
+      }, "Peticiones", " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("i", {
         "class": "fa fa-handshake-o",
         "aria-hidden": "true"
       })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("ul", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
@@ -37065,7 +37006,7 @@ var Nav = /*#__PURE__*/function (_Component) {
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
         "class": "nav-link",
         href: "/search"
-      }, " Buscar ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("i", {
+      }, " ", "Buscar ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("i", {
         "class": "fa fa-search"
       })))) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("li", {
         style: {
@@ -37090,7 +37031,7 @@ var Nav = /*#__PURE__*/function (_Component) {
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
         "class": "nav-link",
         href: "/search"
-      }, " Buscar ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("i", {
+      }, " ", "Buscar ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("i", {
         "class": "fa fa-search"
       })))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         "class": "mobile"
@@ -37122,7 +37063,7 @@ var Nav = /*#__PURE__*/function (_Component) {
         href: "/books/all/0/province"
       }, "Mi provincia")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
         href: "/books/all/0/genres"
-      }, "Mis g\xE9neros")))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
+      }, "Mis g\xE9neros pref.")))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
         href: "#"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("i", {
         "class": "fa fa-handshake-o",
@@ -37340,7 +37281,7 @@ var Form = /*#__PURE__*/function (_Component) {
           backgroundSize: "cover",
           padding: "50px",
           fontWeight: "bold",
-          borderRadius: '5px',
+          borderRadius: "5px",
           marginLeft: "-100"
         }
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("h1", {
@@ -37854,7 +37795,7 @@ var Form = /*#__PURE__*/function (_Component) {
           backgroundSize: "cover",
           padding: "50px",
           fontWeight: "bold",
-          borderRadius: '5px',
+          borderRadius: "5px",
           marginLeft: "-100"
         }
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("h1", {
@@ -38131,13 +38072,13 @@ var Form = /*#__PURE__*/function (_Component) {
         }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("h3", null, image.fileName), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
           "class": "imagen"
         }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
-          href: i <= 0 ? '#img' + String(_this2.state.images.length - 1) : '#img' + String(i - 1)
+          href: i <= 0 ? "#img" + String(_this2.state.images.length - 1) : "#img" + String(i - 1)
         }, String("<")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
           href: "#img" + i
         }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("img", {
           src: image.urlImage
         })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
-          href: i >= _this2.state.images.length - 1 ? '#img0' : '#img' + String(i + 1)
+          href: i >= _this2.state.images.length - 1 ? "#img0" : "#img" + String(i + 1)
         }, String(">"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
           "class": "imagen-buttons"
         }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
@@ -38543,13 +38484,13 @@ var Get = /*#__PURE__*/function (_Component) {
         }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
           "class": "imagen"
         }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
-          href: i <= 0 ? '#img' + String(_this2.state.images.length - 1) : '#img' + String(i - 1)
+          href: i <= 0 ? "#img" + String(_this2.state.images.length - 1) : "#img" + String(i - 1)
         }, String("<")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
           href: "#img" + i
         }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("img", {
           src: image.urlImage
         })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
-          href: i >= _this2.state.images.length - 1 ? '#img0' : '#img' + String(i + 1)
+          href: i >= _this2.state.images.length - 1 ? "#img0" : "#img" + String(i + 1)
         }, String(">"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
           "class": "cerrar",
           href: ""
@@ -38748,7 +38689,7 @@ var Get = /*#__PURE__*/function (_Component) {
           while (1) {
             switch (_context5.prev = _context5.next) {
               case 0:
-                window.location.replace('/books/' + id + '/edit');
+                window.location.replace("/books/" + id + "/edit");
 
               case 1:
               case "end":
@@ -38941,7 +38882,7 @@ var List = /*#__PURE__*/function (_Component) {
           "float": "left",
           color: "black"
         }
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("b", null, "Todos los libros")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("br", null)), this.state.books.length == 0 || this.state.nearBooks == false ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("b", null, "Actualmente no existen libros para mostrar", this.state.username != null ? ' cerca de usted' : '', ".")), this.state.username != null ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("h2", {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("b", null, "Todos los libros")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("br", null)), this.state.books.length == 0 || this.state.nearBooks == false ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("b", null, "Actualmente no existen libros para mostrar", this.state.username != null ? " cerca de usted" : "", ".")), this.state.username != null ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("h2", {
         style: {
           "float": "left",
           color: "black"
@@ -39247,10 +39188,10 @@ var List = /*#__PURE__*/function (_Component) {
           "float": "left",
           color: "black"
         }
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("b", null, "Mis libros")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", null), this.state.books.length == 0 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("b", null, "\xBFTodav\xEDa no has a\xF1adido ning\xFAn libro? ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("b", null, "Mis libros")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", null), this.state.books.length == 0 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("b", null, "\xBFTodav\xEDa no has a\xF1adido ning\xFAn libro?", " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
         "class": "btn btn-primary",
         href: "/books/new"
-      }, "\xA1A\xF1ade uno!"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", null)) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("center", null, this.state.books.length != 0 && this.state.pages.length > 1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("center", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", null), this.state.actualPage != 0 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("span", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
+      }, "\xA1A\xF1ade uno!"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", null)) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("center", null, this.state.books.length != 0 && this.state.pages.length > 1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("center", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", null), this.state.actualPage != 0 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("span", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
         "class": "btn btn-primary",
         href: "/books/me/0"
       }, String("<<")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
@@ -39797,7 +39738,7 @@ var List = /*#__PURE__*/function (_Component) {
           "float": "left",
           color: "black"
         }
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("b", null, "Libros recomendados para usted")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", null), this.state.books.length == 0 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("b", null, "No se encuentra ning\xFAn libro para recomendarle. A\xF1ada m\xE1s g\xE9neros preferidos a su perfil. O a\xF1ada libros a favoritos. ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("b", null, "Libros recomendados para usted")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", null), this.state.books.length == 0 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("b", null, "No se encuentra ning\xFAn libro para recomendarle. A\xF1ada m\xE1s g\xE9neros preferidos a su perfil. O a\xF1ada libros a favoritos.", " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
         "class": "btn btn-primary",
         href: "/profile"
       }, "Ir a perfil"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", null)) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("center", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
@@ -40006,29 +39947,27 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_helpers_readOnlyError__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_readOnlyError__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/asyncToGenerator */ "./node_modules/@babel/runtime/helpers/asyncToGenerator.js");
 /* harmony import */ var _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime/helpers/defineProperty */ "./node_modules/@babel/runtime/helpers/defineProperty.js");
-/* harmony import */ var _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @babel/runtime/helpers/classCallCheck */ "./node_modules/@babel/runtime/helpers/classCallCheck.js");
-/* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @babel/runtime/helpers/createClass */ "./node_modules/@babel/runtime/helpers/createClass.js");
-/* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @babel/runtime/helpers/inherits */ "./node_modules/@babel/runtime/helpers/inherits.js");
-/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @babel/runtime/helpers/possibleConstructorReturn */ "./node_modules/@babel/runtime/helpers/possibleConstructorReturn.js");
-/* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @babel/runtime/helpers/getPrototypeOf */ "./node_modules/@babel/runtime/helpers/getPrototypeOf.js");
-/* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_7__);
-/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
-/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_8__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_9__);
-/* harmony import */ var _services_Book__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../services/Book */ "./src/main/resources/js/components/services/Book.js");
-/* harmony import */ var _services_User__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../services/User */ "./src/main/resources/js/components/services/User.js");
-/* harmony import */ var _services_UserFavouriteBook__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../services/UserFavouriteBook */ "./src/main/resources/js/components/services/UserFavouriteBook.js");
-/* harmony import */ var _services_Search__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../services/Search */ "./src/main/resources/js/components/services/Search.js");
-/* harmony import */ var _Pagination_css__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./Pagination.css */ "./src/main/resources/js/components/book/Pagination.css");
-/* harmony import */ var _ListBooks_css__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ../ListBooks.css */ "./src/main/resources/js/components/ListBooks.css");
-/* harmony import */ var _Search_css__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./Search.css */ "./src/main/resources/js/components/book/Search.css");
+/* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime/helpers/classCallCheck */ "./node_modules/@babel/runtime/helpers/classCallCheck.js");
+/* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @babel/runtime/helpers/createClass */ "./node_modules/@babel/runtime/helpers/createClass.js");
+/* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @babel/runtime/helpers/inherits */ "./node_modules/@babel/runtime/helpers/inherits.js");
+/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @babel/runtime/helpers/possibleConstructorReturn */ "./node_modules/@babel/runtime/helpers/possibleConstructorReturn.js");
+/* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @babel/runtime/helpers/getPrototypeOf */ "./node_modules/@babel/runtime/helpers/getPrototypeOf.js");
+/* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var _services_Book__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../services/Book */ "./src/main/resources/js/components/services/Book.js");
+/* harmony import */ var _services_User__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../services/User */ "./src/main/resources/js/components/services/User.js");
+/* harmony import */ var _services_UserFavouriteBook__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../services/UserFavouriteBook */ "./src/main/resources/js/components/services/UserFavouriteBook.js");
+/* harmony import */ var _services_Search__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../services/Search */ "./src/main/resources/js/components/services/Search.js");
+/* harmony import */ var _Pagination_css__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./Pagination.css */ "./src/main/resources/js/components/book/Pagination.css");
+/* harmony import */ var _ListBooks_css__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ../ListBooks.css */ "./src/main/resources/js/components/ListBooks.css");
+/* harmony import */ var _Search_css__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./Search.css */ "./src/main/resources/js/components/book/Search.css");
 
 
 
@@ -40038,8 +39977,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-
-function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_7___default()(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_7___default()(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_6___default()(this, result); }; }
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_6___default()(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_6___default()(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_5___default()(this, result); }; }
 
 function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
 
@@ -40053,43 +39991,60 @@ function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Re
 
 
 var List = /*#__PURE__*/function (_Component) {
-  _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_5___default()(List, _Component);
+  _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_4___default()(List, _Component);
 
   var _super = _createSuper(List);
 
   function List() {
-    var _this$state;
-
     var _this;
 
-    _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_3___default()(this, List);
+    _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_2___default()(this, List);
 
     _this = _super.call(this);
-    _this.state = (_this$state = {
+    _this.state = {
       books: [],
       isAdded: [],
-      username: ""
-    }, _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2___default()(_this$state, "isAdded", false), _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2___default()(_this$state, "pages", []), _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2___default()(_this$state, "actualPage", 0), _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2___default()(_this$state, "query", ""), _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2___default()(_this$state, "searchResult", true), _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2___default()(_this$state, "images", []), _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2___default()(_this$state, "selectSearch", ""), _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2___default()(_this$state, "provinces", []), _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2___default()(_this$state, "showBooks", false), _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2___default()(_this$state, "fieldStartYear", null), _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2___default()(_this$state, "fieldFinishYear", null), _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2___default()(_this$state, "fieldPostalCode", null), _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2___default()(_this$state, "fieldText", ""), _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2___default()(_this$state, "errorMessages", []), _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2___default()(_this$state, "errorField", []), _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2___default()(_this$state, "titles", []), _this$state);
+      username: "",
+      pages: [],
+      actualPage: 0,
+      query: "",
+      searchResult: true,
+      images: [],
+      title: "",
+      noResults: "",
+      selectSearch: "book",
+      provinces: [],
+      showBooks: false,
+      fieldNumber1: "",
+      fieldNumber2: "",
+      fieldText: "",
+      errorMessages: [],
+      errorField: [],
+      titles: []
+    };
     return _this;
   }
 
-  _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_4___default()(List, [{
+  _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_3___default()(List, [{
     key: "componentDidMount",
     value: function () {
-      var _componentDidMount = _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_8___default.a.mark(function _callee() {
-        var page, query, res, username, p, provinces;
-        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_8___default.a.wrap(function _callee$(_context) {
+      var _componentDidMount = _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_7___default.a.mark(function _callee() {
+        var page, search, query, type, q, title, noResults, qr, res, _username, ls, p, provinces, username;
+
+        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_7___default.a.wrap(function _callee$(_context) {
           while (1) {
             switch (_context.prev = _context.next) {
               case 0:
                 page = this.props.match.params.page;
+                search = null;
 
                 if (!(page != null)) {
-                  _context.next = 11;
+                  _context.next = 20;
                   break;
                 }
 
                 query = this.props.match.params.query;
+                type = this.props.match.params.type;
 
                 if (page) {
                   this.setState({
@@ -40099,40 +40054,82 @@ var List = /*#__PURE__*/function (_Component) {
                   page = (_babel_runtime_helpers_readOnlyError__WEBPACK_IMPORTED_MODULE_0___default()("page"), 0);
                 }
 
-                _context.next = 6;
-                return _services_Search__WEBPACK_IMPORTED_MODULE_13__["default"].searchBook(query, page);
+                q = String(query);
+                title = "";
+                noResults = "";
 
-              case 6:
+                if (q.includes("-")) {
+                  qr = q.split("-");
+                  title = "Resultados entre " + qr[0] + " y " + qr[1];
+                  noResults = "No se encontraron resultados entre " + qr[0] + " y " + qr[1];
+                } else {
+                  title = "Resultados para '" + query + "'";
+                  noResults = "No se encontraron resultados para '" + query + "'";
+                }
+
+                _context.next = 12;
+                return _services_Search__WEBPACK_IMPORTED_MODULE_12__["default"].searchBook(query, page, type);
+
+              case 12:
                 res = _context.sent;
-                _context.next = 9;
-                return _services_User__WEBPACK_IMPORTED_MODULE_11__["default"].getUsername();
+                search = res.search;
+                _context.next = 16;
+                return _services_User__WEBPACK_IMPORTED_MODULE_10__["default"].getUsername();
 
-              case 9:
-                username = _context.sent;
+              case 16:
+                _username = _context.sent;
                 this.setState({
                   books: res.books,
-                  username: username.username,
                   query: query,
                   isAdded: res.isAdded,
                   pages: res.pages,
                   numTotalPages: parseInt(res.numTotalPages),
                   searchResult: res.searchResult,
                   images: res.urlImages,
-                  showBooks: true
+                  showBooks: true,
+                  title: title,
+                  noResults: noResults,
+                  username: _username.username,
+                  fieldText: query
                 });
+                _context.next = 24;
+                break;
 
-              case 11:
-                _context.next = 13;
-                return _services_User__WEBPACK_IMPORTED_MODULE_11__["default"].getProvinces();
+              case 20:
+                _context.next = 22;
+                return _services_Search__WEBPACK_IMPORTED_MODULE_12__["default"].findLast();
 
-              case 13:
+              case 22:
+                ls = _context.sent;
+                search = ls.search;
+
+              case 24:
+                if (search != null) {
+                  this.setState({
+                    selectSearch: search.type,
+                    fieldNumber1: search.number1,
+                    fieldNumber2: search.number2,
+                    fieldText: search.text
+                  });
+                }
+
+                _context.next = 27;
+                return _services_User__WEBPACK_IMPORTED_MODULE_10__["default"].getProvinces();
+
+              case 27:
                 p = _context.sent;
                 provinces = p.provinces;
+                _context.next = 31;
+                return _services_User__WEBPACK_IMPORTED_MODULE_10__["default"].getUsername();
+
+              case 31:
+                username = _context.sent;
                 this.setState({
-                  provinces: provinces
+                  provinces: provinces,
+                  username: username.username
                 });
 
-              case 16:
+              case 33:
               case "end":
                 return _context.stop();
             }
@@ -40151,11 +40148,11 @@ var List = /*#__PURE__*/function (_Component) {
     value: function render() {
       var _this2 = this;
 
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("div", null, !this.state.showBooks ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("div", {
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("div", {
         "class": "search-input"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("div", {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("div", {
         "class": "col-3"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("select", {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("select", {
         style: {
           "float": "left"
         },
@@ -40166,115 +40163,161 @@ var List = /*#__PURE__*/function (_Component) {
           return _this2.setState({
             selectSearch: event.target.value,
             errorMessages: [],
-            errorField: []
+            errorField: [],
+            fieldNumber1: "",
+            fieldNumber2: "",
+            fieldText: ""
           });
         }
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("option", {
-        value: "",
-        disabled: true
-      }, "Buscar por"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("option", {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("option", {
         value: "",
         style: {
           fontWeight: "bold"
         },
         disabled: true
-      }, "Libro"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("option", {
+      }, "Libro"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("option", {
         value: "book"
-      }, "Datos del libro"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("option", {
-        value: "publicationYear"
-      }, "A\xF1o de publicaci\xF3n"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("option", {
-        value: "rangeYears"
-      }, "Rango de a\xF1os"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("option", {
+      }, "Datos del libro"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("option", {
+        value: "publicationYear",
+        disabled: this.state.username == null
+      }, "A\xF1o de publicaci\xF3n"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("option", {
+        value: "rangeYears",
+        disabled: this.state.username == null
+      }, "Rango de a\xF1os"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("option", {
+        value: "rangePrices",
+        disabled: this.state.username == null
+      }, "Rango de precios"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("option", {
         value: "",
         style: {
           fontWeight: "bold"
         },
         disabled: true
-      }, "Localizaci\xF3n"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("option", {
-        value: "postalCode"
-      }, "C\xF3digo postal"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("option", {
-        value: "province"
-      }, "Provincia"))), this.state.selectSearch == '' ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("div", {
-        "class": "col"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("input", {
-        "class": "form-control",
-        type: "text",
+      }, "Localizaci\xF3n"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("option", {
+        value: "postalCode",
+        disabled: this.state.username == null
+      }, "C\xF3digo postal"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("option", {
+        value: "province",
+        disabled: this.state.username == null
+      }, "Provincia"), this.state.username == null ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("option", {
+        value: "",
+        style: {
+          color: "red"
+        },
         disabled: true
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("p", null)) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("div", null), this.state.selectSearch == 'book' ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("div", {
+      }, "Inicie sesi\xF3n para usar todas") : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", null))), this.state.selectSearch == "book" ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("div", {
         "class": "col"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("input", {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("input", {
         "class": "form-control",
+        value: this.state.fieldText,
         type: "search",
         list: "titles",
         placeholder: "T\xEDtulo, ISBN, autor, g\xE9neros, editorial, estado, ...",
         onChange: function onChange(event) {
           return _this2.searchTitles(event.target.value);
         }
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("datalist", {
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("datalist", {
         id: "titles"
       }, this.state.titles.map(function (title) {
-        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("option", {
-          value: title
-        });
-      })), this.state.errorField.indexOf("text") != -1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("p", {
+        var spl = title.split("//");
+        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("option", {
+          value: spl[0]
+        }, spl[1]);
+      }), this.state.titles.length == 0 && this.state.fieldText.length > 0 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("option", {
+        value: "No se encontraron coincidencias",
+        disabled: true
+      }) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", null)), this.state.errorField.indexOf("text") != -1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", {
         "class": "text-danger"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("b", null, this.state.errorMessages[this.state.errorField.indexOf("text")])) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("p", null)) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("p", null), this.state.selectSearch == 'publicationYear' ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("div", {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("b", null, this.state.errorMessages[this.state.errorField.indexOf("text")])) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", null)) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", null), this.state.selectSearch == "publicationYear" ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("div", {
         "class": "col"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("input", {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("input", {
         "class": "form-control",
+        value: this.state.fieldNumber1,
         type: "number",
-        placeholder: "Introduzca el a\xF1o de publicaci\xF3n (YYYY)",
+        placeholder: "Introduzca el a\xF1o de publicaci\xF3n",
         onChange: function onChange(event) {
           return _this2.setState({
-            fieldStartYear: event.target.value
+            fieldNumber1: event.target.value
           });
         }
-      }), this.state.errorField.indexOf("startYear") != -1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("p", {
+      }), this.state.errorField.indexOf("number1") != -1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", {
         "class": "text-danger"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("b", null, this.state.errorMessages[this.state.errorField.indexOf("startYear")])) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("p", null)) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("p", null), this.state.selectSearch == 'rangeYears' ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("div", {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("b", null, this.state.errorMessages[this.state.errorField.indexOf("number1")])) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", null)) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", null), this.state.selectSearch == "rangeYears" ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("div", {
         "class": "range-years"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("div", {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("div", {
         "class": "col"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("input", {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("input", {
         "class": "form-control",
+        value: this.state.fieldNumber1,
         type: "number",
-        placeholder: "Introduzca el a\xF1o inicial (YYYY)",
+        placeholder: "Introduzca el a\xF1o inicial",
         onChange: function onChange(event) {
           return _this2.setState({
-            fieldStartYear: event.target.value
+            fieldNumber1: event.target.value
           });
         }
-      }), this.state.errorField.indexOf("startYear") != -1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("p", {
+      }), this.state.errorField.indexOf("number1") != -1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", {
         "class": "text-danger"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("b", null, this.state.errorMessages[this.state.errorField.indexOf("startYear")])) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("p", null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("div", {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("b", null, this.state.errorMessages[this.state.errorField.indexOf("number1")])) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("div", {
         "class": "col"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("input", {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("input", {
         "class": "form-control",
+        value: this.state.fieldNumber2,
         type: "number",
-        placeholder: "Introduzca el a\xF1o final (YYYY)",
+        placeholder: "Introduzca el a\xF1o final",
         onChange: function onChange(event) {
           return _this2.setState({
-            fieldFinishYear: event.target.value
+            fieldNumber2: event.target.value
           });
         }
-      }), this.state.errorField.indexOf("finishYear") != -1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("p", {
+      }), this.state.errorField.indexOf("number2") != -1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", {
         "class": "text-danger"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("b", null, this.state.errorMessages[this.state.errorField.indexOf("finishYear")])) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("p", null))) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("p", null), this.state.selectSearch == 'postalCode' ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("div", {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("b", null, this.state.errorMessages[this.state.errorField.indexOf("number2")])) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", null))) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", null), this.state.selectSearch == "rangePrices" ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("div", {
+        "class": "range-years"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("div", {
         "class": "col"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("input", {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("input", {
         "class": "form-control",
+        value: this.state.fieldNumber1,
+        type: "number",
+        placeholder: "Introduzca el precio inicial (\u20AC)",
+        onChange: function onChange(event) {
+          return _this2.setState({
+            fieldNumber1: event.target.value
+          });
+        }
+      }), this.state.errorField.indexOf("number1") != -1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", {
+        "class": "text-danger"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("b", null, this.state.errorMessages[this.state.errorField.indexOf("number1")])) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("div", {
+        "class": "col"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("input", {
+        "class": "form-control",
+        value: this.state.fieldNumber2,
+        type: "number",
+        placeholder: "Introduzca el precio final (\u20AC)",
+        onChange: function onChange(event) {
+          return _this2.setState({
+            fieldNumber2: event.target.value
+          });
+        }
+      }), this.state.errorField.indexOf("number2") != -1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", {
+        "class": "text-danger"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("b", null, this.state.errorMessages[this.state.errorField.indexOf("number2")])) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", null))) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", null), this.state.selectSearch == "postalCode" ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("div", {
+        "class": "col"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("input", {
+        "class": "form-control",
+        value: this.state.fieldNumber1,
         type: "number",
         placeholder: "Introduzca el c\xF3digo postal de 5 d\xEDgitos",
         onChange: function onChange(event) {
           return _this2.setState({
-            fieldPostalCode: event.target.value
+            fieldNumber1: event.target.value
           });
         }
-      }), this.state.errorField.indexOf("postalCode") != -1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("p", {
+      }), this.state.errorField.indexOf("number1") != -1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", {
         "class": "text-danger"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("b", null, this.state.errorMessages[this.state.errorField.indexOf("postalCode")])) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("p", null)) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("p", null), this.state.selectSearch == 'province' ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("div", {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("b", null, this.state.errorMessages[this.state.errorField.indexOf("number1")])) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", null)) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", null), this.state.selectSearch == "province" ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("div", {
         "class": "col"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("select", {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("select", {
         "class": "form-control chosen-select",
         id: "selectProvince",
         value: this.state.fieldText,
@@ -40283,15 +40326,15 @@ var List = /*#__PURE__*/function (_Component) {
             fieldText: event.target.value
           });
         }
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("option", {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("option", {
         value: ""
       }, "Despliega para ver las opciones"), this.state.provinces.map(function (province) {
-        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("option", {
+        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("option", {
           value: province
         }, province.replaceAll("_", " "));
-      })), this.state.errorField.indexOf("text") != -1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("p", {
+      })), this.state.errorField.indexOf("text") != -1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", {
         "class": "text-danger"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("b", null, this.state.errorMessages[this.state.errorField.indexOf("text")])) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("p", null)) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("p", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("br", null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("button", {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("b", null, this.state.errorMessages[this.state.errorField.indexOf("text")])) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", null)) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("button", {
         style: {
           marginRight: "15px",
           height: "38px"
@@ -40301,153 +40344,153 @@ var List = /*#__PURE__*/function (_Component) {
         onClick: function onClick() {
           return _this2.postSearch();
         },
-        disabled: this.state.selectSearch == ''
-      }, " Buscar ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("i", {
+        disabled: this.state.selectSearch == ""
+      }, " ", "Buscar ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("i", {
         "class": "fa fa-search"
-      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("br", null)) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("div", null), this.state.showBooks ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("h1", {
+      }))), this.state.showBooks ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("hr", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("h1", {
         style: {
           "float": "left",
           color: "black"
         }
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("b", null, "Resultados para '", this.state.query.replace("-", " al "), "'")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("br", null), this.state.books.length == 0 || this.state.searchResult == false ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("b", null, "No se encontraron coincidencias para '", this.state.query, "'")), this.state.books.length > 0 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("h2", {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("b", null, this.state.title)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", null), this.state.books.length == 0 || this.state.searchResult == false ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("b", null, this.state.noResults)), this.state.books.length > 0 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("h2", {
         style: {
           "float": "left",
           color: "black"
         }
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("b", null, "Algunas recomendaciones")) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("p", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("br", null)) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("center", null, this.state.books.length != 0 && this.state.pages.length > 1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("center", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("br", null), this.state.actualPage != 0 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("span", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("a", {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("b", null, "Algunas recomendaciones")) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", null)) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("center", null, this.state.books.length != 0 && this.state.pages.length > 1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("center", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", null), this.state.actualPage != 0 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("span", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("a", {
         "class": "btn btn-primary",
-        href: "/search/0/" + this.state.query
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("b", null, String("<<"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("a", {
+        href: "/search/" + this.state.selectSearch + "/0/" + this.state.query
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("b", null, String("<<"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("a", {
         style: {
           margin: "5px"
         },
         "class": "btn btn-primary",
-        href: "/search/" + parseInt(this.state.actualPage - 1) + "/" + this.state.query
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("b", null, String("<")))) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("p", null), this.state.pages.map(function (page) {
-        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("a", {
+        href: "/search/" + this.state.selectSearch + "/" + parseInt(this.state.actualPage - 1) + "/" + this.state.query
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("b", null, String("<")))) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", null), this.state.pages.map(function (page) {
+        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("a", {
           style: {
             color: _this2.state.actualPage == page ? "white" : "black",
             backgroundColor: _this2.state.actualPage == page ? "#007bff" : ""
           },
           "class": "pag",
-          href: "/search/" + page + "/" + _this2.state.query
+          href: "/search/" + _this2.state.selectSearch + "/" + page + "/" + _this2.state.query
         }, page);
-      }), this.state.actualPage != this.state.numTotalPages - 1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("span", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("a", {
+      }), this.state.actualPage != this.state.numTotalPages - 1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("span", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("a", {
         style: {
           margin: "5px"
         },
         "class": "btn btn-primary",
-        href: "/search/" + parseInt(this.state.actualPage + 1) + "/" + this.state.query
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("b", null, String(">"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("a", {
+        href: "/search/" + this.state.selectSearch + "/" + parseInt(this.state.actualPage + 1) + "/" + this.state.query
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("b", null, String(">"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("a", {
         "class": "btn btn-primary",
-        href: "/search/" + parseInt(this.state.numTotalPages - 1) + "/" + this.state.query
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("b", null, String(">>")))) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("p", null)) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("p", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("br", null)), this.state.books.map(function (book, i) {
-        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("main", {
+        href: "/search/" + this.state.selectSearch + "/" + parseInt(this.state.numTotalPages - 1) + "/" + this.state.query
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("b", null, String(">>")))) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", null)) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", null)), this.state.books.map(function (book, i) {
+        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("main", {
           "class": "mainBooks"
-        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("div", {
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("div", {
           "class": "book-card"
-        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("div", {
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("div", {
           "class": "book-card__cover"
-        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("div", {
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("div", {
           "class": "book-card__book"
-        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("div", {
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("div", {
           "class": "book-card__book-front"
-        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("a", {
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("a", {
           style: {
             zIndex: "-10"
           },
           href: "/books/" + book.id
-        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("img", {
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("img", {
           "class": "book-card__img",
           src: _this2.state.images[i]
-        }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("div", {
+        }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("div", {
           "class": "book-card__book-back"
-        }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("div", {
+        }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("div", {
           "class": "book-card__book-side"
-        }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("div", {
+        }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("div", {
           "class": "book-card__title"
-        }, book.title, _this2.state.username != null ? _this2.state.isAdded[i] == false ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("a", {
+        }, book.title, _this2.state.username != null ? _this2.state.isAdded[i] == false ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("a", {
           onClick: function onClick() {
-            return _this2.addFavouriteBook(book.id, _this2.state.query);
+            return _this2.addFavouriteBook(book.id, _this2.state.query, _this2.state.actualPage);
           },
           style: {
             "float": "right"
           }
-        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("img", {
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("img", {
           style: {
             height: "25px",
             width: "25px"
           },
           src: "https://i.ibb.co/WktpFGx/No-Favorito.png"
-        })) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("a", {
+        })) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("a", {
           onClick: function onClick() {
-            _this2.deleteFavouriteBook(book.id, book.title, _this2.state.query);
+            _this2.deleteFavouriteBook(book.id, book.title, _this2.state.query, _this2.state.actualPage);
           },
           style: {
             "float": "right"
           }
-        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("img", {
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("img", {
           style: {
             height: "25px",
             width: "25px"
           },
           src: "https://i.ibb.co/xXKJXKS/Favorito.png"
-        })) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("p", null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("div", {
+        })) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("div", {
           "class": "book-card__author"
-        }, book.author), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("div", {
+        }, book.author), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("div", {
           "class": "book-card__author"
-        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("span", null, book.price, " \u20AC")))));
-      }), this.state.books.length != 0 && this.state.pages.length > 1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("center", null, this.state.actualPage != 0 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("span", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("a", {
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("span", null, book.price, " \u20AC")))));
+      }), this.state.books.length != 0 && this.state.pages.length > 1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("center", null, this.state.actualPage != 0 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("span", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("a", {
         "class": "btn btn-primary",
-        href: "/search/0/" + this.state.query
-      }, String("<<")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("a", {
+        href: "/search/" + this.state.selectSearch + "/0/" + this.state.query
+      }, String("<<")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("a", {
         "class": "btn btn-primary",
         style: {
           margin: "5px"
         },
-        href: "/search/" + parseInt(this.state.actualPage - 1) + "/" + this.state.query
-      }, String("<"))) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("p", null), this.state.pages.map(function (page) {
-        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("a", {
+        href: "/search/" + this.state.selectSearch + "/" + parseInt(this.state.actualPage - 1) + "/" + this.state.query
+      }, String("<"))) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", null), this.state.pages.map(function (page) {
+        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("a", {
           style: {
             color: _this2.state.actualPage == page ? "white" : "black",
             backgroundColor: _this2.state.actualPage == page ? "#007bff" : ""
           },
           "class": "pag",
-          href: "/search/" + page + "/" + _this2.state.query
+          href: "/search/" + _this2.state.selectSearch + "/" + page + "/" + _this2.state.query
         }, page);
-      }), this.state.actualPage != this.state.numTotalPages - 1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("span", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("a", {
+      }), this.state.actualPage != this.state.numTotalPages - 1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("span", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("a", {
         style: {
           margin: "5px"
         },
         "class": "btn btn-primary",
-        href: "/search/" + parseInt(this.state.actualPage + 1) + "/" + this.state.query
-      }, String(">")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("a", {
+        href: "/search/" + this.state.selectSearch + "/" + parseInt(this.state.actualPage + 1) + "/" + this.state.query
+      }, String(">")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("a", {
         "class": "btn btn-primary",
-        href: "/search/" + parseInt(this.state.numTotalPages - 1) + "/" + this.state.query
-      }, String(">>"))) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("p", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("br", null)) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("p", null)) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("br", null)));
+        href: "/search/" + this.state.selectSearch + "/" + parseInt(this.state.numTotalPages - 1) + "/" + this.state.query
+      }, String(">>"))) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", null)) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", null)) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", null)));
     }
   }, {
     key: "addFavouriteBook",
     value: function () {
-      var _addFavouriteBook = _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_8___default.a.mark(function _callee2(id, query, page) {
+      var _addFavouriteBook = _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_7___default.a.mark(function _callee2(id, query, page) {
         var res;
-        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_8___default.a.wrap(function _callee2$(_context2) {
+        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_7___default.a.wrap(function _callee2$(_context2) {
           while (1) {
             switch (_context2.prev = _context2.next) {
               case 0:
                 _context2.next = 2;
-                return _services_UserFavouriteBook__WEBPACK_IMPORTED_MODULE_12__["default"].addFavouriteBook(id);
+                return _services_UserFavouriteBook__WEBPACK_IMPORTED_MODULE_11__["default"].addFavouriteBook(id);
 
               case 2:
                 res = _context2.sent;
-                window.location.replace("/search/" + page + "/" + query);
+                window.location.replace("/search/" + this.state.selectSearch + "/" + page + "/" + query);
 
               case 4:
               case "end":
                 return _context2.stop();
             }
           }
-        }, _callee2);
+        }, _callee2, this);
       }));
 
       function addFavouriteBook(_x, _x2, _x3) {
@@ -40459,9 +40502,9 @@ var List = /*#__PURE__*/function (_Component) {
   }, {
     key: "deleteFavouriteBook",
     value: function () {
-      var _deleteFavouriteBook = _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_8___default.a.mark(function _callee3(id, title, query, page) {
+      var _deleteFavouriteBook = _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_7___default.a.mark(function _callee3(id, title, query, page) {
         var conf, res;
-        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_8___default.a.wrap(function _callee3$(_context3) {
+        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_7___default.a.wrap(function _callee3$(_context3) {
           while (1) {
             switch (_context3.prev = _context3.next) {
               case 0:
@@ -40473,18 +40516,18 @@ var List = /*#__PURE__*/function (_Component) {
                 }
 
                 _context3.next = 4;
-                return _services_UserFavouriteBook__WEBPACK_IMPORTED_MODULE_12__["default"].deleteFavouriteBook(id);
+                return _services_UserFavouriteBook__WEBPACK_IMPORTED_MODULE_11__["default"].deleteFavouriteBook(id);
 
               case 4:
                 res = _context3.sent;
-                window.location.replace("/search/" + page + "/" + query);
+                window.location.replace("/search/" + this.state.selectSearch + "/" + page + "/" + query);
 
               case 6:
               case "end":
                 return _context3.stop();
             }
           }
-        }, _callee3);
+        }, _callee3, this);
       }));
 
       function deleteFavouriteBook(_x4, _x5, _x6, _x7) {
@@ -40496,20 +40539,20 @@ var List = /*#__PURE__*/function (_Component) {
   }, {
     key: "postSearch",
     value: function () {
-      var _postSearch = _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_8___default.a.mark(function _callee4() {
+      var _postSearch = _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_7___default.a.mark(function _callee4() {
         var res, errFields, errMess, error;
-        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_8___default.a.wrap(function _callee4$(_context4) {
+        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_7___default.a.wrap(function _callee4$(_context4) {
           while (1) {
             switch (_context4.prev = _context4.next) {
               case 0:
                 _context4.next = 2;
-                return _services_Search__WEBPACK_IMPORTED_MODULE_13__["default"].postSearch(this.state);
+                return _services_Search__WEBPACK_IMPORTED_MODULE_12__["default"].postSearch(this.state);
 
               case 2:
                 res = _context4.sent;
 
                 if (res.success) {
-                  window.location.replace("/search/0/" + res.query);
+                  window.location.replace("/search/" + this.state.selectSearch + "/0/" + res.query);
                 } else {
                   errFields = [];
                   errMess = [];
@@ -40541,28 +40584,31 @@ var List = /*#__PURE__*/function (_Component) {
   }, {
     key: "searchTitles",
     value: function () {
-      var _searchTitles = _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_8___default.a.mark(function _callee5(query) {
+      var _searchTitles = _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_7___default.a.mark(function _callee5(query) {
         var res;
-        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_8___default.a.wrap(function _callee5$(_context5) {
+        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_7___default.a.wrap(function _callee5$(_context5) {
           while (1) {
             switch (_context5.prev = _context5.next) {
               case 0:
-                if (!(query != '')) {
-                  _context5.next = 5;
-                  break;
-                }
-
-                _context5.next = 3;
-                return _services_Search__WEBPACK_IMPORTED_MODULE_13__["default"].searchTitles(query);
-
-              case 3:
-                res = _context5.sent;
                 this.setState({
-                  titles: res.titles,
                   fieldText: query
                 });
 
-              case 5:
+                if (!(query != "")) {
+                  _context5.next = 6;
+                  break;
+                }
+
+                _context5.next = 4;
+                return _services_Search__WEBPACK_IMPORTED_MODULE_12__["default"].searchTitles(query);
+
+              case 4:
+                res = _context5.sent;
+                this.setState({
+                  titles: res.titles
+                });
+
+              case 6:
               case "end":
                 return _context5.stop();
             }
@@ -40579,7 +40625,7 @@ var List = /*#__PURE__*/function (_Component) {
   }]);
 
   return List;
-}(react__WEBPACK_IMPORTED_MODULE_9__["Component"]);
+}(react__WEBPACK_IMPORTED_MODULE_8__["Component"]);
 
 
 
@@ -40758,7 +40804,7 @@ var Form = /*#__PURE__*/function (_Component) {
           backgroundImage: "url(https://i.ibb.co/YRy9kHC/paper.jpg)",
           backgroundSize: "cover",
           padding: "50px",
-          borderRadius: '5px',
+          borderRadius: "5px",
           fontWeight: "bold",
           marginLeft: "-100"
         }
@@ -40824,7 +40870,7 @@ var Form = /*#__PURE__*/function (_Component) {
         "class": "text-danger"
       }, this.state.errorMessages[this.state.errorField.indexOf("idBook1")]) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null), this.state.noBooks ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
         "class": "text-danger"
-      }, "*No tiene libros para intercambiar. ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
+      }, "*No tiene libros para intercambiar.", " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
         href: "/books/new",
         "class": "btn btn-primary"
       }, "\xA1A\xF1ade uno!"))) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null))) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
@@ -41103,7 +41149,7 @@ var List = /*#__PURE__*/function (_Component) {
           "float": "left",
           color: "black"
         }
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("b", null, "Mis peticiones")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", null), this.state.requests.length == 0 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("strong", null, "\xBFNo tienes todav\xEDa peticiones? ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("a", {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("b", null, "Mis peticiones")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", null), this.state.requests.length == 0 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("strong", null, "\xBFNo tienes todav\xEDa peticiones?", " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("a", {
         href: "/books/all/0",
         "class": "btn btn-primary"
       }, "\xA1Realiza una!"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", null)) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("center", null, this.state.pages.length > 1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("center", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", null), this.state.actualPage != 0 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("a", {
@@ -41130,7 +41176,7 @@ var List = /*#__PURE__*/function (_Component) {
             paddingTop: "20px",
             marginBlock: "15px",
             margin: "0px 12px 30px 0px",
-            borderRadius: '5px',
+            borderRadius: "5px",
             width: "32%",
             display: "inline-grid"
           }
@@ -41143,17 +41189,17 @@ var List = /*#__PURE__*/function (_Component) {
           style: {
             height: "200px",
             width: "140px",
-            padding: '10px',
+            padding: "10px",
             margin: "0px 0px 0px 0px"
           },
           src: _this2.state.urlsBooks1[i]
-        }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("strong", null, "\u21C4  ")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("a", {
+        }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("strong", null, "\u21C4 ")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("a", {
           href: "/books/" + _this2.state.books2[i].id
         }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("img", {
           style: {
             height: "200px",
             width: "140px",
-            padding: '10px',
+            padding: "10px",
             margin: "0px 0px 0px 0px"
           },
           src: _this2.state.urlsBooks2[i]
@@ -41163,7 +41209,7 @@ var List = /*#__PURE__*/function (_Component) {
           style: {
             height: "200px",
             width: "140px",
-            padding: '10px',
+            padding: "10px",
             margin: "0px 0px 0px 0px"
           },
           src: _this2.state.urlsBooks2[i]
@@ -41417,7 +41463,7 @@ var List = /*#__PURE__*/function (_Component) {
           "float": "left",
           color: "black"
         }
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("b", null, "Peticiones recibidas")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("br", null), this.state.requests.length == 0 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("strong", null, "\xBFNo has recibido peticiones todav\xEDa? ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("a", {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("b", null, "Peticiones recibidas")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("br", null), this.state.requests.length == 0 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("strong", null, "\xBFNo has recibido peticiones todav\xEDa?", " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("a", {
         href: "/books/new",
         "class": "btn btn-primary"
       }, "\xA1A\xF1ade un libro!"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("br", null)) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("center", null, this.state.pages.length > 1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("center", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("br", null), this.state.actualPage != 0 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("a", {
@@ -41444,7 +41490,7 @@ var List = /*#__PURE__*/function (_Component) {
             paddingTop: "20px",
             marginBlock: "15px",
             margin: "0px 12px 30px 0px",
-            borderRadius: '5px',
+            borderRadius: "5px",
             width: "32%",
             display: "inline-grid"
           }
@@ -41457,17 +41503,17 @@ var List = /*#__PURE__*/function (_Component) {
           style: {
             height: "200px",
             width: "140px",
-            padding: '10px',
+            padding: "10px",
             margin: "0px 0px 0px 0px"
           },
           src: _this2.state.urlsBooks2[i]
-        }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("strong", null, "\u21C4  ")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("a", {
+        }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("strong", null, "\u21C4 ")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("a", {
           href: "/books/" + _this2.state.books1[i].id
         }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("img", {
           style: {
             height: "200px",
             width: "140px",
-            padding: '10px',
+            padding: "10px",
             margin: "0px 0px 0px 0px"
           },
           src: _this2.state.urlsBooks1[i]
@@ -41480,9 +41526,9 @@ var List = /*#__PURE__*/function (_Component) {
           },
           src: _this2.state.urlsBooks2[i]
         }, "style", {
-          padding: '10px',
+          padding: "10px",
           margin: "0px 0px 0px 0px",
-          width: '120px'
+          width: "120px"
         })))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("center", null, request.action == "COMPRA" ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("strong", null, "Precio original: "), _this2.state.books2[i].price, " \u20AC") : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("p", null), request.comment != "" ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("strong", null, "Comentario adicional: "), request.comment) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("p", null), request.status != "ACEPTADA" ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("strong", null, "Petici\xF3n enviada por: "), request.username1) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("p", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("strong", null, "Estado: "), request.status)), request.status == "PENDIENTE" ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("center", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("a", {
           onClick: function onClick() {
             return _this2.acceptRequest(request.id, _this2.state.books2[i].title, _this2.state.actualPage);
@@ -42412,13 +42458,13 @@ var baseUrl = "http://localhost:8080/search";
 var search = {};
 
 search.searchBook = /*#__PURE__*/function () {
-  var _ref = _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.mark(function _callee(query, page) {
+  var _ref = _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.mark(function _callee(query, page, type) {
     var urlGet, res;
     return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.wrap(function _callee$(_context) {
       while (1) {
         switch (_context.prev = _context.next) {
           case 0:
-            urlGet = baseUrl + "/q/" + query + "?page=" + page;
+            urlGet = baseUrl + "/q/" + type + "/" + query + "?page=" + page;
             _context.next = 3;
             return axios__WEBPACK_IMPORTED_MODULE_2___default.a.get(urlGet).then(function (response) {
               return response.data;
@@ -42438,7 +42484,7 @@ search.searchBook = /*#__PURE__*/function () {
     }, _callee);
   }));
 
-  return function (_x, _x2) {
+  return function (_x, _x2, _x3) {
     return _ref.apply(this, arguments);
   };
 }();
@@ -42470,7 +42516,7 @@ search.searchTitles = /*#__PURE__*/function () {
     }, _callee2);
   }));
 
-  return function (_x3) {
+  return function (_x4) {
     return _ref2.apply(this, arguments);
   };
 }();
@@ -42483,9 +42529,8 @@ search.postSearch = /*#__PURE__*/function () {
         switch (_context3.prev = _context3.next) {
           case 0:
             dataPost = {
-              startYear: state.fieldStartYear,
-              finishYear: state.fieldFinishYear,
-              postalCode: state.fieldPostalCode,
+              number1: state.fieldNumber1,
+              number2: state.fieldNumber2,
               type: state.selectSearch,
               text: state.fieldText
             };
@@ -42508,11 +42553,36 @@ search.postSearch = /*#__PURE__*/function () {
     }, _callee3);
   }));
 
-  return function (_x4) {
+  return function (_x5) {
     return _ref3.apply(this, arguments);
   };
 }();
 
+search.findLast = /*#__PURE__*/_babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.mark(function _callee4() {
+  var urlGet, res;
+  return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.wrap(function _callee4$(_context4) {
+    while (1) {
+      switch (_context4.prev = _context4.next) {
+        case 0:
+          urlGet = baseUrl + "/last";
+          _context4.next = 3;
+          return axios__WEBPACK_IMPORTED_MODULE_2___default.a.get(urlGet).then(function (response) {
+            return response.data;
+          })["catch"](function (error) {
+            return error.response;
+          });
+
+        case 3:
+          res = _context4.sent;
+          return _context4.abrupt("return", res);
+
+        case 5:
+        case "end":
+          return _context4.stop();
+      }
+    }
+  }, _callee4);
+}));
 /* harmony default export */ __webpack_exports__["default"] = (search);
 
 /***/ }),
@@ -43022,7 +43092,7 @@ var Form = /*#__PURE__*/function (_Component) {
           backgroundImage: "url(https://i.ibb.co/YRy9kHC/paper.jpg)",
           backgroundSize: "cover",
           padding: "50px",
-          borderRadius: '5px',
+          borderRadius: "5px",
           fontWeight: "bold",
           marginLeft: "-100"
         }
@@ -43445,7 +43515,7 @@ var Login = /*#__PURE__*/function (_Component) {
           backgroundImage: "url(https://i.ibb.co/YRy9kHC/paper.jpg)",
           backgroundSize: "cover",
           padding: "50px",
-          borderRadius: '5px',
+          borderRadius: "5px",
           fontWeight: "bold",
           marginLeft: "-100"
         }
@@ -43455,7 +43525,7 @@ var Login = /*#__PURE__*/function (_Component) {
         }
       }, "Iniciar sesi\xF3n"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("h4", {
         "class": "text-danger"
-      }, "*Usuario o contrase\xF1a incorrectos. ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_6__["Link"], {
+      }, "*Usuario o contrase\xF1a incorrectos.", " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_6__["Link"], {
         to: "/login"
       }, "Intentar de nuevo")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("hr", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", null, "\xBFNo est\xE1s registrado? ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_6__["Link"], {
         to: "/register"
@@ -43525,7 +43595,7 @@ var Login = /*#__PURE__*/function (_Component) {
           backgroundImage: "url(https://i.ibb.co/YRy9kHC/paper.jpg)",
           backgroundSize: "cover",
           padding: "50px",
-          borderRadius: '5px',
+          borderRadius: "5px",
           fontWeight: "bold",
           marginLeft: "-100"
         }
@@ -43709,7 +43779,7 @@ var Form = /*#__PURE__*/function (_Component) {
           backgroundImage: "url(https://i.ibb.co/YRy9kHC/paper.jpg)",
           backgroundSize: "cover",
           padding: "50px",
-          borderRadius: '5px',
+          borderRadius: "5px",
           fontWeight: "bold",
           marginLeft: "-100"
         }
@@ -43947,7 +44017,7 @@ var Form = /*#__PURE__*/function (_Component) {
         },
         "class": "form-check-input",
         type: "checkbox"
-      }), " Acepto los t\xE9rminos y condiciones", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("sup", {
+      }), " ", "Acepto los t\xE9rminos y condiciones", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("sup", {
         "class": "text-danger"
       }, "*"), this.state.errorField.indexOf("accept") != -1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
         "class": "text-danger"
@@ -44178,10 +44248,10 @@ var List = /*#__PURE__*/function (_Component) {
           "float": "left",
           color: "black"
         }
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("b", null, "Mis libros favoritos")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", null), this.state.books.length == 0 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("strong", null, "\xBFNo tienes todav\xEDa libros favoritos? ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("a", {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("b", null, "Mis libros favoritos")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", null), this.state.books.length == 0 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("strong", null, "\xBFNo tienes todav\xEDa libros favoritos?", " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("a", {
         href: "/books/all/0",
         "class": "btn btn-primary"
-      }, "\xA1A\xF1ade uno!"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", null)) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("center", null, this.state.pages.length > 1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("center", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", null), this.state.actualPage != 0 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("a", {
+      }, "\xA1A\xF1ade uno!"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", null)) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("center", null, this.state.pages.length > 1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("center", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", null), this.state.actualPage != 0 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("a", {
         "class": "btn btn-primary",
         href: "/favourites/" + parseInt(this.state.actualPage - 1)
       }, "Anterior") : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", null), this.state.pages.map(function (page) {

@@ -16,22 +16,22 @@ import lombok.Getter;
 import lombok.Setter;
 
 @Document(indexName = "books")
-@Getter @Setter
+@Getter
+@Setter
 public class Book extends BaseEntity {
 
     @NotBlank(message = "El título es un campo requerido.")
     @Field(type = FieldType.Text, name = "title")
-    @Length(max = 80, message="El título no debe superar los 80 carácteres.")
+    @Length(max = 80, message = "El título no debe superar los 80 carácteres.")
     private String title;
 
     @Field(type = FieldType.Text, name = "originalTitle")
-    @Length(max = 80, message="El título original no debe superar los 80 carácteres.")
+    @Length(max = 80, message = "El título original no debe superar los 80 carácteres.")
     private String originalTitle;
 
     @NotBlank(message = "El ISBN es un campo requerido.")
-    @Pattern(regexp = "(?=[0-9X]{10}$|(?=(?:[0-9]+[- ]){3})[- 0-9X]{13}$|97[89][0-9]{10}$|"+
-    "(?=(?:[0-9]+[- ]){4})[- 0-9]{17}$)(?:97[89][- ]?)?[0-9]{1,5}[- ]?[0-9]+[- ]?[0-9]+[- ]?[0-9X]$", 
-    message = "El ISBN no es válido. Debe tener el siguiente formato: 0-123-45678-9 ó 012-3-456-78901-2.")
+    @Pattern(regexp = "(?=[0-9X]{10}$|(?=(?:[0-9]+[- ]){3})[- 0-9X]{13}$|97[89][0-9]{10}$|"
+            + "(?=(?:[0-9]+[- ]){4})[- 0-9]{17}$)(?:97[89][- ]?)?[0-9]{1,5}[- ]?[0-9]+[- ]?[0-9]+[- ]?[0-9X]$", message = "El ISBN no es válido. Debe tener el siguiente formato: 0-123-45678-9 ó 012-3-456-78901-2.")
     @Field(type = FieldType.Text, name = "isbn")
     private String isbn;
 
@@ -39,10 +39,10 @@ public class Book extends BaseEntity {
     @PositiveOrZero(message = "El año de publicación debe ser un número positivo.")
     @Field(type = FieldType.Integer, name = "publicationYear")
     private Integer publicationYear;
-    
+
     @NotBlank(message = "La editorial es un campo requerido.")
     @Field(type = FieldType.Text, name = "publisher")
-    @Length(max = 80, message="La editorial no debe superar los 80 carácteres.")
+    @Length(max = 80, message = "La editorial no debe superar los 80 carácteres.")
     private String publisher;
 
     @NotBlank(message = "Los géneros es un campo requerido.")
@@ -50,13 +50,13 @@ public class Book extends BaseEntity {
     private String genres;
 
     @NotBlank(message = "El autor es un campo requerido.")
-    @Length(max = 80, message="El título original no debe superar los 80 carácteres.")
+    @Length(max = 80, message = "El título original no debe superar los 80 carácteres.")
     @Field(type = FieldType.Keyword, name = "author")
     private String author;
 
     @NotBlank(message = "La descripción es un campo requerido.")
     @Field(type = FieldType.Text, name = "description")
-    @Length(max = 1750, message="La descripción no debe ser tan extensa.")
+    @Length(max = 1750, message = "La descripción no debe ser tan extensa.")
     private String description;
 
     @NotBlank(message = "El estado es un campo requerido.")
@@ -80,10 +80,8 @@ public class Book extends BaseEntity {
             @NotBlank(message = "La editorial es un campo requerido.") String publisher,
             @NotBlank(message = "Los géneros es un campo requerido.") String genres,
             @NotBlank(message = "El autor es un campo requerido.") String author,
-            @NotBlank(message = "La descripción es un campo requerido.") String description,
-            String image,
-            @NotBlank(message = "El estado es un campo requerido.") String status,
-            Double price, String username) {
+            @NotBlank(message = "La descripción es un campo requerido.") String description, String image,
+            @NotBlank(message = "El estado es un campo requerido.") String status, Double price, String username) {
         this.title = title;
         this.originalTitle = originalTitle;
         this.isbn = isbn;
@@ -100,8 +98,5 @@ public class Book extends BaseEntity {
 
     public Book() {
     }
-  
 
-    
-    
 }

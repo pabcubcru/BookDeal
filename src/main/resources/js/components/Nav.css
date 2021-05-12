@@ -1,4 +1,7 @@
-.menu, .menu ul, .menu li, .menu a {
+.menu,
+.menu ul,
+.menu li,
+.menu a {
   z-index: 5;
   margin: 0;
   padding: 0;
@@ -28,38 +31,39 @@
   margin: 20px 0;
   line-height: 28px;
   text-decoration: solid;
-  
-  font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
   font-weight: bold;
   font-size: 18px;
   color: rgb(255, 255, 255);
-  
 }
 
-
-
-.menu li:hover > a {color: #007bff}
+.menu li:hover > a {
+  color: #007bff;
+}
 
 .menu ul {
   position: absolute;
   top: 50px;
   left: 20px;
-  
+
   opacity: 0;
   background: #26272b;
-  
+
   border-radius: 0 0 10px 10px;
-  transition: opacity .20s ease .1s;
+  transition: opacity 0.2s ease 0.1s;
 }
 
-.menu li:hover > ul {opacity: 1;}
+.menu li:hover > ul {
+  opacity: 1;
+}
 
 .menu ul li {
   height: 0;
   overflow: hidden;
   padding: 0;
-  
-  transition: height .25s ease .1s;
+
+  transition: height 0.25s ease 0.1s;
 }
 
 .menu li:hover > ul li {
@@ -76,16 +80,18 @@
   border-bottom: 1px solid #ffffff;
   font-weight: normal;
 }
-.menu ul li:last-child a { border: none; }
+.menu ul li:last-child a {
+  border: none;
+}
 
-@media screen and (max-width:995px) {
+@media screen and (max-width: 995px) {
   .desktop {
-     display: none; 
+    display: none;
   }
 }
 
-@media screen and (min-width:994px) {
-  .mobile{
-     display: none; 
+@media screen and (min-width: 994px) {
+  .mobile {
+    display: none;
   }
 }

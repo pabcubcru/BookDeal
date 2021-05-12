@@ -9,7 +9,7 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface UserFavouriteBookRepository extends ElasticsearchRepository<UserFavouriteBook, String> {
-    
+
     Page<UserFavouriteBook> findByUsername(String username, Pageable pageable);
 
     UserFavouriteBook findByUsernameAndBookId(String username, String bookId);

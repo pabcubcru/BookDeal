@@ -35,7 +35,7 @@ public class UserFavouriteBookController {
     @Autowired
     private BookService bookService;
 
-    @GetMapping(value = {"/{page}"})
+    @GetMapping(value = { "/{page}" })
     public ModelAndView main() {
         ModelAndView model = new ModelAndView();
         model.setViewName("Main");
@@ -44,10 +44,10 @@ public class UserFavouriteBookController {
 
     public List<List<String>> getUrlsImagesFromBooks(List<Book> books) {
         List<List<String>> allBookImages = new ArrayList<>();
-        for(Book b : books) {
+        for (Book b : books) {
             List<String> urlImages = new ArrayList<>();
             List<Image> images = this.bookService.findImagesByIdBook(b.getId());
-            for(Image image : images) {
+            for (Image image : images) {
                 urlImages.add(image.getUrlImage());
             }
             allBookImages.add(urlImages);
@@ -56,17 +56,19 @@ public class UserFavouriteBookController {
     }
 
     @GetMapping(value = "/all")
-    public Map<String, Object> findAllByUsername(Principal principal, @RequestParam(name = "page", defaultValue = "0") Integer page) {
+    public Map<String, Object> findAllByUsername(Principal principal,
+            @RequestParam(name = "page", defaultValue = "0") Integer page) {
         Map<String, Object> res = new HashMap<>();
         List<String> idBooks = new ArrayList<>();
         PageRequest pageRequest = PageRequest.of(page, 12);
 
-        Page<UserFavouriteBook> pageOfBooks = this.userFavouriteBookService.findAllByUsername(principal.getName(), pageRequest);
+        Page<UserFavouriteBook> pageOfBooks = this.userFavouriteBookService.findAllByUsername(principal.getName(),
+                pageRequest);
         List<UserFavouriteBook> ufbooks = pageOfBooks.getContent();
         ufbooks.stream().forEach(x -> idBooks.add(x.getBookId()));
 
         List<Book> books = this.bookService.findByIds(idBooks);
-        
+
         res.put("books", books);
 
         List<List<String>> allBookImages = this.getUrlsImagesFromBooks(books);
@@ -74,8 +76,11 @@ public class UserFavouriteBookController {
 
         Integer numberOfPages = pageOfBooks.getTotalPages();
         res.put("pages", new ArrayList<Integer>());
-        if(numberOfPages > 0) {
-            List<Integer> pages = IntStream.rangeClosed(page-5 <= 0 ? 0 : page-5, page+5 >= numberOfPages-1 ? numberOfPages-1 : page+5).boxed().collect(Collectors.toList());
+        if (numberOfPages > 0) {
+            List<Integer> pages = IntStream
+                    .rangeClosed(page - 5 <= 0 ? 0 : page - 5,
+                            page + 5 >= numberOfPages - 1 ? numberOfPages - 1 : page + 5)
+                    .boxed().collect(Collectors.toList());
             res.put("pages", pages);
         }
 
@@ -87,7 +92,7 @@ public class UserFavouriteBookController {
         Map<String, Object> res = new HashMap<>();
 
         try {
-            if(this.userFavouriteBookService.findByUsernameAndBookId(principal.getName(), id) == null) {
+            if (this.userFavouriteBookService.findByUsernameAndBookId(principal.getName(), id) == null) {
                 UserFavouriteBook ufbook = new UserFavouriteBook();
                 ufbook.setBookId(id);
                 ufbook.setUsername(principal.getName());
@@ -107,9 +112,9 @@ public class UserFavouriteBookController {
     @DeleteMapping(value = "/{id}/delete")
     public void deleteFavouriteBook(@PathVariable("id") String id, Principal principal) {
         UserFavouriteBook ufbook = this.userFavouriteBookService.findByUsernameAndBookId(principal.getName(), id);
-        if(ufbook != null) {
+        if (ufbook != null) {
             this.userFavouriteBookService.delete(ufbook);
         }
     }
-    
+
 }

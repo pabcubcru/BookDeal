@@ -26,8 +26,7 @@ public class BookService {
     private ImageRepository imageRepository;
 
     @Autowired
-    public BookService(BookRepository bookRepository, UserRepository userRepository, 
-    ImageRepository imageRepository) {
+    public BookService(BookRepository bookRepository, UserRepository userRepository, ImageRepository imageRepository) {
         this.bookRepository = bookRepository;
         this.userRepository = userRepository;
         this.imageRepository = imageRepository;
@@ -67,7 +66,7 @@ public class BookService {
     public List<Book> findByIds(List<String> bookIds) {
         List<Book> res = new ArrayList<>();
         this.bookRepository.findAllById(bookIds).iterator().forEachRemaining(res::add);
-        
+
         return res;
     }
 
@@ -82,17 +81,20 @@ public class BookService {
         List<User> usersWithSameAddress = null;
         List<String> usernames = new ArrayList<>();
 
-        if(showMode.equals("postCode")) {
+        if (showMode.equals("postCode")) {
             usersWithSameAddress = this.userRepository.findByPostCode(user.getPostCode());
-            usersWithSameAddress.stream().filter(x -> !x.getUsername().equals(user.getUsername())).forEach(x -> usernames.add(x.getUsername()));
-        } else if(showMode.equals("province")) {
+            usersWithSameAddress.stream().filter(x -> !x.getUsername().equals(user.getUsername()))
+                    .forEach(x -> usernames.add(x.getUsername()));
+        } else if (showMode.equals("province")) {
             usersWithSameAddress = this.userRepository.findByProvince(user.getProvince());
-            usersWithSameAddress.stream().filter(x -> !x.getUsername().equals(user.getUsername())).forEach(x -> usernames.add(x.getUsername()));
-        }else if(showMode.equals("genres")) {
+            usersWithSameAddress.stream().filter(x -> !x.getUsername().equals(user.getUsername()))
+                    .forEach(x -> usernames.add(x.getUsername()));
+        } else if (showMode.equals("genres")) {
             return this.bookRepository.findByGenresLike(user.getGenres(), pageable);
         } else {
             usersWithSameAddress = this.userRepository.findByPostCodeOrProvince(user.getPostCode(), user.getProvince());
-            usersWithSameAddress.stream().filter(x -> !x.getUsername().equals(user.getUsername())).forEach(x -> usernames.add(x.getUsername()));
+            usersWithSameAddress.stream().filter(x -> !x.getUsername().equals(user.getUsername()))
+                    .forEach(x -> usernames.add(x.getUsername()));
         }
 
         Page<Book> books = this.bookRepository.findByUsernameIn(usernames, pageable);
@@ -129,5 +131,5 @@ public class BookService {
     public void deleteImageById(String id) {
         this.imageRepository.deleteById(id);
     }
-    
+
 }

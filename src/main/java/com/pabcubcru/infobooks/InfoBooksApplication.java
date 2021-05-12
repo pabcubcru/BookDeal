@@ -20,6 +20,7 @@ import com.pabcubcru.infobooks.repository.AuthoritiesRepository;
 import com.pabcubcru.infobooks.repository.BookRepository;
 import com.pabcubcru.infobooks.repository.ImageRepository;
 import com.pabcubcru.infobooks.repository.RequestRepository;
+import com.pabcubcru.infobooks.repository.SearchRepository;
 import com.pabcubcru.infobooks.repository.UserFavouriteBookRepository;
 import com.pabcubcru.infobooks.repository.UserRepository;
 
@@ -56,6 +57,9 @@ public class InfoBooksApplication {
 	@Autowired
 	private ImageRepository imageRepository;
 
+	@Autowired
+	private SearchRepository searchRepository;
+
 	public static void main(String[] args) {
 		SpringApplication.run(InfoBooksApplication.class, args);
 	}
@@ -63,9 +67,11 @@ public class InfoBooksApplication {
 	public void deleteIndex() {
 		requestRepository.deleteAll();
 		userFavouriteBookRepository.deleteAll();
+		authoritiesRepository.deleteAll();
 		bookRepository.deleteAll();
 		userRepository.deleteAll();
 		imageRepository.deleteAll();
+		searchRepository.deleteAll();
 	}
 
 	public void buildUserFavouriteBookIndexForTests() {
@@ -141,10 +147,10 @@ public class InfoBooksApplication {
 
 	public void buildBookIndexImages(String idBook, String urlImage, Integer id) {
 		Image image = new Image();
-		image.setId("image-"+id+"-"+idBook);
+		image.setId("image-" + id + "-" + idBook);
 		image.setUrlImage(urlImage);
 		image.setIdBook(idBook);
-		image.setFileName("image-"+id+"-"+idBook);
+		image.setFileName("image-" + id + "-" + idBook);
 
 		this.imageRepository.save(image);
 	}
@@ -153,31 +159,31 @@ public class InfoBooksApplication {
 		Book book = new Book();
 
 		book.setId("book-001");
-        book.setTitle("Title test 1");
-        book.setIsbn("0-7645-2641-3");
-        book.setPublicationYear(2014);
-        book.setPublisher("Publisher Test");
-        book.setGenres("Autoayuda");
-        book.setAuthor("Author Test"); 
-        book.setDescription("Description test"); 
-        book.setStatus("COMO NUEVO"); 
+		book.setTitle("Title test 1");
+		book.setIsbn("0-7645-2641-3");
+		book.setPublicationYear(2014);
+		book.setPublisher("Publisher Test");
+		book.setGenres("Autoayuda");
+		book.setAuthor("Author Test");
+		book.setDescription("Description test");
+		book.setStatus("COMO NUEVO");
 		book.setPrice(10.);
-        book.setUsername("test001");
+		book.setUsername("test001");
 		this.buildBookIndexImages(book.getId(), "https://imagessl1.casadellibro.com/a/l/t5/11/9788499926711.jpg", 1);
 		this.bookRepository.save(book);
 
 		book.setId("book-002");
-        book.setTitle("Title test 2");
-        book.setStatus("COMO NUEVO"); 
+		book.setTitle("Title test 2");
+		book.setStatus("COMO NUEVO");
 		book.setPrice(null);
-        book.setUsername("test002");
+		book.setUsername("test002");
 		this.buildBookIndexImages(book.getId(), "https://images-na.ssl-images-amazon.com/images/I/81sBQfVzziL.jpg", 2);
 		this.bookRepository.save(book);
 	}
 
 	public void buildAuthoritiesForTests(String username) {
 		Authorities authorities = new Authorities();
-		authorities.setId("authorities-"+username);
+		authorities.setId("authorities-" + username);
 		authorities.setUsername(username);
 		authorities.setAuthority("user");
 		this.authoritiesRepository.save(authorities);
@@ -187,58 +193,60 @@ public class InfoBooksApplication {
 		User user = new User();
 
 		user.setId("userTest-pablo123");
-        user.setName("Pablo");
-        user.setEmail("pablo@us.es"); 
-        user.setPhone("+34654987321");
-        user.setBirthDate(LocalDate.of(1998, 11, 23));
-        user.setProvince("Sevilla");
-        user.setPostCode("41012");
-        user.setUsername("pablo123");
+		user.setName("Pablo");
+		user.setEmail("pablo@us.es");
+		user.setPhone("+34654987321");
+		user.setBirthDate(LocalDate.of(1998, 11, 23));
+		user.setProvince("Sevilla");
+		user.setPostCode("41012");
+		user.setUsername("pablo123");
 		user.setGenres("Autoayuda,Esoterismo,Ciencia");
-        user.setPassword(new BCryptPasswordEncoder().encode("pablo123"));
-        user.setEnabled(true);
+		user.setPassword(new BCryptPasswordEncoder().encode("pablo123"));
+		user.setEnabled(true);
 		this.userRepository.save(user);
 		this.buildAuthoritiesForTests(user.getUsername());
 
 		user = new User();
 
 		user.setId("userTest-juan1234");
-        user.setName("Juan");
-        user.setEmail("juan@us.es"); 
-        user.setPhone("+34654987321");
-        user.setBirthDate(LocalDate.of(1998, 11, 23));
-        user.setProvince("Sevilla");
-        user.setPostCode("41012");
-        user.setUsername("juan1234");
+		user.setName("Juan");
+		user.setEmail("juan@us.es");
+		user.setPhone("+34654987321");
+		user.setBirthDate(LocalDate.of(1998, 11, 23));
+		user.setProvince("Sevilla");
+		user.setPostCode("41012");
+		user.setUsername("juan1234");
 		user.setGenres("Religión,Gastronomía,Cocina");
-        user.setPassword(new BCryptPasswordEncoder().encode("juan1234"));
-        user.setEnabled(true);
+		user.setPassword(new BCryptPasswordEncoder().encode("juan1234"));
+		user.setEnabled(true);
 		this.userRepository.save(user);
 		this.buildAuthoritiesForTests(user.getUsername());
 	}
 
 	public void buildIndexUsersForBooks() {
 		ProvinceEnum[] provinces = ProvinceEnum.values();
-		for(int i=1; i <= 20; i++) {
+		for (int i = 1; i <= 100; i++) {
 			User user = new User();
 
-			user.setId("user"+i);
-			user.setName("User "+i);
-			user.setEmail("user"+i+"@us.es"); 
+			user.setId("user" + i);
+			user.setName("User " + i);
+			user.setEmail("user" + i + "@us.es");
 			user.setPhone("+34654987321");
 			user.setBirthDate(LocalDate.of(1997, 11, 23));
-			int numRandomProvince = (int) Math.floor(Math.random()*ProvinceEnum.values().length)-1;
+			int numRandomProvince = (int) Math.floor(Math.random() * ProvinceEnum.values().length) - 1;
 			numRandomProvince = numRandomProvince < 0 ? 0 : numRandomProvince;
 			user.setProvince(provinces[numRandomProvince].toString());
-			user.setPostCode(""+(int)Math.floor(Math.random()*(50000-1000+1)+1000));
-			user.setUsername("username"+i);
-			user.setPassword(new BCryptPasswordEncoder().encode("password"+i));
+			user.setPostCode("" + (int) Math.floor(Math.random() * (50000 - 1000 + 1) + 1000));
+			user.setUsername("username" + i);
+			user.setPassword(new BCryptPasswordEncoder().encode("password" + i));
 			user.setEnabled(true);
 			GenreEnum[] genres = GenreEnum.values();
-			int numRandomGenre1 = (int) Math.floor(Math.random()*(GenreEnum.values().length/3));
-			int numRandomGenre2 = (int) Math.floor(Math.random()*(GenreEnum.values().length*2/3));
-			int numRandomGenre3 = (int) Math.floor(Math.random()*(GenreEnum.values().length/3)) + (GenreEnum.values().length*2/3);
-			String genre = genres[numRandomGenre1].toString() + "," + genres[numRandomGenre2].toString() + "," + genres[numRandomGenre3].toString();
+			int numRandomGenre1 = (int) Math.floor(Math.random() * (GenreEnum.values().length / 3));
+			int numRandomGenre2 = (int) Math.floor(Math.random() * (GenreEnum.values().length * 2 / 3));
+			int numRandomGenre3 = (int) Math.floor(Math.random() * (GenreEnum.values().length / 3))
+					+ (GenreEnum.values().length * 2 / 3);
+			String genre = genres[numRandomGenre1].toString() + "," + genres[numRandomGenre2].toString() + ","
+					+ genres[numRandomGenre3].toString();
 			user.setGenres(genre);
 			this.userRepository.save(user);
 			this.buildAuthoritiesForTests(user.getUsername());
@@ -247,7 +255,7 @@ public class InfoBooksApplication {
 	}
 
 	public void buildImagesForBook(List<Book> books) {
-		for(int i=0; i<books.size(); i++) {
+		for (int i = 0; i < books.size(); i++) {
 			Book b = books.get(i);
 			this.buildBookIndexImages(b.getId(), b.getImage(), i);
 		}
@@ -273,32 +281,28 @@ public class InfoBooksApplication {
 
 		try {
 			File myObj = new File(".\\src\\main\\java\\com\\pabcubcru\\infobooks\\books.csv");
-      		Scanner scanner = new Scanner(myObj);
-			int cont = 0;
+			Scanner scanner = new Scanner(myObj);
 			int lineNo = 0;
 			while (scanner.hasNextLine()) {
 				++lineNo;
 				String line = scanner.nextLine();
-				if(lineNo == 1) continue;
+				if (lineNo == 1)
+					continue;
 				Book book = csvRowToBookMapper(line);
-				if(book != null) {
+				if (book != null) {
 					res.add(book);
 				}
-				if(cont == 20) {
-					break;
-				}
-				cont++;
 			}
 			scanner.close();
 		} catch (Exception e) {
-			log.error("File read error {}",e.getMessage());
+			log.error("File read error {}", e.getMessage());
 		}
 
 		return res;
 	}
 
 	private Book csvRowToBookMapper(final String line) {
-		if(!line.equals("") || !line.equals(null)) {
+		if (!line.equals("") || !line.equals(null)) {
 			String[] s = line.split(";");
 			GenreEnum[] genres = GenreEnum.values();
 			String isbn = s[0];
@@ -306,26 +310,27 @@ public class InfoBooksApplication {
 			String title = s[2];
 			String author = s[3];
 			Integer publicationYear = 2010;
-			if(!s[4].equals("")) {
+			if (!s[4].equals("")) {
 				String r = s[4].replace(".0", "");
 				publicationYear = Integer.parseInt(r);
 			}
 			String publisher = s[5];
 			String description = s[6];
 			String urlImage = s[7];
-			int numRandomGenre1 = (int) Math.floor(Math.random()*GenreEnum.values().length)-1;
+			int numRandomGenre1 = (int) Math.floor(Math.random() * GenreEnum.values().length) - 1;
 			numRandomGenre1 = numRandomGenre1 < 0 ? 0 : numRandomGenre1;
-			int numRandomGenre2 = (int) Math.floor(Math.random()*GenreEnum.values().length)-1;
+			int numRandomGenre2 = (int) Math.floor(Math.random() * GenreEnum.values().length) - 1;
 			numRandomGenre2 = numRandomGenre2 < 0 ? 0 : numRandomGenre2;
 			String genre = genres[numRandomGenre1].toString();
-			if(numRandomGenre1 != numRandomGenre2) {
+			if (numRandomGenre1 != numRandomGenre2) {
 				genre = genres[numRandomGenre1].toString() + "," + genres[numRandomGenre2].toString();
 			}
 			String status = "NUEVO";
-			Double price = Double.parseDouble(String.valueOf(Math.floor(Math.random()*100)));
-			int numRandomUsername = (int) Math.floor(Math.random()*100);
-			String username = "username"+numRandomUsername;
-			Book book = new Book(title, originalTitle, isbn, publicationYear, publisher, genre, author, description, urlImage, status, price, username);
+			Double price = Double.parseDouble(String.valueOf(Math.floor(Math.random() * 100)));
+			int numRandomUsername = (int) Math.floor(Math.random() * 100);
+			String username = "username" + numRandomUsername;
+			Book book = new Book(title, originalTitle, isbn, publicationYear, publisher, genre, author, description,
+					urlImage, status, price, username);
 			return book;
 		} else {
 			return null;

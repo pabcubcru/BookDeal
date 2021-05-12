@@ -43,7 +43,7 @@ public class AuthoritiesServiceTests {
 
         authorities = this.authoritiesService.findByUsername("pablo123");
         Integer numberOfAuthoritiesAfter = authorities.size();
-        Assertions.assertThat(numberOfAuthoritiesAfter).isEqualTo(numberOfAuthoritiesBefore+1);
+        Assertions.assertThat(numberOfAuthoritiesAfter).isEqualTo(numberOfAuthoritiesBefore + 1);
     }
-    
+
 }

@@ -12,7 +12,7 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface BookRepository extends ElasticsearchRepository<Book, String> {
-    
+
     public Page<Book> findAll(Pageable pageable);
 
     public Page<Book> findByUsername(String username, Pageable pageable);

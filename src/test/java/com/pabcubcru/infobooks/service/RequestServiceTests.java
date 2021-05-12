@@ -22,7 +22,7 @@ public class RequestServiceTests {
 
     @Autowired
     private RequestService requestService;
-    
+
     @Test
     public void shouldFindMyRequests() throws Exception {
         PageRequest pageRequest = PageRequest.of(1, 20);
@@ -32,7 +32,7 @@ public class RequestServiceTests {
     }
 
     @Test
-    public void shouldFindReceivedRequests() throws Exception { 
+    public void shouldFindReceivedRequests() throws Exception {
         PageRequest pageRequest = PageRequest.of(1, 20);
         Page<Request> requests = this.requestService.listReceivedRequests("test002", pageRequest);
 
@@ -48,16 +48,19 @@ public class RequestServiceTests {
 
     @Test
     public void shouldFindByUsername2AndIdBook2AndNotRejected() throws Exception {
-        List<Request> requests = this.requestService.findByUsername2AndIdBook2AndStatusNot("test001", "book-002", RequestStatus.RECHAZADA.toString());
+        List<Request> requests = this.requestService.findByUsername2AndIdBook2AndStatusNot("test001", "book-002",
+                RequestStatus.RECHAZADA.toString());
         Assertions.assertThat(requests).isEmpty();
 
-        requests = this.requestService.findByUsername2AndIdBook2AndStatusNot("test002", "book-002", RequestStatus.RECHAZADA.toString());
+        requests = this.requestService.findByUsername2AndIdBook2AndStatusNot("test002", "book-002",
+                RequestStatus.RECHAZADA.toString());
         Assertions.assertThat(requests.size()).isEqualTo(2);
     }
 
     @Test
     public void shouldFindFirstByIdBook1AndStatus() throws Exception {
-        Request request = this.requestService.findFirstByIdBook1AndStatus("book-001", RequestStatus.ACEPTADA.toString());
+        Request request = this.requestService.findFirstByIdBook1AndStatus("book-001",
+                RequestStatus.ACEPTADA.toString());
 
         Assertions.assertThat(request.getId()).isEqualTo("request-002");
         Assertions.assertThat(request.getStatus()).isEqualTo(RequestStatus.ACEPTADA.toString());
@@ -65,7 +68,8 @@ public class RequestServiceTests {
 
     @Test
     public void shouldFindFirstByIdBook2AndStatus() throws Exception {
-        Request request = this.requestService.findFirstByIdBook2AndStatus("book-002", RequestStatus.PENDIENTE.toString());
+        Request request = this.requestService.findFirstByIdBook2AndStatus("book-002",
+                RequestStatus.PENDIENTE.toString());
 
         Assertions.assertThat(request.getIdBook2()).isEqualTo("book-002");
         Assertions.assertThat(request.getStatus()).isEqualTo(RequestStatus.PENDIENTE.toString());
@@ -81,15 +85,17 @@ public class RequestServiceTests {
 
     @Test
     public void shouldFindByIdBook1AndNotRejectedAndNotCanceledAndStatusIntercambio() {
-        List<Request> requests = this.requestService.findByIdBook1AndStatusNotAndStatusNotAndAction("book-001", "INTERCAMBIO");
-        
+        List<Request> requests = this.requestService.findByIdBook1AndStatusNotAndStatusNotAndAction("book-001",
+                "INTERCAMBIO");
+
         Assertions.assertThat(requests.size()).isEqualTo(1);
         Assertions.assertThat(requests.get(0).getStatus()).isEqualTo("ACEPTADA");
     }
 
     @Test
     public void shouldFindByIdBook2AndNotRejectedAndNotCanceledAndStatusVenta() throws Exception {
-        List<Request> requests = this.requestService.findByIdBook2AndStatusNotAndStatusNotAndAction("book-002", "VENTA");
+        List<Request> requests = this.requestService.findByIdBook2AndStatusNotAndStatusNotAndAction("book-002",
+                "VENTA");
 
         Assertions.assertThat(requests.size()).isEqualTo(1);
         Assertions.assertThat(requests.get(0).getStatus()).isEqualTo("PENDIENTE");
@@ -142,10 +148,10 @@ public class RequestServiceTests {
     public void shouldSave() throws Exception {
         Request request = new Request();
 
-		request.setId("request-test");
-		this.requestService.save(request);
+        request.setId("request-test");
+        this.requestService.save(request);
 
         Request r = this.requestService.findById("request-test");
         Assertions.assertThat(r).isNotNull();
-    }  
+    }
 }

@@ -11,24 +11,24 @@ import org.springframework.transaction.annotation.Transactional;
 
 @Service
 public class UserService {
-    
+
     private UserRepository userRepository;
 
     @Autowired
     private AuthoritiesService authoritiesService;
 
     @Autowired
-	public UserService(UserRepository userRepository) {
-		this.userRepository = userRepository;
-	}
+    public UserService(UserRepository userRepository) {
+        this.userRepository = userRepository;
+    }
 
     @Transactional
     public void save(User user, Boolean isNewPassword) {
-        if(isNewPassword){
+        if (isNewPassword) {
             user.setPassword(new BCryptPasswordEncoder().encode(user.getPassword()));
         }
         user.setEnabled(true);
-        if(user.getId() == null){
+        if (user.getId() == null) {
             Authorities authority = new Authorities();
             authority.setUsername(user.getUsername());
             authority.setAuthority("user");
@@ -38,12 +38,12 @@ public class UserService {
     }
 
     @Transactional
-    public User findUserById(String id){
+    public User findUserById(String id) {
         return this.userRepository.findById(id).orElse(null);
     }
 
     @Transactional
-    public void delete(User User){
+    public void delete(User User) {
         this.userRepository.delete(User);
     }
 
@@ -58,9 +58,8 @@ public class UserService {
     }
 
     @Transactional
-    public User findByUsername(String username){
+    public User findByUsername(String username) {
         return this.userRepository.findByUsername(username);
     }
-
 
 }

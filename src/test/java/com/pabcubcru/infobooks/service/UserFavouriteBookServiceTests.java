@@ -52,14 +52,14 @@ public class UserFavouriteBookServiceTests {
     @Test
     public void shouldSave() throws Exception {
         UserFavouriteBook ufb = new UserFavouriteBook();
-		ufb.setBookId("booktest1");
-		ufb.setId("ufbtest");
-		ufb.setUsername("test");
-		this.userFavouriteBookService.save(ufb);
+        ufb.setBookId("booktest1");
+        ufb.setId("ufbtest");
+        ufb.setUsername("test");
+        this.userFavouriteBookService.save(ufb);
 
         UserFavouriteBook ufbook = this.userFavouriteBookService.findByUsernameAndBookId("test", "booktest1");
         Assertions.assertThat(ufbook).isNotNull();
         Assertions.assertThat(ufbook.getId()).isEqualTo("ufbtest");
     }
-    
+
 }

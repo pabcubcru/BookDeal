@@ -14,7 +14,8 @@ public interface RequestRepository extends ElasticsearchRepository<Request, Stri
 
     public Page<Request> findByUsername1OrderByStatus(String username, Pageable pageable);
 
-    public Page<Request> findByUsername2AndStatusNotAndStatusNotOrderByStatusDesc(String username, String statusRejected, String statusCanceled, Pageable pageable);
+    public Page<Request> findByUsername2AndStatusNotAndStatusNotOrderByStatusDesc(String username,
+            String statusRejected, String statusCanceled, Pageable pageable);
 
     public Request findByUsername1AndIdBook2(String username, String idBook);
 
@@ -26,9 +27,11 @@ public interface RequestRepository extends ElasticsearchRepository<Request, Stri
 
     public Request findFirstByIdBook1OrIdBook2(String idBook1, String idBook2);
 
-    public List<Request> findByIdBook1AndStatusNotAndStatusNotAndAction(String idBook1,String statusReject, String statusCanceled, String action);
-    
-    public List<Request> findByIdBook2AndStatusNotAndStatusNotAndAction(String idBook2,String statusReject, String statusCanceled, String action);
+    public List<Request> findByIdBook1AndStatusNotAndStatusNotAndAction(String idBook1, String statusReject,
+            String statusCanceled, String action);
+
+    public List<Request> findByIdBook2AndStatusNotAndStatusNotAndAction(String idBook2, String statusReject,
+            String statusCanceled, String action);
 
     public List<Request> findByIdBook1OrIdBook2(String idBook1, String idBook2);
 
