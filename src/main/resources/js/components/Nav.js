@@ -11,7 +11,8 @@ export default class Nav extends Component {
     this.state = {
       isLogged: false,
       isAdmin: false,
-      query:""
+      query:"",
+      selectSearch: ""
     }
   }
 
@@ -33,6 +34,22 @@ export default class Nav extends Component {
       button1 = <a  class="nav-link" href="/profile">Mi perfil</a>;
       button2 = <a  class="nav-link " href="/logout">Cerrar sesión</a>;
     }
+
+    let search = <li style={{float:"right"}}><div class="search-box">
+      <select class="form-control" id="selectStatus" value={this.state.selectSearch} onChange={(event) => this.setState({selectSearch:event.target.value})}>
+            <option value="">Buscar por</option>
+            <option value="book">Datos del libro</option>
+            <option value="publicationYear">Año de publicación</option>
+            <option value="rangeYears">Año de publicación</option>
+            <option value="postalCode">Código postal</option>
+            <option value="province">Provincia</option>
+            <option value="">DAÑADO</option>
+            <option value="MUY DAÑADO">MUY DAÑADO</option>
+          </select>
+      <input class="text" type="text" placeholder="Título, ISBN, autor, ..." onChange={(event) => this.setState({query:event.target.value})}/>
+      <dfn data-info={info}><i style={{top: "50%"}} class="fa fa-info-circle"></i></dfn>
+      <button type="button" onClick={() => this.search(this.state.query)} disabled={this.state.query.trim() == ''}> <i class="fa fa-search"></i></button>
+    </div></li>
 
     const info = "BÚSQUEDA DE LIBROS: ======================= "+
     "1) POR SUS ATRIBUTOS: ................ "+
@@ -76,19 +93,13 @@ export default class Nav extends Component {
                 <li >{button2}</li>
             </ul>
           </li>
-          <li style={{float:"right"}}><div class="search-box">
-            <input class="text" type="text" placeholder="Título, ISBN, autor, ..." onChange={(event) => this.setState({query:event.target.value})}/>
-            <dfn data-info={info}><i style={{top: "50%"}} class="fa fa-info-circle"></i></dfn>
-          <button type="button" onClick={() => this.search(this.state.query)} disabled={this.state.query.trim() == ''}> <i class="fa fa-search"></i></button></div></li>
+          <li style={{float:"right"}}><a class="nav-link" href="/search"> Buscar <i class="fa fa-search"></i></a></li>
           </div>
         :
           <div><li style={{float:"left"}}><a  href="/books/all/0">Libros <i class="fa fa-book"></i></a></li>
           <li style={{float:"right"}}>{button2}</li>
           <li style={{float:"right"}}>{button1}</li>
-          <li style={{float:"right"}}><div class="search-box">
-            <input class="text" type="text" placeholder="Título, ISBN, autor, ..." onChange={(event) => this.setState({query:event.target.value})}/>
-            <dfn data-info={info}><i style={{top: "50%"}} class="fa fa-info-circle"></i></dfn>
-          <button type="button" onClick={() => this.search(this.state.query)} disabled={this.state.query.trim() == ''}> <i class="fa fa-search"></i></button></div></li>
+          <li style={{float:"right"}}><a class="nav-link" href="/search"> Buscar <i class="fa fa-search"></i></a></li>
           </div>
         }  
           
@@ -127,33 +138,13 @@ export default class Nav extends Component {
                 <li >{button2}</li>
             </ul>
           </li>
-          <li style={{float:"right"}}><a href="#" ><i class="fa fa-search"></i></a>
-            <ul >
-              <li class="search-li" style={{backgroundColor:"transparent"}}>
-                <div class="search">
-                <input class="text" type="text" placeholder="Título, ISBN, año, ..."/>
-                <dfn data-info={info}><i style={{top: "50%"}} class="fa fa-info-circle"></i></dfn>
-                <button> <i class="fa fa-search"></i></button>
-                </div>
-              </li>
-            </ul>
-          </li>
+          <li style={{float:"right"}}><a class="nav-link" href="/search"> <i class="fa fa-search"></i></a></li>
           </div>
         :
           <div><li style={{float:"left"}}><a  href="/books/all/0"><i class="fa fa-book"></i></a></li>
           <li style={{float:"right"}}><a class="nav-link" href="/register"><i class="fa fa-user-plus"></i></a></li>
           <li style={{float:"right"}}><a class="nav-link ml-auto" href="/login"><i class="fa fa-sign-in" aria-hidden="true"></i></a></li>
-          <li style={{float:"right"}}><a href="#" ><i class="fa fa-search"></i></a>
-            <ul >
-              <li class="search-li" style={{backgroundColor:"transparent"}}>
-                <div class="search">
-                <input class="text" type="text" placeholder="Título, ISBN, año, ..."/>
-                <dfn data-info={info}><i style={{top: "50%"}} class="fa fa-info-circle"></i></dfn>
-                <button> <i class="fa fa-search"></i></button>
-                </div>
-              </li>
-            </ul>
-          </li>
+          <li style={{float:"right"}}><a class="nav-link" href="/search"> <i class="fa fa-search"></i></a></li>
           </div>
         }  
           
@@ -162,9 +153,5 @@ export default class Nav extends Component {
         
       </nav>
     )
-  }
-
-  async search(query) {
-    window.location.replace("/search/0/"+query)
   }
 }

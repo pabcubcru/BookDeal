@@ -2408,7 +2408,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()(_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0___default.a);
 // Module
-___CSS_LOADER_EXPORT___.push([module.i, ".menu, .menu ul, .menu li, .menu a {\r\n  z-index: 5;\r\n  margin: 0;\r\n  padding: 0;\r\n  border: none;\r\n  outline: none;\r\n}\r\n\r\n.menu {\r\n  height: 70px;\r\n  width: 100%;\r\n  background-color: #26272b;\r\n  border-radius: 3px;\r\n  border-radius: 5px;\r\n}\r\n\r\n.menu li {\r\n  position: relative;\r\n  list-style: none;\r\n  float: left;\r\n  display: block;\r\n  height: 50px;\r\n}\r\n\r\n.menu a {\r\n  display: block;\r\n  padding: 0 30px;\r\n  margin: 20px 0;\r\n  line-height: 28px;\r\n  text-decoration: solid;\r\n  \r\n  font-family:\"Trebuchet MS\", Arial, Helvetica, sans-serif;\r\n  font-weight: bold;\r\n  font-size: 18px;\r\n  color: rgb(255, 255, 255);\r\n  \r\n}\r\n\r\n\r\n\r\n.menu li:hover > a {color: #007bff}\r\n\r\n.menu ul {\r\n  position: absolute;\r\n  top: 50px;\r\n  left: 20px;\r\n  \r\n  opacity: 0;\r\n  background: #26272b;\r\n  \r\n  border-radius: 0 0 10px 10px;\r\n  transition: opacity .20s ease .1s;\r\n}\r\n\r\n.menu li:hover > ul {opacity: 1;}\r\n\r\n.menu ul li {\r\n  height: 0;\r\n  overflow: hidden;\r\n  padding: 0;\r\n  \r\n  transition: height .25s ease .1s;\r\n}\r\n\r\n.menu li:hover > ul li {\r\n  height: 50px;\r\n  overflow: visible;\r\n  padding: 0;\r\n}\r\n\r\n.menu ul li a {\r\n  width: 180px;\r\n  padding: 10px 20px;\r\n  margin: 0;\r\n  border: none;\r\n  border-bottom: 1px solid #ffffff;\r\n  font-weight: normal;\r\n}\r\n.menu ul li:last-child a { border: none; }\r\n\r\n.search-box{\r\n  margin-top: 10px;\r\n  top: 50%;\r\n  left: 50%;\r\n  height:40px;\r\n  transform: translate(-50%, -50%);\r\n  position:relative;\r\n  display: flex;\r\n  background-color:#ffffff;\r\n  border-radius: 18px\r\n}\r\n\r\n.search-box button{\r\n  width: 40px;\r\n  height:40px ;\r\n  border-radius: 50%;\r\n  border:none;\r\n  color:#2C3A47;\r\n}\r\n\r\n.search-box input{\r\n  border:none;\r\n  outline:0px;\r\n  padding: 0px 0px;\r\n  background-color:transparent;\r\n  border-radius: 18px;\r\n  color:rgb(0, 0, 0);\r\n  font-size: 20px;\r\n  width: 0px;\r\n  box-sizing: border-box;\r\n  transition: .3s;\r\n}\r\n\r\n.search-box button:hover{\r\n   cursor: pointer;\r\n}\r\n\r\n.search-box:hover .text{\r\n  width:240px;\r\n  padding: 10px 20px;\r\n  \r\n}\r\n\r\n@media screen and (max-width:1200px) {\r\n  .desktop {\r\n     display: none; \r\n  }\r\n}\r\n\r\n@media screen and (min-width:1200px) {\r\n  .mobile{\r\n     display: none; \r\n  }\r\n}\r\n\r\n.search {\r\n  margin-top: 10px;\r\n  top: 50%;\r\n  left: 50%;\r\n  height:40px;\r\n  transform: translate(-50%, -50%);\r\n  position:relative;\r\n  display: flex;\r\n  background-color:#ffffff;\r\n  border-radius: 18px\r\n}\r\n\r\n.search button{\r\n  width: 40px;\r\n  height:40px ;\r\n  border-radius: 50%;\r\n  border:none;\r\n  color:#2C3A47;\r\n}\r\n\r\n.search input{\r\n  border:none;\r\n  outline:0px;\r\n  padding: 0px 0px;\r\n  background-color:transparent;\r\n  border-radius: 18px;\r\n  color:rgb(0, 0, 0);\r\n  font-size: 20px;\r\n  width: 0px;\r\n  box-sizing: border-box;\r\n  transition: .3s;\r\n}\r\n\r\n.search .text{\r\n  width:150px;\r\n  padding: 10px 20px;\r\n}\r\n\r\n/** Code for hover info **/\r\n\r\ndfn {\r\n  width: max-content;\r\n  height: max-content;\r\n  margin-top: 8px;\r\n}\r\n", "",{"version":3,"sources":["webpack://./src/main/resources/js/components/Nav.css"],"names":[],"mappings":"AAAA;EACE,UAAU;EACV,SAAS;EACT,UAAU;EACV,YAAY;EACZ,aAAa;AACf;;AAEA;EACE,YAAY;EACZ,WAAW;EACX,yBAAyB;EACzB,kBAAkB;EAClB,kBAAkB;AACpB;;AAEA;EACE,kBAAkB;EAClB,gBAAgB;EAChB,WAAW;EACX,cAAc;EACd,YAAY;AACd;;AAEA;EACE,cAAc;EACd,eAAe;EACf,cAAc;EACd,iBAAiB;EACjB,sBAAsB;;EAEtB,wDAAwD;EACxD,iBAAiB;EACjB,eAAe;EACf,yBAAyB;;AAE3B;;;;AAIA,oBAAoB,cAAc;;AAElC;EACE,kBAAkB;EAClB,SAAS;EACT,UAAU;;EAEV,UAAU;EACV,mBAAmB;;EAEnB,4BAA4B;EAC5B,iCAAiC;AACnC;;AAEA,qBAAqB,UAAU,CAAC;;AAEhC;EACE,SAAS;EACT,gBAAgB;EAChB,UAAU;;EAEV,gCAAgC;AAClC;;AAEA;EACE,YAAY;EACZ,iBAAiB;EACjB,UAAU;AACZ;;AAEA;EACE,YAAY;EACZ,kBAAkB;EAClB,SAAS;EACT,YAAY;EACZ,gCAAgC;EAChC,mBAAmB;AACrB;AACA,2BAA2B,YAAY,EAAE;;AAEzC;EACE,gBAAgB;EAChB,QAAQ;EACR,SAAS;EACT,WAAW;EACX,gCAAgC;EAChC,iBAAiB;EACjB,aAAa;EACb,wBAAwB;EACxB;AACF;;AAEA;EACE,WAAW;EACX,YAAY;EACZ,kBAAkB;EAClB,WAAW;EACX,aAAa;AACf;;AAEA;EACE,WAAW;EACX,WAAW;EACX,gBAAgB;EAChB,4BAA4B;EAC5B,mBAAmB;EACnB,kBAAkB;EAClB,eAAe;EACf,UAAU;EACV,sBAAsB;EACtB,eAAe;AACjB;;AAEA;GACG,eAAe;AAClB;;AAEA;EACE,WAAW;EACX,kBAAkB;;AAEpB;;AAEA;EACE;KACG,aAAa;EAChB;AACF;;AAEA;EACE;KACG,aAAa;EAChB;AACF;;AAEA;EACE,gBAAgB;EAChB,QAAQ;EACR,SAAS;EACT,WAAW;EACX,gCAAgC;EAChC,iBAAiB;EACjB,aAAa;EACb,wBAAwB;EACxB;AACF;;AAEA;EACE,WAAW;EACX,YAAY;EACZ,kBAAkB;EAClB,WAAW;EACX,aAAa;AACf;;AAEA;EACE,WAAW;EACX,WAAW;EACX,gBAAgB;EAChB,4BAA4B;EAC5B,mBAAmB;EACnB,kBAAkB;EAClB,eAAe;EACf,UAAU;EACV,sBAAsB;EACtB,eAAe;AACjB;;AAEA;EACE,WAAW;EACX,kBAAkB;AACpB;;AAEA,0BAA0B;;AAE1B;EACE,kBAAkB;EAClB,mBAAmB;EACnB,eAAe;AACjB","sourcesContent":[".menu, .menu ul, .menu li, .menu a {\r\n  z-index: 5;\r\n  margin: 0;\r\n  padding: 0;\r\n  border: none;\r\n  outline: none;\r\n}\r\n\r\n.menu {\r\n  height: 70px;\r\n  width: 100%;\r\n  background-color: #26272b;\r\n  border-radius: 3px;\r\n  border-radius: 5px;\r\n}\r\n\r\n.menu li {\r\n  position: relative;\r\n  list-style: none;\r\n  float: left;\r\n  display: block;\r\n  height: 50px;\r\n}\r\n\r\n.menu a {\r\n  display: block;\r\n  padding: 0 30px;\r\n  margin: 20px 0;\r\n  line-height: 28px;\r\n  text-decoration: solid;\r\n  \r\n  font-family:\"Trebuchet MS\", Arial, Helvetica, sans-serif;\r\n  font-weight: bold;\r\n  font-size: 18px;\r\n  color: rgb(255, 255, 255);\r\n  \r\n}\r\n\r\n\r\n\r\n.menu li:hover > a {color: #007bff}\r\n\r\n.menu ul {\r\n  position: absolute;\r\n  top: 50px;\r\n  left: 20px;\r\n  \r\n  opacity: 0;\r\n  background: #26272b;\r\n  \r\n  border-radius: 0 0 10px 10px;\r\n  transition: opacity .20s ease .1s;\r\n}\r\n\r\n.menu li:hover > ul {opacity: 1;}\r\n\r\n.menu ul li {\r\n  height: 0;\r\n  overflow: hidden;\r\n  padding: 0;\r\n  \r\n  transition: height .25s ease .1s;\r\n}\r\n\r\n.menu li:hover > ul li {\r\n  height: 50px;\r\n  overflow: visible;\r\n  padding: 0;\r\n}\r\n\r\n.menu ul li a {\r\n  width: 180px;\r\n  padding: 10px 20px;\r\n  margin: 0;\r\n  border: none;\r\n  border-bottom: 1px solid #ffffff;\r\n  font-weight: normal;\r\n}\r\n.menu ul li:last-child a { border: none; }\r\n\r\n.search-box{\r\n  margin-top: 10px;\r\n  top: 50%;\r\n  left: 50%;\r\n  height:40px;\r\n  transform: translate(-50%, -50%);\r\n  position:relative;\r\n  display: flex;\r\n  background-color:#ffffff;\r\n  border-radius: 18px\r\n}\r\n\r\n.search-box button{\r\n  width: 40px;\r\n  height:40px ;\r\n  border-radius: 50%;\r\n  border:none;\r\n  color:#2C3A47;\r\n}\r\n\r\n.search-box input{\r\n  border:none;\r\n  outline:0px;\r\n  padding: 0px 0px;\r\n  background-color:transparent;\r\n  border-radius: 18px;\r\n  color:rgb(0, 0, 0);\r\n  font-size: 20px;\r\n  width: 0px;\r\n  box-sizing: border-box;\r\n  transition: .3s;\r\n}\r\n\r\n.search-box button:hover{\r\n   cursor: pointer;\r\n}\r\n\r\n.search-box:hover .text{\r\n  width:240px;\r\n  padding: 10px 20px;\r\n  \r\n}\r\n\r\n@media screen and (max-width:1200px) {\r\n  .desktop {\r\n     display: none; \r\n  }\r\n}\r\n\r\n@media screen and (min-width:1200px) {\r\n  .mobile{\r\n     display: none; \r\n  }\r\n}\r\n\r\n.search {\r\n  margin-top: 10px;\r\n  top: 50%;\r\n  left: 50%;\r\n  height:40px;\r\n  transform: translate(-50%, -50%);\r\n  position:relative;\r\n  display: flex;\r\n  background-color:#ffffff;\r\n  border-radius: 18px\r\n}\r\n\r\n.search button{\r\n  width: 40px;\r\n  height:40px ;\r\n  border-radius: 50%;\r\n  border:none;\r\n  color:#2C3A47;\r\n}\r\n\r\n.search input{\r\n  border:none;\r\n  outline:0px;\r\n  padding: 0px 0px;\r\n  background-color:transparent;\r\n  border-radius: 18px;\r\n  color:rgb(0, 0, 0);\r\n  font-size: 20px;\r\n  width: 0px;\r\n  box-sizing: border-box;\r\n  transition: .3s;\r\n}\r\n\r\n.search .text{\r\n  width:150px;\r\n  padding: 10px 20px;\r\n}\r\n\r\n/** Code for hover info **/\r\n\r\ndfn {\r\n  width: max-content;\r\n  height: max-content;\r\n  margin-top: 8px;\r\n}\r\n"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.i, ".menu, .menu ul, .menu li, .menu a {\r\n  z-index: 5;\r\n  margin: 0;\r\n  padding: 0;\r\n  border: none;\r\n  outline: none;\r\n}\r\n\r\n.menu {\r\n  height: 70px;\r\n  width: 100%;\r\n  background-color: #26272b;\r\n  border-radius: 3px;\r\n  border-radius: 5px;\r\n}\r\n\r\n.menu li {\r\n  position: relative;\r\n  list-style: none;\r\n  float: left;\r\n  display: block;\r\n  height: 50px;\r\n}\r\n\r\n.menu a {\r\n  display: block;\r\n  padding: 0 30px;\r\n  margin: 20px 0;\r\n  line-height: 28px;\r\n  text-decoration: solid;\r\n  \r\n  font-family:\"Trebuchet MS\", Arial, Helvetica, sans-serif;\r\n  font-weight: bold;\r\n  font-size: 18px;\r\n  color: rgb(255, 255, 255);\r\n  \r\n}\r\n\r\n\r\n\r\n.menu li:hover > a {color: #007bff}\r\n\r\n.menu ul {\r\n  position: absolute;\r\n  top: 50px;\r\n  left: 20px;\r\n  \r\n  opacity: 0;\r\n  background: #26272b;\r\n  \r\n  border-radius: 0 0 10px 10px;\r\n  transition: opacity .20s ease .1s;\r\n}\r\n\r\n.menu li:hover > ul {opacity: 1;}\r\n\r\n.menu ul li {\r\n  height: 0;\r\n  overflow: hidden;\r\n  padding: 0;\r\n  \r\n  transition: height .25s ease .1s;\r\n}\r\n\r\n.menu li:hover > ul li {\r\n  height: 50px;\r\n  overflow: visible;\r\n  padding: 0;\r\n}\r\n\r\n.menu ul li a {\r\n  width: 180px;\r\n  padding: 10px 20px;\r\n  margin: 0;\r\n  border: none;\r\n  border-bottom: 1px solid #ffffff;\r\n  font-weight: normal;\r\n}\r\n.menu ul li:last-child a { border: none; }\r\n\r\n@media screen and (max-width:995px) {\r\n  .desktop {\r\n     display: none; \r\n  }\r\n}\r\n\r\n@media screen and (min-width:994px) {\r\n  .mobile{\r\n     display: none; \r\n  }\r\n}\r\n", "",{"version":3,"sources":["webpack://./src/main/resources/js/components/Nav.css"],"names":[],"mappings":"AAAA;EACE,UAAU;EACV,SAAS;EACT,UAAU;EACV,YAAY;EACZ,aAAa;AACf;;AAEA;EACE,YAAY;EACZ,WAAW;EACX,yBAAyB;EACzB,kBAAkB;EAClB,kBAAkB;AACpB;;AAEA;EACE,kBAAkB;EAClB,gBAAgB;EAChB,WAAW;EACX,cAAc;EACd,YAAY;AACd;;AAEA;EACE,cAAc;EACd,eAAe;EACf,cAAc;EACd,iBAAiB;EACjB,sBAAsB;;EAEtB,wDAAwD;EACxD,iBAAiB;EACjB,eAAe;EACf,yBAAyB;;AAE3B;;;;AAIA,oBAAoB,cAAc;;AAElC;EACE,kBAAkB;EAClB,SAAS;EACT,UAAU;;EAEV,UAAU;EACV,mBAAmB;;EAEnB,4BAA4B;EAC5B,iCAAiC;AACnC;;AAEA,qBAAqB,UAAU,CAAC;;AAEhC;EACE,SAAS;EACT,gBAAgB;EAChB,UAAU;;EAEV,gCAAgC;AAClC;;AAEA;EACE,YAAY;EACZ,iBAAiB;EACjB,UAAU;AACZ;;AAEA;EACE,YAAY;EACZ,kBAAkB;EAClB,SAAS;EACT,YAAY;EACZ,gCAAgC;EAChC,mBAAmB;AACrB;AACA,2BAA2B,YAAY,EAAE;;AAEzC;EACE;KACG,aAAa;EAChB;AACF;;AAEA;EACE;KACG,aAAa;EAChB;AACF","sourcesContent":[".menu, .menu ul, .menu li, .menu a {\r\n  z-index: 5;\r\n  margin: 0;\r\n  padding: 0;\r\n  border: none;\r\n  outline: none;\r\n}\r\n\r\n.menu {\r\n  height: 70px;\r\n  width: 100%;\r\n  background-color: #26272b;\r\n  border-radius: 3px;\r\n  border-radius: 5px;\r\n}\r\n\r\n.menu li {\r\n  position: relative;\r\n  list-style: none;\r\n  float: left;\r\n  display: block;\r\n  height: 50px;\r\n}\r\n\r\n.menu a {\r\n  display: block;\r\n  padding: 0 30px;\r\n  margin: 20px 0;\r\n  line-height: 28px;\r\n  text-decoration: solid;\r\n  \r\n  font-family:\"Trebuchet MS\", Arial, Helvetica, sans-serif;\r\n  font-weight: bold;\r\n  font-size: 18px;\r\n  color: rgb(255, 255, 255);\r\n  \r\n}\r\n\r\n\r\n\r\n.menu li:hover > a {color: #007bff}\r\n\r\n.menu ul {\r\n  position: absolute;\r\n  top: 50px;\r\n  left: 20px;\r\n  \r\n  opacity: 0;\r\n  background: #26272b;\r\n  \r\n  border-radius: 0 0 10px 10px;\r\n  transition: opacity .20s ease .1s;\r\n}\r\n\r\n.menu li:hover > ul {opacity: 1;}\r\n\r\n.menu ul li {\r\n  height: 0;\r\n  overflow: hidden;\r\n  padding: 0;\r\n  \r\n  transition: height .25s ease .1s;\r\n}\r\n\r\n.menu li:hover > ul li {\r\n  height: 50px;\r\n  overflow: visible;\r\n  padding: 0;\r\n}\r\n\r\n.menu ul li a {\r\n  width: 180px;\r\n  padding: 10px 20px;\r\n  margin: 0;\r\n  border: none;\r\n  border-bottom: 1px solid #ffffff;\r\n  font-weight: normal;\r\n}\r\n.menu ul li:last-child a { border: none; }\r\n\r\n@media screen and (max-width:995px) {\r\n  .desktop {\r\n     display: none; \r\n  }\r\n}\r\n\r\n@media screen and (min-width:994px) {\r\n  .mobile{\r\n     display: none; \r\n  }\r\n}\r\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ __webpack_exports__["default"] = (___CSS_LOADER_EXPORT___);
 
@@ -2510,6 +2510,31 @@ __webpack_require__.r(__webpack_exports__);
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()(_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0___default.a);
 // Module
 ___CSS_LOADER_EXPORT___.push([module.i, "\r\n  a.pag {\r\n    width:32px;\r\n    height:32px;\r\n    display:inline-block;\r\n    position:relative;\r\n    text-align:center;\r\n    line-height:32px;\r\n    text-decoration:none;\r\n    color:#000000;\r\n    transition:.3s all;\r\n    font-weight: bold;\r\n  }", "",{"version":3,"sources":["webpack://./src/main/resources/js/components/book/Pagination.css"],"names":[],"mappings":";EACE;IACE,UAAU;IACV,WAAW;IACX,oBAAoB;IACpB,iBAAiB;IACjB,iBAAiB;IACjB,gBAAgB;IAChB,oBAAoB;IACpB,aAAa;IACb,kBAAkB;IAClB,iBAAiB;EACnB","sourcesContent":["\r\n  a.pag {\r\n    width:32px;\r\n    height:32px;\r\n    display:inline-block;\r\n    position:relative;\r\n    text-align:center;\r\n    line-height:32px;\r\n    text-decoration:none;\r\n    color:#000000;\r\n    transition:.3s all;\r\n    font-weight: bold;\r\n  }"],"sourceRoot":""}]);
+// Exports
+/* harmony default export */ __webpack_exports__["default"] = (___CSS_LOADER_EXPORT___);
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/cjs.js!./src/main/resources/js/components/book/Search.css":
+/*!************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js!./src/main/resources/js/components/book/Search.css ***!
+  \************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../../../../node_modules/css-loader/dist/runtime/cssWithMappingToString.js */ "./node_modules/css-loader/dist/runtime/cssWithMappingToString.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);
+// Imports
+
+
+var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()(_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0___default.a);
+// Module
+___CSS_LOADER_EXPORT___.push([module.i, ".search-input {\r\n    display: flex;\r\n}\r\n\r\n.range-years {\r\n    display: contents;\r\n}", "",{"version":3,"sources":["webpack://./src/main/resources/js/components/book/Search.css"],"names":[],"mappings":"AAAA;IACI,aAAa;AACjB;;AAEA;IACI,iBAAiB;AACrB","sourcesContent":[".search-input {\r\n    display: flex;\r\n}\r\n\r\n.range-years {\r\n    display: contents;\r\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ __webpack_exports__["default"] = (___CSS_LOADER_EXPORT___);
 
@@ -36752,6 +36777,10 @@ var Main = /*#__PURE__*/function (_Component) {
         exact: true,
         component: _book_ListSearchBooks__WEBPACK_IMPORTED_MODULE_24__["default"]
       }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_26__["Route"], {
+        path: "/search",
+        exact: true,
+        component: _book_ListSearchBooks__WEBPACK_IMPORTED_MODULE_24__["default"]
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_26__["Route"], {
         path: "/books/recommend/:page",
         exact: true,
         component: _book_ListRecommendBooks__WEBPACK_IMPORTED_MODULE_25__["default"]
@@ -36849,7 +36878,8 @@ var Nav = /*#__PURE__*/function (_Component) {
     _this.state = {
       isLogged: false,
       isAdmin: false,
-      query: ""
+      query: "",
+      selectSearch: ""
     };
     return _this;
   }
@@ -36920,6 +36950,62 @@ var Nav = /*#__PURE__*/function (_Component) {
         }, "Cerrar sesi\xF3n");
       }
 
+      var search = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("li", {
+        style: {
+          "float": "right"
+        }
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+        "class": "search-box"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("select", {
+        "class": "form-control",
+        id: "selectStatus",
+        value: this.state.selectSearch,
+        onChange: function onChange(event) {
+          return _this2.setState({
+            selectSearch: event.target.value
+          });
+        }
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("option", {
+        value: ""
+      }, "Buscar por"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("option", {
+        value: "book"
+      }, "Datos del libro"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("option", {
+        value: "publicationYear"
+      }, "A\xF1o de publicaci\xF3n"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("option", {
+        value: "rangeYears"
+      }, "A\xF1o de publicaci\xF3n"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("option", {
+        value: "postalCode"
+      }, "C\xF3digo postal"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("option", {
+        value: "province"
+      }, "Provincia"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("option", {
+        value: ""
+      }, "DA\xD1ADO"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("option", {
+        value: "MUY DA\xD1ADO"
+      }, "MUY DA\xD1ADO")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("input", {
+        "class": "text",
+        type: "text",
+        placeholder: "T\xEDtulo, ISBN, autor, ...",
+        onChange: function onChange(event) {
+          return _this2.setState({
+            query: event.target.value
+          });
+        }
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("dfn", {
+        "data-info": info
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("i", {
+        style: {
+          top: "50%"
+        },
+        "class": "fa fa-info-circle"
+      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("button", {
+        type: "button",
+        onClick: function onClick() {
+          return _this2.search(_this2.state.query);
+        },
+        disabled: this.state.query.trim() == ''
+      }, " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("i", {
+        "class": "fa fa-search"
+      }))));
       var info = "BÚSQUEDA DE LIBROS: ======================= " + "1) POR SUS ATRIBUTOS: ................ " + "1.1) Por palabras clave separadas por un espacio ................................ " + "1.2) Por año o precio, escribiendo sólo un número sin espacios ........ " + "1.3) Por un rango de años, separandolos por un guión y sin espacios (YYYY-YYYY). ======================= 2) POR SUS PROPIETARIOS: .......... " + "2.1) Por nombre de usuario .......... 2.2) Por código postal,  válido y sin espacios ..................................... " + "2.3) Por provincia válida (puede consultarlas en el registro o su perfil).";
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("nav", {
         style: {
@@ -36976,33 +37062,12 @@ var Nav = /*#__PURE__*/function (_Component) {
         style: {
           "float": "right"
         }
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
-        "class": "search-box"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("input", {
-        "class": "text",
-        type: "text",
-        placeholder: "T\xEDtulo, ISBN, autor, ...",
-        onChange: function onChange(event) {
-          return _this2.setState({
-            query: event.target.value
-          });
-        }
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("dfn", {
-        "data-info": info
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("i", {
-        style: {
-          top: "50%"
-        },
-        "class": "fa fa-info-circle"
-      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("button", {
-        type: "button",
-        onClick: function onClick() {
-          return _this2.search(_this2.state.query);
-        },
-        disabled: this.state.query.trim() == ''
-      }, " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("i", {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
+        "class": "nav-link",
+        href: "/search"
+      }, " Buscar ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("i", {
         "class": "fa fa-search"
-      }))))) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("li", {
+      })))) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("li", {
         style: {
           "float": "left"
         }
@@ -37022,33 +37087,12 @@ var Nav = /*#__PURE__*/function (_Component) {
         style: {
           "float": "right"
         }
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
-        "class": "search-box"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("input", {
-        "class": "text",
-        type: "text",
-        placeholder: "T\xEDtulo, ISBN, autor, ...",
-        onChange: function onChange(event) {
-          return _this2.setState({
-            query: event.target.value
-          });
-        }
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("dfn", {
-        "data-info": info
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("i", {
-        style: {
-          top: "50%"
-        },
-        "class": "fa fa-info-circle"
-      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("button", {
-        type: "button",
-        onClick: function onClick() {
-          return _this2.search(_this2.state.query);
-        },
-        disabled: this.state.query.trim() == ''
-      }, " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("i", {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
+        "class": "nav-link",
+        href: "/search"
+      }, " Buscar ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("i", {
         "class": "fa fa-search"
-      }))))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+      })))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         "class": "mobile"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("ul", {
         "class": "menu"
@@ -37100,30 +37144,11 @@ var Nav = /*#__PURE__*/function (_Component) {
           "float": "right"
         }
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
-        href: "#"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("i", {
+        "class": "nav-link",
+        href: "/search"
+      }, " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("i", {
         "class": "fa fa-search"
-      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("ul", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("li", {
-        "class": "search-li",
-        style: {
-          backgroundColor: "transparent"
-        }
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
-        "class": "search"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("input", {
-        "class": "text",
-        type: "text",
-        placeholder: "T\xEDtulo, ISBN, a\xF1o, ..."
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("dfn", {
-        "data-info": info
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("i", {
-        style: {
-          top: "50%"
-        },
-        "class": "fa fa-info-circle"
-      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("button", null, " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("i", {
-        "class": "fa fa-search"
-      }))))))) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("li", {
+      })))) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("li", {
         style: {
           "float": "left"
         }
@@ -37155,55 +37180,12 @@ var Nav = /*#__PURE__*/function (_Component) {
           "float": "right"
         }
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
-        href: "#"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("i", {
+        "class": "nav-link",
+        href: "/search"
+      }, " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("i", {
         "class": "fa fa-search"
-      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("ul", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("li", {
-        "class": "search-li",
-        style: {
-          backgroundColor: "transparent"
-        }
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
-        "class": "search"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("input", {
-        "class": "text",
-        type: "text",
-        placeholder: "T\xEDtulo, ISBN, a\xF1o, ..."
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("dfn", {
-        "data-info": info
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("i", {
-        style: {
-          top: "50%"
-        },
-        "class": "fa fa-info-circle"
-      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("button", null, " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("i", {
-        "class": "fa fa-search"
-      }))))))))));
+      })))))));
     }
-  }, {
-    key: "search",
-    value: function () {
-      var _search = _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_6___default.a.mark(function _callee2(query) {
-        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_6___default.a.wrap(function _callee2$(_context2) {
-          while (1) {
-            switch (_context2.prev = _context2.next) {
-              case 0:
-                window.location.replace("/search/0/" + query);
-
-              case 1:
-              case "end":
-                return _context2.stop();
-            }
-          }
-        }, _callee2);
-      }));
-
-      function search(_x) {
-        return _search.apply(this, arguments);
-      }
-
-      return search;
-    }()
   }]);
 
   return Nav;
@@ -40046,6 +40028,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _services_Search__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../services/Search */ "./src/main/resources/js/components/services/Search.js");
 /* harmony import */ var _Pagination_css__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./Pagination.css */ "./src/main/resources/js/components/book/Pagination.css");
 /* harmony import */ var _ListBooks_css__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ../ListBooks.css */ "./src/main/resources/js/components/ListBooks.css");
+/* harmony import */ var _Search_css__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./Search.css */ "./src/main/resources/js/components/book/Search.css");
 
 
 
@@ -40059,6 +40042,7 @@ __webpack_require__.r(__webpack_exports__);
 function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_7___default()(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_7___default()(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_6___default()(this, result); }; }
 
 function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+
 
 
 
@@ -40085,7 +40069,7 @@ var List = /*#__PURE__*/function (_Component) {
       books: [],
       isAdded: [],
       username: ""
-    }, _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2___default()(_this$state, "isAdded", false), _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2___default()(_this$state, "pages", []), _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2___default()(_this$state, "actualPage", 0), _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2___default()(_this$state, "query", ""), _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2___default()(_this$state, "searchResult", true), _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2___default()(_this$state, "images", []), _this$state);
+    }, _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2___default()(_this$state, "isAdded", false), _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2___default()(_this$state, "pages", []), _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2___default()(_this$state, "actualPage", 0), _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2___default()(_this$state, "query", ""), _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2___default()(_this$state, "searchResult", true), _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2___default()(_this$state, "images", []), _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2___default()(_this$state, "selectSearch", ""), _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2___default()(_this$state, "provinces", []), _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2___default()(_this$state, "showBooks", false), _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2___default()(_this$state, "fieldStartYear", null), _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2___default()(_this$state, "fieldFinishYear", null), _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2___default()(_this$state, "fieldPostalCode", null), _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2___default()(_this$state, "fieldText", ""), _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2___default()(_this$state, "errorMessages", []), _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2___default()(_this$state, "errorField", []), _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2___default()(_this$state, "titles", []), _this$state);
     return _this;
   }
 
@@ -40093,13 +40077,19 @@ var List = /*#__PURE__*/function (_Component) {
     key: "componentDidMount",
     value: function () {
       var _componentDidMount = _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_8___default.a.mark(function _callee() {
-        var query, page, res, username;
+        var page, query, res, username, p, provinces;
         return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_8___default.a.wrap(function _callee$(_context) {
           while (1) {
             switch (_context.prev = _context.next) {
               case 0:
-                query = this.props.match.params.query;
                 page = this.props.match.params.page;
+
+                if (!(page != null)) {
+                  _context.next = 11;
+                  break;
+                }
+
+                query = this.props.match.params.query;
 
                 if (page) {
                   this.setState({
@@ -40109,15 +40099,15 @@ var List = /*#__PURE__*/function (_Component) {
                   page = (_babel_runtime_helpers_readOnlyError__WEBPACK_IMPORTED_MODULE_0___default()("page"), 0);
                 }
 
-                _context.next = 5;
+                _context.next = 6;
                 return _services_Search__WEBPACK_IMPORTED_MODULE_13__["default"].searchBook(query, page);
 
-              case 5:
+              case 6:
                 res = _context.sent;
-                _context.next = 8;
+                _context.next = 9;
                 return _services_User__WEBPACK_IMPORTED_MODULE_11__["default"].getUsername();
 
-              case 8:
+              case 9:
                 username = _context.sent;
                 this.setState({
                   books: res.books,
@@ -40127,10 +40117,22 @@ var List = /*#__PURE__*/function (_Component) {
                   pages: res.pages,
                   numTotalPages: parseInt(res.numTotalPages),
                   searchResult: res.searchResult,
-                  images: res.urlImages
+                  images: res.urlImages,
+                  showBooks: true
                 });
 
-              case 10:
+              case 11:
+                _context.next = 13;
+                return _services_User__WEBPACK_IMPORTED_MODULE_11__["default"].getProvinces();
+
+              case 13:
+                p = _context.sent;
+                provinces = p.provinces;
+                this.setState({
+                  provinces: provinces
+                });
+
+              case 16:
               case "end":
                 return _context.stop();
             }
@@ -40149,12 +40151,165 @@ var List = /*#__PURE__*/function (_Component) {
     value: function render() {
       var _this2 = this;
 
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("h1", {
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("div", null, !this.state.showBooks ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("div", {
+        "class": "search-input"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("div", {
+        "class": "col-3"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("select", {
+        style: {
+          "float": "left"
+        },
+        "class": "form-control chosen-select",
+        id: "selectStatus",
+        value: this.state.selectSearch,
+        onChange: function onChange(event) {
+          return _this2.setState({
+            selectSearch: event.target.value,
+            errorMessages: [],
+            errorField: []
+          });
+        }
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("option", {
+        value: "",
+        disabled: true
+      }, "Buscar por"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("option", {
+        value: "",
+        style: {
+          fontWeight: "bold"
+        },
+        disabled: true
+      }, "Libro"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("option", {
+        value: "book"
+      }, "Datos del libro"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("option", {
+        value: "publicationYear"
+      }, "A\xF1o de publicaci\xF3n"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("option", {
+        value: "rangeYears"
+      }, "Rango de a\xF1os"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("option", {
+        value: "",
+        style: {
+          fontWeight: "bold"
+        },
+        disabled: true
+      }, "Localizaci\xF3n"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("option", {
+        value: "postalCode"
+      }, "C\xF3digo postal"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("option", {
+        value: "province"
+      }, "Provincia"))), this.state.selectSearch == '' ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("div", {
+        "class": "col"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("input", {
+        "class": "form-control",
+        type: "text",
+        disabled: true
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("p", null)) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("div", null), this.state.selectSearch == 'book' ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("div", {
+        "class": "col"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("input", {
+        "class": "form-control",
+        type: "search",
+        list: "titles",
+        placeholder: "T\xEDtulo, ISBN, autor, g\xE9neros, editorial, estado, ...",
+        onChange: function onChange(event) {
+          return _this2.searchTitles(event.target.value);
+        }
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("datalist", {
+        id: "titles"
+      }, this.state.titles.map(function (title) {
+        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("option", {
+          value: title
+        });
+      })), this.state.errorField.indexOf("text") != -1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("p", {
+        "class": "text-danger"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("b", null, this.state.errorMessages[this.state.errorField.indexOf("text")])) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("p", null)) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("p", null), this.state.selectSearch == 'publicationYear' ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("div", {
+        "class": "col"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("input", {
+        "class": "form-control",
+        type: "number",
+        placeholder: "Introduzca el a\xF1o de publicaci\xF3n (YYYY)",
+        onChange: function onChange(event) {
+          return _this2.setState({
+            fieldStartYear: event.target.value
+          });
+        }
+      }), this.state.errorField.indexOf("startYear") != -1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("p", {
+        "class": "text-danger"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("b", null, this.state.errorMessages[this.state.errorField.indexOf("startYear")])) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("p", null)) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("p", null), this.state.selectSearch == 'rangeYears' ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("div", {
+        "class": "range-years"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("div", {
+        "class": "col"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("input", {
+        "class": "form-control",
+        type: "number",
+        placeholder: "Introduzca el a\xF1o inicial (YYYY)",
+        onChange: function onChange(event) {
+          return _this2.setState({
+            fieldStartYear: event.target.value
+          });
+        }
+      }), this.state.errorField.indexOf("startYear") != -1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("p", {
+        "class": "text-danger"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("b", null, this.state.errorMessages[this.state.errorField.indexOf("startYear")])) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("p", null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("div", {
+        "class": "col"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("input", {
+        "class": "form-control",
+        type: "number",
+        placeholder: "Introduzca el a\xF1o final (YYYY)",
+        onChange: function onChange(event) {
+          return _this2.setState({
+            fieldFinishYear: event.target.value
+          });
+        }
+      }), this.state.errorField.indexOf("finishYear") != -1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("p", {
+        "class": "text-danger"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("b", null, this.state.errorMessages[this.state.errorField.indexOf("finishYear")])) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("p", null))) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("p", null), this.state.selectSearch == 'postalCode' ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("div", {
+        "class": "col"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("input", {
+        "class": "form-control",
+        type: "number",
+        placeholder: "Introduzca el c\xF3digo postal de 5 d\xEDgitos",
+        onChange: function onChange(event) {
+          return _this2.setState({
+            fieldPostalCode: event.target.value
+          });
+        }
+      }), this.state.errorField.indexOf("postalCode") != -1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("p", {
+        "class": "text-danger"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("b", null, this.state.errorMessages[this.state.errorField.indexOf("postalCode")])) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("p", null)) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("p", null), this.state.selectSearch == 'province' ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("div", {
+        "class": "col"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("select", {
+        "class": "form-control chosen-select",
+        id: "selectProvince",
+        value: this.state.fieldText,
+        onChange: function onChange(event) {
+          return _this2.setState({
+            fieldText: event.target.value
+          });
+        }
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("option", {
+        value: ""
+      }, "Despliega para ver las opciones"), this.state.provinces.map(function (province) {
+        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("option", {
+          value: province
+        }, province.replaceAll("_", " "));
+      })), this.state.errorField.indexOf("text") != -1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("p", {
+        "class": "text-danger"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("b", null, this.state.errorMessages[this.state.errorField.indexOf("text")])) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("p", null)) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("p", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("br", null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("button", {
+        style: {
+          marginRight: "15px",
+          height: "38px"
+        },
+        "class": "btn btn-primary",
+        type: "button",
+        onClick: function onClick() {
+          return _this2.postSearch();
+        },
+        disabled: this.state.selectSearch == ''
+      }, " Buscar ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("i", {
+        "class": "fa fa-search"
+      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("br", null)) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("div", null), this.state.showBooks ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("h1", {
         style: {
           "float": "left",
           color: "black"
         }
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("b", null, "Resultados para '", this.state.query, "'")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("br", null), this.state.books.length == 0 || this.state.searchResult == false ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("b", null, "No se encontraron coincidencias para '", this.state.query, "'")), this.state.books.length > 0 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("h2", {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("b", null, "Resultados para '", this.state.query.replace("-", " al "), "'")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("br", null), this.state.books.length == 0 || this.state.searchResult == false ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("b", null, "No se encontraron coincidencias para '", this.state.query, "'")), this.state.books.length > 0 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("h2", {
         style: {
           "float": "left",
           color: "black"
@@ -40269,7 +40424,7 @@ var List = /*#__PURE__*/function (_Component) {
       }, String(">")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("a", {
         "class": "btn btn-primary",
         href: "/search/" + parseInt(this.state.numTotalPages - 1) + "/" + this.state.query
-      }, String(">>"))) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("p", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("br", null)) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("p", null));
+      }, String(">>"))) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("p", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("br", null)) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("p", null)) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("br", null)));
     }
   }, {
     key: "addFavouriteBook",
@@ -40338,6 +40493,89 @@ var List = /*#__PURE__*/function (_Component) {
 
       return deleteFavouriteBook;
     }()
+  }, {
+    key: "postSearch",
+    value: function () {
+      var _postSearch = _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_8___default.a.mark(function _callee4() {
+        var res, errFields, errMess, error;
+        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_8___default.a.wrap(function _callee4$(_context4) {
+          while (1) {
+            switch (_context4.prev = _context4.next) {
+              case 0:
+                _context4.next = 2;
+                return _services_Search__WEBPACK_IMPORTED_MODULE_13__["default"].postSearch(this.state);
+
+              case 2:
+                res = _context4.sent;
+
+                if (res.success) {
+                  window.location.replace("/search/0/" + res.query);
+                } else {
+                  errFields = [];
+                  errMess = [];
+                  error = res.errors;
+                  error.map(function (itemerror) {
+                    errFields.push(itemerror.field);
+                    errMess.push(itemerror.defaultMessage);
+                  });
+                  this.setState({
+                    errorField: errFields,
+                    errorMessages: errMess
+                  });
+                }
+
+              case 4:
+              case "end":
+                return _context4.stop();
+            }
+          }
+        }, _callee4, this);
+      }));
+
+      function postSearch() {
+        return _postSearch.apply(this, arguments);
+      }
+
+      return postSearch;
+    }()
+  }, {
+    key: "searchTitles",
+    value: function () {
+      var _searchTitles = _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_8___default.a.mark(function _callee5(query) {
+        var res;
+        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_8___default.a.wrap(function _callee5$(_context5) {
+          while (1) {
+            switch (_context5.prev = _context5.next) {
+              case 0:
+                if (!(query != '')) {
+                  _context5.next = 5;
+                  break;
+                }
+
+                _context5.next = 3;
+                return _services_Search__WEBPACK_IMPORTED_MODULE_13__["default"].searchTitles(query);
+
+              case 3:
+                res = _context5.sent;
+                this.setState({
+                  titles: res.titles,
+                  fieldText: query
+                });
+
+              case 5:
+              case "end":
+                return _context5.stop();
+            }
+          }
+        }, _callee5, this);
+      }));
+
+      function searchTitles(_x8) {
+        return _searchTitles.apply(this, arguments);
+      }
+
+      return searchTitles;
+    }()
   }]);
 
   return List;
@@ -40366,6 +40604,28 @@ options.insert = "head";
 options.singleton = false;
 var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_Pagination_css__WEBPACK_IMPORTED_MODULE_1__["default"], options);
 /* harmony default export */ __webpack_exports__["default"] = (_node_modules_css_loader_dist_cjs_js_Pagination_css__WEBPACK_IMPORTED_MODULE_1__["default"].locals || {});
+
+/***/ }),
+
+/***/ "./src/main/resources/js/components/book/Search.css":
+/*!**********************************************************!*\
+  !*** ./src/main/resources/js/components/book/Search.css ***!
+  \**********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../../../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_css_loader_dist_cjs_js_Search_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !../../../../../../node_modules/css-loader/dist/cjs.js!./Search.css */ "./node_modules/css-loader/dist/cjs.js!./src/main/resources/js/components/book/Search.css");
+
+
+var options = {};
+options.insert = "head";
+options.singleton = false;
+var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_Search_css__WEBPACK_IMPORTED_MODULE_1__["default"], options);
+/* harmony default export */ __webpack_exports__["default"] = (_node_modules_css_loader_dist_cjs_js_Search_css__WEBPACK_IMPORTED_MODULE_1__["default"].locals || {});
 
 /***/ }),
 
@@ -42180,6 +42440,76 @@ search.searchBook = /*#__PURE__*/function () {
 
   return function (_x, _x2) {
     return _ref.apply(this, arguments);
+  };
+}();
+
+search.searchTitles = /*#__PURE__*/function () {
+  var _ref2 = _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.mark(function _callee2(query) {
+    var urlGet, res;
+    return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.wrap(function _callee2$(_context2) {
+      while (1) {
+        switch (_context2.prev = _context2.next) {
+          case 0:
+            urlGet = baseUrl + "/titles/" + query;
+            _context2.next = 3;
+            return axios__WEBPACK_IMPORTED_MODULE_2___default.a.get(urlGet).then(function (response) {
+              return response.data;
+            })["catch"](function (error) {
+              return error.response;
+            });
+
+          case 3:
+            res = _context2.sent;
+            return _context2.abrupt("return", res);
+
+          case 5:
+          case "end":
+            return _context2.stop();
+        }
+      }
+    }, _callee2);
+  }));
+
+  return function (_x3) {
+    return _ref2.apply(this, arguments);
+  };
+}();
+
+search.postSearch = /*#__PURE__*/function () {
+  var _ref3 = _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.mark(function _callee3(state) {
+    var dataPost, res;
+    return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.wrap(function _callee3$(_context3) {
+      while (1) {
+        switch (_context3.prev = _context3.next) {
+          case 0:
+            dataPost = {
+              startYear: state.fieldStartYear,
+              finishYear: state.fieldFinishYear,
+              postalCode: state.fieldPostalCode,
+              type: state.selectSearch,
+              text: state.fieldText
+            };
+            _context3.next = 3;
+            return axios__WEBPACK_IMPORTED_MODULE_2___default.a.post(baseUrl, dataPost).then(function (response) {
+              return response.data;
+            })["catch"](function (error) {
+              return error.response;
+            });
+
+          case 3:
+            res = _context3.sent;
+            return _context3.abrupt("return", res);
+
+          case 5:
+          case "end":
+            return _context3.stop();
+        }
+      }
+    }, _callee3);
+  }));
+
+  return function (_x4) {
+    return _ref3.apply(this, arguments);
   };
 }();
 

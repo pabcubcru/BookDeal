@@ -219,7 +219,7 @@ public class InfoBooksApplication {
 
 	public void buildIndexUsersForBooks() {
 		ProvinceEnum[] provinces = ProvinceEnum.values();
-		for(int i=1; i <= 100; i++) {
+		for(int i=1; i <= 20; i++) {
 			User user = new User();
 
 			user.setId("user"+i);
@@ -274,6 +274,7 @@ public class InfoBooksApplication {
 		try {
 			File myObj = new File(".\\src\\main\\java\\com\\pabcubcru\\infobooks\\books.csv");
       		Scanner scanner = new Scanner(myObj);
+			int cont = 0;
 			int lineNo = 0;
 			while (scanner.hasNextLine()) {
 				++lineNo;
@@ -283,6 +284,10 @@ public class InfoBooksApplication {
 				if(book != null) {
 					res.add(book);
 				}
+				if(cont == 20) {
+					break;
+				}
+				cont++;
 			}
 			scanner.close();
 		} catch (Exception e) {
