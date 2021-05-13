@@ -18,18 +18,19 @@ import lombok.Getter;
 import lombok.Setter;
 
 @Document(indexName = "users")
-@Getter @Setter
+@Getter
+@Setter
 public class User extends BaseEntity {
 
 	@NotBlank(message = "El nombre es un campo requerido.")
 	@Field(type = FieldType.Text, name = "name")
 	private String name;
-	
+
 	@Field(type = FieldType.Text, name = "email")
 	@NotBlank(message = "El email es un campo requerido.")
 	@Email(message = "Debe ser un email válido.")
 	private String email;
-	
+
 	@Field(type = FieldType.Text, name = "phone")
 	@Pattern(regexp = "^(\\+34|0034|34)?[6789]\\d{8}$", message = "El número de teléfono no es válido.")
 	private String phone;
@@ -40,7 +41,7 @@ public class User extends BaseEntity {
 	private LocalDate birthDate;
 
 	@NotBlank(message = "La provincia es un campo requerido.")
-	@Field(type = FieldType.Text, name = "province")
+	@Field(type = FieldType.Keyword, name = "province")
 	private String province;
 
 	@Field(type = FieldType.Text, name = "postCode")
@@ -53,13 +54,13 @@ public class User extends BaseEntity {
 
 	@Field(type = FieldType.Text, name = "username")
 	@NotBlank(message = "El nombre de usuario es un campo requerido.")
-    private String username;
+	private String username;
 
 	@Field(type = FieldType.Binary, name = "password")
-    private String password;
+	private String password;
 
 	@Field(type = FieldType.Boolean, name = "enabled")
-    private boolean enabled;
+	private boolean enabled;
 
 	@Transient
 	private Boolean accept;

@@ -11,7 +11,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 @Service
 public class AuthoritiesService {
-    
+
     private AuthoritiesRepository authoritiesRepository;
 
     @Autowired
@@ -20,12 +20,12 @@ public class AuthoritiesService {
     }
 
     @Transactional
-    public void save(Authorities authorities){
+    public void save(Authorities authorities) {
         this.authoritiesRepository.save(authorities);
     }
 
     @Transactional
-    public List<Authorities> findByUsername(String username){
+    public List<Authorities> findByUsername(String username) {
         return this.authoritiesRepository.findByUsername(username);
     }
 }

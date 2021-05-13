@@ -27,15 +27,18 @@ public class BookServiceTests {
         PageRequest pageRequest = PageRequest.of(1, 20);
         Page<Book> books = this.bookService.findAll(pageRequest);
         Long numberOfBooks = books.getTotalElements();
-        //Assertions.assertThat(numberOfBooks).isEqualTo(863L); //863 = 861 de dataset y 2 para tests
+        // Assertions.assertThat(numberOfBooks).isEqualTo(863L); //863 = 861 de dataset
+        // y 2 para tests
     }
 
     @Test
     public void shouldFindMyBooks() throws Exception {
         PageRequest pageRequest = PageRequest.of(1, 20);
         Page<Book> books = this.bookService.findMyBooks("pablo123", pageRequest);
-        /*String username = books.getContent().get(0).getUsername();
-        Assertions.assertThat(username).isEqualTo("pablo123");*/
+        /*
+         * String username = books.getContent().get(0).getUsername();
+         * Assertions.assertThat(username).isEqualTo("pablo123");
+         */
     }
 
     @Test
@@ -53,8 +56,10 @@ public class BookServiceTests {
     }
 
     @Test
-    public void shouldFindByIds() throws Exception { 
-        List<String> ids = new ArrayList<>(); ids.add("book-001"); ids.add("book-002");
+    public void shouldFindByIds() throws Exception {
+        List<String> ids = new ArrayList<>();
+        ids.add("book-001");
+        ids.add("book-002");
         List<Book> books = this.bookService.findByIds(ids);
         Assertions.assertThat(books.size()).isEqualTo(2);
         Assertions.assertThat(books.get(0).getTitle()).isEqualTo("Title test 1");
@@ -66,26 +71,26 @@ public class BookServiceTests {
         PageRequest pageRequest = PageRequest.of(1, 20);
         Page<Book> books = this.bookService.findAll(pageRequest);
         Long numberOfBooksBefore = books.getTotalElements();
-        
+
         Book book = new Book();
 
-		book.setId("book-003");
+        book.setId("book-003");
         book.setTitle("Title test 1");
         book.setIsbn("0-7645-2641-3");
         book.setPublicationYear(2014);
         book.setPublisher("Publisher Test");
         book.setGenres("Comedia");
-        book.setAuthor("Author Test"); 
-        book.setDescription("Description test"); 
+        book.setAuthor("Author Test");
+        book.setDescription("Description test");
         book.setImage("https://i.ibb.co/YRy9kHC/paper.jpg");
-        book.setStatus("COMO NUEVO"); 
-		book.setPrice(10.);
+        book.setStatus("COMO NUEVO");
+        book.setPrice(10.);
         book.setUsername("test003");
-		this.bookService.save(book);
+        this.bookService.save(book);
 
         books = this.bookService.findAll(pageRequest);
         Long numberOfBooksAfter = books.getTotalElements();
-        Assertions.assertThat(numberOfBooksAfter).isEqualTo(numberOfBooksBefore+1);
+        Assertions.assertThat(numberOfBooksAfter).isEqualTo(numberOfBooksBefore + 1);
     }
 
     @Test
@@ -105,5 +110,5 @@ public class BookServiceTests {
         Long numberOfBooksAfter = books.getTotalElements();
         Assertions.assertThat(numberOfBooksAfter).isEqualTo(numberOfBooksBefore);
     }
-    
+
 }

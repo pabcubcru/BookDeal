@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
+import React, { Component } from "react";
+import ReactDOM from "react-dom";
 
 import Nav from "./Nav";
 import Footer from "./Footer";
@@ -21,43 +21,61 @@ import ListReceivedRequests from "./request/ListReceivedRequest";
 import ListSearchBooks from "./book/ListSearchBooks";
 import ListRecommendBooks from "./book/ListRecommendBooks";
 
-import {
-    BrowserRouter as Router,
-    Switch,
-    Route
-} from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
-export default class Main extends Component{
-    render(){
-        return(
-            <Router>
-                <main>
-                    <Nav/>
-                    <Switch>
-                        <Route path="/register" exact component={RegisterUser}/>
-                        <Route path="/login" exact component={LoginUser}/>
-                        <Route path="/login-error" exact component={LoginerrorUser}/>
-                        <Route path="/profile" exact component={EditUser}/>
-                        <Route path="/books/new" exact component={CreateBook}/>
-                        <Route path="/books/all/:page/:show" exact component={ListNearBooks}/>
-                        <Route path="/books/all/:page" exact component={ListAllBooks}/>
-                        <Route path="/" exact component={Home}/>
-                        <Route path="/books/me/:page" exact component={ListMyBooks}/>
-                        <Route path="/books/:id/edit" exact component={EditBook}/>
-                        <Route path="/books/:id" exact component={GetBook}/>
-                        <Route path="/favourites/:page" exact component={ListFavouritesBooks}/>
-                        <Route path="/requests/:id/add" exact component={CreateRequest}/>
-                        <Route path="/requests/me/:page" exact component={ListMyRequests}/>
-                        <Route path="/requests/received/:page" exact component={ListReceivedRequests}/>
-                        <Route path="/search/:page/:query" exact component={ListSearchBooks}/>
-                        <Route path="/books/recommend/:page" exact component={ListRecommendBooks}/>
-                    </Switch>
-                    <br></br><br></br>
-                    <Footer/>
-                </main>
-            </Router>
-        )
-    }
+export default class Main extends Component {
+  render() {
+    return (
+      <Router>
+        <main>
+          <Nav />
+          <Switch>
+            <Route path="/register" exact component={RegisterUser} />
+            <Route path="/login" exact component={LoginUser} />
+            <Route path="/login-error" exact component={LoginerrorUser} />
+            <Route path="/profile" exact component={EditUser} />
+            <Route path="/books/new" exact component={CreateBook} />
+            <Route
+              path="/books/all/:page/:show"
+              exact
+              component={ListNearBooks}
+            />
+            <Route path="/books/all/:page" exact component={ListAllBooks} />
+            <Route path="/" exact component={Home} />
+            <Route path="/books/me/:page" exact component={ListMyBooks} />
+            <Route path="/books/:id/edit" exact component={EditBook} />
+            <Route path="/books/:id" exact component={GetBook} />
+            <Route
+              path="/favourites/:page"
+              exact
+              component={ListFavouritesBooks}
+            />
+            <Route path="/requests/:id/add" exact component={CreateRequest} />
+            <Route path="/requests/me/:page" exact component={ListMyRequests} />
+            <Route
+              path="/requests/received/:page"
+              exact
+              component={ListReceivedRequests}
+            />
+            <Route
+              path="/search/:type/:page/:query"
+              exact
+              component={ListSearchBooks}
+            />
+            <Route path="/search" exact component={ListSearchBooks} />
+            <Route
+              path="/books/recommend/:page"
+              exact
+              component={ListRecommendBooks}
+            />
+          </Switch>
+          <br></br>
+          <br></br>
+          <Footer />
+        </main>
+      </Router>
+    );
+  }
 }
 
-ReactDOM.render(<Main/>, document.getElementById("main-page"));
+ReactDOM.render(<Main />, document.getElementById("main-page"));

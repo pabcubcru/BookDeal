@@ -17,10 +17,11 @@ public class ElasticSearchConfig extends AbstractElasticsearchConfiguration {
     @Override
     @Bean
     public RestHighLevelClient elasticsearchClient() {
-        
-        final ClientConfiguration clientConfiguration = ClientConfiguration.builder().connectedTo("localhost:9200").build();
-        
+
+        final ClientConfiguration clientConfiguration = ClientConfiguration.builder().connectedTo("localhost:9200")
+                .build();
+
         return RestClients.create(clientConfiguration).rest();
     }
-    
+
 }

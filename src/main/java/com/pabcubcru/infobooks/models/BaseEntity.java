@@ -7,10 +7,11 @@ import org.springframework.data.elasticsearch.annotations.FieldType;
 import lombok.Getter;
 import lombok.Setter;
 
-@Getter @Setter
+@Getter
+@Setter
 public abstract class BaseEntity {
-    
+
     @Id
     @Field(type = FieldType.Keyword, name = "id")
-	private String id;
+    private String id;
 }

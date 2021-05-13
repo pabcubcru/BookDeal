@@ -12,9 +12,10 @@ import lombok.Getter;
 import lombok.Setter;
 
 @Document(indexName = "requests")
-@Getter @Setter
+@Getter
+@Setter
 public class Request extends BaseEntity {
-    
+
     @Field(type = FieldType.Keyword, name = "username1")
     private String username1;
 
@@ -39,6 +40,6 @@ public class Request extends BaseEntity {
     private Double pay;
 
     @Field(type = FieldType.Text, name = "comment")
-    @Length(max = 80, message="El comentario adicional no debe superar los 80 carácteres.")
+    @Length(max = 80, message = "El comentario adicional no debe superar los 80 carácteres.")
     private String comment;
 }

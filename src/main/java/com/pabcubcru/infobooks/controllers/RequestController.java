@@ -36,7 +36,7 @@ import org.springframework.web.servlet.ModelAndView;
 @RestController
 @RequestMapping(value = "/requests")
 public class RequestController {
-    
+
     @Autowired
     private RequestService requestService;
 
@@ -46,25 +46,25 @@ public class RequestController {
     @Autowired
     private UserService userService;
 
-    @GetMapping(value = {"/me/{page}", "/received/{page}"})
+    @GetMapping(value = { "/me/{page}", "/received/{page}" })
     public ModelAndView mainWithSecurity() {
         ModelAndView model = new ModelAndView();
         model.setViewName("Main");
         return model;
     }
 
-    @GetMapping(value = {"/{id}/add"})
+    @GetMapping(value = { "/{id}/add" })
     public ModelAndView mainWithSecurity(@PathVariable("id") String id, Principal principal) {
         ModelAndView model = new ModelAndView();
         model.setViewName("Main");
 
-        if(id != null) {
+        if (id != null) {
             Book book = this.bookService.findBookById(id);
             Request req = this.requestService.findByUsername1AndIdBook2(principal.getName(), id);
-            if(req != null) {
+            if (req != null) {
                 model.setViewName("errors/Error403");
             }
-            if(book == null) {
+            if (book == null) {
                 model.setViewName("errors/Error404");
             }
         } else {
@@ -74,21 +74,22 @@ public class RequestController {
     }
 
     @PostMapping(value = "/{id}/new")
-    public Map<String, Object> addRequest(@RequestBody @Valid Request request, BindingResult result, @PathVariable("id") String id, Principal principal) {
+    public Map<String, Object> addRequest(@RequestBody @Valid Request request, BindingResult result,
+            @PathVariable("id") String id, Principal principal) {
         Map<String, Object> res = new HashMap<>();
 
-        if(request.getAction().equals("COMPRA") && request.getPay() == null) {
+        if (request.getAction().equals("COMPRA") && request.getPay() == null) {
             result.rejectValue("pay", "El precio es un campo requerido.", "El precio es un campo requerido.");
         }
 
-        if(!result.hasErrors()) {
+        if (!result.hasErrors()) {
             try {
                 Request req = this.requestService.findByUsername1AndIdBook2(principal.getName(), id);
-                if(req == null) {
+                if (req == null) {
                     Book book = this.bookService.findBookById(id);
-                    if(request.getAction().equals("INTERCAMBIO")) {
+                    if (request.getAction().equals("INTERCAMBIO")) {
                         request.setPay(null);
-                    } else if(request.getAction().equals("COMPRA")) {
+                    } else if (request.getAction().equals("COMPRA")) {
                         request.setIdBook1("");
                     }
                     request.setIdBook2(id);
@@ -112,10 +113,10 @@ public class RequestController {
 
     public List<List<String>> getUrlsImagesFromBooks(List<Book> books) {
         List<List<String>> allBookImages = new ArrayList<>();
-        for(Book b : books) {
+        for (Book b : books) {
             List<String> urlImages = new ArrayList<>();
             List<Image> images = this.bookService.findImagesByIdBook(b.getId());
-            for(Image image : images) {
+            for (Image image : images) {
                 urlImages.add(image.getUrlImage());
             }
             allBookImages.add(urlImages);
@@ -124,7 +125,8 @@ public class RequestController {
     }
 
     @GetMapping("/my-requests")
-    public Map<String, Object> listMyRequest(Principal principal, @RequestParam(name = "page", defaultValue = "0") Integer page) {
+    public Map<String, Object> listMyRequest(Principal principal,
+            @RequestParam(name = "page", defaultValue = "0") Integer page) {
         Map<String, Object> res = new HashMap<>();
         List<Book> books1 = new ArrayList<>();
         List<Book> books2 = new ArrayList<>();
@@ -133,15 +135,15 @@ public class RequestController {
 
         Page<Request> pageOfRequests = this.requestService.listMyRequests(principal.getName(), pageRequest);
 
-        for(Request r : pageOfRequests.getContent()){
-            if(r.getAction().equals("INTERCAMBIO")) {
+        for (Request r : pageOfRequests.getContent()) {
+            if (r.getAction().equals("INTERCAMBIO")) {
                 books1.add(this.bookService.findBookById(r.getIdBook1()));
             } else {
                 books1.add(null);
             }
-            if(r.getStatus().equals(RequestStatus.ACEPTADA.toString())) {
+            if (r.getStatus().equals(RequestStatus.ACEPTADA.toString())) {
                 users.add(this.userService.findByUsername(r.getUsername2()));
-            } else{
+            } else {
                 users.add(null);
             }
             books2.add(this.bookService.findBookById(r.getIdBook2()));
@@ -161,8 +163,11 @@ public class RequestController {
         Integer numberOfPages = pageOfRequests.getTotalPages();
         res.put("numTotalPages", numberOfPages);
         res.put("pages", new ArrayList<Integer>());
-        if(numberOfPages > 0) {
-            List<Integer> pages = IntStream.rangeClosed(page-5 <= 0 ? 0 : page-5, page+5 >= numberOfPages-1 ? numberOfPages-1 : page+5).boxed().collect(Collectors.toList());
+        if (numberOfPages > 0) {
+            List<Integer> pages = IntStream
+                    .rangeClosed(page - 5 <= 0 ? 0 : page - 5,
+                            page + 5 >= numberOfPages - 1 ? numberOfPages - 1 : page + 5)
+                    .boxed().collect(Collectors.toList());
             res.put("pages", pages);
         }
 
@@ -170,7 +175,8 @@ public class RequestController {
     }
 
     @GetMapping("/received-requests")
-    public Map<String, Object> listReceivedRequest(Principal principal, @RequestParam(name = "page", defaultValue = "0") Integer page) {
+    public Map<String, Object> listReceivedRequest(Principal principal,
+            @RequestParam(name = "page", defaultValue = "0") Integer page) {
         Map<String, Object> res = new HashMap<>();
         List<Book> books1 = new ArrayList<>();
         List<Book> books2 = new ArrayList<>();
@@ -179,16 +185,16 @@ public class RequestController {
 
         Page<Request> pageOfRequests = this.requestService.listReceivedRequests(principal.getName(), pageRequest);
 
-        for(Request r : pageOfRequests.getContent()){
-            if(r.getAction().equals("INTERCAMBIO")) {
+        for (Request r : pageOfRequests.getContent()) {
+            if (r.getAction().equals("INTERCAMBIO")) {
                 books1.add(this.bookService.findBookById(r.getIdBook1()));
             } else {
                 books1.add(null);
             }
             books2.add(this.bookService.findBookById(r.getIdBook2()));
-            if(r.getStatus().equals(RequestStatus.ACEPTADA.toString())) {
+            if (r.getStatus().equals(RequestStatus.ACEPTADA.toString())) {
                 users.add(this.userService.findByUsername(r.getUsername1()));
-            } else{
+            } else {
                 users.add(null);
             }
         }
@@ -207,8 +213,11 @@ public class RequestController {
         Integer numberOfPages = pageOfRequests.getTotalPages();
         res.put("numTotalPages", numberOfPages);
         res.put("pages", new ArrayList<Integer>());
-        if(numberOfPages > 0) {
-            List<Integer> pages = IntStream.rangeClosed(page-5 <= 0 ? 0 : page-5, page+5 >= numberOfPages-1 ? numberOfPages-1 : page+5).boxed().collect(Collectors.toList());
+        if (numberOfPages > 0) {
+            List<Integer> pages = IntStream
+                    .rangeClosed(page - 5 <= 0 ? 0 : page - 5,
+                            page + 5 >= numberOfPages - 1 ? numberOfPages - 1 : page + 5)
+                    .boxed().collect(Collectors.toList());
             res.put("pages", pages);
         }
 
@@ -219,7 +228,7 @@ public class RequestController {
     public void cancelRequest(@PathVariable("id") String id) {
         Request request = this.requestService.findById(id);
 
-        if(request.getStatus().equals(RequestStatus.PENDIENTE.toString())) {
+        if (request.getStatus().equals(RequestStatus.PENDIENTE.toString())) {
             request.setStatus(RequestStatus.CANCELADA.toString());
             this.requestService.save(request);
         }
@@ -229,7 +238,8 @@ public class RequestController {
     public void deleteRequest(@PathVariable("id") String id) {
         Request request = this.requestService.findById(id);
 
-        if(request.getStatus().equals(RequestStatus.CANCELADA.toString()) || request.getStatus().equals(RequestStatus.RECHAZADA.toString())) {
+        if (request.getStatus().equals(RequestStatus.CANCELADA.toString())
+                || request.getStatus().equals(RequestStatus.RECHAZADA.toString())) {
             this.requestService.deleteById(id);
         }
     }
@@ -238,12 +248,13 @@ public class RequestController {
     public ModelAndView acceptRequest(@PathVariable("id") String id, Principal principal) {
         Request request = this.requestService.findById(id);
 
-        if(request.getUsername2().equals(principal.getName())) {
-            if(request.getAction().equals("VENTA")) {
-                List<Request> requests = this.requestService.findByIdBook2AndStatusNotAndStatusNotAndAction(request.getIdBook2(), "VENTA");
+        if (request.getUsername2().equals(principal.getName())) {
+            if (request.getAction().equals("VENTA")) {
+                List<Request> requests = this.requestService
+                        .findByIdBook2AndStatusNotAndStatusNotAndAction(request.getIdBook2(), "VENTA");
                 requests.remove(request);
-                for(Request r : requests) {
-                    if(r.getStatus().equals(RequestStatus.PENDIENTE.toString())) {
+                for (Request r : requests) {
+                    if (r.getStatus().equals(RequestStatus.PENDIENTE.toString())) {
                         r.setStatus(RequestStatus.RECHAZADA.toString());
                     }
                 }
@@ -251,11 +262,13 @@ public class RequestController {
                 request.setStatus(RequestStatus.ACEPTADA.toString());
                 this.requestService.save(request);
             } else {
-                List<Request> requests = this.requestService.findByIdBook1AndStatusNotAndStatusNotAndAction(request.getIdBook1(), "INTERCAMBIO");
-                requests.addAll(this.requestService.findByIdBook2AndStatusNotAndStatusNotAndAction(request.getIdBook2(), "INTERCAMBIO"));
+                List<Request> requests = this.requestService
+                        .findByIdBook1AndStatusNotAndStatusNotAndAction(request.getIdBook1(), "INTERCAMBIO");
+                requests.addAll(this.requestService.findByIdBook2AndStatusNotAndStatusNotAndAction(request.getIdBook2(),
+                        "INTERCAMBIO"));
                 requests.remove(request);
-                for(Request r : requests) {
-                    if(r.getStatus().equals(RequestStatus.PENDIENTE.toString())) {
+                for (Request r : requests) {
+                    if (r.getStatus().equals(RequestStatus.PENDIENTE.toString())) {
                         r.setStatus(RequestStatus.RECHAZADA.toString());
                     }
                 }
@@ -275,8 +288,8 @@ public class RequestController {
     public ModelAndView rejectRequest(@PathVariable("id") String id, Principal principal) {
         Request request = this.requestService.findById(id);
 
-        if(request.getUsername2().equals(principal.getName())) {
-            if(request.getStatus().equals(RequestStatus.PENDIENTE.toString())) {
+        if (request.getUsername2().equals(principal.getName())) {
+            if (request.getStatus().equals(RequestStatus.PENDIENTE.toString())) {
 
                 request.setStatus(RequestStatus.RECHAZADA.toString());
                 this.requestService.save(request);

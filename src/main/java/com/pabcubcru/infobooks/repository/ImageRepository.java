@@ -13,5 +13,5 @@ public interface ImageRepository extends ElasticsearchRepository<Image, String> 
     public List<Image> findByIdBook(String idBook);
 
     public Image findFirstByIdBook(String idBook);
-    
+
 }

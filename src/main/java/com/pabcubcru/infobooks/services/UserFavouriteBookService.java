@@ -11,7 +11,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 @Service
 public class UserFavouriteBookService {
-    
+
     private UserFavouriteBookRepository userFavoruriteBookRepository;
 
     @Autowired

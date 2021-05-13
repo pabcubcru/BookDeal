@@ -8,7 +8,8 @@ import lombok.Getter;
 import lombok.Setter;
 
 @Document(indexName = "images")
-@Getter @Setter
+@Getter
+@Setter
 public class Image extends BaseEntity {
 
     @Field(type = FieldType.Text, name = "fileName")
@@ -19,5 +20,5 @@ public class Image extends BaseEntity {
 
     @Field(type = FieldType.Text, name = "urlImage")
     private String urlImage;
-    
+
 }

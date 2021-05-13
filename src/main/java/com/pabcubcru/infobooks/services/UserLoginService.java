@@ -28,26 +28,27 @@ public class UserLoginService implements UserDetailsService {
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
         User user = userService.findByUsername(username);
         if (user == null) {
-            throw new UsernameNotFoundException("Username "+ username + " not found");
+            throw new UsernameNotFoundException("Username " + username + " not found");
         }
-        return new org.springframework.security.core.userdetails.User(user.getUsername(), user.getPassword(), getGrantedAuthorities(user.getUsername()));
+        return new org.springframework.security.core.userdetails.User(user.getUsername(), user.getPassword(),
+                getGrantedAuthorities(user.getUsername()));
     }
 
     private Collection<GrantedAuthority> getGrantedAuthorities(String username) {
-		Collection<GrantedAuthority> grantedAuthorities = new ArrayList<>();
+        Collection<GrantedAuthority> grantedAuthorities = new ArrayList<>();
         Boolean isAdmin = false;
         List<Authorities> authorities = this.authoritiesService.findByUsername(username);
-        for(Authorities a : authorities){
-            if(a.getAuthority().equals("admin")){
+        for (Authorities a : authorities) {
+            if (a.getAuthority().equals("admin")) {
                 isAdmin = true;
                 break;
             }
         }
-		if(isAdmin){
-			grantedAuthorities.add(new SimpleGrantedAuthority("admin"));
-		}
-		grantedAuthorities.add(new SimpleGrantedAuthority("user"));
-		return grantedAuthorities;
-	}
-    
+        if (isAdmin) {
+            grantedAuthorities.add(new SimpleGrantedAuthority("admin"));
+        }
+        grantedAuthorities.add(new SimpleGrantedAuthority("user"));
+        return grantedAuthorities;
+    }
+
 }

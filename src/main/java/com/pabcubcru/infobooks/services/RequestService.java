@@ -32,7 +32,8 @@ public class RequestService {
 
     @Transactional(readOnly = true)
     public Page<Request> listReceivedRequests(String username, Pageable pageable) {
-        return this.requestRepository.findByUsername2AndStatusNotAndStatusNotOrderByStatusDesc(username, RequestStatus.RECHAZADA.toString(), RequestStatus.CANCELADA.toString(), pageable);
+        return this.requestRepository.findByUsername2AndStatusNotAndStatusNotOrderByStatusDesc(username,
+                RequestStatus.RECHAZADA.toString(), RequestStatus.CANCELADA.toString(), pageable);
     }
 
     @Transactional
@@ -62,12 +63,14 @@ public class RequestService {
 
     @Transactional
     public List<Request> findByIdBook1AndStatusNotAndStatusNotAndAction(String idBook1, String action) {
-        return this.requestRepository.findByIdBook1AndStatusNotAndStatusNotAndAction(idBook1, RequestStatus.RECHAZADA.toString(), RequestStatus.CANCELADA.toString(), action);
+        return this.requestRepository.findByIdBook1AndStatusNotAndStatusNotAndAction(idBook1,
+                RequestStatus.RECHAZADA.toString(), RequestStatus.CANCELADA.toString(), action);
     }
 
     @Transactional
     public List<Request> findByIdBook2AndStatusNotAndStatusNotAndAction(String idBook2, String action) {
-        return this.requestRepository.findByIdBook2AndStatusNotAndStatusNotAndAction(idBook2, RequestStatus.RECHAZADA.toString(), RequestStatus.CANCELADA.toString(), action);
+        return this.requestRepository.findByIdBook2AndStatusNotAndStatusNotAndAction(idBook2,
+                RequestStatus.RECHAZADA.toString(), RequestStatus.CANCELADA.toString(), action);
     }
 
     @Transactional
@@ -94,5 +97,5 @@ public class RequestService {
     public void saveAll(List<Request> requests) {
         this.requestRepository.saveAll(requests);
     }
-    
+
 }

@@ -1,1 +1,1 @@
-require('./components/Main');
+require("./components/Main");

@@ -8,7 +8,8 @@ import lombok.Getter;
 import lombok.Setter;
 
 @Document(indexName = "user_favouritebook")
-@Getter @Setter
+@Getter
+@Setter
 public class UserFavouriteBook extends BaseEntity {
 
     @Field(type = FieldType.Keyword, name = "username")
@@ -16,5 +17,5 @@ public class UserFavouriteBook extends BaseEntity {
 
     @Field(type = FieldType.Keyword, name = "bookId")
     private String bookId;
-    
+
 }

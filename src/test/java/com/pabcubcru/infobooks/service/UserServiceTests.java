@@ -54,6 +54,4 @@ public class UserServiceTests {
         Assertions.assertThat(exists).isEqualTo(false);
     }
 
-    
-    
 }
