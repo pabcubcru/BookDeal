@@ -79,7 +79,7 @@ export default class Form extends Component {
                 })
               }
             >
-              <option value="">Despliega para ver opciones</option>
+              <option value="" disabled>Despliega para ver opciones</option>
               <option value="COMPRA">COMPRA</option>
               <option value="INTERCAMBIO">INTERCAMBIO</option>
             </select>

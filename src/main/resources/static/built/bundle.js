@@ -38446,9 +38446,11 @@ var Get = /*#__PURE__*/function (_Component) {
         "class": "page__content-credits"
       }, "Precio", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("span", null, this.state.book.price, " \u20AC")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
         "class": "page__content-credits"
-      }, "Estado", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("span", null, this.state.book.status)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+      }, "Estado", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("span", null, this.state.book.status)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
+        "class": "page__content-credits"
+      }, "Publicado por", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("span", null, this.state.book.username)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         "class": "page__content-copyright"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null, "Publicado por ", this.state.book.username), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("i", {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("i", {
         "class": "fa fa-arrow-circle-right fa-2x",
         style: {
           "float": "right"
@@ -40177,7 +40179,7 @@ var List = /*#__PURE__*/function (_Component) {
         disabled: true
       }, "Libro"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("option", {
         value: "book"
-      }, "Datos del libro"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("option", {
+      }, "Campo de texto"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("option", {
         value: "publicationYear",
         disabled: this.state.username == null
       }, "A\xF1o de publicaci\xF3n"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("option", {
@@ -40594,7 +40596,7 @@ var List = /*#__PURE__*/function (_Component) {
                   fieldText: query
                 });
 
-                if (!(query != "")) {
+                if (!(query.length > 0 && query.length <= 80)) {
                   _context5.next = 6;
                   break;
                 }
@@ -40836,7 +40838,8 @@ var Form = /*#__PURE__*/function (_Component) {
           });
         }
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("option", {
-        value: ""
+        value: "",
+        disabled: true
       }, "Despliega para ver opciones"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("option", {
         value: "COMPRA"
       }, "COMPRA"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("option", {

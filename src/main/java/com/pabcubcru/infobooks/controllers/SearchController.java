@@ -114,6 +114,8 @@ public class SearchController {
                 result.rejectValue("text", "Campo requerido", "Campo requerido");
             } else if(search.getText().length() < 3) {
                 result.rejectValue("text", "Introduce al menos 3 carácteres", "Introduce al menos 3 carácteres");
+            } else if(search.getText().length() > 80) {
+                result.rejectValue("text", "No puede superar los 80 carácteres", "No puede superar los 80 carácteres");
             }
         }
     }

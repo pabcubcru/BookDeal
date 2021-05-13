@@ -113,8 +113,12 @@ export default class Get extends Component {
                     <span>{this.state.book.status}</span>
                   </p>
 
-                  <div class="page__content-copyright">
-                    <p>Publicado por {this.state.book.username}</p>
+                  <p class="page__content-credits">
+                    Publicado por
+                    <span>{this.state.book.username}</span>
+                  </p>
+
+                  <div class="page__content-copyright">   
                     <i
                       class="fa fa-arrow-circle-right fa-2x"
                       style={{ float: "right" }}

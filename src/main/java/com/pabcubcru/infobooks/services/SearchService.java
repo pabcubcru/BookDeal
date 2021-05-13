@@ -72,7 +72,8 @@ public class SearchService {
         NativeSearchQueryBuilder searchQuery = new NativeSearchQueryBuilder();
         searchQuery.withQuery(QueryBuilders.multiMatchQuery(query).field("title").field("originalTitle").field("isbn")
                 .field("publisher").field("genres").field("author").field("status").field("username")
-                .operator(Operator.OR).type(MultiMatchQueryBuilder.Type.BEST_FIELDS).fuzziness(Fuzziness.ONE));
+                .operator(Operator.OR).type(MultiMatchQueryBuilder.Type.BEST_FIELDS).fuzziness(Fuzziness.TWO)
+                .prefixLength(1));
 
         searchQuery.withPageable(PageRequest.of(0, 20));
         NativeSearchQuery queryPrincipal = searchQuery.build();
@@ -84,6 +85,7 @@ public class SearchService {
         String q = query.toLowerCase();
         for (Book b : books) {
             a = b.getTitle().toLowerCase().contains(q) ? res.add(b.getTitle() + "//" + "Título") : null;
+            a = b.getAuthor().toLowerCase().contains(q) ? res.add(b.getAuthor() + "//" + "Autor") : null;
             a = b.getOriginalTitle() != null && b.getOriginalTitle().toLowerCase().contains(q)
                     ? res.add(b.getOriginalTitle() + "//" + "Título original")
                     : null;

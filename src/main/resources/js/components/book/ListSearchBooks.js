@@ -77,7 +77,7 @@ export default class List extends Component {
         title: title,
         noResults: noResults,
         username: username.username,
-        fieldText: query
+        fieldText: query,
       });
     } else {
       const ls = await searchService.findLast();
@@ -125,7 +125,7 @@ export default class List extends Component {
               <option value="" style={{ fontWeight: "bold" }} disabled>
                 Libro
               </option>
-              <option value="book">Datos del libro</option>
+              <option value="book">Campo de texto</option>
               <option
                 value="publicationYear"
                 disabled={this.state.username == null}
@@ -575,8 +575,11 @@ export default class List extends Component {
                           this.state.isAdded[i] == false ? (
                             <a
                               onClick={() =>
-                                this.addFavouriteBook(book.id, this.state.query,
-                                  this.state.actualPage)
+                                this.addFavouriteBook(
+                                  book.id,
+                                  this.state.query,
+                                  this.state.actualPage
+                                )
                               }
                               style={{ float: "right" }}
                             >
@@ -779,8 +782,8 @@ export default class List extends Component {
 
   async searchTitles(query) {
     this.setState({ fieldText: query });
-    if (query != "") {
-      const res = await searchService.searchTitles(query);
+    if (query.length > 0 && query.length <= 80) {
+      let res = await searchService.searchTitles(query);
       this.setState({ titles: res.titles });
     }
   }
