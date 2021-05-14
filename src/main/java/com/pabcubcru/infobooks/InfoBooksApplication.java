@@ -307,15 +307,30 @@ public class InfoBooksApplication {
 			GenreEnum[] genres = GenreEnum.values();
 			String isbn = s[0];
 			String originalTitle = s[1];
+			if(originalTitle.length() > 80 ) {
+				originalTitle = originalTitle.substring(0, 80);
+			}
 			String title = s[2];
+			if(title.length() > 80 ) {
+				title = title.substring(0, 80);
+			}
 			String author = s[3];
+			if(author.length() > 80 ) {
+				author = author.substring(0, 80);
+			}
 			Integer publicationYear = 2010;
 			if (!s[4].equals("")) {
 				String r = s[4].replace(".0", "");
 				publicationYear = Integer.parseInt(r);
 			}
 			String publisher = s[5];
+			if(publisher.length() > 80 ) {
+				publisher = publisher.substring(0, 80);
+			}
 			String description = s[6];
+			if(description.length() > 1750 ) {
+				description = description.substring(0, 1750);
+			}
 			String urlImage = s[7];
 			int numRandomGenre1 = (int) Math.floor(Math.random() * GenreEnum.values().length) - 1;
 			numRandomGenre1 = numRandomGenre1 < 0 ? 0 : numRandomGenre1;

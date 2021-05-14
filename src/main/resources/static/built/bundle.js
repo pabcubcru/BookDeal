@@ -37513,7 +37513,7 @@ var Form = /*#__PURE__*/function (_Component) {
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("label", {
         "for": "firstName",
         "class": "col-sm-3 col-form-label"
-      }, "Precio", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("sup", {
+      }, "\xBFPor cu\xE1nto lo vender\xEDa?", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("sup", {
         "class": "text-danger"
       }, "*")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         "class": "col-sm-9"
@@ -38023,7 +38023,7 @@ var Form = /*#__PURE__*/function (_Component) {
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("label", {
         "for": "firstName",
         "class": "col-sm-3 col-form-label"
-      }, "Precio", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("sup", {
+      }, "\xBFPor cu\xE1nto lo vender\xEDa?", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("sup", {
         "class": "text-danger"
       }, "*")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         "class": "col-sm-9"
@@ -40587,30 +40587,31 @@ var List = /*#__PURE__*/function (_Component) {
     key: "searchTitles",
     value: function () {
       var _searchTitles = _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_7___default.a.mark(function _callee5(query) {
-        var res;
+        var q, res;
         return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_7___default.a.wrap(function _callee5$(_context5) {
           while (1) {
             switch (_context5.prev = _context5.next) {
               case 0:
+                q = query.trim();
                 this.setState({
-                  fieldText: query
+                  fieldText: query.replaceAll("  ", " ")
                 });
 
-                if (!(query.length > 0 && query.length <= 80)) {
-                  _context5.next = 6;
+                if (!(q.length > 0 && q.length <= 80)) {
+                  _context5.next = 7;
                   break;
                 }
 
-                _context5.next = 4;
-                return _services_Search__WEBPACK_IMPORTED_MODULE_12__["default"].searchTitles(query);
+                _context5.next = 5;
+                return _services_Search__WEBPACK_IMPORTED_MODULE_12__["default"].searchTitles(q);
 
-              case 4:
+              case 5:
                 res = _context5.sent;
                 this.setState({
                   titles: res.titles
                 });
 
-              case 6:
+              case 7:
               case "end":
                 return _context5.stop();
             }
@@ -42535,7 +42536,7 @@ search.postSearch = /*#__PURE__*/function () {
               number1: state.fieldNumber1,
               number2: state.fieldNumber2,
               type: state.selectSearch,
-              text: state.fieldText
+              text: state.fieldText.trim()
             };
             _context3.next = 3;
             return axios__WEBPACK_IMPORTED_MODULE_2___default.a.post(baseUrl, dataPost).then(function (response) {

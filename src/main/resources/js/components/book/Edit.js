@@ -369,7 +369,7 @@ export default class Form extends Component {
 
         <div class="form-group row">
           <label for="firstName" class="col-sm-3 col-form-label">
-            Precio<sup class="text-danger">*</sup>
+            ¿Por cuánto lo vendería?<sup class="text-danger">*</sup>
           </label>
           <div class="col-sm-9">
             <input
