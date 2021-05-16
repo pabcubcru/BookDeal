@@ -35,7 +35,7 @@ search.postSearch = async (state) => {
     number1: state.fieldNumber1,
     number2: state.fieldNumber2,
     type: state.selectSearch,
-    text: state.fieldText,
+    text: state.fieldText.trim(),
   };
 
   const res = await axios

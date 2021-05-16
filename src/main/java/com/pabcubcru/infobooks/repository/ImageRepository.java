@@ -10,8 +10,8 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface ImageRepository extends ElasticsearchRepository<Image, String> {
 
-    public List<Image> findByIdBook(String idBook);
+    public List<Image> findByIdBookOrderByPrincipalDesc(String idBook);
 
-    public Image findFirstByIdBook(String idBook);
+    public Image findByIdBookAndPrincipalTrue(String idBook);
 
 }

@@ -111,15 +111,15 @@ public class RequestController {
         return res;
     }
 
-    public List<List<String>> getUrlsImagesFromBooks(List<Book> books) {
-        List<List<String>> allBookImages = new ArrayList<>();
+    public List<String> getFirstUrlImagesFromBooks(List<Book> books) {
+        List<String> allBookImages = new ArrayList<>();
         for (Book b : books) {
-            List<String> urlImages = new ArrayList<>();
-            List<Image> images = this.bookService.findImagesByIdBook(b.getId());
-            for (Image image : images) {
-                urlImages.add(image.getUrlImage());
+            if(b != null) {
+                Image image = this.bookService.findByIdBookAndPrincipalTrue(b.getId());
+                allBookImages.add(image.getUrlImage());
+            } else {
+                allBookImages.add(null);
             }
-            allBookImages.add(urlImages);
         }
         return allBookImages;
     }
@@ -154,10 +154,10 @@ public class RequestController {
         res.put("books2", books2);
         res.put("users", users);
 
-        List<List<String>> allBookImages = this.getUrlsImagesFromBooks(books1);
+        List<String> allBookImages = this.getFirstUrlImagesFromBooks(books1);
         res.put("urlsBooks1", allBookImages);
 
-        allBookImages = this.getUrlsImagesFromBooks(books2);
+        allBookImages = this.getFirstUrlImagesFromBooks(books2);
         res.put("urlsBooks2", allBookImages);
 
         Integer numberOfPages = pageOfRequests.getTotalPages();
@@ -204,10 +204,10 @@ public class RequestController {
         res.put("books2", books2);
         res.put("users", users);
 
-        List<List<String>> allBookImages = this.getUrlsImagesFromBooks(books1);
+        List<String> allBookImages = this.getFirstUrlImagesFromBooks(books1);
         res.put("urlsBooks1", allBookImages);
 
-        allBookImages = this.getUrlsImagesFromBooks(books2);
+        allBookImages = this.getFirstUrlImagesFromBooks(books2);
         res.put("urlsBooks2", allBookImages);
 
         Integer numberOfPages = pageOfRequests.getTotalPages();

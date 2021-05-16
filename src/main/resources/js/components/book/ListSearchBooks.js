@@ -781,9 +781,10 @@ export default class List extends Component {
   }
 
   async searchTitles(query) {
-    this.setState({ fieldText: query });
-    if (query.length > 0 && query.length <= 80) {
-      let res = await searchService.searchTitles(query);
+    const q = query.trim()
+    this.setState({ fieldText: query.replaceAll("  ", " ") });
+    if (q.length > 0 && q.length <= 80) {
+      let res = await searchService.searchTitles(q);
       this.setState({ titles: res.titles });
     }
   }

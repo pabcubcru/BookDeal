@@ -104,12 +104,12 @@ public class BookService {
 
     @Transactional
     public List<Image> findImagesByIdBook(String idBook) {
-        return this.imageRepository.findByIdBook(idBook);
+        return this.imageRepository.findByIdBookOrderByPrincipalDesc(idBook);
     }
 
     @Transactional
-    public Image findFirstImageByIdBook(String idBook) {
-        return this.imageRepository.findFirstByIdBook(idBook);
+    public Image findByIdBookAndPrincipalTrue(String idBook) {
+        return this.imageRepository.findByIdBookAndPrincipalTrue(idBook);
     }
 
     @Transactional
@@ -130,6 +130,11 @@ public class BookService {
     @Transactional
     public void deleteImageById(String id) {
         this.imageRepository.deleteById(id);
+    }
+
+    @Transactional
+    public Image findImageById(String id) {
+        return this.imageRepository.findById(id).orElse(null);
     }
 
 }

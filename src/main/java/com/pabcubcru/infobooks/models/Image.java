@@ -21,4 +21,7 @@ public class Image extends BaseEntity {
     @Field(type = FieldType.Text, name = "urlImage")
     private String urlImage;
 
+    @Field(type = FieldType.Boolean, name = "principal")
+    private Boolean principal;
+
 }

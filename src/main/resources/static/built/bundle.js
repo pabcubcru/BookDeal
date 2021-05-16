@@ -37513,7 +37513,7 @@ var Form = /*#__PURE__*/function (_Component) {
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("label", {
         "for": "firstName",
         "class": "col-sm-3 col-form-label"
-      }, "Precio", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("sup", {
+      }, "\xBFPor cu\xE1nto lo vender\xEDa?", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("sup", {
         "class": "text-danger"
       }, "*")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         "class": "col-sm-9"
@@ -38023,7 +38023,7 @@ var Form = /*#__PURE__*/function (_Component) {
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("label", {
         "for": "firstName",
         "class": "col-sm-3 col-form-label"
-      }, "Precio", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("sup", {
+      }, "\xBFPor cu\xE1nto lo vender\xEDa?", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("sup", {
         "class": "text-danger"
       }, "*")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         "class": "col-sm-9"
@@ -38062,6 +38062,30 @@ var Form = /*#__PURE__*/function (_Component) {
             color: "red"
           },
           "class": "fa fa-trash"
+        })), image.principal ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("button", {
+          "class": "btn btn-primary",
+          style: {
+            backgroundImage: "url(https://i.ibb.co/YRy9kHC/paper.jpg)"
+          }
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("i", {
+          style: {
+            color: "#e5be01"
+          },
+          "class": "fa fa-star"
+        })) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("button", {
+          "class": "btn btn-primary",
+          onClick: function onClick() {
+            return _this2.onClickSetImagePrincipal(image, _this2.state.id);
+          },
+          disabled: _this2.state.images.length <= 1,
+          style: {
+            backgroundImage: "url(https://i.ibb.co/YRy9kHC/paper.jpg)"
+          }
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("i", {
+          style: {
+            color: "#e5be01"
+          },
+          "class": "fa fa-star-o"
         }))), _this2.state.images.length <= 1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("center", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
           style: {
             color: "red"
@@ -38096,6 +38120,30 @@ var Form = /*#__PURE__*/function (_Component) {
             marginBottom: "1px"
           },
           "class": "fa fa-trash"
+        }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("center", null, image.principal ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("button", {
+          "class": "cerrar",
+          style: {
+            backgroundImage: "url(https://i.ibb.co/YRy9kHC/paper.jpg)"
+          }
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("i", {
+          style: {
+            color: "#e5be01"
+          },
+          "class": "fa fa-star"
+        })) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("button", {
+          "class": "cerrar",
+          onClick: function onClick() {
+            return _this2.onClickSetImagePrincipal(image, _this2.state.id);
+          },
+          disabled: _this2.state.images.length <= 1,
+          style: {
+            backgroundImage: "url(https://i.ibb.co/YRy9kHC/paper.jpg)"
+          }
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("i", {
+          style: {
+            color: "#e5be01"
+          },
+          "class": "fa fa-star-o"
         })))), _this2.state.images.length <= 1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("center", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
           style: {
             color: "red"
@@ -38206,13 +38254,50 @@ var Form = /*#__PURE__*/function (_Component) {
       return onClickDeleteImage;
     }()
   }, {
-    key: "editGenres",
+    key: "onClickSetImagePrincipal",
     value: function () {
-      var _editGenres = _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_6___default.a.mark(function _callee4(element) {
-        var gen;
+      var _onClickSetImagePrincipal = _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_6___default.a.mark(function _callee4(image, id) {
+        var conf, res;
         return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_6___default.a.wrap(function _callee4$(_context4) {
           while (1) {
             switch (_context4.prev = _context4.next) {
+              case 0:
+                conf = confirm("¿Está seguro de que quiere establecer como principal la imagen '" + image.fileName + "'? Los datos modificados en el formulario se perderán.");
+
+                if (!conf) {
+                  _context4.next = 6;
+                  break;
+                }
+
+                _context4.next = 4;
+                return _services_Book__WEBPACK_IMPORTED_MODULE_8__["default"].imagePrincipal(id, image.id);
+
+              case 4:
+                res = _context4.sent;
+                window.location.replace("/books/" + id + "/edit");
+
+              case 6:
+              case "end":
+                return _context4.stop();
+            }
+          }
+        }, _callee4);
+      }));
+
+      function onClickSetImagePrincipal(_x3, _x4) {
+        return _onClickSetImagePrincipal.apply(this, arguments);
+      }
+
+      return onClickSetImagePrincipal;
+    }()
+  }, {
+    key: "editGenres",
+    value: function () {
+      var _editGenres = _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_6___default.a.mark(function _callee5(element) {
+        var gen;
+        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_6___default.a.wrap(function _callee5$(_context5) {
+          while (1) {
+            switch (_context5.prev = _context5.next) {
               case 0:
                 gen = this.state.fieldGen;
 
@@ -38231,13 +38316,13 @@ var Form = /*#__PURE__*/function (_Component) {
 
               case 4:
               case "end":
-                return _context4.stop();
+                return _context5.stop();
             }
           }
-        }, _callee4, this);
+        }, _callee5, this);
       }));
 
-      function editGenres(_x3) {
+      function editGenres(_x5) {
         return _editGenres.apply(this, arguments);
       }
 
@@ -40587,30 +40672,31 @@ var List = /*#__PURE__*/function (_Component) {
     key: "searchTitles",
     value: function () {
       var _searchTitles = _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_7___default.a.mark(function _callee5(query) {
-        var res;
+        var q, res;
         return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_7___default.a.wrap(function _callee5$(_context5) {
           while (1) {
             switch (_context5.prev = _context5.next) {
               case 0:
+                q = query.trim();
                 this.setState({
-                  fieldText: query
+                  fieldText: query.replaceAll("  ", " ")
                 });
 
-                if (!(query.length > 0 && query.length <= 80)) {
-                  _context5.next = 6;
+                if (!(q.length > 0 && q.length <= 80)) {
+                  _context5.next = 7;
                   break;
                 }
 
-                _context5.next = 4;
-                return _services_Search__WEBPACK_IMPORTED_MODULE_12__["default"].searchTitles(query);
+                _context5.next = 5;
+                return _services_Search__WEBPACK_IMPORTED_MODULE_12__["default"].searchTitles(q);
 
-              case 4:
+              case 5:
                 res = _context5.sent;
                 this.setState({
                   titles: res.titles
                 });
 
-              case 6:
+              case 7:
               case "end":
                 return _context5.stop();
             }
@@ -41742,7 +41828,8 @@ book.create = /*#__PURE__*/function () {
             datapostImage = {
               idBook: idBook,
               fileName: resUploadImage.data.image.filename,
-              urlImage: resUploadImage.data.url
+              urlImage: resUploadImage.data.url,
+              principal: i == 0 ? true : false
             };
             urlPostImage = baseUrl + "/images/upload";
             _context.next = 20;
@@ -41877,23 +41964,23 @@ book.edit = /*#__PURE__*/function () {
   };
 }();
 
-book.deleteImage = /*#__PURE__*/function () {
-  var _ref3 = _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.mark(function _callee3(image) {
-    var urlDeleteEntityImage, deleteImageEntity;
+book.imagePrincipal = /*#__PURE__*/function () {
+  var _ref3 = _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.mark(function _callee3(idBook, idImage) {
+    var urlImagePrincipal, setImagePrincipal;
     return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.wrap(function _callee3$(_context3) {
       while (1) {
         switch (_context3.prev = _context3.next) {
           case 0:
-            urlDeleteEntityImage = baseUrl + "/images/" + image.id + "/delete";
+            urlImagePrincipal = baseUrl + "/" + idBook + "/images/" + idImage + "/principal";
             _context3.next = 3;
-            return axios__WEBPACK_IMPORTED_MODULE_2___default.a.get(urlDeleteEntityImage).then(function (response) {
+            return axios__WEBPACK_IMPORTED_MODULE_2___default.a.get(urlImagePrincipal).then(function (response) {
               return response.data;
             })["catch"](function (error) {
               return error.response;
             });
 
           case 3:
-            deleteImageEntity = _context3.sent;
+            setImagePrincipal = _context3.sent;
 
           case 4:
           case "end":
@@ -41903,31 +41990,30 @@ book.deleteImage = /*#__PURE__*/function () {
     }, _callee3);
   }));
 
-  return function (_x3) {
+  return function (_x3, _x4) {
     return _ref3.apply(this, arguments);
   };
 }();
 
-book.getBook = /*#__PURE__*/function () {
-  var _ref4 = _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.mark(function _callee4(id) {
-    var urlGet, res;
+book.deleteImage = /*#__PURE__*/function () {
+  var _ref4 = _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.mark(function _callee4(image) {
+    var urlDeleteEntityImage, deleteImageEntity;
     return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.wrap(function _callee4$(_context4) {
       while (1) {
         switch (_context4.prev = _context4.next) {
           case 0:
-            urlGet = baseUrl + "/get/" + id;
+            urlDeleteEntityImage = baseUrl + "/images/" + image.id + "/delete";
             _context4.next = 3;
-            return axios__WEBPACK_IMPORTED_MODULE_2___default.a.get(urlGet).then(function (response) {
+            return axios__WEBPACK_IMPORTED_MODULE_2___default.a.get(urlDeleteEntityImage).then(function (response) {
               return response.data;
             })["catch"](function (error) {
               return error.response;
             });
 
           case 3:
-            res = _context4.sent;
-            return _context4.abrupt("return", res);
+            deleteImageEntity = _context4.sent;
 
-          case 5:
+          case 4:
           case "end":
             return _context4.stop();
         }
@@ -41935,19 +42021,19 @@ book.getBook = /*#__PURE__*/function () {
     }, _callee4);
   }));
 
-  return function (_x4) {
+  return function (_x5) {
     return _ref4.apply(this, arguments);
   };
 }();
 
-book.getBookToEdit = /*#__PURE__*/function () {
+book.getBook = /*#__PURE__*/function () {
   var _ref5 = _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.mark(function _callee5(id) {
     var urlGet, res;
     return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.wrap(function _callee5$(_context5) {
       while (1) {
         switch (_context5.prev = _context5.next) {
           case 0:
-            urlGet = baseUrl + "/edit/" + id;
+            urlGet = baseUrl + "/get/" + id;
             _context5.next = 3;
             return axios__WEBPACK_IMPORTED_MODULE_2___default.a.get(urlGet).then(function (response) {
               return response.data;
@@ -41967,19 +42053,19 @@ book.getBookToEdit = /*#__PURE__*/function () {
     }, _callee5);
   }));
 
-  return function (_x5) {
+  return function (_x6) {
     return _ref5.apply(this, arguments);
   };
 }();
 
-book.listAllExceptMine = /*#__PURE__*/function () {
-  var _ref6 = _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.mark(function _callee6(page, showMode) {
+book.getBookToEdit = /*#__PURE__*/function () {
+  var _ref6 = _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.mark(function _callee6(id) {
     var urlGet, res;
     return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.wrap(function _callee6$(_context6) {
       while (1) {
         switch (_context6.prev = _context6.next) {
           case 0:
-            urlGet = baseUrl + "/list/all-me?page=" + page + "&showMode=" + showMode;
+            urlGet = baseUrl + "/edit/" + id;
             _context6.next = 3;
             return axios__WEBPACK_IMPORTED_MODULE_2___default.a.get(urlGet).then(function (response) {
               return response.data;
@@ -41999,19 +42085,19 @@ book.listAllExceptMine = /*#__PURE__*/function () {
     }, _callee6);
   }));
 
-  return function (_x6, _x7) {
+  return function (_x7) {
     return _ref6.apply(this, arguments);
   };
 }();
 
-book.listMyBooks = /*#__PURE__*/function () {
-  var _ref7 = _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.mark(function _callee7(page) {
+book.listAllExceptMine = /*#__PURE__*/function () {
+  var _ref7 = _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.mark(function _callee7(page, showMode) {
     var urlGet, res;
     return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.wrap(function _callee7$(_context7) {
       while (1) {
         switch (_context7.prev = _context7.next) {
           case 0:
-            urlGet = baseUrl + "/list/me?page=" + page;
+            urlGet = baseUrl + "/list/all-me?page=" + page + "&showMode=" + showMode;
             _context7.next = 3;
             return axios__WEBPACK_IMPORTED_MODULE_2___default.a.get(urlGet).then(function (response) {
               return response.data;
@@ -42031,43 +42117,50 @@ book.listMyBooks = /*#__PURE__*/function () {
     }, _callee7);
   }));
 
-  return function (_x8) {
+  return function (_x8, _x9) {
     return _ref7.apply(this, arguments);
   };
 }();
 
-book.listMyBooksForChange = /*#__PURE__*/_babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.mark(function _callee8() {
-  var urlGet, res;
-  return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.wrap(function _callee8$(_context8) {
-    while (1) {
-      switch (_context8.prev = _context8.next) {
-        case 0:
-          urlGet = baseUrl + "/list/me-change";
-          _context8.next = 3;
-          return axios__WEBPACK_IMPORTED_MODULE_2___default.a.get(urlGet).then(function (response) {
-            return response.data;
-          })["catch"](function (error) {
-            return error.response;
-          });
+book.listMyBooks = /*#__PURE__*/function () {
+  var _ref8 = _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.mark(function _callee8(page) {
+    var urlGet, res;
+    return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.wrap(function _callee8$(_context8) {
+      while (1) {
+        switch (_context8.prev = _context8.next) {
+          case 0:
+            urlGet = baseUrl + "/list/me?page=" + page;
+            _context8.next = 3;
+            return axios__WEBPACK_IMPORTED_MODULE_2___default.a.get(urlGet).then(function (response) {
+              return response.data;
+            })["catch"](function (error) {
+              return error.response;
+            });
 
-        case 3:
-          res = _context8.sent;
-          return _context8.abrupt("return", res);
+          case 3:
+            res = _context8.sent;
+            return _context8.abrupt("return", res);
 
-        case 5:
-        case "end":
-          return _context8.stop();
+          case 5:
+          case "end":
+            return _context8.stop();
+        }
       }
-    }
-  }, _callee8);
-}));
-book.getGenres = /*#__PURE__*/_babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.mark(function _callee9() {
+    }, _callee8);
+  }));
+
+  return function (_x10) {
+    return _ref8.apply(this, arguments);
+  };
+}();
+
+book.listMyBooksForChange = /*#__PURE__*/_babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.mark(function _callee9() {
   var urlGet, res;
   return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.wrap(function _callee9$(_context9) {
     while (1) {
       switch (_context9.prev = _context9.next) {
         case 0:
-          urlGet = baseUrl + "/genres";
+          urlGet = baseUrl + "/list/me-change";
           _context9.next = 3;
           return axios__WEBPACK_IMPORTED_MODULE_2___default.a.get(urlGet).then(function (response) {
             return response.data;
@@ -42086,16 +42179,41 @@ book.getGenres = /*#__PURE__*/_babel_runtime_helpers_asyncToGenerator__WEBPACK_I
     }
   }, _callee9);
 }));
+book.getGenres = /*#__PURE__*/_babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.mark(function _callee10() {
+  var urlGet, res;
+  return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.wrap(function _callee10$(_context10) {
+    while (1) {
+      switch (_context10.prev = _context10.next) {
+        case 0:
+          urlGet = baseUrl + "/genres";
+          _context10.next = 3;
+          return axios__WEBPACK_IMPORTED_MODULE_2___default.a.get(urlGet).then(function (response) {
+            return response.data;
+          })["catch"](function (error) {
+            return error.response;
+          });
+
+        case 3:
+          res = _context10.sent;
+          return _context10.abrupt("return", res);
+
+        case 5:
+        case "end":
+          return _context10.stop();
+      }
+    }
+  }, _callee10);
+}));
 
 book["delete"] = /*#__PURE__*/function () {
-  var _ref10 = _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.mark(function _callee10(id, images) {
+  var _ref11 = _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.mark(function _callee11(id, images) {
     var urlDelete, res, i, urlDeleteImage, resDeleteImage;
-    return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.wrap(function _callee10$(_context10) {
+    return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.wrap(function _callee11$(_context11) {
       while (1) {
-        switch (_context10.prev = _context10.next) {
+        switch (_context11.prev = _context11.next) {
           case 0:
             urlDelete = baseUrl + "/" + id + "/delete";
-            _context10.next = 3;
+            _context11.next = 3;
             return axios__WEBPACK_IMPORTED_MODULE_2___default.a["delete"](urlDelete).then(function (response) {
               return response.data;
             })["catch"](function (error) {
@@ -42103,17 +42221,17 @@ book["delete"] = /*#__PURE__*/function () {
             });
 
           case 3:
-            res = _context10.sent;
+            res = _context11.sent;
             i = 0;
 
           case 5:
             if (!(i < images.length)) {
-              _context10.next = 13;
+              _context11.next = 13;
               break;
             }
 
             urlDeleteImage = images[i].urlDelete;
-            _context10.next = 9;
+            _context11.next = 9;
             return axios__WEBPACK_IMPORTED_MODULE_2___default.a.get(urlDeleteImage).then(function (response) {
               return response.data;
             })["catch"](function (error) {
@@ -42121,49 +42239,17 @@ book["delete"] = /*#__PURE__*/function () {
             });
 
           case 9:
-            resDeleteImage = _context10.sent;
+            resDeleteImage = _context11.sent;
 
           case 10:
             i++;
-            _context10.next = 5;
+            _context11.next = 5;
             break;
 
           case 13:
-            return _context10.abrupt("return", res);
-
-          case 14:
-          case "end":
-            return _context10.stop();
-        }
-      }
-    }, _callee10);
-  }));
-
-  return function (_x9, _x10) {
-    return _ref10.apply(this, arguments);
-  };
-}();
-
-book.recommendBooks = /*#__PURE__*/function () {
-  var _ref11 = _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.mark(function _callee11(page) {
-    var urlGet, res;
-    return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.wrap(function _callee11$(_context11) {
-      while (1) {
-        switch (_context11.prev = _context11.next) {
-          case 0:
-            urlGet = baseUrl + "/recommend?page=" + page;
-            _context11.next = 3;
-            return axios__WEBPACK_IMPORTED_MODULE_2___default.a.get(urlGet).then(function (response) {
-              return response.data;
-            })["catch"](function (error) {
-              return error.response;
-            });
-
-          case 3:
-            res = _context11.sent;
             return _context11.abrupt("return", res);
 
-          case 5:
+          case 14:
           case "end":
             return _context11.stop();
         }
@@ -42171,8 +42257,40 @@ book.recommendBooks = /*#__PURE__*/function () {
     }, _callee11);
   }));
 
-  return function (_x11) {
+  return function (_x11, _x12) {
     return _ref11.apply(this, arguments);
+  };
+}();
+
+book.recommendBooks = /*#__PURE__*/function () {
+  var _ref12 = _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.mark(function _callee12(page) {
+    var urlGet, res;
+    return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.wrap(function _callee12$(_context12) {
+      while (1) {
+        switch (_context12.prev = _context12.next) {
+          case 0:
+            urlGet = baseUrl + "/recommend?page=" + page;
+            _context12.next = 3;
+            return axios__WEBPACK_IMPORTED_MODULE_2___default.a.get(urlGet).then(function (response) {
+              return response.data;
+            })["catch"](function (error) {
+              return error.response;
+            });
+
+          case 3:
+            res = _context12.sent;
+            return _context12.abrupt("return", res);
+
+          case 5:
+          case "end":
+            return _context12.stop();
+        }
+      }
+    }, _callee12);
+  }));
+
+  return function (_x13) {
+    return _ref12.apply(this, arguments);
   };
 }();
 
@@ -42535,7 +42653,7 @@ search.postSearch = /*#__PURE__*/function () {
               number1: state.fieldNumber1,
               number2: state.fieldNumber2,
               type: state.selectSearch,
-              text: state.fieldText
+              text: state.fieldText.trim()
             };
             _context3.next = 3;
             return axios__WEBPACK_IMPORTED_MODULE_2___default.a.post(baseUrl, dataPost).then(function (response) {

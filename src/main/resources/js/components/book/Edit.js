@@ -369,7 +369,7 @@ export default class Form extends Component {
 
         <div class="form-group row">
           <label for="firstName" class="col-sm-3 col-form-label">
-            Precio<sup class="text-danger">*</sup>
+            ¿Por cuánto lo vendería?<sup class="text-danger">*</sup>
           </label>
           <div class="col-sm-9">
             <input
@@ -422,6 +422,34 @@ export default class Form extends Component {
                       >
                         <i style={{ color: "red" }} class="fa fa-trash"></i>
                       </button>
+                      {image.principal ? (
+                        <button
+                          class="btn btn-primary"
+                          style={{
+                            backgroundImage:
+                              "url(https://i.ibb.co/YRy9kHC/paper.jpg)",
+                          }}
+                        >
+                          <i style={{ color: "#e5be01" }} class="fa fa-star"></i>
+                        </button>
+                      ) : (
+                        <button
+                          class="btn btn-primary"
+                          onClick={() =>
+                            this.onClickSetImagePrincipal(image, this.state.id)
+                          }
+                          disabled={this.state.images.length <= 1}
+                          style={{
+                            backgroundImage:
+                              "url(https://i.ibb.co/YRy9kHC/paper.jpg)",
+                          }}
+                        >
+                          <i
+                            style={{ color: "#e5be01" }}
+                            class="fa fa-star-o"
+                          ></i>
+                        </button>
+                      )}
                     </li>
                     {this.state.images.length <= 1 ? (
                       <center>
@@ -475,6 +503,42 @@ export default class Form extends Component {
                             class="fa fa-trash"
                           ></i>
                         </button>
+                      </center>
+                      <center>
+                        {image.principal ? (
+                          <button
+                            class="cerrar"
+                            style={{
+                              backgroundImage:
+                                "url(https://i.ibb.co/YRy9kHC/paper.jpg)",
+                            }}
+                          >
+                            <i
+                              style={{ color: "#e5be01" }}
+                              class="fa fa-star"
+                            ></i>
+                          </button>
+                        ) : (
+                          <button
+                            class="cerrar"
+                            onClick={() =>
+                              this.onClickSetImagePrincipal(
+                                image,
+                                this.state.id
+                              )
+                            }
+                            disabled={this.state.images.length <= 1}
+                            style={{
+                              backgroundImage:
+                                "url(https://i.ibb.co/YRy9kHC/paper.jpg)",
+                            }}
+                          >
+                            <i
+                              style={{ color: "#e5be01" }}
+                              class="fa fa-star-o"
+                            ></i>
+                          </button>
+                        )}
                       </center>
                     </div>
                     {this.state.images.length <= 1 ? (
@@ -538,6 +602,18 @@ export default class Form extends Component {
     );
     if (conf) {
       const res = await bookService.deleteImage(image);
+      window.location.replace("/books/" + id + "/edit");
+    }
+  }
+
+  async onClickSetImagePrincipal(image, id) {
+    const conf = confirm(
+      "¿Está seguro de que quiere establecer como principal la imagen '" +
+        image.fileName +
+        "'? Los datos modificados en el formulario se perderán."
+    );
+    if (conf) {
+      const res = await bookService.imagePrincipal(id, image.id);
       window.location.replace("/books/" + id + "/edit");
     }
   }
