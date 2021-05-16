@@ -51,6 +51,7 @@ book.create = async (state) => {
           idBook: idBook,
           fileName: resUploadImage.data.image.filename,
           urlImage: resUploadImage.data.url,
+          principal: i == 0 ? true : false
         };
 
         const urlPostImage = baseUrl + "/images/upload";
@@ -134,6 +135,18 @@ book.edit = async (state) => {
 
   return res;
 };
+
+book.imagePrincipal = async (idBook, idImage) => {
+  const urlImagePrincipal = baseUrl + "/"+idBook+"/images/"+idImage+"/principal"
+  const setImagePrincipal = await axios
+    .get(urlImagePrincipal)
+    .then((response) => {
+      return response.data;
+    })
+    .catch((error) => {
+      return error.response;
+    });
+}
 
 book.deleteImage = async (image) => {
   const urlDeleteEntityImage = baseUrl + "/images/" + image.id + "/delete";

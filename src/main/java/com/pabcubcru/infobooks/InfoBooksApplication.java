@@ -151,6 +151,7 @@ public class InfoBooksApplication {
 		image.setUrlImage(urlImage);
 		image.setIdBook(idBook);
 		image.setFileName("image-" + id + "-" + idBook);
+		image.setPrincipal(true);
 
 		this.imageRepository.save(image);
 	}

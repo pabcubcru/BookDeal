@@ -3,6 +3,7 @@ package com.pabcubcru.infobooks.controllers;
 import java.security.Principal;
 import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -91,7 +92,7 @@ public class BookController {
     public List<String> getFirstUrlImagesFromBooks(List<Book> books) {
         List<String> allBookImages = new ArrayList<>();
         for (Book b : books) {
-            Image image = this.bookService.findFirstImageByIdBook(b.getId());
+            Image image = this.bookService.findByIdBookAndPrincipalTrue(b.getId());
             allBookImages.add(image.getUrlImage());
         }
         return allBookImages;
@@ -452,6 +453,20 @@ public class BookController {
             this.bookService.deleteImageById(id);
         } catch (Exception e) {
             // TODO: handle exception
+        }
+    }
+
+    @GetMapping(value = "/{idBook}/images/{id}/principal")
+    public void changeImagePrincipal(@PathVariable("id") String id, @PathVariable("idBook") String idBook) {
+        try {
+            Image image = this.bookService.findByIdBookAndPrincipalTrue(idBook);
+            Image img = this.bookService.findImageById(id);
+            image.setPrincipal(false);
+            img.setPrincipal(true);
+            this.bookService.saveImage(image);
+            this.bookService.saveImage(img);
+        } catch (Exception e) {
+            //TODO: handle exception
         }
     }
 
