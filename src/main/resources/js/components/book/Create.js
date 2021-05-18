@@ -279,7 +279,8 @@ export default class Form extends Component {
             Seleccione las imágenes<sup class="text-danger">*</sup>{" "}
             <dfn
               data-info="Para una mejor visualización, 
-            se recomienda que la primera y/o segunda imagen sea en formato vertical."
+            se recomienda que la primera y/o segunda imagen sea en formato vertical. 
+            Después al editar puede modificar la imagen principal."
             >
               <i class="fa fa-info-circle"></i>
             </dfn>

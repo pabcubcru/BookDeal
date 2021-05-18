@@ -6,7 +6,6 @@ a.dfn-hover {
 /** Code for hover info **/
 
 dfn {
-  background: #ffffff;
   border-radius: 100%;
   padding: 0 0.4em;
   cursor: help;
