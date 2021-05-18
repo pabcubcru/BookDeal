@@ -752,7 +752,7 @@ export default class List extends Component {
 
   async deleteFavouriteBook(id, title, query, page) {
     const conf = confirm(
-      "¿Está seguro de que quiere eliminar " + title + " de favoritos?"
+      "¿Está seguro de que quiere eliminar '" + title + "' de favoritos?"
     );
     if (conf) {
       const res = await userFavouriteBook.deleteFavouriteBook(id);

@@ -2433,7 +2433,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()(_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0___default.a);
 // Module
-___CSS_LOADER_EXPORT___.push([module.i, "a.dfn-hover {\r\n  color: #333;\r\n  text-decoration: none;\r\n}\r\n\r\n/** Code for hover info **/\r\n\r\ndfn {\r\n  background: #ffffff;\r\n  border-radius: 100%;\r\n  padding: 0 0.4em;\r\n  cursor: help;\r\n  font-style: normal;\r\n  position: relative;\r\n}\r\ndfn::after {\r\n  content: attr(data-info);\r\n  display: inline;\r\n  position: absolute;\r\n  top: 22px;\r\n  left: 0;\r\n  opacity: 0;\r\n  width: 230px;\r\n  font-size: 13px;\r\n  font-weight: 700;\r\n  line-height: 1.5em;\r\n  padding: 0.5em 0.8em;\r\n  background: rgba(0, 0, 0, 0.8);\r\n  color: #fff;\r\n  pointer-events: none; /* This prevents the box from apearing when hovered. */\r\n  transition: opacity 250ms, top 250ms;\r\n}\r\ndfn::before {\r\n  content: \"\";\r\n  display: block;\r\n  position: absolute;\r\n  top: 12px;\r\n  left: 20px;\r\n  opacity: 0;\r\n  width: 0;\r\n  height: 0;\r\n  border: solid transparent 5px;\r\n  border-bottom-color: rgba(0, 0, 0, 0.8);\r\n  transition: opacity 250ms, top 250ms;\r\n}\r\ndfn:hover {\r\n  z-index: 2;\r\n} /* Keeps the info boxes on top of other elements */\r\ndfn:hover::after,\r\ndfn:hover::before {\r\n  opacity: 1;\r\n}\r\ndfn:hover::after {\r\n  top: 30px;\r\n}\r\ndfn:hover::before {\r\n  top: 20px;\r\n}\r\n", "",{"version":3,"sources":["webpack://./src/main/resources/js/components/book/Create.css"],"names":[],"mappings":"AAAA;EACE,WAAW;EACX,qBAAqB;AACvB;;AAEA,0BAA0B;;AAE1B;EACE,mBAAmB;EACnB,mBAAmB;EACnB,gBAAgB;EAChB,YAAY;EACZ,kBAAkB;EAClB,kBAAkB;AACpB;AACA;EACE,wBAAwB;EACxB,eAAe;EACf,kBAAkB;EAClB,SAAS;EACT,OAAO;EACP,UAAU;EACV,YAAY;EACZ,eAAe;EACf,gBAAgB;EAChB,kBAAkB;EAClB,oBAAoB;EACpB,8BAA8B;EAC9B,WAAW;EACX,oBAAoB,EAAE,sDAAsD;EAC5E,oCAAoC;AACtC;AACA;EACE,WAAW;EACX,cAAc;EACd,kBAAkB;EAClB,SAAS;EACT,UAAU;EACV,UAAU;EACV,QAAQ;EACR,SAAS;EACT,6BAA6B;EAC7B,uCAAuC;EACvC,oCAAoC;AACtC;AACA;EACE,UAAU;AACZ,EAAE,kDAAkD;AACpD;;EAEE,UAAU;AACZ;AACA;EACE,SAAS;AACX;AACA;EACE,SAAS;AACX","sourcesContent":["a.dfn-hover {\r\n  color: #333;\r\n  text-decoration: none;\r\n}\r\n\r\n/** Code for hover info **/\r\n\r\ndfn {\r\n  background: #ffffff;\r\n  border-radius: 100%;\r\n  padding: 0 0.4em;\r\n  cursor: help;\r\n  font-style: normal;\r\n  position: relative;\r\n}\r\ndfn::after {\r\n  content: attr(data-info);\r\n  display: inline;\r\n  position: absolute;\r\n  top: 22px;\r\n  left: 0;\r\n  opacity: 0;\r\n  width: 230px;\r\n  font-size: 13px;\r\n  font-weight: 700;\r\n  line-height: 1.5em;\r\n  padding: 0.5em 0.8em;\r\n  background: rgba(0, 0, 0, 0.8);\r\n  color: #fff;\r\n  pointer-events: none; /* This prevents the box from apearing when hovered. */\r\n  transition: opacity 250ms, top 250ms;\r\n}\r\ndfn::before {\r\n  content: \"\";\r\n  display: block;\r\n  position: absolute;\r\n  top: 12px;\r\n  left: 20px;\r\n  opacity: 0;\r\n  width: 0;\r\n  height: 0;\r\n  border: solid transparent 5px;\r\n  border-bottom-color: rgba(0, 0, 0, 0.8);\r\n  transition: opacity 250ms, top 250ms;\r\n}\r\ndfn:hover {\r\n  z-index: 2;\r\n} /* Keeps the info boxes on top of other elements */\r\ndfn:hover::after,\r\ndfn:hover::before {\r\n  opacity: 1;\r\n}\r\ndfn:hover::after {\r\n  top: 30px;\r\n}\r\ndfn:hover::before {\r\n  top: 20px;\r\n}\r\n"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.i, "a.dfn-hover {\r\n  color: #333;\r\n  text-decoration: none;\r\n}\r\n\r\n/** Code for hover info **/\r\n\r\ndfn {\r\n  border-radius: 100%;\r\n  padding: 0 0.4em;\r\n  cursor: help;\r\n  font-style: normal;\r\n  position: relative;\r\n}\r\ndfn::after {\r\n  content: attr(data-info);\r\n  display: inline;\r\n  position: absolute;\r\n  top: 22px;\r\n  left: 0;\r\n  opacity: 0;\r\n  width: 230px;\r\n  font-size: 13px;\r\n  font-weight: 700;\r\n  line-height: 1.5em;\r\n  padding: 0.5em 0.8em;\r\n  background: rgba(0, 0, 0, 0.8);\r\n  color: #fff;\r\n  pointer-events: none; /* This prevents the box from apearing when hovered. */\r\n  transition: opacity 250ms, top 250ms;\r\n}\r\ndfn::before {\r\n  content: \"\";\r\n  display: block;\r\n  position: absolute;\r\n  top: 12px;\r\n  left: 20px;\r\n  opacity: 0;\r\n  width: 0;\r\n  height: 0;\r\n  border: solid transparent 5px;\r\n  border-bottom-color: rgba(0, 0, 0, 0.8);\r\n  transition: opacity 250ms, top 250ms;\r\n}\r\ndfn:hover {\r\n  z-index: 2;\r\n} /* Keeps the info boxes on top of other elements */\r\ndfn:hover::after,\r\ndfn:hover::before {\r\n  opacity: 1;\r\n}\r\ndfn:hover::after {\r\n  top: 30px;\r\n}\r\ndfn:hover::before {\r\n  top: 20px;\r\n}\r\n", "",{"version":3,"sources":["webpack://./src/main/resources/js/components/book/Create.css"],"names":[],"mappings":"AAAA;EACE,WAAW;EACX,qBAAqB;AACvB;;AAEA,0BAA0B;;AAE1B;EACE,mBAAmB;EACnB,gBAAgB;EAChB,YAAY;EACZ,kBAAkB;EAClB,kBAAkB;AACpB;AACA;EACE,wBAAwB;EACxB,eAAe;EACf,kBAAkB;EAClB,SAAS;EACT,OAAO;EACP,UAAU;EACV,YAAY;EACZ,eAAe;EACf,gBAAgB;EAChB,kBAAkB;EAClB,oBAAoB;EACpB,8BAA8B;EAC9B,WAAW;EACX,oBAAoB,EAAE,sDAAsD;EAC5E,oCAAoC;AACtC;AACA;EACE,WAAW;EACX,cAAc;EACd,kBAAkB;EAClB,SAAS;EACT,UAAU;EACV,UAAU;EACV,QAAQ;EACR,SAAS;EACT,6BAA6B;EAC7B,uCAAuC;EACvC,oCAAoC;AACtC;AACA;EACE,UAAU;AACZ,EAAE,kDAAkD;AACpD;;EAEE,UAAU;AACZ;AACA;EACE,SAAS;AACX;AACA;EACE,SAAS;AACX","sourcesContent":["a.dfn-hover {\r\n  color: #333;\r\n  text-decoration: none;\r\n}\r\n\r\n/** Code for hover info **/\r\n\r\ndfn {\r\n  border-radius: 100%;\r\n  padding: 0 0.4em;\r\n  cursor: help;\r\n  font-style: normal;\r\n  position: relative;\r\n}\r\ndfn::after {\r\n  content: attr(data-info);\r\n  display: inline;\r\n  position: absolute;\r\n  top: 22px;\r\n  left: 0;\r\n  opacity: 0;\r\n  width: 230px;\r\n  font-size: 13px;\r\n  font-weight: 700;\r\n  line-height: 1.5em;\r\n  padding: 0.5em 0.8em;\r\n  background: rgba(0, 0, 0, 0.8);\r\n  color: #fff;\r\n  pointer-events: none; /* This prevents the box from apearing when hovered. */\r\n  transition: opacity 250ms, top 250ms;\r\n}\r\ndfn::before {\r\n  content: \"\";\r\n  display: block;\r\n  position: absolute;\r\n  top: 12px;\r\n  left: 20px;\r\n  opacity: 0;\r\n  width: 0;\r\n  height: 0;\r\n  border: solid transparent 5px;\r\n  border-bottom-color: rgba(0, 0, 0, 0.8);\r\n  transition: opacity 250ms, top 250ms;\r\n}\r\ndfn:hover {\r\n  z-index: 2;\r\n} /* Keeps the info boxes on top of other elements */\r\ndfn:hover::after,\r\ndfn:hover::before {\r\n  opacity: 1;\r\n}\r\ndfn:hover::after {\r\n  top: 30px;\r\n}\r\ndfn:hover::before {\r\n  top: 20px;\r\n}\r\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ __webpack_exports__["default"] = (___CSS_LOADER_EXPORT___);
 
@@ -37460,7 +37460,7 @@ var Form = /*#__PURE__*/function (_Component) {
       }, "Seleccione las im\xE1genes", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("sup", {
         "class": "text-danger"
       }, "*"), " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("dfn", {
-        "data-info": "Para una mejor visualizaci\xF3n, \r se recomienda que la primera y/o segunda imagen sea en formato vertical."
+        "data-info": "Para una mejor visualizaci\xF3n, \r se recomienda que la primera y/o segunda imagen sea en formato vertical. \r Despu\xE9s al editar puede modificar la imagen principal."
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("i", {
         "class": "fa fa-info-circle"
       }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
@@ -38740,7 +38740,7 @@ var Get = /*#__PURE__*/function (_Component) {
           while (1) {
             switch (_context4.prev = _context4.next) {
               case 0:
-                conf = confirm("¿Está seguro de que quiere eliminar " + title + " de favoritos?");
+                conf = confirm("¿Está seguro de que quiere eliminar '" + title + "' de favoritos?");
 
                 if (!conf) {
                   _context4.next = 6;
@@ -39126,7 +39126,7 @@ var List = /*#__PURE__*/function (_Component) {
           while (1) {
             switch (_context3.prev = _context3.next) {
               case 0:
-                conf = confirm("¿Está seguro de que quiere eliminar " + title + " de favoritos?");
+                conf = confirm("¿Está seguro de que quiere eliminar '" + title + "' de favoritos?");
 
                 if (!conf) {
                   _context3.next = 6;
@@ -39672,7 +39672,7 @@ var List = /*#__PURE__*/function (_Component) {
           while (1) {
             switch (_context3.prev = _context3.next) {
               case 0:
-                conf = confirm("¿Está seguro de que quiere eliminar " + title + " de favoritos?");
+                conf = confirm("¿Está seguro de que quiere eliminar '" + title + "' de favoritos?");
 
                 if (!conf) {
                   _context3.next = 6;
@@ -39983,7 +39983,7 @@ var List = /*#__PURE__*/function (_Component) {
           while (1) {
             switch (_context3.prev = _context3.next) {
               case 0:
-                conf = confirm("¿Está seguro de que quiere eliminar " + title + " de favoritos?");
+                conf = confirm("¿Está seguro de que quiere eliminar '" + title + "' de favoritos?");
 
                 if (!conf) {
                   _context3.next = 6;
@@ -40595,7 +40595,7 @@ var List = /*#__PURE__*/function (_Component) {
           while (1) {
             switch (_context3.prev = _context3.next) {
               case 0:
-                conf = confirm("¿Está seguro de que quiere eliminar " + title + " de favoritos?");
+                conf = confirm("¿Está seguro de que quiere eliminar '" + title + "' de favoritos?");
 
                 if (!conf) {
                   _context3.next = 6;
@@ -44453,7 +44453,7 @@ var List = /*#__PURE__*/function (_Component) {
           while (1) {
             switch (_context2.prev = _context2.next) {
               case 0:
-                conf = confirm("¿Está seguro de que quiere eliminar " + title + " de favoritos?");
+                conf = confirm("¿Está seguro de que quiere eliminar '" + title + "' de favoritos?");
 
                 if (!conf) {
                   _context2.next = 6;
