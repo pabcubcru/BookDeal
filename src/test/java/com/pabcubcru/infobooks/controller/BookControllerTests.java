@@ -148,10 +148,12 @@ public class BookControllerTests {
 
                 given(this.userFavouriteBookService.findByUsernameAndBookId("test001", ID_BOOK_1)).willReturn(null);
 
-                given(this.bookService.findByUsername("test002")).willReturn(List.of(book2));
+                List<Book> books = new ArrayList<Book>();
+                books.add(book2);
+                given(this.bookService.findByUsername("test002")).willReturn(books);
                 given(this.bookService.findByIdBookAndPrincipalTrue(ID_BOOK_2)).willReturn(image);
 
-                Page<Book> page = new PageImpl<>(List.of(book2));
+                Page<Book> page = new PageImpl<>(books);
                 given(this.bookService.findMyBooks("test002", PageRequest.of(0, 21))).willReturn(page);
 
                 given(this.userService.findByUsername("test002")).willReturn(user);
