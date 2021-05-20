@@ -151,7 +151,7 @@ book.imagePrincipal = async (idBook, idImage) => {
 book.deleteImage = async (image) => {
   const urlDeleteEntityImage = baseUrl + "/images/" + image.id + "/delete";
   const deleteImageEntity = await axios
-    .get(urlDeleteEntityImage)
+    .delete(urlDeleteEntityImage)
     .then((response) => {
       return response.data;
     })

@@ -42004,7 +42004,7 @@ book.deleteImage = /*#__PURE__*/function () {
           case 0:
             urlDeleteEntityImage = baseUrl + "/images/" + image.id + "/delete";
             _context4.next = 3;
-            return axios__WEBPACK_IMPORTED_MODULE_2___default.a.get(urlDeleteEntityImage).then(function (response) {
+            return axios__WEBPACK_IMPORTED_MODULE_2___default.a["delete"](urlDeleteEntityImage).then(function (response) {
               return response.data;
             })["catch"](function (error) {
               return error.response;

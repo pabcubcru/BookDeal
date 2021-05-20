@@ -164,7 +164,7 @@ public class InfoBooksApplication {
 		book.setIsbn("0-7645-2641-3");
 		book.setPublicationYear(2014);
 		book.setPublisher("Publisher Test");
-		book.setGenres("Autoayuda");
+		book.setGenres("Religión,Gastronomía,Cocina");
 		book.setAuthor("Author Test");
 		book.setDescription("Description test");
 		book.setStatus("COMO NUEVO");
@@ -176,8 +176,14 @@ public class InfoBooksApplication {
 		book.setId("book-002");
 		book.setTitle("Title test 2");
 		book.setStatus("COMO NUEVO");
-		book.setPrice(null);
 		book.setUsername("test002");
+		this.buildBookIndexImages(book.getId(), "https://images-na.ssl-images-amazon.com/images/I/81sBQfVzziL.jpg", 2);
+		this.bookRepository.save(book);
+
+		book.setId("book-003");
+		book.setTitle("Title test 3");
+		book.setStatus("COMO NUEVO");
+		book.setUsername("juan1234");
 		this.buildBookIndexImages(book.getId(), "https://images-na.ssl-images-amazon.com/images/I/81sBQfVzziL.jpg", 2);
 		this.bookRepository.save(book);
 	}
@@ -190,38 +196,32 @@ public class InfoBooksApplication {
 		this.authoritiesRepository.save(authorities);
 	}
 
-	public void buildUserIndexForTests() {
+	private void createUser(String username) {
 		User user = new User();
 
-		user.setId("userTest-pablo123");
-		user.setName("Pablo");
-		user.setEmail("pablo@us.es");
+		user.setId("userTest-"+username);
+		user.setName(username);
+		user.setEmail(username+"@us.es");
 		user.setPhone("+34654987321");
 		user.setBirthDate(LocalDate.of(1998, 11, 23));
 		user.setProvince("Sevilla");
 		user.setPostCode("41012");
-		user.setUsername("pablo123");
-		user.setGenres("Autoayuda,Esoterismo,Ciencia");
-		user.setPassword(new BCryptPasswordEncoder().encode("pablo123"));
-		user.setEnabled(true);
-		this.userRepository.save(user);
-		this.buildAuthoritiesForTests(user.getUsername());
-
-		user = new User();
-
-		user.setId("userTest-juan1234");
-		user.setName("Juan");
-		user.setEmail("juan@us.es");
-		user.setPhone("+34654987321");
-		user.setBirthDate(LocalDate.of(1998, 11, 23));
-		user.setProvince("Sevilla");
-		user.setPostCode("41012");
-		user.setUsername("juan1234");
+		user.setUsername(username);
 		user.setGenres("Religión,Gastronomía,Cocina");
-		user.setPassword(new BCryptPasswordEncoder().encode("juan1234"));
+		user.setPassword(new BCryptPasswordEncoder().encode(username));
 		user.setEnabled(true);
 		this.userRepository.save(user);
 		this.buildAuthoritiesForTests(user.getUsername());
+	}
+
+	public void buildUserIndexForTests() {
+		this.createUser("pablo123");
+
+		this.createUser("juan1234");
+
+		this.createUser("test001");
+
+		this.createUser("test002");
 	}
 
 	public void buildIndexUsersForBooks() {

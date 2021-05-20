@@ -27,12 +27,12 @@ public class UserServiceTests {
     public void shouldFindUserByUsername() throws Exception {
         User user = this.userService.findByUsername("juan1234");
         Assertions.assertThat(user.getId()).isEqualTo("userTest-juan1234");
-        Assertions.assertThat(user.getEmail()).isEqualTo("juan@us.es");
+        Assertions.assertThat(user.getEmail()).isEqualTo("juan1234@us.es");
     }
 
     @Test
     public void shouldExistsUserWithSameEmail() throws Exception {
-        Boolean exists = this.userService.existUserWithSameEmail("pablo@us.es");
+        Boolean exists = this.userService.existUserWithSameEmail("pablo123@us.es");
         Assertions.assertThat(exists).isEqualTo(true);
     }
 
