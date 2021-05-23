@@ -8,7 +8,6 @@ export default class Nav extends Component {
     super();
     this.state = {
       isLogged: false,
-      isAdmin: false,
       query: "",
       selectSearch: "",
     };
@@ -17,8 +16,7 @@ export default class Nav extends Component {
   async componentDidMount() {
     const res = await userService.getPrincipal();
     this.setState({
-      isLogged: res.isLogged,
-      isAdmin: res.isAdmin,
+      isLogged: res.isLogged
     });
   }
 

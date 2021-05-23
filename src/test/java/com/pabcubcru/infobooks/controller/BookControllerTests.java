@@ -3,7 +3,9 @@ package com.pabcubcru.infobooks.controller;
 import java.nio.charset.Charset;
 import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.ObjectWriter;
@@ -15,6 +17,7 @@ import com.pabcubcru.infobooks.models.RequestStatus;
 import com.pabcubcru.infobooks.models.User;
 import com.pabcubcru.infobooks.services.BookService;
 import com.pabcubcru.infobooks.services.RequestService;
+import com.pabcubcru.infobooks.services.SearchService;
 import com.pabcubcru.infobooks.services.UserFavouriteBookService;
 import com.pabcubcru.infobooks.services.UserService;
 
@@ -68,8 +71,13 @@ public class BookControllerTests {
         @MockBean
         private UserFavouriteBookService userFavouriteBookService;
 
+        @MockBean
+        private SearchService searchService;
+
         public static final MediaType APPLICATION_JSON_UTF8 = new MediaType(MediaType.APPLICATION_JSON.getType(),
                         MediaType.APPLICATION_JSON.getSubtype(), Charset.forName("utf8"));
+        public static final Charset ISO_8859_1 = Charset.forName("ISO-8859-1");
+        public static final Charset UTF_8 = Charset.forName("UTF-8");
 
         @BeforeEach
         void setup() {
@@ -129,10 +137,7 @@ public class BookControllerTests {
                 given(this.bookService.findBookById(ID_BOOK_1)).willReturn(book);
                 given(this.bookService.findBookById(ID_BOOK_2)).willReturn(book2);
                 given(this.bookService.findAllExceptMine("test001", PageRequest.of(1, 21))).willReturn(booksTest001);
-                // BDDMockito.given(this.bookService.findAllExceptMine("test001",
-                // PageRequest.of(1, 21)).getContent()).willReturn(listTest001);
-                // BDDMockito.given(this.bookService.findAllExceptMine("test001",
-                // PageRequest.of(1, 21)).getTotalPages()).willReturn(10);
+
                 given(this.requestService.findByIdBook1OrIdBook2(ID_BOOK_1, ID_BOOK_1)).willReturn(requests);
                 given(this.requestService.findFirstByIdBook1AndStatus(ID_BOOK_1, RequestStatus.ACEPTADA.toString()))
                                 .willReturn(null);
@@ -161,12 +166,22 @@ public class BookControllerTests {
 
                 given(this.bookService.findImageById(ID_IMAGE_1)).willReturn(image);
                 given(this.bookService.findByIdBookAndPrincipalTrue(ID_BOOK_1)).willReturn(new Image());
+
+                Map<Integer, List<Book>> map = new HashMap<>();
+                map.put(1, books);
+                given(this.searchService.recommendBooks(user, PageRequest.of(0, 21))).willReturn(map);
         }
 
         @Test
         @WithMockUser(value = "user1", authorities = "user")
         public void testMain() throws Exception {
                 this.mockMvc.perform(get("/books/new")).andExpect(status().isOk()).andExpect(view().name("Main"));
+        }
+
+        @Test
+        @WithMockUser(value = "user1", authorities = "user")
+        public void testMainForShowMode() throws Exception {
+                this.mockMvc.perform(get("/books/all/0/postCode")).andExpect(status().isOk()).andExpect(view().name("Main"));
         }
 
         @Test
@@ -223,6 +238,7 @@ public class BookControllerTests {
                                 .andExpect(status().isOk()).andReturn().getResponse();
 
                 assertThat(response.getContentAsString()).contains("\"success\":true");
+                assertThat(response.getStatus()).isEqualTo(200);
         }
 
         @Test
@@ -352,13 +368,18 @@ public class BookControllerTests {
                 MockHttpServletResponse response = this.mockMvc.perform(get("/books/genres")).andExpect(status().isOk())
                                 .andReturn().getResponse();
 
-                assertThat(response.getContentAsString()).contains(
-                                "\"Arte\",\"DiseÃ±o\",\"Autoayuda\",\"Esoterismo\",\"Ciencia\",\"Naturaleza\",\"Ciencias_Sociales\","
-                                                + "\"Deportes\",\"Derecho\",\"PolÃ­tica\",\"EconomÃ­a\",\"Negocios\",\"Ensayos\",\"BiografÃ­as\",\"EspectÃ¡culos\","
-                                                + "\"Cine\",\"MÃºsica\",\"FilosofÃ­a\",\"ReligiÃ³n\",\"GastronomÃ­a\",\"Cocina\",\"Historia\",\"Hogar\","
-                                                + "\"Familia\",\"IngenierÃ­a\",\"TecnologÃ­a\",\"Libros_Infantiles\",\"Libros_Juveniles\",\"Literatura\",\"Novela\","
-                                                + "\"Medicina\",\"Salud\",\"Obras_de_Consulta\",\"Idiomas\",\"Ocio_y_tiempo_libre\",\"PoesÃ­a\",\"Viajes\","
-                                                + "\"GeografÃ­a\",\"Otros\"");
+                String content = response.getContentAsString();
+
+                byte[] ptext = content.getBytes(ISO_8859_1);
+                String res = new String(ptext, UTF_8);        
+
+                assertThat(res).contains(
+                                "\"Arte\",\"Diseño\",\"Autoayuda\",\"Esoterismo\",\"Ciencia\",\"Naturaleza\",\"Ciencias_Sociales\","
+                                                + "\"Deportes\",\"Derecho\",\"Política\",\"Economía\",\"Negocios\",\"Ensayos\",\"Biografías\",\"Espectáculos\","
+                                                + "\"Cine\",\"Música\",\"Filosofía\",\"Religión\",\"Gastronomía\",\"Cocina\",\"Historia\",\"Hogar\","
+                                                + "\"Familia\",\"Ingeniería\",\"Tecnología\",\"Libros_Infantiles\",\"Libros_Juveniles\",\"Literatura\",\"Novela\","
+                                                + "\"Medicina\",\"Salud\",\"Obras_de_Consulta\",\"Idiomas\",\"Ocio_y_tiempo_libre\",\"Poesía\",\"Viajes\","
+                                                + "\"Geografía\",\"Otros\"");
         }
 
         @Test
@@ -393,4 +414,12 @@ public class BookControllerTests {
                                 .andExpect(status().isOk());
         }
 
+        @Test
+        @WithMockUser(value = "test002", authorities = "user")
+        public void testRecommendBooks() throws Exception {
+                MockHttpServletResponse response = this.mockMvc.perform(get("/books/recommend"))
+                .andExpect(status().isOk()).andReturn().getResponse();
+
+                assertThat(response.getContentAsString()).contains(ID_BOOK_2);
+        }
 }

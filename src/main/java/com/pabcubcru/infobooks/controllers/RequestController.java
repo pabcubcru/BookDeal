@@ -61,11 +61,10 @@ public class RequestController {
         if (id != null) {
             Book book = this.bookService.findBookById(id);
             Request req = this.requestService.findByUsername1AndIdBook2(principal.getName(), id);
-            if (req != null) {
-                model.setViewName("errors/Error403");
-            }
             if (book == null) {
                 model.setViewName("errors/Error404");
+            } else if (req != null || book.getUsername().equals(principal.getName())) {
+                model.setViewName("errors/Error403");
             }
         } else {
             model.setViewName("errors/Error404");
@@ -85,8 +84,8 @@ public class RequestController {
         if (!result.hasErrors()) {
             try {
                 Request req = this.requestService.findByUsername1AndIdBook2(principal.getName(), id);
-                if (req == null) {
-                    Book book = this.bookService.findBookById(id);
+                Book book = this.bookService.findBookById(id);
+                if (req == null && !book.getUsername().equals(principal.getName())) {
                     if (request.getAction().equals("INTERCAMBIO")) {
                         request.setPay(null);
                     } else if (request.getAction().equals("COMPRA")) {

@@ -2,9 +2,7 @@ package com.pabcubcru.infobooks.services;
 
 import java.util.ArrayList;
 import java.util.Collection;
-import java.util.List;
 
-import com.pabcubcru.infobooks.models.Authorities;
 import com.pabcubcru.infobooks.models.User;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,9 +19,6 @@ public class UserLoginService implements UserDetailsService {
     @Autowired
     private UserService userService;
 
-    @Autowired
-    private AuthoritiesService authoritiesService;
-
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
         User user = userService.findByUsername(username);
@@ -36,17 +31,6 @@ public class UserLoginService implements UserDetailsService {
 
     private Collection<GrantedAuthority> getGrantedAuthorities(String username) {
         Collection<GrantedAuthority> grantedAuthorities = new ArrayList<>();
-        Boolean isAdmin = false;
-        List<Authorities> authorities = this.authoritiesService.findByUsername(username);
-        for (Authorities a : authorities) {
-            if (a.getAuthority().equals("admin")) {
-                isAdmin = true;
-                break;
-            }
-        }
-        if (isAdmin) {
-            grantedAuthorities.add(new SimpleGrantedAuthority("admin"));
-        }
         grantedAuthorities.add(new SimpleGrantedAuthority("user"));
         return grantedAuthorities;
     }

@@ -17,7 +17,7 @@ export default class Login extends Component {
         <h1 style={{ color: "#007bff" }}>Iniciar sesión</h1>
         <br></br>
         <h4 class="text-danger">
-          *Usuario o contraseña incorrectos.{" "}
+          Usuario o contraseña incorrectos.{" "}
           <Link to="/login">Intentar de nuevo</Link>
         </h4>
         <hr />

@@ -131,7 +131,7 @@ export default class Form extends Component {
                 {this.state.noBooks ? (
                   <div>
                     <p class="text-danger">
-                      *No tiene libros para intercambiar.{" "}
+                      No tiene libros para intercambiar.{" "}
                       <a href="/books/new" class="btn btn-primary">
                         ¡Añade uno!
                       </a>
