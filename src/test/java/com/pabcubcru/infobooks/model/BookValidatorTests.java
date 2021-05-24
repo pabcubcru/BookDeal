@@ -148,25 +148,4 @@ public class BookValidatorTests {
         Assertions.assertThat(violation.getPropertyPath().toString()).isEqualTo("publicationYear");
         Assertions.assertThat(violation.getMessage()).isEqualTo("El año de publicación debe ser un número positivo.");
     }
-
-    /*
-     * @Test void errorWhenUrlImageIsNotValid() throws Exception {
-     * LocaleContextHolder.setLocale(Locale.ENGLISH); Book book = new Book();
-     * 
-     * book.setTitle("Title test"); book.setIsbn("0-7645-2641-3");
-     * book.setPublicationYear(2014); book.setPublisher("Publisher Test");
-     * book.setGenres("Comedia"); book.setAuthor("Author Test");
-     * book.setDescription("Description test");
-     * book.setImage("pini/originals/8d/23/06/8d2306b98839234e49ce96a8b76e20a");
-     * //URL no válida book.setStatus("COMO NUEVO"); book.setUsername("test001");
-     * book.setPrice(10.0);
-     * 
-     * Validator validator = createValidator(); Set<ConstraintViolation<Book>>
-     * constrains = validator.validate(book);
-     * Assertions.assertThat(constrains.size()).isEqualTo(1);
-     * ConstraintViolation<Book> violation = constrains.iterator().next();
-     * Assertions.assertThat(violation.getPropertyPath().toString()).isEqualTo(
-     * "image"); Assertions.assertThat(violation.getMessage()).
-     * isEqualTo("La URL de la imagen no es válida."); }
-     */
 }

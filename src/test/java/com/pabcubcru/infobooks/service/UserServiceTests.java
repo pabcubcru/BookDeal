@@ -54,4 +54,34 @@ public class UserServiceTests {
         Assertions.assertThat(exists).isEqualTo(false);
     }
 
+    @Test
+    public void shouldSaveUser() throws Exception {
+        User user = this.userService.findByUsername("juan1234");
+
+        String username = "testSave";
+        String newEmail = "test@test.com";
+        user.setUsername(username);
+        user.setEmail(newEmail);
+        user.setId(null);
+        this.userService.save(user, true);
+
+        user = this.userService.findByUsername("testSave");
+
+        Assertions.assertThat(user.getUsername()).isEqualTo(username);
+        Assertions.assertThat(user.getEmail()).isEqualTo(newEmail);
+    }
+
+    @Test
+    public void shouldDeleteUser() throws Exception {
+        User user = this.userService.findByUsername("test001");
+
+        Assertions.assertThat(user).isNotNull();
+
+        this.userService.delete(user);
+
+        user = this.userService.findByUsername("test001");
+
+        Assertions.assertThat(user).isNull();
+    }
+
 }

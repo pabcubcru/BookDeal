@@ -174,11 +174,10 @@ public class UserController {
 		if (!user.getEmail().isEmpty()) {
 			Boolean existEmail = this.userService.existUserWithSameEmail(user.getEmail());
 			if (existEmail && !userOld.getEmail().equals(user.getEmail())) {
-				res.put("message", "Este correo electrónico ya está registrado.");
-				res.put("success", false);
+				result.rejectValue("email", "Este correo electrónico ya está registrado.",
+						"Este correo electrónico ya está registrado.");
 			}
 		}
-
 		result = this.validateUser(user, result, false);
 		if (!result.hasErrors()) {
 			user.setId(userOld.getId());

@@ -30,21 +30,18 @@ public class BookServiceTests {
 
     @Test
     public void shouldFindAll() throws Exception {
-        PageRequest pageRequest = PageRequest.of(1, 20);
+        PageRequest pageRequest = PageRequest.of(0, 20);
         Page<Book> books = this.bookService.findAll(pageRequest);
-        Long numberOfBooks = books.getTotalElements();
-        // Assertions.assertThat(numberOfBooks).isEqualTo(863L); //863 = 861 de dataset
-        // y 2 para tests
+        
+        Assertions.assertThat(books.getContent()).isNotEmpty();
     }
 
     @Test
     public void shouldFindMyBooks() throws Exception {
-        PageRequest pageRequest = PageRequest.of(1, 20);
-        Page<Book> books = this.bookService.findMyBooks("pablo123", pageRequest);
-        /*
-         * String username = books.getContent().get(0).getUsername();
-         * Assertions.assertThat(username).isEqualTo("pablo123");
-         */
+        PageRequest pageRequest = PageRequest.of(0, 20);
+        Page<Book> books = this.bookService.findMyBooks("juan1234", pageRequest);
+
+        Assertions.assertThat(books.getContent().size()).isEqualTo(1);
     }
 
     @Test
@@ -74,7 +71,7 @@ public class BookServiceTests {
 
     @Test
     public void shouldSaveValidateBook() throws Exception {
-        PageRequest pageRequest = PageRequest.of(1, 20);
+        PageRequest pageRequest = PageRequest.of(0, 20);
         Page<Book> books = this.bookService.findAll(pageRequest);
         Long numberOfBooksBefore = books.getTotalElements();
 
@@ -101,7 +98,7 @@ public class BookServiceTests {
 
     @Test
     public void shouldEditValidateBook() throws Exception {
-        PageRequest pageRequest = PageRequest.of(1, 20);
+        PageRequest pageRequest = PageRequest.of(0, 20);
         Page<Book> books = this.bookService.findAll(pageRequest);
         Long numberOfBooksBefore = books.getTotalElements();
 
@@ -117,8 +114,8 @@ public class BookServiceTests {
         Assertions.assertThat(numberOfBooksAfter).isEqualTo(numberOfBooksBefore);
     }
 
-    /*private void findNearBooks(String showMode) {
-        PageRequest pageRequest = PageRequest.of(1, 20);
+    private void findNearBooks(String showMode) {
+        PageRequest pageRequest = PageRequest.of(0, 20);
         User user = this.userService.findByUsername("pablo123");
 
         Page<Book> books = this.bookService.findNearBooks(user, pageRequest, showMode);
@@ -148,7 +145,7 @@ public class BookServiceTests {
     public void shouldFindNearBooksProvinceOrPostCode() throws Exception {
         String showMode = "undefined";
         this.findNearBooks(showMode);
-    }*/
+    }
 
     @Test
     public void shouldFindBooksByUsername() throws Exception {

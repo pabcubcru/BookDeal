@@ -181,7 +181,7 @@ public class InfoBooksApplication {
 		this.bookRepository.save(book);
 
 		book.setId("book-003");
-		book.setTitle("Title test 3");
+		book.setTitle("Sapiens");
 		book.setStatus("COMO NUEVO");
 		book.setUsername("juan1234");
 		this.buildBookIndexImages(book.getId(), "https://images-na.ssl-images-amazon.com/images/I/81sBQfVzziL.jpg", 2);

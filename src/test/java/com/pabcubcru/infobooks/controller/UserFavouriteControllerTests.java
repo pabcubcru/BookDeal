@@ -74,7 +74,7 @@ public class UserFavouriteControllerTests {
         image.setIdBook(ID_BOOK_1);
         image.setPrincipal(true);
 
-        List<UserFavouriteBook> listUfb = new ArrayList<>(); 
+        List<UserFavouriteBook> listUfb = new ArrayList<>();
         listUfb.add(ufb);
         Page<UserFavouriteBook> page = new PageImpl<>(listUfb);
         given(this.userFavouriteBookService.findAllByUsername("test001", PageRequest.of(0, 12))).willReturn(page);
@@ -101,8 +101,8 @@ public class UserFavouriteControllerTests {
     @Test
     @WithMockUser(value = "test001", authorities = "user")
     public void testFindAllByUsername() throws Exception {
-        MockHttpServletResponse response = this.mockMvc.perform(get("/favourites/all?page=0")).andExpect(status().isOk())
-                .andReturn().getResponse();
+        MockHttpServletResponse response = this.mockMvc.perform(get("/favourites/all?page=0"))
+                .andExpect(status().isOk()).andReturn().getResponse();
 
         String content = response.getContentAsString();
 
@@ -113,24 +113,15 @@ public class UserFavouriteControllerTests {
     @Test
     @WithMockUser(value = "test001", authorities = "user")
     public void testAddFavouriteBook() throws Exception {
-        MockHttpServletResponse response = this.mockMvc.perform(get("/favourites/" + ID_BOOK_2 + "/add")).andExpect(status().isOk())
-                .andReturn().getResponse();
-
-        String content = response.getContentAsString();
-
-        assertThat(content).contains("\"success\":true");
+        this.mockMvc.perform(get("/favourites/" + ID_BOOK_2 + "/add")).andExpect(status().isOk())
+                .andExpect(jsonPath("$.success").value(true));
     }
 
     @Test
     @WithMockUser(value = "test001", authorities = "user")
     public void testIsAlreadyFavouriteBook() throws Exception {
-        MockHttpServletResponse response = this.mockMvc.perform(get("/favourites/" + ID_BOOK_1 + "/add")).andExpect(status().isOk())
-                .andReturn().getResponse();
-
-        String content = response.getContentAsString();
-
-        assertThat(content).contains("\"success\":false");
-        assertThat(content).contains("\"alreadyAdded\":true");
+        this.mockMvc.perform(get("/favourites/" + ID_BOOK_1 + "/add")).andExpect(status().isOk())
+                .andExpect(jsonPath("$.success").value(false)).andExpect(jsonPath("$.alreadyAdded").value(true));
     }
 
     @Test

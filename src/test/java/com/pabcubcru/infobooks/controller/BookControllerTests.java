@@ -181,7 +181,8 @@ public class BookControllerTests {
         @Test
         @WithMockUser(value = "user1", authorities = "user")
         public void testMainForShowMode() throws Exception {
-                this.mockMvc.perform(get("/books/all/0/postCode")).andExpect(status().isOk()).andExpect(view().name("Main"));
+                this.mockMvc.perform(get("/books/all/0/postCode")).andExpect(status().isOk())
+                                .andExpect(view().name("Main"));
         }
 
         @Test
@@ -233,12 +234,8 @@ public class BookControllerTests {
                 ObjectWriter ow = mapper.writer().withDefaultPrettyPrinter();
                 String requestJson = ow.writeValueAsString(book);
 
-                MockHttpServletResponse response = mockMvc
-                                .perform(post("/books/new").contentType(APPLICATION_JSON_UTF8).content(requestJson))
-                                .andExpect(status().isOk()).andReturn().getResponse();
-
-                assertThat(response.getContentAsString()).contains("\"success\":true");
-                assertThat(response.getStatus()).isEqualTo(200);
+                mockMvc.perform(post("/books/new").contentType(APPLICATION_JSON_UTF8).content(requestJson))
+                                .andExpect(status().isOk()).andExpect(jsonPath("$.success").value(true));
         }
 
         @Test
@@ -262,11 +259,8 @@ public class BookControllerTests {
                 ObjectWriter ow = mapper.writer().withDefaultPrettyPrinter();
                 String requestJson = ow.writeValueAsString(book);
 
-                MockHttpServletResponse response = mockMvc
-                                .perform(post("/books/new").contentType(APPLICATION_JSON_UTF8).content(requestJson))
-                                .andExpect(status().isOk()).andReturn().getResponse();
-
-                assertThat(response.getContentAsString()).contains("\"success\":false");
+                mockMvc.perform(post("/books/new").contentType(APPLICATION_JSON_UTF8).content(requestJson))
+                                .andExpect(status().isOk()).andExpect(jsonPath("$.success").value(false));
         }
 
         @Test
@@ -291,12 +285,9 @@ public class BookControllerTests {
                 ObjectWriter ow = mapper.writer().withDefaultPrettyPrinter();
                 String requestJson = ow.writeValueAsString(book);
 
-                MockHttpServletResponse response = mockMvc
-                                .perform(put("/books/" + ID_BOOK_1 + "/edit").contentType(APPLICATION_JSON_UTF8)
-                                                .content(requestJson))
-                                .andExpect(status().isOk()).andReturn().getResponse();
-
-                assertThat(response.getContentAsString()).contains("\"success\":true");
+                mockMvc.perform(put("/books/" + ID_BOOK_1 + "/edit").contentType(APPLICATION_JSON_UTF8)
+                                .content(requestJson)).andExpect(status().isOk())
+                                .andExpect(jsonPath("$.success").value(true));
         }
 
         @Test
@@ -321,12 +312,9 @@ public class BookControllerTests {
                 ObjectWriter ow = mapper.writer().withDefaultPrettyPrinter();
                 String requestJson = ow.writeValueAsString(book);
 
-                MockHttpServletResponse response = mockMvc
-                                .perform(put("/books/" + ID_BOOK_1 + "/edit").contentType(APPLICATION_JSON_UTF8)
-                                                .content(requestJson))
-                                .andExpect(status().isOk()).andReturn().getResponse();
-
-                assertThat(response.getContentAsString()).contains("\"success\":false");
+                mockMvc.perform(put("/books/" + ID_BOOK_1 + "/edit").contentType(APPLICATION_JSON_UTF8)
+                                .content(requestJson)).andExpect(status().isOk())
+                                .andExpect(jsonPath("$.success").value(false));
         }
 
         @Test
@@ -338,8 +326,9 @@ public class BookControllerTests {
         @Test
         @WithMockUser(value = "test002", authorities = "user")
         public void testListAllExceptMyBooks() throws Exception {
-                MockHttpServletResponse response = this.mockMvc.perform(get("/books/list/all-me?page=0&showMode=undefined"))
-                                .andExpect(status().isOk()).andReturn().getResponse();
+                MockHttpServletResponse response = this.mockMvc
+                                .perform(get("/books/list/all-me?page=0&showMode=undefined")).andExpect(status().isOk())
+                                .andReturn().getResponse();
 
                 assertThat(response.getContentAsString()).contains(ID_BOOK_2);
         }
@@ -371,7 +360,7 @@ public class BookControllerTests {
                 String content = response.getContentAsString();
 
                 byte[] ptext = content.getBytes(ISO_8859_1);
-                String res = new String(ptext, UTF_8);        
+                String res = new String(ptext, UTF_8);
 
                 assertThat(res).contains(
                                 "\"Arte\",\"Diseño\",\"Autoayuda\",\"Esoterismo\",\"Ciencia\",\"Naturaleza\",\"Ciencias_Sociales\","
@@ -385,7 +374,7 @@ public class BookControllerTests {
         @Test
         @WithMockUser(value = "test002", authorities = "user")
         public void testGetBookById() throws Exception {
-                MockHttpServletResponse response = this.mockMvc.perform(get("/books/get/"+ID_BOOK_2))
+                MockHttpServletResponse response = this.mockMvc.perform(get("/books/get/" + ID_BOOK_2))
                                 .andExpect(status().isOk()).andReturn().getResponse();
 
                 assertThat(response.getContentAsString()).contains(ID_BOOK_2);
@@ -394,7 +383,7 @@ public class BookControllerTests {
         @Test
         @WithMockUser(value = "test002", authorities = "user")
         public void testGetBookByIdToEdit() throws Exception {
-                MockHttpServletResponse response = this.mockMvc.perform(get("/books/edit/"+ID_BOOK_2))
+                MockHttpServletResponse response = this.mockMvc.perform(get("/books/edit/" + ID_BOOK_2))
                                 .andExpect(status().isOk()).andReturn().getResponse();
 
                 assertThat(response.getContentAsString()).contains(ID_BOOK_2);
@@ -403,22 +392,21 @@ public class BookControllerTests {
         @Test
         @WithMockUser(value = "test001", authorities = "user")
         public void testChangeImagePrincipal() throws Exception {
-                this.mockMvc.perform(get("/books/"+ID_BOOK_1+"/images/"+ID_IMAGE_1+"/principal"))
+                this.mockMvc.perform(get("/books/" + ID_BOOK_1 + "/images/" + ID_IMAGE_1 + "/principal"))
                                 .andExpect(status().isOk());
         }
 
         @Test
         @WithMockUser(value = "test001", authorities = "user")
         public void testDeleteImage() throws Exception {
-                this.mockMvc.perform(delete("/books/images/"+ID_IMAGE_1+"/delete"))
-                                .andExpect(status().isOk());
+                this.mockMvc.perform(delete("/books/images/" + ID_IMAGE_1 + "/delete")).andExpect(status().isOk());
         }
 
         @Test
         @WithMockUser(value = "test002", authorities = "user")
         public void testRecommendBooks() throws Exception {
                 MockHttpServletResponse response = this.mockMvc.perform(get("/books/recommend"))
-                .andExpect(status().isOk()).andReturn().getResponse();
+                                .andExpect(status().isOk()).andReturn().getResponse();
 
                 assertThat(response.getContentAsString()).contains(ID_BOOK_2);
         }

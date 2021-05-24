@@ -144,7 +144,7 @@ public class SearchController {
             }
             res.put("query", query);
             res.put("success", true);
-            this.searchService.saveSearch(search, principal);
+            this.searchService.saveSearch(search, principal != null ? principal.getName() : null);
         }
         return res;
     }
