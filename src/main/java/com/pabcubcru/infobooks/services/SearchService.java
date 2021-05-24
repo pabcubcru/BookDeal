@@ -1,6 +1,5 @@
 package com.pabcubcru.infobooks.services;
 
-import java.security.Principal;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
@@ -192,23 +191,25 @@ public class SearchService {
                     .findByUsername(user.getUsername(), Pageable.unpaged()).getContent();
 
             List<Book> favouritesBooks = favouritesBooksOfUser.stream()
-                    .map(x -> this.bookRepository.findById(x.getBookId()).get()).collect(Collectors.toList());
+                    .map(x -> this.bookRepository.findById(x.getBookId()).orElse(null)).collect(Collectors.toList());
             booksOfUser.addAll(favouritesBooks);
 
             List<FunctionScoreQueryBuilder.FilterFunctionBuilder> filterFunctionBuilders = new ArrayList<>();
 
             if (!booksOfUser.isEmpty()) {
                 for (Book b : booksOfUser) {
-                    filterFunctionBuilders.add(new FunctionScoreQueryBuilder.FilterFunctionBuilder(
-                            QueryBuilders.matchQuery("publisher", b.getPublisher()),
-                            ScoreFunctionBuilders.weightFactorFunction(12)));
-                    filterFunctionBuilders.add(new FunctionScoreQueryBuilder.FilterFunctionBuilder(
-                            QueryBuilders.matchQuery("author", b.getAuthor()),
-                            ScoreFunctionBuilders.weightFactorFunction(10)));
-                    for (String genre : b.getGenres().split(",")) {
+                    if (b != null) {
                         filterFunctionBuilders.add(new FunctionScoreQueryBuilder.FilterFunctionBuilder(
-                                QueryBuilders.matchQuery("genres", genre),
+                                QueryBuilders.matchQuery("publisher", b.getPublisher()),
+                                ScoreFunctionBuilders.weightFactorFunction(12)));
+                        filterFunctionBuilders.add(new FunctionScoreQueryBuilder.FilterFunctionBuilder(
+                                QueryBuilders.matchQuery("author", b.getAuthor()),
                                 ScoreFunctionBuilders.weightFactorFunction(10)));
+                        for (String genre : b.getGenres().split(",")) {
+                            filterFunctionBuilders.add(new FunctionScoreQueryBuilder.FilterFunctionBuilder(
+                                    QueryBuilders.matchQuery("genres", genre),
+                                    ScoreFunctionBuilders.weightFactorFunction(10)));
+                        }
                     }
                 }
             }
@@ -226,9 +227,11 @@ public class SearchService {
             BoolQueryBuilder queryFilter = new BoolQueryBuilder();
 
             for (Book book : booksOfUser) {
-                BoolQueryBuilder boolQueryBuilder1 = new BoolQueryBuilder();
-                boolQueryBuilder1.mustNot(QueryBuilders.matchQuery("id", book.getId()));
-                queryFilter.must(boolQueryBuilder1);
+                if (book != null) {
+                    BoolQueryBuilder boolQueryBuilder1 = new BoolQueryBuilder();
+                    boolQueryBuilder1.mustNot(QueryBuilders.matchQuery("id", book.getId()));
+                    queryFilter.must(boolQueryBuilder1);
+                }
             }
             BoolQueryBuilder boolQueryBuilder2 = new BoolQueryBuilder();
             boolQueryBuilder2.mustNot(QueryBuilders.matchQuery("username", user.getUsername()));
@@ -266,14 +269,13 @@ public class SearchService {
         }
 
         return res;
-
     }
 
     @Transactional
-    public void saveSearch(Search search, Principal principal) {
-        if (principal != null) {
-            search.setUsername(principal.getName());
-            Search s = this.searchRepository.findFirstByUsername(principal.getName());
+    public void saveSearch(Search search, String username) {
+        if (username != null) {
+            search.setUsername(username);
+            Search s = this.searchRepository.findFirstByUsername(username);
             if (s != null) {
                 search.setId(s.getId());
             }

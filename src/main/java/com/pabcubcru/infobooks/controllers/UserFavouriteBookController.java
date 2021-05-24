@@ -42,15 +42,11 @@ public class UserFavouriteBookController {
         return model;
     }
 
-    public List<List<String>> getUrlsImagesFromBooks(List<Book> books) {
-        List<List<String>> allBookImages = new ArrayList<>();
+    public List<String> getUrlsImagesFromBooks(List<Book> books) {
+        List<String> allBookImages = new ArrayList<>();
         for (Book b : books) {
-            List<String> urlImages = new ArrayList<>();
-            List<Image> images = this.bookService.findImagesByIdBook(b.getId());
-            for (Image image : images) {
-                urlImages.add(image.getUrlImage());
-            }
-            allBookImages.add(urlImages);
+            Image image = this.bookService.findByIdBookAndPrincipalTrue(b.getId());
+            allBookImages.add(image.getUrlImage());
         }
         return allBookImages;
     }
@@ -71,7 +67,7 @@ public class UserFavouriteBookController {
 
         res.put("books", books);
 
-        List<List<String>> allBookImages = this.getUrlsImagesFromBooks(books);
+        List<String> allBookImages = this.getUrlsImagesFromBooks(books);
         res.put("urlImages", allBookImages);
 
         Integer numberOfPages = pageOfBooks.getTotalPages();

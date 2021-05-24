@@ -4,15 +4,12 @@ import java.security.Principal;
 import java.time.LocalDate;
 import java.time.Period;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 import javax.validation.Valid;
 
-import com.pabcubcru.infobooks.models.Authorities;
 import com.pabcubcru.infobooks.models.ProvinceEnum;
 import com.pabcubcru.infobooks.models.User;
-import com.pabcubcru.infobooks.services.AuthoritiesService;
 import com.pabcubcru.infobooks.services.UserService;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -31,9 +28,6 @@ public class UserController {
 	@Autowired
 	private UserService userService;
 
-	@Autowired
-	private AuthoritiesService authoritiesService;
-
 	@GetMapping(value = { "/", "/profile", "/register", "/login", "/login-error" })
 	public ModelAndView main() {
 		ModelAndView model = new ModelAndView();
@@ -46,18 +40,8 @@ public class UserController {
 		Map<String, Object> res = new HashMap<>();
 		if (principal != null) {
 			res.put("isLogged", true);
-			List<Authorities> authorities = this.authoritiesService.findByUsername(principal.getName());
-			Boolean isAdmin = false;
-			for (Authorities a : authorities) {
-				if (a.getAuthority().equals("admin")) {
-					isAdmin = true;
-					break;
-				}
-			}
-			res.put("isAdmin", isAdmin);
 		} else {
 			res.put("isLogged", false);
-			res.put("isAdmin", false);
 		}
 		return res;
 	}
@@ -190,11 +174,10 @@ public class UserController {
 		if (!user.getEmail().isEmpty()) {
 			Boolean existEmail = this.userService.existUserWithSameEmail(user.getEmail());
 			if (existEmail && !userOld.getEmail().equals(user.getEmail())) {
-				res.put("message", "Este correo electrónico ya está registrado.");
-				res.put("success", false);
+				result.rejectValue("email", "Este correo electrónico ya está registrado.",
+						"Este correo electrónico ya está registrado.");
 			}
 		}
-
 		result = this.validateUser(user, result, false);
 		if (!result.hasErrors()) {
 			user.setId(userOld.getId());

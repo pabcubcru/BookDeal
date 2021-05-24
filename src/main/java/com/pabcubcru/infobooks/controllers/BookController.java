@@ -3,7 +3,6 @@ package com.pabcubcru.infobooks.controllers;
 import java.security.Principal;
 import java.time.LocalDate;
 import java.util.ArrayList;
-import java.util.Comparator;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -447,7 +446,7 @@ public class BookController {
         return res;
     }
 
-    @GetMapping(value = "/images/{id}/delete")
+    @DeleteMapping(value = "/images/{id}/delete")
     public void deleteImage(@PathVariable("id") String id) {
         try {
             this.bookService.deleteImageById(id);

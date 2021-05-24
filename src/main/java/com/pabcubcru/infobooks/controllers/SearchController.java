@@ -144,13 +144,13 @@ public class SearchController {
             }
             res.put("query", query);
             res.put("success", true);
-            this.searchService.saveSearch(search, principal);
+            this.searchService.saveSearch(search, principal != null ? principal.getName() : null);
         }
         return res;
     }
 
     @GetMapping(value = "/titles/{query}")
-    public Map<String, Object> searchBooks(@PathVariable("query") String query) {
+    public Map<String, Object> getSuggestions(@PathVariable("query") String query) {
         Map<String, Object> res = new HashMap<>();
         res.put("titles", this.searchService.findTitlesOfBooks(query));
 

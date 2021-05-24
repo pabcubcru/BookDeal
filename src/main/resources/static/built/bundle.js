@@ -36877,7 +36877,6 @@ var Nav = /*#__PURE__*/function (_Component) {
     _this = _super.call(this);
     _this.state = {
       isLogged: false,
-      isAdmin: false,
       query: "",
       selectSearch: ""
     };
@@ -36899,8 +36898,7 @@ var Nav = /*#__PURE__*/function (_Component) {
               case 2:
                 res = _context.sent;
                 this.setState({
-                  isLogged: res.isLogged,
-                  isAdmin: res.isAdmin
+                  isLogged: res.isLogged
                 });
 
               case 4:
@@ -40959,7 +40957,7 @@ var Form = /*#__PURE__*/function (_Component) {
         "class": "text-danger"
       }, this.state.errorMessages[this.state.errorField.indexOf("idBook1")]) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null), this.state.noBooks ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
         "class": "text-danger"
-      }, "*No tiene libros para intercambiar.", " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
+      }, "No tiene libros para intercambiar.", " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
         href: "/books/new",
         "class": "btn btn-primary"
       }, "\xA1A\xF1ade uno!"))) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null))) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
@@ -42004,7 +42002,7 @@ book.deleteImage = /*#__PURE__*/function () {
           case 0:
             urlDeleteEntityImage = baseUrl + "/images/" + image.id + "/delete";
             _context4.next = 3;
-            return axios__WEBPACK_IMPORTED_MODULE_2___default.a.get(urlDeleteEntityImage).then(function (response) {
+            return axios__WEBPACK_IMPORTED_MODULE_2___default.a["delete"](urlDeleteEntityImage).then(function (response) {
               return response.data;
             })["catch"](function (error) {
               return error.response;
@@ -43646,7 +43644,7 @@ var Login = /*#__PURE__*/function (_Component) {
         }
       }, "Iniciar sesi\xF3n"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("h4", {
         "class": "text-danger"
-      }, "*Usuario o contrase\xF1a incorrectos.", " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_6__["Link"], {
+      }, "Usuario o contrase\xF1a incorrectos.", " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_6__["Link"], {
         to: "/login"
       }, "Intentar de nuevo")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("hr", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", null, "\xBFNo est\xE1s registrado? ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_6__["Link"], {
         to: "/register"

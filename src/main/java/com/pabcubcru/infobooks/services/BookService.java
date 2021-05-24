@@ -78,6 +78,7 @@ public class BookService {
     @Transactional
     public Page<Book> findNearBooks(User user, Pageable pageable, String showMode) {
 
+
         List<User> usersWithSameAddress = null;
         List<String> usernames = new ArrayList<>();
 
