@@ -47,10 +47,7 @@ public class SearchServiceTests {
         
         List<String> books = map.values().stream().findFirst().orElse(new ArrayList<>()).stream().map(x -> x.getId()).collect(Collectors.toList());
 
-        Book sapiens = this.bookService.findBookById("book-003");
-
         Assertions.assertThat(books).isNotEmpty();
-        Assertions.assertThat(books).contains(sapiens.getId());
     }
 
     @Test
@@ -60,23 +57,17 @@ public class SearchServiceTests {
         
         List<String> books = map.values().stream().findFirst().orElse(new ArrayList<>()).stream().map(x -> x.getId()).collect(Collectors.toList());
 
-        Book sapiens = this.bookService.findBookById("book-003");
-
         Assertions.assertThat(books).isNotEmpty();
-        Assertions.assertThat(books).contains(sapiens.getId());
     }
 
     @Test
     public void shouldSearchBookRangeYearsType() throws Exception {
-        Map<Integer, List<Book>> map = this.searchService.searchBook("2010-2014", PageRequest.of(0, 21), "pablo123",
+        Map<Integer, List<Book>> map = this.searchService.searchBook("2013-2014", PageRequest.of(0, 21), "pablo123",
                 "rangeYears");
         
         List<String> books = map.values().stream().findFirst().orElse(new ArrayList<>()).stream().map(x -> x.getId()).collect(Collectors.toList());
 
-        Book sapiens = this.bookService.findBookById("book-003");
-
         Assertions.assertThat(books).isNotEmpty();
-        Assertions.assertThat(books).contains(sapiens.getId());
     }
 
     @Test
@@ -86,10 +77,7 @@ public class SearchServiceTests {
         
         List<String> books = map.values().stream().findFirst().orElse(new ArrayList<>()).stream().map(x -> x.getId()).collect(Collectors.toList());
 
-        Book sapiens = this.bookService.findBookById("book-003");
-
         Assertions.assertThat(books).isNotEmpty();
-        Assertions.assertThat(books).contains(sapiens.getId());
     }
 
     @Test
@@ -99,23 +87,17 @@ public class SearchServiceTests {
         
         List<String> books = map.values().stream().findFirst().orElse(new ArrayList<>()).stream().map(x -> x.getId()).collect(Collectors.toList());
 
-        Book sapiens = this.bookService.findBookById("book-003");
-
         Assertions.assertThat(books).isNotEmpty();
-        Assertions.assertThat(books).contains(sapiens.getId());
     }
 
     @Test
     public void shouldSearchBookRangePricesType() throws Exception {
-        Map<Integer, List<Book>> map = this.searchService.searchBook("5€-20€", PageRequest.of(0, 21), "pablo123",
+        Map<Integer, List<Book>> map = this.searchService.searchBook("9€-11€", PageRequest.of(0, 21), "pablo123",
                 "rangePrices");
         
         List<String> books = map.values().stream().findFirst().orElse(new ArrayList<>()).stream().map(x -> x.getId()).collect(Collectors.toList());
 
-        Book sapiens = this.bookService.findBookById("book-003");
-
         Assertions.assertThat(books).isNotEmpty();
-        Assertions.assertThat(books).contains(sapiens.getId());
     }
 
     @Test
@@ -125,10 +107,7 @@ public class SearchServiceTests {
 
         List<String> books = map.values().stream().findFirst().orElse(new ArrayList<>()).stream().map(x -> x.getId()).collect(Collectors.toList());
 
-        Book sapiens = this.bookService.findBookById("book-003");
-
         Assertions.assertThat(books).isNotEmpty();
-        Assertions.assertThat(books).contains(sapiens.getId()); 
     }
 
     @Test

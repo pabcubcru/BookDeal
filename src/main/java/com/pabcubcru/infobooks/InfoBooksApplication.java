@@ -199,9 +199,9 @@ public class InfoBooksApplication {
 	private void createUser(String username) {
 		User user = new User();
 
-		user.setId("userTest-"+username);
+		user.setId("userTest-" + username);
 		user.setName(username);
-		user.setEmail(username+"@us.es");
+		user.setEmail(username + "@us.es");
 		user.setPhone("+34654987321");
 		user.setBirthDate(LocalDate.of(1998, 11, 23));
 		user.setProvince("Sevilla");
@@ -265,12 +265,12 @@ public class InfoBooksApplication {
 	@PostConstruct
 	public void buildBookIndex() {
 		this.deleteIndex();
-		/*this.buildIndexUsersForBooks();
+		this.buildIndexUsersForBooks();
 		elasticSearchOperations.indexOps(Book.class).refresh();
 		List<Book> books = prepareDataset();
 		this.bookRepository.saveAll(books);
 		this.buildImagesForBook(books);
-		log.info("================= Added " + books.size() + " books. =================");*/
+		log.info("================= Added " + books.size() + " books. =================");
 		this.buildUserIndexForTests();
 		this.buildBookIndexForTests();
 		this.buildRequestsIndexForTests();
@@ -308,15 +308,15 @@ public class InfoBooksApplication {
 			GenreEnum[] genres = GenreEnum.values();
 			String isbn = s[0];
 			String originalTitle = s[1];
-			if(originalTitle.length() > 80 ) {
+			if (originalTitle.length() > 80) {
 				originalTitle = originalTitle.substring(0, 80);
 			}
 			String title = s[2];
-			if(title.length() > 80 ) {
+			if (title.length() > 80) {
 				title = title.substring(0, 80);
 			}
 			String author = s[3];
-			if(author.length() > 80 ) {
+			if (author.length() > 80) {
 				author = author.substring(0, 80);
 			}
 			Integer publicationYear = 2010;
@@ -325,11 +325,11 @@ public class InfoBooksApplication {
 				publicationYear = Integer.parseInt(r);
 			}
 			String publisher = s[5];
-			if(publisher.length() > 80 ) {
+			if (publisher.length() > 80) {
 				publisher = publisher.substring(0, 80);
 			}
 			String description = s[6];
-			if(description.length() > 1750 ) {
+			if (description.length() > 1750) {
 				description = description.substring(0, 1750);
 			}
 			String urlImage = s[7];
