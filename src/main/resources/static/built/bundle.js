@@ -38111,7 +38111,7 @@ var Form = /*#__PURE__*/function (_Component) {
           onClick: function onClick() {
             return _this2.onClickDeleteImage(image, _this2.state.id);
           },
-          disabled: _this2.state.images.length <= 1
+          disabled: _this2.state.images.length <= 1 || image.principal
         }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("i", {
           style: {
             color: "red",
@@ -38146,7 +38146,11 @@ var Form = /*#__PURE__*/function (_Component) {
           style: {
             color: "red"
           }
-        }, "Debe tener al menos una imagen.")) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null)));
+        }, "Debe tener al menos una imagen.")) : image.principal ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
+          style: {
+            color: "red"
+          }
+        }, "No se puede borrar la imagen principal.") : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null)));
       }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("hr", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
         style: {
           color: "green"
@@ -38223,21 +38227,31 @@ var Form = /*#__PURE__*/function (_Component) {
           while (1) {
             switch (_context3.prev = _context3.next) {
               case 0:
-                conf = confirm("¿Está seguro de que quiere eliminar la imagen '" + image.fileName + "'? Esta acción no es reversible. Los datos modificados en el formulario se perderán.");
-
-                if (!conf) {
-                  _context3.next = 6;
+                if (!image.principal) {
+                  _context3.next = 4;
                   break;
                 }
 
-                _context3.next = 4;
-                return _services_Book__WEBPACK_IMPORTED_MODULE_8__["default"].deleteImage(image);
+                alert("¡AVISO! No se puede eliminar la imagen principal.");
+                _context3.next = 10;
+                break;
 
               case 4:
+                conf = confirm("¿Está seguro de que quiere eliminar la imagen '" + image.fileName + "'? Esta acción no es reversible. Los datos modificados en el formulario se perderán.");
+
+                if (!conf) {
+                  _context3.next = 10;
+                  break;
+                }
+
+                _context3.next = 8;
+                return _services_Book__WEBPACK_IMPORTED_MODULE_8__["default"].deleteImage(image);
+
+              case 8:
                 res = _context3.sent;
                 window.location.replace("/books/" + id + "/edit");
 
-              case 6:
+              case 10:
               case "end":
                 return _context3.stop();
             }
