@@ -430,7 +430,10 @@ export default class Form extends Component {
                               "url(https://i.ibb.co/YRy9kHC/paper.jpg)",
                           }}
                         >
-                          <i style={{ color: "#e5be01" }} class="fa fa-star"></i>
+                          <i
+                            style={{ color: "#e5be01" }}
+                            class="fa fa-star"
+                          ></i>
                         </button>
                       ) : (
                         <button
@@ -496,7 +499,9 @@ export default class Form extends Component {
                           onClick={() =>
                             this.onClickDeleteImage(image, this.state.id)
                           }
-                          disabled={this.state.images.length <= 1}
+                          disabled={
+                            this.state.images.length <= 1 || image.principal
+                          }
                         >
                           <i
                             style={{ color: "red", marginBottom: "1px" }}
@@ -547,6 +552,10 @@ export default class Form extends Component {
                           Debe tener al menos una imagen.
                         </p>
                       </center>
+                    ) : image.principal ? (
+                      <p style={{ color: "red" }}>
+                        No se puede borrar la imagen principal.
+                      </p>
                     ) : (
                       <p></p>
                     )}
@@ -595,14 +604,18 @@ export default class Form extends Component {
   }
 
   async onClickDeleteImage(image, id) {
-    const conf = confirm(
-      "¿Está seguro de que quiere eliminar la imagen '" +
-        image.fileName +
-        "'? Esta acción no es reversible. Los datos modificados en el formulario se perderán."
-    );
-    if (conf) {
-      const res = await bookService.deleteImage(image);
-      window.location.replace("/books/" + id + "/edit");
+    if(image.principal) {
+      alert("¡AVISO! No se puede eliminar la imagen principal.")
+    } else {
+      const conf = confirm(
+        "¿Está seguro de que quiere eliminar la imagen '" +
+          image.fileName +
+          "'? Esta acción no es reversible. Los datos modificados en el formulario se perderán."
+      );
+      if (conf) {
+        const res = await bookService.deleteImage(image);
+        window.location.replace("/books/" + id + "/edit");
+      }
     }
   }
 
