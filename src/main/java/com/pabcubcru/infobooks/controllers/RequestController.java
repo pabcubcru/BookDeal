@@ -253,15 +253,12 @@ public class RequestController {
 
         if (request.getUsername2().equals(principal.getName())) {
             List<Request> requests = null;
-            if (request.getAction().equals("VENTA")) {
-                requests = this.requestService.findByIdBook2AndStatusNotAndStatusNotAndAction(request.getIdBook2(),
-                        "VENTA");
-            } else {
-                requests = this.requestService.findByIdBook1AndStatusNotAndStatusNotAndAction(request.getIdBook1(),
-                        "INTERCAMBIO");
-                requests.addAll(this.requestService.findByIdBook2AndStatusNotAndStatusNotAndAction(request.getIdBook2(),
-                        "INTERCAMBIO"));
-            }
+            requests = this.requestService.findByIdBook2AndStatusNotAndStatusNotAndAction(request.getIdBook2(),
+                    "COMPRA");
+            requests.addAll(this.requestService.findByIdBook1AndStatusNotAndStatusNotAndAction(request.getIdBook1(),
+                    "INTERCAMBIO"));
+            requests.addAll(this.requestService.findByIdBook2AndStatusNotAndStatusNotAndAction(request.getIdBook2(),
+                    "INTERCAMBIO"));
             requests.remove(request);
             for (Request r : requests) {
                 if (r.getStatus().equals(RequestStatus.PENDIENTE.toString())) {

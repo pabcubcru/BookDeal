@@ -152,13 +152,7 @@ export default class List extends Component {
                   </div>
                   <div class="book-card__author">{book.author}</div>
                   <div class="book-card__author">
-                    {book.action == "VENTA" ? (
-                      <span>
-                        {book.action} por {book.price} €
-                      </span>
-                    ) : (
-                      book.action
-                    )}
+                    <span>{book.price} €</span>
                   </div>
                 </div>
               </div>

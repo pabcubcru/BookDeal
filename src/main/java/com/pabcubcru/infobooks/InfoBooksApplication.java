@@ -108,7 +108,7 @@ public class InfoBooksApplication {
 		Request request = new Request();
 
 		request.setId("request-001");
-		request.setAction("VENTA");
+		request.setAction("COMPRA");
 		request.setComment("comment");
 		request.setIdBook2("book-002");
 		request.setUsername1("test001");
