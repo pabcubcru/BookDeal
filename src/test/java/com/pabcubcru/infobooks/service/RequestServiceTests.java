@@ -80,7 +80,7 @@ public class RequestServiceTests {
         Request request = this.requestService.findById("request-001");
 
         Assertions.assertThat(request.getPay()).isEqualTo(10.);
-        Assertions.assertThat(request.getAction()).isEqualTo("VENTA");
+        Assertions.assertThat(request.getAction()).isEqualTo("COMPRA");
     }
 
     @Test
@@ -93,9 +93,9 @@ public class RequestServiceTests {
     }
 
     @Test
-    public void shouldFindByIdBook2AndNotRejectedAndNotCanceledAndStatusVenta() throws Exception {
+    public void shouldFindByIdBook2AndNotRejectedAndNotCanceledAndStatusCompra() throws Exception {
         List<Request> requests = this.requestService.findByIdBook2AndStatusNotAndStatusNotAndAction("book-002",
-                "VENTA");
+                "COMPRA");
 
         Assertions.assertThat(requests.size()).isEqualTo(1);
         Assertions.assertThat(requests.get(0).getStatus()).isEqualTo("PENDIENTE");

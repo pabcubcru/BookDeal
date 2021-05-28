@@ -82,7 +82,7 @@ public class RequestControllerTests {
 
         Request request = new Request();
         request.setId(ID_REQUEST_1);
-        request.setAction("VENTA");
+        request.setAction("COMPRA");
         request.setIdBook2(ID_BOOK_1);
         request.setPay(10.);
         request.setComment("Comment");
@@ -122,7 +122,7 @@ public class RequestControllerTests {
         request.setStatus(RequestStatus.CANCELADA.toString());
         given(this.requestService.findById("request002")).willReturn(request);
 
-        given(this.requestService.findByIdBook2AndStatusNotAndStatusNotAndAction(ID_BOOK_1, "VENTA"))
+        given(this.requestService.findByIdBook2AndStatusNotAndStatusNotAndAction(ID_BOOK_1, "COMPRA"))
                 .willReturn(requests);
 
     }
