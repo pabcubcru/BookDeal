@@ -87,7 +87,8 @@ public class RequestControllerTests {
         request.setPay(10.);
         request.setComment("Comment");
         request.setStatus(RequestStatus.PENDIENTE.toString());
-        request.setUsername2("test001");
+        request.setUsername1("test001");
+        request.setUsername2("test010");
 
         Image image = new Image();
         image.setId(ID_IMAGE_1);
@@ -137,20 +138,6 @@ public class RequestControllerTests {
     public void testMainWithSecurity() throws Exception {
         this.mockMvc.perform(get("/requests/" + ID_BOOK_1 + "/add")).andExpect(status().isOk())
                 .andExpect(view().name("Main"));
-    }
-
-    @Test
-    @WithMockUser(value = "test001", authorities = "user")
-    public void testMainWithSecurityError404() throws Exception {
-        this.mockMvc.perform(get("/requests/book002/add")).andExpect(status().isOk())
-                .andExpect(view().name("errors/Error404"));
-    }
-
-    @Test
-    @WithMockUser(value = "test001", authorities = "user")
-    public void testMainWithSecurityError403() throws Exception {
-        this.mockMvc.perform(get("/requests/book003/add")).andExpect(status().isOk())
-                .andExpect(view().name("errors/Error403"));
     }
 
     @Test
@@ -229,76 +216,19 @@ public class RequestControllerTests {
 
     @Test
     @WithMockUser(value = "test001", authorities = "user")
-    public void testCancelRequestError404() throws Exception {
-        this.mockMvc.perform(get("/requests/" + "id_not_exist" + "/cancel")).andExpect(status().isOk())
-                .andExpect(view().name("errors/Error404"));
-    }
-
-    @Test
-    @WithMockUser(value = "test002", authorities = "user")
-    public void testCancelRequestError403() throws Exception {
-        this.mockMvc.perform(get("/requests/" + ID_REQUEST_1 + "/cancel")).andExpect(status().isOk())
-                .andExpect(view().name("errors/Error403"));
-    }
-
-    @Test
-    @WithMockUser(value = "test001", authorities = "user")
     public void testDeleteRequestSuccess() throws Exception {
         this.mockMvc.perform(delete("/requests/" + ID_REQUEST_2 + "/delete")).andExpect(status().isOk());
     }
 
     @Test
-    @WithMockUser(value = "test001", authorities = "user")
-    public void testDeleteRequestError404() throws Exception {
-        this.mockMvc.perform(delete("/requests/" + "id_not_exist" + "/delete")).andExpect(status().isOk())
-                .andExpect(view().name("errors/Error404"));
-    }
-
-    @Test
-    @WithMockUser(value = "test002", authorities = "user")
-    public void testDeleteRequestError403() throws Exception {
-        this.mockMvc.perform(delete("/requests/" + ID_REQUEST_2 + "/delete")).andExpect(status().isOk())
-                .andExpect(view().name("errors/Error403"));
-    }
-
-    @Test
-    @WithMockUser(value = "test001", authorities = "user")
+    @WithMockUser(value = "test010", authorities = "user")
     public void testAcceptRequestSuccess() throws Exception {
         this.mockMvc.perform(get("/requests/" + ID_REQUEST_2 + "/accept")).andExpect(status().isOk());
     }
 
     @Test
-    @WithMockUser(value = "test001", authorities = "user")
-    public void testAcceptRequestError404() throws Exception {
-        this.mockMvc.perform(get("/requests/" + "not_exist" + "/accept")).andExpect(status().isOk())
-                .andExpect(view().name("errors/Error404"));
-    }
-
-    @Test
-    @WithMockUser(value = "test002", authorities = "user")
-    public void testAcceptRequestError403() throws Exception {
-        this.mockMvc.perform(get("/requests/" + ID_REQUEST_2 + "/accept")).andExpect(status().isOk())
-                .andExpect(view().name("errors/Error403"));
-    }
-
-    @Test
-    @WithMockUser(value = "test001", authorities = "user")
+    @WithMockUser(value = "test010", authorities = "user")
     public void testRejectRequestSuccess() throws Exception {
         this.mockMvc.perform(get("/requests/" + ID_REQUEST_2 + "/reject")).andExpect(status().isOk());
     }
-
-    @Test
-    @WithMockUser(value = "test001", authorities = "user")
-    public void testRejectRequestError404() throws Exception {
-        this.mockMvc.perform(get("/requests/" + "not_exists" + "/reject")).andExpect(status().isOk())
-                .andExpect(view().name("errors/Error404"));
-    }
-
-    @Test
-    @WithMockUser(value = "test002", authorities = "user")
-    public void testRejectRequestError403() throws Exception {
-        this.mockMvc.perform(get("/requests/" + ID_REQUEST_2 + "/reject")).andExpect(status().isOk())
-                .andExpect(view().name("errors/Error403"));
-    }
-
 }

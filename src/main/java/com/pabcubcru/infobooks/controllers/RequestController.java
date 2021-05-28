@@ -251,7 +251,7 @@ public class RequestController {
     public void acceptRequest(@PathVariable("id") String id, Principal principal) {
         Request request = this.requestService.findById(id);
 
-        if (request.getUsername1().equals(principal.getName())) {
+        if (request.getUsername2().equals(principal.getName())) {
             List<Request> requests = null;
             if (request.getAction().equals("VENTA")) {
                 requests = this.requestService.findByIdBook2AndStatusNotAndStatusNotAndAction(request.getIdBook2(),
