@@ -224,60 +224,41 @@ public class RequestController {
     }
 
     @GetMapping(value = "/{id}/cancel")
-    public ModelAndView cancelRequest(@PathVariable("id") String id, Principal principal) {
+    public void cancelRequest(@PathVariable("id") String id, Principal principal) {
         Request request = this.requestService.findById(id);
-        ModelAndView model = new ModelAndView();
-        if (request == null) {
-            model.setViewName("errors/Error404");
-            return model;
-        } else {
-            if (!request.getUsername2().equals(principal.getName())) {
-                model.setViewName("errors/Error403");
-                return model;
-            } else if (request.getStatus().equals(RequestStatus.PENDIENTE.toString())) {
+
+        if (request.getUsername1().equals(principal.getName())) {
+            if (request.getStatus().equals(RequestStatus.PENDIENTE.toString())) {
                 request.setStatus(RequestStatus.CANCELADA.toString());
                 this.requestService.save(request);
             }
         }
-        return null;
     }
 
     @DeleteMapping(value = "/{id}/delete")
-    public ModelAndView deleteRequest(@PathVariable("id") String id, Principal principal) {
+    public void deleteRequest(@PathVariable("id") String id, Principal principal) {
         Request request = this.requestService.findById(id);
-        ModelAndView model = new ModelAndView();
 
-        if (request == null) {
-            model.setViewName("errors/Error404");
-            return model;
-        } else {
-            if (!request.getUsername2().equals(principal.getName())) {
-                model.setViewName("errors/Error403");
-                return model;
-            } else if (request.getStatus().equals(RequestStatus.CANCELADA.toString())
+        if (request.getUsername1().equals(principal.getName())) {
+            if (request.getStatus().equals(RequestStatus.CANCELADA.toString())
                     || request.getStatus().equals(RequestStatus.RECHAZADA.toString())) {
                 this.requestService.deleteById(id);
             }
         }
-        return null;
     }
 
     @GetMapping("/{id}/accept")
-    public ModelAndView acceptRequest(@PathVariable("id") String id, Principal principal) {
+    public void acceptRequest(@PathVariable("id") String id, Principal principal) {
         Request request = this.requestService.findById(id);
-        ModelAndView model = new ModelAndView();
 
-        if (request == null) {
-            model.setViewName("errors/Error404");
-            return model;
-        } else if (request.getUsername2().equals(principal.getName())) {
+        if (request.getUsername1().equals(principal.getName())) {
             List<Request> requests = null;
             if (request.getAction().equals("VENTA")) {
-                requests = this.requestService
-                        .findByIdBook2AndStatusNotAndStatusNotAndAction(request.getIdBook2(), "VENTA");
+                requests = this.requestService.findByIdBook2AndStatusNotAndStatusNotAndAction(request.getIdBook2(),
+                        "VENTA");
             } else {
-                requests = this.requestService
-                        .findByIdBook1AndStatusNotAndStatusNotAndAction(request.getIdBook1(), "INTERCAMBIO");
+                requests = this.requestService.findByIdBook1AndStatusNotAndStatusNotAndAction(request.getIdBook1(),
+                        "INTERCAMBIO");
                 requests.addAll(this.requestService.findByIdBook2AndStatusNotAndStatusNotAndAction(request.getIdBook2(),
                         "INTERCAMBIO"));
             }
@@ -290,30 +271,18 @@ public class RequestController {
             this.requestService.saveAll(requests);
             request.setStatus(RequestStatus.ACEPTADA.toString());
             this.requestService.save(request);
-            return null;
-        } else {
-            model.setViewName("errors/Error403");
-            return model;
         }
     }
 
     @GetMapping("/{id}/reject")
-    public ModelAndView rejectRequest(@PathVariable("id") String id, Principal principal) {
+    public void rejectRequest(@PathVariable("id") String id, Principal principal) {
         Request request = this.requestService.findById(id);
-        ModelAndView model = new ModelAndView();
 
-        if (request == null) {
-            model.setViewName("errors/Error404");
-            return model;
-        } else if (request.getUsername2().equals(principal.getName())) {
+        if (request.getUsername2().equals(principal.getName())) {
             if (request.getStatus().equals(RequestStatus.PENDIENTE.toString())) {
                 request.setStatus(RequestStatus.RECHAZADA.toString());
                 this.requestService.save(request);
             }
-            return null;
-        } else {
-            model.setViewName("errors/Error403");
-            return model;
         }
     }
 }
