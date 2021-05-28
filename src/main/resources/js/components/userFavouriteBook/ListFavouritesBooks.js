@@ -151,6 +151,9 @@ export default class List extends Component {
                     </a>
                   </div>
                   <div class="book-card__author">{book.author}</div>
+                  <div class="book-card__author">
+                    <span>{book.price} €</span>
+                  </div>
                 </div>
               </div>
             </main>
