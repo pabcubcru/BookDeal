@@ -1,0 +1,2548 @@
+{
+    "version": "1.4.0",
+    "project": {
+        "name": "infobooks",
+        "directory": "C:\\Users\\pablo\\Desktop\\UNIVERSIDAD LOCAL\\TFG\\PROYECTO\\InfoBooks",
+        "workspaceDir": "C:\\Users\\pablo\\Desktop\\UNIVERSIDAD LOCAL\\TFG\\PROYECTO\\InfoBooks",
+        "sources": [
+            "C:\\Users\\pablo\\Desktop\\UNIVERSIDAD LOCAL\\TFG\\PROYECTO\\InfoBooks\\src\\main\\java"
+        ],
+        "dependencies": [
+            
+        ],
+        "classpath": [
+            "C:\\Users\\pablo\\Desktop\\UNIVERSIDAD LOCAL\\TFG\\PROYECTO\\InfoBooks\\target\\classes",
+            "C:\\Users\\pablo\\.m2\\repository\\org\\springframework\\data\\spring-data-elasticsearch\\4.0.7.RELEASE\\spring-data-elasticsearch-4.0.7.RELEASE.jar",
+            "C:\\Users\\pablo\\.m2\\repository\\org\\springframework\\spring-context\\5.2.13.RELEASE\\spring-context-5.2.13.RELEASE.jar",
+            "C:\\Users\\pablo\\.m2\\repository\\org\\springframework\\spring-beans\\5.2.13.RELEASE\\spring-beans-5.2.13.RELEASE.jar",
+            "C:\\Users\\pablo\\.m2\\repository\\org\\springframework\\spring-expression\\5.2.13.RELEASE\\spring-expression-5.2.13.RELEASE.jar",
+            "C:\\Users\\pablo\\.m2\\repository\\org\\springframework\\spring-tx\\5.2.13.RELEASE\\spring-tx-5.2.13.RELEASE.jar",
+            "C:\\Users\\pablo\\.m2\\repository\\org\\springframework\\data\\spring-data-commons\\2.3.7.RELEASE\\spring-data-commons-2.3.7.RELEASE.jar",
+            "C:\\Users\\pablo\\.m2\\repository\\org\\elasticsearch\\client\\transport\\7.6.2\\transport-7.6.2.jar",
+            "C:\\Users\\pablo\\.m2\\repository\\org\\elasticsearch\\elasticsearch\\7.6.2\\elasticsearch-7.6.2.jar",
+            "C:\\Users\\pablo\\.m2\\repository\\org\\elasticsearch\\elasticsearch-core\\7.6.2\\elasticsearch-core-7.6.2.jar",
+            "C:\\Users\\pablo\\.m2\\repository\\org\\elasticsearch\\elasticsearch-secure-sm\\7.6.2\\elasticsearch-secure-sm-7.6.2.jar",
+            "C:\\Users\\pablo\\.m2\\repository\\org\\elasticsearch\\elasticsearch-x-content\\7.6.2\\elasticsearch-x-content-7.6.2.jar",
+            "C:\\Users\\pablo\\.m2\\repository\\com\\fasterxml\\jackson\\dataformat\\jackson-dataformat-smile\\2.11.4\\jackson-dataformat-smile-2.11.4.jar",
+            "C:\\Users\\pablo\\.m2\\repository\\com\\fasterxml\\jackson\\dataformat\\jackson-dataformat-yaml\\2.11.4\\jackson-dataformat-yaml-2.11.4.jar",
+            "C:\\Users\\pablo\\.m2\\repository\\com\\fasterxml\\jackson\\dataformat\\jackson-dataformat-cbor\\2.11.4\\jackson-dataformat-cbor-2.11.4.jar",
+            "C:\\Users\\pablo\\.m2\\repository\\org\\elasticsearch\\elasticsearch-geo\\7.6.2\\elasticsearch-geo-7.6.2.jar",
+            "C:\\Users\\pablo\\.m2\\repository\\org\\apache\\lucene\\lucene-core\\8.4.0\\lucene-core-8.4.0.jar",
+            "C:\\Users\\pablo\\.m2\\repository\\org\\apache\\lucene\\lucene-analyzers-common\\8.4.0\\lucene-analyzers-common-8.4.0.jar",
+            "C:\\Users\\pablo\\.m2\\repository\\org\\apache\\lucene\\lucene-backward-codecs\\8.4.0\\lucene-backward-codecs-8.4.0.jar",
+            "C:\\Users\\pablo\\.m2\\repository\\org\\apache\\lucene\\lucene-grouping\\8.4.0\\lucene-grouping-8.4.0.jar",
+            "C:\\Users\\pablo\\.m2\\repository\\org\\apache\\lucene\\lucene-highlighter\\8.4.0\\lucene-highlighter-8.4.0.jar",
+            "C:\\Users\\pablo\\.m2\\repository\\org\\apache\\lucene\\lucene-join\\8.4.0\\lucene-join-8.4.0.jar",
+            "C:\\Users\\pablo\\.m2\\repository\\org\\apache\\lucene\\lucene-memory\\8.4.0\\lucene-memory-8.4.0.jar",
+            "C:\\Users\\pablo\\.m2\\repository\\org\\apache\\lucene\\lucene-misc\\8.4.0\\lucene-misc-8.4.0.jar",
+            "C:\\Users\\pablo\\.m2\\repository\\org\\apache\\lucene\\lucene-queries\\8.4.0\\lucene-queries-8.4.0.jar",
+            "C:\\Users\\pablo\\.m2\\repository\\org\\apache\\lucene\\lucene-queryparser\\8.4.0\\lucene-queryparser-8.4.0.jar",
+            "C:\\Users\\pablo\\.m2\\repository\\org\\apache\\lucene\\lucene-sandbox\\8.4.0\\lucene-sandbox-8.4.0.jar",
+            "C:\\Users\\pablo\\.m2\\repository\\org\\apache\\lucene\\lucene-spatial\\8.4.0\\lucene-spatial-8.4.0.jar",
+            "C:\\Users\\pablo\\.m2\\repository\\org\\apache\\lucene\\lucene-spatial-extras\\8.4.0\\lucene-spatial-extras-8.4.0.jar",
+            "C:\\Users\\pablo\\.m2\\repository\\org\\apache\\lucene\\lucene-spatial3d\\8.4.0\\lucene-spatial3d-8.4.0.jar",
+            "C:\\Users\\pablo\\.m2\\repository\\org\\apache\\lucene\\lucene-suggest\\8.4.0\\lucene-suggest-8.4.0.jar",
+            "C:\\Users\\pablo\\.m2\\repository\\org\\elasticsearch\\elasticsearch-cli\\7.6.2\\elasticsearch-cli-7.6.2.jar",
+            "C:\\Users\\pablo\\.m2\\repository\\net\\sf\\jopt-simple\\jopt-simple\\5.0.2\\jopt-simple-5.0.2.jar",
+            "C:\\Users\\pablo\\.m2\\repository\\com\\carrotsearch\\hppc\\0.8.1\\hppc-0.8.1.jar",
+            "C:\\Users\\pablo\\.m2\\repository\\joda-time\\joda-time\\2.10.4\\joda-time-2.10.4.jar",
+            "C:\\Users\\pablo\\.m2\\repository\\com\\tdunning\\t-digest\\3.2\\t-digest-3.2.jar",
+            "C:\\Users\\pablo\\.m2\\repository\\org\\hdrhistogram\\HdrHistogram\\2.1.9\\HdrHistogram-2.1.9.jar",
+            "C:\\Users\\pablo\\.m2\\repository\\org\\apache\\logging\\log4j\\log4j-api\\2.13.3\\log4j-api-2.13.3.jar",
+            "C:\\Users\\pablo\\.m2\\repository\\org\\elasticsearch\\jna\\4.5.1\\jna-4.5.1.jar",
+            "C:\\Users\\pablo\\.m2\\repository\\org\\elasticsearch\\plugin\\reindex-client\\7.6.2\\reindex-client-7.6.2.jar",
+            "C:\\Users\\pablo\\.m2\\repository\\org\\elasticsearch\\elasticsearch-ssl-config\\7.6.2\\elasticsearch-ssl-config-7.6.2.jar",
+            "C:\\Users\\pablo\\.m2\\repository\\org\\elasticsearch\\plugin\\lang-mustache-client\\7.6.2\\lang-mustache-client-7.6.2.jar",
+            "C:\\Users\\pablo\\.m2\\repository\\com\\github\\spullara\\mustache\\java\\compiler\\0.9.6\\compiler-0.9.6.jar",
+            "C:\\Users\\pablo\\.m2\\repository\\org\\elasticsearch\\plugin\\percolator-client\\7.6.2\\percolator-client-7.6.2.jar",
+            "C:\\Users\\pablo\\.m2\\repository\\org\\elasticsearch\\plugin\\parent-join-client\\7.6.2\\parent-join-client-7.6.2.jar",
+            "C:\\Users\\pablo\\.m2\\repository\\org\\elasticsearch\\plugin\\rank-eval-client\\7.6.2\\rank-eval-client-7.6.2.jar",
+            "C:\\Users\\pablo\\.m2\\repository\\org\\elasticsearch\\plugin\\transport-netty4-client\\7.6.2\\transport-netty4-client-7.6.2.jar",
+            "C:\\Users\\pablo\\.m2\\repository\\io\\netty\\netty-buffer\\4.1.59.Final\\netty-buffer-4.1.59.Final.jar",
+            "C:\\Users\\pablo\\.m2\\repository\\io\\netty\\netty-codec\\4.1.59.Final\\netty-codec-4.1.59.Final.jar",
+            "C:\\Users\\pablo\\.m2\\repository\\io\\netty\\netty-codec-http\\4.1.59.Final\\netty-codec-http-4.1.59.Final.jar",
+            "C:\\Users\\pablo\\.m2\\repository\\io\\netty\\netty-common\\4.1.59.Final\\netty-common-4.1.59.Final.jar",
+            "C:\\Users\\pablo\\.m2\\repository\\io\\netty\\netty-handler\\4.1.59.Final\\netty-handler-4.1.59.Final.jar",
+            "C:\\Users\\pablo\\.m2\\repository\\io\\netty\\netty-resolver\\4.1.59.Final\\netty-resolver-4.1.59.Final.jar",
+            "C:\\Users\\pablo\\.m2\\repository\\io\\netty\\netty-transport\\4.1.59.Final\\netty-transport-4.1.59.Final.jar",
+            "C:\\Users\\pablo\\.m2\\repository\\org\\elasticsearch\\client\\elasticsearch-rest-high-level-client\\7.6.2\\elasticsearch-rest-high-level-client-7.6.2.jar",
+            "C:\\Users\\pablo\\.m2\\repository\\org\\elasticsearch\\client\\elasticsearch-rest-client\\7.6.2\\elasticsearch-rest-client-7.6.2.jar",
+            "C:\\Users\\pablo\\.m2\\repository\\org\\apache\\httpcomponents\\httpclient\\4.5.13\\httpclient-4.5.13.jar",
+            "C:\\Users\\pablo\\.m2\\repository\\org\\apache\\httpcomponents\\httpcore\\4.4.14\\httpcore-4.4.14.jar",
+            "C:\\Users\\pablo\\.m2\\repository\\org\\apache\\httpcomponents\\httpasyncclient\\4.1.4\\httpasyncclient-4.1.4.jar",
+            "C:\\Users\\pablo\\.m2\\repository\\org\\apache\\httpcomponents\\httpcore-nio\\4.4.14\\httpcore-nio-4.4.14.jar",
+            "C:\\Users\\pablo\\.m2\\repository\\commons-codec\\commons-codec\\1.14\\commons-codec-1.14.jar",
+            "C:\\Users\\pablo\\.m2\\repository\\org\\elasticsearch\\plugin\\mapper-extras-client\\7.6.2\\mapper-extras-client-7.6.2.jar",
+            "C:\\Users\\pablo\\.m2\\repository\\org\\elasticsearch\\plugin\\aggs-matrix-stats-client\\7.6.2\\aggs-matrix-stats-client-7.6.2.jar",
+            "C:\\Users\\pablo\\.m2\\repository\\com\\fasterxml\\jackson\\core\\jackson-core\\2.11.4\\jackson-core-2.11.4.jar",
+            "C:\\Users\\pablo\\.m2\\repository\\com\\fasterxml\\jackson\\core\\jackson-databind\\2.11.4\\jackson-databind-2.11.4.jar",
+            "C:\\Users\\pablo\\.m2\\repository\\com\\fasterxml\\jackson\\core\\jackson-annotations\\2.11.4\\jackson-annotations-2.11.4.jar",
+            "C:\\Users\\pablo\\.m2\\repository\\org\\slf4j\\slf4j-api\\1.7.30\\slf4j-api-1.7.30.jar",
+            "C:\\Users\\pablo\\.m2\\repository\\org\\springframework\\boot\\spring-boot-starter-data-rest\\2.3.9.RELEASE\\spring-boot-starter-data-rest-2.3.9.RELEASE.jar",
+            "C:\\Users\\pablo\\.m2\\repository\\org\\springframework\\data\\spring-data-rest-webmvc\\3.3.7.RELEASE\\spring-data-rest-webmvc-3.3.7.RELEASE.jar",
+            "C:\\Users\\pablo\\.m2\\repository\\org\\springframework\\data\\spring-data-rest-core\\3.3.7.RELEASE\\spring-data-rest-core-3.3.7.RELEASE.jar",
+            "C:\\Users\\pablo\\.m2\\repository\\org\\springframework\\hateoas\\spring-hateoas\\1.1.4.RELEASE\\spring-hateoas-1.1.4.RELEASE.jar",
+            "C:\\Users\\pablo\\.m2\\repository\\org\\springframework\\plugin\\spring-plugin-core\\2.0.0.RELEASE\\spring-plugin-core-2.0.0.RELEASE.jar",
+            "C:\\Users\\pablo\\.m2\\repository\\org\\atteo\\evo-inflector\\1.2.2\\evo-inflector-1.2.2.jar",
+            "C:\\Users\\pablo\\.m2\\repository\\org\\springframework\\boot\\spring-boot-starter-security\\2.3.9.RELEASE\\spring-boot-starter-security-2.3.9.RELEASE.jar",
+            "C:\\Users\\pablo\\.m2\\repository\\org\\springframework\\boot\\spring-boot-starter\\2.3.9.RELEASE\\spring-boot-starter-2.3.9.RELEASE.jar",
+            "C:\\Users\\pablo\\.m2\\repository\\org\\springframework\\boot\\spring-boot-starter-logging\\2.3.9.RELEASE\\spring-boot-starter-logging-2.3.9.RELEASE.jar",
+            "C:\\Users\\pablo\\.m2\\repository\\ch\\qos\\logback\\logback-classic\\1.2.3\\logback-classic-1.2.3.jar",
+            "C:\\Users\\pablo\\.m2\\repository\\ch\\qos\\logback\\logback-core\\1.2.3\\logback-core-1.2.3.jar",
+            "C:\\Users\\pablo\\.m2\\repository\\org\\apache\\logging\\log4j\\log4j-to-slf4j\\2.13.3\\log4j-to-slf4j-2.13.3.jar",
+            "C:\\Users\\pablo\\.m2\\repository\\org\\slf4j\\jul-to-slf4j\\1.7.30\\jul-to-slf4j-1.7.30.jar",
+            "C:\\Users\\pablo\\.m2\\repository\\jakarta\\annotation\\jakarta.annotation-api\\1.3.5\\jakarta.annotation-api-1.3.5.jar",
+            "C:\\Users\\pablo\\.m2\\repository\\org\\yaml\\snakeyaml\\1.26\\snakeyaml-1.26.jar",
+            "C:\\Users\\pablo\\.m2\\repository\\org\\springframework\\spring-aop\\5.2.13.RELEASE\\spring-aop-5.2.13.RELEASE.jar",
+            "C:\\Users\\pablo\\.m2\\repository\\org\\springframework\\security\\spring-security-config\\5.3.8.RELEASE\\spring-security-config-5.3.8.RELEASE.jar",
+            "C:\\Users\\pablo\\.m2\\repository\\org\\springframework\\security\\spring-security-web\\5.3.8.RELEASE\\spring-security-web-5.3.8.RELEASE.jar",
+            "C:\\Users\\pablo\\.m2\\repository\\org\\springframework\\boot\\spring-boot-starter-thymeleaf\\2.3.9.RELEASE\\spring-boot-starter-thymeleaf-2.3.9.RELEASE.jar",
+            "C:\\Users\\pablo\\.m2\\repository\\org\\thymeleaf\\thymeleaf-spring5\\3.0.12.RELEASE\\thymeleaf-spring5-3.0.12.RELEASE.jar",
+            "C:\\Users\\pablo\\.m2\\repository\\org\\thymeleaf\\thymeleaf\\3.0.12.RELEASE\\thymeleaf-3.0.12.RELEASE.jar",
+            "C:\\Users\\pablo\\.m2\\repository\\org\\attoparser\\attoparser\\2.0.5.RELEASE\\attoparser-2.0.5.RELEASE.jar",
+            "C:\\Users\\pablo\\.m2\\repository\\org\\unbescape\\unbescape\\1.1.6.RELEASE\\unbescape-1.1.6.RELEASE.jar",
+            "C:\\Users\\pablo\\.m2\\repository\\org\\thymeleaf\\extras\\thymeleaf-extras-java8time\\3.0.4.RELEASE\\thymeleaf-extras-java8time-3.0.4.RELEASE.jar",
+            "C:\\Users\\pablo\\.m2\\repository\\org\\springframework\\boot\\spring-boot-starter-web\\2.3.9.RELEASE\\spring-boot-starter-web-2.3.9.RELEASE.jar",
+            "C:\\Users\\pablo\\.m2\\repository\\org\\springframework\\boot\\spring-boot-starter-json\\2.3.9.RELEASE\\spring-boot-starter-json-2.3.9.RELEASE.jar",
+            "C:\\Users\\pablo\\.m2\\repository\\com\\fasterxml\\jackson\\datatype\\jackson-datatype-jdk8\\2.11.4\\jackson-datatype-jdk8-2.11.4.jar",
+            "C:\\Users\\pablo\\.m2\\repository\\com\\fasterxml\\jackson\\datatype\\jackson-datatype-jsr310\\2.11.4\\jackson-datatype-jsr310-2.11.4.jar",
+            "C:\\Users\\pablo\\.m2\\repository\\com\\fasterxml\\jackson\\module\\jackson-module-parameter-names\\2.11.4\\jackson-module-parameter-names-2.11.4.jar",
+            "C:\\Users\\pablo\\.m2\\repository\\org\\springframework\\boot\\spring-boot-starter-tomcat\\2.3.9.RELEASE\\spring-boot-starter-tomcat-2.3.9.RELEASE.jar",
+            "C:\\Users\\pablo\\.m2\\repository\\org\\apache\\tomcat\\embed\\tomcat-embed-core\\9.0.43\\tomcat-embed-core-9.0.43.jar",
+            "C:\\Users\\pablo\\.m2\\repository\\org\\apache\\tomcat\\embed\\tomcat-embed-websocket\\9.0.43\\tomcat-embed-websocket-9.0.43.jar",
+            "C:\\Users\\pablo\\.m2\\repository\\org\\springframework\\spring-web\\5.2.13.RELEASE\\spring-web-5.2.13.RELEASE.jar",
+            "C:\\Users\\pablo\\.m2\\repository\\org\\springframework\\spring-webmvc\\5.2.13.RELEASE\\spring-webmvc-5.2.13.RELEASE.jar",
+            "C:\\Users\\pablo\\.m2\\repository\\org\\thymeleaf\\extras\\thymeleaf-extras-springsecurity5\\3.0.4.RELEASE\\thymeleaf-extras-springsecurity5-3.0.4.RELEASE.jar",
+            "C:\\Users\\pablo\\.m2\\repository\\org\\springframework\\boot\\spring-boot\\2.3.9.RELEASE\\spring-boot-2.3.9.RELEASE.jar",
+            "C:\\Users\\pablo\\.m2\\repository\\org\\springframework\\boot\\spring-boot-autoconfigure\\2.3.9.RELEASE\\spring-boot-autoconfigure-2.3.9.RELEASE.jar",
+            "C:\\Users\\pablo\\.m2\\repository\\com\\jayway\\jsonpath\\json-path\\2.4.0\\json-path-2.4.0.jar",
+            "C:\\Users\\pablo\\.m2\\repository\\net\\minidev\\json-smart\\2.3\\json-smart-2.3.jar",
+            "C:\\Users\\pablo\\.m2\\repository\\net\\minidev\\accessors-smart\\1.2\\accessors-smart-1.2.jar",
+            "C:\\Users\\pablo\\.m2\\repository\\org\\ow2\\asm\\asm\\5.0.4\\asm-5.0.4.jar",
+            "C:\\Users\\pablo\\.m2\\repository\\org\\springframework\\spring-core\\5.2.13.RELEASE\\spring-core-5.2.13.RELEASE.jar",
+            "C:\\Users\\pablo\\.m2\\repository\\org\\springframework\\spring-jcl\\5.2.13.RELEASE\\spring-jcl-5.2.13.RELEASE.jar",
+            "C:\\Users\\pablo\\.m2\\repository\\org\\springframework\\security\\spring-security-core\\5.3.8.RELEASE\\spring-security-core-5.3.8.RELEASE.jar",
+            "C:\\Users\\pablo\\.m2\\repository\\org\\projectlombok\\lombok\\1.18.16\\lombok-1.18.16.jar",
+            "C:\\Users\\pablo\\.m2\\repository\\javax\\validation\\validation-api\\2.0.0.Final\\validation-api-2.0.0.Final.jar",
+            "C:\\Users\\pablo\\.m2\\repository\\org\\springframework\\boot\\spring-boot-starter-validation\\2.3.9.RELEASE\\spring-boot-starter-validation-2.3.9.RELEASE.jar",
+            "C:\\Users\\pablo\\.m2\\repository\\org\\glassfish\\jakarta.el\\3.0.3\\jakarta.el-3.0.3.jar",
+            "C:\\Users\\pablo\\.m2\\repository\\org\\hibernate\\validator\\hibernate-validator\\6.1.7.Final\\hibernate-validator-6.1.7.Final.jar",
+            "C:\\Users\\pablo\\.m2\\repository\\jakarta\\validation\\jakarta.validation-api\\2.0.2\\jakarta.validation-api-2.0.2.jar",
+            "C:\\Users\\pablo\\.m2\\repository\\org\\jboss\\logging\\jboss-logging\\3.4.1.Final\\jboss-logging-3.4.1.Final.jar",
+            "C:\\Users\\pablo\\.m2\\repository\\com\\fasterxml\\classmate\\1.5.1\\classmate-1.5.1.jar"
+        ],
+        "out": "C:\\Users\\pablo\\Desktop\\UNIVERSIDAD LOCAL\\TFG\\PROYECTO\\InfoBooks\\target",
+        "classesDir": "C:\\Users\\pablo\\Desktop\\UNIVERSIDAD LOCAL\\TFG\\PROYECTO\\InfoBooks\\target\\classes",
+        "resources": [
+            
+        ],
+        "scala": {
+            "organization": "org.scala-lang",
+            "name": "scala-compiler",
+            "version": "0.0.0",
+            "options": [
+                
+            ],
+            "jars": [
+                
+            ],
+            "setup": {
+                "order": "java->scala",
+                "addLibraryToBootClasspath": true,
+                "addCompilerToClasspath": false,
+                "addExtraJarsToClasspath": false,
+                "manageBootClasspath": true,
+                "filterLibraryFromClasspath": true
+            }
+        },
+        "java": {
+            "options": [
+                "-g",
+                "-target",
+                "1.8",
+                "-source",
+                "1.8",
+                "-encoding",
+                "UTF-8"
+            ]
+        },
+        "test": {
+            "frameworks": [
+                {
+                    "names": [
+                        "com.novocode.junit.JUnitFramework"
+                    ]
+                },
+                {
+                    "names": [
+                        "org.scalatest.tools.Framework",
+                        "org.scalatest.tools.ScalaTestFramework"
+                    ]
+                },
+                {
+                    "names": [
+                        "org.scalacheck.ScalaCheckFramework"
+                    ]
+                },
+                {
+                    "names": [
+                        "org.specs.runner.SpecsFramework",
+                        "org.specs2.runner.Specs2Framework",
+                        "org.specs2.runner.SpecsFramework"
+                    ]
+                },
+                {
+                    "names": [
+                        "utest.runner.Framework"
+                    ]
+                },
+                {
+                    "names": [
+                        "munit.Framework"
+                    ]
+                }
+            ],
+            "options": {
+                "excludes": [
+                    
+                ],
+                "arguments": [
+                    {
+                        "args": [
+                            "-v",
+                            "-a"
+                        ],
+                        "framework": {
+                            "names": [
+                                "com.novocode.junit.JUnitFramework"
+                            ]
+                        }
+                    }
+                ]
+            }
+        },
+        "platform": {
+            "name": "jvm",
+            "config": {
+                "home": "C:\\Program Files\\Java\\jdk-15.0.2",
+                "options": [
+                    
+                ]
+            },
+            "mainClass": [
+                
+            ]
+        },
+        "resolution": {
+            "modules": [
+                {
+                    "organization": "org.unbescape",
+                    "name": "unbescape",
+                    "version": "1.1.6.RELEASE",
+                    "artifacts": [
+                        {
+                            "name": "unbescape",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\org\\unbescape\\unbescape\\1.1.6.RELEASE\\unbescape-1.1.6.RELEASE.jar"
+                        },
+                        {
+                            "name": "unbescape",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\org\\unbescape\\unbescape\\1.1.6.RELEASE\\unbescape-1.1.6.RELEASE-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.springframework",
+                    "name": "spring-context",
+                    "version": "5.2.13.RELEASE",
+                    "artifacts": [
+                        {
+                            "name": "spring-context",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\org\\springframework\\spring-context\\5.2.13.RELEASE\\spring-context-5.2.13.RELEASE.jar"
+                        },
+                        {
+                            "name": "spring-context",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\org\\springframework\\spring-context\\5.2.13.RELEASE\\spring-context-5.2.13.RELEASE-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.elasticsearch",
+                    "name": "elasticsearch-secure-sm",
+                    "version": "7.6.2",
+                    "artifacts": [
+                        {
+                            "name": "elasticsearch-secure-sm",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\org\\elasticsearch\\elasticsearch-secure-sm\\7.6.2\\elasticsearch-secure-sm-7.6.2.jar"
+                        },
+                        {
+                            "name": "elasticsearch-secure-sm",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\org\\elasticsearch\\elasticsearch-secure-sm\\7.6.2\\elasticsearch-secure-sm-7.6.2-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "com.fasterxml.jackson.module",
+                    "name": "jackson-module-parameter-names",
+                    "version": "2.11.4",
+                    "artifacts": [
+                        {
+                            "name": "jackson-module-parameter-names",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\com\\fasterxml\\jackson\\module\\jackson-module-parameter-names\\2.11.4\\jackson-module-parameter-names-2.11.4.jar"
+                        },
+                        {
+                            "name": "jackson-module-parameter-names",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\com\\fasterxml\\jackson\\module\\jackson-module-parameter-names\\2.11.4\\jackson-module-parameter-names-2.11.4-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.elasticsearch.plugin",
+                    "name": "rank-eval-client",
+                    "version": "7.6.2",
+                    "artifacts": [
+                        {
+                            "name": "rank-eval-client",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\org\\elasticsearch\\plugin\\rank-eval-client\\7.6.2\\rank-eval-client-7.6.2.jar"
+                        },
+                        {
+                            "name": "rank-eval-client",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\org\\elasticsearch\\plugin\\rank-eval-client\\7.6.2\\rank-eval-client-7.6.2-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.springframework.data",
+                    "name": "spring-data-commons",
+                    "version": "2.3.7.RELEASE",
+                    "artifacts": [
+                        {
+                            "name": "spring-data-commons",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\org\\springframework\\data\\spring-data-commons\\2.3.7.RELEASE\\spring-data-commons-2.3.7.RELEASE.jar"
+                        },
+                        {
+                            "name": "spring-data-commons",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\org\\springframework\\data\\spring-data-commons\\2.3.7.RELEASE\\spring-data-commons-2.3.7.RELEASE-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.apache.lucene",
+                    "name": "lucene-join",
+                    "version": "8.4.0",
+                    "artifacts": [
+                        {
+                            "name": "lucene-join",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\org\\apache\\lucene\\lucene-join\\8.4.0\\lucene-join-8.4.0.jar"
+                        },
+                        {
+                            "name": "lucene-join",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\org\\apache\\lucene\\lucene-join\\8.4.0\\lucene-join-8.4.0-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.apache.lucene",
+                    "name": "lucene-spatial3d",
+                    "version": "8.4.0",
+                    "artifacts": [
+                        {
+                            "name": "lucene-spatial3d",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\org\\apache\\lucene\\lucene-spatial3d\\8.4.0\\lucene-spatial3d-8.4.0.jar"
+                        },
+                        {
+                            "name": "lucene-spatial3d",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\org\\apache\\lucene\\lucene-spatial3d\\8.4.0\\lucene-spatial3d-8.4.0-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.junit.jupiter",
+                    "name": "junit-jupiter-api",
+                    "version": "5.6.3",
+                    "artifacts": [
+                        {
+                            "name": "junit-jupiter-api",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\org\\junit\\jupiter\\junit-jupiter-api\\5.6.3\\junit-jupiter-api-5.6.3.jar"
+                        },
+                        {
+                            "name": "junit-jupiter-api",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\org\\junit\\jupiter\\junit-jupiter-api\\5.6.3\\junit-jupiter-api-5.6.3-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.apache.httpcomponents",
+                    "name": "httpclient",
+                    "version": "4.5.13",
+                    "artifacts": [
+                        {
+                            "name": "httpclient",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\org\\apache\\httpcomponents\\httpclient\\4.5.13\\httpclient-4.5.13.jar"
+                        },
+                        {
+                            "name": "httpclient",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\org\\apache\\httpcomponents\\httpclient\\4.5.13\\httpclient-4.5.13-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.springframework",
+                    "name": "spring-web",
+                    "version": "5.2.13.RELEASE",
+                    "artifacts": [
+                        {
+                            "name": "spring-web",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\org\\springframework\\spring-web\\5.2.13.RELEASE\\spring-web-5.2.13.RELEASE.jar"
+                        },
+                        {
+                            "name": "spring-web",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\org\\springframework\\spring-web\\5.2.13.RELEASE\\spring-web-5.2.13.RELEASE-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.skyscreamer",
+                    "name": "jsonassert",
+                    "version": "1.5.0",
+                    "artifacts": [
+                        {
+                            "name": "jsonassert",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\org\\skyscreamer\\jsonassert\\1.5.0\\jsonassert-1.5.0.jar"
+                        },
+                        {
+                            "name": "jsonassert",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\org\\skyscreamer\\jsonassert\\1.5.0\\jsonassert-1.5.0-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.objenesis",
+                    "name": "objenesis",
+                    "version": "2.6",
+                    "artifacts": [
+                        {
+                            "name": "objenesis",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\org\\objenesis\\objenesis\\2.6\\objenesis-2.6.jar"
+                        },
+                        {
+                            "name": "objenesis",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\org\\objenesis\\objenesis\\2.6\\objenesis-2.6-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.apache.lucene",
+                    "name": "lucene-spatial-extras",
+                    "version": "8.4.0",
+                    "artifacts": [
+                        {
+                            "name": "lucene-spatial-extras",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\org\\apache\\lucene\\lucene-spatial-extras\\8.4.0\\lucene-spatial-extras-8.4.0.jar"
+                        },
+                        {
+                            "name": "lucene-spatial-extras",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\org\\apache\\lucene\\lucene-spatial-extras\\8.4.0\\lucene-spatial-extras-8.4.0-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.apache.httpcomponents",
+                    "name": "httpcore-nio",
+                    "version": "4.4.14",
+                    "artifacts": [
+                        {
+                            "name": "httpcore-nio",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\org\\apache\\httpcomponents\\httpcore-nio\\4.4.14\\httpcore-nio-4.4.14.jar"
+                        },
+                        {
+                            "name": "httpcore-nio",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\org\\apache\\httpcomponents\\httpcore-nio\\4.4.14\\httpcore-nio-4.4.14-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.apache.lucene",
+                    "name": "lucene-memory",
+                    "version": "8.4.0",
+                    "artifacts": [
+                        {
+                            "name": "lucene-memory",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\org\\apache\\lucene\\lucene-memory\\8.4.0\\lucene-memory-8.4.0.jar"
+                        },
+                        {
+                            "name": "lucene-memory",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\org\\apache\\lucene\\lucene-memory\\8.4.0\\lucene-memory-8.4.0-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.apache.lucene",
+                    "name": "lucene-analyzers-common",
+                    "version": "8.4.0",
+                    "artifacts": [
+                        {
+                            "name": "lucene-analyzers-common",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\org\\apache\\lucene\\lucene-analyzers-common\\8.4.0\\lucene-analyzers-common-8.4.0.jar"
+                        },
+                        {
+                            "name": "lucene-analyzers-common",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\org\\apache\\lucene\\lucene-analyzers-common\\8.4.0\\lucene-analyzers-common-8.4.0-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "io.netty",
+                    "name": "netty-resolver",
+                    "version": "4.1.59.Final",
+                    "artifacts": [
+                        {
+                            "name": "netty-resolver",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\io\\netty\\netty-resolver\\4.1.59.Final\\netty-resolver-4.1.59.Final.jar"
+                        },
+                        {
+                            "name": "netty-resolver",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\io\\netty\\netty-resolver\\4.1.59.Final\\netty-resolver-4.1.59.Final-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "net.minidev",
+                    "name": "accessors-smart",
+                    "version": "1.2",
+                    "artifacts": [
+                        {
+                            "name": "accessors-smart",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\net\\minidev\\accessors-smart\\1.2\\accessors-smart-1.2.jar"
+                        },
+                        {
+                            "name": "accessors-smart",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\net\\minidev\\accessors-smart\\1.2\\accessors-smart-1.2-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.projectlombok",
+                    "name": "lombok",
+                    "version": "1.18.16",
+                    "artifacts": [
+                        {
+                            "name": "lombok",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\org\\projectlombok\\lombok\\1.18.16\\lombok-1.18.16.jar"
+                        },
+                        {
+                            "name": "lombok",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\org\\projectlombok\\lombok\\1.18.16\\lombok-1.18.16-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.springframework",
+                    "name": "spring-beans",
+                    "version": "5.2.13.RELEASE",
+                    "artifacts": [
+                        {
+                            "name": "spring-beans",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\org\\springframework\\spring-beans\\5.2.13.RELEASE\\spring-beans-5.2.13.RELEASE.jar"
+                        },
+                        {
+                            "name": "spring-beans",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\org\\springframework\\spring-beans\\5.2.13.RELEASE\\spring-beans-5.2.13.RELEASE-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.apache.tomcat.embed",
+                    "name": "tomcat-embed-core",
+                    "version": "9.0.43",
+                    "artifacts": [
+                        {
+                            "name": "tomcat-embed-core",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\org\\apache\\tomcat\\embed\\tomcat-embed-core\\9.0.43\\tomcat-embed-core-9.0.43.jar"
+                        },
+                        {
+                            "name": "tomcat-embed-core",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\org\\apache\\tomcat\\embed\\tomcat-embed-core\\9.0.43\\tomcat-embed-core-9.0.43-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.junit.jupiter",
+                    "name": "junit-jupiter-params",
+                    "version": "5.6.3",
+                    "artifacts": [
+                        {
+                            "name": "junit-jupiter-params",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\org\\junit\\jupiter\\junit-jupiter-params\\5.6.3\\junit-jupiter-params-5.6.3.jar"
+                        },
+                        {
+                            "name": "junit-jupiter-params",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\org\\junit\\jupiter\\junit-jupiter-params\\5.6.3\\junit-jupiter-params-5.6.3-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "io.netty",
+                    "name": "netty-buffer",
+                    "version": "4.1.59.Final",
+                    "artifacts": [
+                        {
+                            "name": "netty-buffer",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\io\\netty\\netty-buffer\\4.1.59.Final\\netty-buffer-4.1.59.Final.jar"
+                        },
+                        {
+                            "name": "netty-buffer",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\io\\netty\\netty-buffer\\4.1.59.Final\\netty-buffer-4.1.59.Final-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.elasticsearch",
+                    "name": "elasticsearch-x-content",
+                    "version": "7.6.2",
+                    "artifacts": [
+                        {
+                            "name": "elasticsearch-x-content",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\org\\elasticsearch\\elasticsearch-x-content\\7.6.2\\elasticsearch-x-content-7.6.2.jar"
+                        },
+                        {
+                            "name": "elasticsearch-x-content",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\org\\elasticsearch\\elasticsearch-x-content\\7.6.2\\elasticsearch-x-content-7.6.2-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.atteo",
+                    "name": "evo-inflector",
+                    "version": "1.2.2",
+                    "artifacts": [
+                        {
+                            "name": "evo-inflector",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\org\\atteo\\evo-inflector\\1.2.2\\evo-inflector-1.2.2.jar"
+                        },
+                        {
+                            "name": "evo-inflector",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\org\\atteo\\evo-inflector\\1.2.2\\evo-inflector-1.2.2-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "com.fasterxml",
+                    "name": "classmate",
+                    "version": "1.5.1",
+                    "artifacts": [
+                        {
+                            "name": "classmate",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\com\\fasterxml\\classmate\\1.5.1\\classmate-1.5.1.jar"
+                        },
+                        {
+                            "name": "classmate",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\com\\fasterxml\\classmate\\1.5.1\\classmate-1.5.1-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.slf4j",
+                    "name": "jul-to-slf4j",
+                    "version": "1.7.30",
+                    "artifacts": [
+                        {
+                            "name": "jul-to-slf4j",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\org\\slf4j\\jul-to-slf4j\\1.7.30\\jul-to-slf4j-1.7.30.jar"
+                        },
+                        {
+                            "name": "jul-to-slf4j",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\org\\slf4j\\jul-to-slf4j\\1.7.30\\jul-to-slf4j-1.7.30-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.springframework.boot",
+                    "name": "spring-boot-devtools",
+                    "version": "2.3.9.RELEASE",
+                    "artifacts": [
+                        {
+                            "name": "spring-boot-devtools",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\org\\springframework\\boot\\spring-boot-devtools\\2.3.9.RELEASE\\spring-boot-devtools-2.3.9.RELEASE.jar"
+                        },
+                        {
+                            "name": "spring-boot-devtools",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\org\\springframework\\boot\\spring-boot-devtools\\2.3.9.RELEASE\\spring-boot-devtools-2.3.9.RELEASE-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "jakarta.activation",
+                    "name": "jakarta.activation-api",
+                    "version": "1.2.2",
+                    "artifacts": [
+                        {
+                            "name": "jakarta.activation-api",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\jakarta\\activation\\jakarta.activation-api\\1.2.2\\jakarta.activation-api-1.2.2.jar"
+                        },
+                        {
+                            "name": "jakarta.activation-api",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\jakarta\\activation\\jakarta.activation-api\\1.2.2\\jakarta.activation-api-1.2.2-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.elasticsearch.plugin",
+                    "name": "transport-netty4-client",
+                    "version": "7.6.2",
+                    "artifacts": [
+                        {
+                            "name": "transport-netty4-client",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\org\\elasticsearch\\plugin\\transport-netty4-client\\7.6.2\\transport-netty4-client-7.6.2.jar"
+                        },
+                        {
+                            "name": "transport-netty4-client",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\org\\elasticsearch\\plugin\\transport-netty4-client\\7.6.2\\transport-netty4-client-7.6.2-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.springframework",
+                    "name": "spring-expression",
+                    "version": "5.2.13.RELEASE",
+                    "artifacts": [
+                        {
+                            "name": "spring-expression",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\org\\springframework\\spring-expression\\5.2.13.RELEASE\\spring-expression-5.2.13.RELEASE.jar"
+                        },
+                        {
+                            "name": "spring-expression",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\org\\springframework\\spring-expression\\5.2.13.RELEASE\\spring-expression-5.2.13.RELEASE-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.elasticsearch.plugin",
+                    "name": "parent-join-client",
+                    "version": "7.6.2",
+                    "artifacts": [
+                        {
+                            "name": "parent-join-client",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\org\\elasticsearch\\plugin\\parent-join-client\\7.6.2\\parent-join-client-7.6.2.jar"
+                        },
+                        {
+                            "name": "parent-join-client",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\org\\elasticsearch\\plugin\\parent-join-client\\7.6.2\\parent-join-client-7.6.2-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.apache.lucene",
+                    "name": "lucene-backward-codecs",
+                    "version": "8.4.0",
+                    "artifacts": [
+                        {
+                            "name": "lucene-backward-codecs",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\org\\apache\\lucene\\lucene-backward-codecs\\8.4.0\\lucene-backward-codecs-8.4.0.jar"
+                        },
+                        {
+                            "name": "lucene-backward-codecs",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\org\\apache\\lucene\\lucene-backward-codecs\\8.4.0\\lucene-backward-codecs-8.4.0-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.elasticsearch",
+                    "name": "elasticsearch",
+                    "version": "7.6.2",
+                    "artifacts": [
+                        {
+                            "name": "elasticsearch",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\org\\elasticsearch\\elasticsearch\\7.6.2\\elasticsearch-7.6.2.jar"
+                        },
+                        {
+                            "name": "elasticsearch",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\org\\elasticsearch\\elasticsearch\\7.6.2\\elasticsearch-7.6.2-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.springframework.boot",
+                    "name": "spring-boot-starter-test",
+                    "version": "2.3.9.RELEASE",
+                    "artifacts": [
+                        {
+                            "name": "spring-boot-starter-test",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\org\\springframework\\boot\\spring-boot-starter-test\\2.3.9.RELEASE\\spring-boot-starter-test-2.3.9.RELEASE.jar"
+                        },
+                        {
+                            "name": "spring-boot-starter-test",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\org\\springframework\\boot\\spring-boot-starter-test\\2.3.9.RELEASE\\spring-boot-starter-test-2.3.9.RELEASE-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "io.netty",
+                    "name": "netty-transport",
+                    "version": "4.1.59.Final",
+                    "artifacts": [
+                        {
+                            "name": "netty-transport",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\io\\netty\\netty-transport\\4.1.59.Final\\netty-transport-4.1.59.Final.jar"
+                        },
+                        {
+                            "name": "netty-transport",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\io\\netty\\netty-transport\\4.1.59.Final\\netty-transport-4.1.59.Final-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.springframework.boot",
+                    "name": "spring-boot-autoconfigure",
+                    "version": "2.3.9.RELEASE",
+                    "artifacts": [
+                        {
+                            "name": "spring-boot-autoconfigure",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\org\\springframework\\boot\\spring-boot-autoconfigure\\2.3.9.RELEASE\\spring-boot-autoconfigure-2.3.9.RELEASE.jar"
+                        },
+                        {
+                            "name": "spring-boot-autoconfigure",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\org\\springframework\\boot\\spring-boot-autoconfigure\\2.3.9.RELEASE\\spring-boot-autoconfigure-2.3.9.RELEASE-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.junit.jupiter",
+                    "name": "junit-jupiter",
+                    "version": "5.6.3",
+                    "artifacts": [
+                        {
+                            "name": "junit-jupiter",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\org\\junit\\jupiter\\junit-jupiter\\5.6.3\\junit-jupiter-5.6.3.jar"
+                        },
+                        {
+                            "name": "junit-jupiter",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\org\\junit\\jupiter\\junit-jupiter\\5.6.3\\junit-jupiter-5.6.3-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.xmlunit",
+                    "name": "xmlunit-core",
+                    "version": "2.7.0",
+                    "artifacts": [
+                        {
+                            "name": "xmlunit-core",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\org\\xmlunit\\xmlunit-core\\2.7.0\\xmlunit-core-2.7.0.jar"
+                        },
+                        {
+                            "name": "xmlunit-core",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\org\\xmlunit\\xmlunit-core\\2.7.0\\xmlunit-core-2.7.0-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.apache.lucene",
+                    "name": "lucene-misc",
+                    "version": "8.4.0",
+                    "artifacts": [
+                        {
+                            "name": "lucene-misc",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\org\\apache\\lucene\\lucene-misc\\8.4.0\\lucene-misc-8.4.0.jar"
+                        },
+                        {
+                            "name": "lucene-misc",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\org\\apache\\lucene\\lucene-misc\\8.4.0\\lucene-misc-8.4.0-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.apache.httpcomponents",
+                    "name": "httpcore",
+                    "version": "4.4.14",
+                    "artifacts": [
+                        {
+                            "name": "httpcore",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\org\\apache\\httpcomponents\\httpcore\\4.4.14\\httpcore-4.4.14.jar"
+                        },
+                        {
+                            "name": "httpcore",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\org\\apache\\httpcomponents\\httpcore\\4.4.14\\httpcore-4.4.14-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.junit.platform",
+                    "name": "junit-platform-engine",
+                    "version": "1.6.3",
+                    "artifacts": [
+                        {
+                            "name": "junit-platform-engine",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\org\\junit\\platform\\junit-platform-engine\\1.6.3\\junit-platform-engine-1.6.3.jar"
+                        },
+                        {
+                            "name": "junit-platform-engine",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\org\\junit\\platform\\junit-platform-engine\\1.6.3\\junit-platform-engine-1.6.3-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "com.fasterxml.jackson.core",
+                    "name": "jackson-databind",
+                    "version": "2.11.4",
+                    "artifacts": [
+                        {
+                            "name": "jackson-databind",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\com\\fasterxml\\jackson\\core\\jackson-databind\\2.11.4\\jackson-databind-2.11.4.jar"
+                        },
+                        {
+                            "name": "jackson-databind",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\com\\fasterxml\\jackson\\core\\jackson-databind\\2.11.4\\jackson-databind-2.11.4-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "jakarta.annotation",
+                    "name": "jakarta.annotation-api",
+                    "version": "1.3.5",
+                    "artifacts": [
+                        {
+                            "name": "jakarta.annotation-api",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\jakarta\\annotation\\jakarta.annotation-api\\1.3.5\\jakarta.annotation-api-1.3.5.jar"
+                        },
+                        {
+                            "name": "jakarta.annotation-api",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\jakarta\\annotation\\jakarta.annotation-api\\1.3.5\\jakarta.annotation-api-1.3.5-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.springframework.data",
+                    "name": "spring-data-rest-core",
+                    "version": "3.3.7.RELEASE",
+                    "artifacts": [
+                        {
+                            "name": "spring-data-rest-core",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\org\\springframework\\data\\spring-data-rest-core\\3.3.7.RELEASE\\spring-data-rest-core-3.3.7.RELEASE.jar"
+                        },
+                        {
+                            "name": "spring-data-rest-core",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\org\\springframework\\data\\spring-data-rest-core\\3.3.7.RELEASE\\spring-data-rest-core-3.3.7.RELEASE-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.elasticsearch",
+                    "name": "elasticsearch-geo",
+                    "version": "7.6.2",
+                    "artifacts": [
+                        {
+                            "name": "elasticsearch-geo",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\org\\elasticsearch\\elasticsearch-geo\\7.6.2\\elasticsearch-geo-7.6.2.jar"
+                        },
+                        {
+                            "name": "elasticsearch-geo",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\org\\elasticsearch\\elasticsearch-geo\\7.6.2\\elasticsearch-geo-7.6.2-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.elasticsearch.plugin",
+                    "name": "aggs-matrix-stats-client",
+                    "version": "7.6.2",
+                    "artifacts": [
+                        {
+                            "name": "aggs-matrix-stats-client",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\org\\elasticsearch\\plugin\\aggs-matrix-stats-client\\7.6.2\\aggs-matrix-stats-client-7.6.2.jar"
+                        },
+                        {
+                            "name": "aggs-matrix-stats-client",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\org\\elasticsearch\\plugin\\aggs-matrix-stats-client\\7.6.2\\aggs-matrix-stats-client-7.6.2-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.apache.lucene",
+                    "name": "lucene-queries",
+                    "version": "8.4.0",
+                    "artifacts": [
+                        {
+                            "name": "lucene-queries",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\org\\apache\\lucene\\lucene-queries\\8.4.0\\lucene-queries-8.4.0.jar"
+                        },
+                        {
+                            "name": "lucene-queries",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\org\\apache\\lucene\\lucene-queries\\8.4.0\\lucene-queries-8.4.0-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.springframework",
+                    "name": "spring-tx",
+                    "version": "5.2.13.RELEASE",
+                    "artifacts": [
+                        {
+                            "name": "spring-tx",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\org\\springframework\\spring-tx\\5.2.13.RELEASE\\spring-tx-5.2.13.RELEASE.jar"
+                        },
+                        {
+                            "name": "spring-tx",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\org\\springframework\\spring-tx\\5.2.13.RELEASE\\spring-tx-5.2.13.RELEASE-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.hdrhistogram",
+                    "name": "HdrHistogram",
+                    "version": "2.1.9",
+                    "artifacts": [
+                        {
+                            "name": "HdrHistogram",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\org\\hdrhistogram\\HdrHistogram\\2.1.9\\HdrHistogram-2.1.9.jar"
+                        },
+                        {
+                            "name": "HdrHistogram",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\org\\hdrhistogram\\HdrHistogram\\2.1.9\\HdrHistogram-2.1.9-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.apache.lucene",
+                    "name": "lucene-grouping",
+                    "version": "8.4.0",
+                    "artifacts": [
+                        {
+                            "name": "lucene-grouping",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\org\\apache\\lucene\\lucene-grouping\\8.4.0\\lucene-grouping-8.4.0.jar"
+                        },
+                        {
+                            "name": "lucene-grouping",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\org\\apache\\lucene\\lucene-grouping\\8.4.0\\lucene-grouping-8.4.0-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "net.bytebuddy",
+                    "name": "byte-buddy-agent",
+                    "version": "1.10.20",
+                    "artifacts": [
+                        {
+                            "name": "byte-buddy-agent",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\net\\bytebuddy\\byte-buddy-agent\\1.10.20\\byte-buddy-agent-1.10.20.jar"
+                        },
+                        {
+                            "name": "byte-buddy-agent",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\net\\bytebuddy\\byte-buddy-agent\\1.10.20\\byte-buddy-agent-1.10.20-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.elasticsearch",
+                    "name": "jna",
+                    "version": "4.5.1",
+                    "artifacts": [
+                        {
+                            "name": "jna",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\org\\elasticsearch\\jna\\4.5.1\\jna-4.5.1.jar"
+                        },
+                        {
+                            "name": "jna",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\org\\elasticsearch\\jna\\4.5.1\\jna-4.5.1-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.apache.lucene",
+                    "name": "lucene-queryparser",
+                    "version": "8.4.0",
+                    "artifacts": [
+                        {
+                            "name": "lucene-queryparser",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\org\\apache\\lucene\\lucene-queryparser\\8.4.0\\lucene-queryparser-8.4.0.jar"
+                        },
+                        {
+                            "name": "lucene-queryparser",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\org\\apache\\lucene\\lucene-queryparser\\8.4.0\\lucene-queryparser-8.4.0-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.glassfish",
+                    "name": "jakarta.el",
+                    "version": "3.0.3",
+                    "artifacts": [
+                        {
+                            "name": "jakarta.el",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\org\\glassfish\\jakarta.el\\3.0.3\\jakarta.el-3.0.3.jar"
+                        },
+                        {
+                            "name": "jakarta.el",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\org\\glassfish\\jakarta.el\\3.0.3\\jakarta.el-3.0.3-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "javax.validation",
+                    "name": "validation-api",
+                    "version": "2.0.0.Final",
+                    "artifacts": [
+                        {
+                            "name": "validation-api",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\javax\\validation\\validation-api\\2.0.0.Final\\validation-api-2.0.0.Final.jar"
+                        },
+                        {
+                            "name": "validation-api",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\javax\\validation\\validation-api\\2.0.0.Final\\validation-api-2.0.0.Final-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.elasticsearch",
+                    "name": "elasticsearch-cli",
+                    "version": "7.6.2",
+                    "artifacts": [
+                        {
+                            "name": "elasticsearch-cli",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\org\\elasticsearch\\elasticsearch-cli\\7.6.2\\elasticsearch-cli-7.6.2.jar"
+                        },
+                        {
+                            "name": "elasticsearch-cli",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\org\\elasticsearch\\elasticsearch-cli\\7.6.2\\elasticsearch-cli-7.6.2-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.springframework.plugin",
+                    "name": "spring-plugin-core",
+                    "version": "2.0.0.RELEASE",
+                    "artifacts": [
+                        {
+                            "name": "spring-plugin-core",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\org\\springframework\\plugin\\spring-plugin-core\\2.0.0.RELEASE\\spring-plugin-core-2.0.0.RELEASE.jar"
+                        },
+                        {
+                            "name": "spring-plugin-core",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\org\\springframework\\plugin\\spring-plugin-core\\2.0.0.RELEASE\\spring-plugin-core-2.0.0.RELEASE-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "com.fasterxml.jackson.core",
+                    "name": "jackson-core",
+                    "version": "2.11.4",
+                    "artifacts": [
+                        {
+                            "name": "jackson-core",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\com\\fasterxml\\jackson\\core\\jackson-core\\2.11.4\\jackson-core-2.11.4.jar"
+                        },
+                        {
+                            "name": "jackson-core",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\com\\fasterxml\\jackson\\core\\jackson-core\\2.11.4\\jackson-core-2.11.4-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.thymeleaf.extras",
+                    "name": "thymeleaf-extras-springsecurity5",
+                    "version": "3.0.4.RELEASE",
+                    "artifacts": [
+                        {
+                            "name": "thymeleaf-extras-springsecurity5",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\org\\thymeleaf\\extras\\thymeleaf-extras-springsecurity5\\3.0.4.RELEASE\\thymeleaf-extras-springsecurity5-3.0.4.RELEASE.jar"
+                        },
+                        {
+                            "name": "thymeleaf-extras-springsecurity5",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\org\\thymeleaf\\extras\\thymeleaf-extras-springsecurity5\\3.0.4.RELEASE\\thymeleaf-extras-springsecurity5-3.0.4.RELEASE-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "commons-codec",
+                    "name": "commons-codec",
+                    "version": "1.14",
+                    "artifacts": [
+                        {
+                            "name": "commons-codec",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\commons-codec\\commons-codec\\1.14\\commons-codec-1.14.jar"
+                        },
+                        {
+                            "name": "commons-codec",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\commons-codec\\commons-codec\\1.14\\commons-codec-1.14-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "jakarta.validation",
+                    "name": "jakarta.validation-api",
+                    "version": "2.0.2",
+                    "artifacts": [
+                        {
+                            "name": "jakarta.validation-api",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\jakarta\\validation\\jakarta.validation-api\\2.0.2\\jakarta.validation-api-2.0.2.jar"
+                        },
+                        {
+                            "name": "jakarta.validation-api",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\jakarta\\validation\\jakarta.validation-api\\2.0.2\\jakarta.validation-api-2.0.2-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.elasticsearch.client",
+                    "name": "elasticsearch-rest-high-level-client",
+                    "version": "7.6.2",
+                    "artifacts": [
+                        {
+                            "name": "elasticsearch-rest-high-level-client",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\org\\elasticsearch\\client\\elasticsearch-rest-high-level-client\\7.6.2\\elasticsearch-rest-high-level-client-7.6.2.jar"
+                        },
+                        {
+                            "name": "elasticsearch-rest-high-level-client",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\org\\elasticsearch\\client\\elasticsearch-rest-high-level-client\\7.6.2\\elasticsearch-rest-high-level-client-7.6.2-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.springframework.security",
+                    "name": "spring-security-web",
+                    "version": "5.3.8.RELEASE",
+                    "artifacts": [
+                        {
+                            "name": "spring-security-web",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\org\\springframework\\security\\spring-security-web\\5.3.8.RELEASE\\spring-security-web-5.3.8.RELEASE.jar"
+                        },
+                        {
+                            "name": "spring-security-web",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\org\\springframework\\security\\spring-security-web\\5.3.8.RELEASE\\spring-security-web-5.3.8.RELEASE-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.mockito",
+                    "name": "mockito-core",
+                    "version": "3.3.3",
+                    "artifacts": [
+                        {
+                            "name": "mockito-core",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\org\\mockito\\mockito-core\\3.3.3\\mockito-core-3.3.3.jar"
+                        },
+                        {
+                            "name": "mockito-core",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\org\\mockito\\mockito-core\\3.3.3\\mockito-core-3.3.3-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.elasticsearch.plugin",
+                    "name": "reindex-client",
+                    "version": "7.6.2",
+                    "artifacts": [
+                        {
+                            "name": "reindex-client",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\org\\elasticsearch\\plugin\\reindex-client\\7.6.2\\reindex-client-7.6.2.jar"
+                        },
+                        {
+                            "name": "reindex-client",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\org\\elasticsearch\\plugin\\reindex-client\\7.6.2\\reindex-client-7.6.2-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "com.github.spullara.mustache.java",
+                    "name": "compiler",
+                    "version": "0.9.6",
+                    "artifacts": [
+                        {
+                            "name": "compiler",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\com\\github\\spullara\\mustache\\java\\compiler\\0.9.6\\compiler-0.9.6.jar"
+                        },
+                        {
+                            "name": "compiler",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\com\\github\\spullara\\mustache\\java\\compiler\\0.9.6\\compiler-0.9.6-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.springframework",
+                    "name": "spring-jcl",
+                    "version": "5.2.13.RELEASE",
+                    "artifacts": [
+                        {
+                            "name": "spring-jcl",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\org\\springframework\\spring-jcl\\5.2.13.RELEASE\\spring-jcl-5.2.13.RELEASE.jar"
+                        },
+                        {
+                            "name": "spring-jcl",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\org\\springframework\\spring-jcl\\5.2.13.RELEASE\\spring-jcl-5.2.13.RELEASE-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.springframework.boot",
+                    "name": "spring-boot-starter",
+                    "version": "2.3.9.RELEASE",
+                    "artifacts": [
+                        {
+                            "name": "spring-boot-starter",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\org\\springframework\\boot\\spring-boot-starter\\2.3.9.RELEASE\\spring-boot-starter-2.3.9.RELEASE.jar"
+                        },
+                        {
+                            "name": "spring-boot-starter",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\org\\springframework\\boot\\spring-boot-starter\\2.3.9.RELEASE\\spring-boot-starter-2.3.9.RELEASE-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.springframework.boot",
+                    "name": "spring-boot-test-autoconfigure",
+                    "version": "2.3.9.RELEASE",
+                    "artifacts": [
+                        {
+                            "name": "spring-boot-test-autoconfigure",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\org\\springframework\\boot\\spring-boot-test-autoconfigure\\2.3.9.RELEASE\\spring-boot-test-autoconfigure-2.3.9.RELEASE.jar"
+                        },
+                        {
+                            "name": "spring-boot-test-autoconfigure",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\org\\springframework\\boot\\spring-boot-test-autoconfigure\\2.3.9.RELEASE\\spring-boot-test-autoconfigure-2.3.9.RELEASE-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.ow2.asm",
+                    "name": "asm",
+                    "version": "5.0.4",
+                    "artifacts": [
+                        {
+                            "name": "asm",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\org\\ow2\\asm\\asm\\5.0.4\\asm-5.0.4.jar"
+                        },
+                        {
+                            "name": "asm",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\org\\ow2\\asm\\asm\\5.0.4\\asm-5.0.4-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "com.fasterxml.jackson.dataformat",
+                    "name": "jackson-dataformat-smile",
+                    "version": "2.11.4",
+                    "artifacts": [
+                        {
+                            "name": "jackson-dataformat-smile",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\com\\fasterxml\\jackson\\dataformat\\jackson-dataformat-smile\\2.11.4\\jackson-dataformat-smile-2.11.4.jar"
+                        },
+                        {
+                            "name": "jackson-dataformat-smile",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\com\\fasterxml\\jackson\\dataformat\\jackson-dataformat-smile\\2.11.4\\jackson-dataformat-smile-2.11.4-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.junit.jupiter",
+                    "name": "junit-jupiter-engine",
+                    "version": "5.6.3",
+                    "artifacts": [
+                        {
+                            "name": "junit-jupiter-engine",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\org\\junit\\jupiter\\junit-jupiter-engine\\5.6.3\\junit-jupiter-engine-5.6.3.jar"
+                        },
+                        {
+                            "name": "junit-jupiter-engine",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\org\\junit\\jupiter\\junit-jupiter-engine\\5.6.3\\junit-jupiter-engine-5.6.3-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.thymeleaf",
+                    "name": "thymeleaf-spring5",
+                    "version": "3.0.12.RELEASE",
+                    "artifacts": [
+                        {
+                            "name": "thymeleaf-spring5",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\org\\thymeleaf\\thymeleaf-spring5\\3.0.12.RELEASE\\thymeleaf-spring5-3.0.12.RELEASE.jar"
+                        },
+                        {
+                            "name": "thymeleaf-spring5",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\org\\thymeleaf\\thymeleaf-spring5\\3.0.12.RELEASE\\thymeleaf-spring5-3.0.12.RELEASE-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.elasticsearch.plugin",
+                    "name": "percolator-client",
+                    "version": "7.6.2",
+                    "artifacts": [
+                        {
+                            "name": "percolator-client",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\org\\elasticsearch\\plugin\\percolator-client\\7.6.2\\percolator-client-7.6.2.jar"
+                        },
+                        {
+                            "name": "percolator-client",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\org\\elasticsearch\\plugin\\percolator-client\\7.6.2\\percolator-client-7.6.2-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "com.carrotsearch",
+                    "name": "hppc",
+                    "version": "0.8.1",
+                    "artifacts": [
+                        {
+                            "name": "hppc",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\com\\carrotsearch\\hppc\\0.8.1\\hppc-0.8.1.jar"
+                        },
+                        {
+                            "name": "hppc",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\com\\carrotsearch\\hppc\\0.8.1\\hppc-0.8.1-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "joda-time",
+                    "name": "joda-time",
+                    "version": "2.10.4",
+                    "artifacts": [
+                        {
+                            "name": "joda-time",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\joda-time\\joda-time\\2.10.4\\joda-time-2.10.4.jar"
+                        },
+                        {
+                            "name": "joda-time",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\joda-time\\joda-time\\2.10.4\\joda-time-2.10.4-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.elasticsearch",
+                    "name": "elasticsearch-core",
+                    "version": "7.6.2",
+                    "artifacts": [
+                        {
+                            "name": "elasticsearch-core",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\org\\elasticsearch\\elasticsearch-core\\7.6.2\\elasticsearch-core-7.6.2.jar"
+                        },
+                        {
+                            "name": "elasticsearch-core",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\org\\elasticsearch\\elasticsearch-core\\7.6.2\\elasticsearch-core-7.6.2-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.yaml",
+                    "name": "snakeyaml",
+                    "version": "1.26",
+                    "artifacts": [
+                        {
+                            "name": "snakeyaml",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\org\\yaml\\snakeyaml\\1.26\\snakeyaml-1.26.jar"
+                        },
+                        {
+                            "name": "snakeyaml",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\org\\yaml\\snakeyaml\\1.26\\snakeyaml-1.26-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.apache.lucene",
+                    "name": "lucene-suggest",
+                    "version": "8.4.0",
+                    "artifacts": [
+                        {
+                            "name": "lucene-suggest",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\org\\apache\\lucene\\lucene-suggest\\8.4.0\\lucene-suggest-8.4.0.jar"
+                        },
+                        {
+                            "name": "lucene-suggest",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\org\\apache\\lucene\\lucene-suggest\\8.4.0\\lucene-suggest-8.4.0-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.apache.httpcomponents",
+                    "name": "httpasyncclient",
+                    "version": "4.1.4",
+                    "artifacts": [
+                        {
+                            "name": "httpasyncclient",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\org\\apache\\httpcomponents\\httpasyncclient\\4.1.4\\httpasyncclient-4.1.4.jar"
+                        },
+                        {
+                            "name": "httpasyncclient",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\org\\apache\\httpcomponents\\httpasyncclient\\4.1.4\\httpasyncclient-4.1.4-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.springframework.security",
+                    "name": "spring-security-core",
+                    "version": "5.3.8.RELEASE",
+                    "artifacts": [
+                        {
+                            "name": "spring-security-core",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\org\\springframework\\security\\spring-security-core\\5.3.8.RELEASE\\spring-security-core-5.3.8.RELEASE.jar"
+                        },
+                        {
+                            "name": "spring-security-core",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\org\\springframework\\security\\spring-security-core\\5.3.8.RELEASE\\spring-security-core-5.3.8.RELEASE-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.springframework.boot",
+                    "name": "spring-boot-starter-thymeleaf",
+                    "version": "2.3.9.RELEASE",
+                    "artifacts": [
+                        {
+                            "name": "spring-boot-starter-thymeleaf",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\org\\springframework\\boot\\spring-boot-starter-thymeleaf\\2.3.9.RELEASE\\spring-boot-starter-thymeleaf-2.3.9.RELEASE.jar"
+                        },
+                        {
+                            "name": "spring-boot-starter-thymeleaf",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\org\\springframework\\boot\\spring-boot-starter-thymeleaf\\2.3.9.RELEASE\\spring-boot-starter-thymeleaf-2.3.9.RELEASE-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.springframework.security",
+                    "name": "spring-security-config",
+                    "version": "5.3.8.RELEASE",
+                    "artifacts": [
+                        {
+                            "name": "spring-security-config",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\org\\springframework\\security\\spring-security-config\\5.3.8.RELEASE\\spring-security-config-5.3.8.RELEASE.jar"
+                        },
+                        {
+                            "name": "spring-security-config",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\org\\springframework\\security\\spring-security-config\\5.3.8.RELEASE\\spring-security-config-5.3.8.RELEASE-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.apache.tomcat.embed",
+                    "name": "tomcat-embed-websocket",
+                    "version": "9.0.43",
+                    "artifacts": [
+                        {
+                            "name": "tomcat-embed-websocket",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\org\\apache\\tomcat\\embed\\tomcat-embed-websocket\\9.0.43\\tomcat-embed-websocket-9.0.43.jar"
+                        },
+                        {
+                            "name": "tomcat-embed-websocket",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\org\\apache\\tomcat\\embed\\tomcat-embed-websocket\\9.0.43\\tomcat-embed-websocket-9.0.43-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.apiguardian",
+                    "name": "apiguardian-api",
+                    "version": "1.1.0",
+                    "artifacts": [
+                        {
+                            "name": "apiguardian-api",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\org\\apiguardian\\apiguardian-api\\1.1.0\\apiguardian-api-1.1.0.jar"
+                        },
+                        {
+                            "name": "apiguardian-api",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\org\\apiguardian\\apiguardian-api\\1.1.0\\apiguardian-api-1.1.0-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.elasticsearch.plugin",
+                    "name": "mapper-extras-client",
+                    "version": "7.6.2",
+                    "artifacts": [
+                        {
+                            "name": "mapper-extras-client",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\org\\elasticsearch\\plugin\\mapper-extras-client\\7.6.2\\mapper-extras-client-7.6.2.jar"
+                        },
+                        {
+                            "name": "mapper-extras-client",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\org\\elasticsearch\\plugin\\mapper-extras-client\\7.6.2\\mapper-extras-client-7.6.2-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.springframework.boot",
+                    "name": "spring-boot-starter-web",
+                    "version": "2.3.9.RELEASE",
+                    "artifacts": [
+                        {
+                            "name": "spring-boot-starter-web",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\org\\springframework\\boot\\spring-boot-starter-web\\2.3.9.RELEASE\\spring-boot-starter-web-2.3.9.RELEASE.jar"
+                        },
+                        {
+                            "name": "spring-boot-starter-web",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\org\\springframework\\boot\\spring-boot-starter-web\\2.3.9.RELEASE\\spring-boot-starter-web-2.3.9.RELEASE-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.springframework.boot",
+                    "name": "spring-boot-starter-json",
+                    "version": "2.3.9.RELEASE",
+                    "artifacts": [
+                        {
+                            "name": "spring-boot-starter-json",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\org\\springframework\\boot\\spring-boot-starter-json\\2.3.9.RELEASE\\spring-boot-starter-json-2.3.9.RELEASE.jar"
+                        },
+                        {
+                            "name": "spring-boot-starter-json",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\org\\springframework\\boot\\spring-boot-starter-json\\2.3.9.RELEASE\\spring-boot-starter-json-2.3.9.RELEASE-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "net.minidev",
+                    "name": "json-smart",
+                    "version": "2.3",
+                    "artifacts": [
+                        {
+                            "name": "json-smart",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\net\\minidev\\json-smart\\2.3\\json-smart-2.3.jar"
+                        },
+                        {
+                            "name": "json-smart",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\net\\minidev\\json-smart\\2.3\\json-smart-2.3-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "com.fasterxml.jackson.dataformat",
+                    "name": "jackson-dataformat-cbor",
+                    "version": "2.11.4",
+                    "artifacts": [
+                        {
+                            "name": "jackson-dataformat-cbor",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\com\\fasterxml\\jackson\\dataformat\\jackson-dataformat-cbor\\2.11.4\\jackson-dataformat-cbor-2.11.4.jar"
+                        },
+                        {
+                            "name": "jackson-dataformat-cbor",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\com\\fasterxml\\jackson\\dataformat\\jackson-dataformat-cbor\\2.11.4\\jackson-dataformat-cbor-2.11.4-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.hibernate.validator",
+                    "name": "hibernate-validator",
+                    "version": "6.1.7.Final",
+                    "artifacts": [
+                        {
+                            "name": "hibernate-validator",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\org\\hibernate\\validator\\hibernate-validator\\6.1.7.Final\\hibernate-validator-6.1.7.Final.jar"
+                        },
+                        {
+                            "name": "hibernate-validator",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\org\\hibernate\\validator\\hibernate-validator\\6.1.7.Final\\hibernate-validator-6.1.7.Final-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.apache.lucene",
+                    "name": "lucene-spatial",
+                    "version": "8.4.0",
+                    "artifacts": [
+                        {
+                            "name": "lucene-spatial",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\org\\apache\\lucene\\lucene-spatial\\8.4.0\\lucene-spatial-8.4.0.jar"
+                        },
+                        {
+                            "name": "lucene-spatial",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\org\\apache\\lucene\\lucene-spatial\\8.4.0\\lucene-spatial-8.4.0-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "io.netty",
+                    "name": "netty-common",
+                    "version": "4.1.59.Final",
+                    "artifacts": [
+                        {
+                            "name": "netty-common",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\io\\netty\\netty-common\\4.1.59.Final\\netty-common-4.1.59.Final.jar"
+                        },
+                        {
+                            "name": "netty-common",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\io\\netty\\netty-common\\4.1.59.Final\\netty-common-4.1.59.Final-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.springframework.security",
+                    "name": "spring-security-test",
+                    "version": "5.3.8.RELEASE",
+                    "artifacts": [
+                        {
+                            "name": "spring-security-test",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\org\\springframework\\security\\spring-security-test\\5.3.8.RELEASE\\spring-security-test-5.3.8.RELEASE.jar"
+                        },
+                        {
+                            "name": "spring-security-test",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\org\\springframework\\security\\spring-security-test\\5.3.8.RELEASE\\spring-security-test-5.3.8.RELEASE-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "com.vaadin.external.google",
+                    "name": "android-json",
+                    "version": "0.0.20131108.vaadin1",
+                    "artifacts": [
+                        {
+                            "name": "android-json",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\com\\vaadin\\external\\google\\android-json\\0.0.20131108.vaadin1\\android-json-0.0.20131108.vaadin1.jar"
+                        },
+                        {
+                            "name": "android-json",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\com\\vaadin\\external\\google\\android-json\\0.0.20131108.vaadin1\\android-json-0.0.20131108.vaadin1-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.apache.lucene",
+                    "name": "lucene-sandbox",
+                    "version": "8.4.0",
+                    "artifacts": [
+                        {
+                            "name": "lucene-sandbox",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\org\\apache\\lucene\\lucene-sandbox\\8.4.0\\lucene-sandbox-8.4.0.jar"
+                        },
+                        {
+                            "name": "lucene-sandbox",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\org\\apache\\lucene\\lucene-sandbox\\8.4.0\\lucene-sandbox-8.4.0-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "com.fasterxml.jackson.core",
+                    "name": "jackson-annotations",
+                    "version": "2.11.4",
+                    "artifacts": [
+                        {
+                            "name": "jackson-annotations",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\com\\fasterxml\\jackson\\core\\jackson-annotations\\2.11.4\\jackson-annotations-2.11.4.jar"
+                        },
+                        {
+                            "name": "jackson-annotations",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\com\\fasterxml\\jackson\\core\\jackson-annotations\\2.11.4\\jackson-annotations-2.11.4-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.elasticsearch.client",
+                    "name": "elasticsearch-rest-client",
+                    "version": "7.6.2",
+                    "artifacts": [
+                        {
+                            "name": "elasticsearch-rest-client",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\org\\elasticsearch\\client\\elasticsearch-rest-client\\7.6.2\\elasticsearch-rest-client-7.6.2.jar"
+                        },
+                        {
+                            "name": "elasticsearch-rest-client",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\org\\elasticsearch\\client\\elasticsearch-rest-client\\7.6.2\\elasticsearch-rest-client-7.6.2-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "io.netty",
+                    "name": "netty-handler",
+                    "version": "4.1.59.Final",
+                    "artifacts": [
+                        {
+                            "name": "netty-handler",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\io\\netty\\netty-handler\\4.1.59.Final\\netty-handler-4.1.59.Final.jar"
+                        },
+                        {
+                            "name": "netty-handler",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\io\\netty\\netty-handler\\4.1.59.Final\\netty-handler-4.1.59.Final-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.attoparser",
+                    "name": "attoparser",
+                    "version": "2.0.5.RELEASE",
+                    "artifacts": [
+                        {
+                            "name": "attoparser",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\org\\attoparser\\attoparser\\2.0.5.RELEASE\\attoparser-2.0.5.RELEASE.jar"
+                        },
+                        {
+                            "name": "attoparser",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\org\\attoparser\\attoparser\\2.0.5.RELEASE\\attoparser-2.0.5.RELEASE-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.springframework.boot",
+                    "name": "spring-boot-starter-validation",
+                    "version": "2.3.9.RELEASE",
+                    "artifacts": [
+                        {
+                            "name": "spring-boot-starter-validation",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\org\\springframework\\boot\\spring-boot-starter-validation\\2.3.9.RELEASE\\spring-boot-starter-validation-2.3.9.RELEASE.jar"
+                        },
+                        {
+                            "name": "spring-boot-starter-validation",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\org\\springframework\\boot\\spring-boot-starter-validation\\2.3.9.RELEASE\\spring-boot-starter-validation-2.3.9.RELEASE-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.mockito",
+                    "name": "mockito-junit-jupiter",
+                    "version": "3.3.3",
+                    "artifacts": [
+                        {
+                            "name": "mockito-junit-jupiter",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\org\\mockito\\mockito-junit-jupiter\\3.3.3\\mockito-junit-jupiter-3.3.3.jar"
+                        },
+                        {
+                            "name": "mockito-junit-jupiter",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\org\\mockito\\mockito-junit-jupiter\\3.3.3\\mockito-junit-jupiter-3.3.3-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.springframework",
+                    "name": "spring-test",
+                    "version": "5.2.13.RELEASE",
+                    "artifacts": [
+                        {
+                            "name": "spring-test",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\org\\springframework\\spring-test\\5.2.13.RELEASE\\spring-test-5.2.13.RELEASE.jar"
+                        },
+                        {
+                            "name": "spring-test",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\org\\springframework\\spring-test\\5.2.13.RELEASE\\spring-test-5.2.13.RELEASE-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.slf4j",
+                    "name": "slf4j-api",
+                    "version": "1.7.30",
+                    "artifacts": [
+                        {
+                            "name": "slf4j-api",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\org\\slf4j\\slf4j-api\\1.7.30\\slf4j-api-1.7.30.jar"
+                        },
+                        {
+                            "name": "slf4j-api",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\org\\slf4j\\slf4j-api\\1.7.30\\slf4j-api-1.7.30-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "net.sf.jopt-simple",
+                    "name": "jopt-simple",
+                    "version": "5.0.2",
+                    "artifacts": [
+                        {
+                            "name": "jopt-simple",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\net\\sf\\jopt-simple\\jopt-simple\\5.0.2\\jopt-simple-5.0.2.jar"
+                        },
+                        {
+                            "name": "jopt-simple",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\net\\sf\\jopt-simple\\jopt-simple\\5.0.2\\jopt-simple-5.0.2-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "com.tdunning",
+                    "name": "t-digest",
+                    "version": "3.2",
+                    "artifacts": [
+                        {
+                            "name": "t-digest",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\com\\tdunning\\t-digest\\3.2\\t-digest-3.2.jar"
+                        },
+                        {
+                            "name": "t-digest",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\com\\tdunning\\t-digest\\3.2\\t-digest-3.2-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.springframework.hateoas",
+                    "name": "spring-hateoas",
+                    "version": "1.1.4.RELEASE",
+                    "artifacts": [
+                        {
+                            "name": "spring-hateoas",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\org\\springframework\\hateoas\\spring-hateoas\\1.1.4.RELEASE\\spring-hateoas-1.1.4.RELEASE.jar"
+                        },
+                        {
+                            "name": "spring-hateoas",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\org\\springframework\\hateoas\\spring-hateoas\\1.1.4.RELEASE\\spring-hateoas-1.1.4.RELEASE-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.apache.logging.log4j",
+                    "name": "log4j-to-slf4j",
+                    "version": "2.13.3",
+                    "artifacts": [
+                        {
+                            "name": "log4j-to-slf4j",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\org\\apache\\logging\\log4j\\log4j-to-slf4j\\2.13.3\\log4j-to-slf4j-2.13.3.jar"
+                        },
+                        {
+                            "name": "log4j-to-slf4j",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\org\\apache\\logging\\log4j\\log4j-to-slf4j\\2.13.3\\log4j-to-slf4j-2.13.3-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.springframework.boot",
+                    "name": "spring-boot-starter-security",
+                    "version": "2.3.9.RELEASE",
+                    "artifacts": [
+                        {
+                            "name": "spring-boot-starter-security",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\org\\springframework\\boot\\spring-boot-starter-security\\2.3.9.RELEASE\\spring-boot-starter-security-2.3.9.RELEASE.jar"
+                        },
+                        {
+                            "name": "spring-boot-starter-security",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\org\\springframework\\boot\\spring-boot-starter-security\\2.3.9.RELEASE\\spring-boot-starter-security-2.3.9.RELEASE-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "ch.qos.logback",
+                    "name": "logback-core",
+                    "version": "1.2.3",
+                    "artifacts": [
+                        {
+                            "name": "logback-core",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\ch\\qos\\logback\\logback-core\\1.2.3\\logback-core-1.2.3.jar"
+                        },
+                        {
+                            "name": "logback-core",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\ch\\qos\\logback\\logback-core\\1.2.3\\logback-core-1.2.3-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.springframework.boot",
+                    "name": "spring-boot-starter-tomcat",
+                    "version": "2.3.9.RELEASE",
+                    "artifacts": [
+                        {
+                            "name": "spring-boot-starter-tomcat",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\org\\springframework\\boot\\spring-boot-starter-tomcat\\2.3.9.RELEASE\\spring-boot-starter-tomcat-2.3.9.RELEASE.jar"
+                        },
+                        {
+                            "name": "spring-boot-starter-tomcat",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\org\\springframework\\boot\\spring-boot-starter-tomcat\\2.3.9.RELEASE\\spring-boot-starter-tomcat-2.3.9.RELEASE-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.hamcrest",
+                    "name": "hamcrest",
+                    "version": "2.2",
+                    "artifacts": [
+                        {
+                            "name": "hamcrest",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\org\\hamcrest\\hamcrest\\2.2\\hamcrest-2.2.jar"
+                        },
+                        {
+                            "name": "hamcrest",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\org\\hamcrest\\hamcrest\\2.2\\hamcrest-2.2-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "jakarta.xml.bind",
+                    "name": "jakarta.xml.bind-api",
+                    "version": "2.3.3",
+                    "artifacts": [
+                        {
+                            "name": "jakarta.xml.bind-api",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\jakarta\\xml\\bind\\jakarta.xml.bind-api\\2.3.3\\jakarta.xml.bind-api-2.3.3.jar"
+                        },
+                        {
+                            "name": "jakarta.xml.bind-api",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\jakarta\\xml\\bind\\jakarta.xml.bind-api\\2.3.3\\jakarta.xml.bind-api-2.3.3-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "com.jayway.jsonpath",
+                    "name": "json-path",
+                    "version": "2.4.0",
+                    "artifacts": [
+                        {
+                            "name": "json-path",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\com\\jayway\\jsonpath\\json-path\\2.4.0\\json-path-2.4.0.jar"
+                        },
+                        {
+                            "name": "json-path",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\com\\jayway\\jsonpath\\json-path\\2.4.0\\json-path-2.4.0-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.apache.logging.log4j",
+                    "name": "log4j-api",
+                    "version": "2.13.3",
+                    "artifacts": [
+                        {
+                            "name": "log4j-api",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\org\\apache\\logging\\log4j\\log4j-api\\2.13.3\\log4j-api-2.13.3.jar"
+                        },
+                        {
+                            "name": "log4j-api",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\org\\apache\\logging\\log4j\\log4j-api\\2.13.3\\log4j-api-2.13.3-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "ch.qos.logback",
+                    "name": "logback-classic",
+                    "version": "1.2.3",
+                    "artifacts": [
+                        {
+                            "name": "logback-classic",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\ch\\qos\\logback\\logback-classic\\1.2.3\\logback-classic-1.2.3.jar"
+                        },
+                        {
+                            "name": "logback-classic",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\ch\\qos\\logback\\logback-classic\\1.2.3\\logback-classic-1.2.3-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "com.fasterxml.jackson.datatype",
+                    "name": "jackson-datatype-jdk8",
+                    "version": "2.11.4",
+                    "artifacts": [
+                        {
+                            "name": "jackson-datatype-jdk8",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\com\\fasterxml\\jackson\\datatype\\jackson-datatype-jdk8\\2.11.4\\jackson-datatype-jdk8-2.11.4.jar"
+                        },
+                        {
+                            "name": "jackson-datatype-jdk8",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\com\\fasterxml\\jackson\\datatype\\jackson-datatype-jdk8\\2.11.4\\jackson-datatype-jdk8-2.11.4-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.thymeleaf.extras",
+                    "name": "thymeleaf-extras-java8time",
+                    "version": "3.0.4.RELEASE",
+                    "artifacts": [
+                        {
+                            "name": "thymeleaf-extras-java8time",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\org\\thymeleaf\\extras\\thymeleaf-extras-java8time\\3.0.4.RELEASE\\thymeleaf-extras-java8time-3.0.4.RELEASE.jar"
+                        },
+                        {
+                            "name": "thymeleaf-extras-java8time",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\org\\thymeleaf\\extras\\thymeleaf-extras-java8time\\3.0.4.RELEASE\\thymeleaf-extras-java8time-3.0.4.RELEASE-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.springframework.boot",
+                    "name": "spring-boot-starter-logging",
+                    "version": "2.3.9.RELEASE",
+                    "artifacts": [
+                        {
+                            "name": "spring-boot-starter-logging",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\org\\springframework\\boot\\spring-boot-starter-logging\\2.3.9.RELEASE\\spring-boot-starter-logging-2.3.9.RELEASE.jar"
+                        },
+                        {
+                            "name": "spring-boot-starter-logging",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\org\\springframework\\boot\\spring-boot-starter-logging\\2.3.9.RELEASE\\spring-boot-starter-logging-2.3.9.RELEASE-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.elasticsearch.plugin",
+                    "name": "lang-mustache-client",
+                    "version": "7.6.2",
+                    "artifacts": [
+                        {
+                            "name": "lang-mustache-client",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\org\\elasticsearch\\plugin\\lang-mustache-client\\7.6.2\\lang-mustache-client-7.6.2.jar"
+                        },
+                        {
+                            "name": "lang-mustache-client",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\org\\elasticsearch\\plugin\\lang-mustache-client\\7.6.2\\lang-mustache-client-7.6.2-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "com.fasterxml.jackson.datatype",
+                    "name": "jackson-datatype-jsr310",
+                    "version": "2.11.4",
+                    "artifacts": [
+                        {
+                            "name": "jackson-datatype-jsr310",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\com\\fasterxml\\jackson\\datatype\\jackson-datatype-jsr310\\2.11.4\\jackson-datatype-jsr310-2.11.4.jar"
+                        },
+                        {
+                            "name": "jackson-datatype-jsr310",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\com\\fasterxml\\jackson\\datatype\\jackson-datatype-jsr310\\2.11.4\\jackson-datatype-jsr310-2.11.4-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.junit.platform",
+                    "name": "junit-platform-commons",
+                    "version": "1.6.3",
+                    "artifacts": [
+                        {
+                            "name": "junit-platform-commons",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\org\\junit\\platform\\junit-platform-commons\\1.6.3\\junit-platform-commons-1.6.3.jar"
+                        },
+                        {
+                            "name": "junit-platform-commons",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\org\\junit\\platform\\junit-platform-commons\\1.6.3\\junit-platform-commons-1.6.3-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.thymeleaf",
+                    "name": "thymeleaf",
+                    "version": "3.0.12.RELEASE",
+                    "artifacts": [
+                        {
+                            "name": "thymeleaf",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\org\\thymeleaf\\thymeleaf\\3.0.12.RELEASE\\thymeleaf-3.0.12.RELEASE.jar"
+                        },
+                        {
+                            "name": "thymeleaf",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\org\\thymeleaf\\thymeleaf\\3.0.12.RELEASE\\thymeleaf-3.0.12.RELEASE-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.apache.lucene",
+                    "name": "lucene-highlighter",
+                    "version": "8.4.0",
+                    "artifacts": [
+                        {
+                            "name": "lucene-highlighter",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\org\\apache\\lucene\\lucene-highlighter\\8.4.0\\lucene-highlighter-8.4.0.jar"
+                        },
+                        {
+                            "name": "lucene-highlighter",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\org\\apache\\lucene\\lucene-highlighter\\8.4.0\\lucene-highlighter-8.4.0-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.apache.lucene",
+                    "name": "lucene-core",
+                    "version": "8.4.0",
+                    "artifacts": [
+                        {
+                            "name": "lucene-core",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\org\\apache\\lucene\\lucene-core\\8.4.0\\lucene-core-8.4.0.jar"
+                        },
+                        {
+                            "name": "lucene-core",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\org\\apache\\lucene\\lucene-core\\8.4.0\\lucene-core-8.4.0-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.springframework",
+                    "name": "spring-webmvc",
+                    "version": "5.2.13.RELEASE",
+                    "artifacts": [
+                        {
+                            "name": "spring-webmvc",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\org\\springframework\\spring-webmvc\\5.2.13.RELEASE\\spring-webmvc-5.2.13.RELEASE.jar"
+                        },
+                        {
+                            "name": "spring-webmvc",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\org\\springframework\\spring-webmvc\\5.2.13.RELEASE\\spring-webmvc-5.2.13.RELEASE-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.assertj",
+                    "name": "assertj-core",
+                    "version": "3.16.1",
+                    "artifacts": [
+                        {
+                            "name": "assertj-core",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\org\\assertj\\assertj-core\\3.16.1\\assertj-core-3.16.1.jar"
+                        },
+                        {
+                            "name": "assertj-core",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\org\\assertj\\assertj-core\\3.16.1\\assertj-core-3.16.1-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.springframework.data",
+                    "name": "spring-data-elasticsearch",
+                    "version": "4.0.7.RELEASE",
+                    "artifacts": [
+                        {
+                            "name": "spring-data-elasticsearch",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\org\\springframework\\data\\spring-data-elasticsearch\\4.0.7.RELEASE\\spring-data-elasticsearch-4.0.7.RELEASE.jar"
+                        },
+                        {
+                            "name": "spring-data-elasticsearch",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\org\\springframework\\data\\spring-data-elasticsearch\\4.0.7.RELEASE\\spring-data-elasticsearch-4.0.7.RELEASE-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.springframework.boot",
+                    "name": "spring-boot-starter-data-rest",
+                    "version": "2.3.9.RELEASE",
+                    "artifacts": [
+                        {
+                            "name": "spring-boot-starter-data-rest",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\org\\springframework\\boot\\spring-boot-starter-data-rest\\2.3.9.RELEASE\\spring-boot-starter-data-rest-2.3.9.RELEASE.jar"
+                        },
+                        {
+                            "name": "spring-boot-starter-data-rest",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\org\\springframework\\boot\\spring-boot-starter-data-rest\\2.3.9.RELEASE\\spring-boot-starter-data-rest-2.3.9.RELEASE-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.springframework",
+                    "name": "spring-core",
+                    "version": "5.2.13.RELEASE",
+                    "artifacts": [
+                        {
+                            "name": "spring-core",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\org\\springframework\\spring-core\\5.2.13.RELEASE\\spring-core-5.2.13.RELEASE.jar"
+                        },
+                        {
+                            "name": "spring-core",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\org\\springframework\\spring-core\\5.2.13.RELEASE\\spring-core-5.2.13.RELEASE-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.springframework.boot",
+                    "name": "spring-boot",
+                    "version": "2.3.9.RELEASE",
+                    "artifacts": [
+                        {
+                            "name": "spring-boot",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\org\\springframework\\boot\\spring-boot\\2.3.9.RELEASE\\spring-boot-2.3.9.RELEASE.jar"
+                        },
+                        {
+                            "name": "spring-boot",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\org\\springframework\\boot\\spring-boot\\2.3.9.RELEASE\\spring-boot-2.3.9.RELEASE-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.elasticsearch",
+                    "name": "elasticsearch-ssl-config",
+                    "version": "7.6.2",
+                    "artifacts": [
+                        {
+                            "name": "elasticsearch-ssl-config",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\org\\elasticsearch\\elasticsearch-ssl-config\\7.6.2\\elasticsearch-ssl-config-7.6.2.jar"
+                        },
+                        {
+                            "name": "elasticsearch-ssl-config",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\org\\elasticsearch\\elasticsearch-ssl-config\\7.6.2\\elasticsearch-ssl-config-7.6.2-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "net.bytebuddy",
+                    "name": "byte-buddy",
+                    "version": "1.10.20",
+                    "artifacts": [
+                        {
+                            "name": "byte-buddy",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\net\\bytebuddy\\byte-buddy\\1.10.20\\byte-buddy-1.10.20.jar"
+                        },
+                        {
+                            "name": "byte-buddy",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\net\\bytebuddy\\byte-buddy\\1.10.20\\byte-buddy-1.10.20-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "io.netty",
+                    "name": "netty-codec",
+                    "version": "4.1.59.Final",
+                    "artifacts": [
+                        {
+                            "name": "netty-codec",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\io\\netty\\netty-codec\\4.1.59.Final\\netty-codec-4.1.59.Final.jar"
+                        },
+                        {
+                            "name": "netty-codec",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\io\\netty\\netty-codec\\4.1.59.Final\\netty-codec-4.1.59.Final-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "io.netty",
+                    "name": "netty-codec-http",
+                    "version": "4.1.59.Final",
+                    "artifacts": [
+                        {
+                            "name": "netty-codec-http",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\io\\netty\\netty-codec-http\\4.1.59.Final\\netty-codec-http-4.1.59.Final.jar"
+                        },
+                        {
+                            "name": "netty-codec-http",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\io\\netty\\netty-codec-http\\4.1.59.Final\\netty-codec-http-4.1.59.Final-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.springframework",
+                    "name": "spring-aop",
+                    "version": "5.2.13.RELEASE",
+                    "artifacts": [
+                        {
+                            "name": "spring-aop",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\org\\springframework\\spring-aop\\5.2.13.RELEASE\\spring-aop-5.2.13.RELEASE.jar"
+                        },
+                        {
+                            "name": "spring-aop",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\org\\springframework\\spring-aop\\5.2.13.RELEASE\\spring-aop-5.2.13.RELEASE-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.springframework.boot",
+                    "name": "spring-boot-test",
+                    "version": "2.3.9.RELEASE",
+                    "artifacts": [
+                        {
+                            "name": "spring-boot-test",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\org\\springframework\\boot\\spring-boot-test\\2.3.9.RELEASE\\spring-boot-test-2.3.9.RELEASE.jar"
+                        },
+                        {
+                            "name": "spring-boot-test",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\org\\springframework\\boot\\spring-boot-test\\2.3.9.RELEASE\\spring-boot-test-2.3.9.RELEASE-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.elasticsearch.client",
+                    "name": "transport",
+                    "version": "7.6.2",
+                    "artifacts": [
+                        {
+                            "name": "transport",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\org\\elasticsearch\\client\\transport\\7.6.2\\transport-7.6.2.jar"
+                        },
+                        {
+                            "name": "transport",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\org\\elasticsearch\\client\\transport\\7.6.2\\transport-7.6.2-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.jboss.logging",
+                    "name": "jboss-logging",
+                    "version": "3.4.1.Final",
+                    "artifacts": [
+                        {
+                            "name": "jboss-logging",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\org\\jboss\\logging\\jboss-logging\\3.4.1.Final\\jboss-logging-3.4.1.Final.jar"
+                        },
+                        {
+                            "name": "jboss-logging",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\org\\jboss\\logging\\jboss-logging\\3.4.1.Final\\jboss-logging-3.4.1.Final-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.opentest4j",
+                    "name": "opentest4j",
+                    "version": "1.2.0",
+                    "artifacts": [
+                        {
+                            "name": "opentest4j",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\org\\opentest4j\\opentest4j\\1.2.0\\opentest4j-1.2.0.jar"
+                        },
+                        {
+                            "name": "opentest4j",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\org\\opentest4j\\opentest4j\\1.2.0\\opentest4j-1.2.0-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.springframework.data",
+                    "name": "spring-data-rest-webmvc",
+                    "version": "3.3.7.RELEASE",
+                    "artifacts": [
+                        {
+                            "name": "spring-data-rest-webmvc",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\org\\springframework\\data\\spring-data-rest-webmvc\\3.3.7.RELEASE\\spring-data-rest-webmvc-3.3.7.RELEASE.jar"
+                        },
+                        {
+                            "name": "spring-data-rest-webmvc",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\org\\springframework\\data\\spring-data-rest-webmvc\\3.3.7.RELEASE\\spring-data-rest-webmvc-3.3.7.RELEASE-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "com.fasterxml.jackson.dataformat",
+                    "name": "jackson-dataformat-yaml",
+                    "version": "2.11.4",
+                    "artifacts": [
+                        {
+                            "name": "jackson-dataformat-yaml",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\com\\fasterxml\\jackson\\dataformat\\jackson-dataformat-yaml\\2.11.4\\jackson-dataformat-yaml-2.11.4.jar"
+                        },
+                        {
+                            "name": "jackson-dataformat-yaml",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\pablo\\.m2\\repository\\com\\fasterxml\\jackson\\dataformat\\jackson-dataformat-yaml\\2.11.4\\jackson-dataformat-yaml-2.11.4-sources.jar"
+                        }
+                    ]
+                }
+            ]
+        },
+        "tags": [
+            "library"
+        ]
+    }
+}
