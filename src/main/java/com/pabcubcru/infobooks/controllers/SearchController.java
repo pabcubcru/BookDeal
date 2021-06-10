@@ -52,93 +52,96 @@ public class SearchController {
     @GetMapping(value = "")
     public ModelAndView main() {
         ModelAndView model = new ModelAndView();
-		model.setViewName("Main");
-		return model;
+        model.setViewName("Main");
+        return model;
     }
 
     @GetMapping(value = "/{type}/{page}/{query}")
     public ModelAndView mainWithSecurity(@PathVariable("type") String type, Principal principal) {
         ModelAndView model = new ModelAndView();
-		model.setViewName("errors/Error404");
-        if(type.equals("province") || type.equals("rangePrices") || type.equals("rangeYears") || type.equals("postalCode")
-        || type.equals("book") || type.equals("publicationYear")) {
+        model.setViewName("errors/Error404");
+        if (type.equals("province") || type.equals("rangePrices") || type.equals("rangeYears")
+                || type.equals("postalCode") || type.equals("book") || type.equals("publicationYear")) {
             model.setViewName("Main");
-            if(principal == null && !type.equals("book")) {
+            if (principal == null && !type.equals("book")) {
                 model.setViewName("errors/Error403");
             }
         }
-		return model;
+        return model;
     }
 
     private void validateSearch(Search search, BindingResult result) {
-        if(search.getType().equals("rangeYears") || search.getType().equals("publicationYear")) {
-            if(search.getNumber1() == null) {
+        if (search.getType().equals("rangeYears") || search.getType().equals("publicationYear")) {
+            if (search.getNumber1() == null) {
                 result.rejectValue("number1", "Campo requerido", "Campo requerido");
-            } else if(search.getNumber1() > LocalDate.now().getYear()) {
-                result.rejectValue("number1", "Debe ser anterior o igual al año actual", "Debe ser anterior o igual al año actual");
-            } else if(search.getNumber1() < 0) {
+            } else if (search.getNumber1() > LocalDate.now().getYear()) {
+                result.rejectValue("number1", "Debe ser anterior o igual al año actual",
+                        "Debe ser anterior o igual al año actual");
+            } else if (search.getNumber1() < 0) {
                 result.rejectValue("number1", "Debe ser positivo", "Debe ser positivo");
             }
         }
-        if(search.getType().equals("rangeYears")) {
-            if(search.getNumber2() == null) {
+        if (search.getType().equals("rangeYears")) {
+            if (search.getNumber2() == null) {
                 result.rejectValue("number2", "Campo requerido", "Campo requerido");
-            } else if(search.getNumber2() < 0) {
+            } else if (search.getNumber2() < 0) {
                 result.rejectValue("number2", "Debe ser positivo", "Debe ser positivo");
-            } else if(search.getNumber2() > LocalDate.now().getYear()) {
-                result.rejectValue("number2", "Debe ser anterior o igual al año actual", "Debe ser anterior o igual al año actual");
-            } else if(search.getNumber2() < search.getNumber1()) {
+            } else if (search.getNumber2() > LocalDate.now().getYear()) {
+                result.rejectValue("number2", "Debe ser anterior o igual al año actual",
+                        "Debe ser anterior o igual al año actual");
+            } else if (search.getNumber2() < search.getNumber1()) {
                 result.rejectValue("number2", "Debe ser posterior al año inicial", "Debe ser posterior al año inicial");
             }
-        } else if(search.getType().equals("postalCode")) {
-            if(search.getNumber1() == null) {
-                result.rejectValue("number1", "Campo requerido", "Campo requerido");
-            } else if(search.getNumber1() < 0) {
-                result.rejectValue("number1", "Debe ser positivo", "Debe ser positivo");
-            } else if(!search.getNumber1().toString().matches("0[1-9][0-9]{3}|[1-4][0-9]{4}|5[0-2][0-9]{3}")) {
-                result.rejectValue("number1", "Código postal no válido", "Código postal no válido");
+        } else if (search.getType().equals("postalCode")) {
+            if (search.getText().isEmpty()) {
+                result.rejectValue("text", "Campo requerido", "Campo requerido");
+            } else if (Integer.parseInt(search.getText()) < 0) {
+                result.rejectValue("text", "Debe ser positivo", "Debe ser positivo");
+            } else if (!search.getText().matches("0[1-9][0-9]{3}|[1-4][0-9]{4}|5[0-2][0-9]{3}")) {
+                result.rejectValue("text", "Código postal no válido", "Código postal no válido");
             }
-        } else if(search.getType().equals("rangePrices")) {
-            if(search.getNumber1() == null) {
+        } else if (search.getType().equals("rangePrices")) {
+            if (search.getNumber1() == null) {
                 result.rejectValue("number1", "Campo requerido", "Campo requerido");
-            } else if(search.getNumber1() < 0) {
+            } else if (search.getNumber1() < 0) {
                 result.rejectValue("number1", "Debe ser positivo", "Debe ser positivo");
             }
-            if(search.getNumber2() == null) {
+            if (search.getNumber2() == null) {
                 result.rejectValue("number2", "Campo requerido", "Campo requerido");
-            } else if(search.getNumber2() < 0) {
+            } else if (search.getNumber2() < 0) {
                 result.rejectValue("number2", "Debe ser positivo", "Debe ser positivo");
             }
-        } else if(search.getType().equals("book")){
-            if(search.getText().isEmpty()) {
+        } else if (search.getType().equals("book")) {
+            if (search.getText().isEmpty()) {
                 result.rejectValue("text", "Campo requerido", "Campo requerido");
-            } else if(search.getText().length() < 3) {
+            } else if (search.getText().length() < 3) {
                 result.rejectValue("text", "Introduce al menos 3 carácteres", "Introduce al menos 3 carácteres");
-            } else if(search.getText().length() > 80) {
+            } else if (search.getText().length() > 80) {
                 result.rejectValue("text", "No puede superar los 80 carácteres", "No puede superar los 80 carácteres");
             }
         }
     }
 
     @PostMapping(value = "")
-    public Map<String, Object> postSearch(@RequestBody @Valid Search search, BindingResult result, Principal principal) {
+    public Map<String, Object> postSearch(@RequestBody @Valid Search search, BindingResult result,
+            Principal principal) {
         Map<String, Object> res = new HashMap<>();
 
         this.validateSearch(search, result);
 
-        if(result.hasErrors()) {
+        if (result.hasErrors()) {
             res.put("errors", result.getAllErrors());
             res.put("success", false);
         } else {
             String query = "";
-            if(search.getType().equals("rangeYears")) {
+            if (search.getType().equals("rangeYears")) {
                 query = search.getNumber1() + "-" + search.getNumber2();
-            } else if(search.getType().equals("publicationYear")) {
-                query = ""+search.getNumber1();
-            } else if(search.getType().equals("postalCode")) {
-                query = ""+search.getNumber1();
-            } else if(search.getType().equals("rangePrices")) {
-                query = search.getNumber1() + "€-" + search.getNumber2()+ "€";
+            } else if (search.getType().equals("publicationYear")) {
+                query = "" + search.getNumber1();
+            } else if (search.getType().equals("postalCode")) {
+                query = search.getText();
+            } else if (search.getType().equals("rangePrices")) {
+                query = search.getNumber1() + "€-" + search.getNumber2() + "€";
             } else {
                 query = search.getText();
             }
@@ -158,7 +161,8 @@ public class SearchController {
     }
 
     @GetMapping(value = "/q/{type}/{query}")
-    public Map<String, Object> searchBooks(@PathVariable("query") String query, @PathVariable("type") String type, Principal principal, @RequestParam("page") Integer page) {
+    public Map<String, Object> searchBooks(@PathVariable("query") String query, @PathVariable("type") String type,
+            Principal principal, @RequestParam("page") Integer page) {
         Map<String, Object> res = new HashMap<>();
         PageRequest pageRequest = PageRequest.of(page, 21);
         List<List<String>> allBookImages = new ArrayList<>();
@@ -169,21 +173,23 @@ public class SearchController {
         List<Book> pageOfBooks = map.values().stream().findFirst().orElse(new ArrayList<>());
         Integer numberOfPages = map.keySet().stream().findFirst().orElse(0);
         res.put("searchResult", true);
-        if(numberOfPages == 0) {
+        if (numberOfPages == 0) {
             res.put("searchResult", false);
         }
         List<Book> books = new ArrayList<>();
-        for(Book b : pageOfBooks) {
-            Request requestAcceptedToBook1 = this.requestService.findFirstByIdBook1AndStatus(b.getId(), RequestStatus.ACEPTADA.toString());
-            Request requestAcceptedToBook2 = this.requestService.findFirstByIdBook2AndStatus(b.getId(), RequestStatus.ACEPTADA.toString());
-            if(requestAcceptedToBook1 == null && requestAcceptedToBook2 == null) {
+        for (Book b : pageOfBooks) {
+            Request requestAcceptedToBook1 = this.requestService.findFirstByIdBook1AndStatus(b.getId(),
+                    RequestStatus.ACEPTADA.toString());
+            Request requestAcceptedToBook2 = this.requestService.findFirstByIdBook2AndStatus(b.getId(),
+                    RequestStatus.ACEPTADA.toString());
+            if (requestAcceptedToBook1 == null && requestAcceptedToBook2 == null) {
                 books.add(b);
             }
         }
-        if(principal != null) {
+        if (principal != null) {
             List<Boolean> isAdded = new ArrayList<>();
-            for(Book book : books) {
-                if(this.userFavouriteBookService.findByUsernameAndBookId(principal.getName(), book.getId()) == null) {
+            for (Book book : books) {
+                if (this.userFavouriteBookService.findByUsernameAndBookId(principal.getName(), book.getId()) == null) {
                     isAdded.add(false);
                 } else {
                     isAdded.add(true);
@@ -194,10 +200,10 @@ public class SearchController {
             res.put("search", this.searchService.findByUsername(principal.getName()));
         }
 
-        for(Book b : books) {
+        for (Book b : books) {
             List<String> urlImages = new ArrayList<>();
             List<Image> images = this.bookService.findImagesByIdBook(b.getId());
-            for(Image image : images) {
+            for (Image image : images) {
                 urlImages.add(image.getUrlImage());
             }
             allBookImages.add(urlImages);
@@ -208,22 +214,25 @@ public class SearchController {
 
         res.put("numTotalPages", numberOfPages);
         res.put("pages", new ArrayList<Integer>());
-        if(numberOfPages > 0) {
-            List<Integer> pages = IntStream.rangeClosed(page-5 <= 0 ? 0 : page-5, page+5 >= numberOfPages-1 ? numberOfPages-1 : page+5).boxed().collect(Collectors.toList());
+        if (numberOfPages > 0) {
+            List<Integer> pages = IntStream
+                    .rangeClosed(page - 5 <= 0 ? 0 : page - 5,
+                            page + 5 >= numberOfPages - 1 ? numberOfPages - 1 : page + 5)
+                    .boxed().collect(Collectors.toList());
             res.put("pages", pages);
         }
-        
+
         return res;
     }
 
     @GetMapping(value = "/last")
     public Map<String, Object> findLastSearch(Principal principal) {
         Map<String, Object> res = new HashMap<>();
-        if(principal != null) {
+        if (principal != null) {
             res.put("search", this.searchService.findByUsername(principal.getName()));
         }
 
         return res;
     }
-    
+
 }

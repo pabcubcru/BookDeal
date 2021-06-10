@@ -123,7 +123,7 @@ export default class Get extends Component {
                       class="fa fa-arrow-circle-right fa-2x"
                       style={{ float: "right" }}
                     ></i>
-                    <p style={{ float: "right" }}>Ver descripción .</p>
+                    <p style={{ float: "right" }}>Ver sinopsis .</p>
                   </div>
                 </div>
               </div>

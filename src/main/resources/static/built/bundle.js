@@ -36956,7 +36956,7 @@ var Nav = /*#__PURE__*/function (_Component) {
         "class": "menu"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
         href: "/"
-      }, "InfoBooks ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("i", {
+      }, "Inicio ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("i", {
         "class": "fa fa-home"
       }))), this.state.isLogged ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
         href: "#"
@@ -38556,7 +38556,7 @@ var Get = /*#__PURE__*/function (_Component) {
         style: {
           "float": "right"
         }
-      }, "Ver descripci\xF3n .")))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+      }, "Ver sinopsis .")))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         "class": "book__page-back"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         "class": "page__content"
@@ -39659,14 +39659,14 @@ var List = /*#__PURE__*/function (_Component) {
 
               case 2:
                 res = _context2.sent;
-                window.location.replace("/books/all/" + actualPage);
+                window.location.replace("/books/all/" + actualPage + "/" + this.state.showMode);
 
               case 4:
               case "end":
                 return _context2.stop();
             }
           }
-        }, _callee2);
+        }, _callee2, this);
       }));
 
       function addFavouriteBook(_x, _x2) {
@@ -39696,14 +39696,14 @@ var List = /*#__PURE__*/function (_Component) {
 
               case 4:
                 res = _context3.sent;
-                window.location.replace("/books/all/" + actualPage);
+                window.location.replace("/books/all/" + actualPage + "/" + this.state.showMode);
 
               case 6:
               case "end":
                 return _context3.stop();
             }
           }
-        }, _callee3);
+        }, _callee3, this);
       }));
 
       function deleteFavouriteBook(_x3, _x4, _x5) {
@@ -39844,7 +39844,7 @@ var List = /*#__PURE__*/function (_Component) {
         style: {
           textAlign: "justify"
         }
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("b", null, "Estos resultados se muestran seg\xFAn sus gustos, es decir, seg\xFAn sus libros subidos, sus libros favoritos y sus g\xE9neros preferidos. Mientras m\xE1s libros y g\xE9neros preferidos a\xF1ada, los resultados ser\xE1n mas precisos.")), this.state.books.length != 0 && this.state.pages.length > 1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("center", null, this.state.actualPage != 0 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("span", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("b", null, "Estos resultados se muestran seg\xFAn sus gustos, es decir, seg\xFAn sus libros subidos, sus libros favoritos y sus g\xE9neros preferidos. Los resultados ser\xE1n m\xE1s precisos mientras m\xE1s libros y g\xE9neros preferidos a\xF1ada.")), this.state.books.length != 0 && this.state.pages.length > 1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("center", null, this.state.actualPage != 0 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("span", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
         "class": "btn btn-primary",
         href: "/books/recommend/0"
       }, String("<<")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
@@ -40404,17 +40404,17 @@ var List = /*#__PURE__*/function (_Component) {
         "class": "col"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("input", {
         "class": "form-control",
-        value: this.state.fieldNumber1,
+        value: this.state.fieldText,
         type: "number",
         placeholder: "Introduzca el c\xF3digo postal de 5 d\xEDgitos",
         onChange: function onChange(event) {
           return _this2.setState({
-            fieldNumber1: event.target.value
+            fieldText: String(event.target.value)
           });
         }
-      }), this.state.errorField.indexOf("number1") != -1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", {
+      }), this.state.errorField.indexOf("text") != -1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", {
         "class": "text-danger"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("b", null, this.state.errorMessages[this.state.errorField.indexOf("number1")])) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", null)) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", null), this.state.selectSearch == "province" ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("div", {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("b", null, this.state.errorMessages[this.state.errorField.indexOf("text")])) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", null)) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", null), this.state.selectSearch == "province" ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("div", {
         "class": "col"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("select", {
         "class": "form-control chosen-select",

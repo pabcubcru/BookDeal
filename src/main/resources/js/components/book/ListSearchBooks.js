@@ -346,19 +346,19 @@ export default class List extends Component {
             <div class="col">
               <input
                 class="form-control"
-                value={this.state.fieldNumber1}
+                value={this.state.fieldText}
                 type="number"
                 placeholder="Introduzca el código postal de 5 dígitos"
                 onChange={(event) =>
-                  this.setState({ fieldNumber1: event.target.value })
+                  this.setState({ fieldText: String(event.target.value) })
                 }
               />
-              {this.state.errorField.indexOf("number1") != -1 ? (
+              {this.state.errorField.indexOf("text") != -1 ? (
                 <p class="text-danger">
                   <b>
                     {
                       this.state.errorMessages[
-                        this.state.errorField.indexOf("number1")
+                        this.state.errorField.indexOf("text")
                       ]
                     }
                   </b>
@@ -781,7 +781,7 @@ export default class List extends Component {
   }
 
   async searchTitles(query) {
-    const q = query.trim()
+    const q = query.trim();
     this.setState({ fieldText: query.replaceAll("  ", " ") });
     if (q.length > 0 && q.length <= 80) {
       let res = await searchService.searchTitles(q);
