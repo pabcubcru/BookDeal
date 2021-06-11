@@ -53,7 +53,7 @@ export default class Nav extends Component {
           <ul class="menu">
             <li>
               <a href="/">
-                InfoBooks <i class="fa fa-home"></i>
+                Inicio <i class="fa fa-home"></i>
               </a>
             </li>
             {this.state.isLogged ? (

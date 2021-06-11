@@ -76,8 +76,8 @@ export default class List extends Component {
               <b>
                 Estos resultados se muestran según sus gustos, es decir, según
                 sus libros subidos, sus libros favoritos y sus géneros
-                preferidos. Mientras más libros y géneros preferidos añada, los
-                resultados serán mas precisos.
+                preferidos. Los resultados serán más precisos mientras más
+                libros y géneros preferidos añada.
               </b>
             </p>
 

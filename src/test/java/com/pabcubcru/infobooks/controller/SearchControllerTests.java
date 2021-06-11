@@ -347,7 +347,7 @@ public class SearchControllerTests {
         Search search = new Search();
         search.setType("postalCode");
         search.setUsername("test001");
-        search.setNumber1(41012);
+        search.setText("41012");
 
         String content = this.postSearch(search);
 
@@ -356,12 +356,12 @@ public class SearchControllerTests {
 
     @Test
     @WithMockUser(value = "test001", authorities = "user")
-    public void testPostSearchPostalCodeIsNull() throws Exception {
+    public void testPostSearchPostalCodeIsBlank() throws Exception {
 
         Search search = new Search();
         search.setType("postalCode");
         search.setUsername("test001");
-        search.setNumber1(null);
+        search.setText("");
 
         String content = this.postSearch(search);
 
@@ -376,7 +376,7 @@ public class SearchControllerTests {
         Search search = new Search();
         search.setType("postalCode");
         search.setUsername("test001");
-        search.setNumber1(-41012);
+        search.setText("-41012");
 
         String content = this.postSearch(search);
 
@@ -391,7 +391,7 @@ public class SearchControllerTests {
         Search search = new Search();
         search.setType("postalCode");
         search.setUsername("test001");
-        search.setNumber1(125);
+        search.setText("125");
 
         String content = this.postSearch(search);
 

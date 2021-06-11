@@ -299,7 +299,7 @@ export default class List extends Component {
 
   async addFavouriteBook(id, actualPage) {
     const res = await userFavouriteBook.addFavouriteBook(id);
-    window.location.replace("/books/all/" + actualPage);
+    window.location.replace("/books/all/" + actualPage + "/" + this.state.showMode);
   }
 
   async deleteFavouriteBook(id, title, actualPage) {
@@ -308,7 +308,7 @@ export default class List extends Component {
     );
     if (conf) {
       const res = await userFavouriteBook.deleteFavouriteBook(id);
-      window.location.replace("/books/all/" + actualPage);
+      window.location.replace("/books/all/" + actualPage + "/" + this.state.showMode);
     }
   }
 }

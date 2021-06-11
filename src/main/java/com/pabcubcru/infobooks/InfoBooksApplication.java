@@ -224,22 +224,32 @@ public class InfoBooksApplication {
 		this.createUser("test002");
 	}
 
-	public void buildIndexUsersForBooks() {
+	public List<String> buildIndexUsersForBooks() {
 		ProvinceEnum[] provinces = ProvinceEnum.values();
+		List<String> res = new ArrayList<>();
+		List<String> userNames = new ArrayList<>();
+		userNames.add("Victoria"); userNames.add("Antonio"); userNames.add("Ignacio");
+		userNames.add("Veronica"); userNames.add("Valentin"); userNames.add("Macarena");
+		userNames.add("Santiago"); userNames.add("Alejandro"); userNames.add("Carolina");
+		userNames.add("Patricia");
 		for (int i = 1; i <= 100; i++) {
 			User user = new User();
-
-			user.setId("user" + i);
-			user.setName("User " + i);
-			user.setEmail("user" + i + "@us.es");
+			int numRandomUsername = (int) Math.floor(Math.random() * 10);
+			String username = userNames.get(numRandomUsername);
+			user.setName(username);
+			username = username.toLowerCase();
+			user.setId(username + i);
+			res.add(username + i);
+			user.setEmail(username + i + "@us.es");
 			user.setPhone("+34654987321");
 			user.setBirthDate(LocalDate.of(1997, 11, 23));
 			int numRandomProvince = (int) Math.floor(Math.random() * ProvinceEnum.values().length) - 1;
 			numRandomProvince = numRandomProvince < 0 ? 0 : numRandomProvince;
 			user.setProvince(provinces[numRandomProvince].toString());
-			user.setPostCode("" + (int) Math.floor(Math.random() * (50000 - 1000 + 1) + 1000));
-			user.setUsername("username" + i);
-			user.setPassword(new BCryptPasswordEncoder().encode("password" + i));
+			Integer postalCod = (int) Math.floor(Math.random() * (50000 - 1000 + 1) + 1000);
+			user.setPostCode(postalCod <= 9999 ? "0" + postalCod : "" + postalCod);
+			user.setUsername(username + i);
+			user.setPassword(new BCryptPasswordEncoder().encode(username + i));
 			user.setEnabled(true);
 			GenreEnum[] genres = GenreEnum.values();
 			int numRandomGenre1 = (int) Math.floor(Math.random() * (GenreEnum.values().length / 3));
@@ -253,6 +263,8 @@ public class InfoBooksApplication {
 			this.buildAuthoritiesForTests(user.getUsername());
 		}
 		log.info("================= Added 100 users. =================");
+
+		return res;
 	}
 
 	public void buildImagesForBook(List<Book> books) {
@@ -265,9 +277,9 @@ public class InfoBooksApplication {
 	@PostConstruct
 	public void buildBookIndex() {
 		this.deleteIndex();
-		this.buildIndexUsersForBooks();
+		List<String> usernames = this.buildIndexUsersForBooks();
 		elasticSearchOperations.indexOps(Book.class).refresh();
-		List<Book> books = prepareDataset();
+		List<Book> books = prepareDataset(usernames);
 		this.bookRepository.saveAll(books);
 		this.buildImagesForBook(books);
 		log.info("================= Added " + books.size() + " books. =================");
@@ -277,7 +289,7 @@ public class InfoBooksApplication {
 		this.buildUserFavouriteBookIndexForTests();
 	}
 
-	private List<Book> prepareDataset() {
+	private List<Book> prepareDataset(List<String> usernames) {
 		List<Book> res = new ArrayList<>();
 
 		try {
@@ -289,7 +301,7 @@ public class InfoBooksApplication {
 				String line = scanner.nextLine();
 				if (lineNo == 1)
 					continue;
-				Book book = csvRowToBookMapper(line);
+				Book book = csvRowToBookMapper(line, usernames);
 				if (book != null) {
 					res.add(book);
 				}
@@ -302,7 +314,7 @@ public class InfoBooksApplication {
 		return res;
 	}
 
-	private Book csvRowToBookMapper(final String line) {
+	private Book csvRowToBookMapper(final String line, List<String> usernames) {
 		if (!line.equals("") || !line.equals(null)) {
 			String[] s = line.split(";");
 			GenreEnum[] genres = GenreEnum.values();
@@ -343,8 +355,8 @@ public class InfoBooksApplication {
 			}
 			String status = "NUEVO";
 			Double price = Double.parseDouble(String.valueOf(Math.floor(Math.random() * 100)));
-			int numRandomUsername = (int) Math.floor(Math.random() * 100);
-			String username = "username" + numRandomUsername;
+			int numRandomUsername = (int) Math.floor(Math.random() * 99);
+			String username = usernames.get(numRandomUsername);
 			Book book = new Book(title, originalTitle, isbn, publicationYear, publisher, genre, author, description,
 					urlImage, status, price, username);
 			return book;
