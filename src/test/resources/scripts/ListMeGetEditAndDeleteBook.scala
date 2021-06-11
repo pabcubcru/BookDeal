@@ -1,4 +1,4 @@
-package infobooks
+package bookdeal
 
 import scala.concurrent.duration._
 

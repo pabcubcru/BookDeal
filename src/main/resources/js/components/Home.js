@@ -12,14 +12,10 @@ export default class Home extends Component {
           }}
         >
           <img
-            width="400px"
-            height="400px"
-            src="https://i.ibb.co/vXSqB6W/logo.png"
+            width="60%"
+            height="60%"
+            src="https://i.ibb.co/s2czT4D/logo-transparent.png"
           ></img>
-          <h1 style={{ fontFamily: "cursive", fontStyle: "italic" }}>
-            <b>Tu web preferida de intercambio y compra venta de libros</b>
-          </h1>
-          <br></br>
           <br></br>
           <a href="/books/all/0" class="btn btn-primary">
             <b>Empezar a buscar libros</b>

@@ -36487,7 +36487,7 @@ var Home = /*#__PURE__*/function (_Component) {
         "class": "copyright-text"
       }, "Copyright \xA9 2021 All Rights Reserved by", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("a", {
         href: "/"
-      }, " InfoBooks"), ".")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+      }, " bookdeal"), ".")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         "class": "col-md-4 col-sm-6 col-xs-12"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("ul", {
         "class": "social-icons"
@@ -36577,15 +36577,10 @@ var Home = /*#__PURE__*/function (_Component) {
           backgroundSize: "cover"
         }
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("img", {
-        width: "400px",
-        height: "400px",
-        src: "https://i.ibb.co/vXSqB6W/logo.png"
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("h1", {
-        style: {
-          fontFamily: "cursive",
-          fontStyle: "italic"
-        }
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("b", null, "Tu web preferida de intercambio y compra venta de libros")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("a", {
+        width: "60%",
+        height: "60%",
+        src: "https://i.ibb.co/s2czT4D/logo-transparent.png"
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("a", {
         href: "/books/all/0",
         "class": "btn btn-primary"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("b", null, "Empezar a buscar libros")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("br", null)));
