@@ -62,4 +62,9 @@ public class UserService {
         return this.userRepository.findByUsername(username);
     }
 
+    @Transactional
+    public Integer countUsers() {
+        return Integer.parseInt("" + this.userRepository.count()) - 1;
+    }
+
 }

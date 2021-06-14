@@ -8,8 +8,14 @@ import java.util.Map;
 
 import javax.validation.Valid;
 
+import com.pabcubcru.bookdeal.models.Authorities;
 import com.pabcubcru.bookdeal.models.ProvinceEnum;
 import com.pabcubcru.bookdeal.models.User;
+import com.pabcubcru.bookdeal.services.AuthoritiesService;
+import com.pabcubcru.bookdeal.services.BookService;
+import com.pabcubcru.bookdeal.services.RequestService;
+import com.pabcubcru.bookdeal.services.SearchService;
+import com.pabcubcru.bookdeal.services.UserFavouriteBookService;
 import com.pabcubcru.bookdeal.services.UserService;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,7 +34,22 @@ public class UserController {
 	@Autowired
 	private UserService userService;
 
-	@GetMapping(value = { "/", "/profile", "/register", "/login", "/login-error" })
+	@Autowired
+	private AuthoritiesService authoritiesService;
+
+	@Autowired 
+	private BookService bookService;
+
+	@Autowired
+	private RequestService requestService;
+
+	@Autowired
+	private UserFavouriteBookService userFavouriteBookService;
+
+	@Autowired
+	private SearchService searchService;
+
+	@GetMapping(value = { "/", "/profile", "/register", "/login", "/login-error", "/admin/dashboard"})
 	public ModelAndView main() {
 		ModelAndView model = new ModelAndView();
 		model.setViewName("Main");
@@ -40,6 +61,12 @@ public class UserController {
 		Map<String, Object> res = new HashMap<>();
 		if (principal != null) {
 			res.put("isLogged", true);
+			Authorities auth = this.authoritiesService.findByUsername(principal.getName()).get(0);
+			if(auth.getAuthority().equals("admin")) {
+				res.put("isAdmin", true);
+			} else {
+				res.put("isAdmin", false);
+			}
 		} else {
 			res.put("isLogged", false);
 		}
@@ -192,6 +219,19 @@ public class UserController {
 			res.put("errors", result.getAllErrors());
 			res.put("success", false);
 		}
+
+		return res;
+
+	}
+
+	@GetMapping(value = "/admin/get-dashboard")
+	public Map<String, Object> getDashboardData() {
+		Map<String, Object> res = new HashMap<>();
+		res.put("numBooks", this.bookService.countBooks());
+		res.put("numRequests", this.requestService.countRequests());
+		res.put("numFavourites", this.userFavouriteBookService.countFavouritesBooks());
+		res.put("numUsers", this.userService.countUsers());
+		res.put("numSearchs", this.searchService.countSearchs());
 
 		return res;
 

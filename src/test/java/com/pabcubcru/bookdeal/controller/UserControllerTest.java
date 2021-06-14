@@ -2,10 +2,13 @@ package com.pabcubcru.bookdeal.controller;
 
 import java.nio.charset.Charset;
 import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.ObjectWriter;
 import com.fasterxml.jackson.databind.SerializationFeature;
+import com.pabcubcru.bookdeal.models.Authorities;
 import com.pabcubcru.bookdeal.models.User;
 import com.pabcubcru.bookdeal.services.AuthoritiesService;
 import com.pabcubcru.bookdeal.services.UserService;
@@ -69,11 +72,17 @@ public class UserControllerTest {
         user1.setEnabled(true);
         user1.setGenres("Religión,Gastronomía,Cocina");
 
+        List<Authorities> auths = new ArrayList<>();
+        Authorities auth = new Authorities();
+        auth.setAuthority("admin");
+        auths.add(auth);
+
         given(this.userService.findByUsername("test001")).willReturn(user1);
         given(this.userService.existUserWithSameEmail("email@email.com")).willReturn(false);
         given(this.userService.existUserWithSameEmail("emailExist@email.com")).willReturn(true);
         given(this.userService.existUserWithSameUsername("username")).willReturn(false);
         given(this.userService.existUserWithSameUsername("usernameExist")).willReturn(true);
+        given(this.authoritiesService.findByUsername("test001")).willReturn(auths);
     }
 
     @Test
@@ -236,7 +245,8 @@ public class UserControllerTest {
     @WithMockUser(value = "test001", authorities = "user")
     public void testGetPrincipal() throws Exception {
         this.mockMvc.perform(get("/user/principal")).andExpect(status().isOk())
-                .andExpect(jsonPath("$.isLogged").value(true));
+                .andExpect(jsonPath("$.isLogged").value(true))
+                .andExpect(jsonPath("$.isAdmin").value(true));
     }
 
     @Test

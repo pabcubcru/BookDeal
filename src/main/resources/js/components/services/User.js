@@ -116,4 +116,18 @@ user.getProvinces = async () => {
   return res;
 };
 
+user.getDashBoard = async () => {
+  const urlGet = baseUrl + "/admin/get-dashboard";
+  const res = await axios
+    .get(urlGet)
+    .then((response) => {
+      return response.data;
+    })
+    .catch((error) => {
+      return error.response;
+    });
+
+  return res;
+}
+
 export default user;

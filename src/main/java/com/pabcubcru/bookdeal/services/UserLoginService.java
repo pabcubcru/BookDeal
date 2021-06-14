@@ -3,6 +3,7 @@ package com.pabcubcru.bookdeal.services;
 import java.util.ArrayList;
 import java.util.Collection;
 
+import com.pabcubcru.bookdeal.models.Authorities;
 import com.pabcubcru.bookdeal.models.User;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,6 +20,9 @@ public class UserLoginService implements UserDetailsService {
     @Autowired
     private UserService userService;
 
+    @Autowired
+    private AuthoritiesService authoritiesService;
+
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
         User user = userService.findByUsername(username);
@@ -31,7 +35,12 @@ public class UserLoginService implements UserDetailsService {
 
     private Collection<GrantedAuthority> getGrantedAuthorities(String username) {
         Collection<GrantedAuthority> grantedAuthorities = new ArrayList<>();
+        Authorities auth = this.authoritiesService.findByUsername(username).get(0);
+        if(auth.getAuthority().equals("admin")) {
+            grantedAuthorities.add(new SimpleGrantedAuthority("admin"));
+        } 
         grantedAuthorities.add(new SimpleGrantedAuthority("user"));
+
         return grantedAuthorities;
     }
 

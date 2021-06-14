@@ -20,6 +20,7 @@ import ListMyRequests from "./request/ListMyRequest";
 import ListReceivedRequests from "./request/ListReceivedRequest";
 import ListSearchBooks from "./book/ListSearchBooks";
 import ListRecommendBooks from "./book/ListRecommendBooks";
+import Dashboard from "./user/Dashboard";
 
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
@@ -68,6 +69,7 @@ export default class Main extends Component {
               exact
               component={ListRecommendBooks}
             />
+            <Route path="/admin/dashboard" exact component={Dashboard} />
           </Switch>
           <br></br>
           <br></br>

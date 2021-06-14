@@ -288,4 +288,9 @@ public class SearchService {
         return this.searchRepository.findFirstByUsername(username);
     }
 
+    @Transactional
+    public Integer countSearchs() {
+        return Integer.parseInt("" + this.searchRepository.count());
+    }
+
 }
