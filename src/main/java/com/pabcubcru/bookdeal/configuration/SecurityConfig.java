@@ -26,6 +26,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 						"/books/recommend", "/books/{id}/edit", "/books/new", "/books/{id}/delete", "/books/list/me",
 						"/books/list/me-change", "/books/edit/{id}", "/books/images/upload")
 				.authenticated()
+				.antMatchers("/admin/dashboard").hasAnyAuthority("admin")
 				.antMatchers("/books/list/all-me", "/books/{id}", "/books/get/{id}", "/books/all/{page}",
 						"/books/genres", "/search")
 				.permitAll().antMatchers("/favourites/**").authenticated().antMatchers("/requests/**").authenticated()

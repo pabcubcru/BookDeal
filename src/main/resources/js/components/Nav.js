@@ -8,6 +8,7 @@ export default class Nav extends Component {
     super();
     this.state = {
       isLogged: false,
+      isAdmin: false,
       query: "",
       selectSearch: "",
     };
@@ -16,13 +17,15 @@ export default class Nav extends Component {
   async componentDidMount() {
     const res = await userService.getPrincipal();
     this.setState({
-      isLogged: res.isLogged
+      isLogged: res.isLogged,
+      isAdmin: res.isAdmin,
     });
   }
 
   render() {
     let button1;
     let button2;
+    let button3;
     if (this.state.isLogged != true) {
       button1 = (
         <a class="nav-link ml-auto" href="/login">
@@ -45,6 +48,13 @@ export default class Nav extends Component {
           Cerrar sesión
         </a>
       );
+      if (this.state.isAdmin == true) {
+        button3 = (
+          <a class="nav-link ml-auto" href="/admin/dashboard">
+            Panel de control
+          </a>
+        );
+      }
     }
 
     return (
@@ -113,6 +123,7 @@ export default class Nav extends Component {
                     Perfil <i class="fa fa-user-circle"></i>
                   </a>
                   <ul>
+                    <li>{button3}</li>
                     <li>{button1}</li>
                     <li>{button2}</li>
                   </ul>
@@ -209,6 +220,7 @@ export default class Nav extends Component {
                     <i class="fa fa-user-circle"></i>
                   </a>
                   <ul>
+                    <li>{button3}</li>
                     <li>{button1}</li>
                     <li>{button2}</li>
                   </ul>

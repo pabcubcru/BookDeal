@@ -78,7 +78,6 @@ public class BookService {
     @Transactional
     public Page<Book> findNearBooks(User user, Pageable pageable, String showMode) {
 
-
         List<User> usersWithSameAddress = null;
         List<String> usernames = new ArrayList<>();
 
@@ -136,6 +135,11 @@ public class BookService {
     @Transactional
     public Image findImageById(String id) {
         return this.imageRepository.findById(id).orElse(null);
+    }
+
+    @Transactional
+    public Integer countBooks() {
+        return Integer.parseInt("" + this.bookRepository.count());
     }
 
 }

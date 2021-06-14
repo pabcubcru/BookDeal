@@ -188,6 +188,27 @@ public class BookDealApplication {
 		this.bookRepository.save(book);
 	}
 
+	public void buildAdministrator() {
+		User user = new User();
+
+		user.setName("Administrador");
+		user.setEmail("admin@us.es");
+		user.setPhone("+34651478932");
+		user.setBirthDate(LocalDate.of(1998, 2, 10));
+		user.setProvince("Sevilla");
+		user.setPostCode("41012");
+		user.setUsername("administrador");
+		user.setGenres("Religión,Gastronomía,Cocina");
+		user.setPassword(new BCryptPasswordEncoder().encode("administrador"));
+		user.setEnabled(true);
+		this.userRepository.save(user);
+
+		Authorities authorities = new Authorities();
+		authorities.setUsername(user.getUsername());
+		authorities.setAuthority("admin");
+		this.authoritiesRepository.save(authorities);
+	}
+
 	public void buildAuthoritiesForTests(String username) {
 		Authorities authorities = new Authorities();
 		authorities.setId("authorities-" + username);
@@ -277,12 +298,13 @@ public class BookDealApplication {
 	@PostConstruct
 	public void buildBookIndex() {
 		this.deleteIndex();
-		List<String> usernames = this.buildIndexUsersForBooks();
+		this.buildAdministrator();
+		/*List<String> usernames = this.buildIndexUsersForBooks();
 		elasticSearchOperations.indexOps(Book.class).refresh();
 		List<Book> books = prepareDataset(usernames);
 		this.bookRepository.saveAll(books);
 		this.buildImagesForBook(books);
-		log.info("================= Added " + books.size() + " books. =================");
+		log.info("================= Added " + books.size() + " books. =================");*/
 		this.buildUserIndexForTests();
 		this.buildBookIndexForTests();
 		this.buildRequestsIndexForTests();

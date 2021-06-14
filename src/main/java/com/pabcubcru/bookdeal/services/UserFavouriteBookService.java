@@ -12,30 +12,35 @@ import org.springframework.transaction.annotation.Transactional;
 @Service
 public class UserFavouriteBookService {
 
-    private UserFavouriteBookRepository userFavoruriteBookRepository;
+    private UserFavouriteBookRepository userFavouriteBookRepository;
 
     @Autowired
-    public UserFavouriteBookService(UserFavouriteBookRepository userFavoruriteBookRepository) {
-        this.userFavoruriteBookRepository = userFavoruriteBookRepository;
+    public UserFavouriteBookService(UserFavouriteBookRepository userFavouriteBookRepository) {
+        this.userFavouriteBookRepository = userFavouriteBookRepository;
     }
 
     @Transactional
     public void save(UserFavouriteBook userFavouriteBook) {
-        this.userFavoruriteBookRepository.save(userFavouriteBook);
+        this.userFavouriteBookRepository.save(userFavouriteBook);
     }
 
     @Transactional
     public void delete(UserFavouriteBook userFavouriteBook) {
-        this.userFavoruriteBookRepository.delete(userFavouriteBook);
+        this.userFavouriteBookRepository.delete(userFavouriteBook);
     }
 
     @Transactional(readOnly = true)
     public Page<UserFavouriteBook> findAllByUsername(String username, Pageable pageable) {
-        return this.userFavoruriteBookRepository.findByUsername(username, pageable);
+        return this.userFavouriteBookRepository.findByUsername(username, pageable);
     }
 
     @Transactional
     public UserFavouriteBook findByUsernameAndBookId(String username, String bookId) {
-        return this.userFavoruriteBookRepository.findByUsernameAndBookId(username, bookId);
+        return this.userFavouriteBookRepository.findByUsernameAndBookId(username, bookId);
+    }
+
+    @Transactional
+    public Integer countFavouritesBooks() {
+        return Integer.parseInt("" + this.userFavouriteBookRepository.count());
     }
 }

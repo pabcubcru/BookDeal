@@ -98,4 +98,9 @@ public class RequestService {
         this.requestRepository.saveAll(requests);
     }
 
+    @Transactional
+    public Integer countRequests() {
+        return Integer.parseInt("" + this.requestRepository.count());
+    }
+
 }
