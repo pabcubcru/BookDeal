@@ -26,12 +26,12 @@ public class UserValidatorTests {
         return validator;
     }
 
-    @ParameterizedTest
+    /*@ParameterizedTest
     @CsvFileSource(resources = "../csv/model/Users.csv", encoding = "utf-8", numLinesToSkip = 1, delimiterString = ";")
     void errorWhenFieldIsNullOrBlankOrNotValid() throws Exception {
 
         Validator validator = createValidator();
         Set<ConstraintViolation<User>> constrains = validator.validate(user);
-        Assertions.assertThat(constrains.size()).isEqualTo(1);
+        Assertions.assertThat(constrains.size()).isEqualTo(1);*/
     }
 }
