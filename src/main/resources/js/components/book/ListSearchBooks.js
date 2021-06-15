@@ -49,7 +49,7 @@ export default class List extends Component {
       const q = String(query);
       let title = "";
       let noResults = "";
-      if (q.includes("-") && q.split("-").length <= 2) {
+      if (type == "rangePrices" || type == "rangeYears") {
         const qr = q.split("-");
         title = "Resultados entre " + qr[0] + " y " + qr[1];
         noResults =

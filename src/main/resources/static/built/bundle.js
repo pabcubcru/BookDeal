@@ -40205,7 +40205,7 @@ var List = /*#__PURE__*/function (_Component) {
                 title = "";
                 noResults = "";
 
-                if (q.includes("-") && q.split("-").length <= 2) {
+                if (type == "rangePrices" || type == "rangeYears") {
                   qr = q.split("-");
                   title = "Resultados entre " + qr[0] + " y " + qr[1];
                   noResults = "No se encontraron resultados entre " + qr[0] + " y " + qr[1];
