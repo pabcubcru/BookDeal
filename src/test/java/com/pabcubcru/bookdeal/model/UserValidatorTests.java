@@ -32,6 +32,6 @@ public class UserValidatorTests {
 
         Validator validator = createValidator();
         Set<ConstraintViolation<User>> constrains = validator.validate(user);
-        Assertions.assertThat(constrains.size()).isEqualTo(1);*/
-    }
+        Assertions.assertThat(constrains.size()).isEqualTo(1);
+    }*/
 }
