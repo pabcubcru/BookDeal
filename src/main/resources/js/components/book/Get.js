@@ -37,6 +37,7 @@ export default class Get extends Component {
       images: b.images,
       urlImages: b.urlImages,
       hasMoreImages: b.hasMoreImages,
+      page: 1,
     });
   }
 
@@ -59,11 +60,24 @@ export default class Get extends Component {
               />
             </label>
 
-            <input type="radio" name="page" id="page-1" />
+            <input
+              type="radio"
+              name="page"
+              id="page-1"
+              checked={this.state.page == 1}
+            />
 
-            <input type="radio" name="page" id="page-2" />
+            <input
+              type="radio"
+              name="page"
+              id="page-2"
+              checked={this.state.page == 2}
+            />
             <label class="book__page book__page--2">
-              <div class="book__page-front">
+              <div
+                class="book__page-front"
+                onClick={() => this.setState({ page: 2 })}
+              >
                 <div class="page__content">
                   <h1 class="page__content-book-title">
                     {this.state.book.title}
@@ -117,17 +131,13 @@ export default class Get extends Component {
                     Publicado por
                     <span>{this.state.book.username}</span>
                   </p>
-
-                  <div class="page__content-copyright">   
-                    <i
-                      class="fa fa-arrow-circle-right fa-2x"
-                      style={{ float: "right" }}
-                    ></i>
-                    <p style={{ float: "right" }}>Ver sinopsis .</p>
-                  </div>
+                  <br></br>
                 </div>
               </div>
-              <div class="book__page-back">
+              <div
+                class="book__page-back"
+                onClick={() => this.setState({ page: 1 })}
+              >
                 <div class="page__content">
                   <h1 class="page__content-title">Sinopsis</h1>
                   <div class="page__content-blockquote">
@@ -135,8 +145,7 @@ export default class Get extends Component {
                       {this.state.book.description}
                     </p>
                   </div>
-
-                  <div class="page__number">2</div>
+                  <br></br>      
                 </div>
               </div>
             </label>

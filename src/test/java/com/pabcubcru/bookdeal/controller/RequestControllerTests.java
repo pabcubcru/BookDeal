@@ -173,6 +173,7 @@ public class RequestControllerTests {
         request.setIdBook2(ID_BOOK_1);
         request.setPay(null);
         request.setComment("Comment Comment Comment Comment Comment Comment Comment Comment Comment"
+                + " Comment Comment Comment Comment Comment Comment Comment Comment Comment Comment "
                 + " Comment Comment Comment Comment Comment Comment Comment Comment Comment Comment ");
 
         ObjectMapper mapper = new ObjectMapper();
@@ -189,7 +190,7 @@ public class RequestControllerTests {
         String res = this.convertToUTF8(content);
 
         assertThat(res).contains("El precio es un campo requerido.");
-        assertThat(res).contains("El comentario adicional no debe superar los 80 carácteres.");
+        assertThat(res).contains("El comentario adicional no debe superar los 120 carácteres.");
     }
 
     @Test

@@ -141,10 +141,16 @@ export default class Form extends Component {
           <div class="col-sm-9">
             <input
               type="number"
+              min="0"
               class="form-control"
               value={this.state.fieldPublicationYear}
-              onChange={(event) =>
-                this.setState({ fieldPublicationYear: event.target.value })
+              onChange={(event) => 
+                this.setState({fieldPublicationYear: event.target.value.slice(
+                  0,
+                  event.target.value.length < 4
+                    ? event.target.value.length
+                    : 4
+                )})
               }
             />
             {this.state.errorField.indexOf("publicationYear") != -1 ? (
@@ -352,10 +358,16 @@ export default class Form extends Component {
             <input
               id="price"
               type="number"
+              min="0"
               class="form-control"
               value={this.state.fieldPrice}
               onChange={(event) =>
-                this.setState({ fieldPrice: event.target.value })
+                this.setState({ fieldPrice: event.target.value.slice(
+                  0,
+                  event.target.value.length < 9
+                    ? event.target.value.length
+                    : 9
+                )})
               }
             />
             {this.state.errorField.indexOf("price") != -1 ? (

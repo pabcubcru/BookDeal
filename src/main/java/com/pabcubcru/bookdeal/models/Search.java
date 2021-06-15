@@ -4,12 +4,16 @@ import org.springframework.data.elasticsearch.annotations.Document;
 import org.springframework.data.elasticsearch.annotations.Field;
 import org.springframework.data.elasticsearch.annotations.FieldType;
 
+import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Document(indexName = "searches")
 @Getter
 @Setter
+@AllArgsConstructor
+@NoArgsConstructor
 public class Search extends BaseEntity {
 
     @Field(type = FieldType.Text, name = "text")

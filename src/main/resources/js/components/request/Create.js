@@ -159,6 +159,7 @@ export default class Form extends Component {
                 <div class="col-sm-9">
                   <input
                     type="number"
+                    min="0"
                     class="form-control"
                     value={this.state.fieldPay}
                     onChange={(event) =>

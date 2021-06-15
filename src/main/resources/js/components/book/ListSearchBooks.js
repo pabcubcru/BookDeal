@@ -49,7 +49,7 @@ export default class List extends Component {
       const q = String(query);
       let title = "";
       let noResults = "";
-      if (q.includes("-")) {
+      if (type == "rangePrices" || type == "rangeYears") {
         const qr = q.split("-");
         title = "Resultados entre " + qr[0] + " y " + qr[1];
         noResults =
@@ -209,9 +209,15 @@ export default class List extends Component {
                 class="form-control"
                 value={this.state.fieldNumber1}
                 type="number"
+                min="0"
                 placeholder="Introduzca el año de publicación"
                 onChange={(event) =>
-                  this.setState({ fieldNumber1: event.target.value })
+                  this.setState({ fieldNumber1: event.target.value.slice(
+                    0,
+                    event.target.value.length < 4
+                      ? event.target.value.length
+                      : 4
+                  ) })
                 }
               />
               {this.state.errorField.indexOf("number1") != -1 ? (
@@ -239,9 +245,15 @@ export default class List extends Component {
                   class="form-control"
                   value={this.state.fieldNumber1}
                   type="number"
+                  min="0"
                   placeholder="Introduzca el año inicial"
                   onChange={(event) =>
-                    this.setState({ fieldNumber1: event.target.value })
+                    this.setState({ fieldNumber1: event.target.value.slice(
+                      0,
+                      event.target.value.length < 4
+                        ? event.target.value.length
+                        : 4
+                    ) })
                   }
                 />
                 {this.state.errorField.indexOf("number1") != -1 ? (
@@ -263,9 +275,15 @@ export default class List extends Component {
                   class="form-control"
                   value={this.state.fieldNumber2}
                   type="number"
+                  min="0"
                   placeholder="Introduzca el año final"
                   onChange={(event) =>
-                    this.setState({ fieldNumber2: event.target.value })
+                    this.setState({ fieldNumber2: event.target.value.slice(
+                      0,
+                      event.target.value.length < 4
+                        ? event.target.value.length
+                        : 4
+                    ) })
                   }
                 />
                 {this.state.errorField.indexOf("number2") != -1 ? (
@@ -294,9 +312,15 @@ export default class List extends Component {
                   class="form-control"
                   value={this.state.fieldNumber1}
                   type="number"
+                  min="0"
                   placeholder="Introduzca el precio inicial (€)"
                   onChange={(event) =>
-                    this.setState({ fieldNumber1: event.target.value })
+                    this.setState({ fieldNumber1: event.target.value.slice(
+                      0,
+                      event.target.value.length < 9
+                        ? event.target.value.length
+                        : 9
+                    ) })
                   }
                 />
                 {this.state.errorField.indexOf("number1") != -1 ? (
@@ -318,9 +342,15 @@ export default class List extends Component {
                   class="form-control"
                   value={this.state.fieldNumber2}
                   type="number"
+                  min="0"
                   placeholder="Introduzca el precio final (€)"
                   onChange={(event) =>
-                    this.setState({ fieldNumber2: event.target.value })
+                    this.setState({ fieldNumber2: event.target.value.slice(
+                      0,
+                      event.target.value.length < 9
+                        ? event.target.value.length
+                        : 9
+                    ) })
                   }
                 />
                 {this.state.errorField.indexOf("number2") != -1 ? (
@@ -348,9 +378,15 @@ export default class List extends Component {
                 class="form-control"
                 value={this.state.fieldText}
                 type="number"
+                min="0"
                 placeholder="Introduzca el código postal de 5 dígitos"
                 onChange={(event) =>
-                  this.setState({ fieldText: String(event.target.value) })
+                  this.setState({ fieldText: String(event.target.value.slice(
+                    0,
+                    event.target.value.length < 5
+                      ? event.target.value.length
+                      : 5
+                  )) })
                 }
               />
               {this.state.errorField.indexOf("text") != -1 ? (
@@ -570,7 +606,7 @@ export default class List extends Component {
                     </div>
                     <div>
                       <div class="book-card__title">
-                        {book.title}
+                        <a href={"/books/" + book.id}>{book.title}</a>
                         {this.state.username != null ? (
                           this.state.isAdded[i] == false ? (
                             <a

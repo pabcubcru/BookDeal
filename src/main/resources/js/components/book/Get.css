@@ -63,7 +63,6 @@
 .book__page--2 {
   position: absolute;
   right: 0;
-  pointer-events: none;
   transform-style: preserve-3d;
   background-image: url(https://i.ibb.co/YRy9kHC/paper.jpg);
 }
@@ -72,6 +71,7 @@
   width: 100%;
   height: 100%;
   transform: rotateY(0deg) translateZ(1px);
+  overflow: auto;
 }
 .book__page-back {
   position: absolute;
@@ -79,6 +79,7 @@
   height: 100%;
   padding: 0 calc(var(--baseline) * 1.8);
   transform: rotateY(180deg) translateZ(1px);
+  overflow: auto;
 }
 .book__page-back img {
   width: 100%;
