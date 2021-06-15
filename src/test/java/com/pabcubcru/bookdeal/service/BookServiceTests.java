@@ -10,8 +10,11 @@ import com.pabcubcru.bookdeal.services.BookService;
 import com.pabcubcru.bookdeal.services.UserService;
 
 import org.assertj.core.api.Assertions;
+import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvFileSource;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.data.domain.Page;
@@ -29,22 +32,26 @@ public class BookServiceTests {
     private UserService userService;
 
     @Test
+    @Order(1)
     public void shouldFindAll() throws Exception {
-        PageRequest pageRequest = PageRequest.of(0, 20);
+        PageRequest pageRequest = PageRequest.of(0, 21);
         Page<Book> books = this.bookService.findAll(pageRequest);
-        
-        Assertions.assertThat(books.getContent()).isNotEmpty();
+        Integer numBooks = this.bookService.countBooks();
+
+        Assertions.assertThat(Integer.parseInt("" + books.getTotalElements())).isEqualTo(numBooks);
     }
 
     @Test
+    @Order(2)
     public void shouldFindMyBooks() throws Exception {
-        PageRequest pageRequest = PageRequest.of(0, 20);
+        PageRequest pageRequest = PageRequest.of(0, 21);
         Page<Book> books = this.bookService.findMyBooks("juan1234", pageRequest);
 
         Assertions.assertThat(books.getContent().size()).isEqualTo(1);
     }
 
     @Test
+    @Order(3)
     public void shouldFindById() throws Exception {
         Book book = this.bookService.findBookById("book-002");
         Assertions.assertThat(book.getAuthor()).isEqualTo("Author Test");
@@ -52,6 +59,7 @@ public class BookServiceTests {
     }
 
     @Test
+    @Order(4)
     public void shouldDeleteById() throws Exception {
         this.bookService.deleteBookById("book-001");
         Book book = this.bookService.findBookById("book-001");
@@ -59,6 +67,7 @@ public class BookServiceTests {
     }
 
     @Test
+    @Order(5)
     public void shouldFindByIds() throws Exception {
         List<String> ids = new ArrayList<>();
         ids.add("book-001");
@@ -69,26 +78,18 @@ public class BookServiceTests {
         Assertions.assertThat(books.get(1).getTitle()).isEqualTo("Title test 2");
     }
 
-    @Test
-    public void shouldSaveValidateBook() throws Exception {
-        PageRequest pageRequest = PageRequest.of(0, 20);
+    @ParameterizedTest
+    @CsvFileSource(resources = "../csv/services/Books.csv", encoding = "utf-8", numLinesToSkip = 1, delimiterString = ";")
+    @Order(6)
+    public void shouldSaveValidateBook(String title, String originalTitle, String isbn, Integer publicationYear,
+            String publisher, String genres, String author, String description, String status, Double price,
+            String username, String image) throws Exception {
+        PageRequest pageRequest = PageRequest.of(0, 21);
         Page<Book> books = this.bookService.findAll(pageRequest);
         Long numberOfBooksBefore = books.getTotalElements();
 
-        Book book = new Book();
-
-        book.setId("book-004");
-        book.setTitle("Title test 1");
-        book.setIsbn("0-7645-2641-3");
-        book.setPublicationYear(2014);
-        book.setPublisher("Publisher Test");
-        book.setGenres("Comedia");
-        book.setAuthor("Author Test");
-        book.setDescription("Description test");
-        book.setImage("https://i.ibb.co/YRy9kHC/paper.jpg");
-        book.setStatus("COMO NUEVO");
-        book.setPrice(10.);
-        book.setUsername("test003");
+        Book book = new Book(title, originalTitle, isbn, publicationYear, publisher, genres, author, description,
+                status, price, username, image);
         this.bookService.save(book);
 
         books = this.bookService.findAll(pageRequest);
@@ -97,8 +98,9 @@ public class BookServiceTests {
     }
 
     @Test
+    @Order(7)
     public void shouldEditValidateBook() throws Exception {
-        PageRequest pageRequest = PageRequest.of(0, 20);
+        PageRequest pageRequest = PageRequest.of(0, 21);
         Page<Book> books = this.bookService.findAll(pageRequest);
         Long numberOfBooksBefore = books.getTotalElements();
 
@@ -115,7 +117,7 @@ public class BookServiceTests {
     }
 
     private void findNearBooks(String showMode) {
-        PageRequest pageRequest = PageRequest.of(0, 20);
+        PageRequest pageRequest = PageRequest.of(0, 21);
         User user = this.userService.findByUsername("pablo123");
 
         Page<Book> books = this.bookService.findNearBooks(user, pageRequest, showMode);
@@ -124,30 +126,35 @@ public class BookServiceTests {
     }
 
     @Test
+    @Order(8)
     public void shouldFindNearBooksProvince() throws Exception {
         String showMode = "province";
         this.findNearBooks(showMode);
     }
 
     @Test
+    @Order(9)
     public void shouldFindNearBooksPostCode() throws Exception {
         String showMode = "postCode";
         this.findNearBooks(showMode);
     }
 
     @Test
+    @Order(10)
     public void shouldFindNearBooksGenres() throws Exception {
         String showMode = "genres";
         this.findNearBooks(showMode);
     }
 
     @Test
+    @Order(11)
     public void shouldFindNearBooksProvinceOrPostCode() throws Exception {
         String showMode = "undefined";
         this.findNearBooks(showMode);
     }
 
     @Test
+    @Order(12)
     public void shouldFindBooksByUsername() throws Exception {
         List<Book> books = this.bookService.findByUsername("test002");
 
@@ -155,6 +162,7 @@ public class BookServiceTests {
     }
 
     @Test
+    @Order(13)
     public void shouldFindImagesByIdBook() throws Exception {
         List<Image> images = this.bookService.findImagesByIdBook("book-002");
 
@@ -162,92 +170,52 @@ public class BookServiceTests {
     }
 
     @Test
+    @Order(14)
     public void shouldFindPrincipalBookImage() throws Exception {
         Image image = this.bookService.findByIdBookAndPrincipalTrue("book-002");
 
         Assertions.assertThat(image).isNotNull();
     }
 
-    @Test
-    public void shouldSaveImage() throws Exception {
-        Image image = new Image();
-		image.setId("image-test");
-		image.setUrlImage("https://imagessl1.casadellibro.com/a/l/t5/11/9788499926711.jpg");
-		image.setIdBook("book-test-image");
-		image.setFileName("image-test");
-		image.setPrincipal(true);
+    @ParameterizedTest
+    @CsvFileSource(resources = "../csv/services/Images.csv", encoding = "utf-8", numLinesToSkip = 1, delimiterString = ";")
+    @Order(15)
+    public void shouldSaveImage(String fileName, String idBook, String urlImage, Boolean principal) throws Exception {
+        List<Image> images = this.bookService.findImagesByIdBook(idBook);
+        Integer numImagesBefore = images.size();
+        Image image = new Image(fileName, idBook, urlImage, principal);
+        this.bookService.saveImage(image);
 
-		this.bookService.saveImage(image);
-
-        List<Image> images = this.bookService.findImagesByIdBook("book-test-image");
-
+        images = this.bookService.findImagesByIdBook(idBook);
+        Integer numImagesAfter = images.size();
         Assertions.assertThat(images).isNotEmpty();
+        Assertions.assertThat(numImagesAfter).isEqualTo(numImagesBefore + 1);
     }
 
     @Test
+    @Order(16)
     public void shouldDeleteImage() throws Exception {
-        Image image = new Image();
-		image.setId("image-test-delete");
-		image.setUrlImage("https://imagessl1.casadellibro.com/a/l/t5/11/9788499926711.jpg");
-		image.setIdBook("book-test-image");
-		image.setFileName("image-test");
-		image.setPrincipal(true);
+        String idBook = "book001";
+        List<Image> images = this.bookService.findImagesByIdBook(idBook);
+        Image img = images.get(0);
+        this.bookService.deleteImage(img);
 
-		this.bookService.saveImage(image);
-
-        Image i = this.bookService.findImageById("image-test-delete");
-        Assertions.assertThat(i).isNotNull();
-
-        this.bookService.deleteImage(image);
-
-        i = this.bookService.findImageById("image-test-delete");
+        Image i = this.bookService.findImageById(img.getId());
         Assertions.assertThat(i).isNull();
-    }
 
-    @Test
-    public void shouldDeteleAllImages() throws Exception {
-        Image image = new Image();
-		image.setId("image-test-delete-1");
-		image.setUrlImage("https://imagessl1.casadellibro.com/a/l/t5/11/9788499926711.jpg");
-		image.setIdBook("book-test-image");
-		image.setFileName("image-test");
-		image.setPrincipal(true);
-
-		this.bookService.saveImage(image);
-
-		image.setId("image-test-delete-2");
-
-		this.bookService.saveImage(image);
-
-        List<Image> images = this.bookService.findImagesByIdBook("book-test-image");
-
+        images = this.bookService.findImagesByIdBook(idBook);
         Assertions.assertThat(images).isNotEmpty();
+        i = images.get(0);
+        this.bookService.deleteImageById(i.getId());
 
-        this.bookService.deleteAllImages(images); 
+        Image im = this.bookService.findImageById(i.getId());
+        Assertions.assertThat(im).isNull();
 
-        images = this.bookService.findImagesByIdBook("book-test-image");
+        images = this.bookService.findImagesByIdBook(idBook);
+        Assertions.assertThat(images).isNotEmpty();
+        this.bookService.deleteAllImages(images);
 
+        images = this.bookService.findImagesByIdBook(idBook);
         Assertions.assertThat(images).isEmpty();
     }
-
-    @Test
-    public void shouldDeleteImageById() throws Exception {
-        Image image = new Image();
-		image.setId("image-test-delete");
-		image.setUrlImage("https://imagessl1.casadellibro.com/a/l/t5/11/9788499926711.jpg");
-		image.setIdBook("book-test-image");
-		image.setFileName("image-test");
-		image.setPrincipal(true);
-
-		this.bookService.saveImage(image);
-
-        Image i = this.bookService.findImageById("image-test-delete");
-        Assertions.assertThat(i).isNotNull();
-
-        this.bookService.deleteImageById("image-test-delete");
-
-        i = this.bookService.findImageById("image-test-delete");
-        Assertions.assertThat(i).isNull();
-    }
-
 }

@@ -6,6 +6,8 @@ import com.pabcubcru.bookdeal.services.UserFavouriteBookService;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvFileSource;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.data.domain.Page;
@@ -21,7 +23,7 @@ public class UserFavouriteBookServiceTests {
 
     @Test
     public void shouldFindAllByUsername() throws Exception {
-        PageRequest pageRequest = PageRequest.of(1, 20);
+        PageRequest pageRequest = PageRequest.of(1, 21);
         Page<UserFavouriteBook> ufbooks = this.userFavouriteBookService.findAllByUsername("juan1234", pageRequest);
 
         Assertions.assertThat(ufbooks.getTotalElements()).isEqualTo(1L);
@@ -49,17 +51,16 @@ public class UserFavouriteBookServiceTests {
         Assertions.assertThat(ufbook).isNull();
     }
 
-    @Test
-    public void shouldSave() throws Exception {
-        UserFavouriteBook ufb = new UserFavouriteBook();
-        ufb.setBookId("booktest1");
-        ufb.setId("ufbtest");
-        ufb.setUsername("test");
+    @ParameterizedTest
+    @CsvFileSource(resources = "../csv/services/UserFavouritesBooks.csv", encoding = "utf-8", numLinesToSkip = 1, delimiterString = ";")
+    public void shouldSave(String username, String bookId) throws Exception {
+        PageRequest pageRequest = PageRequest.of(1, 21);
+        Long numFavouritesBefore = this.userFavouriteBookService.findAllByUsername(username, pageRequest).getTotalElements();
+        UserFavouriteBook ufb = new UserFavouriteBook(username, bookId);
         this.userFavouriteBookService.save(ufb);
 
-        UserFavouriteBook ufbook = this.userFavouriteBookService.findByUsernameAndBookId("test", "booktest1");
-        Assertions.assertThat(ufbook).isNotNull();
-        Assertions.assertThat(ufbook.getId()).isEqualTo("ufbtest");
+        Long numFavouritesAfter = this.userFavouriteBookService.findAllByUsername(username, pageRequest).getTotalElements();
+        Assertions.assertThat(numFavouritesAfter).isEqualTo(numFavouritesBefore + 1L);
     }
 
 }

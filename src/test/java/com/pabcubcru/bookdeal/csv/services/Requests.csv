@@ -1,0 +1,10 @@
+﻿username1;username2;idBook1;idBook2;status;action;pay;comment
+user001;user002;idbook1001;idbook2001;PENDIENTE;INTERCAMBIO;10;Comment
+user002;user003;idbook1002;idbook2002;PENDIENTE;INTERCAMBIO;10;Comment
+user003;user004;idbook1003;idbook2003;PENDIENTE;INTERCAMBIO;10;Comment
+user004;user005;idbook1004;idbook2004;PENDIENTE;INTERCAMBIO;10;Comment
+user005;user006;idbook1005;idbook2005;PENDIENTE;INTERCAMBIO;10;Comment
+user006;user007;idbook1006;;PENDIENTE;VENTA;10;Comment
+user007;user008;idbook1007;;PENDIENTE;VENTA;10;Comment
+user008;user009;idbook1008;;PENDIENTE;VENTA;10;Comment
+user009;user010;idbook1009;;PENDIENTE;VENTA;10;Comment

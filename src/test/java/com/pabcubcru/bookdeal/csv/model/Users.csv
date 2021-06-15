@@ -1,4 +1,4 @@
-﻿name;email;phone;birtDate;province;postCode;genres;username;password;enabled;accept;confirmPassword;// 2-8 -> CAMPOS EN BLANCO | 9-10 -> CAMPOS NO VÁLIDOS
+﻿name;email;phone;birtDate;province;postCode;genres;username;password;enabled;accept;confirmPassword;// 2-7 -> CAMPOS EN BLANCO | 8-11 -> CAMPOS NO VÁLIDOS
 ;user1@mail.com;654321987;1998-01-01;Sevilla;41012;Ingeniería, Tecnología, Libros_Infantiles;user1;user1234;true;true;user1234;
 User 2;;654321988;1998-01-02;Sevilla;41013;Ingeniería, Tecnología, Libros_Infantiles;user2;user1235;true;true;user1235;
 User 3;user3@mail.com;654321990;;Sevilla;41015;Ingeniería, Tecnología, Libros_Infantiles;user4;user1237;true;true;user1237;

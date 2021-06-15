@@ -10,6 +10,8 @@ import com.pabcubcru.bookdeal.services.RequestService;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvFileSource;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.data.domain.Page;
@@ -25,7 +27,7 @@ public class RequestServiceTests {
 
     @Test
     public void shouldFindMyRequests() throws Exception {
-        PageRequest pageRequest = PageRequest.of(1, 20);
+        PageRequest pageRequest = PageRequest.of(0, 21);
         Page<Request> requests = this.requestService.listMyRequests("test001", pageRequest);
 
         Assertions.assertThat(requests.getTotalElements()).isEqualTo(2L);
@@ -33,7 +35,7 @@ public class RequestServiceTests {
 
     @Test
     public void shouldFindReceivedRequests() throws Exception {
-        PageRequest pageRequest = PageRequest.of(1, 20);
+        PageRequest pageRequest = PageRequest.of(0, 21);
         Page<Request> requests = this.requestService.listReceivedRequests("test002", pageRequest);
 
         Assertions.assertThat(requests.getTotalElements()).isEqualTo(2L);
@@ -144,14 +146,16 @@ public class RequestServiceTests {
         Assertions.assertThat(request).isNull();
     }
 
-    @Test
-    public void shouldSave() throws Exception {
-        Request request = new Request();
-
-        request.setId("request-test");
+    @ParameterizedTest
+    @CsvFileSource(resources = "../csv/services/Requests.csv", encoding = "utf-8", numLinesToSkip = 1, delimiterString = ";")
+    public void shouldSave(String username1, String username2, String idBook1, String idBook2, String status,
+            String action, Double pay, String comment) throws Exception {
+        Integer numRequestsBefore = this.requestService.findByIdBook1OrIdBook2(idBook1, idBook2).size();
+        
+        Request request = new Request(username1, username2, idBook1, idBook2, status, action, pay, comment);
         this.requestService.save(request);
 
-        Request r = this.requestService.findById("request-test");
-        Assertions.assertThat(r).isNotNull();
+        Integer numRequestsAfter = this.requestService.findByIdBook1OrIdBook2(idBook1, idBook2).size();
+        Assertions.assertThat(numRequestsAfter).isEqualTo(numRequestsBefore + 1);
     }
 }
