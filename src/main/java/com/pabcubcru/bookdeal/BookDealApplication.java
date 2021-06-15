@@ -299,12 +299,12 @@ public class BookDealApplication {
 	public void buildBookIndex() {
 		this.deleteIndex();
 		this.buildAdministrator();
-		List<String> usernames = this.buildIndexUsersForBooks();
+		/*List<String> usernames = this.buildIndexUsersForBooks();
 		elasticSearchOperations.indexOps(Book.class).refresh();
 		List<Book> books = prepareDataset(usernames);
 		this.bookRepository.saveAll(books);
 		this.buildImagesForBook(books);
-		log.info("================= Added " + books.size() + " books. =================");
+		log.info("================= Added " + books.size() + " books. =================");*/
 		this.buildUserIndexForTests();
 		this.buildBookIndexForTests();
 		this.buildRequestsIndexForTests();
