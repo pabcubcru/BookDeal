@@ -144,10 +144,10 @@ public class SearchService {
             books = pageBooks.getContent();
             isSearchToBook = false;
         } else {
-            searchQuery.withQuery(QueryBuilders.multiMatchQuery(query).field("title").field("description")
-                    .field("originalTitle").field("isbn").field("publisher").field("genres").field("author")
-                    .field("status").field("username").operator(Operator.OR)
-                    .type(MultiMatchQueryBuilder.Type.BEST_FIELDS).fuzziness(Fuzziness.ONE).prefixLength(2));
+            searchQuery.withQuery(QueryBuilders.multiMatchQuery(query).field("title", 3.0f).field("description")
+                    .field("originalTitle", 3.0f).field("isbn").field("publisher", 1.5f).field("genres", 1.5f)
+                    .field("author", 2.0f).field("status").field("username").operator(Operator.OR)
+                    .type(MultiMatchQueryBuilder.Type.MOST_FIELDS).fuzziness(Fuzziness.ONE));
         }
 
         searchQuery.withPageable(pageable);
@@ -201,14 +201,14 @@ public class SearchService {
                     if (b != null) {
                         filterFunctionBuilders.add(new FunctionScoreQueryBuilder.FilterFunctionBuilder(
                                 QueryBuilders.matchQuery("publisher", b.getPublisher()),
-                                ScoreFunctionBuilders.weightFactorFunction(12)));
+                                ScoreFunctionBuilders.weightFactorFunction(10)));
                         filterFunctionBuilders.add(new FunctionScoreQueryBuilder.FilterFunctionBuilder(
                                 QueryBuilders.matchQuery("author", b.getAuthor()),
                                 ScoreFunctionBuilders.weightFactorFunction(10)));
                         for (String genre : b.getGenres().split(",")) {
                             filterFunctionBuilders.add(new FunctionScoreQueryBuilder.FilterFunctionBuilder(
                                     QueryBuilders.matchQuery("genres", genre),
-                                    ScoreFunctionBuilders.weightFactorFunction(10)));
+                                    ScoreFunctionBuilders.weightFactorFunction(15)));
                         }
                     }
                 }
@@ -216,13 +216,13 @@ public class SearchService {
 
             filterFunctionBuilders.add(new FunctionScoreQueryBuilder.FilterFunctionBuilder(
                     QueryBuilders.matchQuery("genres", user.getGenres()),
-                    ScoreFunctionBuilders.weightFactorFunction(8)));
+                    ScoreFunctionBuilders.weightFactorFunction(20)));
 
             FunctionScoreQueryBuilder.FilterFunctionBuilder[] builders = new FunctionScoreQueryBuilder.FilterFunctionBuilder[filterFunctionBuilders
                     .size()];
             filterFunctionBuilders.toArray(builders);
             FunctionScoreQueryBuilder functionScoreQueryBuilder = QueryBuilders.functionScoreQuery(builders)
-                    .scoreMode(FunctionScoreQuery.ScoreMode.MAX).setMinScore(8);
+                    .scoreMode(FunctionScoreQuery.ScoreMode.MAX).setMinScore(10);
 
             BoolQueryBuilder queryFilter = new BoolQueryBuilder();
 

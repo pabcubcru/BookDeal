@@ -380,7 +380,7 @@ public class BookDealApplication {
 			int numRandomUsername = (int) Math.floor(Math.random() * 99);
 			String username = usernames.get(numRandomUsername);
 			Book book = new Book(title, originalTitle, isbn, publicationYear, publisher, genre, author, description,
-					urlImage, status, price, username);
+					status, price, username, urlImage);
 			return book;
 		} else {
 			return null;

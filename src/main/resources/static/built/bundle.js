@@ -2408,7 +2408,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()(_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0___default.a);
 // Module
-___CSS_LOADER_EXPORT___.push([module.i, ".menu,\r\n.menu ul,\r\n.menu li,\r\n.menu a {\r\n  z-index: 5;\r\n  margin: 0;\r\n  padding: 0;\r\n  border: none;\r\n  outline: none;\r\n}\r\n\r\n.menu {\r\n  height: 70px;\r\n  width: 100%;\r\n  background-color: #26272b;\r\n  border-radius: 3px;\r\n  border-radius: 5px;\r\n}\r\n\r\n.menu li {\r\n  position: relative;\r\n  list-style: none;\r\n  float: left;\r\n  display: block;\r\n  height: 50px;\r\n}\r\n\r\n.menu a {\r\n  display: block;\r\n  padding: 0 30px;\r\n  margin: 20px 0;\r\n  line-height: 28px;\r\n  text-decoration: solid;\r\n\r\n  font-family: \"Trebuchet MS\", Arial, Helvetica, sans-serif;\r\n  font-weight: bold;\r\n  font-size: 18px;\r\n  color: rgb(255, 255, 255);\r\n}\r\n\r\n.menu li:hover > a {\r\n  color: #007bff;\r\n}\r\n\r\n.menu ul {\r\n  position: absolute;\r\n  top: 50px;\r\n  left: 20px;\r\n\r\n  opacity: 0;\r\n  background: #26272b;\r\n\r\n  border-radius: 0 0 10px 10px;\r\n  transition: opacity 0.2s ease 0.1s;\r\n}\r\n\r\n.menu li:hover > ul {\r\n  opacity: 1;\r\n}\r\n\r\n.menu ul li {\r\n  height: 0;\r\n  overflow: hidden;\r\n  padding: 0;\r\n\r\n  transition: height 0.25s ease 0.1s;\r\n}\r\n\r\n.menu li:hover > ul li {\r\n  height: 50px;\r\n  overflow: visible;\r\n  padding: 0;\r\n}\r\n\r\n.menu ul li a {\r\n  width: 180px;\r\n  padding: 10px 20px;\r\n  margin: 0;\r\n  border: none;\r\n  border-bottom: 1px solid #ffffff;\r\n  font-weight: normal;\r\n}\r\n.menu ul li:last-child a {\r\n  border: none;\r\n}\r\n\r\n@media screen and (max-width: 995px) {\r\n  .desktop {\r\n    display: none;\r\n  }\r\n}\r\n\r\n@media screen and (min-width: 994px) {\r\n  .mobile {\r\n    display: none;\r\n  }\r\n}\r\n", "",{"version":3,"sources":["webpack://./src/main/resources/js/components/Nav.css"],"names":[],"mappings":"AAAA;;;;EAIE,UAAU;EACV,SAAS;EACT,UAAU;EACV,YAAY;EACZ,aAAa;AACf;;AAEA;EACE,YAAY;EACZ,WAAW;EACX,yBAAyB;EACzB,kBAAkB;EAClB,kBAAkB;AACpB;;AAEA;EACE,kBAAkB;EAClB,gBAAgB;EAChB,WAAW;EACX,cAAc;EACd,YAAY;AACd;;AAEA;EACE,cAAc;EACd,eAAe;EACf,cAAc;EACd,iBAAiB;EACjB,sBAAsB;;EAEtB,yDAAyD;EACzD,iBAAiB;EACjB,eAAe;EACf,yBAAyB;AAC3B;;AAEA;EACE,cAAc;AAChB;;AAEA;EACE,kBAAkB;EAClB,SAAS;EACT,UAAU;;EAEV,UAAU;EACV,mBAAmB;;EAEnB,4BAA4B;EAC5B,kCAAkC;AACpC;;AAEA;EACE,UAAU;AACZ;;AAEA;EACE,SAAS;EACT,gBAAgB;EAChB,UAAU;;EAEV,kCAAkC;AACpC;;AAEA;EACE,YAAY;EACZ,iBAAiB;EACjB,UAAU;AACZ;;AAEA;EACE,YAAY;EACZ,kBAAkB;EAClB,SAAS;EACT,YAAY;EACZ,gCAAgC;EAChC,mBAAmB;AACrB;AACA;EACE,YAAY;AACd;;AAEA;EACE;IACE,aAAa;EACf;AACF;;AAEA;EACE;IACE,aAAa;EACf;AACF","sourcesContent":[".menu,\r\n.menu ul,\r\n.menu li,\r\n.menu a {\r\n  z-index: 5;\r\n  margin: 0;\r\n  padding: 0;\r\n  border: none;\r\n  outline: none;\r\n}\r\n\r\n.menu {\r\n  height: 70px;\r\n  width: 100%;\r\n  background-color: #26272b;\r\n  border-radius: 3px;\r\n  border-radius: 5px;\r\n}\r\n\r\n.menu li {\r\n  position: relative;\r\n  list-style: none;\r\n  float: left;\r\n  display: block;\r\n  height: 50px;\r\n}\r\n\r\n.menu a {\r\n  display: block;\r\n  padding: 0 30px;\r\n  margin: 20px 0;\r\n  line-height: 28px;\r\n  text-decoration: solid;\r\n\r\n  font-family: \"Trebuchet MS\", Arial, Helvetica, sans-serif;\r\n  font-weight: bold;\r\n  font-size: 18px;\r\n  color: rgb(255, 255, 255);\r\n}\r\n\r\n.menu li:hover > a {\r\n  color: #007bff;\r\n}\r\n\r\n.menu ul {\r\n  position: absolute;\r\n  top: 50px;\r\n  left: 20px;\r\n\r\n  opacity: 0;\r\n  background: #26272b;\r\n\r\n  border-radius: 0 0 10px 10px;\r\n  transition: opacity 0.2s ease 0.1s;\r\n}\r\n\r\n.menu li:hover > ul {\r\n  opacity: 1;\r\n}\r\n\r\n.menu ul li {\r\n  height: 0;\r\n  overflow: hidden;\r\n  padding: 0;\r\n\r\n  transition: height 0.25s ease 0.1s;\r\n}\r\n\r\n.menu li:hover > ul li {\r\n  height: 50px;\r\n  overflow: visible;\r\n  padding: 0;\r\n}\r\n\r\n.menu ul li a {\r\n  width: 180px;\r\n  padding: 10px 20px;\r\n  margin: 0;\r\n  border: none;\r\n  border-bottom: 1px solid #ffffff;\r\n  font-weight: normal;\r\n}\r\n.menu ul li:last-child a {\r\n  border: none;\r\n}\r\n\r\n@media screen and (max-width: 995px) {\r\n  .desktop {\r\n    display: none;\r\n  }\r\n}\r\n\r\n@media screen and (min-width: 994px) {\r\n  .mobile {\r\n    display: none;\r\n  }\r\n}\r\n"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.i, ".menu,\r\n.menu ul,\r\n.menu li,\r\n.menu a {\r\n  z-index: 5;\r\n  margin: 0;\r\n  padding: 0;\r\n  border: none;\r\n  outline: none;\r\n}\r\n\r\n.menu {\r\n  height: 70px;\r\n  width: 100%;\r\n  background-color: #26272b;\r\n  border-radius: 3px;\r\n  border-radius: 5px;\r\n}\r\n\r\n.menu li {\r\n  position: relative;\r\n  list-style: none;\r\n  float: left;\r\n  display: block;\r\n  height: 50px;\r\n}\r\n\r\n.menu a {\r\n  display: block;\r\n  padding: 0 30px;\r\n  margin: 20px 0;\r\n  line-height: 28px;\r\n  text-decoration: solid;\r\n\r\n  font-family: \"Trebuchet MS\", Arial, Helvetica, sans-serif;\r\n  font-weight: bold;\r\n  font-size: 18px;\r\n  color: rgb(255, 255, 255);\r\n}\r\n\r\n.menu li:hover > a {\r\n  color: #007bff;\r\n}\r\n\r\n.menu ul {\r\n  position: absolute;\r\n  top: 50px;\r\n  left: 20px;\r\n\r\n  opacity: 0;\r\n  background: #26272b;\r\n\r\n  border-radius: 0 0 10px 10px;\r\n  transition: opacity 0.2s ease 0.1s;\r\n}\r\n\r\n.menu li:hover > ul {\r\n  opacity: 1;\r\n}\r\n\r\n.menu ul li {\r\n  height: 0;\r\n  overflow: hidden;\r\n  padding: 0;\r\n\r\n  transition: height 0.25s ease 0.1s;\r\n}\r\n\r\n.menu li:hover > ul li {\r\n  height: 50px;\r\n  overflow: visible;\r\n  padding: 0;\r\n}\r\n\r\n.menu ul li a {\r\n  width: 180px;\r\n  padding: 10px 20px;\r\n  margin: 0;\r\n  border: none;\r\n  border-bottom: 1px solid #ffffff;\r\n  font-weight: normal;\r\n}\r\n.menu ul li:last-child a {\r\n  border: none;\r\n}\r\n\r\n@media screen and (max-width: 995px) {\r\n  .desktop {\r\n    display: none;\r\n  }\r\n}\r\n\r\n@media screen and (min-width: 994px) {\r\n  .mobile {\r\n    display: none;\r\n  }\r\n}\r\n\r\n@media screen and (max-width: 484px) {\r\n  .menu {\r\n    height: 140px;\r\n    width: 100%;\r\n    background-color: #26272b;\r\n    border-radius: 3px;\r\n    border-radius: 5px;\r\n  }\r\n}\r\n", "",{"version":3,"sources":["webpack://./src/main/resources/js/components/Nav.css"],"names":[],"mappings":"AAAA;;;;EAIE,UAAU;EACV,SAAS;EACT,UAAU;EACV,YAAY;EACZ,aAAa;AACf;;AAEA;EACE,YAAY;EACZ,WAAW;EACX,yBAAyB;EACzB,kBAAkB;EAClB,kBAAkB;AACpB;;AAEA;EACE,kBAAkB;EAClB,gBAAgB;EAChB,WAAW;EACX,cAAc;EACd,YAAY;AACd;;AAEA;EACE,cAAc;EACd,eAAe;EACf,cAAc;EACd,iBAAiB;EACjB,sBAAsB;;EAEtB,yDAAyD;EACzD,iBAAiB;EACjB,eAAe;EACf,yBAAyB;AAC3B;;AAEA;EACE,cAAc;AAChB;;AAEA;EACE,kBAAkB;EAClB,SAAS;EACT,UAAU;;EAEV,UAAU;EACV,mBAAmB;;EAEnB,4BAA4B;EAC5B,kCAAkC;AACpC;;AAEA;EACE,UAAU;AACZ;;AAEA;EACE,SAAS;EACT,gBAAgB;EAChB,UAAU;;EAEV,kCAAkC;AACpC;;AAEA;EACE,YAAY;EACZ,iBAAiB;EACjB,UAAU;AACZ;;AAEA;EACE,YAAY;EACZ,kBAAkB;EAClB,SAAS;EACT,YAAY;EACZ,gCAAgC;EAChC,mBAAmB;AACrB;AACA;EACE,YAAY;AACd;;AAEA;EACE;IACE,aAAa;EACf;AACF;;AAEA;EACE;IACE,aAAa;EACf;AACF;;AAEA;EACE;IACE,aAAa;IACb,WAAW;IACX,yBAAyB;IACzB,kBAAkB;IAClB,kBAAkB;EACpB;AACF","sourcesContent":[".menu,\r\n.menu ul,\r\n.menu li,\r\n.menu a {\r\n  z-index: 5;\r\n  margin: 0;\r\n  padding: 0;\r\n  border: none;\r\n  outline: none;\r\n}\r\n\r\n.menu {\r\n  height: 70px;\r\n  width: 100%;\r\n  background-color: #26272b;\r\n  border-radius: 3px;\r\n  border-radius: 5px;\r\n}\r\n\r\n.menu li {\r\n  position: relative;\r\n  list-style: none;\r\n  float: left;\r\n  display: block;\r\n  height: 50px;\r\n}\r\n\r\n.menu a {\r\n  display: block;\r\n  padding: 0 30px;\r\n  margin: 20px 0;\r\n  line-height: 28px;\r\n  text-decoration: solid;\r\n\r\n  font-family: \"Trebuchet MS\", Arial, Helvetica, sans-serif;\r\n  font-weight: bold;\r\n  font-size: 18px;\r\n  color: rgb(255, 255, 255);\r\n}\r\n\r\n.menu li:hover > a {\r\n  color: #007bff;\r\n}\r\n\r\n.menu ul {\r\n  position: absolute;\r\n  top: 50px;\r\n  left: 20px;\r\n\r\n  opacity: 0;\r\n  background: #26272b;\r\n\r\n  border-radius: 0 0 10px 10px;\r\n  transition: opacity 0.2s ease 0.1s;\r\n}\r\n\r\n.menu li:hover > ul {\r\n  opacity: 1;\r\n}\r\n\r\n.menu ul li {\r\n  height: 0;\r\n  overflow: hidden;\r\n  padding: 0;\r\n\r\n  transition: height 0.25s ease 0.1s;\r\n}\r\n\r\n.menu li:hover > ul li {\r\n  height: 50px;\r\n  overflow: visible;\r\n  padding: 0;\r\n}\r\n\r\n.menu ul li a {\r\n  width: 180px;\r\n  padding: 10px 20px;\r\n  margin: 0;\r\n  border: none;\r\n  border-bottom: 1px solid #ffffff;\r\n  font-weight: normal;\r\n}\r\n.menu ul li:last-child a {\r\n  border: none;\r\n}\r\n\r\n@media screen and (max-width: 995px) {\r\n  .desktop {\r\n    display: none;\r\n  }\r\n}\r\n\r\n@media screen and (min-width: 994px) {\r\n  .mobile {\r\n    display: none;\r\n  }\r\n}\r\n\r\n@media screen and (max-width: 484px) {\r\n  .menu {\r\n    height: 140px;\r\n    width: 100%;\r\n    background-color: #26272b;\r\n    border-radius: 3px;\r\n    border-radius: 5px;\r\n  }\r\n}\r\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ __webpack_exports__["default"] = (___CSS_LOADER_EXPORT___);
 
@@ -2459,7 +2459,7 @@ __webpack_require__.r(__webpack_exports__);
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()(_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0___default.a);
 ___CSS_LOADER_EXPORT___.push([module.i, "@import url(https://fonts.googleapis.com/css?family=Cormorant+Garamond:300,400,600|Tulpen+One&display=swap);"]);
 // Module
-___CSS_LOADER_EXPORT___.push([module.i, ":root {\r\n  /* colors */\r\n  --body-bg: #fafafa;\r\n  --page-bg: #f5f5f5;\r\n  --dark-text: #2a2935;\r\n  /* spacing */\r\n  /* this is what defines the global scale */\r\n  --baseline: 12px;\r\n  /* fonts */\r\n  --book-title: \"Tulpen One\", sans-serif;\r\n  --title: \"Cormorant Garamond\", serif;\r\n  --body: \"Cormorant Garamond\", serif;\r\n  --base-size: var(--baseline) * 1.2;\r\n}\r\n\r\n* {\r\n  box-sizing: border-box;\r\n}\r\n\r\n.cover {\r\n  width: 100%;\r\n  height: 200%;\r\n  box-shadow: 0 0 100px rgba(0, 0, 0, 0.3);\r\n}\r\n\r\n.book {\r\n  width: 100%;\r\n  height: 800px;\r\n  display: flex;\r\n  perspective: 1200px;\r\n}\r\n.book__page {\r\n  position: relative;\r\n  width: 50%;\r\n  height: 100%;\r\n  display: grid;\r\n  transform: rotateY(0deg);\r\n  transition: transform 0.9s cubic-bezier(0.645, 0.045, 0.355, 1);\r\n  transform-origin: 0% 0%;\r\n  border-radius: 5px;\r\n  background-image: url(https://i.ibb.co/YRy9kHC/paper.jpg);\r\n}\r\n.book__page:nth-of-type(1) {\r\n  background-image: url(https://i.ibb.co/YRy9kHC/paper.jpg);\r\n}\r\n.book__page--1 {\r\n  cursor: pointer;\r\n  overflow: hidden;\r\n}\r\n.book__page--1 img {\r\n  height: 800px;\r\n  width: 100%;\r\n}\r\n.book__page--4 {\r\n  cursor: pointer;\r\n  overflow: hidden;\r\n}\r\n.book__page--4 img {\r\n  height: 800px;\r\n  width: 100%;\r\n}\r\n.book__page--2 {\r\n  position: absolute;\r\n  right: 0;\r\n  pointer-events: none;\r\n  transform-style: preserve-3d;\r\n  background-image: url(https://i.ibb.co/YRy9kHC/paper.jpg);\r\n}\r\n.book__page-front {\r\n  position: absolute;\r\n  width: 100%;\r\n  height: 100%;\r\n  transform: rotateY(0deg) translateZ(1px);\r\n}\r\n.book__page-back {\r\n  position: absolute;\r\n  width: 100%;\r\n  height: 100%;\r\n  padding: 0 calc(var(--baseline) * 1.8);\r\n  transform: rotateY(180deg) translateZ(1px);\r\n}\r\n.book__page-back img {\r\n  width: 100%;\r\n  max-width: 100%;\r\n  height: 800px;\r\n}\r\n.book__page .page__content {\r\n  padding: var(--baseline);\r\n  height: 100%;\r\n  position: relative;\r\n  text-align: center;\r\n}\r\n.book__page .page__content-book-title {\r\n  font-family: var(--book-title);\r\n  font-size: calc(var(--base-size) * 3);\r\n  font-weight: bold;\r\n  text-transform: uppercase;\r\n  letter-spacing: 3px;\r\n  color: var(--dark-text);\r\n  margin-top: calc(var(--baseline) * 3);\r\n  margin-bottom: calc(var(--baseline) * 2);\r\n}\r\n.book__page .page__content-author {\r\n  font-family: var(--title);\r\n  font-size: calc(var(--base-size) * 1.2);\r\n  font-weight: 100;\r\n  text-transform: uppercase;\r\n  color: var(--dark-text);\r\n  border-top: 1px solid var(--dark-text);\r\n  border-bottom: 1px solid var(--dark-text);\r\n  display: inline-block;\r\n  padding: calc(var(--baseline) / 2) calc(var(--baseline) / 5);\r\n  margin-bottom: calc(var(--baseline) * 3);\r\n}\r\n.book__page .page__content-credits {\r\n  font-family: var(--title);\r\n  text-transform: uppercase;\r\n  font-size: calc(var(--base-size) * 0.8);\r\n  margin-bottom: calc(var(--baseline) * 1.5);\r\n  letter-spacing: 1px;\r\n  font-weight: bold;\r\n}\r\n.book__page .page__content-credits span {\r\n  display: block;\r\n  font-size: calc(var(--base-size) * 1.2);\r\n  letter-spacing: 0;\r\n}\r\n.book__page .page__content-copyright {\r\n  position: absolute;\r\n  width: calc(100% - (var(--baseline) * 2));\r\n  bottom: calc(var(--baseline) * 2);\r\n  font-family: var(--title);\r\n  font-size: calc(var(--base-size) * 0.8);\r\n  text-transform: uppercase;\r\n  font-weight: bold;\r\n}\r\n.book__page .page__content-title {\r\n  font-family: var(--title);\r\n  font-size: calc(var(--base-size) * 2);\r\n  text-transform: uppercase;\r\n  letter-spacing: 1px;\r\n  margin-top: calc(var(--baseline) * 2);\r\n  margin-bottom: calc(var(--baseline) * 1.5);\r\n}\r\n.book__page .page__content-table {\r\n  width: 100%;\r\n  margin-top: calc(var(--baseline) * 2);\r\n}\r\n.book__page .page__content-table td {\r\n  font-family: var(--title);\r\n  font-size: calc(var(--base-size) * 1);\r\n  padding-bottom: calc(var(--baseline) * 1.5);\r\n  text-transform: uppercase;\r\n}\r\n.book__page .page__content-blockquote {\r\n  margin-bottom: calc(var(--baseline) * 2);\r\n}\r\n.book__page .page__content-blockquote-text {\r\n  font-family: var(--title);\r\n  font-size: calc(var(--base-size) * 1.2);\r\n  font-style: italic;\r\n  text-align: justify;\r\n  font-weight: bold;\r\n}\r\n.book__page .page__content-blockquote-reference {\r\n  font-family: var(--title);\r\n  font-size: calc(var(--base-size) * 0.7);\r\n  margin-top: calc(var(--baseline) * 0.3);\r\n  float: right;\r\n  text-transform: uppercase;\r\n}\r\n.book__page .page__content-text {\r\n  font-family: var(--title);\r\n  font-size: calc(var(--base-size));\r\n  text-align: justify;\r\n  text-indent: var(--baseline);\r\n}\r\n.book__page .page__number {\r\n  position: absolute;\r\n  bottom: var(--baseline);\r\n  width: calc(100% - (var(--baseline) * 2));\r\n  font-family: var(--title);\r\n  font-size: calc(var(--base-size));\r\n  text-align: center;\r\n}\r\n.book input[type=\"radio\"] {\r\n  display: none;\r\n}\r\n.book input[type=\"radio\"]:checked + .book__page {\r\n  transition: transform 0.9s cubic-bezier(0.645, 0.045, 0.355, 1);\r\n  transform: rotateY(-180deg);\r\n}\r\n", "",{"version":3,"sources":["webpack://./src/main/resources/js/components/book/Get.css"],"names":[],"mappings":"AACA;EACE,WAAW;EACX,kBAAkB;EAClB,kBAAkB;EAClB,oBAAoB;EACpB,YAAY;EACZ,0CAA0C;EAC1C,gBAAgB;EAChB,UAAU;EACV,sCAAsC;EACtC,oCAAoC;EACpC,mCAAmC;EACnC,kCAAkC;AACpC;;AAEA;EACE,sBAAsB;AACxB;;AAEA;EACE,WAAW;EACX,YAAY;EACZ,wCAAwC;AAC1C;;AAEA;EACE,WAAW;EACX,aAAa;EACb,aAAa;EACb,mBAAmB;AACrB;AACA;EACE,kBAAkB;EAClB,UAAU;EACV,YAAY;EACZ,aAAa;EACb,wBAAwB;EACxB,+DAA+D;EAC/D,uBAAuB;EACvB,kBAAkB;EAClB,yDAAyD;AAC3D;AACA;EACE,yDAAyD;AAC3D;AACA;EACE,eAAe;EACf,gBAAgB;AAClB;AACA;EACE,aAAa;EACb,WAAW;AACb;AACA;EACE,eAAe;EACf,gBAAgB;AAClB;AACA;EACE,aAAa;EACb,WAAW;AACb;AACA;EACE,kBAAkB;EAClB,QAAQ;EACR,oBAAoB;EACpB,4BAA4B;EAC5B,yDAAyD;AAC3D;AACA;EACE,kBAAkB;EAClB,WAAW;EACX,YAAY;EACZ,wCAAwC;AAC1C;AACA;EACE,kBAAkB;EAClB,WAAW;EACX,YAAY;EACZ,sCAAsC;EACtC,0CAA0C;AAC5C;AACA;EACE,WAAW;EACX,eAAe;EACf,aAAa;AACf;AACA;EACE,wBAAwB;EACxB,YAAY;EACZ,kBAAkB;EAClB,kBAAkB;AACpB;AACA;EACE,8BAA8B;EAC9B,qCAAqC;EACrC,iBAAiB;EACjB,yBAAyB;EACzB,mBAAmB;EACnB,uBAAuB;EACvB,qCAAqC;EACrC,wCAAwC;AAC1C;AACA;EACE,yBAAyB;EACzB,uCAAuC;EACvC,gBAAgB;EAChB,yBAAyB;EACzB,uBAAuB;EACvB,sCAAsC;EACtC,yCAAyC;EACzC,qBAAqB;EACrB,4DAA4D;EAC5D,wCAAwC;AAC1C;AACA;EACE,yBAAyB;EACzB,yBAAyB;EACzB,uCAAuC;EACvC,0CAA0C;EAC1C,mBAAmB;EACnB,iBAAiB;AACnB;AACA;EACE,cAAc;EACd,uCAAuC;EACvC,iBAAiB;AACnB;AACA;EACE,kBAAkB;EAClB,yCAAyC;EACzC,iCAAiC;EACjC,yBAAyB;EACzB,uCAAuC;EACvC,yBAAyB;EACzB,iBAAiB;AACnB;AACA;EACE,yBAAyB;EACzB,qCAAqC;EACrC,yBAAyB;EACzB,mBAAmB;EACnB,qCAAqC;EACrC,0CAA0C;AAC5C;AACA;EACE,WAAW;EACX,qCAAqC;AACvC;AACA;EACE,yBAAyB;EACzB,qCAAqC;EACrC,2CAA2C;EAC3C,yBAAyB;AAC3B;AACA;EACE,wCAAwC;AAC1C;AACA;EACE,yBAAyB;EACzB,uCAAuC;EACvC,kBAAkB;EAClB,mBAAmB;EACnB,iBAAiB;AACnB;AACA;EACE,yBAAyB;EACzB,uCAAuC;EACvC,uCAAuC;EACvC,YAAY;EACZ,yBAAyB;AAC3B;AACA;EACE,yBAAyB;EACzB,iCAAiC;EACjC,mBAAmB;EACnB,4BAA4B;AAC9B;AACA;EACE,kBAAkB;EAClB,uBAAuB;EACvB,yCAAyC;EACzC,yBAAyB;EACzB,iCAAiC;EACjC,kBAAkB;AACpB;AACA;EACE,aAAa;AACf;AACA;EACE,+DAA+D;EAC/D,2BAA2B;AAC7B","sourcesContent":["@import url(\"https://fonts.googleapis.com/css?family=Cormorant+Garamond:300,400,600|Tulpen+One&display=swap\");\r\n:root {\r\n  /* colors */\r\n  --body-bg: #fafafa;\r\n  --page-bg: #f5f5f5;\r\n  --dark-text: #2a2935;\r\n  /* spacing */\r\n  /* this is what defines the global scale */\r\n  --baseline: 12px;\r\n  /* fonts */\r\n  --book-title: \"Tulpen One\", sans-serif;\r\n  --title: \"Cormorant Garamond\", serif;\r\n  --body: \"Cormorant Garamond\", serif;\r\n  --base-size: var(--baseline) * 1.2;\r\n}\r\n\r\n* {\r\n  box-sizing: border-box;\r\n}\r\n\r\n.cover {\r\n  width: 100%;\r\n  height: 200%;\r\n  box-shadow: 0 0 100px rgba(0, 0, 0, 0.3);\r\n}\r\n\r\n.book {\r\n  width: 100%;\r\n  height: 800px;\r\n  display: flex;\r\n  perspective: 1200px;\r\n}\r\n.book__page {\r\n  position: relative;\r\n  width: 50%;\r\n  height: 100%;\r\n  display: grid;\r\n  transform: rotateY(0deg);\r\n  transition: transform 0.9s cubic-bezier(0.645, 0.045, 0.355, 1);\r\n  transform-origin: 0% 0%;\r\n  border-radius: 5px;\r\n  background-image: url(https://i.ibb.co/YRy9kHC/paper.jpg);\r\n}\r\n.book__page:nth-of-type(1) {\r\n  background-image: url(https://i.ibb.co/YRy9kHC/paper.jpg);\r\n}\r\n.book__page--1 {\r\n  cursor: pointer;\r\n  overflow: hidden;\r\n}\r\n.book__page--1 img {\r\n  height: 800px;\r\n  width: 100%;\r\n}\r\n.book__page--4 {\r\n  cursor: pointer;\r\n  overflow: hidden;\r\n}\r\n.book__page--4 img {\r\n  height: 800px;\r\n  width: 100%;\r\n}\r\n.book__page--2 {\r\n  position: absolute;\r\n  right: 0;\r\n  pointer-events: none;\r\n  transform-style: preserve-3d;\r\n  background-image: url(https://i.ibb.co/YRy9kHC/paper.jpg);\r\n}\r\n.book__page-front {\r\n  position: absolute;\r\n  width: 100%;\r\n  height: 100%;\r\n  transform: rotateY(0deg) translateZ(1px);\r\n}\r\n.book__page-back {\r\n  position: absolute;\r\n  width: 100%;\r\n  height: 100%;\r\n  padding: 0 calc(var(--baseline) * 1.8);\r\n  transform: rotateY(180deg) translateZ(1px);\r\n}\r\n.book__page-back img {\r\n  width: 100%;\r\n  max-width: 100%;\r\n  height: 800px;\r\n}\r\n.book__page .page__content {\r\n  padding: var(--baseline);\r\n  height: 100%;\r\n  position: relative;\r\n  text-align: center;\r\n}\r\n.book__page .page__content-book-title {\r\n  font-family: var(--book-title);\r\n  font-size: calc(var(--base-size) * 3);\r\n  font-weight: bold;\r\n  text-transform: uppercase;\r\n  letter-spacing: 3px;\r\n  color: var(--dark-text);\r\n  margin-top: calc(var(--baseline) * 3);\r\n  margin-bottom: calc(var(--baseline) * 2);\r\n}\r\n.book__page .page__content-author {\r\n  font-family: var(--title);\r\n  font-size: calc(var(--base-size) * 1.2);\r\n  font-weight: 100;\r\n  text-transform: uppercase;\r\n  color: var(--dark-text);\r\n  border-top: 1px solid var(--dark-text);\r\n  border-bottom: 1px solid var(--dark-text);\r\n  display: inline-block;\r\n  padding: calc(var(--baseline) / 2) calc(var(--baseline) / 5);\r\n  margin-bottom: calc(var(--baseline) * 3);\r\n}\r\n.book__page .page__content-credits {\r\n  font-family: var(--title);\r\n  text-transform: uppercase;\r\n  font-size: calc(var(--base-size) * 0.8);\r\n  margin-bottom: calc(var(--baseline) * 1.5);\r\n  letter-spacing: 1px;\r\n  font-weight: bold;\r\n}\r\n.book__page .page__content-credits span {\r\n  display: block;\r\n  font-size: calc(var(--base-size) * 1.2);\r\n  letter-spacing: 0;\r\n}\r\n.book__page .page__content-copyright {\r\n  position: absolute;\r\n  width: calc(100% - (var(--baseline) * 2));\r\n  bottom: calc(var(--baseline) * 2);\r\n  font-family: var(--title);\r\n  font-size: calc(var(--base-size) * 0.8);\r\n  text-transform: uppercase;\r\n  font-weight: bold;\r\n}\r\n.book__page .page__content-title {\r\n  font-family: var(--title);\r\n  font-size: calc(var(--base-size) * 2);\r\n  text-transform: uppercase;\r\n  letter-spacing: 1px;\r\n  margin-top: calc(var(--baseline) * 2);\r\n  margin-bottom: calc(var(--baseline) * 1.5);\r\n}\r\n.book__page .page__content-table {\r\n  width: 100%;\r\n  margin-top: calc(var(--baseline) * 2);\r\n}\r\n.book__page .page__content-table td {\r\n  font-family: var(--title);\r\n  font-size: calc(var(--base-size) * 1);\r\n  padding-bottom: calc(var(--baseline) * 1.5);\r\n  text-transform: uppercase;\r\n}\r\n.book__page .page__content-blockquote {\r\n  margin-bottom: calc(var(--baseline) * 2);\r\n}\r\n.book__page .page__content-blockquote-text {\r\n  font-family: var(--title);\r\n  font-size: calc(var(--base-size) * 1.2);\r\n  font-style: italic;\r\n  text-align: justify;\r\n  font-weight: bold;\r\n}\r\n.book__page .page__content-blockquote-reference {\r\n  font-family: var(--title);\r\n  font-size: calc(var(--base-size) * 0.7);\r\n  margin-top: calc(var(--baseline) * 0.3);\r\n  float: right;\r\n  text-transform: uppercase;\r\n}\r\n.book__page .page__content-text {\r\n  font-family: var(--title);\r\n  font-size: calc(var(--base-size));\r\n  text-align: justify;\r\n  text-indent: var(--baseline);\r\n}\r\n.book__page .page__number {\r\n  position: absolute;\r\n  bottom: var(--baseline);\r\n  width: calc(100% - (var(--baseline) * 2));\r\n  font-family: var(--title);\r\n  font-size: calc(var(--base-size));\r\n  text-align: center;\r\n}\r\n.book input[type=\"radio\"] {\r\n  display: none;\r\n}\r\n.book input[type=\"radio\"]:checked + .book__page {\r\n  transition: transform 0.9s cubic-bezier(0.645, 0.045, 0.355, 1);\r\n  transform: rotateY(-180deg);\r\n}\r\n"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.i, ":root {\r\n  /* colors */\r\n  --body-bg: #fafafa;\r\n  --page-bg: #f5f5f5;\r\n  --dark-text: #2a2935;\r\n  /* spacing */\r\n  /* this is what defines the global scale */\r\n  --baseline: 12px;\r\n  /* fonts */\r\n  --book-title: \"Tulpen One\", sans-serif;\r\n  --title: \"Cormorant Garamond\", serif;\r\n  --body: \"Cormorant Garamond\", serif;\r\n  --base-size: var(--baseline) * 1.2;\r\n}\r\n\r\n* {\r\n  box-sizing: border-box;\r\n}\r\n\r\n.cover {\r\n  width: 100%;\r\n  height: 200%;\r\n  box-shadow: 0 0 100px rgba(0, 0, 0, 0.3);\r\n}\r\n\r\n.book {\r\n  width: 100%;\r\n  height: 800px;\r\n  display: flex;\r\n  perspective: 1200px;\r\n}\r\n.book__page {\r\n  position: relative;\r\n  width: 50%;\r\n  height: 100%;\r\n  display: grid;\r\n  transform: rotateY(0deg);\r\n  transition: transform 0.9s cubic-bezier(0.645, 0.045, 0.355, 1);\r\n  transform-origin: 0% 0%;\r\n  border-radius: 5px;\r\n  background-image: url(https://i.ibb.co/YRy9kHC/paper.jpg);\r\n}\r\n.book__page:nth-of-type(1) {\r\n  background-image: url(https://i.ibb.co/YRy9kHC/paper.jpg);\r\n}\r\n.book__page--1 {\r\n  cursor: pointer;\r\n  overflow: hidden;\r\n}\r\n.book__page--1 img {\r\n  height: 800px;\r\n  width: 100%;\r\n}\r\n.book__page--4 {\r\n  cursor: pointer;\r\n  overflow: hidden;\r\n}\r\n.book__page--4 img {\r\n  height: 800px;\r\n  width: 100%;\r\n}\r\n.book__page--2 {\r\n  position: absolute;\r\n  right: 0;\r\n  transform-style: preserve-3d;\r\n  background-image: url(https://i.ibb.co/YRy9kHC/paper.jpg);\r\n}\r\n.book__page-front {\r\n  position: absolute;\r\n  width: 100%;\r\n  height: 100%;\r\n  transform: rotateY(0deg) translateZ(1px);\r\n  overflow: auto;\r\n}\r\n.book__page-back {\r\n  position: absolute;\r\n  width: 100%;\r\n  height: 100%;\r\n  padding: 0 calc(var(--baseline) * 1.8);\r\n  transform: rotateY(180deg) translateZ(1px);\r\n  overflow: auto;\r\n}\r\n.book__page-back img {\r\n  width: 100%;\r\n  max-width: 100%;\r\n  height: 800px;\r\n}\r\n.book__page .page__content {\r\n  padding: var(--baseline);\r\n  height: 100%;\r\n  position: relative;\r\n  text-align: center;\r\n}\r\n.book__page .page__content-book-title {\r\n  font-family: var(--book-title);\r\n  font-size: calc(var(--base-size) * 3);\r\n  font-weight: bold;\r\n  text-transform: uppercase;\r\n  letter-spacing: 3px;\r\n  color: var(--dark-text);\r\n  margin-top: calc(var(--baseline) * 3);\r\n  margin-bottom: calc(var(--baseline) * 2);\r\n}\r\n.book__page .page__content-author {\r\n  font-family: var(--title);\r\n  font-size: calc(var(--base-size) * 1.2);\r\n  font-weight: 100;\r\n  text-transform: uppercase;\r\n  color: var(--dark-text);\r\n  border-top: 1px solid var(--dark-text);\r\n  border-bottom: 1px solid var(--dark-text);\r\n  display: inline-block;\r\n  padding: calc(var(--baseline) / 2) calc(var(--baseline) / 5);\r\n  margin-bottom: calc(var(--baseline) * 3);\r\n}\r\n.book__page .page__content-credits {\r\n  font-family: var(--title);\r\n  text-transform: uppercase;\r\n  font-size: calc(var(--base-size) * 0.8);\r\n  margin-bottom: calc(var(--baseline) * 1.5);\r\n  letter-spacing: 1px;\r\n  font-weight: bold;\r\n}\r\n.book__page .page__content-credits span {\r\n  display: block;\r\n  font-size: calc(var(--base-size) * 1.2);\r\n  letter-spacing: 0;\r\n}\r\n.book__page .page__content-copyright {\r\n  position: absolute;\r\n  width: calc(100% - (var(--baseline) * 2));\r\n  bottom: calc(var(--baseline) * 2);\r\n  font-family: var(--title);\r\n  font-size: calc(var(--base-size) * 0.8);\r\n  text-transform: uppercase;\r\n  font-weight: bold;\r\n}\r\n.book__page .page__content-title {\r\n  font-family: var(--title);\r\n  font-size: calc(var(--base-size) * 2);\r\n  text-transform: uppercase;\r\n  letter-spacing: 1px;\r\n  margin-top: calc(var(--baseline) * 2);\r\n  margin-bottom: calc(var(--baseline) * 1.5);\r\n}\r\n.book__page .page__content-table {\r\n  width: 100%;\r\n  margin-top: calc(var(--baseline) * 2);\r\n}\r\n.book__page .page__content-table td {\r\n  font-family: var(--title);\r\n  font-size: calc(var(--base-size) * 1);\r\n  padding-bottom: calc(var(--baseline) * 1.5);\r\n  text-transform: uppercase;\r\n}\r\n.book__page .page__content-blockquote {\r\n  margin-bottom: calc(var(--baseline) * 2);\r\n}\r\n.book__page .page__content-blockquote-text {\r\n  font-family: var(--title);\r\n  font-size: calc(var(--base-size) * 1.2);\r\n  font-style: italic;\r\n  text-align: justify;\r\n  font-weight: bold;\r\n}\r\n.book__page .page__content-blockquote-reference {\r\n  font-family: var(--title);\r\n  font-size: calc(var(--base-size) * 0.7);\r\n  margin-top: calc(var(--baseline) * 0.3);\r\n  float: right;\r\n  text-transform: uppercase;\r\n}\r\n.book__page .page__content-text {\r\n  font-family: var(--title);\r\n  font-size: calc(var(--base-size));\r\n  text-align: justify;\r\n  text-indent: var(--baseline);\r\n}\r\n.book__page .page__number {\r\n  position: absolute;\r\n  bottom: var(--baseline);\r\n  width: calc(100% - (var(--baseline) * 2));\r\n  font-family: var(--title);\r\n  font-size: calc(var(--base-size));\r\n  text-align: center;\r\n}\r\n.book input[type=\"radio\"] {\r\n  display: none;\r\n}\r\n.book input[type=\"radio\"]:checked + .book__page {\r\n  transition: transform 0.9s cubic-bezier(0.645, 0.045, 0.355, 1);\r\n  transform: rotateY(-180deg);\r\n}\r\n", "",{"version":3,"sources":["webpack://./src/main/resources/js/components/book/Get.css"],"names":[],"mappings":"AACA;EACE,WAAW;EACX,kBAAkB;EAClB,kBAAkB;EAClB,oBAAoB;EACpB,YAAY;EACZ,0CAA0C;EAC1C,gBAAgB;EAChB,UAAU;EACV,sCAAsC;EACtC,oCAAoC;EACpC,mCAAmC;EACnC,kCAAkC;AACpC;;AAEA;EACE,sBAAsB;AACxB;;AAEA;EACE,WAAW;EACX,YAAY;EACZ,wCAAwC;AAC1C;;AAEA;EACE,WAAW;EACX,aAAa;EACb,aAAa;EACb,mBAAmB;AACrB;AACA;EACE,kBAAkB;EAClB,UAAU;EACV,YAAY;EACZ,aAAa;EACb,wBAAwB;EACxB,+DAA+D;EAC/D,uBAAuB;EACvB,kBAAkB;EAClB,yDAAyD;AAC3D;AACA;EACE,yDAAyD;AAC3D;AACA;EACE,eAAe;EACf,gBAAgB;AAClB;AACA;EACE,aAAa;EACb,WAAW;AACb;AACA;EACE,eAAe;EACf,gBAAgB;AAClB;AACA;EACE,aAAa;EACb,WAAW;AACb;AACA;EACE,kBAAkB;EAClB,QAAQ;EACR,4BAA4B;EAC5B,yDAAyD;AAC3D;AACA;EACE,kBAAkB;EAClB,WAAW;EACX,YAAY;EACZ,wCAAwC;EACxC,cAAc;AAChB;AACA;EACE,kBAAkB;EAClB,WAAW;EACX,YAAY;EACZ,sCAAsC;EACtC,0CAA0C;EAC1C,cAAc;AAChB;AACA;EACE,WAAW;EACX,eAAe;EACf,aAAa;AACf;AACA;EACE,wBAAwB;EACxB,YAAY;EACZ,kBAAkB;EAClB,kBAAkB;AACpB;AACA;EACE,8BAA8B;EAC9B,qCAAqC;EACrC,iBAAiB;EACjB,yBAAyB;EACzB,mBAAmB;EACnB,uBAAuB;EACvB,qCAAqC;EACrC,wCAAwC;AAC1C;AACA;EACE,yBAAyB;EACzB,uCAAuC;EACvC,gBAAgB;EAChB,yBAAyB;EACzB,uBAAuB;EACvB,sCAAsC;EACtC,yCAAyC;EACzC,qBAAqB;EACrB,4DAA4D;EAC5D,wCAAwC;AAC1C;AACA;EACE,yBAAyB;EACzB,yBAAyB;EACzB,uCAAuC;EACvC,0CAA0C;EAC1C,mBAAmB;EACnB,iBAAiB;AACnB;AACA;EACE,cAAc;EACd,uCAAuC;EACvC,iBAAiB;AACnB;AACA;EACE,kBAAkB;EAClB,yCAAyC;EACzC,iCAAiC;EACjC,yBAAyB;EACzB,uCAAuC;EACvC,yBAAyB;EACzB,iBAAiB;AACnB;AACA;EACE,yBAAyB;EACzB,qCAAqC;EACrC,yBAAyB;EACzB,mBAAmB;EACnB,qCAAqC;EACrC,0CAA0C;AAC5C;AACA;EACE,WAAW;EACX,qCAAqC;AACvC;AACA;EACE,yBAAyB;EACzB,qCAAqC;EACrC,2CAA2C;EAC3C,yBAAyB;AAC3B;AACA;EACE,wCAAwC;AAC1C;AACA;EACE,yBAAyB;EACzB,uCAAuC;EACvC,kBAAkB;EAClB,mBAAmB;EACnB,iBAAiB;AACnB;AACA;EACE,yBAAyB;EACzB,uCAAuC;EACvC,uCAAuC;EACvC,YAAY;EACZ,yBAAyB;AAC3B;AACA;EACE,yBAAyB;EACzB,iCAAiC;EACjC,mBAAmB;EACnB,4BAA4B;AAC9B;AACA;EACE,kBAAkB;EAClB,uBAAuB;EACvB,yCAAyC;EACzC,yBAAyB;EACzB,iCAAiC;EACjC,kBAAkB;AACpB;AACA;EACE,aAAa;AACf;AACA;EACE,+DAA+D;EAC/D,2BAA2B;AAC7B","sourcesContent":["@import url(\"https://fonts.googleapis.com/css?family=Cormorant+Garamond:300,400,600|Tulpen+One&display=swap\");\r\n:root {\r\n  /* colors */\r\n  --body-bg: #fafafa;\r\n  --page-bg: #f5f5f5;\r\n  --dark-text: #2a2935;\r\n  /* spacing */\r\n  /* this is what defines the global scale */\r\n  --baseline: 12px;\r\n  /* fonts */\r\n  --book-title: \"Tulpen One\", sans-serif;\r\n  --title: \"Cormorant Garamond\", serif;\r\n  --body: \"Cormorant Garamond\", serif;\r\n  --base-size: var(--baseline) * 1.2;\r\n}\r\n\r\n* {\r\n  box-sizing: border-box;\r\n}\r\n\r\n.cover {\r\n  width: 100%;\r\n  height: 200%;\r\n  box-shadow: 0 0 100px rgba(0, 0, 0, 0.3);\r\n}\r\n\r\n.book {\r\n  width: 100%;\r\n  height: 800px;\r\n  display: flex;\r\n  perspective: 1200px;\r\n}\r\n.book__page {\r\n  position: relative;\r\n  width: 50%;\r\n  height: 100%;\r\n  display: grid;\r\n  transform: rotateY(0deg);\r\n  transition: transform 0.9s cubic-bezier(0.645, 0.045, 0.355, 1);\r\n  transform-origin: 0% 0%;\r\n  border-radius: 5px;\r\n  background-image: url(https://i.ibb.co/YRy9kHC/paper.jpg);\r\n}\r\n.book__page:nth-of-type(1) {\r\n  background-image: url(https://i.ibb.co/YRy9kHC/paper.jpg);\r\n}\r\n.book__page--1 {\r\n  cursor: pointer;\r\n  overflow: hidden;\r\n}\r\n.book__page--1 img {\r\n  height: 800px;\r\n  width: 100%;\r\n}\r\n.book__page--4 {\r\n  cursor: pointer;\r\n  overflow: hidden;\r\n}\r\n.book__page--4 img {\r\n  height: 800px;\r\n  width: 100%;\r\n}\r\n.book__page--2 {\r\n  position: absolute;\r\n  right: 0;\r\n  transform-style: preserve-3d;\r\n  background-image: url(https://i.ibb.co/YRy9kHC/paper.jpg);\r\n}\r\n.book__page-front {\r\n  position: absolute;\r\n  width: 100%;\r\n  height: 100%;\r\n  transform: rotateY(0deg) translateZ(1px);\r\n  overflow: auto;\r\n}\r\n.book__page-back {\r\n  position: absolute;\r\n  width: 100%;\r\n  height: 100%;\r\n  padding: 0 calc(var(--baseline) * 1.8);\r\n  transform: rotateY(180deg) translateZ(1px);\r\n  overflow: auto;\r\n}\r\n.book__page-back img {\r\n  width: 100%;\r\n  max-width: 100%;\r\n  height: 800px;\r\n}\r\n.book__page .page__content {\r\n  padding: var(--baseline);\r\n  height: 100%;\r\n  position: relative;\r\n  text-align: center;\r\n}\r\n.book__page .page__content-book-title {\r\n  font-family: var(--book-title);\r\n  font-size: calc(var(--base-size) * 3);\r\n  font-weight: bold;\r\n  text-transform: uppercase;\r\n  letter-spacing: 3px;\r\n  color: var(--dark-text);\r\n  margin-top: calc(var(--baseline) * 3);\r\n  margin-bottom: calc(var(--baseline) * 2);\r\n}\r\n.book__page .page__content-author {\r\n  font-family: var(--title);\r\n  font-size: calc(var(--base-size) * 1.2);\r\n  font-weight: 100;\r\n  text-transform: uppercase;\r\n  color: var(--dark-text);\r\n  border-top: 1px solid var(--dark-text);\r\n  border-bottom: 1px solid var(--dark-text);\r\n  display: inline-block;\r\n  padding: calc(var(--baseline) / 2) calc(var(--baseline) / 5);\r\n  margin-bottom: calc(var(--baseline) * 3);\r\n}\r\n.book__page .page__content-credits {\r\n  font-family: var(--title);\r\n  text-transform: uppercase;\r\n  font-size: calc(var(--base-size) * 0.8);\r\n  margin-bottom: calc(var(--baseline) * 1.5);\r\n  letter-spacing: 1px;\r\n  font-weight: bold;\r\n}\r\n.book__page .page__content-credits span {\r\n  display: block;\r\n  font-size: calc(var(--base-size) * 1.2);\r\n  letter-spacing: 0;\r\n}\r\n.book__page .page__content-copyright {\r\n  position: absolute;\r\n  width: calc(100% - (var(--baseline) * 2));\r\n  bottom: calc(var(--baseline) * 2);\r\n  font-family: var(--title);\r\n  font-size: calc(var(--base-size) * 0.8);\r\n  text-transform: uppercase;\r\n  font-weight: bold;\r\n}\r\n.book__page .page__content-title {\r\n  font-family: var(--title);\r\n  font-size: calc(var(--base-size) * 2);\r\n  text-transform: uppercase;\r\n  letter-spacing: 1px;\r\n  margin-top: calc(var(--baseline) * 2);\r\n  margin-bottom: calc(var(--baseline) * 1.5);\r\n}\r\n.book__page .page__content-table {\r\n  width: 100%;\r\n  margin-top: calc(var(--baseline) * 2);\r\n}\r\n.book__page .page__content-table td {\r\n  font-family: var(--title);\r\n  font-size: calc(var(--base-size) * 1);\r\n  padding-bottom: calc(var(--baseline) * 1.5);\r\n  text-transform: uppercase;\r\n}\r\n.book__page .page__content-blockquote {\r\n  margin-bottom: calc(var(--baseline) * 2);\r\n}\r\n.book__page .page__content-blockquote-text {\r\n  font-family: var(--title);\r\n  font-size: calc(var(--base-size) * 1.2);\r\n  font-style: italic;\r\n  text-align: justify;\r\n  font-weight: bold;\r\n}\r\n.book__page .page__content-blockquote-reference {\r\n  font-family: var(--title);\r\n  font-size: calc(var(--base-size) * 0.7);\r\n  margin-top: calc(var(--baseline) * 0.3);\r\n  float: right;\r\n  text-transform: uppercase;\r\n}\r\n.book__page .page__content-text {\r\n  font-family: var(--title);\r\n  font-size: calc(var(--base-size));\r\n  text-align: justify;\r\n  text-indent: var(--baseline);\r\n}\r\n.book__page .page__number {\r\n  position: absolute;\r\n  bottom: var(--baseline);\r\n  width: calc(100% - (var(--baseline) * 2));\r\n  font-family: var(--title);\r\n  font-size: calc(var(--base-size));\r\n  text-align: center;\r\n}\r\n.book input[type=\"radio\"] {\r\n  display: none;\r\n}\r\n.book input[type=\"radio\"]:checked + .book__page {\r\n  transition: transform 0.9s cubic-bezier(0.645, 0.045, 0.355, 1);\r\n  transform: rotateY(-180deg);\r\n}\r\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ __webpack_exports__["default"] = (___CSS_LOADER_EXPORT___);
 
@@ -37394,11 +37394,12 @@ var Form = /*#__PURE__*/function (_Component) {
         "class": "col-sm-9"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("input", {
         type: "number",
+        min: "0",
         "class": "form-control",
         value: this.state.fieldPublicationYear,
         onChange: function onChange(event) {
           return _this2.setState({
-            fieldPublicationYear: event.target.value
+            fieldPublicationYear: event.target.value.slice(0, event.target.value.length < 4 ? event.target.value.length : 4)
           });
         }
       }), this.state.errorField.indexOf("publicationYear") != -1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
@@ -37554,11 +37555,12 @@ var Form = /*#__PURE__*/function (_Component) {
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("input", {
         id: "price",
         type: "number",
+        min: "0",
         "class": "form-control",
         value: this.state.fieldPrice,
         onChange: function onChange(event) {
           return _this2.setState({
-            fieldPrice: event.target.value
+            fieldPrice: event.target.value.slice(0, event.target.value.length < 9 ? event.target.value.length : 9)
           });
         }
       }), this.state.errorField.indexOf("price") != -1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
@@ -37908,11 +37910,12 @@ var Form = /*#__PURE__*/function (_Component) {
         "class": "col-sm-9"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("input", {
         type: "number",
+        min: "0",
         "class": "form-control",
         value: this.state.fieldPublicationYear,
         onChange: function onChange(event) {
           return _this2.setState({
-            fieldPublicationYear: event.target.value
+            fieldPublicationYear: event.target.value.slice(0, event.target.value.length < 4 ? event.target.value.length : 4)
           });
         }
       }), this.state.errorField.indexOf("publicationYear") != -1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
@@ -38064,11 +38067,12 @@ var Form = /*#__PURE__*/function (_Component) {
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("input", {
         id: "price",
         type: "number",
+        min: "0",
         "class": "form-control",
         value: this.state.fieldPrice,
         onChange: function onChange(event) {
           return _this2.setState({
-            fieldPrice: event.target.value
+            fieldPrice: event.target.value.slice(0, event.target.value.length < 9 ? event.target.value.length : 9)
           });
         }
       }), this.state.errorField.indexOf("price") != -1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
@@ -38511,7 +38515,8 @@ var Get = /*#__PURE__*/function (_Component) {
                   hasRequestAccepted: b.hasRequestAccepted,
                   images: b.images,
                   urlImages: b.urlImages,
-                  hasMoreImages: b.hasMoreImages
+                  hasMoreImages: b.hasMoreImages,
+                  page: 1
                 });
 
               case 8:
@@ -38550,15 +38555,22 @@ var Get = /*#__PURE__*/function (_Component) {
       })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("input", {
         type: "radio",
         name: "page",
-        id: "page-1"
+        id: "page-1",
+        checked: this.state.page == 1
       }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("input", {
         type: "radio",
         name: "page",
-        id: "page-2"
+        id: "page-2",
+        checked: this.state.page == 2
       }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("label", {
         "class": "book__page book__page--2"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
-        "class": "book__page-front"
+        "class": "book__page-front",
+        onClick: function onClick() {
+          return _this2.setState({
+            page: 2
+          });
+        }
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         "class": "page__content"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("h1", {
@@ -38581,19 +38593,13 @@ var Get = /*#__PURE__*/function (_Component) {
         "class": "page__content-credits"
       }, "Estado", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("span", null, this.state.book.status)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
         "class": "page__content-credits"
-      }, "Publicado por", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("span", null, this.state.book.username)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
-        "class": "page__content-copyright"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("i", {
-        "class": "fa fa-arrow-circle-right fa-2x",
-        style: {
-          "float": "right"
+      }, "Publicado por", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("span", null, this.state.book.username)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", null))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+        "class": "book__page-back",
+        onClick: function onClick() {
+          return _this2.setState({
+            page: 1
+          });
         }
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
-        style: {
-          "float": "right"
-        }
-      }, "Ver sinopsis .")))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
-        "class": "book__page-back"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         "class": "page__content"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("h1", {
@@ -38602,9 +38608,7 @@ var Get = /*#__PURE__*/function (_Component) {
         "class": "page__content-blockquote"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
         "class": "page__content-blockquote-text"
-      }, this.state.book.description)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
-        "class": "page__number"
-      }, "2")))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("center", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("h2", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("b", null, "Todas las im\xE1genes")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+      }, this.state.book.description)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", null)))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("center", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("h2", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("b", null, "Todas las im\xE1genes")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         "class": "allImages"
       }, this.state.images.map(function (image, i) {
         return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("center", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("ul", {
@@ -39075,7 +39079,9 @@ var List = /*#__PURE__*/function (_Component) {
           "class": "book-card__book-side"
         }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("div", {
           "class": "book-card__title"
-        }, book.title, _this2.state.username != null ? _this2.state.isAdded[i] == false ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("a", {
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("a", {
+          href: "/books/" + book.id
+        }, book.title), _this2.state.username != null ? _this2.state.isAdded[i] == false ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("a", {
           onClick: function onClick() {
             return _this2.addFavouriteBook(book.id, _this2.state.actualPage);
           },
@@ -39378,7 +39384,9 @@ var List = /*#__PURE__*/function (_Component) {
           "class": "book-card__book-side"
         }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
           "class": "book-card__title"
-        }, book.title), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
+          href: "/books/" + book.id
+        }, book.title)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
           "class": "book-card__author"
         }, book.author), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
           "class": "book-card__author"
@@ -39621,7 +39629,9 @@ var List = /*#__PURE__*/function (_Component) {
           "class": "book-card__book-side"
         }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("div", {
           "class": "book-card__title"
-        }, book.title, _this2.state.username != null ? _this2.state.isAdded[i] == false ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("a", {
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("a", {
+          href: "/books/" + book.id
+        }, book.title), _this2.state.username != null ? _this2.state.isAdded[i] == false ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("a", {
           onClick: function onClick() {
             return _this2.addFavouriteBook(book.id, _this2.state.actualPage);
           },
@@ -39932,7 +39942,9 @@ var List = /*#__PURE__*/function (_Component) {
           "class": "book-card__book-side"
         }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
           "class": "book-card__title"
-        }, book.title, _this2.state.isAdded[i] == false ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
+          href: "/books/" + book.id
+        }, book.title), _this2.state.isAdded[i] == false ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
           onClick: function onClick() {
             return _this2.addFavouriteBook(book.id, _this2.state.actualPage);
           },
@@ -40193,7 +40205,7 @@ var List = /*#__PURE__*/function (_Component) {
                 title = "";
                 noResults = "";
 
-                if (q.includes("-")) {
+                if (q.includes("-") && q.split("-").length <= 2) {
                   qr = q.split("-");
                   title = "Resultados entre " + qr[0] + " y " + qr[1];
                   noResults = "No se encontraron resultados entre " + qr[0] + " y " + qr[1];
@@ -40368,10 +40380,11 @@ var List = /*#__PURE__*/function (_Component) {
         "class": "form-control",
         value: this.state.fieldNumber1,
         type: "number",
+        min: "0",
         placeholder: "Introduzca el a\xF1o de publicaci\xF3n",
         onChange: function onChange(event) {
           return _this2.setState({
-            fieldNumber1: event.target.value
+            fieldNumber1: event.target.value.slice(0, event.target.value.length < 4 ? event.target.value.length : 4)
           });
         }
       }), this.state.errorField.indexOf("number1") != -1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", {
@@ -40384,10 +40397,11 @@ var List = /*#__PURE__*/function (_Component) {
         "class": "form-control",
         value: this.state.fieldNumber1,
         type: "number",
+        min: "0",
         placeholder: "Introduzca el a\xF1o inicial",
         onChange: function onChange(event) {
           return _this2.setState({
-            fieldNumber1: event.target.value
+            fieldNumber1: event.target.value.slice(0, event.target.value.length < 4 ? event.target.value.length : 4)
           });
         }
       }), this.state.errorField.indexOf("number1") != -1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", {
@@ -40398,10 +40412,11 @@ var List = /*#__PURE__*/function (_Component) {
         "class": "form-control",
         value: this.state.fieldNumber2,
         type: "number",
+        min: "0",
         placeholder: "Introduzca el a\xF1o final",
         onChange: function onChange(event) {
           return _this2.setState({
-            fieldNumber2: event.target.value
+            fieldNumber2: event.target.value.slice(0, event.target.value.length < 4 ? event.target.value.length : 4)
           });
         }
       }), this.state.errorField.indexOf("number2") != -1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", {
@@ -40414,10 +40429,11 @@ var List = /*#__PURE__*/function (_Component) {
         "class": "form-control",
         value: this.state.fieldNumber1,
         type: "number",
+        min: "0",
         placeholder: "Introduzca el precio inicial (\u20AC)",
         onChange: function onChange(event) {
           return _this2.setState({
-            fieldNumber1: event.target.value
+            fieldNumber1: event.target.value.slice(0, event.target.value.length < 9 ? event.target.value.length : 9)
           });
         }
       }), this.state.errorField.indexOf("number1") != -1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", {
@@ -40428,10 +40444,11 @@ var List = /*#__PURE__*/function (_Component) {
         "class": "form-control",
         value: this.state.fieldNumber2,
         type: "number",
+        min: "0",
         placeholder: "Introduzca el precio final (\u20AC)",
         onChange: function onChange(event) {
           return _this2.setState({
-            fieldNumber2: event.target.value
+            fieldNumber2: event.target.value.slice(0, event.target.value.length < 9 ? event.target.value.length : 9)
           });
         }
       }), this.state.errorField.indexOf("number2") != -1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", {
@@ -40442,10 +40459,11 @@ var List = /*#__PURE__*/function (_Component) {
         "class": "form-control",
         value: this.state.fieldText,
         type: "number",
+        min: "0",
         placeholder: "Introduzca el c\xF3digo postal de 5 d\xEDgitos",
         onChange: function onChange(event) {
           return _this2.setState({
-            fieldText: String(event.target.value)
+            fieldText: String(event.target.value.slice(0, event.target.value.length < 5 ? event.target.value.length : 5))
           });
         }
       }), this.state.errorField.indexOf("text") != -1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", {
@@ -40544,7 +40562,9 @@ var List = /*#__PURE__*/function (_Component) {
           "class": "book-card__book-side"
         }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("div", {
           "class": "book-card__title"
-        }, book.title, _this2.state.username != null ? _this2.state.isAdded[i] == false ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("a", {
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("a", {
+          href: "/books/" + book.id
+        }, book.title), _this2.state.username != null ? _this2.state.isAdded[i] == false ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("a", {
           onClick: function onClick() {
             return _this2.addFavouriteBook(book.id, _this2.state.query, _this2.state.actualPage);
           },
@@ -41028,6 +41048,7 @@ var Form = /*#__PURE__*/function (_Component) {
         "class": "col-sm-9"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("input", {
         type: "number",
+        min: "0",
         "class": "form-control",
         value: this.state.fieldPay,
         onChange: function onChange(event) {
@@ -41315,9 +41336,13 @@ var List = /*#__PURE__*/function (_Component) {
             margin: "0px 12px 30px 0px",
             borderRadius: "5px",
             width: "32%",
-            display: "inline-grid"
+            display: "inline-table"
           }
-        }, request.action == "INTERCAMBIO" ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("center", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("h4", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("strong", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("u", null, "INTERCAMBIO"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", null)))) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("center", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("h4", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("strong", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("u", null, "COMPRA POR ", request.pay, " \u20AC"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", null)))), request.action == "INTERCAMBIO" ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("center", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("a", {
+        }, request.action == "INTERCAMBIO" ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("center", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("h4", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("strong", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("u", null, "INTERCAMBIO"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", null)))) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("center", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("h4", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("strong", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("u", null, "COMPRA POR ", request.pay, " \u20AC"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", null)))), request.action == "INTERCAMBIO" ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("center", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("div", {
+          style: {
+            display: "inline-block"
+          }
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("a", {
           style: {
             color: "black"
           },
@@ -41330,7 +41355,7 @@ var List = /*#__PURE__*/function (_Component) {
             margin: "0px 0px 0px 0px"
           },
           src: _this2.state.urlsBooks1[i]
-        }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("strong", null, "\u21C4 ")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("a", {
+        })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("strong", null, "\u21C4 "), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("a", {
           href: "/books/" + _this2.state.books2[i].id
         }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("img", {
           style: {
@@ -41340,7 +41365,7 @@ var List = /*#__PURE__*/function (_Component) {
             margin: "0px 0px 0px 0px"
           },
           src: _this2.state.urlsBooks2[i]
-        })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", null)) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("center", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("a", {
+        }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", null)) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("center", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("a", {
           href: "/books/" + _this2.state.books2[i].id
         }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("img", {
           style: {
@@ -41629,9 +41654,13 @@ var List = /*#__PURE__*/function (_Component) {
             margin: "0px 12px 30px 0px",
             borderRadius: "5px",
             width: "32%",
-            display: "inline-grid"
+            display: "inline-table"
           }
-        }, request.action == "INTERCAMBIO" ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("center", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("h4", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("strong", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("u", null, "INTERCAMBIO"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("br", null)))) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("center", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("h4", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("strong", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("u", null, "VENTA POR ", request.pay, " \u20AC"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("br", null)))), request.action == "INTERCAMBIO" ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("center", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("a", {
+        }, request.action == "INTERCAMBIO" ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("center", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("h4", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("strong", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("u", null, "INTERCAMBIO"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("br", null)))) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("center", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("h4", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("strong", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("u", null, "VENTA POR ", request.pay, " \u20AC"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("br", null)))), request.action == "INTERCAMBIO" ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("center", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("div", {
+          style: {
+            display: "inline-block"
+          }
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("a", {
           style: {
             color: "black"
           },
@@ -41644,7 +41673,7 @@ var List = /*#__PURE__*/function (_Component) {
             margin: "0px 0px 0px 0px"
           },
           src: _this2.state.urlsBooks2[i]
-        }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("strong", null, "\u21C4 ")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("a", {
+        })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("strong", null, "\u21C4 "), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("a", {
           href: "/books/" + _this2.state.books1[i].id
         }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("img", {
           style: {
@@ -41654,7 +41683,7 @@ var List = /*#__PURE__*/function (_Component) {
             margin: "0px 0px 0px 0px"
           },
           src: _this2.state.urlsBooks1[i]
-        })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("br", null)) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("center", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("a", {
+        }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("br", null)) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("center", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("a", {
           href: "/books/" + _this2.state.books2[i].id
         }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("img", _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0___default()({
           style: {

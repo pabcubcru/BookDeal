@@ -95,3 +95,13 @@
     display: none;
   }
 }
+
+@media screen and (max-width: 484px) {
+  .menu {
+    height: 140px;
+    width: 100%;
+    background-color: #26272b;
+    border-radius: 3px;
+    border-radius: 5px;
+  }
+}

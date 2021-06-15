@@ -8,12 +8,16 @@ import org.springframework.data.elasticsearch.annotations.Document;
 import org.springframework.data.elasticsearch.annotations.Field;
 import org.springframework.data.elasticsearch.annotations.FieldType;
 
+import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Document(indexName = "requests")
 @Getter
 @Setter
+@AllArgsConstructor
+@NoArgsConstructor
 public class Request extends BaseEntity {
 
     @Field(type = FieldType.Keyword, name = "username1")
@@ -40,6 +44,6 @@ public class Request extends BaseEntity {
     private Double pay;
 
     @Field(type = FieldType.Text, name = "comment")
-    @Length(max = 80, message = "El comentario adicional no debe superar los 80 carácteres.")
+    @Length(max = 120, message = "El comentario adicional no debe superar los 120 carácteres.")
     private String comment;
 }

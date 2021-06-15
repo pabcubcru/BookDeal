@@ -149,7 +149,7 @@ export default class List extends Component {
                   </div>
                 </div>
                 <div>
-                  <div class="book-card__title">{book.title}</div>
+                  <div class="book-card__title"><a href={"/books/" + book.id}>{book.title}</a></div>
                   <div class="book-card__author">{book.author}</div>
                   <div class="book-card__author">
                     <span>{book.price} €</span>

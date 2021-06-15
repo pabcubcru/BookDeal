@@ -142,7 +142,7 @@ export default class List extends Component {
                 margin: "0px 12px 30px 0px",
                 borderRadius: "5px",
                 width: "32%",
-                display: "inline-grid",
+                display: "inline-table",
               }}
             >
               {request.action == "INTERCAMBIO" ? (
@@ -167,6 +167,7 @@ export default class List extends Component {
 
               {request.action == "INTERCAMBIO" ? (
                 <center>
+                  <div style={{display:"inline-block"}}>
                   <a
                     style={{ color: "black" }}
                     href={"/books/" + this.state.books2[i].id}
@@ -180,8 +181,8 @@ export default class List extends Component {
                       }}
                       src={this.state.urlsBooks2[i]}
                     ></img>
-                    <strong>⇄ </strong>
                   </a>
+                  <strong>⇄ </strong>
                   <a href={"/books/" + this.state.books1[i].id}>
                     <img
                       style={{
@@ -193,6 +194,7 @@ export default class List extends Component {
                       src={this.state.urlsBooks1[i]}
                     ></img>
                   </a>
+                  </div>
                   <br></br>
                 </center>
               ) : (

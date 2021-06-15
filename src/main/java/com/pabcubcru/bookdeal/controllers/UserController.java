@@ -61,8 +61,8 @@ public class UserController {
 		Map<String, Object> res = new HashMap<>();
 		if (principal != null) {
 			res.put("isLogged", true);
-			Authorities auth = this.authoritiesService.findByUsername(principal.getName()).get(0);
-			if(auth.getAuthority().equals("admin")) {
+			Authorities auth = this.authoritiesService.findByUsername(principal.getName()).stream().findFirst().orElse(null);
+			if(auth != null && auth.getAuthority().equals("admin")) {
 				res.put("isAdmin", true);
 			} else {
 				res.put("isAdmin", false);

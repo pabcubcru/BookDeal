@@ -172,7 +172,7 @@ export default class List extends Component {
                 </div>
                 <div>
                   <div class="book-card__title">
-                    {book.title}
+                    <a href={"/books/" + book.id}>{book.title}</a>
                     {this.state.username != null ? (
                       this.state.isAdded[i] == false ? (
                         <a

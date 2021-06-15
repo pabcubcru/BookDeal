@@ -4,12 +4,16 @@ import org.springframework.data.elasticsearch.annotations.Document;
 import org.springframework.data.elasticsearch.annotations.Field;
 import org.springframework.data.elasticsearch.annotations.FieldType;
 
+import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Document(indexName = "images")
 @Getter
 @Setter
+@AllArgsConstructor
+@NoArgsConstructor
 public class Image extends BaseEntity {
 
     @Field(type = FieldType.Text, name = "fileName")
@@ -23,5 +27,4 @@ public class Image extends BaseEntity {
 
     @Field(type = FieldType.Boolean, name = "principal")
     private Boolean principal;
-
 }
