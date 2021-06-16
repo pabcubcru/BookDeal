@@ -8,7 +8,6 @@ import java.util.stream.Collectors;
 import com.pabcubcru.bookdeal.models.Book;
 import com.pabcubcru.bookdeal.models.Search;
 import com.pabcubcru.bookdeal.models.User;
-import com.pabcubcru.bookdeal.services.BookService;
 import com.pabcubcru.bookdeal.services.SearchService;
 import com.pabcubcru.bookdeal.services.UserService;
 

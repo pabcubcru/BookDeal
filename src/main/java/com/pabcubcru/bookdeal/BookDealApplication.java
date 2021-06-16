@@ -14,6 +14,7 @@ import com.pabcubcru.bookdeal.models.GenreEnum;
 import com.pabcubcru.bookdeal.models.Image;
 import com.pabcubcru.bookdeal.models.ProvinceEnum;
 import com.pabcubcru.bookdeal.models.Request;
+import com.pabcubcru.bookdeal.models.Search;
 import com.pabcubcru.bookdeal.models.User;
 import com.pabcubcru.bookdeal.models.UserFavouriteBook;
 import com.pabcubcru.bookdeal.repository.AuthoritiesRepository;
@@ -74,19 +75,27 @@ public class BookDealApplication {
 		searchRepository.deleteAll();
 	}
 
+	public void buildSearchForTests() {
+		Search search = new Search();
+		search.setType("book");
+		search.setUsername("test001");
+		search.setText("Sapiens");
+		this.searchRepository.save(search);
+	}
+
 	public void buildUserFavouriteBookIndexForTests() {
 		UserFavouriteBook ufb = new UserFavouriteBook();
 
 		ufb.setBookId("book-001");
 		ufb.setId("ufb-001");
-		ufb.setUsername("pablo123");
+		ufb.setUsername("test002");
 		this.userFavouriteBookRepository.save(ufb);
 
 		ufb = new UserFavouriteBook();
 
 		ufb.setBookId("book-002");
 		ufb.setId("ufb-002");
-		ufb.setUsername("pablo123");
+		ufb.setUsername("test001");
 		this.userFavouriteBookRepository.save(ufb);
 
 		ufb = new UserFavouriteBook();
@@ -243,6 +252,8 @@ public class BookDealApplication {
 		this.createUser("test001");
 
 		this.createUser("test002");
+
+		this.createUser("test003");
 	}
 
 	public List<String> buildIndexUsersForBooks() {
@@ -309,6 +320,7 @@ public class BookDealApplication {
 		this.buildBookIndexForTests();
 		this.buildRequestsIndexForTests();
 		this.buildUserFavouriteBookIndexForTests();
+		this.buildSearchForTests();
 	}
 
 	private List<Book> prepareDataset(List<String> usernames) {
@@ -342,16 +354,16 @@ public class BookDealApplication {
 			GenreEnum[] genres = GenreEnum.values();
 			String isbn = s[0];
 			String originalTitle = s[1];
-			if (originalTitle.length() > 80) {
-				originalTitle = originalTitle.substring(0, 80);
+			if (originalTitle.length() > 120) {
+				originalTitle = originalTitle.substring(0, 120);
 			}
 			String title = s[2];
-			if (title.length() > 80) {
-				title = title.substring(0, 80);
+			if (title.length() > 120) {
+				title = title.substring(0, 120);
 			}
 			String author = s[3];
-			if (author.length() > 80) {
-				author = author.substring(0, 80);
+			if (author.length() > 120) {
+				author = author.substring(0, 120);
 			}
 			Integer publicationYear = 2010;
 			if (!s[4].equals("")) {
@@ -359,8 +371,8 @@ public class BookDealApplication {
 				publicationYear = Integer.parseInt(r);
 			}
 			String publisher = s[5];
-			if (publisher.length() > 80) {
-				publisher = publisher.substring(0, 80);
+			if (publisher.length() > 120) {
+				publisher = publisher.substring(0, 120);
 			}
 			String description = s[6];
 			if (description.length() > 1750) {

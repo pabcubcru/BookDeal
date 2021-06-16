@@ -1,4 +1,4 @@
-﻿title;originalTitle;isbn;publicationYear;publisher;genres;author;description;status;price;username;image;// 2-11 -> CAMPOS NULOS O EN BLANCO | 11-16 -> CAMPOS NO VÁLIDOS
+﻿title;originalTitle;isbn;publicationYear;publisher;genres;author;description;status;price;username;image;
 Title test;Original Test;0-7645-2641-3;2000;Publisher Test;Autoayuda, Esoterismo, Ciencia;AuthorTest;Description;NUEVO;10.0;test001;2;
 Title test;Original Test;0-7645-2641-4;2000;Publisher Test;Autoayuda, Esoterismo, Ciencia;AuthorTest;Description;NUEVO;10.1;test002;3;
 Title test;Original Test;0-7645-2641-5;2000;Publisher Test;Autoayuda, Esoterismo, Ciencia;AuthorTest;Description;NUEVO;10.2;test003;4;

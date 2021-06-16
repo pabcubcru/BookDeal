@@ -28,13 +28,13 @@ public class UserFavouriteBookServiceTests {
 
         Assertions.assertThat(ufbooks.getTotalElements()).isEqualTo(1L);
 
-        ufbooks = this.userFavouriteBookService.findAllByUsername("pablo123", pageRequest);
-        Assertions.assertThat(ufbooks.getTotalElements()).isEqualTo(2L);
+        ufbooks = this.userFavouriteBookService.findAllByUsername("test001", pageRequest);
+        Assertions.assertThat(ufbooks.getTotalElements()).isEqualTo(1L);
     }
 
     @Test
     public void shouldFindByUsernameAndBookId() throws Exception {
-        UserFavouriteBook ufbook = this.userFavouriteBookService.findByUsernameAndBookId("pablo123", "book-001");
+        UserFavouriteBook ufbook = this.userFavouriteBookService.findByUsernameAndBookId("test002", "book-001");
         Assertions.assertThat(ufbook.getId()).isEqualTo("ufb-001");
 
         ufbook = this.userFavouriteBookService.findByUsernameAndBookId("juan1234", "book-001");
