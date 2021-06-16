@@ -5,4 +5,4 @@ User 3;user3@mail.com;654321990;1998-01-03;Sevilla;41015;Ingeniería, Tecnologí
 User 4;user4@mail.com;654321991;1998-01-05;Sevilla;41016;Ingeniería, Tecnología, Libros_Infantiles;user5;user1238;true;true;user1238
 User 5;user5@mail.com;654321992;1998-01-06;Sevilla;41016;Ingeniería, Tecnología, Libros_Infantiles;user6;user1239;true;true;user1239
 User 6;user6@mail.com;654321993;1998-01-07;Sevilla;41018;Ingeniería, Tecnología, Libros_Infantiles;user7;user1240;true;true;user1240
-User 7;user7mailnotvalid;654321994;1998-01-08;Sevilla;41019;Ingeniería, Tecnología, Libros_Infantiles;user8;user1241;true;true;user1241
+User 7;user7@mail.com;654321994;1998-01-08;Sevilla;41019;Ingeniería, Tecnología, Libros_Infantiles;user8;user1241;true;true;user1241
