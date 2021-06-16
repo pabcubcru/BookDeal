@@ -1,0 +1,7 @@
+﻿name;email;phone;birthDate;province;postCode;genres;username;password;enabled;accept;confirmPassword
+User 1;user1@mail.com;654321987;1998-01-01;Sevilla;41012;Ingeniería, Tecnología, Libros_Infantiles;usertest1;user1234;true;true;user1234
+User 2;user2@mail.com;654321988;1998-01-02;Sevilla;41013;Ingeniería, Tecnología, Libros_Infantiles;usertest2;user1235;true;true;user1235
+User 3;user3@mail.com;654321990;1998-01-03;Sevilla;41015;Ingeniería, Tecnología, Libros_Infantiles;usertest3;user1237;true;true;user1237
+User 4;user4@mail.com;654321991;1998-01-05;Sevilla;41016;Ingeniería, Tecnología, Libros_Infantiles;usertest4;user1238;true;true;user1238
+User 5;user5@mail.com;654321992;1998-01-06;Sevilla;41016;Ingeniería, Tecnología, Libros_Infantiles;usertest5;user1239;true;true;user1239
+User 6;user66@mail.com;654321993;1998-01-07;Sevilla;41018;Ingeniería, Tecnología, Libros_Infantiles;usertest6;user1240;true;true;user1240

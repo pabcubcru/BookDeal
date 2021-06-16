@@ -8,6 +8,8 @@ import com.pabcubcru.bookdeal.services.AuthoritiesService;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvFileSource;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
@@ -31,17 +33,16 @@ public class AuthoritiesServiceTests {
         Assertions.assertThat(authorities.size()).isEqualTo(0);
     }
 
-    @Test
-    public void shouldSave() throws Exception {
-        List<Authorities> authorities = this.authoritiesService.findByUsername("pablo123");
+    @ParameterizedTest
+    @CsvFileSource(resources = "../csv/services/Authorities.csv", encoding = "utf-8", numLinesToSkip = 1, delimiterString = ";")
+    public void shouldSave(String username, String authority) throws Exception {
+        List<Authorities> authorities = this.authoritiesService.findByUsername(username);
         Integer numberOfAuthoritiesBefore = authorities.size();
 
-        Authorities authority = new Authorities();
-        authority.setUsername("pablo123");
-        authority.setAuthority("test");
-        this.authoritiesService.save(authority);
+        Authorities auth = new Authorities(username, authority);
+        this.authoritiesService.save(auth);
 
-        authorities = this.authoritiesService.findByUsername("pablo123");
+        authorities = this.authoritiesService.findByUsername(username);
         Integer numberOfAuthoritiesAfter = authorities.size();
         Assertions.assertThat(numberOfAuthoritiesAfter).isEqualTo(numberOfAuthoritiesBefore + 1);
     }
