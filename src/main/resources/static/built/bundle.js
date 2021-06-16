@@ -44661,7 +44661,9 @@ var List = /*#__PURE__*/function (_Component) {
           "class": "book-card__book-side"
         }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("div", {
           "class": "book-card__title"
-        }, book.title, " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("a", {
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("a", {
+          href: "/books/" + book.id
+        }, book.title), " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("a", {
           onClick: function onClick() {
             _this2.deleteFavouriteBook(book.id, book.title, _this2.state.actualPage);
           },
