@@ -37,7 +37,7 @@ public class UserController {
 	@Autowired
 	private AuthoritiesService authoritiesService;
 
-	@Autowired 
+	@Autowired
 	private BookService bookService;
 
 	@Autowired
@@ -49,7 +49,7 @@ public class UserController {
 	@Autowired
 	private SearchService searchService;
 
-	@GetMapping(value = { "/", "/profile", "/register", "/login", "/login-error", "/admin/dashboard"})
+	@GetMapping(value = { "/", "/profile", "/register", "/login", "/login-error", "/admin/dashboard" })
 	public ModelAndView main() {
 		ModelAndView model = new ModelAndView();
 		model.setViewName("Main");
@@ -61,8 +61,9 @@ public class UserController {
 		Map<String, Object> res = new HashMap<>();
 		if (principal != null) {
 			res.put("isLogged", true);
-			Authorities auth = this.authoritiesService.findByUsername(principal.getName()).stream().findFirst().orElse(null);
-			if(auth != null && auth.getAuthority().equals("admin")) {
+			Authorities auth = this.authoritiesService.findByUsername(principal.getName()).stream().findFirst()
+					.orElse(null);
+			if (auth != null && auth.getAuthority().equals("admin")) {
 				res.put("isAdmin", true);
 			} else {
 				res.put("isAdmin", false);
@@ -178,12 +179,16 @@ public class UserController {
 	}
 
 	@GetMapping(value = "/user/{username}")
-	public Map<String, Object> get(@PathVariable("username") String username) {
+	public Map<String, Object> getUser(@PathVariable("username") String username) {
 		Map<String, Object> res = new HashMap<>();
 		if (!username.isEmpty()) {
 			User user = this.userService.findByUsername(username);
-			res.put("user", user);
-			res.put("success", true);
+			if (user != null) {
+				res.put("user", user);
+				res.put("success", true);
+			} else {
+				res.put("success", false);
+			}
 		} else {
 			res.put("success", false);
 		}

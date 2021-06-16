@@ -33,14 +33,7 @@ public class UserModelTests {
 
         Validator validator = createValidator();
         Set<ConstraintViolation<User>> constrains = validator.validate(user);
-        if(constrains.size() > 1) {
-            System.out.println(constrains);
-            System.out.println(user.getUsername());
-        }
 
-        if(constrains.size() < 1) {
-            System.out.println("----------------" + user.getUsername());
-        }
         Assertions.assertThat(constrains.size()).isEqualTo(1);
     }
 }

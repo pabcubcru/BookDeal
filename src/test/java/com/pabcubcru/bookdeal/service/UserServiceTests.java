@@ -60,7 +60,7 @@ public class UserServiceTests {
 
     @ParameterizedTest
     @CsvFileSource(resources = "../csv/services/Users.csv", encoding = "utf-8", numLinesToSkip = 1, delimiterString = ";")
-    public void shouldSaveUser(String name, String email, String phone, LocalDate birthDate, String province,
+    public void shouldSaveUserAndFindByUsername(String name, String email, String phone, LocalDate birthDate, String province,
             String postCode, String genres, String username, String password, Boolean enabled, Boolean accept,
             String confirmPassword) throws Exception {
         User user = new User(name, email, phone, birthDate, province, postCode, genres, username, password, enabled,
