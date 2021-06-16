@@ -12,7 +12,7 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvFileSource;
 import org.springframework.validation.beanvalidation.LocalValidatorFactoryBean;
 
-public class BookValidatorTests {
+public class BookModelTests {
 
     private Validator createValidator() throws Exception {
         LocalValidatorFactoryBean validator = new LocalValidatorFactoryBean();
