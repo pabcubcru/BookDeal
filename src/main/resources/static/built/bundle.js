@@ -36512,7 +36512,7 @@ var Home = /*#__PURE__*/function (_Component) {
         "class": "copyright-text"
       }, "Copyright \xA9 2021 All Rights Reserved by", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("a", {
         href: "/"
-      }, " bookdeal"), ".")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+      }, " BOOKDEAL"), ".")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         "class": "col-md-4 col-sm-6 col-xs-12"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("ul", {
         "class": "social-icons"

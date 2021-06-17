@@ -22,7 +22,7 @@ export default class Home extends Component {
             <div class="col-md-8 col-sm-6 col-xs-12">
               <p class="copyright-text">
                 Copyright &copy; 2021 All Rights Reserved by
-                <a href="/"> bookdeal</a>.
+                <a href="/"> BOOKDEAL</a>.
               </p>
             </div>
 
