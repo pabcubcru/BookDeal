@@ -1,0 +1,17 @@
+﻿text;number1;number2;type;username
+;;;book;test001
+q;;;book;test001
+search search search search search search search search search search search search search search search search search search search search search search search search search search search search search search search search search search search search search search search search search search search search search search search search search search search search search search search search search search search search search search search search search search search search search search search search search search search ;;;book;test001
+;;;rangeYears;test001
+;-2000;-2001;rangeYears;test001
+;2030;2035;rangeYears;test001
+;2015;2010;rangeYears;test001
+;;;rangePrices;test001
+;-10;-20;rangePrices;test001
+;;;postalCode;test001
+;-41012;;postalCode;test001
+;412;;postalCode;test001
+;;;province;test001
+;;;publicationYear;test001
+;-2000;;publicationYear;test001
+;2030;;publicationYear;test001

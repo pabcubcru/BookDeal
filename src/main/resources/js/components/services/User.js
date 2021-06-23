@@ -1,24 +1,133 @@
-const baseUrl = "http://localhost:8080"
+const baseUrl = "http://localhost:8080";
 import axios from "axios";
-const user = {}
+const user = {};
 
-user.create = async(state) => {
+user.create = async (state) => {
+  const datapost = {
+    name: state.fieldName,
+    email: state.fieldEmail,
+    phone: state.fieldPhone,
+    birthDate: state.fieldBirthDate,
+    username: state.fieldUsername,
+    password: state.fieldPassword,
+    province: state.fieldProvince,
+    postCode: state.fieldPostCode,
+    genres: state.fieldGenres,
+    accept: state.fieldCheckbok,
+    confirmPassword: state.fieldConfirmPassword,
+  };
 
-    const datapost = {
-        name: state.fieldName,
-        email: state.fieldEmail,
-        phone: state.fieldPhone,
-        birthDate: state.fieldBirthDate,
-        username: state.fieldUsername,
-        password: state.fieldPassword,
-    }
+  const urlPost = baseUrl + "/register";
+  const res = await axios
+    .post(urlPost, datapost)
+    .then((response) => {
+      return response.data;
+    })
+    .catch((error) => {
+      return error.response;
+    });
 
-    const urlPost = baseUrl+"/register"
-    const res = await axios.post(urlPost, datapost)
-    .then(response => {return response.data;})
-    .catch(error => {return error.response;})
+  return res;
+};
 
-    return res;
+user.edit = async (state) => {
+  const datapost = {
+    id: state.id,
+    name: state.fieldName,
+    email: state.fieldEmail,
+    phone: state.fieldPhone,
+    birthDate: state.fieldBirthDate,
+    username: state.fieldUsername,
+    password: state.fieldPassword,
+    province: state.fieldProvince,
+    city: state.fieldCity,
+    postCode: state.fieldPostCode,
+    genres: state.fieldGenres,
+    confirmPassword: state.fieldConfirmPassword,
+    accept: true,
+  };
+
+  const urlPost = baseUrl + "/user/" + state.fieldUsername + "/edit";
+  const res = await axios
+    .put(urlPost, datapost)
+    .then((response) => {
+      return response.data;
+    })
+    .catch((error) => {
+      return error.response;
+    });
+
+  return res;
+};
+
+user.getUsername = async () => {
+  const urlUsername = baseUrl + "/user/get-username";
+  const res = await axios
+    .get(urlUsername)
+    .then((response) => {
+      return response.data;
+    })
+    .catch((error) => {
+      return error.response;
+    });
+
+  return res;
+};
+
+user.getPrincipal = async () => {
+  const urlGetPrincipal = baseUrl + "/user/principal";
+  const res = await axios
+    .get(urlGetPrincipal)
+    .then((response) => {
+      return response.data;
+    })
+    .catch((error) => {
+      return error.response;
+    });
+
+  return res;
+};
+
+user.getUser = async (username) => {
+  const urlGet = baseUrl + "/user/" + username;
+  const res = await axios
+    .get(urlGet)
+    .then((response) => {
+      return response.data;
+    })
+    .catch((error) => {
+      return error.response;
+    });
+
+  return res;
+};
+
+user.getProvinces = async () => {
+  const urlGet = baseUrl + "/provinces";
+  const res = await axios
+    .get(urlGet)
+    .then((response) => {
+      return response.data;
+    })
+    .catch((error) => {
+      return error.response;
+    });
+
+  return res;
+};
+
+user.getDashBoard = async () => {
+  const urlGet = baseUrl + "/admin/get-dashboard";
+  const res = await axios
+    .get(urlGet)
+    .then((response) => {
+      return response.data;
+    })
+    .catch((error) => {
+      return error.response;
+    });
+
+  return res;
 }
 
-export default user
+export default user;

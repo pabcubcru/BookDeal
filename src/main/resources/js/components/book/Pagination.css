@@ -1,0 +1,12 @@
+a.pag {
+  width: 32px;
+  height: 32px;
+  display: inline-block;
+  position: relative;
+  text-align: center;
+  line-height: 32px;
+  text-decoration: none;
+  color: #000000;
+  transition: 0.3s all;
+  font-weight: bold;
+}
